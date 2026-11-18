@@ -1115,6 +1115,138 @@ window.LEAGUE_DATA = {
      "saffId": null
     },
     {
+     "id": "m33481",
+     "saffId": "33481",
+     "comp": "league",
+     "round": 1,
+     "date": "2026-08-21",
+     "time": "18:50",
+     "home": "الجيل",
+     "away": "الزلفي",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "played",
+     "score": [
+      0,
+      2
+     ],
+     "weather": {
+      "t": 41,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33482",
+     "saffId": "33482",
+     "comp": "league",
+     "round": 1,
+     "date": "2026-08-21",
+     "time": "19:15",
+     "home": "البكيرية",
+     "away": "الأنوار",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 39,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33483",
+     "saffId": "33483",
+     "comp": "league",
+     "round": 1,
+     "date": "2026-08-21",
+     "time": "20:50",
+     "home": "الوحدة",
+     "away": "العدالة",
+     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 35,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33484",
+     "saffId": "33484",
+     "comp": "league",
+     "round": 1,
+     "date": "2026-08-22",
+     "time": "19:15",
+     "home": "النجمة",
+     "away": "الجندل",
+     "venue": "ملعب إدارة التعليم (عنيزة)",
+     "status": "played",
+     "score": [
+      2,
+      1
+     ],
+     "weather": {
+      "t": 39,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33485",
+     "saffId": "33485",
+     "comp": "league",
+     "round": 1,
+     "date": "2026-08-22",
+     "time": "19:20",
+     "home": "الطائي",
+     "away": "الأخدود",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      0,
+      2
+     ],
+     "weather": {
+      "t": 38,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33486",
+     "saffId": "33486",
+     "comp": "league",
+     "round": 1,
+     "date": "2026-08-22",
+     "time": "20:50",
+     "home": "العروبة",
+     "away": "الرائد",
+     "venue": "ملعب نادي العروبة (الجوف)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
+     "weather": {
+      "t": 39,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
      "id": "l1",
      "weather": {
       "t": 39,
@@ -1134,8 +1266,184 @@ window.LEAGUE_DATA = {
       3,
       1
      ],
-     "saffId": null,
+     "saffId": "33489",
      "roundExact": true
+    },
+    {
+     "id": "m33487",
+     "saffId": "33487",
+     "comp": "league",
+     "round": 1,
+     "date": "2026-08-23",
+     "time": "18:50",
+     "home": "هجر",
+     "away": "جدة",
+     "venue": "ملعب نادي هجر (الأحساء)",
+     "status": "played",
+     "score": [
+      0,
+      3
+     ],
+     "weather": {
+      "t": 41,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33488",
+     "saffId": "33488",
+     "comp": "league",
+     "round": 1,
+     "date": "2026-08-23",
+     "time": "19:15",
+     "home": "الصقر",
+     "away": "ضمك",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33490",
+     "saffId": "33490",
+     "comp": "league",
+     "round": 2,
+     "date": "2026-08-26",
+     "time": "18:45",
+     "home": "العدالة",
+     "away": "الطائي",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "played",
+     "score": [
+      3,
+      4
+     ],
+     "weather": {
+      "t": 42,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33491",
+     "saffId": "33491",
+     "comp": "league",
+     "round": 2,
+     "date": "2026-08-26",
+     "time": "19:05",
+     "home": "الزلفي",
+     "away": "الوحدة",
+     "venue": "ملعب نادي الزلفي (الزلفي)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33492",
+     "saffId": "33492",
+     "comp": "league",
+     "round": 2,
+     "date": "2026-08-26",
+     "time": "19:10",
+     "home": "البكيرية",
+     "away": "الأخدود",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33493",
+     "saffId": "33493",
+     "comp": "league",
+     "round": 2,
+     "date": "2026-08-27",
+     "time": "19:20",
+     "home": "الجبلين",
+     "away": "الجيل",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      1,
+      0
+     ],
+     "weather": {
+      "t": 38,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33494",
+     "saffId": "33494",
+     "comp": "league",
+     "round": 2,
+     "date": "2026-08-27",
+     "time": "19:20",
+     "home": "جدة",
+     "away": "النجمة",
+     "venue": "ملعب نادي جدة (جدة)",
+     "status": "played",
+     "score": [
+      1,
+      0
+     ],
+     "weather": {
+      "t": 35,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33495",
+     "saffId": "33495",
+     "comp": "league",
+     "round": 2,
+     "date": "2026-08-27",
+     "time": "20:50",
+     "home": "الجندل",
+     "away": "الصقر",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 39,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l2",
@@ -1157,8 +1465,184 @@ window.LEAGUE_DATA = {
       0,
       1
      ],
-     "saffId": null,
+     "saffId": "33496",
      "roundExact": true
+    },
+    {
+     "id": "m33497",
+     "saffId": "33497",
+     "comp": "league",
+     "round": 2,
+     "date": "2026-08-28",
+     "time": "19:05",
+     "home": "الرائد",
+     "away": "هجر",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      2,
+      3
+     ],
+     "weather": {
+      "t": 42,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33498",
+     "saffId": "33498",
+     "comp": "league",
+     "round": 2,
+     "date": "2026-08-28",
+     "time": "20:50",
+     "home": "ضمك",
+     "away": "العروبة",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 21,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33499",
+     "saffId": "33499",
+     "comp": "league",
+     "round": 3,
+     "date": "2026-08-31",
+     "time": "19:05",
+     "home": "البكيرية",
+     "away": "العدالة",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
+     "weather": {
+      "t": 39,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33500",
+     "saffId": "33500",
+     "comp": "league",
+     "round": 3,
+     "date": "2026-08-31",
+     "time": "19:05",
+     "home": "الصقر",
+     "away": "الأخدود",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33501",
+     "saffId": "33501",
+     "comp": "league",
+     "round": 3,
+     "date": "2026-08-31",
+     "time": "20:40",
+     "home": "الطائي",
+     "away": "الجندل",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      2,
+      1
+     ],
+     "weather": {
+      "t": 34,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33502",
+     "saffId": "33502",
+     "comp": "league",
+     "round": 3,
+     "date": "2026-09-01",
+     "time": "18:40",
+     "home": "الجيل",
+     "away": "جدة",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33503",
+     "saffId": "33503",
+     "comp": "league",
+     "round": 3,
+     "date": "2026-09-01",
+     "time": "19:20",
+     "home": "العروبة",
+     "away": "الزلفي",
+     "venue": "ملعب نادي العروبة (الجوف)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 36,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33504",
+     "saffId": "33504",
+     "comp": "league",
+     "round": 3,
+     "date": "2026-09-01",
+     "time": "20:40",
+     "home": "النجمة",
+     "away": "الجبلين",
+     "venue": "ملعب إدارة التعليم (عنيزة)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 39,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l3",
@@ -1180,8 +1664,118 @@ window.LEAGUE_DATA = {
       2,
       0
      ],
-     "saffId": null,
+     "saffId": "33507",
      "roundExact": true
+    },
+    {
+     "id": "m33505",
+     "saffId": "33505",
+     "comp": "league",
+     "round": 3,
+     "date": "2026-09-02",
+     "time": "18:40",
+     "home": "هجر",
+     "away": "الأنوار",
+     "venue": "ملعب نادي هجر (الأحساء)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33506",
+     "saffId": "33506",
+     "comp": "league",
+     "round": 3,
+     "date": "2026-09-02",
+     "time": "19:15",
+     "home": "الوحدة",
+     "away": "ضمك",
+     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+     "status": "played",
+     "score": [
+      2,
+      2
+     ],
+     "weather": {
+      "t": 35,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33508",
+     "saffId": "33508",
+     "comp": "league",
+     "round": 4,
+     "date": "2026-09-07",
+     "time": "18:30",
+     "home": "العدالة",
+     "away": "الصقر",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 42,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33509",
+     "saffId": "33509",
+     "comp": "league",
+     "round": 4,
+     "date": "2026-09-07",
+     "time": "19:05",
+     "home": "الجبلين",
+     "away": "الوحدة",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 35,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33510",
+     "saffId": "33510",
+     "comp": "league",
+     "round": 4,
+     "date": "2026-09-07",
+     "time": "20:20",
+     "home": "الأخدود",
+     "away": "النجمة",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+     "status": "played",
+     "score": [
+      2,
+      2
+     ],
+     "weather": {
+      "t": 20,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l4",
@@ -1203,8 +1797,184 @@ window.LEAGUE_DATA = {
       0,
       1
      ],
-     "saffId": null,
+     "saffId": "33512",
      "roundExact": true
+    },
+    {
+     "id": "m33511",
+     "saffId": "33511",
+     "comp": "league",
+     "round": 4,
+     "date": "2026-09-08",
+     "time": "18:50",
+     "home": "الزلفي",
+     "away": "هجر",
+     "venue": "ملعب نادي الزلفي (الزلفي)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33513",
+     "saffId": "33513",
+     "comp": "league",
+     "round": 4,
+     "date": "2026-09-08",
+     "time": "20:30",
+     "home": "الأنوار",
+     "away": "الطائي",
+     "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+     "status": "played",
+     "score": [
+      2,
+      0
+     ],
+     "weather": {
+      "t": 37,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33514",
+     "saffId": "33514",
+     "comp": "league",
+     "round": 4,
+     "date": "2026-09-09",
+     "time": "18:50",
+     "home": "الرائد",
+     "away": "الجيل",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      3,
+      0
+     ],
+     "weather": {
+      "t": 42,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33515",
+     "saffId": "33515",
+     "comp": "league",
+     "round": 4,
+     "date": "2026-09-09",
+     "time": "19:10",
+     "home": "الجندل",
+     "away": "البكيرية",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "played",
+     "score": [
+      4,
+      1
+     ],
+     "weather": {
+      "t": 37,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33516",
+     "saffId": "33516",
+     "comp": "league",
+     "round": 4,
+     "date": "2026-09-09",
+     "time": "20:30",
+     "home": "جدة",
+     "away": "العروبة",
+     "venue": "ملعب نادي جدة (جدة)",
+     "status": "played",
+     "score": [
+      2,
+      2
+     ],
+     "weather": {
+      "t": 33,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33517",
+     "saffId": "33517",
+     "comp": "league",
+     "round": 5,
+     "date": "2026-09-13",
+     "time": "18:30",
+     "home": "هجر",
+     "away": "الجبلين",
+     "venue": "ملعب نادي هجر (الأحساء)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33518",
+     "saffId": "33518",
+     "comp": "league",
+     "round": 5,
+     "date": "2026-09-13",
+     "time": "18:50",
+     "home": "الصقر",
+     "away": "الأنوار",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
+     "weather": {
+      "t": 41,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33519",
+     "saffId": "33519",
+     "comp": "league",
+     "round": 5,
+     "date": "2026-09-13",
+     "time": "20:20",
+     "home": "الطائي",
+     "away": "الزلفي",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 36,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l5",
@@ -1226,8 +1996,294 @@ window.LEAGUE_DATA = {
       3,
       0
      ],
-     "saffId": null,
+     "saffId": "33521",
      "roundExact": true
+    },
+    {
+     "id": "m33520",
+     "saffId": "33520",
+     "comp": "league",
+     "round": 5,
+     "date": "2026-09-14",
+     "time": "18:50",
+     "home": "البكيرية",
+     "away": "ضمك",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "played",
+     "score": [
+      1,
+      2
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33522",
+     "saffId": "33522",
+     "comp": "league",
+     "round": 5,
+     "date": "2026-09-14",
+     "time": "19:05",
+     "home": "الوحدة",
+     "away": "الأخدود",
+     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+     "status": "played",
+     "score": [
+      4,
+      2
+     ],
+     "weather": {
+      "t": 37,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33523",
+     "saffId": "33523",
+     "comp": "league",
+     "round": 5,
+     "date": "2026-09-14",
+     "time": "20:20",
+     "home": "النجمة",
+     "away": "الرائد",
+     "venue": "ملعب إدارة التعليم (عنيزة)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 36,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33524",
+     "saffId": "33524",
+     "comp": "league",
+     "round": 5,
+     "date": "2026-09-15",
+     "time": "18:30",
+     "home": "العدالة",
+     "away": "الجندل",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "played",
+     "score": [
+      1,
+      0
+     ],
+     "weather": {
+      "t": 40,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33525",
+     "saffId": "33525",
+     "comp": "league",
+     "round": 5,
+     "date": "2026-09-15",
+     "time": "19:05",
+     "home": "العروبة",
+     "away": "الجيل",
+     "venue": "ملعب نادي العروبة (الجوف)",
+     "status": "played",
+     "score": [
+      1,
+      0
+     ],
+     "weather": {
+      "t": 36,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33526",
+     "saffId": "33526",
+     "comp": "league",
+     "round": 6,
+     "date": "2026-09-18",
+     "time": "18:50",
+     "home": "الطائي",
+     "away": "البكيرية",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      3,
+      1
+     ],
+     "weather": {
+      "t": 37,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33527",
+     "saffId": "33527",
+     "comp": "league",
+     "round": 6,
+     "date": "2026-09-18",
+     "time": "19:05",
+     "home": "جدة",
+     "away": "الصقر",
+     "venue": "ملعب نادي جدة (جدة)",
+     "status": "played",
+     "score": [
+      0,
+      2
+     ],
+     "weather": {
+      "t": 34,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33528",
+     "saffId": "33528",
+     "comp": "league",
+     "round": 6,
+     "date": "2026-09-19",
+     "time": "18:35",
+     "home": "الأنوار",
+     "away": "النجمة",
+     "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 39,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33530",
+     "saffId": "33530",
+     "comp": "league",
+     "round": 6,
+     "date": "2026-09-19",
+     "time": "20:00",
+     "home": "الزلفي",
+     "away": "الرائد",
+     "venue": "ملعب نادي الزلفي (الزلفي)",
+     "status": "played",
+     "score": [
+      4,
+      0
+     ],
+     "weather": {
+      "t": 37,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33531",
+     "saffId": "33531",
+     "comp": "league",
+     "round": 6,
+     "date": "2026-09-20",
+     "time": "18:45",
+     "home": "ضمك",
+     "away": "العدالة",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+     "status": "played",
+     "score": [
+      3,
+      2
+     ],
+     "weather": {
+      "t": 26,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33532",
+     "saffId": "33532",
+     "comp": "league",
+     "round": 6,
+     "date": "2026-09-20",
+     "time": "18:55",
+     "home": "الجبلين",
+     "away": "العروبة",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 37,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33533",
+     "saffId": "33533",
+     "comp": "league",
+     "round": 6,
+     "date": "2026-09-20",
+     "time": "18:55",
+     "home": "الجندل",
+     "away": "الوحدة",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "played",
+     "score": [
+      2,
+      2
+     ],
+     "weather": {
+      "t": 36,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33534",
+     "saffId": "33534",
+     "comp": "league",
+     "round": 6,
+     "date": "2026-09-20",
+     "time": "20:00",
+     "home": "الجيل",
+     "away": "هجر",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ],
+     "weather": {
+      "t": 34,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l6",
@@ -1285,8 +2341,162 @@ window.LEAGUE_DATA = {
        ]
       }
      ],
-     "saffId": null,
+     "saffId": "33529",
      "roundExact": true
+    },
+    {
+     "id": "m33542",
+     "saffId": "33542",
+     "comp": "league",
+     "round": 7,
+     "date": "2026-10-12",
+     "time": "17:55",
+     "home": "العدالة",
+     "away": "الأنوار",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 37,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33538",
+     "saffId": "33538",
+     "comp": "league",
+     "round": 7,
+     "date": "2026-10-12",
+     "time": "18:15",
+     "home": "النجمة",
+     "away": "ضمك",
+     "venue": "ملعب إدارة التعليم (عنيزة)",
+     "status": "played",
+     "score": [
+      3,
+      0
+     ],
+     "weather": {
+      "t": 34,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33539",
+     "saffId": "33539",
+     "comp": "league",
+     "round": 7,
+     "date": "2026-10-12",
+     "time": "20:00",
+     "home": "الوحدة",
+     "away": "الطائي",
+     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+     "status": "played",
+     "score": [
+      6,
+      1
+     ],
+     "weather": {
+      "t": 31,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33540",
+     "saffId": "33540",
+     "comp": "league",
+     "round": 7,
+     "date": "2026-10-13",
+     "time": "18:15",
+     "home": "البكيرية",
+     "away": "الزلفي",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "played",
+     "score": [
+      0,
+      2
+     ],
+     "weather": {
+      "t": 34,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33543",
+     "saffId": "33543",
+     "comp": "league",
+     "round": 7,
+     "date": "2026-10-13",
+     "time": "18:15",
+     "home": "الصقر",
+     "away": "الجبلين",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      1,
+      3
+     ],
+     "weather": {
+      "t": 34,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33541",
+     "saffId": "33541",
+     "comp": "league",
+     "round": 7,
+     "date": "2026-10-14",
+     "time": "18:30",
+     "home": "الجندل",
+     "away": "الأخدود",
+     "venue": "ملعب نادي العروبة (الجوف)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 35,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33535",
+     "saffId": "33535",
+     "comp": "league",
+     "round": 7,
+     "date": "2026-10-14",
+     "time": "20:00",
+     "home": "الرائد",
+     "away": "جدة",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      1,
+      0
+     ],
+     "weather": {
+      "t": 32,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l8",
@@ -1308,8 +2518,184 @@ window.LEAGUE_DATA = {
       1,
       1
      ],
-     "saffId": null,
+     "saffId": "33544",
      "roundExact": true
+    },
+    {
+     "id": "m33545",
+     "saffId": "33545",
+     "comp": "league",
+     "round": 8,
+     "date": "2026-10-19",
+     "time": "18:20",
+     "home": "ضمك",
+     "away": "الطائي",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+     "status": "played",
+     "score": [
+      4,
+      1
+     ],
+     "weather": {
+      "t": 19,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33546",
+     "saffId": "33546",
+     "comp": "league",
+     "round": 8,
+     "date": "2026-10-19",
+     "time": "19:50",
+     "home": "الرائد",
+     "away": "الصقر",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      0,
+      2
+     ],
+     "weather": {
+      "t": 33,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33547",
+     "saffId": "33547",
+     "comp": "league",
+     "round": 8,
+     "date": "2026-10-20",
+     "time": "17:45",
+     "home": "هجر",
+     "away": "النجمة",
+     "venue": "ملعب نادي هجر (الأحساء)",
+     "status": "played",
+     "score": [
+      2,
+      4
+     ],
+     "weather": {
+      "t": 36,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33548",
+     "saffId": "33548",
+     "comp": "league",
+     "round": 8,
+     "date": "2026-10-20",
+     "time": "18:20",
+     "home": "العروبة",
+     "away": "البكيرية",
+     "venue": "ملعب نادي العروبة (الجوف)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 30,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33549",
+     "saffId": "33549",
+     "comp": "league",
+     "round": 8,
+     "date": "2026-10-20",
+     "time": "19:50",
+     "home": "الأخدود",
+     "away": "العدالة",
+     "venue": "ملعب نادي جدة (جدة)",
+     "status": "played",
+     "score": [
+      1,
+      3
+     ],
+     "weather": {
+      "t": 31,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33551",
+     "saffId": "33551",
+     "comp": "league",
+     "round": 8,
+     "date": "2026-10-21",
+     "time": "18:00",
+     "home": "الأنوار",
+     "away": "الوحدة",
+     "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 32,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33552",
+     "saffId": "33552",
+     "comp": "league",
+     "round": 8,
+     "date": "2026-10-21",
+     "time": "19:50",
+     "home": "جدة",
+     "away": "الجبلين",
+     "venue": "ملعب نادي جدة (جدة)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
+     "weather": {
+      "t": 31,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33554",
+     "saffId": "33554",
+     "comp": "league",
+     "round": 9,
+     "date": "2026-10-26",
+     "time": "18:00",
+     "home": "البكيرية",
+     "away": "هجر",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "played",
+     "score": [
+      2,
+      1
+     ],
+     "weather": {
+      "t": 29,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l9",
@@ -1344,8 +2730,140 @@ window.LEAGUE_DATA = {
        ]
       }
      ],
-     "saffId": null,
+     "saffId": "33555",
      "roundExact": true
+    },
+    {
+     "id": "m33556",
+     "saffId": "33556",
+     "comp": "league",
+     "round": 9,
+     "date": "2026-10-27",
+     "time": "16:45",
+     "home": "الطائي",
+     "away": "جدة",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      2,
+      0
+     ],
+     "weather": {
+      "t": 32,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33557",
+     "saffId": "33557",
+     "comp": "league",
+     "round": 9,
+     "date": "2026-10-27",
+     "time": "18:25",
+     "home": "الوحدة",
+     "away": "الصقر",
+     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+     "status": "played",
+     "score": [
+      2,
+      1
+     ],
+     "weather": {
+      "t": 33,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33558",
+     "saffId": "33558",
+     "comp": "league",
+     "round": 9,
+     "date": "2026-10-27",
+     "time": "19:30",
+     "home": "العدالة",
+     "away": "الجيل",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
+     "weather": {
+      "t": 29,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33559",
+     "saffId": "33559",
+     "comp": "league",
+     "round": 9,
+     "date": "2026-10-28",
+     "time": "15:35",
+     "home": "الجندل",
+     "away": "ضمك",
+     "venue": "ملعب نادي العروبة (الجوف)",
+     "status": "played",
+     "score": [
+      0,
+      2
+     ],
+     "weather": {
+      "t": 32,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33560",
+     "saffId": "33560",
+     "comp": "league",
+     "round": 9,
+     "date": "2026-10-28",
+     "time": "18:05",
+     "home": "النجمة",
+     "away": "الزلفي",
+     "venue": "ملعب إدارة التعليم (عنيزة)",
+     "status": "played",
+     "score": [
+      2,
+      0
+     ],
+     "weather": {
+      "t": 32,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33561",
+     "saffId": "33561",
+     "comp": "league",
+     "round": 9,
+     "date": "2026-10-28",
+     "time": "18:05",
+     "home": "الجبلين",
+     "away": "الرائد",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      1,
+      0
+     ],
+     "weather": {
+      "t": 27,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l10",
@@ -1367,8 +2885,184 @@ window.LEAGUE_DATA = {
       1,
       3
      ],
-     "saffId": null,
+     "saffId": "33563",
      "roundExact": true
+    },
+    {
+     "id": "m33564",
+     "saffId": "33564",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-01",
+     "time": "18:00",
+     "home": "الصقر",
+     "away": "الطائي",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 33,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33565",
+     "saffId": "33565",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-01",
+     "time": "19:45",
+     "home": "جدة",
+     "away": "العدالة",
+     "venue": "ملعب نادي جدة (جدة)",
+     "status": "played",
+     "score": [
+      2,
+      2
+     ],
+     "weather": {
+      "t": 31,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33562",
+     "saffId": "33562",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-02",
+     "time": "15:30",
+     "home": "العروبة",
+     "away": "الأنوار",
+     "venue": "ملعب نادي العروبة (الجوف)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
+     "weather": {
+      "t": 30,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33566",
+     "saffId": "33566",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-02",
+     "time": "15:30",
+     "home": "الجبلين",
+     "away": "البكيرية",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      3,
+      0
+     ],
+     "weather": {
+      "t": 30,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33567",
+     "saffId": "33567",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-02",
+     "time": "17:40",
+     "home": "الجيل",
+     "away": "النجمة",
+     "venue": "ملعب نادي هجر (الأحساء)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
+     "weather": {
+      "t": 34,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33568",
+     "saffId": "33568",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-02",
+     "time": "17:55",
+     "home": "الزلفي",
+     "away": "الجندل",
+     "venue": "ملعب نادي الزلفي (الزلفي)",
+     "status": "played",
+     "score": [
+      3,
+      0
+     ],
+     "weather": {
+      "t": 32,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33569",
+     "saffId": "33569",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-03",
+     "time": "15:35",
+     "home": "ضمك",
+     "away": "الأخدود",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+     "status": "played",
+     "score": [
+      4,
+      3
+     ],
+     "weather": {
+      "t": 23,
+      "c": "sun",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33570",
+     "saffId": "33570",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-03",
+     "time": "18:00",
+     "home": "الرائد",
+     "away": "الوحدة",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
+     "weather": {
+      "t": 30,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "s11_0",
@@ -1592,7 +3286,7 @@ window.LEAGUE_DATA = {
      "id": "m33581",
      "saffId": "33581",
      "comp": "league",
-     "round": 10,
+     "round": 12,
      "date": "2026-11-23",
      "time": "17:30",
      "home": "الجيل",
@@ -1605,13 +3299,14 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33582",
      "saffId": "33582",
      "comp": "league",
-     "round": 10,
+     "round": 12,
      "date": "2026-11-23",
      "time": "18:15",
      "home": "جدة",
@@ -1624,13 +3319,14 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33580",
      "saffId": "33580",
      "comp": "league",
-     "round": 10,
+     "round": 12,
      "date": "2026-11-24",
      "time": "15:15",
      "home": "الرائد",
@@ -1643,13 +3339,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33583",
      "saffId": "33583",
      "comp": "league",
-     "round": 10,
+     "round": 12,
      "date": "2026-11-24",
      "time": "15:20",
      "home": "الجبلين",
@@ -1662,13 +3359,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33584",
      "saffId": "33584",
      "comp": "league",
-     "round": 10,
+     "round": 12,
      "date": "2026-11-24",
      "time": "15:20",
      "home": "العروبة",
@@ -1681,7 +3379,8 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33585",
@@ -1700,13 +3399,14 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33586",
      "saffId": "33586",
      "comp": "league",
-     "round": 10,
+     "round": 12,
      "date": "2026-11-25",
      "time": "15:10",
      "home": "البكيرية",
@@ -1719,13 +3419,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33587",
      "saffId": "33587",
      "comp": "league",
-     "round": 10,
+     "round": 12,
      "date": "2026-11-25",
      "time": "15:10",
      "home": "الأنوار",
@@ -1738,7 +3439,8 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l12",
@@ -1776,7 +3478,7 @@ window.LEAGUE_DATA = {
      "id": "m33589",
      "saffId": "33589",
      "comp": "league",
-     "round": 12,
+     "round": 13,
      "date": "2026-11-29",
      "time": "15:30",
      "home": "ضمك",
@@ -1789,13 +3491,14 @@ window.LEAGUE_DATA = {
       "c": "rain",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33590",
      "saffId": "33590",
      "comp": "league",
-     "round": 12,
+     "round": 13,
      "date": "2026-11-29",
      "time": "17:50",
      "home": "الصقر",
@@ -1808,13 +3511,14 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33591",
      "saffId": "33591",
      "comp": "league",
-     "round": 12,
+     "round": 13,
      "date": "2026-11-30",
      "time": "15:05",
      "home": "الأنوار",
@@ -1827,7 +3531,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33592",
@@ -1846,13 +3551,14 @@ window.LEAGUE_DATA = {
       "c": "rain",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33594",
      "saffId": "33594",
      "comp": "league",
-     "round": 12,
+     "round": 13,
      "date": "2026-11-30",
      "time": "18:15",
      "home": "الوحدة",
@@ -1865,7 +3571,8 @@ window.LEAGUE_DATA = {
       "c": "rain",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l13",
@@ -1903,13 +3610,14 @@ window.LEAGUE_DATA = {
       "c": "rain",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33593",
      "saffId": "33593",
      "comp": "league",
-     "round": 12,
+     "round": 13,
      "date": "2026-12-01",
      "time": "15:25",
      "home": "الجندل",
@@ -1922,7 +3630,8 @@ window.LEAGUE_DATA = {
       "c": "rain",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33597",
@@ -1941,13 +3650,14 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "forecast",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33601",
      "saffId": "33601",
      "comp": "league",
-     "round": 13,
+     "round": 14,
      "date": "2026-12-06",
      "time": "15:00",
      "home": "الجيل",
@@ -1960,7 +3670,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33599",
@@ -1979,7 +3690,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l14",
@@ -2016,13 +3728,14 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33603",
      "saffId": "33603",
      "comp": "league",
-     "round": 13,
+     "round": 14,
      "date": "2026-12-07",
      "time": "15:15",
      "home": "الزلفي",
@@ -2035,7 +3748,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33605",
@@ -2054,7 +3768,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33604",
@@ -2073,7 +3788,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33598",
@@ -2092,7 +3808,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33606",
@@ -2111,13 +3828,14 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33553",
      "saffId": "33553",
      "comp": "league",
-     "round": 15,
+     "round": 9,
      "date": "2026-12-11",
      "time": "15:10",
      "home": "الأنوار",
@@ -2130,7 +3848,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l7",
@@ -2213,7 +3932,7 @@ window.LEAGUE_DATA = {
      "id": "m33537",
      "saffId": "33537",
      "comp": "league",
-     "round": 15,
+     "round": 7,
      "date": "2026-12-11",
      "time": "17:35",
      "home": "هجر",
@@ -2226,7 +3945,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33612",
@@ -2245,7 +3965,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33615",
@@ -2264,7 +3985,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33611",
@@ -2283,7 +4005,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33613",
@@ -2302,13 +4025,14 @@ window.LEAGUE_DATA = {
       "c": "rain",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33607",
      "saffId": "33607",
      "comp": "league",
-     "round": 16,
+     "round": 15,
      "date": "2026-12-16",
      "time": "15:10",
      "home": "الأنوار",
@@ -2321,13 +4045,14 @@ window.LEAGUE_DATA = {
       "c": "rain",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33609",
      "saffId": "33609",
      "comp": "league",
-     "round": 16,
+     "round": 15,
      "date": "2026-12-16",
      "time": "15:25",
      "home": "الجندل",
@@ -2340,13 +4065,14 @@ window.LEAGUE_DATA = {
       "c": "rain",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33608",
      "saffId": "33608",
      "comp": "league",
-     "round": 16,
+     "round": 15,
      "date": "2026-12-16",
      "time": "15:40",
      "home": "الأخدود",
@@ -2359,13 +4085,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33614",
      "saffId": "33614",
      "comp": "league",
-     "round": 16,
+     "round": 15,
      "date": "2026-12-16",
      "time": "17:30",
      "home": "العدالة",
@@ -2378,7 +4105,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l15",
@@ -2416,7 +4144,7 @@ window.LEAGUE_DATA = {
      "id": "m33617",
      "saffId": "33617",
      "comp": "league",
-     "round": 17,
+     "round": 16,
      "date": "2026-12-21",
      "time": "15:25",
      "home": "العروبة",
@@ -2429,7 +4157,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l16",
@@ -2467,7 +4196,7 @@ window.LEAGUE_DATA = {
      "id": "m33619",
      "saffId": "33619",
      "comp": "league",
-     "round": 17,
+     "round": 16,
      "date": "2026-12-21",
      "time": "17:35",
      "home": "الجيل",
@@ -2480,13 +4209,14 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33620",
      "saffId": "33620",
      "comp": "league",
-     "round": 17,
+     "round": 16,
      "date": "2026-12-22",
      "time": "15:15",
      "home": "الزلفي",
@@ -2499,13 +4229,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33616",
      "saffId": "33616",
      "comp": "league",
-     "round": 18,
+     "round": 16,
      "date": "2026-12-22",
      "time": "15:15",
      "home": "الرائد",
@@ -2518,13 +4249,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33622",
      "saffId": "33622",
      "comp": "league",
-     "round": 17,
+     "round": 16,
      "date": "2026-12-22",
      "time": "18:25",
      "home": "جدة",
@@ -2537,13 +4269,14 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33621",
      "saffId": "33621",
      "comp": "league",
-     "round": 17,
+     "round": 16,
      "date": "2026-12-23",
      "time": "15:20",
      "home": "النجمة",
@@ -2556,13 +4289,14 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33623",
      "saffId": "33623",
      "comp": "league",
-     "round": 17,
+     "round": 16,
      "date": "2026-12-23",
      "time": "15:25",
      "home": "الجبلين",
@@ -2575,13 +4309,14 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33624",
      "saffId": "33624",
      "comp": "league",
-     "round": 17,
+     "round": 16,
      "date": "2026-12-23",
      "time": "17:35",
      "home": "هجر",
@@ -2594,7 +4329,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l17",
@@ -2632,7 +4368,7 @@ window.LEAGUE_DATA = {
      "id": "m33626",
      "saffId": "33626",
      "comp": "league",
-     "round": 18,
+     "round": 17,
      "date": "2026-12-28",
      "time": "15:30",
      "home": "الطائي",
@@ -2645,13 +4381,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33627",
      "saffId": "33627",
      "comp": "league",
-     "round": 20,
+     "round": 17,
      "date": "2026-12-28",
      "time": "17:50",
      "home": "الأنوار",
@@ -2664,13 +4401,14 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33628",
      "saffId": "33628",
      "comp": "league",
-     "round": 18,
+     "round": 17,
      "date": "2026-12-29",
      "time": "15:25",
      "home": "البكيرية",
@@ -2683,13 +4421,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33629",
      "saffId": "33629",
      "comp": "league",
-     "round": 18,
+     "round": 17,
      "date": "2026-12-29",
      "time": "15:45",
      "home": "الأخدود",
@@ -2702,13 +4441,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33630",
      "saffId": "33630",
      "comp": "league",
-     "round": 18,
+     "round": 17,
      "date": "2026-12-29",
      "time": "18:25",
      "home": "الوحدة",
@@ -2721,13 +4461,14 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33631",
      "saffId": "33631",
      "comp": "league",
-     "round": 18,
+     "round": 17,
      "date": "2026-12-30",
      "time": "15:20",
      "home": "الصقر",
@@ -2740,13 +4481,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33632",
      "saffId": "33632",
      "comp": "league",
-     "round": 19,
+     "round": 17,
      "date": "2026-12-30",
      "time": "15:40",
      "home": "ضمك",
@@ -2759,13 +4501,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33633",
      "saffId": "33633",
      "comp": "league",
-     "round": 18,
+     "round": 17,
      "date": "2026-12-30",
      "time": "17:40",
      "home": "العدالة",
@@ -2778,13 +4521,14 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33634",
      "saffId": "33634",
      "comp": "league",
-     "round": 19,
+     "round": 18,
      "date": "2027-01-04",
      "time": "15:25",
      "home": "الرائد",
@@ -2797,13 +4541,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33635",
      "saffId": "33635",
      "comp": "league",
-     "round": 19,
+     "round": 18,
      "date": "2027-01-04",
      "time": "15:35",
      "home": "الجندل",
@@ -2816,7 +4561,8 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l19",
@@ -2840,7 +4586,7 @@ window.LEAGUE_DATA = {
      "id": "m33636",
      "saffId": "33636",
      "comp": "league",
-     "round": 19,
+     "round": 18,
      "date": "2027-01-04",
      "time": "15:50",
      "home": "الأخدود",
@@ -2853,13 +4599,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33638",
      "saffId": "33638",
      "comp": "league",
-     "round": 19,
+     "round": 18,
      "date": "2027-01-05",
      "time": "15:20",
      "home": "الزلفي",
@@ -2872,13 +4619,14 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33637",
      "saffId": "33637",
      "comp": "league",
-     "round": 21,
+     "round": 18,
      "date": "2027-01-05",
      "time": "15:20",
      "home": "الأنوار",
@@ -2891,13 +4639,14 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33639",
      "saffId": "33639",
      "comp": "league",
-     "round": 19,
+     "round": 18,
      "date": "2027-01-05",
      "time": "17:45",
      "home": "العدالة",
@@ -2910,7 +4659,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l18",
@@ -2959,7 +4709,7 @@ window.LEAGUE_DATA = {
      "id": "m33641",
      "saffId": "33641",
      "comp": "league",
-     "round": 20,
+     "round": 18,
      "date": "2027-01-06",
      "time": "15:45",
      "home": "ضمك",
@@ -2972,13 +4722,14 @@ window.LEAGUE_DATA = {
       "c": "rain",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33642",
      "saffId": "33642",
      "comp": "league",
-     "round": 19,
+     "round": 18,
      "date": "2027-01-06",
      "time": "18:30",
      "home": "جدة",
@@ -2991,13 +4742,14 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33550",
      "saffId": "33550",
      "comp": "league",
-     "round": 20,
+     "round": 8,
      "date": "2027-01-10",
      "time": "15:10",
      "home": "الجيل",
@@ -3010,7 +4762,8 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "typical",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "c37569",
