@@ -19,11 +19,13 @@ permissions:
   id-token: write
 
 concurrency:
-  group: live-update
+  # a code push gets its own lane, so the two minute data runs can never cancel its deploy
+  group: ${{ github.event_name == 'push' && 'code-push' || 'live-update' }}
   cancel-in-progress: false
 
 jobs:
   update:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
@@ -52,7 +54,7 @@ jobs:
 
   deploy:
     needs: update
-    if: needs.update.outputs.changed == 'true' || github.event_name == 'push'
+    if: always() && (github.event_name == 'push' || needs.update.outputs.changed == 'true')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
