@@ -1094,9 +1094,10 @@ window.LEAGUE_DATA = {
     {
      "id": "cup-r32",
      "weather": {
-      "t": 37,
-      "c": "clear",
-      "src": "typical"
+      "t": 39,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
      },
      "comp": "cup",
      "round": "r32",
@@ -1116,9 +1117,10 @@ window.LEAGUE_DATA = {
     {
      "id": "l1",
      "weather": {
-      "t": 37,
-      "c": "clear",
-      "src": "typical"
+      "t": 39,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 1,
@@ -1138,9 +1140,10 @@ window.LEAGUE_DATA = {
     {
      "id": "l2",
      "weather": {
-      "t": 38,
-      "c": "clear",
-      "src": "typical"
+      "t": 40,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 2,
@@ -1160,9 +1163,10 @@ window.LEAGUE_DATA = {
     {
      "id": "l3",
      "weather": {
-      "t": 36,
+      "t": 39,
       "c": "clear",
-      "src": "typical"
+      "src": "observed",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 3,
@@ -1182,9 +1186,10 @@ window.LEAGUE_DATA = {
     {
      "id": "l4",
      "weather": {
-      "t": 22,
-      "c": "partly",
-      "src": "typical"
+      "t": 20,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 4,
@@ -1204,9 +1209,10 @@ window.LEAGUE_DATA = {
     {
      "id": "l5",
      "weather": {
-      "t": 35,
-      "c": "clear",
-      "src": "typical"
+      "t": 42,
+      "c": "cloud",
+      "src": "observed",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 5,
@@ -1226,9 +1232,10 @@ window.LEAGUE_DATA = {
     {
      "id": "l6",
      "weather": {
-      "t": 25,
-      "c": "clear",
-      "src": "typical"
+      "t": 28,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 6,
@@ -1343,9 +1350,10 @@ window.LEAGUE_DATA = {
     {
      "id": "l10",
      "weather": {
-      "t": 28,
+      "t": 33,
       "c": "clear",
-      "src": "typical"
+      "src": "observed",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 10,
@@ -1400,14 +1408,21 @@ window.LEAGUE_DATA = {
      "score": [
       0,
       0
-     ]
+     ],
+     "weather": {
+      "t": 24,
+      "c": "sun",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l11",
      "weather": {
-      "t": 24,
-      "c": "clear",
-      "src": "typical"
+      "t": 30,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 11,
@@ -1462,7 +1477,13 @@ window.LEAGUE_DATA = {
      "score": [
       1,
       1
-     ]
+     ],
+     "weather": {
+      "t": 21,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "s11_4",
@@ -1479,7 +1500,13 @@ window.LEAGUE_DATA = {
      "score": [
       0,
       3
-     ]
+     ],
+     "weather": {
+      "t": 19,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "s11_5",
@@ -1496,7 +1523,13 @@ window.LEAGUE_DATA = {
      "score": [
       0,
       1
-     ]
+     ],
+     "weather": {
+      "t": 20,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "s11_6",
@@ -1513,7 +1546,13 @@ window.LEAGUE_DATA = {
      "score": [
       4,
       1
-     ]
+     ],
+     "weather": {
+      "t": 27,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "s11_7",
@@ -1541,7 +1580,13 @@ window.LEAGUE_DATA = {
        ],
        "at": "2026-11-18"
       }
-     ]
+     ],
+     "weather": {
+      "t": 25,
+      "c": "clear",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33581",
@@ -1554,7 +1599,13 @@ window.LEAGUE_DATA = {
      "away": "الصقر",
      "venue": "ملعب نادي هجر (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 27,
+      "c": "partly",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33582",
@@ -1567,7 +1618,13 @@ window.LEAGUE_DATA = {
      "away": "ضمك",
      "venue": "ملعب نادي جدة (جدة)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 29,
+      "c": "clear",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33580",
@@ -1580,7 +1637,13 @@ window.LEAGUE_DATA = {
      "away": "الأخدود",
      "venue": "ملعب نادي البكيرية (البكيرية)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 29,
+      "c": "sun",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33583",
@@ -1593,7 +1656,13 @@ window.LEAGUE_DATA = {
      "away": "الزلفي",
      "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 26,
+      "c": "sun",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33584",
@@ -1606,7 +1675,13 @@ window.LEAGUE_DATA = {
      "away": "النجمة",
      "venue": "استاد جامعة الجوف (الجوف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 28,
+      "c": "sun",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33585",
@@ -1619,7 +1694,13 @@ window.LEAGUE_DATA = {
      "away": "الطائي",
      "venue": "ملعب نادي هجر (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 25,
+      "c": "clear",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33586",
@@ -1632,7 +1713,13 @@ window.LEAGUE_DATA = {
      "away": "الوحدة",
      "venue": "ملعب نادي البكيرية (البكيرية)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 28,
+      "c": "sun",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33587",
@@ -1645,14 +1732,21 @@ window.LEAGUE_DATA = {
      "away": "الجندل",
      "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 27,
+      "c": "sun",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l12",
      "weather": {
-      "t": 23,
+      "t": 30,
       "c": "clear",
-      "src": "typical"
+      "src": "forecast",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 12,
@@ -1689,7 +1783,13 @@ window.LEAGUE_DATA = {
      "away": "الجيل",
      "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 18,
+      "c": "rain",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33590",
@@ -1702,7 +1802,13 @@ window.LEAGUE_DATA = {
      "away": "العروبة",
      "venue": "ملعب نادي البكيرية (البكيرية)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 20,
+      "c": "partly",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33591",
@@ -1715,7 +1821,13 @@ window.LEAGUE_DATA = {
      "away": "الزلفي",
      "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 25,
+      "c": "cloud",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33592",
@@ -1728,7 +1840,13 @@ window.LEAGUE_DATA = {
      "away": "هجر",
      "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 20,
+      "c": "rain",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33594",
@@ -1741,14 +1859,21 @@ window.LEAGUE_DATA = {
      "away": "النجمة",
      "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 24,
+      "c": "rain",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l13",
      "weather": {
-      "t": 22,
-      "c": "sun",
-      "src": "typical"
+      "t": 19,
+      "c": "rain",
+      "src": "forecast",
+      "at": "2026-11-18"
      },
      "comp": "league",
      "round": 13,
@@ -1772,7 +1897,13 @@ window.LEAGUE_DATA = {
      "away": "الجبلين",
      "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 20,
+      "c": "rain",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33593",
@@ -1785,7 +1916,13 @@ window.LEAGUE_DATA = {
      "away": "جدة",
      "venue": "استاد جامعة الجوف (الجوف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 20,
+      "c": "rain",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33597",
@@ -1798,7 +1935,13 @@ window.LEAGUE_DATA = {
      "away": "الرائد",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 25,
+      "c": "cloud",
+      "src": "forecast",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33601",
@@ -1811,7 +1954,13 @@ window.LEAGUE_DATA = {
      "away": "الأنوار",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 27,
+      "c": "partly",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33599",
@@ -1824,7 +1973,13 @@ window.LEAGUE_DATA = {
      "away": "الطائي",
      "venue": "استاد جامعة الجوف (الجوف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 25,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l14",
@@ -1855,7 +2010,13 @@ window.LEAGUE_DATA = {
      "away": "الأخدود",
      "venue": "ملعب نادي جدة (جدة)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 29,
+      "c": "clear",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33603",
@@ -1887,7 +2048,13 @@ window.LEAGUE_DATA = {
      "away": "الوحدة",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 24,
+      "c": "clear",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33604",
@@ -1919,7 +2086,13 @@ window.LEAGUE_DATA = {
      "away": "الجندل",
      "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 22,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33606",
@@ -1932,7 +2105,13 @@ window.LEAGUE_DATA = {
      "away": "العدالة",
      "venue": "ملعب إدارة التعليم (عنيزة)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 26,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33553",
@@ -1945,7 +2124,13 @@ window.LEAGUE_DATA = {
      "away": "الأخدود",
      "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 27,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l7",
@@ -2035,7 +2220,13 @@ window.LEAGUE_DATA = {
      "away": "العروبة",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 25,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33612",
@@ -2048,7 +2239,13 @@ window.LEAGUE_DATA = {
      "away": "النجمة",
      "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 16,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33615",
@@ -2080,7 +2277,13 @@ window.LEAGUE_DATA = {
      "away": "جدة",
      "venue": "ملعب نادي البكيرية (البكيرية)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 14,
+      "c": "partly",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33613",
@@ -2093,7 +2296,13 @@ window.LEAGUE_DATA = {
      "away": "الرائد",
      "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 14,
+      "c": "rain",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33607",
@@ -2106,7 +2315,13 @@ window.LEAGUE_DATA = {
      "away": "الجبلين",
      "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 18,
+      "c": "rain",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33609",
@@ -2119,7 +2334,13 @@ window.LEAGUE_DATA = {
      "away": "العروبة",
      "venue": "استاد جامعة الجوف (الجوف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 13,
+      "c": "rain",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33608",
@@ -2132,7 +2353,13 @@ window.LEAGUE_DATA = {
      "away": "الجيل",
      "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 15,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33614",
@@ -2145,7 +2372,13 @@ window.LEAGUE_DATA = {
      "away": "هجر",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 18,
+      "c": "partly",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l15",
@@ -2190,7 +2423,13 @@ window.LEAGUE_DATA = {
      "away": "الوحدة",
      "venue": "ملعب نادي العروبة (الجوف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 17,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l16",
@@ -2235,7 +2474,13 @@ window.LEAGUE_DATA = {
      "away": "البكيرية",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 17,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33620",
@@ -2286,7 +2531,13 @@ window.LEAGUE_DATA = {
      "away": "الأنوار",
      "venue": "ملعب نادي جدة (جدة)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 27,
+      "c": "clear",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33621",
@@ -2299,7 +2550,13 @@ window.LEAGUE_DATA = {
      "away": "الصقر",
      "venue": "ملعب إدارة التعليم (عنيزة)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 20,
+      "c": "partly",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33623",
@@ -2312,7 +2569,13 @@ window.LEAGUE_DATA = {
      "away": "العدالة",
      "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 22,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33624",
@@ -2325,7 +2588,13 @@ window.LEAGUE_DATA = {
      "away": "ضمك",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 20,
+      "c": "clear",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l17",
@@ -2370,7 +2639,13 @@ window.LEAGUE_DATA = {
      "away": "الجيل",
      "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 16,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33627",
@@ -2383,7 +2658,13 @@ window.LEAGUE_DATA = {
      "away": "الرائد",
      "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 25,
+      "c": "clear",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33628",
@@ -2396,7 +2677,13 @@ window.LEAGUE_DATA = {
      "away": "النجمة",
      "venue": "ملعب نادي البكيرية (البكيرية)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 20,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33629",
@@ -2409,7 +2696,13 @@ window.LEAGUE_DATA = {
      "away": "العروبة",
      "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 18,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33630",
@@ -2422,7 +2715,13 @@ window.LEAGUE_DATA = {
      "away": "جدة",
      "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 24,
+      "c": "clear",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33631",
@@ -2454,7 +2753,13 @@ window.LEAGUE_DATA = {
      "away": "الجبلين",
      "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 17,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33633",
@@ -2467,7 +2772,13 @@ window.LEAGUE_DATA = {
      "away": "الزلفي",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 20,
+      "c": "clear",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33634",
@@ -2499,7 +2810,13 @@ window.LEAGUE_DATA = {
      "away": "النجمة",
      "venue": "استاد جامعة الجوف (الجوف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 14,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l19",
@@ -2530,7 +2847,13 @@ window.LEAGUE_DATA = {
      "away": "الطائي",
      "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 23,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33638",
@@ -2562,7 +2885,13 @@ window.LEAGUE_DATA = {
      "away": "البكيرية",
      "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 19,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33639",
@@ -2575,7 +2904,13 @@ window.LEAGUE_DATA = {
      "away": "الوحدة",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 14,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "l18",
@@ -2631,7 +2966,13 @@ window.LEAGUE_DATA = {
      "away": "الصقر",
      "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 17,
+      "c": "rain",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33642",
@@ -2644,7 +2985,13 @@ window.LEAGUE_DATA = {
      "away": "هجر",
      "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 28,
+      "c": "clear",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "m33550",
@@ -2657,7 +3004,13 @@ window.LEAGUE_DATA = {
      "away": "الجندل",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 23,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "c37569",
@@ -2670,7 +3023,13 @@ window.LEAGUE_DATA = {
      "away": "الأخدود",
      "venue": "استاد جامعة الجوف (الجوف)",
      "status": "upcoming",
-     "score": null
+     "score": null,
+     "weather": {
+      "t": 18,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
     },
     {
      "id": "cup-r16",
