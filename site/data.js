@@ -1134,7 +1134,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33482",
@@ -1156,7 +1157,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33483",
@@ -1178,7 +1180,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33484",
@@ -1200,7 +1203,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33485",
@@ -1222,7 +1226,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33486",
@@ -1244,7 +1249,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l1",
@@ -1289,7 +1295,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33488",
@@ -1311,7 +1318,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33490",
@@ -1333,7 +1341,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33491",
@@ -1355,7 +1364,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33492",
@@ -1377,7 +1387,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33493",
@@ -1399,7 +1410,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33494",
@@ -1421,7 +1433,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33495",
@@ -1443,7 +1456,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l2",
@@ -1488,7 +1502,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33498",
@@ -1510,7 +1525,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33499",
@@ -1532,7 +1548,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33500",
@@ -1554,7 +1571,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33501",
@@ -1576,7 +1594,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33502",
@@ -1598,7 +1617,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33503",
@@ -1620,7 +1640,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33504",
@@ -1642,7 +1663,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l3",
@@ -1687,7 +1709,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33506",
@@ -1709,7 +1732,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33508",
@@ -1731,7 +1755,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33509",
@@ -1753,7 +1778,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33510",
@@ -1775,7 +1801,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l4",
@@ -1820,7 +1847,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33513",
@@ -1842,7 +1870,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33514",
@@ -1864,7 +1893,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33515",
@@ -1886,7 +1916,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33516",
@@ -1908,7 +1939,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33517",
@@ -1930,7 +1962,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33518",
@@ -1952,7 +1985,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33519",
@@ -1974,7 +2008,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l5",
@@ -2019,7 +2054,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33522",
@@ -2041,7 +2077,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33523",
@@ -2063,7 +2100,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33524",
@@ -2085,7 +2123,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33525",
@@ -2107,7 +2146,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33526",
@@ -2129,7 +2169,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33527",
@@ -2151,7 +2192,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33528",
@@ -2173,7 +2215,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33530",
@@ -2195,7 +2238,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33531",
@@ -2217,7 +2261,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33532",
@@ -2239,7 +2284,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33533",
@@ -2261,7 +2307,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33534",
@@ -2283,7 +2330,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l6",
@@ -2364,7 +2412,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33538",
@@ -2386,7 +2435,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33539",
@@ -2408,7 +2458,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33540",
@@ -2430,7 +2481,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33543",
@@ -2452,7 +2504,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33541",
@@ -2474,7 +2527,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33535",
@@ -2496,7 +2550,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l8",
@@ -2541,7 +2596,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33546",
@@ -2563,7 +2619,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33547",
@@ -2585,7 +2642,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33548",
@@ -2607,7 +2665,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33549",
@@ -2629,7 +2688,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33551",
@@ -2651,7 +2711,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33552",
@@ -2673,7 +2734,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33554",
@@ -2695,7 +2757,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l9",
@@ -2753,7 +2816,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33557",
@@ -2775,7 +2839,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33558",
@@ -2797,7 +2862,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33559",
@@ -2819,7 +2885,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33560",
@@ -2841,7 +2908,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33561",
@@ -2863,7 +2931,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "l10",
@@ -2908,7 +2977,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33565",
@@ -2930,7 +3000,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33562",
@@ -2952,7 +3023,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33566",
@@ -2974,7 +3046,8 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33567",
@@ -2996,7 +3069,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33568",
@@ -3018,7 +3092,8 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33569",
@@ -3040,7 +3115,8 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "m33570",
@@ -3062,7 +3138,8 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "observed",
       "at": "2026-11-18"
-     }
+     },
+     "roundExact": true
     },
     {
      "id": "s11_0",
