@@ -4,7 +4,7 @@
 /* weather per match: t = °C at kick off, c = sun|clear|partly|cloud|rain|storm|dust|fog,
    src = typical (same date last year) | forecast (within 14 days) | observed (after the match). Source: Open-Meteo. */
 window.LEAGUE_DATA = {
- "lastChecked": "2026-11-17",
+ "lastChecked": "2026-11-18",
  "source": "https://www.saff.com.sa/championship.php?id=416",
  "current": "2026/27",
  "teams": {
@@ -375,71 +375,88 @@ window.LEAGUE_DATA = {
   },
   "الجبلين": {
    "home": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
-   "city": "حائل"
+   "city": "حائل",
+   "saffId": 46
   },
   "الوحدة": {
    "home": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
-   "city": "مكة المكرمة"
+   "city": "مكة المكرمة",
+   "saffId": 107
   },
   "النجمة": {
    "home": "ملعب إدارة التعليم (عنيزة)",
-   "city": "عنيزة"
+   "city": "عنيزة",
+   "saffId": 58
   },
   "ضمك": {
    "home": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
-   "city": "أبها"
+   "city": "أبها",
+   "saffId": 126
   },
   "الزلفي": {
    "home": "ملعب نادي الزلفي (الزلفي)",
-   "city": "الزلفي"
+   "city": "الزلفي",
+   "saffId": 43
   },
   "الأنوار": {
    "home": "ملعب نادي الأنوار (حوطة بني تميم)",
-   "city": "حوطة بني تميم"
+   "city": "حوطة بني تميم",
+   "saffId": 15
   },
   "الصقر": {
    "home": "ملعب نادي الرائد (بريدة)",
-   "city": "القصيم"
+   "city": "القصيم",
+   "saffId": 63
   },
   "الطائي": {
    "home": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
-   "city": "حائل"
+   "city": "حائل",
+   "saffId": 47
   },
   "العدالة": {
    "home": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
-   "city": "الأحساء"
+   "city": "الأحساء",
+   "saffId": 147
   },
   "الرائد": {
    "home": "ملعب نادي الرائد (بريدة)",
-   "city": "بريدة"
+   "city": "بريدة",
+   "saffId": 59
   },
   "جدة": {
    "home": "ملعب نادي جدة (جدة)",
-   "city": "جدة"
+   "city": "جدة",
+   "saffId": 105
   },
   "العروبة": {
    "home": "ملعب نادي العروبة (الجوف)",
-   "city": "الجوف"
+   "city": "الجوف",
+   "saffId": 94
   },
   "الجندل": {
    "home": "استاد جامعة الجوف (الجوف)",
-   "city": "الجوف"
+   "city": "الجوف",
+   "saffId": 97
   },
   "الأخدود": {
    "home": "استاد مدينة الملك فهد الرياضية (الطائف)",
-   "city": "الطائف"
+   "city": "الطائف",
+   "saffId": 163
   },
   "هجر": {
    "home": "ملعب نادي هجر (الأحساء)",
-   "city": "الأحساء"
+   "city": "الأحساء",
+   "saffId": 140
   },
   "البكيرية": {
    "home": "ملعب نادي البكيرية (البكيرية)",
-   "city": "البكيرية"
+   "city": "البكيرية",
+   "saffId": 65
   },
   "الجيل": {
    "home": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
-   "city": "الأحساء"
+   "city": "الأحساء",
+   "saffId": 139
   }
  },
  "venuesFormat": "[English name, lat, lon, travel plan English, travel plan Arabic, short destination English, short destination Arabic]",
@@ -1265,6 +1282,672 @@ window.LEAGUE_DATA = {
      "roundExact": true
     },
     {
+     "id": "l8",
+     "weather": {
+      "t": 32,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     },
+     "comp": "league",
+     "round": 8,
+     "date": "2026-10-19",
+     "time": null,
+     "home": "الزلفي",
+     "away": "العلا",
+     "venue": "ملعب نادي الزلفي (الزلفي)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "saffId": null,
+     "roundExact": true
+    },
+    {
+     "id": "l9",
+     "weather": {
+      "t": 33,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     },
+     "comp": "league",
+     "round": 9,
+     "date": "2026-10-26",
+     "time": "19:45",
+     "home": "العلا",
+     "away": "العروبة",
+     "venue": "ملعب نادي أحد (المدينة المنورة)",
+     "status": "played",
+     "score": [
+      3,
+      1
+     ],
+     "changes": [
+      {
+       "field": "venue",
+       "from": [
+        "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+        "استاد الأمير محمد بن عبدالعزيز، المدينة المنورة"
+       ],
+       "to": [
+        "Ohod Club Stadium, Madinah",
+        "ملعب نادي أحد، المدينة المنورة"
+       ]
+      }
+     ],
+     "saffId": null,
+     "roundExact": true
+    },
+    {
+     "id": "l10",
+     "weather": {
+      "t": 28,
+      "c": "clear",
+      "src": "typical"
+     },
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-01",
+     "time": "17:40",
+     "home": "هجر",
+     "away": "العلا",
+     "venue": "ملعب نادي هجر (الأحساء)",
+     "status": "played",
+     "score": [
+      1,
+      3
+     ],
+     "saffId": null,
+     "roundExact": true
+    },
+    {
+     "id": "s11_0",
+     "saffId": "33572",
+     "comp": "league",
+     "round": 11,
+     "roundExact": true,
+     "date": "2026-11-06",
+     "time": "17:55",
+     "home": "الزلفي",
+     "away": "جدة",
+     "venue": "ملعب نادي الزلفي (الزلفي)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ],
+     "weather": {
+      "t": 31,
+      "c": "clear",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "s11_1",
+     "saffId": "33573",
+     "comp": "league",
+     "round": 11,
+     "roundExact": true,
+     "date": "2026-11-07",
+     "time": "15:30",
+     "home": "الجندل",
+     "away": "هجر",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "played",
+     "score": [
+      0,
+      0
+     ]
+    },
+    {
+     "id": "l11",
+     "weather": {
+      "t": 24,
+      "c": "clear",
+      "src": "typical"
+     },
+     "comp": "league",
+     "round": 11,
+     "date": "2026-11-07",
+     "time": "18:00",
+     "home": "النجمة",
+     "away": "العلا",
+     "venue": "ملعب إدارة التعليم (عنيزة)",
+     "status": "played",
+     "score": [
+      1,
+      3
+     ],
+     "saffId": "33574",
+     "roundExact": true
+    },
+    {
+     "id": "s11_2",
+     "saffId": "33575",
+     "comp": "league",
+     "round": 11,
+     "roundExact": true,
+     "date": "2026-11-07",
+     "time": "19:35",
+     "home": "الصقر",
+     "away": "البكيرية",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "played",
+     "score": [
+      4,
+      1
+     ],
+     "weather": {
+      "t": 30,
+      "c": "partly",
+      "src": "observed",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "s11_3",
+     "saffId": "33576",
+     "comp": "league",
+     "round": 11,
+     "roundExact": true,
+     "date": "2026-11-08",
+     "time": "15:30",
+     "home": "ضمك",
+     "away": "الأنوار",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+     "status": "played",
+     "score": [
+      1,
+      1
+     ]
+    },
+    {
+     "id": "s11_4",
+     "saffId": "33577",
+     "comp": "league",
+     "round": 11,
+     "roundExact": true,
+     "date": "2026-11-08",
+     "time": "18:05",
+     "home": "الطائي",
+     "away": "الرائد",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "played",
+     "score": [
+      0,
+      3
+     ]
+    },
+    {
+     "id": "s11_5",
+     "saffId": "33578",
+     "comp": "league",
+     "round": 11,
+     "roundExact": true,
+     "date": "2026-11-08",
+     "time": "18:20",
+     "home": "الأخدود",
+     "away": "الجبلين",
+     "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+     "status": "played",
+     "score": [
+      0,
+      1
+     ]
+    },
+    {
+     "id": "s11_6",
+     "saffId": "33579",
+     "comp": "league",
+     "round": 11,
+     "roundExact": true,
+     "date": "2026-11-08",
+     "time": "19:35",
+     "home": "الوحدة",
+     "away": "الجيل",
+     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+     "status": "played",
+     "score": [
+      4,
+      1
+     ]
+    },
+    {
+     "id": "s11_7",
+     "saffId": "33571",
+     "comp": "league",
+     "round": 11,
+     "roundExact": true,
+     "date": "2026-11-18",
+     "time": "17:30",
+     "home": "العدالة",
+     "away": "العروبة",
+     "venue": "ملعب نادي هجر (الأحساء)",
+     "status": "upcoming",
+     "score": null,
+     "changes": [
+      {
+       "field": "venue",
+       "from": [
+        "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+        "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)"
+       ],
+       "to": [
+        "ملعب نادي هجر (الأحساء)",
+        "ملعب نادي هجر (الأحساء)"
+       ],
+       "at": "2026-11-18"
+      }
+     ]
+    },
+    {
+     "id": "m33581",
+     "saffId": "33581",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-23",
+     "time": "17:30",
+     "home": "الجيل",
+     "away": "الصقر",
+     "venue": "ملعب نادي هجر (الأحساء)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33582",
+     "saffId": "33582",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-23",
+     "time": "18:15",
+     "home": "جدة",
+     "away": "ضمك",
+     "venue": "ملعب نادي جدة (جدة)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33580",
+     "saffId": "33580",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-24",
+     "time": "15:15",
+     "home": "الرائد",
+     "away": "الأخدود",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33583",
+     "saffId": "33583",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-24",
+     "time": "15:20",
+     "home": "الجبلين",
+     "away": "الزلفي",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33584",
+     "saffId": "33584",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-24",
+     "time": "15:20",
+     "home": "العروبة",
+     "away": "النجمة",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33585",
+     "saffId": "33585",
+     "comp": "league",
+     "round": 12,
+     "date": "2026-11-24",
+     "time": "17:30",
+     "home": "هجر",
+     "away": "الطائي",
+     "venue": "ملعب نادي هجر (الأحساء)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33586",
+     "saffId": "33586",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-25",
+     "time": "15:10",
+     "home": "البكيرية",
+     "away": "الوحدة",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33587",
+     "saffId": "33587",
+     "comp": "league",
+     "round": 10,
+     "date": "2026-11-25",
+     "time": "15:10",
+     "home": "الأنوار",
+     "away": "الجندل",
+     "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "l12",
+     "weather": {
+      "t": 23,
+      "c": "clear",
+      "src": "typical"
+     },
+     "comp": "league",
+     "round": 12,
+     "date": "2026-11-25",
+     "time": "18:10",
+     "home": "العلا",
+     "away": "العدالة",
+     "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+     "status": "upcoming",
+     "changes": [
+      {
+       "field": "venue",
+       "from": [
+        "Ohod Club Stadium, Madinah",
+        "ملعب نادي أحد، المدينة المنورة"
+       ],
+       "to": [
+        "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+        "استاد الأمير محمد بن عبدالعزيز، المدينة المنورة"
+       ]
+      }
+     ],
+     "saffId": "33588",
+     "roundExact": true
+    },
+    {
+     "id": "m33589",
+     "saffId": "33589",
+     "comp": "league",
+     "round": 12,
+     "date": "2026-11-29",
+     "time": "15:30",
+     "home": "ضمك",
+     "away": "الجيل",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33590",
+     "saffId": "33590",
+     "comp": "league",
+     "round": 12,
+     "date": "2026-11-29",
+     "time": "17:50",
+     "home": "الصقر",
+     "away": "العروبة",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33591",
+     "saffId": "33591",
+     "comp": "league",
+     "round": 12,
+     "date": "2026-11-30",
+     "time": "15:05",
+     "home": "الأنوار",
+     "away": "الزلفي",
+     "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33592",
+     "saffId": "33592",
+     "comp": "league",
+     "round": 13,
+     "date": "2026-11-30",
+     "time": "15:35",
+     "home": "الأخدود",
+     "away": "هجر",
+     "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33594",
+     "saffId": "33594",
+     "comp": "league",
+     "round": 12,
+     "date": "2026-11-30",
+     "time": "18:15",
+     "home": "الوحدة",
+     "away": "النجمة",
+     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "l13",
+     "weather": {
+      "t": 22,
+      "c": "sun",
+      "src": "typical"
+     },
+     "comp": "league",
+     "round": 13,
+     "date": "2026-12-01",
+     "time": "15:20",
+     "home": "البكيرية",
+     "away": "العلا",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "upcoming",
+     "saffId": "33595",
+     "roundExact": true
+    },
+    {
+     "id": "m33596",
+     "saffId": "33596",
+     "comp": "league",
+     "round": 13,
+     "date": "2026-12-01",
+     "time": "15:20",
+     "home": "الطائي",
+     "away": "الجبلين",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33593",
+     "saffId": "33593",
+     "comp": "league",
+     "round": 12,
+     "date": "2026-12-01",
+     "time": "15:25",
+     "home": "الجندل",
+     "away": "جدة",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33597",
+     "saffId": "33597",
+     "comp": "league",
+     "round": 13,
+     "date": "2026-12-01",
+     "time": "17:30",
+     "home": "العدالة",
+     "away": "الرائد",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33601",
+     "saffId": "33601",
+     "comp": "league",
+     "round": 13,
+     "date": "2026-12-06",
+     "time": "15:00",
+     "home": "الجيل",
+     "away": "الأنوار",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33599",
+     "saffId": "33599",
+     "comp": "league",
+     "round": 14,
+     "date": "2026-12-06",
+     "time": "15:20",
+     "home": "العروبة",
+     "away": "الطائي",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "l14",
+     "weather": {
+      "t": 25,
+      "c": "sun",
+      "src": "typical"
+     },
+     "comp": "league",
+     "round": 14,
+     "date": "2026-12-06",
+     "time": "15:35",
+     "home": "العلا",
+     "away": "الصقر",
+     "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+     "status": "upcoming",
+     "saffId": "33600",
+     "roundExact": true
+    },
+    {
+     "id": "m33602",
+     "saffId": "33602",
+     "comp": "league",
+     "round": 14,
+     "date": "2026-12-06",
+     "time": "18:20",
+     "home": "جدة",
+     "away": "الأخدود",
+     "venue": "ملعب نادي جدة (جدة)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33603",
+     "saffId": "33603",
+     "comp": "league",
+     "round": 13,
+     "date": "2026-12-07",
+     "time": "15:15",
+     "home": "الزلفي",
+     "away": "ضمك",
+     "venue": "ملعب نادي الزلفي (الزلفي)",
+     "status": "upcoming",
+     "score": null,
+     "weather": {
+      "t": 26,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33605",
+     "saffId": "33605",
+     "comp": "league",
+     "round": 14,
+     "date": "2026-12-07",
+     "time": "17:30",
+     "home": "هجر",
+     "away": "الوحدة",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33604",
+     "saffId": "33604",
+     "comp": "league",
+     "round": 14,
+     "date": "2026-12-08",
+     "time": "15:15",
+     "home": "الرائد",
+     "away": "البكيرية",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "upcoming",
+     "score": null,
+     "weather": {
+      "t": 28,
+      "c": "cloud",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33598",
+     "saffId": "33598",
+     "comp": "league",
+     "round": 14,
+     "date": "2026-12-08",
+     "time": "15:20",
+     "home": "الجبلين",
+     "away": "الجندل",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33606",
+     "saffId": "33606",
+     "comp": "league",
+     "round": 14,
+     "date": "2026-12-08",
+     "time": "17:50",
+     "home": "النجمة",
+     "away": "العدالة",
+     "venue": "ملعب إدارة التعليم (عنيزة)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33553",
+     "saffId": "33553",
+     "comp": "league",
+     "round": 15,
+     "date": "2026-12-11",
+     "time": "15:10",
+     "home": "الأنوار",
+     "away": "الأخدود",
+     "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
      "id": "l7",
      "weather": {
       "t": 24,
@@ -1338,176 +2021,131 @@ window.LEAGUE_DATA = {
       }
      ],
      "orig": "2026-10-12",
-     "saffId": null,
+     "saffId": "33536",
      "roundExact": true
     },
     {
-     "id": "l8",
-     "weather": {
-      "t": 28,
-      "c": "clear",
-      "src": "typical"
-     },
+     "id": "m33537",
+     "saffId": "33537",
      "comp": "league",
-     "round": 8,
-     "date": "2026-10-19",
-     "time": null,
-     "home": "الزلفي",
-     "away": "العلا",
-     "venue": "ملعب نادي الزلفي (الزلفي)",
-     "status": "played",
-     "score": [
-      1,
-      1
-     ],
-     "saffId": null,
-     "roundExact": true
-    },
-    {
-     "id": "l9",
-     "weather": {
-      "t": 28,
-      "c": "clear",
-      "src": "typical"
-     },
-     "comp": "league",
-     "round": 9,
-     "date": "2026-10-26",
-     "time": "19:45",
-     "home": "العلا",
-     "away": "العروبة",
-     "venue": "ملعب نادي أحد (المدينة المنورة)",
-     "status": "played",
-     "score": [
-      3,
-      1
-     ],
-     "changes": [
-      {
-       "field": "venue",
-       "from": [
-        "Prince Mohammed bin Abdulaziz Stadium, Madinah",
-        "استاد الأمير محمد بن عبدالعزيز، المدينة المنورة"
-       ],
-       "to": [
-        "Ohod Club Stadium, Madinah",
-        "ملعب نادي أحد، المدينة المنورة"
-       ]
-      }
-     ],
-     "saffId": null,
-     "roundExact": true
-    },
-    {
-     "id": "l10",
-     "weather": {
-      "t": 28,
-      "c": "clear",
-      "src": "typical"
-     },
-     "comp": "league",
-     "round": 10,
-     "date": "2026-11-01",
-     "time": "17:40",
+     "round": 15,
+     "date": "2026-12-11",
+     "time": "17:35",
      "home": "هجر",
-     "away": "العلا",
-     "venue": "ملعب نادي هجر (الأحساء)",
-     "status": "played",
-     "score": [
-      1,
-      3
-     ],
-     "saffId": null,
-     "roundExact": true
-    },
-    {
-     "id": "l11",
-     "weather": {
-      "t": 24,
-      "c": "clear",
-      "src": "typical"
-     },
-     "comp": "league",
-     "round": 11,
-     "date": "2026-11-07",
-     "time": "18:00",
-     "home": "النجمة",
-     "away": "العلا",
-     "venue": "ملعب إدارة التعليم (عنيزة)",
-     "status": "played",
-     "score": [
-      1,
-      3
-     ],
-     "saffId": null,
-     "roundExact": true
-    },
-    {
-     "id": "l12",
-     "weather": {
-      "t": 23,
-      "c": "clear",
-      "src": "typical"
-     },
-     "comp": "league",
-     "round": 12,
-     "date": "2026-11-25",
-     "time": "18:10",
-     "home": "العلا",
-     "away": "العدالة",
-     "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+     "away": "العروبة",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
      "status": "upcoming",
-     "changes": [
-      {
-       "field": "venue",
-       "from": [
-        "Ohod Club Stadium, Madinah",
-        "ملعب نادي أحد، المدينة المنورة"
-       ],
-       "to": [
-        "Prince Mohammed bin Abdulaziz Stadium, Madinah",
-        "استاد الأمير محمد بن عبدالعزيز، المدينة المنورة"
-       ]
-      }
-     ],
-     "saffId": null,
-     "roundExact": true
+     "score": null
     },
     {
-     "id": "l13",
-     "weather": {
-      "t": 22,
-      "c": "sun",
-      "src": "typical"
-     },
+     "id": "m33612",
+     "saffId": "33612",
      "comp": "league",
-     "round": 13,
-     "date": "2026-12-01",
+     "round": 15,
+     "date": "2026-12-14",
+     "time": "15:20",
+     "home": "الطائي",
+     "away": "النجمة",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33615",
+     "saffId": "33615",
+     "comp": "league",
+     "round": 15,
+     "date": "2026-12-14",
+     "time": "17:50",
+     "home": "الصقر",
+     "away": "الزلفي",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "upcoming",
+     "score": null,
+     "weather": {
+      "t": 17,
+      "c": "partly",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33611",
+     "saffId": "33611",
+     "comp": "league",
+     "round": 15,
+     "date": "2026-12-15",
      "time": "15:20",
      "home": "البكيرية",
-     "away": "العلا",
+     "away": "جدة",
      "venue": "ملعب نادي البكيرية (البكيرية)",
      "status": "upcoming",
-     "saffId": null,
-     "roundExact": true
+     "score": null
     },
     {
-     "id": "l14",
-     "weather": {
-      "t": 25,
-      "c": "sun",
-      "src": "typical"
-     },
+     "id": "m33613",
+     "saffId": "33613",
      "comp": "league",
-     "round": 14,
-     "date": "2026-12-06",
-     "time": "15:35",
-     "home": "العلا",
-     "away": "الصقر",
-     "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+     "round": 15,
+     "date": "2026-12-15",
+     "time": "15:30",
+     "home": "ضمك",
+     "away": "الرائد",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
      "status": "upcoming",
-     "saffId": null,
-     "roundExact": true
+     "score": null
+    },
+    {
+     "id": "m33607",
+     "saffId": "33607",
+     "comp": "league",
+     "round": 16,
+     "date": "2026-12-16",
+     "time": "15:10",
+     "home": "الأنوار",
+     "away": "الجبلين",
+     "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33609",
+     "saffId": "33609",
+     "comp": "league",
+     "round": 16,
+     "date": "2026-12-16",
+     "time": "15:25",
+     "home": "الجندل",
+     "away": "العروبة",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33608",
+     "saffId": "33608",
+     "comp": "league",
+     "round": 16,
+     "date": "2026-12-16",
+     "time": "15:40",
+     "home": "الأخدود",
+     "away": "الجيل",
+     "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33614",
+     "saffId": "33614",
+     "comp": "league",
+     "round": 16,
+     "date": "2026-12-16",
+     "time": "17:30",
+     "home": "العدالة",
+     "away": "هجر",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "upcoming",
+     "score": null
     },
     {
      "id": "l15",
@@ -1538,8 +2176,21 @@ window.LEAGUE_DATA = {
        ]
       }
      ],
-     "saffId": null,
+     "saffId": "33610",
      "roundExact": true
+    },
+    {
+     "id": "m33617",
+     "saffId": "33617",
+     "comp": "league",
+     "round": 17,
+     "date": "2026-12-21",
+     "time": "15:25",
+     "home": "العروبة",
+     "away": "الوحدة",
+     "venue": "ملعب نادي العروبة (الجوف)",
+     "status": "upcoming",
+     "score": null
     },
     {
      "id": "l16",
@@ -1570,8 +2221,111 @@ window.LEAGUE_DATA = {
        ]
       }
      ],
-     "saffId": null,
+     "saffId": "33618",
      "roundExact": true
+    },
+    {
+     "id": "m33619",
+     "saffId": "33619",
+     "comp": "league",
+     "round": 17,
+     "date": "2026-12-21",
+     "time": "17:35",
+     "home": "الجيل",
+     "away": "البكيرية",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33620",
+     "saffId": "33620",
+     "comp": "league",
+     "round": 17,
+     "date": "2026-12-22",
+     "time": "15:15",
+     "home": "الزلفي",
+     "away": "الأخدود",
+     "venue": "ملعب نادي الزلفي (الزلفي)",
+     "status": "upcoming",
+     "score": null,
+     "weather": {
+      "t": 17,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33616",
+     "saffId": "33616",
+     "comp": "league",
+     "round": 18,
+     "date": "2026-12-22",
+     "time": "15:15",
+     "home": "الرائد",
+     "away": "الجندل",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "upcoming",
+     "score": null,
+     "weather": {
+      "t": 17,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33622",
+     "saffId": "33622",
+     "comp": "league",
+     "round": 17,
+     "date": "2026-12-22",
+     "time": "18:25",
+     "home": "جدة",
+     "away": "الأنوار",
+     "venue": "ملعب نادي جدة (جدة)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33621",
+     "saffId": "33621",
+     "comp": "league",
+     "round": 17,
+     "date": "2026-12-23",
+     "time": "15:20",
+     "home": "النجمة",
+     "away": "الصقر",
+     "venue": "ملعب إدارة التعليم (عنيزة)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33623",
+     "saffId": "33623",
+     "comp": "league",
+     "round": 17,
+     "date": "2026-12-23",
+     "time": "15:25",
+     "home": "الجبلين",
+     "away": "العدالة",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33624",
+     "saffId": "33624",
+     "comp": "league",
+     "round": 17,
+     "date": "2026-12-23",
+     "time": "17:35",
+     "home": "هجر",
+     "away": "ضمك",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "upcoming",
+     "score": null
     },
     {
      "id": "l17",
@@ -1602,8 +2356,226 @@ window.LEAGUE_DATA = {
        ]
       }
      ],
+     "saffId": "33625",
+     "roundExact": true
+    },
+    {
+     "id": "m33626",
+     "saffId": "33626",
+     "comp": "league",
+     "round": 18,
+     "date": "2026-12-28",
+     "time": "15:30",
+     "home": "الطائي",
+     "away": "الجيل",
+     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33627",
+     "saffId": "33627",
+     "comp": "league",
+     "round": 20,
+     "date": "2026-12-28",
+     "time": "17:50",
+     "home": "الأنوار",
+     "away": "الرائد",
+     "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33628",
+     "saffId": "33628",
+     "comp": "league",
+     "round": 18,
+     "date": "2026-12-29",
+     "time": "15:25",
+     "home": "البكيرية",
+     "away": "النجمة",
+     "venue": "ملعب نادي البكيرية (البكيرية)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33629",
+     "saffId": "33629",
+     "comp": "league",
+     "round": 18,
+     "date": "2026-12-29",
+     "time": "15:45",
+     "home": "الأخدود",
+     "away": "العروبة",
+     "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33630",
+     "saffId": "33630",
+     "comp": "league",
+     "round": 18,
+     "date": "2026-12-29",
+     "time": "18:25",
+     "home": "الوحدة",
+     "away": "جدة",
+     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33631",
+     "saffId": "33631",
+     "comp": "league",
+     "round": 18,
+     "date": "2026-12-30",
+     "time": "15:20",
+     "home": "الصقر",
+     "away": "هجر",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "upcoming",
+     "score": null,
+     "weather": {
+      "t": 18,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33632",
+     "saffId": "33632",
+     "comp": "league",
+     "round": 19,
+     "date": "2026-12-30",
+     "time": "15:40",
+     "home": "ضمك",
+     "away": "الجبلين",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33633",
+     "saffId": "33633",
+     "comp": "league",
+     "round": 18,
+     "date": "2026-12-30",
+     "time": "17:40",
+     "home": "العدالة",
+     "away": "الزلفي",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33634",
+     "saffId": "33634",
+     "comp": "league",
+     "round": 19,
+     "date": "2027-01-04",
+     "time": "15:25",
+     "home": "الرائد",
+     "away": "العروبة",
+     "venue": "ملعب نادي الرائد (بريدة)",
+     "status": "upcoming",
+     "score": null,
+     "weather": {
+      "t": 16,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33635",
+     "saffId": "33635",
+     "comp": "league",
+     "round": 19,
+     "date": "2027-01-04",
+     "time": "15:35",
+     "home": "الجندل",
+     "away": "النجمة",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "l19",
+     "weather": {
+      "t": 21,
+      "c": "sun",
+      "src": "typical"
+     },
+     "comp": "league",
+     "round": 19,
+     "date": "2027-01-04",
+     "time": "15:50",
+     "home": "العلا",
+     "away": "الأنوار",
+     "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+     "status": "upcoming",
      "saffId": null,
      "roundExact": true
+    },
+    {
+     "id": "m33636",
+     "saffId": "33636",
+     "comp": "league",
+     "round": 19,
+     "date": "2027-01-04",
+     "time": "15:50",
+     "home": "الأخدود",
+     "away": "الطائي",
+     "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33638",
+     "saffId": "33638",
+     "comp": "league",
+     "round": 19,
+     "date": "2027-01-05",
+     "time": "15:20",
+     "home": "الزلفي",
+     "away": "الجيل",
+     "venue": "ملعب نادي الزلفي (الزلفي)",
+     "status": "upcoming",
+     "score": null,
+     "weather": {
+      "t": 17,
+      "c": "sun",
+      "src": "typical",
+      "at": "2026-11-18"
+     }
+    },
+    {
+     "id": "m33637",
+     "saffId": "33637",
+     "comp": "league",
+     "round": 21,
+     "date": "2027-01-05",
+     "time": "15:20",
+     "home": "الأنوار",
+     "away": "البكيرية",
+     "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33639",
+     "saffId": "33639",
+     "comp": "league",
+     "round": 19,
+     "date": "2027-01-05",
+     "time": "17:45",
+     "home": "العدالة",
+     "away": "الوحدة",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "upcoming",
+     "score": null
     },
     {
      "id": "l18",
@@ -1645,26 +2617,60 @@ window.LEAGUE_DATA = {
        ]
       }
      ],
-     "saffId": null,
+     "saffId": "33640",
      "roundExact": true
     },
     {
-     "id": "l19",
-     "weather": {
-      "t": 21,
-      "c": "sun",
-      "src": "typical"
-     },
+     "id": "m33641",
+     "saffId": "33641",
+     "comp": "league",
+     "round": 20,
+     "date": "2027-01-06",
+     "time": "15:45",
+     "home": "ضمك",
+     "away": "الصقر",
+     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "m33642",
+     "saffId": "33642",
      "comp": "league",
      "round": 19,
-     "date": "2027-01-04",
-     "time": "15:50",
-     "home": "العلا",
-     "away": "الأنوار",
-     "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+     "date": "2027-01-06",
+     "time": "18:30",
+     "home": "جدة",
+     "away": "هجر",
+     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
      "status": "upcoming",
-     "saffId": null,
-     "roundExact": true
+     "score": null
+    },
+    {
+     "id": "m33550",
+     "saffId": "33550",
+     "comp": "league",
+     "round": 20,
+     "date": "2027-01-10",
+     "time": "15:10",
+     "home": "الجيل",
+     "away": "الجندل",
+     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "status": "upcoming",
+     "score": null
+    },
+    {
+     "id": "c37569",
+     "saffId": "37569",
+     "comp": "cup",
+     "round": null,
+     "date": "2027-01-11",
+     "time": "16:50",
+     "home": "العروبة",
+     "away": "الأخدود",
+     "venue": "استاد جامعة الجوف (الجوف)",
+     "status": "upcoming",
+     "score": null
     },
     {
      "id": "cup-r16",
@@ -1728,140 +2734,7 @@ window.LEAGUE_DATA = {
        ]
       }
      ],
-     "saffId": null
-    },
-    {
-     "id": "s11_0",
-     "saffId": null,
-     "comp": "league",
-     "round": 11,
-     "roundExact": true,
-     "date": "2026-11-06",
-     "time": "17:55",
-     "home": "الزلفي",
-     "away": "جدة",
-     "venue": "ملعب نادي الزلفي (الزلفي)",
-     "status": "played",
-     "score": [
-      1,
-      1
-     ]
-    },
-    {
-     "id": "s11_1",
-     "saffId": null,
-     "comp": "league",
-     "round": 11,
-     "roundExact": true,
-     "date": "2026-11-07",
-     "time": "15:30",
-     "home": "الجندل",
-     "away": "هجر",
-     "venue": "استاد جامعة الجوف (الجوف)",
-     "status": "played",
-     "score": [
-      0,
-      0
-     ]
-    },
-    {
-     "id": "s11_2",
-     "saffId": null,
-     "comp": "league",
-     "round": 11,
-     "roundExact": true,
-     "date": "2026-11-07",
-     "time": "19:35",
-     "home": "الصقر",
-     "away": "البكيرية",
-     "venue": "ملعب نادي الرائد (بريدة)",
-     "status": "played",
-     "score": [
-      4,
-      1
-     ]
-    },
-    {
-     "id": "s11_3",
-     "saffId": null,
-     "comp": "league",
-     "round": 11,
-     "roundExact": true,
-     "date": "2026-11-08",
-     "time": "15:30",
-     "home": "ضمك",
-     "away": "الأنوار",
-     "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
-     "status": "played",
-     "score": [
-      1,
-      1
-     ]
-    },
-    {
-     "id": "s11_4",
-     "saffId": null,
-     "comp": "league",
-     "round": 11,
-     "roundExact": true,
-     "date": "2026-11-08",
-     "time": "18:05",
-     "home": "الطائي",
-     "away": "الرائد",
-     "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
-     "status": "played",
-     "score": [
-      0,
-      3
-     ]
-    },
-    {
-     "id": "s11_5",
-     "saffId": null,
-     "comp": "league",
-     "round": 11,
-     "roundExact": true,
-     "date": "2026-11-08",
-     "time": "18:20",
-     "home": "الأخدود",
-     "away": "الجبلين",
-     "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
-     "status": "played",
-     "score": [
-      0,
-      1
-     ]
-    },
-    {
-     "id": "s11_6",
-     "saffId": null,
-     "comp": "league",
-     "round": 11,
-     "roundExact": true,
-     "date": "2026-11-08",
-     "time": "19:35",
-     "home": "الوحدة",
-     "away": "الجيل",
-     "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
-     "status": "played",
-     "score": [
-      4,
-      1
-     ]
-    },
-    {
-     "id": "s11_7",
-     "saffId": null,
-     "comp": "league",
-     "round": 11,
-     "roundExact": true,
-     "date": "2026-11-18",
-     "time": "17:30",
-     "home": "العدالة",
-     "away": "العروبة",
-     "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
-     "status": "upcoming",
-     "score": null
+     "saffId": "37574"
     }
    ]
   }
