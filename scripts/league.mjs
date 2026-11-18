@@ -270,6 +270,7 @@ async function main() {
   // 1. league page: table, club ids, current round
   try {
     const html = await get(LEAGUE_URL);
+    if (process.env.FULL === "1") { fs.mkdirSync(path.join(ROOT, "raw"), { recursive: true }); fs.writeFileSync(path.join(ROOT, "raw", "championship.html"), html); }
     const { rows, ids } = parseTable(html, teamOf);
     if (rows.length >= 16) {
       ok++;
@@ -293,6 +294,7 @@ async function main() {
       if (!c.saffId) continue;
       try {
         const html = await get(TEAM_URL(c.saffId));
+        if (process.env.FULL === "1" && t === "الجبلين") fs.writeFileSync(path.join(ROOT, "raw", "team.html"), html);
         const fx = parseFixtures(html, teamOf).filter((f) => firstTeam(f.section) && (f.home === t || f.away === t));
         for (const f of fx) applyFixture(S, D, f, venueOf, null, changes);
         if (fx.length) read++;
