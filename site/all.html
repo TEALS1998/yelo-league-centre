@@ -141,6 +141,65 @@ td.pts{font-family:var(--dinc);font-size:19px;font-weight:800}
 .vrow .cr img{width:24px;height:24px;object-fit:contain}
 .vrow b{display:block;font-size:13px}.vrow .ar{display:block;font-size:12px;color:var(--muted)}
 footer{max-width:1460px;margin:0 auto;padding:0 24px 40px;color:var(--muted);font-size:11.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin-bottom:14px}
+.hcard{position:relative;overflow:hidden;border-radius:20px;background:var(--night);color:#fff;padding:22px 24px}
+.hcard::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 120% at 0% 100%,rgba(44,140,132,.35),transparent 60%),radial-gradient(50% 90% at 100% 0%,rgba(215,242,74,.18),transparent 60%),repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 24px)}
+.hcard>*{position:relative}
+.hk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);font-weight:800}
+.ht{font-family:var(--dinc);font-size:44px;font-weight:800;line-height:1;margin:8px 0 4px;letter-spacing:.02em;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.ht .ar{font-size:28px;letter-spacing:0}
+.prog{display:flex;align-items:center;gap:18px;margin-top:18px}
+.ring{width:96px;height:96px;flex:none}
+.prog .pv b{font-family:var(--dinc);font-size:30px;display:block;line-height:1}
+.prog .pv span{font-size:12px;opacity:.75}
+.hst{display:flex;gap:22px;margin-left:auto;flex-wrap:wrap}
+.hst div b{display:block;font-family:var(--dinc);font-size:28px;line-height:1}
+.hst div span{font-size:11px;opacity:.7;letter-spacing:.08em;text-transform:uppercase}
+.leader{display:flex;flex-direction:column;justify-content:space-between}
+.leader .who{display:flex;align-items:center;gap:16px;margin-top:10px}
+.leader .who img{width:84px;height:84px;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,.45))}
+.leader .who b{display:block;font-family:var(--dinc);font-size:30px;line-height:1}
+.leader .who .ar{display:block;font-size:18px;opacity:.85;margin-top:4px}
+.leader .pts{margin-left:auto;text-align:right}
+.leader .pts b{display:block;font-family:var(--dinc);font-size:60px;line-height:.9;color:var(--lime)}
+.leader .pts span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.chase{display:flex;gap:10px;margin-top:16px}
+.chase a{flex:1;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:8px 10px;text-decoration:none}
+.chase img{width:24px;height:24px;object-fit:contain}
+.chase b{font-family:var(--dinc);font-size:18px;margin-left:auto}
+.chase small{font-size:11px;opacity:.7}
+/* next fixtures strip */
+.nexts{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:2px 2px 6px;margin-bottom:6px}
+.nexts::-webkit-scrollbar{display:none}
+.nx{flex:0 0 220px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:grid;grid-template-columns:1fr auto 1fr;gap:6px;align-items:center}
+.nx .when{grid-column:1/-1;display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);font-weight:700;letter-spacing:.04em}
+.nx .when .cd{color:var(--teal)}
+.nx img{width:30px;height:30px;object-fit:contain;justify-self:center}
+.nx .k{font-family:var(--dinc);font-size:15px;font-weight:800;background:var(--chip);border-radius:8px;padding:3px 8px}
+.nx .nm{grid-column:1/-1;display:flex;justify-content:space-between;font-size:11.5px;font-weight:700}
+/* points race */
+.race{padding:14px 16px}
+.race svg{width:100%;height:auto;display:block}
+.race .ln{fill:none;stroke-width:2;opacity:.28;transition:opacity .2s,stroke-width .2s}
+.race .ln.top{opacity:.95;stroke-width:3}
+.race.focus .ln{opacity:.08}.race.focus .ln.on{opacity:1;stroke-width:4}
+.rlg{display:flex;flex-wrap:wrap;gap:6px;padding:4px 16px 16px}
+.rlg button{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 10px 3px 4px;font:inherit;font-size:11.5px;font-weight:700;cursor:pointer}
+.rlg button img{width:20px;height:20px;object-fit:contain}
+.rlg button i{width:10px;height:10px;border-radius:50%}
+.rlg button.on{border-color:var(--ink);box-shadow:0 0 0 2px rgba(0,0,0,.06)}
+/* table polish */
+td.pts{position:relative}
+.pbar{position:absolute;left:8px;right:8px;bottom:6px;height:3px;border-radius:2px;background:#eef0f2;overflow:hidden}
+.pbar i{display:block;height:100%;background:var(--teal);border-radius:2px}
+tr.z1 .pbar i{background:var(--promo)}tr.z2 .pbar i{background:var(--play)}
+tr.zline td{border-bottom:2px dashed #c8ced4}
+tbody tr:hover .club img{transform:scale(1.12)}
+.club img{transition:transform .2s}
+@media (max-width:1100px){.hero{grid-template-columns:1fr}}
+@media (max-width:640px){.ht{font-size:34px}.ht .ar{font-size:20px}.hst{margin-left:0;gap:16px}.prog{flex-wrap:wrap}.leader .who img{width:62px;height:62px}.leader .pts b{font-size:44px}.chase{flex-direction:column}.nx{flex-basis:200px}}
 /* motion */
 .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -174,6 +233,8 @@ footer{max-width:1460px;margin:0 auto;padding:0 24px 40px;color:var(--muted);fon
 </header>
 
 <main class="wrap">
+  <section class="hero"><article class="hcard rv" id="hero"></article><article class="hcard leader rv" id="leader"></article></section>
+  <div class="nexts rv" id="nexts"></div>
   <section class="kpis" id="kpis"></section>
 
   <div class="sec rv"><span class="num">01</span><div><b>League table</b><span class="ar">جدول الترتيب</span></div><small>All 18 clubs. Tap a club to open its page<span class="ar" style="display:block">الأندية الثمانية عشر كاملة، اضغط على أي نادٍ لفتح صفحته</span></small></div>
@@ -181,16 +242,19 @@ footer{max-width:1460px;margin:0 auto;padding:0 24px 40px;color:var(--muted);fon
     <div class="legend"><span><i style="background:var(--promo)"></i>Promotion · صعود مباشر</span><span><i style="background:var(--play)"></i>Play off · الملحق</span><span><i style="background:var(--win)"></i>Win · فوز</span><span><i style="background:var(--draw)"></i>Draw · تعادل</span><span><i style="background:var(--loss)"></i>Loss · خسارة</span></div>
   </article>
 
-  <div class="sec rv"><span class="num">02</span><div><b>Round by round</b><span class="ar">الجولات</span></div><small>Every published fixture, with result, kick off, stadium and weather<span class="ar" style="display:block">كل مباريات الجولة: النتيجة والموعد والملعب والطقس</span></small></div>
+  <div class="sec rv"><span class="num">02</span><div><b>Points race</b><span class="ar">سباق النقاط</span></div><small>Every club's points after each match. Tap a crest to follow one club<span class="ar" style="display:block">نقاط كل نادٍ بعد كل مباراة، اضغط على شعار لمتابعة نادٍ واحد</span></small></div>
+  <article class="card rv"><div class="race" id="race"></div><div class="rlg" id="rlg"></div></article>
+
+  <div class="sec rv"><span class="num">03</span><div><b>Round by round</b><span class="ar">الجولات</span></div><small>Every published fixture, with result, kick off, stadium and weather<span class="ar" style="display:block">كل مباريات الجولة: النتيجة والموعد والملعب والطقس</span></small></div>
   <article class="card rv"><div class="rhead"><div class="rnav" id="rnav"></div></div><div class="fx" id="fx"></div></article>
 
-  <div class="sec rv"><span class="num">03</span><div><b>League leaders</b><span class="ar">أرقام الدوري</span></div><small>Worked out from every result this season<span class="ar" style="display:block">محسوبة من كل نتائج الموسم</span></small></div>
+  <div class="sec rv"><span class="num">04</span><div><b>League leaders</b><span class="ar">أرقام الدوري</span></div><small>Worked out from every result this season<span class="ar" style="display:block">محسوبة من كل نتائج الموسم</span></small></div>
   <section class="lead" id="lead"></section>
 
-  <div class="sec rv"><span class="num">04</span><div><b>Schedule changes</b><span class="ar">تعديلات الجدول</span></div><small>Every date, time or stadium change across the league, newest first<span class="ar" style="display:block">كل تعديل على موعد أو ملعب في الدوري، الأحدث أولاً</span></small></div>
+  <div class="sec rv"><span class="num">05</span><div><b>Schedule changes</b><span class="ar">تعديلات الجدول</span></div><small>Every date, time or stadium change across the league, newest first<span class="ar" style="display:block">كل تعديل على موعد أو ملعب في الدوري، الأحدث أولاً</span></small></div>
   <article class="card rv"><div class="chg-list" id="changes"></div></article>
 
-  <div class="sec rv"><span class="num">05</span><div><b>Stadiums</b><span class="ar">الملاعب</span></div><small>Where every club plays at home this season<span class="ar" style="display:block">ملاعب الأندية هذا الموسم</span></small></div>
+  <div class="sec rv"><span class="num">06</span><div><b>Stadiums</b><span class="ar">الملاعب</span></div><small>Where every club plays at home this season<span class="ar" style="display:block">ملاعب الأندية هذا الموسم</span></small></div>
   <section class="mapw"><article class="card map rv" id="map"></article><article class="card vlist rv" id="venues"></article></section>
 </main>
 <footer><span>Source: the league and club pages on <a href="https://www.saff.com.sa/championship.php?id=416" target="_blank" rel="noopener">saff.com.sa</a>, updated every two minutes. Weather: Open-Meteo. Times are Saudi time.</span><span class="ar">المصدر: صفحات الدوري والأندية على موقع الاتحاد السعودي لكرة القدم، وتتحدث كل دقيقتين.</span></footer>
@@ -301,6 +365,44 @@ document.getElementById("map").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img
  ${pins.map(p=>{const n=p.ts.length,w=n*34+10;return `<g transform="translate(${p.xy[0].toFixed(0)},${p.xy[1].toFixed(0)})"><circle r="5" fill="#121a22"/><g transform="translate(${-w/2},-48)"><rect width="${w}" height="40" rx="12" fill="#121a22"/>${p.ts.map((t,i)=>`<image href="${LOGO(t)}" x="${8+i*34}" y="5" width="30" height="30"/>`).join("")}</g></g>`;}).join("")}</svg>`;
 document.getElementById("venues").innerHTML=Object.entries(homes).sort((a,b)=>city(a[0]).localeCompare(city(b[0]),"ar")).map(([v,ts])=>`<div class="vrow"><div class="cr">${ts.map(t=>`<img src="${LOGO(t)}" alt="" title="${esc(TN(t))}">`).join("")}</div><div><b>${esc(vEn(v))}</b><span class="ar">${esc(v)} · ${ts.map(esc).join("، ")}</span></div></div>`).join("");
 
+
+/* club colours (from each crest) */
+const CC={"العلا":"#2e4a72","الجبلين":"#7a1f1a","الوحدة":"#9e1b22","النجمة":"#146734","ضمك":"#0a1e53","الزلفي":"#e0882b","الأنوار":"#4d6f49","الصقر":"#863079","الطائي":"#7d8790","العدالة":"#0b3351","الرائد":"#b22021","جدة":"#1d2f5c","العروبة":"#e6c800","الجندل":"#f4081f","الأخدود":"#4aa6d6","هجر":"#111111","البكيرية":"#703177","الجيل":"#0e5975"};
+const col=t=>CC[t]||"#2c8c84";
+/* hero */
+{const N0=S.totalRounds||34,cr=S.currentRound||1,pc=Math.round(played.length/((N0*rows.length)/2)*100),R0=40,C0=2*Math.PI*R0;
+ document.getElementById("hero").innerHTML=`<div class="hk">Saudi First Division · Yelo League</div><div class="ht">Season ${S.label[0].replace(/^Season /,"")}<span class="ar">دوري يلو ${S.label[1].replace(/^موسم /,"")}</span></div>
+ <div class="prog"><svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="${R0}" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="9"/><circle cx="50" cy="50" r="${R0}" fill="none" stroke="#d7f24a" stroke-width="9" stroke-linecap="round" stroke-dasharray="${(C0*pc/100).toFixed(1)} ${C0.toFixed(1)}" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">${pc}%</text></svg>
+ <div class="pv"><b>Round ${cr} <small style="font-size:16px;opacity:.6">/ ${N0}</small></b><span>${played.length} of ${(N0*rows.length)/2} matches played · <span class="ar">الجولة ${cr} من ${N0}</span></span></div>
+ <div class="hst"><div><b>${goals}</b><span>Goals · أهداف</span></div><div><b>${(goals/(played.length||1)).toFixed(2)}</b><span>Per match · للمباراة</span></div><div><b>${CH.length}</b><span>Changes · تعديلات</span></div></div></div>`;
+ const [l1,l2,l3]=rows;
+ document.getElementById("leader").innerHTML=`<div><div class="hk">Top of the table · المتصدر</div><div class="who"><img src="${LOGO(l1[0])}" alt=""><span><b>${esc(TN(l1[0]))}</b><span class="ar">${esc(l1[0])}</span></span><div class="pts"><b>${l1[2]}</b><span>points · نقطة</span></div></div></div>
+ <div class="chase">${[l2,l3].map(r=>`<a href="index.html?club=${encodeURIComponent(r[0])}"><img src="${LOGO(r[0])}" alt=""><span><small>${r[1]===2?"2nd":"3rd"} · ${esc(TN(r[0]))}</small></span><b>−${l1[2]-r[2]}</b></a>`).join("")}</div>`;}
+/* next fixtures across the league */
+{const now=Date.now(),ko=m=>Date.parse(m.date+"T"+(m.time||"18:00")+":00+03:00");
+ const up=LG.filter(m=>m.status!=="played"&&m.status!=="postponed"&&ko(m)>now-2*3600e3).sort((a,b)=>ko(a)-ko(b)).slice(0,10);
+ const cd=m=>{const d=ko(m)-now;if(d<0)return "LIVE · مباشر";const h=Math.floor(d/3600e3);return h<24?`in ${h}h · بعد ${h} ساعة`:`in ${Math.floor(h/24)}d · بعد ${Math.floor(h/24)} يوم`;};
+ document.getElementById("nexts").innerHTML=up.map(m=>`<a class="nx" href="index.html?club=${encodeURIComponent(m.home)}" style="text-decoration:none;color:inherit"><div class="when"><span>${dd(m.date)[0]}</span><span class="cd">${cd(m)}</span></div><img src="${LOGO(m.home)}" alt=""><span class="k">${m.time||"TBC"}</span><img src="${LOGO(m.away)}" alt=""><div class="nm"><span>${esc(TN(m.home))}</span><span>${esc(TN(m.away))}</span></div></a>`).join("");}
+/* points race */
+{const series=rows.map(r=>{let p=0;const pts=[0];for(const x of rec[r[0]].form){p+=x.r==="W"?3:x.r==="D"?1:0;pts.push(p);}return {t:r[0],pos:r[1],pts};});
+ const maxN=Math.max(...series.map(x=>x.pts.length-1),1),maxP=Math.max(...series.map(x=>x.pts[x.pts.length-1]),3);
+ const W2=1000,H2=420,l=46,r=110,tp=22,b=34,X=i=>l+i*(W2-l-r)/maxN,Y=v=>tp+(1-v/maxP)*(H2-tp-b);
+ let g="";for(let v=0;v<=maxP;v+=Math.max(3,Math.ceil(maxP/6/3)*3))g+=`<line x1="${l}" x2="${W2-r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#eef0f2"/><text x="${l-10}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="#8a929b">${v}</text>`;
+ for(let i=1;i<=maxN;i++)g+=`<text x="${X(i)}" y="${H2-12}" text-anchor="middle" font-size="11" fill="#8a929b">${i}</text>`;
+ const lines=series.slice().reverse().map(x=>`<path class="ln${x.pos<=6?" top":""}" data-t="${esc(x.t)}" stroke="${col(x.t)}" d="M${x.pts.map((v,i)=>X(i).toFixed(1)+","+Y(v).toFixed(1)).join("L")}"/>`).join("");
+ /* end crests, nudged apart */
+ const ends=series.map(x=>({t:x.t,x:X(x.pts.length-1),y:Y(x.pts[x.pts.length-1])})).sort((a,b)=>a.y-b.y);
+ for(let i=1;i<ends.length;i++)if(ends[i].y-ends[i-1].y<14&&Math.abs(ends[i].x-ends[i-1].x)<20)ends[i].x+=18;
+ const crests=ends.map(e=>`<image class="ec" data-t="${esc(e.t)}" href="${LOGO(e.t)}" x="${e.x+4}" y="${e.y-10}" width="20" height="20"/>`).join("");
+ const box=document.getElementById("race");
+ box.innerHTML=`<svg viewBox="0 0 ${W2} ${H2}" role="img" aria-label="Points after each match for every club">${g}<text x="${l}" y="${tp-2}" font-size="11" fill="#8a929b">Points · النقاط</text><text x="${W2-r}" y="${H2-12}" text-anchor="start" font-size="11" fill="#8a929b" dx="14">Matches · المباريات</text>${lines}${crests}</svg>`;
+ const lg=document.getElementById("rlg");
+ lg.innerHTML=rows.map(x=>`<button data-t="${esc(x[0])}"><img src="${LOGO(x[0])}" alt=""><i style="background:${col(x[0])}"></i>${esc(TN(x[0]))}</button>`).join("");
+ let on=null;lg.onclick=e=>{const bt=e.target.closest("button");if(!bt)return;on=on===bt.dataset.t?null:bt.dataset.t;
+  box.classList.toggle("focus",!!on);lg.querySelectorAll("button").forEach(z=>z.classList.toggle("on",z.dataset.t===on));
+  box.querySelectorAll(".ln").forEach(z=>z.classList.toggle("on",z.dataset.t===on));if(on){const pth=box.querySelector(`.ln[data-t="${CSS.escape(on)}"]`);pth&&pth.parentNode.appendChild(pth);}};}
+/* table: points bars and promotion line */
+{const top=rows[0][2]||1;document.querySelectorAll("#table tbody tr").forEach((tr,i)=>{const td=tr.querySelector("td.pts");if(td)td.insertAdjacentHTML("beforeend",`<span class="pbar"><i style="width:${Math.round(rows[i][2]/top*100)}%"></i></span>`);if(i===1||i===5)tr.classList.add("zline");});}
 /* gentle reveal */
 const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.08}):null;
 document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=Math.min(i%6,5)*60+"ms";io.observe(e);}else e.classList.add("in");});
