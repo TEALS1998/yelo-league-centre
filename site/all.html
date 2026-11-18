@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yelo League · All clubs | دوري يلو · كل الأندية</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{
+  --din:"DIN Next LT Pro","DIN Pro","D-DIN","AlUla DIN","DIN Next LT Arabic","Noto Kufi Arabic",sans-serif;
+  --dinc:"DIN Next LT Pro Condensed","D-DIN Condensed","AlUla DIN Condensed","DIN Next LT Arabic",sans-serif;
+  --ar:"DIN Next LT Arabic","DIN Next Arabic","Noto Kufi Arabic",sans-serif;
+  --ink:#1d232b;--muted:#6a727c;--bg:#eceff1;--card:#fff;--line:#dde1e5;--chip:#f1f3f5;
+  --night:#121a22;--night2:#1c2733;--lime:#d7f24a;--teal:#2c8c84;
+  --win:#5fa37c;--draw:#d2a941;--loss:#c96f68;--promo:#2f9e6a;--play:#d9a63a;
+}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--din);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.ar{font-family:var(--ar);direction:rtl;unicode-bidi:isolate}
+.mut{color:var(--muted)}
+a{color:inherit}
+/* header */
+.top{position:relative;overflow:hidden;background:var(--night);color:#fff}
+.top::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 140% at 100% 0%,rgba(215,242,74,.16),transparent 60%),
+  repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 22px)}
+.top-in{position:relative;max-width:1460px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.mark{width:52px;height:52px;border-radius:14px;background:var(--lime);color:var(--night);display:grid;place-items:center;font-family:var(--dinc);font-weight:800;font-size:15px;letter-spacing:.04em;line-height:.9;text-align:center;box-shadow:0 6px 18px rgba(215,242,74,.25)}
+.brand b{display:block;font-family:var(--dinc);font-size:26px;letter-spacing:.06em;text-transform:uppercase;line-height:1}
+.brand span{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin-top:4px}
+.brand.arb{padding-left:18px;border-left:1px solid rgba(255,255,255,.2)}
+.brand.arb b{font-family:var(--ar);font-size:18px;letter-spacing:0}
+.brand.arb span{font-family:var(--ar);letter-spacing:0;font-size:12px}
+.tsp{flex:1}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:7px 12px;font-size:12px;color:#fff}
+.chip select{background:transparent;color:#fff;border:0;font:inherit;font-weight:700;outline:none;cursor:pointer;max-width:240px}
+.chip select option{color:#111}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(215,242,74,.18)}
+/* crest strip */
+.strip{background:var(--night2);border-top:1px solid rgba(255,255,255,.06)}
+.strip-in{max-width:1460px;margin:0 auto;padding:10px 24px;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
+.strip-in::-webkit-scrollbar{display:none}
+.strip a{flex:none;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.06);display:grid;place-items:center;transition:transform .2s,background .2s}
+.strip a:hover{transform:translateY(-3px);background:rgba(255,255,255,.14)}
+.strip img{width:30px;height:30px;object-fit:contain}
+/* layout */
+.wrap{max-width:1460px;margin:0 auto;padding:22px 24px 60px}
+.sec{display:flex;align-items:flex-end;gap:14px;margin:34px 0 14px;padding-bottom:10px;border-bottom:2px solid #fff}
+.sec .num{font-family:var(--dinc);font-weight:800;font-size:22px;background:var(--night);color:var(--lime);padding:6px 14px;border-radius:10px 2px 10px 2px}
+.sec b{display:block;font-family:var(--dinc);font-size:20px;letter-spacing:.08em;text-transform:uppercase;line-height:1.05}
+.sec .ar{font-size:14px;font-weight:700}
+.sec small{margin-left:auto;text-align:right;color:var(--muted);font-size:11.5px;max-width:360px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 0 rgba(0,0,0,.02),0 10px 30px -18px rgba(20,30,40,.25)}
+/* KPIs */
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.kpi{padding:14px 16px;position:relative;overflow:hidden}
+.kpi .l{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.kpi .l .ar{letter-spacing:0;font-size:12px}
+.kpi .v{font-family:var(--dinc);font-size:36px;font-weight:800;line-height:1.1;margin-top:6px}
+.kpi .v small{font-size:14px;color:var(--muted);font-weight:600;margin-left:4px}
+.kpi .s{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--muted);margin-top:2px}
+.bar3{display:flex;height:8px;border-radius:6px;overflow:hidden;margin-top:10px}
+.bar3 i{display:block}
+/* table */
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center;padding:12px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+th.cl{text-align:left}
+td{padding:9px 8px;text-align:center;border-bottom:1px solid #eef0f2;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+tbody tr{cursor:pointer;transition:background .15s}
+tbody tr:hover{background:#f5f7f8}
+td.pos{width:52px;font-family:var(--dinc);font-size:18px;font-weight:800;position:relative}
+td.pos::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;border-radius:2px;background:transparent}
+tr.z1 td.pos::before{background:var(--promo)}tr.z2 td.pos::before{background:var(--play)}
+td.cl{text-align:left;position:sticky;left:0;background:inherit}
+.club{display:flex;align-items:center;gap:10px;min-width:190px}
+.club img{width:28px;height:28px;object-fit:contain}
+.club b{display:block;font-size:13.5px}
+.club .ar{display:block;font-size:12px;color:var(--muted)}
+td.pts{font-family:var(--dinc);font-size:19px;font-weight:800}
+.form{display:inline-flex;gap:3px}
+.form i{width:20px;height:20px;border-radius:5px;display:grid;place-items:center;font-style:normal;font-size:10px;font-weight:800;color:#fff}
+.form .W{background:var(--win)}.form .D{background:var(--draw)}.form .L{background:var(--loss)}
+.gd.p{color:var(--promo)}.gd.n{color:var(--loss)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+/* rounds */
+.rhead{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.rnav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1;padding:2px}
+.rnav::-webkit-scrollbar{display:none}
+.rnav button{flex:none;border:1px solid var(--line);background:#fff;border-radius:9px;min-width:38px;height:34px;font:inherit;font-weight:700;cursor:pointer;color:var(--ink)}
+.rnav button.on{background:var(--night);color:var(--lime);border-color:var(--night)}
+.rnav button.cur{box-shadow:inset 0 -3px 0 var(--teal)}
+.fx{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px}
+.m{border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;grid-template-columns:1fr 84px 1fr;grid-template-areas:"d d d" "h s a" "v v v";gap:10px 6px;align-items:center;background:#fff}
+.m .d{grid-area:d;display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted)}
+.m .t{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;min-width:0}
+.m .t img{width:34px;height:34px;object-fit:contain}
+.m .t b{font-size:12.5px;line-height:1.15}
+.m .t .ar{font-size:11.5px;color:var(--muted)}
+.m .t.h{grid-area:h}.m .t.a{grid-area:a}
+.m .s{grid-area:s;display:grid;place-items:center}
+.sc{font-family:var(--dinc);font-size:22px;font-weight:800;background:var(--night);color:#fff;border-radius:10px;padding:4px 10px;letter-spacing:.06em}
+.vs{font-family:var(--dinc);font-size:15px;font-weight:800;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:6px 12px}
+.m .v{grid-area:v;border-top:1px dashed var(--line);padding-top:8px;display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--muted)}
+.m .v span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.m.chg{border-color:#e7c46c;box-shadow:0 0 0 3px rgba(231,196,108,.18)}
+.tag{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.08em;background:#f6e7bf;color:#7a5a12;border-radius:5px;padding:1px 6px;margin-left:6px}
+/* leaders */
+.lead{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ld{padding:16px;display:flex;flex-direction:column;gap:10px}
+.ld .l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ld .l .ar{letter-spacing:0;font-size:12px}
+.ld .who{display:flex;align-items:center;gap:12px}
+.ld .who img{width:46px;height:46px;object-fit:contain}
+.ld .who b{display:block;font-size:15px}
+.ld .who .ar{display:block;font-size:13px;color:var(--muted)}
+.ld .big{margin-left:auto;font-family:var(--dinc);font-size:34px;font-weight:800;line-height:1}
+.ld .sub{font-size:11.5px;color:var(--muted)}
+/* changes */
+.chg-list{display:grid;gap:10px;padding:16px}
+.ch{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:#fff}
+.ch .cr{display:flex;align-items:center;gap:4px}
+.ch .cr img{width:26px;height:26px;object-fit:contain}
+.ch .what b{display:block;font-size:13px}
+.ch .what .ar{display:block;font-size:12px;color:var(--muted)}
+.ch .ft{display:flex;align-items:center;gap:8px;font-size:12px}
+.ch .ft .o{background:#fbe7e5;color:#9b3a33;border-radius:7px;padding:3px 8px;text-decoration:line-through}
+.ch .ft .n{background:#e3f2e9;color:#2f6b4a;border-radius:7px;padding:3px 8px;font-weight:700}
+.empty{padding:22px;color:var(--muted);text-align:center}
+/* map */
+.mapw{display:grid;grid-template-columns:1.25fr 1fr;gap:12px}
+.map{padding:10px}
+.map svg{width:100%;height:auto;display:block}
+.vlist{padding:8px 16px;max-height:560px;overflow:auto}
+.vrow{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid #eef0f2}
+.vrow:last-child{border:0}
+.vrow .cr{display:flex;gap:2px}
+.vrow .cr img{width:24px;height:24px;object-fit:contain}
+.vrow b{display:block;font-size:13px}.vrow .ar{display:block;font-size:12px;color:var(--muted)}
+footer{max-width:1460px;margin:0 auto;padding:0 24px 40px;color:var(--muted);font-size:11.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* motion */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.strip a{transition:none}}
+/* tablet and phone */
+@media (max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.fx{grid-template-columns:repeat(2,1fr)}.lead{grid-template-columns:repeat(2,1fr)}.mapw{grid-template-columns:1fr}}
+@media (max-width:640px){
+  .top-in{padding:12px 14px;gap:10px}.brand b{font-size:20px}.brand.arb{display:none}.mark{width:44px;height:44px;font-size:13px}
+  .tsp{display:none}.chip{width:100%;justify-content:space-between}.chip select{max-width:none;flex:1}
+  .wrap{padding:14px 12px 40px}.strip-in{padding:8px 12px}
+  .kpis{grid-template-columns:1fr 1fr;gap:10px}.kpi .v{font-size:30px}
+  .sec{flex-wrap:wrap;margin-top:26px}.sec small{margin-left:0;text-align:left;max-width:none;width:100%}
+  .fx{grid-template-columns:1fr;padding:12px}.lead{grid-template-columns:1fr}
+  th.h-s,td.h-s{display:none}
+  .club{min-width:150px}.club img{width:24px;height:24px}
+  .ch{grid-template-columns:1fr;gap:8px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">YELO<br>26/27</div>
+    <div class="brand"><b>Match Centre</b><span id="lgEn">Yelo League · All clubs</span></div>
+    <div class="brand arb"><b class="ar">مركز مباريات دوري يلو</b><span class="ar" id="lgAr">كل الأندية</span></div>
+    <div class="tsp"></div>
+    <label class="chip"><span class="ar">النادي</span><select id="clubSel" aria-label="Club · النادي"></select></label>
+    <span class="chip" id="checked"><i class="dot"></i></span>
+  </div>
+  <nav class="strip" aria-label="Clubs"><div class="strip-in" id="strip"></div></nav>
+</header>
+
+<main class="wrap">
+  <section class="kpis" id="kpis"></section>
+
+  <div class="sec rv"><span class="num">01</span><div><b>League table</b><span class="ar">جدول الترتيب</span></div><small>All 18 clubs. Tap a club to open its page<span class="ar" style="display:block">الأندية الثمانية عشر كاملة، اضغط على أي نادٍ لفتح صفحته</span></small></div>
+  <article class="card rv"><div class="tbl"><table id="table"></table></div>
+    <div class="legend"><span><i style="background:var(--promo)"></i>Promotion · صعود مباشر</span><span><i style="background:var(--play)"></i>Play off · الملحق</span><span><i style="background:var(--win)"></i>Win · فوز</span><span><i style="background:var(--draw)"></i>Draw · تعادل</span><span><i style="background:var(--loss)"></i>Loss · خسارة</span></div>
+  </article>
+
+  <div class="sec rv"><span class="num">02</span><div><b>Round by round</b><span class="ar">الجولات</span></div><small>Every published fixture, with result, kick off, stadium and weather<span class="ar" style="display:block">كل مباريات الجولة: النتيجة والموعد والملعب والطقس</span></small></div>
+  <article class="card rv"><div class="rhead"><div class="rnav" id="rnav"></div></div><div class="fx" id="fx"></div></article>
+
+  <div class="sec rv"><span class="num">03</span><div><b>League leaders</b><span class="ar">أرقام الدوري</span></div><small>Worked out from every result this season<span class="ar" style="display:block">محسوبة من كل نتائج الموسم</span></small></div>
+  <section class="lead" id="lead"></section>
+
+  <div class="sec rv"><span class="num">04</span><div><b>Schedule changes</b><span class="ar">تعديلات الجدول</span></div><small>Every date, time or stadium change across the league, newest first<span class="ar" style="display:block">كل تعديل على موعد أو ملعب في الدوري، الأحدث أولاً</span></small></div>
+  <article class="card rv"><div class="chg-list" id="changes"></div></article>
+
+  <div class="sec rv"><span class="num">05</span><div><b>Stadiums</b><span class="ar">الملاعب</span></div><small>Where every club plays at home this season<span class="ar" style="display:block">ملاعب الأندية هذا الموسم</span></small></div>
+  <section class="mapw"><article class="card map rv" id="map"></article><article class="card vlist rv" id="venues"></article></section>
+</main>
+<footer><span>Source: the league and club pages on <a href="https://www.saff.com.sa/championship.php?id=416" target="_blank" rel="noopener">saff.com.sa</a>, updated every two minutes. Weather: Open-Meteo. Times are Saudi time.</span><span class="ar">المصدر: صفحات الدوري والأندية على موقع الاتحاد السعودي لكرة القدم، وتتحدث كل دقيقتين.</span></footer>
+
+<script src="data.js"></script>
+<script>
+(()=>{
+const L=window.LEAGUE_DATA;if(!L)return;
+const S=L.seasons[L.current],TN=t=>L.teams[t]||t,LOGO=t=>L.logos[t]||"";
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const rows=S.table.rows.slice().sort((a,b)=>a[1]-b[1]);
+const LG=S.matches.filter(m=>m.comp==="league");
+const played=LG.filter(m=>m.status==="played"&&m.score).sort((a,b)=>a.date<b.date?-1:1);
+const DE=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],DA=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"];
+const ME=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],MA=["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+const dd=d=>{const [y,m,x]=d.split("-").map(Number),w=new Date(Date.UTC(y,m-1,x)).getUTCDay();return [`${DE[w]} ${x} ${ME[m-1]}`,`${DA[w]} ${x} ${MA[m-1]}`];};
+const WX={sun:["Sunny","مشمس"],clear:["Clear","صافٍ"],partly:["Partly cloudy","غائم جزئيًا"],cloud:["Cloudy","غائم"],rain:["Rain","ممطر"],storm:["Storm","عاصفة"],dust:["Dusty","غبار"],fog:["Fog","ضباب"]};
+const go=t=>{location.href="index.html?club="+encodeURIComponent(t);};
+const city=v=>{const x=String(v||"").match(/\(([^)]+)\)\s*$/);return x?x[1]:"";};
+const vEn=v=>{const g=L.venues[v];return g?g[0]:v||"Stadium TBC";};
+
+/* header */
+const sel=document.getElementById("clubSel");
+sel.innerHTML=`<option value="" selected>الكل · All clubs</option>`+rows.map(r=>`<option value="${esc(r[0])}">${r[1]}. ${esc(r[0])} · ${esc(TN(r[0]))}</option>`).join("");
+sel.onchange=()=>{if(sel.value)go(sel.value);};
+document.getElementById("strip").innerHTML=rows.map(r=>`<a href="index.html?club=${encodeURIComponent(r[0])}" title="${esc(TN(r[0]))} · ${esc(r[0])}"><img src="${LOGO(r[0])}" alt="${esc(TN(r[0]))}"></a>`).join("");
+document.getElementById("lgEn").textContent=`Yelo League · All clubs · ${S.label[0]}`;
+document.getElementById("lgAr").textContent=`كل الأندية · ${S.label[1]}`;
+if(L.lastChecked){const [y,m,x]=L.lastChecked.split("-").map(Number);document.getElementById("checked").insertAdjacentHTML("beforeend",`SAFF checked ${x} ${ME[m-1]} <span class="ar">آخر تحقق ${x} ${MA[m-1]}</span>`);}
+
+/* form and records */
+const rec={};rows.forEach(r=>rec[r[0]]={form:[],home:[0,0,0],away:[0,0,0],hpts:0,apts:0,run:0,best:null});
+for(const m of played){const [h,a]=m.score;
+  const rH=h>a?"W":h<a?"L":"D",rA=h<a?"W":h>a?"L":"D";
+  for(const [t,r,side] of [[m.home,rH,"home"],[m.away,rA,"away"]]){const x=rec[t];if(!x)continue;x.form.push({r,m});
+    const i=r==="W"?0:r==="D"?1:2;x[side][i]++;x[side==="home"?"hpts":"apts"]+=r==="W"?3:r==="D"?1:0;}}
+for(const t in rec){let n=0;for(let i=rec[t].form.length-1;i>=0&&rec[t].form[i].r!=="L";i--)n++;rec[t].run=n;}
+
+/* KPIs */
+const goals=played.reduce((s,m)=>s+m.score[0]+m.score[1],0),hw=played.filter(m=>m.score[0]>m.score[1]).length,dr=played.filter(m=>m.score[0]===m.score[1]).length,aw=played.length-hw-dr;
+const pct=n=>played.length?Math.round(n/played.length*100):0,total=(S.totalRounds||34)*rows.length/2;
+const K=[["Matches played","المباريات الملعوبة",played.length,`of ${total}`,`${Math.round(played.length/total*100)}% of the season`,`${Math.round(played.length/total*100)}٪ من الموسم`],
+ ["Round","الجولة",S.currentRound||"–",`of ${S.totalRounds||34}`,"Current round on SAFF","الجولة الحالية في موقع الاتحاد"],
+ ["Goals","الأهداف",goals,"",`${(goals/(played.length||1)).toFixed(2)} per match`,`${(goals/(played.length||1)).toFixed(2)} في المباراة`],
+ ["Home wins","فوز صاحب الأرض",pct(hw)+"%","",`${hw} matches`,`${hw} مباراة`],
+ ["Draws","تعادل",pct(dr)+"%","",`${dr} matches`,`${dr} مباراة`],
+ ["Away wins","فوز الضيف",pct(aw)+"%","",`${aw} matches`,`${aw} مباراة`]];
+document.getElementById("kpis").innerHTML=K.map((k,i)=>`<div class="card kpi rv"><div class="l"><span>${k[0]}</span><span class="ar">${k[1]}</span></div><div class="v">${k[2]}${k[3]?`<small>${k[3]}</small>`:""}</div><div class="s"><span>${k[4]}</span><span class="ar">${k[5]}</span></div>${i===3?`<div class="bar3"><i style="width:${pct(hw)}%;background:var(--win)"></i><i style="width:${pct(dr)}%;background:var(--draw)"></i><i style="width:${pct(aw)}%;background:var(--loss)"></i></div>`:""}</div>`).join("");
+
+/* table */
+const FL={W:["W","ف"],D:["D","ت"],L:["L","خ"]};
+document.getElementById("table").innerHTML=`<thead><tr><th>#</th><th class="cl">Club · النادي</th><th>P<br><span class="ar">لعب</span></th><th>W<br><span class="ar">فاز</span></th><th>D<br><span class="ar">تعادل</span></th><th>L<br><span class="ar">خسر</span></th><th class="h-s">GF<br><span class="ar">له</span></th><th class="h-s">GA<br><span class="ar">عليه</span></th><th>GD<br><span class="ar">الفارق</span></th><th>Pts<br><span class="ar">النقاط</span></th><th class="h-s">Last five<br><span class="ar">آخر خمس</span></th></tr></thead><tbody>${
+ rows.map(r=>{const [t,pos,pts,p,w,d,l,gf,ga]=r,gd=gf-ga,f=rec[t].form.slice(-5);
+  return `<tr class="${pos<=2?"z1":pos<=6?"z2":""}" data-t="${esc(t)}"><td class="pos">${pos}</td><td class="cl"><div class="club"><img src="${LOGO(t)}" alt=""><span><b>${esc(TN(t))}</b><span class="ar">${esc(t)}</span></span></div></td><td>${p}</td><td>${w}</td><td>${d}</td><td>${l}</td><td class="h-s">${gf}</td><td class="h-s">${ga}</td><td class="gd ${gd>0?"p":gd<0?"n":""}">${gd>0?"+":""}${gd}</td><td class="pts">${pts}</td><td class="h-s"><span class="form">${f.map(x=>`<i class="${x.r}" title="${esc(TN(x.m.home))} ${x.m.score[0]}-${x.m.score[1]} ${esc(TN(x.m.away))}">${FL[x.r][0]}</i>`).join("")}</span></td></tr>`;}).join("")}</tbody>`;
+document.querySelectorAll("#table tbody tr").forEach(tr=>tr.onclick=()=>go(tr.dataset.t));
+
+/* rounds */
+const N=S.totalRounds||34,cur=S.currentRound||1;let R=cur;
+const nav=document.getElementById("rnav");
+nav.innerHTML=Array.from({length:N},(_,i)=>`<button data-r="${i+1}" class="${i+1===cur?"cur":""}">${i+1}</button>`).join("");
+const card=m=>{const [dE,dA]=dd(m.date),w=m.weather,wx=w&&WX[w.c];
+  const s=m.status==="played"&&m.score?`<span class="sc">${m.score[0]} - ${m.score[1]}</span>`:m.status==="postponed"?`<span class="vs">PPD</span>`:`<span class="vs">${m.time||"VS"}</span>`;
+  return `<div class="m${m.changes&&m.changes.length&&m.status!=="played"?" chg":""}"><div class="d"><span>${dE}${m.time?" · "+m.time:""}${m.changes&&m.changes.length?`<span class="tag">CHANGED</span>`:""}</span><span class="ar">${dA}</span></div>
+   <div class="t h"><img src="${LOGO(m.home)}" alt=""><b>${esc(TN(m.home))}</b><span class="ar">${esc(m.home)}</span></div>
+   <div class="s">${s}</div>
+   <div class="t a"><img src="${LOGO(m.away)}" alt=""><b>${esc(TN(m.away))}</b><span class="ar">${esc(m.away)}</span></div>
+   <div class="v"><span title="${esc(vEn(m.venue))}">${esc(vEn(m.venue))}</span><span>${w?`${w.t}° ${wx?wx[0]:""} · <span class="ar">${wx?wx[1]:""}</span>`:""}</span></div></div>`;};
+const showR=r=>{R=r;nav.querySelectorAll("button").forEach(b=>b.classList.toggle("on",+b.dataset.r===r));
+  const ms=LG.filter(m=>m.round===r).sort((a,b)=>(a.date+(a.time||"")).localeCompare(b.date+(b.time||"")));
+  document.getElementById("fx").innerHTML=ms.length?ms.map(card).join(""):`<div class="empty" style="grid-column:1/-1">SAFF has not published round ${r} yet<span class="ar" style="display:block">لم ينشر الاتحاد مباريات الجولة ${r} بعد</span></div>`;};
+nav.onclick=e=>{const b=e.target.closest("button");if(b)showR(+b.dataset.r);};
+showR(cur);const cb=nav.querySelector(`[data-r="${cur}"]`);if(cb)nav.scrollLeft=cb.offsetLeft-nav.clientWidth/2;
+
+/* leaders */
+const by=(f,dir=-1)=>rows.slice().sort((a,b)=>dir*(f(a)-f(b)))[0];
+const big=played.slice().sort((a,b)=>Math.abs(b.score[0]-b.score[1])-Math.abs(a.score[0]-a.score[1])||(b.score[0]+b.score[1])-(a.score[0]+a.score[1]))[0];
+const run=Object.entries(rec).sort((a,b)=>b[1].run-a[1].run)[0];
+const hb=Object.entries(rec).sort((a,b)=>b[1].hpts-a[1].hpts)[0],ab=Object.entries(rec).sort((a,b)=>b[1].apts-a[1].apts)[0];
+const ldr=[["Best attack","أقوى هجوم",by(r=>r[7])[0],by(r=>r[7])[7],"goals scored","هدفًا مسجلًا"],
+ ["Best defence","أقوى دفاع",by(r=>r[8],1)[0],by(r=>r[8],1)[8],"goals conceded","هدفًا في مرماه"],
+ ["Most wins","أكثر فوزًا",by(r=>r[4])[0],by(r=>r[4])[4],"wins","انتصارًا"],
+ ["Fewest defeats","أقل خسارة",by(r=>r[6],1)[0],by(r=>r[6],1)[6],"defeats","خسارة"],
+ ["Best at home","الأفضل على أرضه",hb[0],hb[1].hpts,"points at home","نقطة على أرضه"],
+ ["Best away","الأفضل خارج أرضه",ab[0],ab[1].apts,"points away","نقطة خارج أرضه"],
+ ["Unbeaten run","سلسلة دون خسارة",run[0],run[1].run,"matches without defeat","مباراة دون خسارة"]];
+let html=ldr.map(x=>`<div class="card ld rv"><div class="l"><span>${x[0]}</span><span class="ar">${x[1]}</span></div><div class="who"><img src="${LOGO(x[2])}" alt=""><span><b>${esc(TN(x[2]))}</b><span class="ar">${esc(x[2])}</span></span><span class="big">${x[3]}</span></div><div class="sub">${x[4]} · <span class="ar">${x[5]}</span></div></div>`).join("");
+if(big){const w=big.score[0]>big.score[1]?big.home:big.away;html+=`<div class="card ld rv"><div class="l"><span>Biggest win</span><span class="ar">أكبر فوز</span></div><div class="who"><img src="${LOGO(w)}" alt=""><span><b>${esc(TN(big.home))} ${big.score[0]}-${big.score[1]} ${esc(TN(big.away))}</b><span class="ar">${esc(big.home)} ${big.score[0]}-${big.score[1]} ${esc(big.away)}</span></span></div><div class="sub">${dd(big.date)[0]} · Round ${big.round||"–"} · <span class="ar">الجولة ${big.round||"–"}</span></div></div>`;}
+document.getElementById("lead").innerHTML=html;
+
+/* changes */
+const FN={date:["Date","الموعد"],time:["Kick off","التوقيت"],venue:["Stadium","الملعب"],status:["Status","الحالة"],host:["Host","المستضيف"]};
+const CH=[];S.matches.forEach(m=>(m.changes||[]).forEach((c,i)=>CH.push({m,c,k:(c.at||m.date)+String(i).padStart(2,"0")})));
+CH.sort((a,b)=>b.k.localeCompare(a.k));
+document.getElementById("changes").innerHTML=CH.length?CH.slice(0,40).map(({m,c})=>{const f=FN[c.field]||[c.field,c.field],fr=Array.isArray(c.from)?c.from:[c.from,c.from],to=Array.isArray(c.to)?c.to:[c.to,c.to];
+  return `<div class="ch"><div class="cr"><img src="${LOGO(m.home)}" alt=""><img src="${LOGO(m.away)}" alt=""></div><div class="what"><b>${esc(TN(m.home))} v ${esc(TN(m.away))} · ${f[0]}</b><span class="ar">${esc(m.home)} ضد ${esc(m.away)} · ${f[1]}${m.round?` · الجولة ${m.round}`:""}</span></div><div class="ft"><span class="o">${esc(fr[0])}</span>→<span class="n">${esc(to[0])}</span></div></div>`;}).join(""):`<div class="empty">No schedule changes yet<span class="ar" style="display:block">لا توجد تعديلات بعد</span></div>`;
+
+/* stadium map */
+const homes={};for(const [t,c] of Object.entries(L.clubs)){if(c.home)(homes[c.home]=homes[c.home]||[]).push(t);}
+const X0=34.3,X1=56,Y0=16,Y1=32.6,W=1000,H=720,k=Math.cos(24*Math.PI/180),sx=W/((X1-X0)*k),sy=H/(Y1-Y0),SC=Math.min(sx,sy),ox=(W-(X1-X0)*k*SC)/2;
+const P=([la,lo])=>[ox+(lo-X0)*k*SC,(Y1-la)*SC];
+const KSA=[[28.1,34.6],[29.35,36.07],[29.9,37.5],[30.5,38.0],[31.5,37.0],[32.15,39.2],[31.95,40.4],[31.4,41.4],[31.1,42.1],[29.2,44.7],[29.1,46.5],[28.55,47.6],[28.0,48.4],[27.1,49.4],[26.25,50.1],[25.3,50.5],[24.75,50.8],[24.3,51.6],[22.9,52.6],[22.6,55.2],[21.9,55.6],[20.0,55.0],[19.0,52.0],[18.6,49.1],[17.3,47.5],[17.4,46.5],[17.3,44.5],[16.7,43.3],[16.4,42.75],[17.5,42.3],[19.0,41.3],[20.4,40.0],[21.5,39.1],[23.6,38.4],[24.8,37.4],[25.9,36.5],[27.4,35.5],[28.1,34.6]];
+const land="M"+KSA.map(p=>P(p).map(v=>v.toFixed(1)).join(",")).join("L")+"Z";
+const pins=Object.entries(homes).map(([v,ts])=>{const g=L.venues[v];if(!g||g.length<3)return null;return {v,ts,xy:P([g[1],g[2]])};}).filter(Boolean);
+/* spread pins that sit on top of each other */
+for(let i=0;i<pins.length;i++)for(let j=0;j<i;j++){const a=pins[i].xy,b=pins[j].xy;if(Math.hypot(a[0]-b[0],a[1]-b[1])<44){a[0]+=40;a[1]+=12;}}
+document.getElementById("map").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of Yelo League stadiums"><defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#c9cfd5"/></pattern></defs>
+ <path d="${land}" fill="#f4f6f7" stroke="#b9c1c8" stroke-width="2"/><path d="${land}" fill="url(#dots)" opacity=".7"/>
+ ${pins.map(p=>{const n=p.ts.length,w=n*34+10;return `<g transform="translate(${p.xy[0].toFixed(0)},${p.xy[1].toFixed(0)})"><circle r="5" fill="#121a22"/><g transform="translate(${-w/2},-48)"><rect width="${w}" height="40" rx="12" fill="#121a22"/>${p.ts.map((t,i)=>`<image href="${LOGO(t)}" x="${8+i*34}" y="5" width="30" height="30"/>`).join("")}</g></g>`;}).join("")}</svg>`;
+document.getElementById("venues").innerHTML=Object.entries(homes).sort((a,b)=>city(a[0]).localeCompare(city(b[0]),"ar")).map(([v,ts])=>`<div class="vrow"><div class="cr">${ts.map(t=>`<img src="${LOGO(t)}" alt="" title="${esc(TN(t))}">`).join("")}</div><div><b>${esc(vEn(v))}</b><span class="ar">${esc(v)} · ${ts.map(esc).join("، ")}</span></div></div>`).join("");
+
+/* gentle reveal */
+const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.08}):null;
+document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=Math.min(i%6,5)*60+"ms";io.observe(e);}else e.classList.add("in");});
+})();
+</script>
+</body>
+</html>
