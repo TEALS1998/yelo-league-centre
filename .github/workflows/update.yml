@@ -1,0 +1,69 @@
+name: Live update from SAFF
+
+on:
+  schedule:
+    - cron: "3,13,23,33,43,53 * * * *"   # backup every 10 minutes; cron-job.org triggers it every 2 minutes
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Read every club page now (yes/no)"
+        required: false
+        default: "no"
+  push:
+    branches: [main]
+    paths: ["site/**", "scripts/**", ".github/workflows/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: live-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Read SAFF and update data.js
+        run: node scripts/league.mjs
+        env:
+          FULL: ${{ (github.event_name == 'push' || github.event.inputs.full == 'yes') && '1' || '' }}
+      - name: Commit when the data changed
+        id: commit
+        run: |
+          if git diff --quiet -- site/data.js; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config user.name "yelo-live-update"
+            git config user.email "actions@users.noreply.github.com"
+            git add site/data.js last-run.json
+            git commit -m "Live update from SAFF $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
