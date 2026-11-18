@@ -238,6 +238,42 @@ tbody tr:hover .club img{transform:scale(1.12)}
 @media (prefers-reduced-motion:reduce){.kmap .pulse,.kmap .arc{animation:none}.kmap .bdg{opacity:1}.kmap .bdg .in{animation:none}}
 @media (max-width:1100px){.mapw{grid-template-columns:1fr}}
 @media (max-width:640px){.mapw{padding:8px;border-radius:16px}.vlist{max-height:none}}
+/* v3: living map */
+.stage{position:relative;perspective:1400px}
+.kmap{transition:transform .25s ease-out;transform-style:preserve-3d}
+.kmap .sweep{opacity:.55;mix-blend-mode:screen}
+.kmap .ring{fill:none;stroke:rgba(215,242,74,.12);stroke-width:1}
+.kmap .ray{stroke:url(#rayG);stroke-width:1.6;fill:none;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw .9s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.kmap .kml{font-size:11px;font-weight:800;fill:#d7f24a;paint-order:stroke;stroke:#121a22;stroke-width:4px;opacity:0;animation:fade .4s .5s forwards}
+@keyframes fade{to{opacity:1}}
+.kmap.travel .bdg:not(.sel){opacity:.35}
+.kmap .bdg.sel circle{stroke-width:6}
+.tip{position:absolute;z-index:3;pointer-events:none;min-width:230px;background:rgba(18,26,34,.94);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px;color:#fff;box-shadow:0 18px 40px rgba(0,0,0,.45);opacity:0;transform:translateY(6px);transition:opacity .15s,transform .15s;backdrop-filter:blur(6px)}
+.tip.on{opacity:1;transform:none}
+.tip .th{display:flex;align-items:center;gap:10px}
+.tip .th img{width:40px;height:40px;object-fit:contain;background:#fff;border-radius:50%;padding:3px}
+.tip .th b{display:block;font-size:15px}.tip .th .ar{display:block;font-size:12px;opacity:.7}
+.tip .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.tip .tg div{background:rgba(255,255,255,.06);border-radius:9px;padding:6px 8px}
+.tip .tg b{display:block;font-family:var(--dinc);font-size:18px;color:var(--lime);line-height:1}
+.tip .tg span{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;opacity:.65}
+.tip .tn{margin-top:9px;font-size:11.5px;opacity:.85;display:flex;justify-content:space-between;gap:8px}
+.mhint{position:absolute;left:14px;bottom:12px;font-size:11px;color:rgba(255,255,255,.55)}
+.tabs2{display:flex;gap:6px;padding:10px 8px 4px}
+.tabs2 button{flex:1;border:1px solid rgba(255,255,255,.16);background:transparent;color:#fff;border-radius:10px;padding:7px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.tabs2 button.on{background:var(--lime);color:var(--night);border-color:var(--lime)}
+.trow{display:grid;grid-template-columns:22px 30px 1fr auto;gap:10px;align-items:center;padding:9px 8px;border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer;border-radius:10px}
+.trow:hover,.trow.hl{background:rgba(215,242,74,.08)}
+.trow .n{font-family:var(--dinc);font-size:15px;opacity:.6}
+.trow img{width:30px;height:30px;background:#fff;border-radius:50%;padding:3px}
+.trow b{display:block;font-size:13px}
+.trow .bar{height:5px;border-radius:3px;background:rgba(255,255,255,.08);margin-top:5px;overflow:hidden}
+.trow .bar i{display:block;height:100%;background:linear-gradient(90deg,#2c8c84,#d7f24a);border-radius:3px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.trow .km2{font-family:var(--dinc);font-size:16px;color:var(--lime);text-align:right}
+.trow .km2 small{display:block;font-size:10px;color:rgba(255,255,255,.55);font-family:var(--din)}
+@media (hover:none){.mhint{display:none}}
+@media (prefers-reduced-motion:reduce){.kmap{transition:none}.kmap .sweep{display:none}.kmap .ray{animation:none;stroke-dashoffset:0}.kmap .kml{animation:none;opacity:1}}
 /* motion */
 .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -417,7 +453,7 @@ const arcs=nr.map((m,i)=>{const a=VP(L.clubs[m.away]&&L.clubs[m.away].home),b=VP
   const mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2-Math.hypot(a[0]-b[0],a[1]-b[1])*.3,d=`M${a[0].toFixed(1)},${a[1].toFixed(1)} Q${mx.toFixed(1)},${my.toFixed(1)} ${b[0].toFixed(1)},${b[1].toFixed(1)}`;
   return `<path class="arc" d="${d}"/><circle class="plane" r="4.5"><animateMotion dur="${(2.4+i*.25).toFixed(2)}s" repeatCount="indefinite" path="${d}"/></circle>`;}).join("");
 const mapEl=document.getElementById("map");
-mapEl.innerHTML=`<div class="mbar"><b>YELO GROUNDS · ملاعب يلو</b><button data-m="grounds" class="on">Home grounds · الملاعب</button><button data-m="trips">Round ${openR} trips · رحلات الجولة ${openR}</button></div>
+mapEl.innerHTML=`<div class="mbar"><b>YELO GROUNDS · ملاعب يلو</b><button data-m="grounds" class="on">Home grounds · الملاعب</button><button data-m="trips">Round ${openR} trips · رحلات الجولة ${openR}</button><button data-m="travel">Travel from a club · المسافات</button></div><div class="stage">
 <svg class="kmap" viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of Yelo League stadiums"><defs>
  <linearGradient id="landG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22313f"/><stop offset="1" stop-color="#151f29"/></linearGradient>
  <linearGradient id="arcG" x1="0" x2="1"><stop offset="0" stop-color="#2c8c84"/><stop offset="1" stop-color="#d7f24a"/></linearGradient>
@@ -425,21 +461,63 @@ mapEl.innerHTML=`<div class="mbar"><b>YELO GROUNDS · ملاعب يلو</b><butt
  <filter id="glow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
  <clipPath id="bcp" clipPathUnits="objectBoundingBox"><circle cx=".5" cy=".5" r=".5"/></clipPath>
 </defs>
+<clipPath id="landC"><path d="${land}"/></clipPath>
+<radialGradient id="swG" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0) scale(520)"><stop offset="0" stop-color="#d7f24a" stop-opacity=".0"/><stop offset=".6" stop-color="#d7f24a" stop-opacity=".10"/><stop offset="1" stop-color="#d7f24a" stop-opacity="0"/></radialGradient>
+<linearGradient id="rayG" x1="0" x2="1"><stop offset="0" stop-color="#d7f24a"/><stop offset="1" stop-color="#2c8c84"/></linearGradient>
 <path class="land" d="${land}"/><path class="grid" d="${land}"/>
+<g clip-path="url(#landC)">${[120,240,360,480].map(r=>`<circle class="ring" cx="${P([24,45])[0].toFixed(0)}" cy="${P([24,45])[1].toFixed(0)}" r="${r}"/>`).join("")}
+<g transform="translate(${P([24,45])[0].toFixed(0)} ${P([24,45])[1].toFixed(0)})"><path class="sweep" d="M0,0 L560,0 A560,560 0 0 1 ${(560*Math.cos(Math.PI/5)).toFixed(0)},${(560*Math.sin(Math.PI/5)).toFixed(0)} Z" fill="url(#swG)"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="9s" repeatCount="indefinite"/></path></g></g>
 ${[...cityPts].map(([n,p])=>`<text class="city" x="${(p[0]+12).toFixed(0)}" y="${(p[1]+20).toFixed(0)}">${esc(n.toUpperCase())}</text>`).join("")}
 <g class="arcs">${arcs}</g>
 ${badges.map(b=>`<line class="lead" data-v="${esc(b.v)}" x1="${b.ax.toFixed(1)}" y1="${b.ay.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}"/>`).join("")}
 ${Object.keys(homes).map((v,i)=>{const p=VP(v);return p?`<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)})"><circle class="pulse" r="6" style="animation-delay:${(i*.17).toFixed(2)}s"/><circle class="beacon" r="5"/></g>`:"";}).join("")}
+<g class="rays"></g>
 ${badges.map((b,i)=>`<g class="bdg" data-t="${esc(b.t)}" data-v="${esc(b.v)}" style="--c:${col(b.t)}" transform="translate(${b.x.toFixed(1)},${b.y.toFixed(1)})"><g class="in" style="animation-delay:${(.1+i*.06).toFixed(2)}s"><circle r="${BR}"/><image href="${LOGO(b.t)}" x="${-(BR-6)}" y="${-(BR-6)}" width="${(BR-6)*2}" height="${(BR-6)*2}" preserveAspectRatio="xMidYMid meet"/></g><title>${esc(TN(b.t))} · ${esc(b.t)}</title></g>`).join("")}
-</svg>`;
-const kmap=mapEl.querySelector(".kmap");
-mapEl.querySelector(".mbar").onclick=e=>{const bt=e.target.closest("button");if(!bt)return;mapEl.querySelectorAll(".mbar button").forEach(z=>z.classList.toggle("on",z===bt));kmap.classList.toggle("trips",bt.dataset.m==="trips");};
+</svg><div class="tip" id="mtip"></div><div class="mhint">Hover a crest for its numbers · tap to open the club</div></div>`;
+const kmap=mapEl.querySelector(".kmap"),stage=mapEl.querySelector(".stage"),tip=mapEl.querySelector("#mtip"),rays=kmap.querySelector(".rays");
+const hav2=(a,b)=>{const R=6371,r=x=>x*Math.PI/180,dl=r(b[0]-a[0]),dn=r(b[1]-a[1]),h=Math.sin(dl/2)**2+Math.cos(r(a[0]))*Math.cos(r(b[0]))*Math.sin(dn/2)**2;return 2*R*Math.asin(Math.sqrt(h));};
+const LLv=v=>{const g=L.venues[v];return g&&g.length>=3?[g[1],g[2]]:null;};
+/* season travel per club: out and back for every away league match, published or still expected */
+const travel=rows.map(r=>{const t=r[0],hv=L.clubs[t]&&L.clubs[t].home,h=LLv(hv);let km=0,n=0;
+  if(h){const seen=new Set();LG.filter(m=>m.away===t).forEach(m=>{const v=LLv(m.venue||(L.clubs[m.home]||{}).home);if(v){km+=2*hav2(h,v);n++;seen.add(m.home);}});
+   for(const o of Object.keys(L.clubs)){if(o===t||seen.has(o))continue;const v=LLv(L.clubs[o].home);if(v){km+=2*hav2(h,v);n++;}}}
+  return {t,km:Math.round(km/10)*10,n};}).sort((a,b)=>b.km-a.km);
+const TR=Object.fromEntries(travel.map(x=>[x.t,x]));
+const nextOf=t=>{const now=Date.now();return LG.filter(m=>(m.home===t||m.away===t)&&m.status!=="played"&&Date.parse(m.date)>=now-864e5).sort((a,b)=>a.date<b.date?-1:1)[0];};
+const showTip=(bd,ev)=>{const t=bd.dataset.t,r=rows.find(x=>x[0]===t)||[],nx=nextOf(t),o=nx?(nx.home===t?nx.away:nx.home):null;
+  tip.innerHTML=`<div class="th"><img src="${LOGO(t)}" alt=""><span><b>${esc(TN(t))}</b><span class="ar">${esc(t)} · ${esc(vEn(bd.dataset.v))}</span></span></div>
+   <div class="tg"><div><b>${r[1]||"–"}</b><span>Position</span></div><div><b>${r[2]??"–"}</b><span>Points</span></div><div><b>${TR[t]?Math.round(TR[t].km/1000*10)/10:"–"}k</b><span>km away</span></div></div>
+   ${nx?`<div class="tn"><span>Next: ${nx.home===t?"v":"at"} ${esc(TN(o))}</span><span>${dd(nx.date)[0]}</span></div>`:""}`;
+  const sr=stage.getBoundingClientRect(),br=bd.getBoundingClientRect();let x=br.right-sr.left+10,y=br.top-sr.top-10;
+  if(x+240>sr.width)x=br.left-sr.left-250;if(y+150>sr.height)y=sr.height-160;tip.style.left=Math.max(6,x)+"px";tip.style.top=Math.max(6,y)+"px";tip.classList.add("on");};
+let mode="grounds",selT=null;
+const drawRays=t=>{rays.innerHTML="";kmap.querySelectorAll(".bdg").forEach(z=>z.classList.toggle("sel",z.dataset.t===t));if(!t)return;
+  const a=VP(L.clubs[t].home),aL=LLv(L.clubs[t].home);if(!a)return;let h="";
+  Object.entries(homes).forEach(([v,ts])=>{if(ts.includes(t))return;const b=VP(v),bL=LLv(v);if(!b)return;
+   const len=Math.hypot(a[0]-b[0],a[1]-b[1]),mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2-len*.18,km=Math.round(hav2(aL,bL));
+   h+=`<path class="ray" style="--len:${(len*1.15).toFixed(0)}" d="M${a[0].toFixed(1)},${a[1].toFixed(1)} Q${mx.toFixed(1)},${my.toFixed(1)} ${b[0].toFixed(1)},${b[1].toFixed(1)}"/>${len>60?`<text class="kml" x="${mx.toFixed(0)}" y="${(my+len*.09).toFixed(0)}" text-anchor="middle">${km} km</text>`:""}`;});
+  rays.innerHTML=h;};
+const setMode=m=>{mode=m;mapEl.querySelectorAll(".mbar button").forEach(z=>z.classList.toggle("on",z.dataset.m===m));kmap.classList.toggle("trips",m==="trips");kmap.classList.toggle("travel",m==="travel");
+  if(m==="travel"){selT=selT||(travel[0]&&travel[0].t);drawRays(selT);tab("travel");}else{drawRays(null);}};
+mapEl.querySelector(".mbar").onclick=e=>{const bt=e.target.closest("button");if(bt)setMode(bt.dataset.m);};
+/* gentle 3D tilt that follows the pointer */
+stage.addEventListener("pointermove",e=>{if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;kmap.style.transform=`rotateX(${(-y*7).toFixed(2)}deg) rotateY(${(x*9).toFixed(2)}deg)`;});
+stage.addEventListener("pointerleave",()=>{kmap.style.transform="";});
+/* side panel: stadiums and travel league */
 const vEl=document.getElementById("venues");
 const hm=Object.entries(homes).filter(([v])=>VP(v)).sort((a,b)=>VP(a[0])[1]-VP(b[0])[1]);
-vEl.innerHTML=`<div class="mlist-h">${hm.length} STADIUMS · ${hm.length} ملعبًا</div>`+hm.map(([v,ts])=>`<div class="vrow" data-v="${esc(v)}"><div class="cr">${ts.map(t=>`<img src="${LOGO(t)}" alt="" title="${esc(TN(t))}">`).join("")}</div><div><b>${esc(vEn(v))}</b><span class="ar">${esc(v)} · ${ts.map(esc).join("، ")}</span></div></div>`).join("");
-const hl=v=>{kmap.classList.toggle("dim",!!v);kmap.querySelectorAll(".bdg,.lead").forEach(z=>z.classList.toggle("hl",z.dataset.v===v));vEl.querySelectorAll(".vrow").forEach(z=>z.classList.toggle("hl",z.dataset.v===v));};
-kmap.querySelectorAll(".bdg").forEach(z=>{z.onmouseenter=()=>hl(z.dataset.v);z.onmouseleave=()=>hl(null);z.onclick=()=>go(z.dataset.t);});
-vEl.querySelectorAll(".vrow").forEach(z=>{z.onmouseenter=()=>hl(z.dataset.v);z.onmouseleave=()=>hl(null);z.onclick=()=>{const t=homes[z.dataset.v];if(t)go(t[0]);};});
+const maxKm=travel[0]?travel[0].km:1;
+const stadHTML=`<div class="mlist-h">${hm.length} STADIUMS · ${hm.length} ملعبًا</div>`+hm.map(([v,ts])=>`<div class="vrow" data-v="${esc(v)}"><div class="cr">${ts.map(t=>`<img src="${LOGO(t)}" alt="" title="${esc(TN(t))}">`).join("")}</div><div><b>${esc(vEn(v))}</b><span class="ar">${esc(v)} · ${ts.map(esc).join("، ")}</span></div></div>`).join("");
+const travHTML=`<div class="mlist-h">SEASON TRAVEL · مسافات السفر في الموسم</div>`+travel.map((x,i)=>`<div class="trow" data-t="${esc(x.t)}" data-v="${esc(L.clubs[x.t].home)}"><span class="n">${i+1}</span><img src="${LOGO(x.t)}" alt=""><div><b>${esc(TN(x.t))} <span class="ar" style="opacity:.6;font-weight:600">${esc(x.t)}</span></b><div class="bar"><i data-w="${Math.round(x.km/maxKm*100)}"></i></div></div><span class="km2">${(x.km/1000).toFixed(1)}k<small>km · ${x.n} trips</small></span></div>`).join("")+`<div class="mlist-h" style="opacity:.6;font-family:var(--din);letter-spacing:0;font-size:11px">Straight line, there and back, for every away league match this season · خط مستقيم ذهابًا وعودة</div>`;
+const tab=w=>{vEl.innerHTML=`<div class="tabs2"><button data-w="st" class="${w==="st"?"on":""}">Stadiums · الملاعب</button><button data-w="travel" class="${w==="travel"?"on":""}">Travel · المسافات</button></div>`+(w==="st"?stadHTML:travHTML);
+  vEl.querySelector(".tabs2").onclick=e=>{const b=e.target.closest("button");if(b)tab(b.dataset.w);};
+  vEl.querySelectorAll(".vrow").forEach(z=>{z.onmouseenter=()=>hl(z.dataset.v);z.onmouseleave=()=>hl(null);z.onclick=()=>{const t=homes[z.dataset.v];if(t)go(t[0]);};});
+  vEl.querySelectorAll(".trow").forEach(z=>{z.onmouseenter=()=>hl(z.dataset.v);z.onmouseleave=()=>hl(null);z.onclick=()=>{selT=z.dataset.t;if(mode!=="travel")setMode("travel");else drawRays(selT);};});
+  requestAnimationFrame(()=>vEl.querySelectorAll(".bar i").forEach(i=>i.style.width=i.dataset.w+"%"));};
+const hl=v=>{kmap.classList.toggle("dim",!!v);kmap.querySelectorAll(".bdg,.lead").forEach(z=>z.classList.toggle("hl",z.dataset.v===v));vEl.querySelectorAll(".vrow,.trow").forEach(z=>z.classList.toggle("hl",z.dataset.v===v));};
+kmap.querySelectorAll(".bdg").forEach(z=>{z.onmouseenter=e=>{hl(z.dataset.v);showTip(z,e);};z.onmouseleave=()=>{hl(null);tip.classList.remove("on");};
+  z.onclick=()=>{if(mode==="travel"){selT=z.dataset.t;drawRays(selT);}else go(z.dataset.t);};});
+tab("st");
 /* crests drop in when the map scrolls into view */
 const mio="IntersectionObserver" in window?new IntersectionObserver(es=>{if(es[0].isIntersecting){kmap.classList.add("go");mio.disconnect();}},{threshold:.15}):null;
 if(mio)mio.observe(kmap);else kmap.classList.add("go");
