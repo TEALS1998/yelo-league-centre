@@ -74,6 +74,8 @@ export function parseTable(html, teamOf) {
 
 // The round shown on the league page ("الجولة: 11" is the selected one).
 export function parseRound(html) {
+  const sel = html.match(/<option[^>]*selected[^>]*value="round=\d+&week=(\d+)"|<option[^>]*value="round=\d+&week=(\d+)"[^>]*selected/);
+  if (sel) return +(sel[1] || sel[2]);
   const t = text(html);
   const m = t.match(/\*\s*الجولة\s*:?\s*(\d{1,2})/) || t.match(/الجولة\s*:?\s*(\d{1,2})\s*\*/) ||
     html.match(/selected[^>]*>\s*الجولة\s*:?\s*(\d{1,2})/) || html.match(/الجولة\s*:?\s*(\d{1,2})<\/option>\s*<\/select>/);
@@ -270,7 +272,6 @@ async function main() {
   // 1. league page: table, club ids, current round
   try {
     const html = await get(LEAGUE_URL);
-    if (process.env.FULL === "1") { fs.mkdirSync(path.join(ROOT, "raw"), { recursive: true }); fs.writeFileSync(path.join(ROOT, "raw", "championship.html"), html); }
     const { rows, ids } = parseTable(html, teamOf);
     if (rows.length >= 16) {
       ok++;
@@ -286,15 +287,25 @@ async function main() {
     } else log("standings not recognised, rows:", rows.length);
   } catch (e) { log("league page failed:", e.message); }
 
-  // 2. every club's team page, every FULL_EVERY_MIN minutes
+  // 2. every round page and every club's team page, every FULL_EVERY_MIN minutes
   const due = process.env.FULL === "1" || new Date().getUTCMinutes() % FULL_EVERY_MIN < 2; // one run in each half hour window
   if (due) {
+    let weeks = 0;
+    for (let r = 1; r <= (S.totalRounds || 34); r++) {
+      try {
+        const html = await get(`${LEAGUE_URL}&round=0&week=${r}`);
+        const fx = parseFixtures(html, teamOf, "دوري الدرجة الأولى #416");
+        for (const f of fx) applyFixture(S, D, f, venueOf, r, changes);
+        if (fx.length) weeks++;
+      } catch (e) { log("round page failed:", r, e.message); }
+      await sleep(900);
+    }
+    if (weeks) { ok++; log("round pages read:", weeks); }
     let read = 0;
     for (const [t, c] of Object.entries(D.clubs)) {
       if (!c.saffId) continue;
       try {
         const html = await get(TEAM_URL(c.saffId));
-        if (process.env.FULL === "1" && t === "الجبلين") fs.writeFileSync(path.join(ROOT, "raw", "team.html"), html);
         const fx = parseFixtures(html, teamOf).filter((f) => firstTeam(f.section) && (f.home === t || f.away === t));
         for (const f of fx) applyFixture(S, D, f, venueOf, null, changes);
         if (fx.length) read++;
