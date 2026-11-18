@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yelo League · All clubs | دوري يلو · كل الأندية</title>
 <link rel="stylesheet" href="fonts.css">
+<link rel="icon" href="favicon.png">
 <style>
 :root{
   --din:"DIN Next LT Pro","DIN Pro","D-DIN","AlUla DIN","DIN Next LT Arabic","Noto Kufi Arabic",sans-serif;
   --dinc:"DIN Next LT Pro Condensed","D-DIN Condensed","AlUla DIN Condensed","DIN Next LT Arabic",sans-serif;
   --ar:"DIN Next LT Arabic","DIN Next Arabic","Noto Kufi Arabic",sans-serif;
   --ink:#1d232b;--muted:#6a727c;--bg:#eceff1;--card:#fff;--line:#dde1e5;--chip:#f1f3f5;
-  --night:#121a22;--night2:#1c2733;--lime:#d7f24a;--teal:#2c8c84;
+  --night:#121a22;--night2:#1c2733;--lime:#fdc366;--teal:#2c8c84;
   --win:#5fa37c;--draw:#d2a941;--loss:#c96f68;--promo:#2f9e6a;--play:#d9a63a;
 }
 *{box-sizing:border-box}html,body{margin:0}
@@ -22,10 +23,10 @@ a{color:inherit}
 /* header */
 .top{position:relative;overflow:hidden;background:var(--night);color:#fff}
 .top::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(60% 140% at 100% 0%,rgba(215,242,74,.16),transparent 60%),
+  radial-gradient(60% 140% at 100% 0%,rgba(253,195,102,.16),transparent 60%),
   repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 22px)}
 .top-in{position:relative;max-width:1460px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.mark{width:52px;height:52px;border-radius:14px;background:var(--lime);color:var(--night);display:grid;place-items:center;font-family:var(--dinc);font-weight:800;font-size:15px;letter-spacing:.04em;line-height:.9;text-align:center;box-shadow:0 6px 18px rgba(215,242,74,.25)}
+.mark{width:58px;height:53px;object-fit:contain;filter:drop-shadow(0 6px 16px rgba(253,195,102,.35))}
 .brand b{display:block;font-family:var(--dinc);font-size:26px;letter-spacing:.06em;text-transform:uppercase;line-height:1}
 .brand span{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin-top:4px}
 .brand.arb{padding-left:18px;border-left:1px solid rgba(255,255,255,.2)}
@@ -35,7 +36,7 @@ a{color:inherit}
 .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:7px 12px;font-size:12px;color:#fff}
 .chip select{background:transparent;color:#fff;border:0;font:inherit;font-weight:700;outline:none;cursor:pointer;max-width:240px}
 .chip select option{color:#111}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(215,242,74,.18)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(253,195,102,.18)}
 /* crest strip */
 .strip{background:var(--night2);border-top:1px solid rgba(255,255,255,.06)}
 .strip-in{max-width:1460px;margin:0 auto;padding:10px 24px;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
@@ -145,7 +146,7 @@ footer{max-width:1460px;margin:0 auto;padding:0 24px 40px;color:var(--muted);fon
 /* hero */
 .hero{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin-bottom:14px}
 .hcard{position:relative;overflow:hidden;border-radius:20px;background:var(--night);color:#fff;padding:22px 24px}
-.hcard::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 120% at 0% 100%,rgba(44,140,132,.35),transparent 60%),radial-gradient(50% 90% at 100% 0%,rgba(215,242,74,.18),transparent 60%),repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 24px)}
+.hcard::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 120% at 0% 100%,rgba(44,140,132,.35),transparent 60%),radial-gradient(50% 90% at 100% 0%,rgba(253,195,102,.18),transparent 60%),repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 24px)}
 .hcard>*{position:relative}
 .hk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);font-weight:800}
 .ht{font-family:var(--dinc);font-size:44px;font-weight:800;line-height:1;margin:8px 0 4px;letter-spacing:.02em;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
@@ -202,7 +203,7 @@ tbody tr:hover .club img{transform:scale(1.12)}
 @media (max-width:640px){.ht{font-size:34px}.ht .ar{font-size:20px}.hst{margin-left:0;gap:16px}.prog{flex-wrap:wrap}.leader .who img{width:62px;height:62px}.leader .pts b{font-size:44px}.chase{flex-direction:column}.nx{flex-basis:200px}}
 /* stadium map, night edition */
 .mapw{grid-template-columns:1.5fr 1fr;background:var(--night);border-radius:22px;padding:14px;gap:14px;position:relative;overflow:hidden}
-.mapw::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 70% at 30% 40%,rgba(44,140,132,.22),transparent 70%),radial-gradient(40% 50% at 80% 10%,rgba(215,242,74,.10),transparent 70%);pointer-events:none}
+.mapw::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 70% at 30% 40%,rgba(44,140,132,.22),transparent 70%),radial-gradient(40% 50% at 80% 10%,rgba(253,195,102,.10),transparent 70%);pointer-events:none}
 .mapw .card{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);box-shadow:none;color:#fff;position:relative}
 .map{padding:0}
 .mbar{display:flex;align-items:center;gap:8px;padding:12px 14px 0;flex-wrap:wrap}
@@ -210,7 +211,7 @@ tbody tr:hover .club img{transform:scale(1.12)}
 .mbar button{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:999px;padding:5px 12px;font:inherit;font-size:11.5px;font-weight:700;cursor:pointer}
 .mbar button.on{background:var(--lime);color:var(--night);border-color:var(--lime)}
 .kmap{display:block;width:100%;height:auto}
-.kmap .land{fill:url(#landG);stroke:rgba(215,242,74,.55);stroke-width:1.6;filter:url(#glow)}
+.kmap .land{fill:url(#landG);stroke:rgba(253,195,102,.55);stroke-width:1.6;filter:url(#glow)}
 .kmap .grid{fill:url(#mgrid)}
 .kmap .beacon{fill:var(--lime)}
 .kmap .pulse{fill:none;stroke:var(--lime);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:pulse 2.6s ease-out infinite}
@@ -230,7 +231,7 @@ tbody tr:hover .club img{transform:scale(1.12)}
 .kmap .plane{fill:var(--lime)}
 .vlist{padding:8px 12px;max-height:640px;overflow:auto;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.2) transparent}
 .vrow{display:flex;align-items:center;gap:12px;padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.07);border-radius:10px;cursor:pointer;transition:background .2s}
-.vrow:hover,.vrow.hl{background:rgba(215,242,74,.08)}
+.vrow:hover,.vrow.hl{background:rgba(253,195,102,.08)}
 .vrow .cr{display:flex;gap:4px}
 .vrow .cr img{width:30px;height:30px;background:#fff;border-radius:50%;padding:3px}
 .vrow b{color:#fff}.vrow .ar{color:rgba(255,255,255,.6)}
@@ -242,10 +243,10 @@ tbody tr:hover .club img{transform:scale(1.12)}
 .stage{position:relative;perspective:1400px}
 .kmap{transition:transform .25s ease-out;transform-style:preserve-3d}
 .kmap .sweep{opacity:.55;mix-blend-mode:screen}
-.kmap .ring{fill:none;stroke:rgba(215,242,74,.12);stroke-width:1}
+.kmap .ring{fill:none;stroke:rgba(253,195,102,.12);stroke-width:1}
 .kmap .ray{stroke:url(#rayG);stroke-width:1.6;fill:none;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw .9s ease-out forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-.kmap .kml{font-size:11px;font-weight:800;fill:#d7f24a;paint-order:stroke;stroke:#121a22;stroke-width:4px;opacity:0;animation:fade .4s .5s forwards}
+.kmap .kml{font-size:11px;font-weight:800;fill:#fdc366;paint-order:stroke;stroke:#121a22;stroke-width:4px;opacity:0;animation:fade .4s .5s forwards}
 @keyframes fade{to{opacity:1}}
 .kmap.travel .bdg:not(.sel){opacity:.35}
 .kmap .bdg.sel circle{stroke-width:6}
@@ -264,12 +265,12 @@ tbody tr:hover .club img{transform:scale(1.12)}
 .tabs2 button{flex:1;border:1px solid rgba(255,255,255,.16);background:transparent;color:#fff;border-radius:10px;padding:7px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
 .tabs2 button.on{background:var(--lime);color:var(--night);border-color:var(--lime)}
 .trow{display:grid;grid-template-columns:22px 30px 1fr auto;gap:10px;align-items:center;padding:9px 8px;border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer;border-radius:10px}
-.trow:hover,.trow.hl{background:rgba(215,242,74,.08)}
+.trow:hover,.trow.hl{background:rgba(253,195,102,.08)}
 .trow .n{font-family:var(--dinc);font-size:15px;opacity:.6}
 .trow img{width:30px;height:30px;background:#fff;border-radius:50%;padding:3px}
 .trow b{display:block;font-size:13px}
 .trow .bar{height:5px;border-radius:3px;background:rgba(255,255,255,.08);margin-top:5px;overflow:hidden}
-.trow .bar i{display:block;height:100%;background:linear-gradient(90deg,#2c8c84,#d7f24a);border-radius:3px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.trow .bar i{display:block;height:100%;background:linear-gradient(90deg,#2c8c84,#fdc366);border-radius:3px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
 .trow .km2{font-family:var(--dinc);font-size:16px;color:var(--lime);text-align:right}
 .trow .km2 small{display:block;font-size:10px;color:rgba(255,255,255,.55);font-family:var(--din)}
 @media (hover:none){.mhint{display:none}}
@@ -281,7 +282,7 @@ tbody tr:hover .club img{transform:scale(1.12)}
 /* tablet and phone */
 @media (max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.fx{grid-template-columns:repeat(2,1fr)}.lead{grid-template-columns:repeat(2,1fr)}.mapw{grid-template-columns:1fr}}
 @media (max-width:640px){
-  .top-in{padding:12px 14px;gap:10px}.brand b{font-size:20px}.brand.arb{display:none}.mark{width:44px;height:44px;font-size:13px}
+  .top-in{padding:12px 14px;gap:10px}.brand b{font-size:20px}.brand.arb{display:none}.mark{width:46px;height:42px}
   .tsp{display:none}.chip{width:100%;justify-content:space-between}.chip select{max-width:none;flex:1}
   .wrap{padding:14px 12px 40px}.strip-in{padding:8px 12px}
   .kpis{grid-template-columns:1fr 1fr;gap:10px}.kpi .v{font-size:30px}
@@ -296,7 +297,7 @@ tbody tr:hover .club img{transform:scale(1.12)}
 <body>
 <header class="top">
   <div class="top-in">
-    <div class="mark">YELO<br>26/27</div>
+    <img class="mark" src="fdl.png" alt="First Division League">
     <div class="brand"><b>Match Centre</b><span id="lgEn">Yelo League · All clubs</span></div>
     <div class="brand arb"><b class="ar">مركز مباريات دوري يلو</b><span class="ar" id="lgAr">كل الأندية</span></div>
     <div class="tsp"></div>
@@ -456,14 +457,14 @@ const mapEl=document.getElementById("map");
 mapEl.innerHTML=`<div class="mbar"><b>YELO GROUNDS · ملاعب يلو</b><button data-m="grounds" class="on">Home grounds · الملاعب</button><button data-m="trips">Round ${openR} trips · رحلات الجولة ${openR}</button><button data-m="travel">Travel from a club · المسافات</button></div><div class="stage">
 <svg class="kmap" viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of Yelo League stadiums"><defs>
  <linearGradient id="landG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22313f"/><stop offset="1" stop-color="#151f29"/></linearGradient>
- <linearGradient id="arcG" x1="0" x2="1"><stop offset="0" stop-color="#2c8c84"/><stop offset="1" stop-color="#d7f24a"/></linearGradient>
+ <linearGradient id="arcG" x1="0" x2="1"><stop offset="0" stop-color="#2c8c84"/><stop offset="1" stop-color="#fdc366"/></linearGradient>
  <pattern id="mgrid" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="rgba(255,255,255,.10)"/></pattern>
  <filter id="glow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
  <clipPath id="bcp" clipPathUnits="objectBoundingBox"><circle cx=".5" cy=".5" r=".5"/></clipPath>
 </defs>
 <clipPath id="landC"><path d="${land}"/></clipPath>
-<radialGradient id="swG" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0) scale(520)"><stop offset="0" stop-color="#d7f24a" stop-opacity=".0"/><stop offset=".6" stop-color="#d7f24a" stop-opacity=".10"/><stop offset="1" stop-color="#d7f24a" stop-opacity="0"/></radialGradient>
-<linearGradient id="rayG" x1="0" x2="1"><stop offset="0" stop-color="#d7f24a"/><stop offset="1" stop-color="#2c8c84"/></linearGradient>
+<radialGradient id="swG" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0) scale(520)"><stop offset="0" stop-color="#fdc366" stop-opacity=".0"/><stop offset=".6" stop-color="#fdc366" stop-opacity=".10"/><stop offset="1" stop-color="#fdc366" stop-opacity="0"/></radialGradient>
+<linearGradient id="rayG" x1="0" x2="1"><stop offset="0" stop-color="#fdc366"/><stop offset="1" stop-color="#2c8c84"/></linearGradient>
 <path class="land" d="${land}"/><path class="grid" d="${land}"/>
 <g clip-path="url(#landC)">${[120,240,360,480].map(r=>`<circle class="ring" cx="${P([24,45])[0].toFixed(0)}" cy="${P([24,45])[1].toFixed(0)}" r="${r}"/>`).join("")}
 <g transform="translate(${P([24,45])[0].toFixed(0)} ${P([24,45])[1].toFixed(0)})"><path class="sweep" d="M0,0 L560,0 A560,560 0 0 1 ${(560*Math.cos(Math.PI/5)).toFixed(0)},${(560*Math.sin(Math.PI/5)).toFixed(0)} Z" fill="url(#swG)"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="9s" repeatCount="indefinite"/></path></g></g>
@@ -526,7 +527,7 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
 /* hero */
 {const N0=S.totalRounds||34,cr=S.currentRound||1,pc=Math.round(played.length/((N0*rows.length)/2)*100),R0=40,C0=2*Math.PI*R0;
  document.getElementById("hero").innerHTML=`<div class="hk">Saudi First Division · Yelo League</div><div class="ht">Season ${S.label[0].replace(/^Season /,"")}<span class="ar">دوري يلو ${S.label[1].replace(/^موسم /,"")}</span></div>
- <div class="prog"><svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="${R0}" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="9"/><circle cx="50" cy="50" r="${R0}" fill="none" stroke="#d7f24a" stroke-width="9" stroke-linecap="round" stroke-dasharray="${(C0*pc/100).toFixed(1)} ${C0.toFixed(1)}" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">${pc}%</text></svg>
+ <div class="prog"><svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="${R0}" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="9"/><circle cx="50" cy="50" r="${R0}" fill="none" stroke="#fdc366" stroke-width="9" stroke-linecap="round" stroke-dasharray="${(C0*pc/100).toFixed(1)} ${C0.toFixed(1)}" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">${pc}%</text></svg>
  <div class="pv"><b>Round ${cr} <small style="font-size:16px;opacity:.6">/ ${N0}</small></b><span>${played.length} of ${(N0*rows.length)/2} matches played · <span class="ar">الجولة ${cr} من ${N0}</span></span></div>
  <div class="hst"><div><b>${goals}</b><span>Goals · أهداف</span></div><div><b>${(goals/(played.length||1)).toFixed(2)}</b><span>Per match · للمباراة</span></div><div><b>${CH.length}</b><span>Changes · تعديلات</span></div></div></div>`;
  const [l1,l2,l3]=rows;
