@@ -180,17 +180,48 @@ footer{max-width:1460px;margin:0 auto;padding:0 24px 40px;color:var(--muted);fon
 .nx img{width:30px;height:30px;object-fit:contain;justify-self:center}
 .nx .k{font-family:var(--dinc);font-size:15px;font-weight:800;background:var(--chip);border-radius:8px;padding:3px 8px}
 .nx .nm{grid-column:1/-1;display:flex;justify-content:space-between;font-size:11.5px;font-weight:700}
-/* points race */
-.race{padding:14px 16px}
-.race svg{width:100%;height:auto;display:block}
-.race .ln{fill:none;stroke-width:2;opacity:.28;transition:opacity .2s,stroke-width .2s}
-.race .ln.top{opacity:.95;stroke-width:3}
-.race.focus .ln{opacity:.08}.race.focus .ln.on{opacity:1;stroke-width:4}
-.rlg{display:flex;flex-wrap:wrap;gap:6px;padding:4px 16px 16px}
-.rlg button{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 10px 3px 4px;font:inherit;font-size:11.5px;font-weight:700;cursor:pointer}
-.rlg button img{width:20px;height:20px;object-fit:contain}
-.rlg button i{width:10px;height:10px;border-radius:50%}
-.rlg button.on{border-color:var(--ink);box-shadow:0 0 0 2px rgba(0,0,0,.06)}
+/* points race: the position ladder */
+.rc{background:var(--night);color:#fff;border:0;overflow:hidden;position:relative}
+.rc::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(70% 90% at 0% 0%,rgba(253,195,102,.10),transparent 60%),radial-gradient(60% 80% at 100% 100%,rgba(44,140,132,.14),transparent 60%)}
+.bstats{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:16px 18px 6px}
+.bst{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .2s,border-color .2s}
+.bst:hover{background:rgba(255,255,255,.09);border-color:rgba(253,195,102,.4)}
+.bst img{width:30px;height:30px;object-fit:contain;flex:none}
+.bst .k{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;display:block}
+.bst .k .ar{letter-spacing:0;font-size:11px;opacity:1}
+.bst b{font-size:13px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bst .v{margin-left:auto;font-family:var(--dinc);font-size:22px;font-weight:800;color:var(--lime);white-space:nowrap}
+.bwrap{position:relative;overflow-x:auto;padding:4px 8px 6px;scrollbar-width:thin}
+.bwrap svg{display:block;width:100%;min-width:780px;height:auto}
+.bp .rib{fill:none;stroke-linecap:round;stroke-linejoin:round;transition:opacity .3s,stroke-width .3s}
+.bp .bg{stroke:var(--night)}
+.bp .fg{opacity:.38}.bp .hi .fg{opacity:.9}
+.bp text{font-family:var(--din)}
+.bp .gx{fill:rgba(255,255,255,.45);font-size:11px;font-family:var(--dinc)}
+.bp .gy{fill:rgba(255,255,255,.4);font-size:12px;font-family:var(--dinc);font-weight:800}
+.bp .gy.z1{fill:#7fd19b}.bp .gy.z2{fill:var(--lime)}
+.bp .vr{stroke:rgba(255,255,255,.06)}
+.bp .zb1{fill:rgba(127,209,155,.09)}.bp .zb2{fill:rgba(253,195,102,.06)}
+.bp .zl{stroke:rgba(255,255,255,.28);stroke-dasharray:4 5}
+.bp .zt{fill:rgba(255,255,255,.55);font-size:9.5px;letter-spacing:.12em;font-weight:700}
+.bp .cl{cursor:pointer}
+.bp .nm{fill:#fff;font-size:12.5px;font-weight:700}
+.bp .nm2{fill:rgba(255,255,255,.5);font-size:10.5px;font-family:var(--dinc)}
+.bp .end circle{fill:#0f161d;stroke-width:2}
+.bp .nd{opacity:0;transition:opacity .3s}
+.bp .nd circle{stroke:var(--night);stroke-width:2}
+.bp .nd text{fill:#fff;font-size:10px;font-weight:800;text-anchor:middle;dominant-baseline:central;font-family:var(--dinc)}
+.rc.focus .bp .fg,.rc.focus .bp .hi .fg{opacity:.08}.rc.focus.in .bp .end,.rc.focus.in .bp .st0{opacity:.25}
+.rc.focus .bp .cl.on .fg{opacity:1}.rc.focus.in .bp .cl.on .end,.rc.focus.in .bp .cl.on .st0{opacity:1}.rc.focus .bp .cl.on .nd{opacity:1}
+.bp .cl:hover .fg{opacity:.95}
+.bfoot{position:relative;display:flex;justify-content:space-between;gap:12px;padding:6px 18px 16px;font-size:11px;opacity:.7;flex-wrap:wrap}
+.bfoot i{display:inline-block;width:14px;height:14px;border-radius:50%;margin:0 4px -3px 10px;font-style:normal;font-size:9px;text-align:center;line-height:14px;font-weight:800;color:#fff}
+/* drawing in */
+.bp .fg,.bp .bg{stroke-dasharray:var(--l);stroke-dashoffset:var(--l)}
+.rc.in .bp .fg,.rc.in .bp .bg{stroke-dashoffset:0;transition:stroke-dashoffset 2s cubic-bezier(.3,.7,.2,1) var(--d),opacity .3s}
+.bp .end,.bp .st0{opacity:0;transition:opacity .4s}.rc.in .bp .end,.rc.in .bp .st0{opacity:1;transition-delay:calc(var(--d) + 1.6s),0s}
+@media (max-width:900px){.bstats{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:560px){.bstats{grid-template-columns:1fr;gap:6px}.bst{padding:7px 10px}.bst img{width:24px;height:24px}}
+@media (prefers-reduced-motion:reduce){.bp .fg,.bp .bg{stroke-dasharray:none;transition:none}.bp .end,.bp .st0{opacity:1;transition:none}}
 /* table polish */
 td.pts{position:relative}
 .pbar{position:absolute;left:8px;right:8px;bottom:6px;height:3px;border-radius:2px;background:#eef0f2;overflow:hidden}
@@ -302,9 +333,6 @@ tbody tr:hover .club img{transform:scale(1.12)}
 #table.in .form i{opacity:1;transform:none}
 tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 @keyframes glowbar{50%{box-shadow:0 0 10px var(--promo)}}
-.race .ln{stroke-dasharray:var(--l);stroke-dashoffset:var(--l);transition:stroke-dashoffset 2.2s cubic-bezier(.3,.7,.2,1),opacity .2s,stroke-width .2s}
-.race.in .ln{stroke-dashoffset:0}
-.race .ec{opacity:0;transition:opacity .5s 1.8s}.race.in .ec{opacity:1}
 .fx .m{animation:cardin .5s cubic-bezier(.2,.8,.2,1) both}
 @keyframes cardin{from{opacity:0;transform:translateY(12px) scale(.98)}}
 .sc{display:inline-block;animation:flip .6s cubic-bezier(.2,.8,.2,1) both}
@@ -320,7 +348,7 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 .strip a{animation:pop2 .5s cubic-bezier(.2,1.5,.4,1) both}
 @keyframes pop2{from{opacity:0;transform:translateY(10px) scale(.6)}}
 @media (prefers-reduced-motion:reduce){.mark,.top::after,.hcard::before,.nexts .track,.nx .cd::before,tr.z1 td.pos::before,.fx .m,.sc,.ch,.strip a,.sec.in .num::after{animation:none!important}
- #table tbody tr,.form i{opacity:1;transform:none;transition:none}.pbar i,.bar3 i{transform:none;transition:none}.race .ln{stroke-dasharray:none;stroke-dashoffset:0;transition:none}.race .ec{opacity:1;transition:none}}
+ #table tbody tr,.form i{opacity:1;transform:none;transition:none}.pbar i,.bar3 i{transform:none;transition:none}}
 /* motion */
 .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
@@ -363,8 +391,8 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
     <div class="legend"><span><i style="background:var(--promo)"></i>Promotion · صعود مباشر</span><span><i style="background:var(--play)"></i>Play off · الملحق</span><span><i style="background:var(--win)"></i>Win · فوز</span><span><i style="background:var(--draw)"></i>Draw · تعادل</span><span><i style="background:var(--loss)"></i>Loss · خسارة</span></div>
   </article>
 
-  <div class="sec rv"><span class="num">02</span><div><b>Points race</b><span class="ar">سباق النقاط</span></div><small>Every club's points after each match. Tap a crest to follow one club<span class="ar" style="display:block">نقاط كل نادٍ بعد كل مباراة، اضغط على شعار لمتابعة نادٍ واحد</span></small></div>
-  <article class="card rv"><div class="race" id="race"></div><div class="rlg" id="rlg"></div></article>
+  <div class="sec rv"><span class="num">02</span><div><b>Position race</b><span class="ar">سباق المراكز</span></div><small>Who climbed, who slipped: every club's league position, round by round. Tap a ribbon to follow one club<span class="ar" style="display:block">من صعد ومن تراجع: مركز كل نادٍ جولة بجولة، اضغط على شريط لمتابعة نادٍ واحد</span></small></div>
+  <article class="card rv rc" id="race"></article>
 
   <div class="sec rv"><span class="num">03</span><div><b>Round by round</b><span class="ar">الجولات</span></div><small>Every published fixture, with result, kick off, stadium and weather<span class="ar" style="display:block">كل مباريات الجولة: النتيجة والموعد والملعب والطقس</span></small></div>
   <article class="card rv"><div class="rhead"><div class="rnav" id="rnav"></div></div><div class="fx" id="fx"></div></article>
@@ -584,24 +612,46 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
  const up=LG.filter(m=>m.status!=="played"&&m.status!=="postponed"&&ko(m)>now-2*3600e3).sort((a,b)=>ko(a)-ko(b)).slice(0,10);
  const cd=m=>{const d=ko(m)-now;if(d<0)return "LIVE · مباشر";const h=Math.floor(d/3600e3);return h<24?`in ${h}h · بعد ${h} ساعة`:`in ${Math.floor(h/24)}d · بعد ${Math.floor(h/24)} يوم`;};
  document.getElementById("nexts").innerHTML=up.map(m=>`<a class="nx" href="index.html?club=${encodeURIComponent(m.home)}" style="text-decoration:none;color:inherit"><div class="when"><span>${dd(m.date)[0]}</span><span class="cd">${cd(m)}</span></div><img src="${LOGO(m.home)}" alt=""><span class="k">${m.time||"TBC"}</span><img src="${LOGO(m.away)}" alt=""><div class="nm"><span>${esc(TN(m.home))}</span><span>${esc(TN(m.away))}</span></div></a>`).join("");}
-/* points race */
-{const series=rows.map(r=>{let p=0;const pts=[0];for(const x of rec[r[0]].form){p+=x.r==="W"?3:x.r==="D"?1:0;pts.push(p);}return {t:r[0],pos:r[1],pts};});
- const maxN=Math.max(...series.map(x=>x.pts.length-1),1),maxP=Math.max(...series.map(x=>x.pts[x.pts.length-1]),3);
- const W2=1000,H2=420,l=46,r=110,tp=22,b=34,X=i=>l+i*(W2-l-r)/maxN,Y=v=>tp+(1-v/maxP)*(H2-tp-b);
- let g="";for(let v=0;v<=maxP;v+=Math.max(3,Math.ceil(maxP/6/3)*3))g+=`<line x1="${l}" x2="${W2-r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#eef0f2"/><text x="${l-10}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="#8a929b">${v}</text>`;
- for(let i=1;i<=maxN;i++)g+=`<text x="${X(i)}" y="${H2-12}" text-anchor="middle" font-size="11" fill="#8a929b">${i}</text>`;
- const lines=series.slice().reverse().map(x=>`<path class="ln${x.pos<=6?" top":""}" data-t="${esc(x.t)}" stroke="${col(x.t)}" d="M${x.pts.map((v,i)=>X(i).toFixed(1)+","+Y(v).toFixed(1)).join("L")}"/>`).join("");
- /* end crests, nudged apart */
- const ends=series.map(x=>({t:x.t,x:X(x.pts.length-1),y:Y(x.pts[x.pts.length-1])})).sort((a,b)=>a.y-b.y);
- for(let i=1;i<ends.length;i++)if(ends[i].y-ends[i-1].y<14&&Math.abs(ends[i].x-ends[i-1].x)<20)ends[i].x+=18;
- const crests=ends.map(e=>`<image class="ec" data-t="${esc(e.t)}" href="${LOGO(e.t)}" x="${e.x+4}" y="${e.y-10}" width="20" height="20"/>`).join("");
+/* points race: the position ladder */
+{const N=Math.max(...rows.map(r=>rec[r[0]].form.length),1);
+ /* standing after each round: points, goal difference, goals, then today's order */
+ const cum=rows.map(r=>{let p=0,gd=0,gf=0;const s=[{p,gd,gf}];for(const x of rec[r[0]].form){const home=x.m.home===r[0],f=home?x.m.score[0]:x.m.score[1],a=home?x.m.score[1]:x.m.score[0];
+   p+=x.r==="W"?3:x.r==="D"?1:0;gd+=f-a;gf+=f;s.push({p,gd,gf});}return {t:r[0],pos:r[1],s,form:rec[r[0]].form};});
+ const st=(x,k)=>x.s[Math.min(k,x.s.length-1)];
+ const P={};cum.forEach(x=>P[x.t]=[]);
+ for(let k=1;k<=N;k++)cum.slice().sort((a,b)=>{const A=st(a,k),B=st(b,k);return B.p-A.p||B.gd-A.gd||B.gf-A.gf||a.pos-b.pos;}).forEach((x,i)=>P[x.t][k]=i+1);
+ const T=cum.length,lift=h=>{const m=/^#?([0-9a-f]{6})$/i.exec(h||"");if(!m)return h;let n=parseInt(m[1],16),c=[n>>16,n>>8&255,n&255];
+   const L=(.2126*c[0]+.7152*c[1]+.0722*c[2])/255;if(L<.5){const k=(.5-L)/(1-L)+.1;c=c.map(v=>Math.round(v+(255-v)*k));}return "#"+c.map(v=>v.toString(16).padStart(2,"0")).join("");};
+ const W2=1000,RH=34,l=74,r=210,tp=34,H2=tp+T*RH+12,X=k=>l+(k-1)*(W2-l-r)/Math.max(N-1,1),Y=p=>tp+(p-.5)*RH,SW=RH*.42;
+ let g=`<rect class="zb1" x="${l-30}" y="${tp}" width="${W2-l-r+60}" height="${2*RH}" rx="8"/><rect class="zb2" x="${l-30}" y="${tp+2*RH}" width="${W2-l-r+60}" height="${4*RH}" rx="8"/>`;
+ for(let k=1;k<=N;k++)g+=`<line class="vr" x1="${X(k)}" x2="${X(k)}" y1="${tp-4}" y2="${tp+T*RH}"/><text class="gx" x="${X(k)}" y="${tp-12}" text-anchor="middle">${k}</text>`;
+ g+=`<text class="gx" x="${l-40}" y="${tp-12}" text-anchor="end" style="letter-spacing:.12em">R</text>`;
+ for(let p=1;p<=T;p++)g+=`<text class="gy ${p<=2?"z1":p<=6?"z2":""}" x="${l-40}" y="${Y(p)+4}" text-anchor="end">${p}</text>`;
+ g+=`<line class="zl" x1="${l-30}" x2="${W2-8}" y1="${tp+2*RH}" y2="${tp+2*RH}"/><line class="zl" x1="${l-30}" x2="${W2-8}" y1="${tp+6*RH}" y2="${tp+6*RH}"/>`;
+ const path=t=>{let d="";for(let k=1;k<=N;k++){const x=X(k),y=Y(P[t][k]);if(k===1){d=`M${x},${y}`;continue;}const x0=X(k-1),y0=Y(P[t][k-1]),m=(x-x0)*.5;d+=`C${x0+m},${y0} ${x-m},${y} ${x},${y}`;}return d;};
+ const RC={W:"#5fa37c",D:"#d2a941",L:"#c96f68"},RL={W:"W",D:"D",L:"L"};
+ const clubs=cum.slice().sort((a,b)=>P[b.t][N]-P[a.t][N]).map((x,i)=>{const c=lift(col(x.t)),fp=P[x.t][N],sp=P[x.t][1];
+   const nodes=x.form.map((f,j)=>{const k=j+1;if(k>N)return "";const m=f.m,o=m.home===x.t?m.away:m.home;
+     return `<g class="nd" transform="translate(${X(k)},${Y(P[x.t][k])})"><circle r="9" fill="${RC[f.r]}"/><text>${RL[f.r]}</text><title>${k} · ${TN(m.home)} ${m.score[0]}–${m.score[1]} ${TN(m.away)}</title></g>`;}).join("");
+   return `<g class="cl${fp<=6?" hi":""}" data-t="${esc(x.t)}" style="--d:${(i*45)}ms"><path class="rib bg" d="${path(x.t)}" stroke-width="${SW+5}"/><path class="rib fg" d="${path(x.t)}" stroke="${c}" stroke-width="${SW}"/>
+    <g class="st0" transform="translate(${X(1)-22},${Y(sp)})"><image href="${LOGO(x.t)}" x="-9" y="-9" width="18" height="18"/></g>${nodes}
+    <g class="end" transform="translate(${X(N)+24},${Y(fp)})"><circle r="13" stroke="${c}"/><image href="${LOGO(x.t)}" x="-9" y="-9" width="18" height="18"/>
+     <text class="nm" x="22" y="1">${esc(TN(x.t))}</text><text class="nm2" x="22" y="13">${st(x,N).p} pts · ${sp>fp?"▲"+(sp-fp):sp<fp?"▼"+(fp-sp):"="} since R1</text></g></g>`;}).join("");
+ /* the story chips */
+ const best=(f,cmp)=>cum.reduce((a,b)=>cmp(f(b),f(a))?b:a);
+ let climb=null,cv=0,fall=null,fv=0;cum.forEach(x=>{for(let k=1;k<N;k++){const d=P[x.t][k]-P[x.t][N];if(d>cv){cv=d;climb=x;}if(-d>fv){fv=-d;fall=x;}}});
+ const lead={};for(let k=1;k<=N;k++){const t=cum.find(x=>P[x.t][k]===1).t;lead[t]=(lead[t]||0)+1;}const lt=Object.keys(lead).sort((a,b)=>lead[b]-lead[a])[0];
+ const swing=best(x=>{let s=0;for(let k=2;k<=N;k++)s+=Math.abs(P[x.t][k]-P[x.t][k-1]);return s;},(a,b)=>a>b);let sw=0;for(let k=2;k<=N;k++)sw+=Math.abs(P[swing.t][k]-P[swing.t][k-1]);
+ const chip=(t,k,ka,v)=>t?`<div class="bst" data-t="${esc(t)}"><img src="${LOGO(t)}" alt=""><div style="min-width:0"><span class="k">${k} · <span class="ar">${ka}</span></span><b>${esc(TN(t))}</b></div><span class="v">${v}</span></div>`:"";
  const box=document.getElementById("race");
- box.innerHTML=`<svg viewBox="0 0 ${W2} ${H2}" role="img" aria-label="Points after each match for every club">${g}<text x="${l}" y="${tp-2}" font-size="11" fill="#8a929b">Points · النقاط</text><text x="${W2-r}" y="${H2-12}" text-anchor="start" font-size="11" fill="#8a929b" dx="14">Matches · المباريات</text>${lines}${crests}</svg>`;
- const lg=document.getElementById("rlg");
- lg.innerHTML=rows.map(x=>`<button data-t="${esc(x[0])}"><img src="${LOGO(x[0])}" alt=""><i style="background:${col(x[0])}"></i>${esc(TN(x[0]))}</button>`).join("");
- let on=null;lg.onclick=e=>{const bt=e.target.closest("button");if(!bt)return;on=on===bt.dataset.t?null:bt.dataset.t;
-  box.classList.toggle("focus",!!on);lg.querySelectorAll("button").forEach(z=>z.classList.toggle("on",z.dataset.t===on));
-  box.querySelectorAll(".ln").forEach(z=>z.classList.toggle("on",z.dataset.t===on));if(on){const pth=box.querySelector(`.ln[data-t="${CSS.escape(on)}"]`);pth&&pth.parentNode.appendChild(pth);}};}
+ box.innerHTML=`<div class="bstats">${chip(lt,"Most rounds at #1","الأكثر تصدرا",lead[lt]+"<small style=\"font-size:11px\"> R</small>")}${chip(climb&&climb.t,"Biggest climb","أكبر صعود","▲"+cv)}${chip(fall&&fall.t,"Biggest drop","أكبر هبوط","▼"+fv)}${chip(swing.t,"Wildest ride","الأكثر تقلبا",sw+"<small style=\"font-size:11px\"> moves</small>")}</div>
+  <div class="bwrap"><svg class="bp" viewBox="0 0 ${W2} ${H2}" role="img" aria-label="League position of every club after each round">${g}${clubs}</svg></div>
+  <div class="bfoot"><span>Each ribbon is a club’s league position after every round · <span class="ar">كل شريط هو مركز النادي بعد كل جولة</span></span><span><i style="background:#7fd19b"></i>Promotion · صعود<i style="background:var(--lime)"></i>Play-off · ملحق</span><span>Tap a club to see its results<i style="background:${RC.W}">W</i>win<i style="background:${RC.D}">D</i>draw<i style="background:${RC.L}">L</i>loss</span></div>`;
+ box.querySelectorAll(".rib").forEach(p=>{try{p.style.setProperty("--l",Math.ceil(p.getTotalLength())+1+"");}catch(e){}});
+ let on=null;const focus=t=>{on=on===t?null:t;box.classList.toggle("focus",!!on);box.querySelectorAll(".cl").forEach(c=>{const y=c.dataset.t===on;c.classList.toggle("on",y);if(y)c.parentNode.appendChild(c);});};
+ box.addEventListener("click",e=>{const c=e.target.closest(".cl,.bst");if(c)focus(c.dataset.t);});
+ const bw=box.querySelector(".bwrap");requestAnimationFrame(()=>bw.scrollLeft=bw.scrollWidth);
+ if(!("IntersectionObserver" in window))box.classList.add("in");}
 /* table: points bars and promotion line */
 {const top=rows[0][2]||1;document.querySelectorAll("#table tbody tr").forEach((tr,i)=>{const td=tr.querySelector("td.pts");if(td)td.insertAdjacentHTML("beforeend",`<span class="pbar"><i style="width:${Math.round(rows[i][2]/top*100)}%"></i></span>`);if(i===1||i===5)tr.classList.add("zline");});}
 
@@ -620,8 +670,7 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
  const arc=document.querySelectorAll(".ring circle")[1];if(arc){arc.classList.add("arcp");const full=arc.getAttribute("stroke-dasharray");if(!RM){arc.setAttribute("stroke-dasharray","0 999");setTimeout(()=>arc.setAttribute("stroke-dasharray",full),350);}}
  /* table rows, bars and form chips cascade */
  const tb=document.getElementById("table");tb.querySelectorAll("tbody tr").forEach((tr,i)=>{tr.style.transitionDelay=(i*45)+"ms";tr.querySelectorAll(".form i").forEach((f,j)=>f.style.transitionDelay=(400+i*45+j*70)+"ms");const pb=tr.querySelector(".pbar i");if(pb)pb.style.transitionDelay=(300+i*45)+"ms";});
- /* points race lines draw themselves */
- const race=document.getElementById("race");race.querySelectorAll(".ln").forEach(p=>{try{p.style.setProperty("--l",Math.ceil(p.getTotalLength())+"");}catch(e){}});
+ const race=document.getElementById("race");
  /* round cards and changes stagger */
  const stag=(sel)=>document.querySelectorAll(sel).forEach((e,i)=>e.style.animationDelay=Math.min(i,12)*55+"ms");
  stag(".fx .m");stag(".ch");
