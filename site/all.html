@@ -195,7 +195,9 @@ footer{max-width:1460px;margin:0 auto;padding:0 24px 40px;color:var(--muted);fon
 .bwrap svg{display:block;width:100%;min-width:780px;height:auto}
 .bp .rib{fill:none;stroke-linecap:round;stroke-linejoin:round;transition:opacity .3s,stroke-width .3s}
 .bp .bg{stroke:var(--night)}
-.bp .fg{opacity:.38}.bp .hi .fg{opacity:.9}
+.bp .fg{stroke:rgba(255,255,255,.2);transition:stroke .3s,stroke-width .3s,opacity .3s}
+.bp .hi .fg{stroke:rgba(255,255,255,.34)}
+.bp .dt{fill:var(--night);stroke:rgba(255,255,255,.35);stroke-width:1.5}
 .bp text{font-family:var(--din)}
 .bp .gx{fill:rgba(255,255,255,.45);font-size:11px;font-family:var(--dinc)}
 .bp .gy{fill:rgba(255,255,255,.4);font-size:12px;font-family:var(--dinc);font-weight:800}
@@ -207,13 +209,14 @@ footer{max-width:1460px;margin:0 auto;padding:0 24px 40px;color:var(--muted);fon
 .bp .cl{cursor:pointer}
 .bp .nm{fill:#fff;font-size:12.5px;font-weight:700}
 .bp .nm2{fill:rgba(255,255,255,.5);font-size:10.5px;font-family:var(--dinc)}
-.bp .end circle{fill:#0f161d;stroke-width:2}
+.bp .end circle{fill:#0f161d;stroke:rgba(255,255,255,.25);stroke-width:2;transition:stroke .3s}
+.bp .end .nm{opacity:.8}
 .bp .nd{opacity:0;transition:opacity .3s}
 .bp .nd circle{stroke:var(--night);stroke-width:2}
 .bp .nd text{fill:#fff;font-size:10px;font-weight:800;text-anchor:middle;dominant-baseline:central;font-family:var(--dinc)}
-.rc.focus .bp .fg,.rc.focus .bp .hi .fg{opacity:.08}.rc.focus.in .bp .end,.rc.focus.in .bp .st0{opacity:.25}
-.rc.focus .bp .cl.on .fg{opacity:1}.rc.focus.in .bp .cl.on .end,.rc.focus.in .bp .cl.on .st0{opacity:1}.rc.focus .bp .cl.on .nd{opacity:1}
-.bp .cl:hover .fg{opacity:.95}
+.rc.focus .bp .fg,.rc.focus .bp .hi .fg{stroke:rgba(255,255,255,.14)}.rc.focus .bp .dt{opacity:.5}.rc.focus.in .bp .st0{opacity:.4}
+.rc.focus .bp .cl.on .fg{stroke:var(--lime);stroke-width:5;filter:drop-shadow(0 0 6px rgba(253,195,102,.55))}.rc.focus .bp .cl.on .bg{stroke-width:11}.rc.focus.in .bp .cl.on .st0{opacity:1}.rc.focus .bp .cl.on .nd{opacity:1}.rc.focus .bp .cl.on .dt{opacity:0}.bp .cl.on .end circle{stroke:var(--lime)}.bp .cl.on .end .nm{opacity:1;fill:var(--lime)}
+.bp .cl:hover .fg{stroke:rgba(255,255,255,.75)}
 .bfoot{position:relative;display:flex;justify-content:space-between;gap:12px;padding:6px 18px 16px;font-size:11px;opacity:.7;flex-wrap:wrap}
 .bfoot i{display:inline-block;width:14px;height:14px;border-radius:50%;margin:0 4px -3px 10px;font-style:normal;font-size:9px;text-align:center;line-height:14px;font-weight:800;color:#fff}
 /* drawing in */
@@ -622,7 +625,7 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
  for(let k=1;k<=N;k++)cum.slice().sort((a,b)=>{const A=st(a,k),B=st(b,k);return B.p-A.p||B.gd-A.gd||B.gf-A.gf||a.pos-b.pos;}).forEach((x,i)=>P[x.t][k]=i+1);
  const T=cum.length,lift=h=>{const m=/^#?([0-9a-f]{6})$/i.exec(h||"");if(!m)return h;let n=parseInt(m[1],16),c=[n>>16,n>>8&255,n&255];
    const L=(.2126*c[0]+.7152*c[1]+.0722*c[2])/255;if(L<.5){const k=(.5-L)/(1-L)+.1;c=c.map(v=>Math.round(v+(255-v)*k));}return "#"+c.map(v=>v.toString(16).padStart(2,"0")).join("");};
- const W2=1000,RH=34,l=74,r=210,tp=34,H2=tp+T*RH+12,X=k=>l+(k-1)*(W2-l-r)/Math.max(N-1,1),Y=p=>tp+(p-.5)*RH,SW=RH*.42;
+ const W2=1000,RH=34,l=74,r=210,tp=34,H2=tp+T*RH+12,X=k=>l+(k-1)*(W2-l-r)/Math.max(N-1,1),Y=p=>tp+(p-.5)*RH,SW=3;
  let g=`<rect class="zb1" x="${l-30}" y="${tp}" width="${W2-l-r+60}" height="${2*RH}" rx="8"/><rect class="zb2" x="${l-30}" y="${tp+2*RH}" width="${W2-l-r+60}" height="${4*RH}" rx="8"/>`;
  for(let k=1;k<=N;k++)g+=`<line class="vr" x1="${X(k)}" x2="${X(k)}" y1="${tp-4}" y2="${tp+T*RH}"/><text class="gx" x="${X(k)}" y="${tp-12}" text-anchor="middle">${k}</text>`;
  g+=`<text class="gx" x="${l-40}" y="${tp-12}" text-anchor="end" style="letter-spacing:.12em">R</text>`;
@@ -634,9 +637,9 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
  const clubs=cum.slice().sort((a,b)=>P[a.t][N]-P[b.t][N]).map((x,i)=>{const c=HUE(i),fp=P[x.t][N],sp=P[x.t][1];
    const nodes=x.form.map((f,j)=>{const k=j+1;if(k>N)return "";const m=f.m,o=m.home===x.t?m.away:m.home;
      return `<g class="nd" transform="translate(${X(k)},${Y(P[x.t][k])})"><circle r="9" fill="${RC[f.r]}"/><text>${RL[f.r]}</text><title>${k} · ${TN(m.home)} ${m.score[0]}–${m.score[1]} ${TN(m.away)}</title></g>`;}).join("");
-   return `<g class="cl${fp<=6?" hi":""}" data-t="${esc(x.t)}" style="--d:${(i*45)}ms"><path class="rib bg" d="${path(x.t)}" stroke-width="${SW+5}"/><path class="rib fg" d="${path(x.t)}" stroke="${c}" stroke-width="${SW}"/>
+   return `<g class="cl${fp<=6?" hi":""}" data-t="${esc(x.t)}" style="--d:${(i*45)}ms"><path class="rib bg" d="${path(x.t)}" stroke-width="${SW+5}"/><path class="rib fg" d="${path(x.t)}" stroke-width="${SW}"/>${Array.from({length:N},(_,j)=>`<circle class="dt" r="3" cx="${X(j+1)}" cy="${Y(P[x.t][j+1])}"/>`).join("")}
     <g class="st0" transform="translate(${X(1)-22},${Y(sp)})"><image href="${LOGO(x.t)}" x="-9" y="-9" width="18" height="18"/></g>${nodes}
-    <g class="end" transform="translate(${X(N)+24},${Y(fp)})"><circle r="13" stroke="${c}"/><image href="${LOGO(x.t)}" x="-9" y="-9" width="18" height="18"/>
+    <g class="end" transform="translate(${X(N)+24},${Y(fp)})"><circle r="13"/><image href="${LOGO(x.t)}" x="-9" y="-9" width="18" height="18"/>
      <text class="nm" x="22" y="1">${esc(TN(x.t))}</text><text class="nm2" x="22" y="13">${st(x,N).p} pts · ${sp>fp?"▲"+(sp-fp):sp<fp?"▼"+(fp-sp):"="} since R1</text></g></g>`;}).reverse().join("");
  /* the story chips */
  const best=(f,cmp)=>cum.reduce((a,b)=>cmp(f(b),f(a))?b:a);
@@ -647,10 +650,11 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
  const box=document.getElementById("race");
  box.innerHTML=`<div class="bstats">${chip(lt,"Most rounds at #1","الأكثر تصدرا",lead[lt]+"<small style=\"font-size:11px\"> R</small>")}${chip(climb&&climb.t,"Biggest climb","أكبر صعود","▲"+cv)}${chip(fall&&fall.t,"Biggest drop","أكبر هبوط","▼"+fv)}${chip(swing.t,"Wildest ride","الأكثر تقلبا",sw+"<small style=\"font-size:11px\"> moves</small>")}</div>
   <div class="bwrap"><svg class="bp" viewBox="0 0 ${W2} ${H2}" role="img" aria-label="League position of every club after each round">${g}${clubs}</svg></div>
-  <div class="bfoot"><span>Each ribbon is a club’s league position after every round · <span class="ar">كل شريط هو مركز النادي بعد كل جولة</span></span><span><i style="background:#7fd19b"></i>Promotion · صعود<i style="background:var(--lime)"></i>Play-off · ملحق</span><span>Tap a club to see its results<i style="background:${RC.W}">W</i>win<i style="background:${RC.D}">D</i>draw<i style="background:${RC.L}">L</i>loss</span></div>`;
+  <div class="bfoot"><span>Each line is a club’s league position after every round · <span class="ar">كل خط هو مركز النادي بعد كل جولة</span></span><span><i style="background:#7fd19b"></i>Promotion · صعود<i style="background:var(--lime)"></i>Play-off · ملحق</span><span>Tap a club to see its results<i style="background:${RC.W}">W</i>win<i style="background:${RC.D}">D</i>draw<i style="background:${RC.L}">L</i>loss</span></div>`;
  box.querySelectorAll(".rib").forEach(p=>{try{p.style.setProperty("--l",Math.ceil(p.getTotalLength())+1+"");}catch(e){}});
  let on=null;const focus=t=>{on=on===t?null:t;box.classList.toggle("focus",!!on);box.querySelectorAll(".cl").forEach(c=>{const y=c.dataset.t===on;c.classList.toggle("on",y);if(y)c.parentNode.appendChild(c);});};
  box.addEventListener("click",e=>{const c=e.target.closest(".cl,.bst");if(c)focus(c.dataset.t);});
+ const home=cum.find(x=>/alula/i.test(TN(x.t)));if(home)focus(home.t);
  const bw=box.querySelector(".bwrap");requestAnimationFrame(()=>bw.scrollLeft=bw.scrollWidth);
  if(!("IntersectionObserver" in window))box.classList.add("in");}
 /* table: points bars and promotion line */
