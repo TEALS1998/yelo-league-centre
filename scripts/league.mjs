@@ -1,4 +1,4 @@
-// Yelo League match centre: live updater for every club in the Saudi First Division League.
+// First Division League match centre: live updater for every club in the Saudi First Division League.
 // Runs on GitHub Actions. Every run reads the league page (table + current round).
 // Every 30 minutes, or when FULL=1, it also reads each club's SAFF team page (full fixture list).
 // Rules: never delete a match, never blank a score or venue, never guess a result,
@@ -17,7 +17,7 @@ const log = (...a) => console.log("[league]", ...a);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function get(url) {
-  const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (Yelo League match centre updater)", "accept-language": "ar,en;q=0.8" } });
+  const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (First Division League match centre updater)", "accept-language": "ar,en;q=0.8" } });
   if (!r.ok) throw new Error(`${url} -> HTTP ${r.status}`);
   const buf = Buffer.from(await r.arrayBuffer());
   const utf = buf.toString("utf8"); // SAFF sometimes serves windows-1256 while declaring utf-8

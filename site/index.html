@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yelo League Match Centre | مركز مباريات دوري يلو</title>
+<title>First Division League Match Centre | مركز مباريات دوري الأولى</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -2226,7 +2226,7 @@ try{const prev=JSON.parse(localStorage.getItem("yelo-fx-"+US+"-"+SKEY)||"null");
   sel.innerHTML=SEASON_KEYS.slice().reverse().map(k=>`<option value="${k}" ${k===SKEY?"selected":""}>${k}</option>`).join("");
   sel.onchange=()=>{location.hash="season-"+sel.value.replace("/","-");};
   window.addEventListener("hashchange",()=>location.reload());
-  document.getElementById("seaEn").textContent=`${US_EN} · Yelo League · ${SEA.label[0]}`;
+  document.getElementById("seaEn").textContent=`${US_EN} · First Division League · ${SEA.label[0]}`;
   document.getElementById("seaAr").textContent=`نادي ${US} · ${SEA.label[1]}`;
   const lc=DATA.lastChecked||"",t=lc?D(lc):null;
   document.getElementById("checked").innerHTML=t?`<i></i>SAFF checked ${t.getUTCDate()} ${MON_EN[t.getUTCMonth()]} ${t.getUTCFullYear()} <span class="ar">آخر تحقق ${t.getUTCDate()} ${MON_AR[t.getUTCMonth()]}</span>`:"";})();
@@ -4931,7 +4931,7 @@ const seasonStrip=()=>{const N=(SEA.totalRounds||34),byR={};MATCHES.filter(m=>m.
   for(let r=1;r<=N;r++){const m=byR[r],rr=m?res(m):null,nx=next&&m&&m.id===next.id;c+=`<i class="hsg${rr?" "+rr:""}${nx?" nx":""}" style="--i:${r}"></i>`;}
   return `<div class="hstrip"><span>SEASON · الموسم</span><div>${c}</div></div>`;};
 const head=(kick,en,arr,meta)=>`<div class="rpE"><div class="eTop"><span><i></i>${kick}</span><span>${US_EN} · نادي ${US}</span></div><div class="eMain"><div class="eTxt"><h1>${en}</h1><div class="eAr">${arr}</div>${meta?`<div class="eMeta">${meta}</div>`:""}</div><img class="eCr" src="${CREST}" alt=""></div><div class="eRule"></div></div>`;
-const foot=n=>`<div class="rpF"><span>Yelo League Match Centre · مركز مباريات دوري يلو · ${author()}</span><span>Source: saff.com.sa · المصدر: موقع الاتحاد السعودي لكرة القدم · Printed ${fE(today)}</span><span>${n}</span></div>`;
+const foot=n=>`<div class="rpF"><span>First Division League Match Centre · مركز مباريات دوري الأولى · ${author()}</span><span>Source: saff.com.sa · المصدر: موقع الاتحاد السعودي لكرة القدم · Printed ${fE(today)}</span><span>${n}</span></div>`;
 const sheet=(h,b,n)=>`<section class="rps">${h}<div class="rpB">${b}</div>${foot(n)}</section>`;
 
 /* 1. Matchday programme: three pages (cover and ticket, the contest, the journey) */
@@ -4990,7 +4990,7 @@ function rMatch(){
   const daysTo=Math.max(0,Math.round((dd(next.date)-dd(today))/864e5));
   const round=next.comp==="cup"?["KING'S CUP","كأس الملك"]:["MATCHDAY "+next.round,"الجولة "+next.round];
   const crestImg=(n,h)=>logo(n)?`<img src="${logo(n)}" style="height:${h}mm;width:${h}mm;object-fit:contain;filter:drop-shadow(0 2mm 3mm rgba(0,0,0,.35))">`:"";
-  const ft=`<div class="rpF"><span>Yelo League Match Centre · مركز مباريات دوري يلو${author()?" · "+author():""}</span><span>Sources: saff.com.sa, club logistics plan · المصادر: موقع الاتحاد وخطة اللوجستيات</span><span>Printed ${fE(today)}</span></div>`;
+  const ft=`<div class="rpF"><span>First Division League Match Centre · مركز مباريات دوري الأولى${author()?" · "+author():""}</span><span>Sources: saff.com.sa, club logistics plan · المصادر: موقع الاتحاد وخطة اللوجستيات</span><span>Printed ${fE(today)}</span></div>`;
 
   /* ---------- page 1: cover with scoreboard and ticket ---------- */
   const p1=`<section class="rps mp fix">
@@ -5099,7 +5099,7 @@ function rMatch(){
 }
 
 /* ---------- shared pieces for the redesigned reports ---------- */
-const FT=()=>`<div class="rpF"><span>Yelo League Match Centre · مركز مباريات دوري يلو${author()?" · "+author():""}</span><span>Source: saff.com.sa · المصدر: موقع الاتحاد السعودي لكرة القدم</span><span>Printed ${fE(today)}</span></div>`;
+const FT=()=>`<div class="rpF"><span>First Division League Match Centre · مركز مباريات دوري الأولى${author()?" · "+author():""}</span><span>Source: saff.com.sa · المصدر: موقع الاتحاد السعودي لكرة القدم</span><span>Printed ${fE(today)}</span></div>`;
 const C3={};const three=(v,w=600,h=340,az=0)=>{const k=v+"|"+w+"|"+h+"|"+az;if(!(k in C3)){try{C3[k]=typeof window.__render3D==="function"?window.__render3D(v,w,h,az):null;}catch(e){C3[k]=null;}}return C3[k];};
 const REF=(typeof PD!=="undefined"&&PD.ref)||{season:"2025/26",champ:77,second:73,sixth:59};
 const NRD=SEA.totalRounds||34;

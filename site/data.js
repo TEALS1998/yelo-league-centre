@@ -1,4 +1,4 @@
-/* Yelo League (Saudi First Division) match centre: every club's fixtures, the table, venues and weather.
+/* First Division League (دوري الأولى) match centre: every club's fixtures, the table, venues and weather.
    Updated by scripts/league.mjs from the SAFF website. Rules: never delete a past match; add a changes[] entry
    whenever date, time or venue changes; keep "orig" (first published date) on a match whose date moved. */
 /* weather per match: t = °C at kick off, c = sun|clear|partly|cloud|rain|storm|dust|fog,

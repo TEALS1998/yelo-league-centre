@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yelo League · All clubs | دوري يلو · كل الأندية</title>
+<title>First Division League · All clubs | دوري الأولى · كل الأندية</title>
 <link rel="stylesheet" href="fonts.css">
 <link rel="icon" href="favicon.png">
 <style>
@@ -375,8 +375,8 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 <header class="top">
   <div class="top-in">
     <img class="mark" src="fdl.png" alt="First Division League">
-    <div class="brand"><b>Match Centre</b><span id="lgEn">Yelo League · All clubs</span></div>
-    <div class="brand arb"><b class="ar">مركز مباريات دوري يلو</b><span class="ar" id="lgAr">كل الأندية</span></div>
+    <div class="brand"><b>Match Centre</b><span id="lgEn">First Division League · All clubs</span></div>
+    <div class="brand arb"><b class="ar">مركز مباريات دوري الأولى</b><span class="ar" id="lgAr">كل الأندية</span></div>
     <div class="tsp"></div>
     <label class="chip"><span class="ar">النادي</span><select id="clubSel" aria-label="Club · النادي"></select></label>
     <span class="chip" id="checked"><i class="dot"></i></span>
@@ -433,7 +433,7 @@ const sel=document.getElementById("clubSel");
 sel.innerHTML=`<option value="" selected>الكل · All clubs</option>`+rows.map(r=>`<option value="${esc(r[0])}">${r[1]}. ${esc(r[0])} · ${esc(TN(r[0]))}</option>`).join("");
 sel.onchange=()=>{if(sel.value)go(sel.value);};
 document.getElementById("strip").innerHTML=rows.map(r=>`<a href="index.html?club=${encodeURIComponent(r[0])}" title="${esc(TN(r[0]))} · ${esc(r[0])}"><img src="${LOGO(r[0])}" alt="${esc(TN(r[0]))}"></a>`).join("");
-document.getElementById("lgEn").textContent=`Yelo League · All clubs · ${S.label[0]}`;
+document.getElementById("lgEn").textContent=`First Division League · All clubs · ${S.label[0]}`;
 document.getElementById("lgAr").textContent=`كل الأندية · ${S.label[1]}`;
 if(L.lastChecked){const [y,m,x]=L.lastChecked.split("-").map(Number);document.getElementById("checked").insertAdjacentHTML("beforeend",`SAFF checked ${x} ${ME[m-1]} <span class="ar">آخر تحقق ${x} ${MA[m-1]}</span>`);}
 
@@ -531,8 +531,8 @@ const arcs=nr.map((m,i)=>{const a=VP(L.clubs[m.away]&&L.clubs[m.away].home),b=VP
   const mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2-Math.hypot(a[0]-b[0],a[1]-b[1])*.3,d=`M${a[0].toFixed(1)},${a[1].toFixed(1)} Q${mx.toFixed(1)},${my.toFixed(1)} ${b[0].toFixed(1)},${b[1].toFixed(1)}`;
   return `<path class="arc" d="${d}"/><circle class="plane" r="4.5"><animateMotion dur="${(2.4+i*.25).toFixed(2)}s" repeatCount="indefinite" path="${d}"/></circle>`;}).join("");
 const mapEl=document.getElementById("map");
-mapEl.innerHTML=`<div class="mbar"><b>YELO GROUNDS · ملاعب يلو</b><button data-m="grounds" class="on">Home grounds · الملاعب</button><button data-m="trips">Round ${openR} trips · رحلات الجولة ${openR}</button><button data-m="travel">Travel from a club · المسافات</button></div><div class="stage">
-<svg class="kmap" viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of Yelo League stadiums"><defs>
+mapEl.innerHTML=`<div class="mbar"><b>LEAGUE GROUNDS · ملاعب دوري الأولى</b><button data-m="grounds" class="on">Home grounds · الملاعب</button><button data-m="trips">Round ${openR} trips · رحلات الجولة ${openR}</button><button data-m="travel">Travel from a club · المسافات</button></div><div class="stage">
+<svg class="kmap" viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of First Division League stadiums"><defs>
  <linearGradient id="landG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22313f"/><stop offset="1" stop-color="#151f29"/></linearGradient>
  <linearGradient id="arcG" x1="0" x2="1"><stop offset="0" stop-color="#2c8c84"/><stop offset="1" stop-color="#fdc366"/></linearGradient>
  <pattern id="mgrid" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="rgba(255,255,255,.10)"/></pattern>
@@ -603,7 +603,7 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
 
 /* hero */
 {const N0=S.totalRounds||34,cr=S.currentRound||1,pc=Math.round(played.length/((N0*rows.length)/2)*100),R0=40,C0=2*Math.PI*R0;
- document.getElementById("hero").innerHTML=`<div class="hk">Saudi First Division · Yelo League</div><div class="ht">Season ${S.label[0].replace(/^Season /,"")}<span class="ar">دوري يلو ${S.label[1].replace(/^موسم /,"")}</span></div>
+ document.getElementById("hero").innerHTML=`<div class="hk">Saudi First Division League</div><div class="ht">Season ${S.label[0].replace(/^Season /,"")}<span class="ar">دوري الأولى ${S.label[1].replace(/^موسم /,"")}</span></div>
  <div class="prog"><svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="${R0}" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="9"/><circle cx="50" cy="50" r="${R0}" fill="none" stroke="#fdc366" stroke-width="9" stroke-linecap="round" stroke-dasharray="${(C0*pc/100).toFixed(1)} ${C0.toFixed(1)}" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">${pc}%</text></svg>
  <div class="pv"><b>Round ${cr} <small style="font-size:16px;opacity:.6">/ ${N0}</small></b><span>${played.length} of ${(N0*rows.length)/2} matches played · <span class="ar">الجولة ${cr} من ${N0}</span></span></div>
  <div class="hst"><div><b>${goals}</b><span>Goals · أهداف</span></div><div><b>${(goals/(played.length||1)).toFixed(2)}</b><span>Per match · للمباراة</span></div><div><b>${CH.length}</b><span>Changes · تعديلات</span></div></div></div>`;
