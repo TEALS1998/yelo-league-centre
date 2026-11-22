@@ -113,6 +113,15 @@ async function main() {
     } catch (e) { log("batch failed:", b.date, e.message); }
     await sleep(700);
   }
+  // which league matches each suspension covers (worked out again every run, fixtures move)
+  const S = D.seasons[D.current];
+  const L = S.matches.filter((m) => m.comp === "league" && m.status !== "postponed").sort((x, y) => (x.date < y.date ? -1 : 1));
+  for (const d of known.values()) {
+    delete d.out;
+    if (!d.ban || /^(نادي|احتجاج)$/.test(d.role) || !d.match.date) continue;
+    const next = L.filter((m) => (m.home === d.club || m.away === d.club) && m.date > d.match.date).slice(0, d.ban);
+    if (next.length) d.out = next.map((m) => ({ date: m.date, home: m.home, away: m.away, round: m.round || null }));
+  }
   const decisions = [...known.values()].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : parseInt(b.no) - parseInt(a.no)));
   const out = { source: INDEX, checked: new Date().toISOString().slice(0, 10), batches: prev.batches, decisions };
   const body = "/* سجل الانضباط: قرارات لجنة الانضباط والأخلاق في دوري الدرجة الأولى للمحترفين.\n   يحدّثه scripts/discipline.mjs تلقائياً من موقع الاتحاد السعودي لكرة القدم. */\nwindow.DISCIPLINE = " + JSON.stringify(out, null, 1) + ";\n";
