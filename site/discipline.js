@@ -9,6 +9,7 @@ const PANEL = {
   red:    "#d63b32",   // لون البطاقة الحمراء
   yellow: "#f4c430",   // لون البطاقة الصفراء
   white:  "#e4e7eb",   // لون بطاقة الاحتجاج
+  money:  "#2f8f5b",   // لون ورقة الفلوس في رقم الغرامات
   tilt:   5,           // قد إيش تميل البطاقة (بالدرجات، 0 يعني مستقيمة)
   flip:   true,        // true تنقلب البطاقة لما تمرّين عليها، false ما تنقلب
 
@@ -56,11 +57,14 @@ window.DISCIPLINE = window.DISCIPLINE || {   // البيانات التلقائ�
 
   /* الشكل */
   document.head.insertAdjacentHTML("beforeend", `<style>
-#discipline{padding:20px;overflow:hidden;--red:${P.red};--yel:${P.yellow};--wht:${P.white};--tilt:${P.tilt}deg}
+#discipline{padding:20px;overflow:hidden;--red:${P.red};--yel:${P.yellow};--wht:${P.white};--mny:${P.money};--tilt:${P.tilt}deg}
 #discipline .ds-hint{font-size:12px;opacity:.6;margin:0 0 14px;direction:rtl}
 .ds-stats{display:flex;gap:18px;flex-wrap:wrap;margin:4px 0 40px;direction:rtl;position:relative;z-index:2}
 .ds-mini{display:flex;align-items:center;gap:10px}
 .ds-mini i{width:30px;height:42px;border-radius:4px;display:block;box-shadow:0 3px 8px rgba(0,0,0,.18);transform:rotate(calc(var(--tilt) * -1))}
+.ds-mini i.ds-bill{width:46px;height:28px;border-radius:4px;background:var(--mny);position:relative;transform:rotate(calc(var(--tilt) * -.6))}
+.ds-mini i.ds-bill:before{content:"";position:absolute;inset:3px;border:1.5px solid rgba(255,255,255,.55);border-radius:2px}
+.ds-mini i.ds-bill:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.7);top:50%;left:50%;transform:translate(-50%,-50%)}
 .ds-mini b{display:block;font-size:24px;line-height:1}
 .ds-mini span{font-size:11.5px;opacity:.7}
 .ds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:26px 20px;direction:rtl}
@@ -170,7 +174,7 @@ ${P.flip ? `.dc:hover .dc-in,.dc:focus .dc-in,.dc.dc-on .dc-in{transform:rotate(
     <div class="ds-stats">
       <div class="ds-mini"><i style="background:var(--red)"></i><div><b>${bans}</b><span>بطاقات حمراء بقرار إيقاف</span></div></div>
       <div class="ds-mini"><i style="background:var(--yel)"></i><div><b>${ylw}</b><span>إنذارات في غرامات الأندية</span></div></div>
-      <div class="ds-mini"><i style="background:var(--wht)"></i><div><b>${money(fines)}</b><span>غرامات بالريال</span></div></div>
+      <div class="ds-mini"><i class="ds-bill"></i><div><b>${money(fines)}</b><span>غرامات بالريال</span></div></div>
     </div>`;
 
   /* بطاقة السجل النظيف */
