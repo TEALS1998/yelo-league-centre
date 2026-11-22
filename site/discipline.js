@@ -1,6 +1,6 @@
 /* سجل الانضباط: قرارات لجنة الانضباط والأخلاق في دوري الدرجة الأولى للمحترفين
    المصدر: موقع الاتحاد السعودي لكرة القدم */
-window.DISCIPLINE = {
+window.DISCIPLINE = window.DISCIPLINE || {   // البيانات التلقائية من discipline-data.js، وهذي احتياط
   source: "https://www.saff.com.sa/about.php?id=3&type=13&menu=4",
   decisions: [
     {
@@ -78,7 +78,7 @@ document.querySelector("main, body").insertAdjacentHTML("beforeend", `
       <div class="ds-tags">
         ${d.ban ? `<span class="ds-ban">إيقاف ${d.ban} ${d.ban === 1 ? "مباراة" : "مباريات"}</span>` : ""}
         ${d.fine ? `<span class="ds-fine">غرامة ${money(d.fine)} ريال</span>` : ""}
-        <a class="ds-no" href="${DIS.source}" target="_blank" rel="noopener">قرار ${safe(d.no)}</a>
+        <a class="ds-no" href="${d.url || DIS.source}" target="_blank" rel="noopener">قرار ${safe(d.no)}</a>
       </div>
     </div>`;
 

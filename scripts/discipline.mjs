@@ -1,0 +1,125 @@
+// Discipline record: reads the SAFF Discipline and Ethics Committee decisions for the current season
+// and keeps the ones for the First Division League first team in site/discipline-data.js.
+// Rules: never delete a decision already saved, and leave the file untouched when the pages look wrong.
+import fs from "node:fs";
+import path from "node:path";
+import { loadData, teamMatcher } from "./league.mjs";
+
+const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+const OUT = path.join(ROOT, "site", "discipline-data.js");
+const BASE = "https://www.saff.com.sa/";
+const INDEX = BASE + "about.php?id=3&type=13&menu=4";
+const log = (...a) => console.log("[discipline]", ...a);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function get(url) {
+  const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (First Division League match centre updater)", "accept-language": "ar,en;q=0.8" } });
+  if (!r.ok) throw new Error(`${url} -> HTTP ${r.status}`);
+  const buf = Buffer.from(await r.arrayBuffer());
+  const utf = buf.toString("utf8"); // SAFF sometimes serves windows-1256 while declaring utf-8
+  return /�/.test(utf.slice(0, 20000)) ? new TextDecoder("windows-1256").decode(buf) : utf;
+}
+const clean = (h) => String(h || "").replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, " ")
+  .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
+  .replace(/[ \t]+/g, " ").replace(/ *\n */g, "\n").trim();
+const digits = (s) => s.replace(/[٠-٩]/g, (c) => "٠١٢٣٤٥٦٧٨٩".indexOf(c));
+
+// Men's first team First Division League only (no age groups, women, futsal, other divisions).
+export const isFdl = (comp) => /الدرجة الأولى للمحترفين|يلو للدرجة الأولى|دوري يلو/.test(comp) && !/تحت|سيدات|السيدات|الصالات|الشاطئية/.test(comp);
+
+// The season's batches listed on the index page: [{ date, count }]
+export function parseIndex(html) {
+  const out = new Map();
+  for (const m of html.matchAll(/mdate=(\d{4}-\d{2}-\d{2})#new"[^>]*>[^<]*<span[^>]*>\d{4}-\d{2}-\d{2}<\/span>[^<]*?\((\d+)\)/g)) out.set(m[1], +m[2]);
+  return [...out].map(([date, count]) => ({ date, count }));
+}
+
+// Decision rows of the batch that the page shows in full (the one after <div id="new">).
+export function parseBatch(html, teamOf, url) {
+  const at = html.indexOf('<div id="new">');
+  if (at < 0) return null;
+  const end = html.indexOf("</table>", at);
+  const table = html.slice(at, end < 0 ? undefined : end);
+  if (!/منطوق القرار/.test(table)) return null;
+  const rows = [];
+  for (const tr of table.matchAll(/<tr>([\s\S]*?)<\/tr>/g)) {
+    const td = [...tr[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((m) => clean(m[1]));
+    if (td.length < 6) continue;
+    rows.push(toDecision(td, teamOf, url));
+  }
+  return rows;
+}
+
+export function toDecision(td, teamOf, url) {
+  const [noDate, comp, matchTxt, against, violation, ruling] = td;
+  const no = (noDate.split("\n")[0] || "").replace(/\s*\/\s*/g, "/").replace(/\s+/g, " ").trim();
+  const date = (noDate.match(/\d{4}-\d{2}-\d{2}/) || [""])[0];
+  const mm = matchTxt.split("\n");
+  const [home, away] = (mm[0] || "").split(" - ").map((s) => teamOf(s.trim()) || s.trim());
+  const mDate = (matchTxt.match(/\d{4}-\d{2}-\d{2}/) || [""])[0];
+  // "لاعب نادي الطائي/ مهند حسين الحارثي" · "نادي العدالة" · "احتجاج نادي الزلفي" · "إداري نادي ..."
+  const a = against.replace(/\s+/g, " ").trim();
+  const rm = a.match(/^(.*?)\s*(?:بنادي|النادي|نادي)\s+(.*)$/);
+  const roleTxt = rm ? rm[1].trim() : "";
+  const after = rm ? rm[2] : a;
+  const slash = after.indexOf("/");
+  const clubTxt = (slash >= 0 ? after.slice(0, slash) : after).trim();
+  const club = teamOf(clubTxt) || clubTxt;
+  const person = slash >= 0 ? after.slice(slash + 1).trim() : "نادي " + clubTxt;
+  const role = roleTxt || "نادي";
+  // reason without the repeated name and the referee-report tail
+  let reason = violation.replace(/\s+/g, " ").replace(/[،,]?\s*وذلك وفقاً? لما ورد في تقرير[^.]*\.?/g, "").trim();
+  reason = reason.replace(new RegExp("^حصول\\s+" + a.replace(/[.*+?^${}()|[\]\\/]/g, "\\$&") + "\\s+على\\s+"), "").replace(/\.$/, "").trim();
+  reason = reason.replace(/\((\d+)\)\s*\S+/g, "$1").replace(/[،,]?\s*وفقا?ً? لما نصت[\s\S]*$/, "").replace(/[،,]?\s*ولم يقم[\s\S]*$/, "").trim();
+  if (/^البطاقة الحمراء/.test(reason)) reason = reason.replace(/^البطاقة الحمراء المباشرة/, "بطاقة حمراء مباشرة");
+  const r = digits(ruling);
+  const banM = r.match(/إيقاف[^()]{0,80}\((\d+)\)\s*\S*\s*مباري?ا?ة?ت?/);
+  const ban = banM ? +banM[1] : /الإ?يقاف التلقائي|الايقاف التلقائي/.test(r) ? 1 : 0;
+  const fineM = r.match(/غرامة مالية قدرها\s*\(([\d,]+)\)/);
+  const fine = fineM ? +fineM[1].replace(/,/g, "") : 0;
+  return { no, date, comp, match: { home, away, date: mDate }, person, role, club, reason, ban, fine, ruling, url };
+}
+
+const tidy = (d) => { const { comp, ruling, ...rest } = d; return { ...rest, appeal: /قابل للاستئناف/.test(ruling) && !/غير قابل للاستئناف/.test(ruling) }; };
+
+function loadOut() {
+  try { const w = {}; new Function("window", fs.readFileSync(OUT, "utf8"))(w); return w.DISCIPLINE; } catch { return null; }
+}
+
+async function main() {
+  const { D } = loadData();
+  const teamOf = teamMatcher(D);
+  const prev = loadOut() || { source: INDEX, batches: {}, decisions: [] };
+  let html;
+  try { html = await get(INDEX); } catch (e) { log("index failed:", e.message); return; }
+  const batches = parseIndex(html);
+  if (!batches.length) { log("no batches found on the index page; file left unchanged"); return; }
+  const known = new Map(prev.decisions.map((d) => [d.no, d]));
+  let added = 0, read = 0;
+  for (const b of batches) {
+    if (prev.batches[b.date] === b.count) continue;             // already read with the same number of decisions
+    const url = `${INDEX}&mdate=${b.date}`;
+    try {
+      const page = await get(url + "#new");
+      const rows = parseBatch(page, teamOf, url);
+      if (!rows || rows.length !== b.count) { log("batch", b.date, "rows", rows && rows.length, "expected", b.count, "- skipped"); continue; }
+      read++;
+      for (const d of rows.filter((x) => isFdl(x.comp))) {
+        if (!known.has(d.no)) added++;
+        known.set(d.no, tidy(d));
+      }
+      prev.batches[b.date] = b.count;
+    } catch (e) { log("batch failed:", b.date, e.message); }
+    await sleep(700);
+  }
+  const decisions = [...known.values()].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : parseInt(b.no) - parseInt(a.no)));
+  const out = { source: INDEX, checked: new Date().toISOString().slice(0, 10), batches: prev.batches, decisions };
+  const body = "/* سجل الانضباط: قرارات لجنة الانضباط والأخلاق في دوري الدرجة الأولى للمحترفين.\n   يحدّثه scripts/discipline.mjs تلقائياً من موقع الاتحاد السعودي لكرة القدم. */\nwindow.DISCIPLINE = " + JSON.stringify(out, null, 1) + ";\n";
+  const before = fs.existsSync(OUT) ? fs.readFileSync(OUT, "utf8").replace(/"checked": "[^"]*",?\n?/, "") : "";
+  if (before === body.replace(/"checked": "[^"]*",?\n?/, "")) { log("no changes"); return; }
+  fs.writeFileSync(OUT, body);
+  log(`batches read: ${read}, new decisions: ${added}, total: ${decisions.length}`);
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(new URL(import.meta.url).pathname))
+  main().catch((e) => { console.error(e); process.exitCode = 1; });
