@@ -70,6 +70,7 @@ export function toDecision(td, teamOf, url) {
   // reason without the repeated name and the referee-report tail
   let reason = violation.replace(/\s+/g, " ").replace(/[،,]?\s*وذلك وفقاً? لما ورد في تقرير[^.]*\.?/g, "").trim();
   reason = reason.replace(new RegExp("^حصول\\s+" + a.replace(/[.*+?^${}()|[\]\\/]/g, "\\$&") + "\\s+على\\s+"), "").replace(/\.$/, "").trim();
+  reason = reason.replace(/^حصول\s+(?:لاعب|إداري|مدرب)[^]*?\s+على\s+(?=البطاقة)/, "");
   reason = reason.replace(/\((\d+)\)\s*\S+/g, "$1").replace(/[،,]?\s*وفقا?ً? لما نصت[\s\S]*$/, "").replace(/[،,]?\s*ولم يقم[\s\S]*$/, "").trim();
   if (/^البطاقة الحمراء/.test(reason)) reason = reason.replace(/^البطاقة الحمراء المباشرة/, "بطاقة حمراء مباشرة");
   const r = digits(ruling);
