@@ -58,7 +58,7 @@ window.DISCIPLINE = window.DISCIPLINE || {   // البيانات التلقائ�
   document.head.insertAdjacentHTML("beforeend", `<style>
 #discipline{padding:20px;overflow:hidden;--red:${P.red};--yel:${P.yellow};--wht:${P.white};--tilt:${P.tilt}deg}
 #discipline .ds-hint{font-size:12px;opacity:.6;margin:0 0 14px;direction:rtl}
-.ds-stats{display:flex;gap:18px;flex-wrap:wrap;margin:4px 0 22px;direction:rtl}
+.ds-stats{display:flex;gap:18px;flex-wrap:wrap;margin:4px 0 40px;direction:rtl;position:relative;z-index:2}
 .ds-mini{display:flex;align-items:center;gap:10px}
 .ds-mini i{width:30px;height:42px;border-radius:4px;display:block;box-shadow:0 3px 8px rgba(0,0,0,.18);transform:rotate(calc(var(--tilt) * -1))}
 .ds-mini b{display:block;font-size:24px;line-height:1}
@@ -101,12 +101,15 @@ ${P.flip ? `.dc:hover .dc-in,.dc:focus .dc-in,.dc.dc-on .dc-in{transform:rotate(
 .mnav.ds8{grid-template-columns:repeat(8,1fr)!important}
 </style>`);
 
-  /* القسم نفسه: في صفحة النادي يجي بعد الدور الثاني، وفي صفحة الدوري في آخر الصفحة */
-  const h2 = document.getElementById("half2");
-  const host = (h2 && h2.parentElement) || document.querySelector("main") || document.body;
-  host.insertAdjacentHTML("beforeend", `
+  /* مكان القسم: في صفحة الدوري تحت «أرقام الدوري»، وفي صفحة النادي بعد الدور الثاني */
+  const lead = document.getElementById("lead"), h2 = document.getElementById("half2");
+  const section = `
   <div class="sec rv in" id="discipline-h"><span class="num">07</span><div><b>${safe(P.titleEn)}</b><span class="ar">${safe(P.title)}</span></div><small>${safe(P.subtitleEn)}<span class="ar" style="display:block">${safe(P.subtitle)}</span></small></div>
-  <article class="card s12 rv in" id="discipline"></article>`);
+  <article class="card s12 rv in" id="discipline"></article>`;
+  if (lead) lead.insertAdjacentHTML("afterend", section);
+  else ((h2 && h2.parentElement) || document.querySelector("main") || document.body).insertAdjacentHTML("beforeend", section);
+  // نرقّم الأقسام من جديد بالترتيب
+  document.querySelectorAll(".sec .num").forEach((e, i) => (e.textContent = String(i + 1).padStart(2, "0")));
   const nav = document.querySelector(".mnav");
   if (nav && US) {
     nav.classList.add("ds8");
