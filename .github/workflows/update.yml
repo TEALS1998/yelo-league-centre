@@ -71,4 +71,9 @@ jobs:
         with:
           path: site
       - id: deployment
+        continue-on-error: true   # GitHub refuses a deploy while another one is still running
+        uses: actions/deploy-pages@v4
+      - if: steps.deployment.outcome == 'failure'
+        run: sleep 90
+      - if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
