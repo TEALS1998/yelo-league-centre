@@ -50,7 +50,15 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-11-17",
-   "appeal": false
+   "appeal": false,
+   "out": [
+    {
+     "date": "2026-11-24",
+     "home": "هجر",
+     "away": "الطائي",
+     "round": 12
+    }
+   ]
   },
   {
    "no": "71/ل ض/2026",
@@ -101,7 +109,15 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-10-19",
-   "appeal": false
+   "appeal": false,
+   "out": [
+    {
+     "date": "2026-10-20",
+     "home": "الأخدود",
+     "away": "العدالة",
+     "round": 8
+    }
+   ]
   },
   {
    "no": "44/ل ض/2026",
@@ -118,7 +134,15 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-10-19",
-   "appeal": false
+   "appeal": false,
+   "out": [
+    {
+     "date": "2026-10-20",
+     "home": "العروبة",
+     "away": "البكيرية",
+     "round": 8
+    }
+   ]
   },
   {
    "no": "17/ل ض/2026",
@@ -152,7 +176,15 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-09-10",
-   "appeal": false
+   "appeal": false,
+   "out": [
+    {
+     "date": "2026-09-13",
+     "home": "الطائي",
+     "away": "الزلفي",
+     "round": 5
+    }
+   ]
   },
   {
    "no": "12/ل ض/2026",
@@ -169,7 +201,15 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-09-03",
-   "appeal": false
+   "appeal": false,
+   "out": [
+    {
+     "date": "2026-09-07",
+     "home": "الأخدود",
+     "away": "النجمة",
+     "round": 4
+    }
+   ]
   },
   {
    "no": "10/ل ض/2026",
@@ -186,7 +226,15 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-08-25",
-   "appeal": false
+   "appeal": false,
+   "out": [
+    {
+     "date": "2026-08-28",
+     "home": "الرائد",
+     "away": "هجر",
+     "round": 2
+    }
+   ]
   },
   {
    "no": "9/ل ض/2026",
@@ -203,7 +251,15 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-08-25",
-   "appeal": false
+   "appeal": false,
+   "out": [
+    {
+     "date": "2026-08-27",
+     "home": "الجندل",
+     "away": "الصقر",
+     "round": 2
+    }
+   ]
   }
  ]
 };
