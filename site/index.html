@@ -2549,7 +2549,7 @@ function tick(){if(!NX)return;const ms=Math.max(0,kickoff(NX)-new Date());
 
 /* matches table */
 let F="all";
-const FS=[["all","All","الكل",()=>true],["played","Results","النتائج",m=>m.status!=="upcoming"],["upcoming","Upcoming","القادمة",m=>m.status==="upcoming"],["changed","Changed","تغيّرت",m=>!!m.changes],["away","Away","خارج الأرض",m=>m.away===US],["cup","King's Cup","كأس الملك",m=>m.comp==="cup"]];
+const FS=[["all","All","الكل",m=>m.status!=="postponed"],["played","Results","النتائج",m=>m.status==="played"],["upcoming","Upcoming","القادمة",m=>m.status==="upcoming"],["changed","Changed","تغيّرت",m=>!!m.changes],["away","Away","خارج الأرض",m=>m.away===US],["cup","King's Cup","كأس الملك",m=>m.comp==="cup"]];
 function tabs(){document.getElementById("tabs").innerHTML=FS.map(([k,e,a,f])=>`<button class="tab" aria-pressed="${F===k}" data-k="${k}">${e} <span class="ar">${a}</span><em>${MATCHES.filter(f).length}</em></button>`).join("");
   document.querySelectorAll("#tabs .tab").forEach(b=>b.onclick=()=>{F=b.dataset.k;tabs();table();});}
 const TBC=`<span class="tbc">${svgI("time")}Not set<span class="ar">لم يُحدد</span></span>`;
@@ -2610,7 +2610,7 @@ tabs();table();
   const isReal=t=>!/not announced|لم يُعلن|^not set/i.test(t);
   const merged=m=>{const out=[];["date","venue","home","time"].forEach(f=>{const xs=m.changes.filter(x=>x.field===f);if(!xs.length)return;const fr=xs.find(x=>isReal(x.from[0]))||xs[0],to=[...xs].reverse().find(x=>isReal(x.to[0]))||xs[xs.length-1];out.push({field:f,from:fr.from,to:to.to});});
     if(!out.length&&m.changes.length){const x=m.changes[m.changes.length-1];out.push(x);}return out;};
-  const rmk=(m,x)=>{if(x.field==="date"){const rg=x.from[0].match(/(\d{1,2}) to \w* ?\d{1,2} ([A-Za-z]{3}) (\d{4})/);if(rg){const a=Date.parse(rg[1]+" "+rg[2]+" "+rg[3]),b=Date.parse(x.to[0].replace(/^\w+ /,""));if(!isNaN(a)&&!isNaN(b)){const d=Math.round((b-a)/864e5);return ["DELAYED ~"+d+"D",`تأجلت حوالي ${AN(d,"day")}`,"del"];}}
+  const rmk=(m,x)=>{if(m.status==="postponed")return ["POSTPONED","مؤجلة","pp"];if(x.field==="date"){const rg=x.from[0].match(/(\d{1,2}) to \w* ?\d{1,2} ([A-Za-z]{3}) (\d{4})/);if(rg){const a=Date.parse(rg[1]+" "+rg[2]+" "+rg[3]),b=Date.parse(x.to[0].replace(/^\w+ /,""));if(!isNaN(a)&&!isNaN(b)){const d=Math.round((b-a)/864e5);return ["DELAYED ~"+d+"D",`تأجلت حوالي ${AN(d,"day")}`,"del"];}}
     if(!/\d{1,2} [A-Za-z]{3}/.test(x.from[0])&&isReal(x.from[0]))return ["DATE SET","تحدد الموعد","new"];}return remark(m,x);};
   const cards=ord.map(m=>{const rnd=m.comp==="cup"?"CUP "+String(m.round).toUpperCase():"ROUND "+m.round,rndA=m.comp==="cup"?"كأس الملك":"الجولة "+m.round;
     const ch=merged(m);const st=m.status==="played"&&m.score?`<span class="sst ok">Played ${m.score[0]}–${m.score[1]} · لُعبت</span>`:m.status==="postponed"?`<span class="sst pp">Still postponed · ما زالت مؤجلة</span>`:`<span class="sst up">${dEn(m)} · ${m.time||"TBC"}</span>`;

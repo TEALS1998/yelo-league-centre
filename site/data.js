@@ -4659,7 +4659,34 @@ window.LEAGUE_DATA = {
      "home": "العلا",
      "away": "الأنوار",
      "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
-     "status": "upcoming",
+     "status": "postponed",
+     "orig": "2027-01-04",
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Mon 4 Jan 2027",
+        "الاثنين 4 يناير"
+       ],
+       "to": [
+        "Not set",
+        "لم يُحدد"
+       ],
+       "at": "2026-11-22"
+      },
+      {
+       "field": "status",
+       "from": [
+        "Mon 4 Jan 2027 15:50",
+        "الاثنين 4 يناير 15:50"
+       ],
+       "to": [
+        "Postponed · new date not set",
+        "مؤجلة · لم يُحدد الموعد الجديد"
+       ],
+       "at": "2026-11-22"
+      }
+     ],
      "saffId": null,
      "roundExact": true
     },

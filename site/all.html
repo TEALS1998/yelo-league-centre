@@ -467,9 +467,9 @@ document.querySelectorAll("#table tbody tr").forEach(tr=>tr.onclick=()=>go(tr.da
 const N=S.totalRounds||34,cur=S.currentRound||1;let R=cur;
 const nav=document.getElementById("rnav");
 nav.innerHTML=Array.from({length:N},(_,i)=>`<button data-r="${i+1}" class="${i+1===cur?"cur":""}">${i+1}</button>`).join("");
-const card=m=>{const [dE,dA]=dd(m.date),w=m.weather,wx=w&&WX[w.c];
+const card=m=>{const pp=m.status==="postponed",[dE,dA]=pp?["Postponed · date not set","مؤجلة · لم يُحدد الموعد"]:dd(m.date),w=pp?null:m.weather,wx=w&&WX[w.c];
   const s=m.status==="played"&&m.score?`<span class="sc">${m.score[0]} - ${m.score[1]}</span>`:m.status==="postponed"?`<span class="vs">PPD</span>`:`<span class="vs">${m.time||"VS"}</span>`;
-  return `<div class="m${m.changes&&m.changes.length&&m.status!=="played"?" chg":""}"><div class="d"><span>${dE}${m.time?" · "+m.time:""}${m.changes&&m.changes.length?`<span class="tag">CHANGED</span>`:""}</span><span class="ar">${dA}</span></div>
+  return `<div class="m${m.changes&&m.changes.length&&m.status!=="played"?" chg":""}"><div class="d"><span>${dE}${m.time&&!pp?" · "+m.time:""}${m.changes&&m.changes.length?`<span class="tag">CHANGED</span>`:""}</span><span class="ar">${dA}</span></div>
    <div class="t h"><img src="${LOGO(m.home)}" alt=""><b>${esc(TN(m.home))}</b><span class="ar">${esc(m.home)}</span></div>
    <div class="s">${s}</div>
    <div class="t a"><img src="${LOGO(m.away)}" alt=""><b>${esc(TN(m.away))}</b><span class="ar">${esc(m.away)}</span></div>

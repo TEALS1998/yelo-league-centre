@@ -155,14 +155,20 @@ export function applyFixture(S, D, f, venueOf, round, changes) {
       venue, status: f.score && f.date <= today ? "played" : "upcoming", score: f.score && f.date <= today ? f.score : null };
     S.matches.push(x);
     changes.push(`new ${f.home} v ${f.away} ${f.date}`);
-    return;
+    return x;
   }
   if (round && comp === "league" && !x.roundExact) { x.round = round; x.roundExact = true; }
   if (x.status === "played") {
     if (f.score && JSON.stringify(f.score) !== JSON.stringify(x.score)) { x.score = f.score; changes.push(`score corrected ${x.home} ${f.score.join("-")} ${x.away}`); }
-    return;
+    return x;
   }
-  if (f.score && f.date <= today) { x.status = "played"; x.score = f.score; changes.push(`result ${x.home} ${f.score.join("-")} ${x.away}`); return; }
+  if (f.score && f.date <= today) { x.status = "played"; x.score = f.score; changes.push(`result ${x.home} ${f.score.join("-")} ${x.away}`); return x; }
+  if (x.status === "postponed" && f.date >= today) {
+    // SAFF has given a postponed match a new date: it is back on the schedule
+    x.status = "upcoming";
+    (x.changes ||= []).push({ field: "status", from: ["Postponed", "مؤجلة"], to: ["Back on: " + LABEL(f.date, f.time || x.time)[0], "عادت للجدول: " + LABEL(f.date, f.time || x.time)[1]], at: today });
+    changes.push(`back on ${x.home} v ${x.away} ${f.date}`);
+  }
   if (f.date !== x.date || (f.time && f.time !== x.time)) {
     const from = LABEL(x.date, x.time), to = LABEL(f.date, f.time || x.time);
     if (f.date !== x.date && !x.orig) x.orig = x.date;
@@ -176,6 +182,7 @@ export function applyFixture(S, D, f, venueOf, round, changes) {
     changes.push(`venue ${x.home} v ${x.away}: ${venue}`);
     x.venue = venue; delete x.weather;
   } else if (!x.venue && venue) x.venue = venue;
+  return x;
 }
 
 // Rounds for league fixtures that SAFF never showed us with a round number:
@@ -290,17 +297,30 @@ async function main() {
   // 2. every round page and every club's team page, every FULL_EVERY_MIN minutes
   const due = process.env.FULL === "1" || new Date().getUTCMinutes() % FULL_EVERY_MIN < 2; // one run in each half hour window
   if (due) {
-    let weeks = 0;
+    let weeks = 0, failed = 0, lastListed = "";
+    const seen = new Set();
     for (let r = 1; r <= (S.totalRounds || 34); r++) {
       try {
         const html = await get(`${LEAGUE_URL}&round=0&week=${r}`);
         const fx = parseFixtures(html, teamOf, "دوري الدرجة الأولى #416");
-        for (const f of fx) applyFixture(S, D, f, venueOf, r, changes);
+        for (const f of fx) { const x = applyFixture(S, D, f, venueOf, r, changes); if (x) seen.add(x.id); if (f.date > lastListed) lastListed = f.date; }
         if (fx.length) weeks++;
-      } catch (e) { log("round page failed:", r, e.message); }
+      } catch (e) { failed++; log("round page failed:", r, e.message); }
       await sleep(900);
     }
     if (weeks) { ok++; log("round pages read:", weeks); }
+    // A future league match that SAFF no longer lists in any round, while SAFF lists league matches after it,
+    // has been taken off the schedule: show it as postponed instead of keeping a date SAFF does not publish.
+    if (weeks && !failed && lastListed) {
+      const today = riyadhToday();
+      for (const x of S.matches) {
+        if (x.comp !== "league" || x.status !== "upcoming" || seen.has(x.id) || x.date < today || x.date >= lastListed) continue;
+        x.status = "postponed"; if (!x.orig) x.orig = x.date; delete x.weather;
+        (x.changes ||= []).push({ field: "date", from: LABEL(x.date), to: ["Not set", "لم يُحدد"], at: today },
+          { field: "status", from: LABEL(x.date, x.time), to: ["Postponed · new date not set", "مؤجلة · لم يُحدد الموعد الجديد"], at: today });
+        changes.push(`postponed ${x.home} v ${x.away} (was ${x.date}, no longer on SAFF)`);
+      }
+    }
     let read = 0;
     for (const [t, c] of Object.entries(D.clubs)) {
       if (!c.saffId) continue;
