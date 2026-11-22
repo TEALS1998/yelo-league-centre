@@ -1,0 +1,20 @@
+name: Probe discipline pages (temporary)
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir out
+          UA="Mozilla/5.0 (First Division League match centre updater)"
+          curl -sL -A "$UA" "https://www.saff.com.sa/about.php?id=3&type=13&menu=4" -o out/index.html
+          curl -sL -A "$UA" "https://www.saff.com.sa/about.php?id=3&mdate=2026-11-04&menu=4&type=13" -o out/d1104.html
+          curl -sL -A "$UA" "https://www.saff.com.sa/about.php?id=3&mdate=2026-09-10&menu=4&type=13" -o out/d0910.html
+          curl -sL -A "$UA" "https://www.saff.com.sa/about.php?id=3&mdate=2026-11-17&menu=4&type=13" -o out/d1117.html
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: probe
+          path: out
