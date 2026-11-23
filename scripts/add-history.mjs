@@ -1,6 +1,6 @@
 // One-off: add the schedule changes since the season start (21 Aug 2026) for every club,
 // researched from SAFF, the league's original first-half schedule and press reports.
-// Each entry keeps its source in "src" and the reason (when one was announced) in "why".
+// Each entry keeps its source in "src".
 // Author: Tareem Alsaggaf (تريم إياد السقاف), written with Claude.
 import fs from "node:fs";
 
@@ -42,7 +42,7 @@ const SRC = {
 // Round 7: Hajer v Al Orobah
 add(find("هجر", "العروبة", 7), [
   { field: "status", from: ["Wed 14 Oct 2026 17:55, Hajer Club Stadium", "الأربعاء 14 أكتوبر 17:55، ملعب نادي هجر"], to: [PP[0] + " · new date not announced", PP[1] + " · لم يُعلن موعد جديد"], at: "2026-10-13",
-    why: ["Al Orobah could not travel because of flight conditions", "تعذر سفر العروبة بسبب ظروف الطيران"], src: SRC.madina_hajer },
+    src: SRC.madina_hajer },
   { field: "date", from: NEWD, to: ["Fri 11 Dec 2026 17:35", "الجمعة 11 ديسمبر 17:35"], src: SRC.saff },
   { field: "venue", from: ["Hajer Club Stadium (Al Ahsa)", "ملعب نادي هجر (الأحساء)"], to: ["Prince Abdullah bin Jalawi Sports City (Al Ahsa)", "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)"], src: SRC.saff },
 ]);
@@ -50,39 +50,37 @@ add(find("هجر", "العروبة", 7), [
 // Round 8: Al Jeel v Al Jandal
 add(find("الجيل", "الجندل", 8), [
   { field: "status", from: ["Wed 21 Oct 2026 17:45", "الأربعاء 21 أكتوبر 17:45"], to: [PP[0] + " on match day · new date not announced", PP[1] + " يوم المباراة · لم يُعلن موعد جديد"], at: "2026-10-21",
-    why: ["League competitions department decision, no reason given", "قرار إدارة المسابقات بالرابطة، دون ذكر السبب"], src: SRC.kas_jeel },
+    src: SRC.kas_jeel },
   { field: "date", from: NEWD, to: ["Sun 10 Jan 2027 15:10", "الأحد 10 يناير 15:10"], src: SRC.saff },
 ]);
 
 // Round 9: Al Anwar v Al Akhdoud
 add(find("الأنوار", "الأخدود", 9), [
   { field: "status", from: ["Mon 26 Oct 2026, Al Anwar Club Stadium", "الاثنين 26 أكتوبر، ملعب نادي الأنوار"], to: [PP[0] + " · new date not announced", PP[1] + " · لم يُعلن موعد جديد"], at: "2026-10-26",
-    why: ["No reason published", "لم يُنشر سبب"], src: SRC.anwar },
+    src: SRC.anwar },
   { field: "date", from: NEWD, to: ["Fri 11 Dec 2026 15:10", "الجمعة 11 ديسمبر 15:10"], src: SRC.saff },
 ]);
 
 // Round 11: Al Adalah v Al Orobah
 add(find("العدالة", "العروبة", 11), [
   { field: "status", from: ["Fri 6 Nov 2026 17:35, Hajer Club Stadium", "الجمعة 6 نوفمبر 17:35، ملعب نادي هجر"], to: [PP[0], PP[1]], at: "2026-11-06",
-    why: ["Announced by Al Orobah", "أعلنه نادي العروبة رسميًا"], src: SRC.adalah },
+    src: SRC.adalah },
   { field: "date", from: ["Fri 6 Nov 2026 17:35", "الجمعة 6 نوفمبر 17:35"], to: ["Wed 18 Nov 2026 17:30", "الأربعاء 18 نوفمبر 17:30"], at: "2026-11-08", src: SRC.adalah },
 ]);
 
 // Round 8: Al Akhdoud v Al Adalah, moved from Taif to Jeddah
 add(find("الأخدود", "العدالة", 8), [
   { field: "venue", from: ["King Fahd Sports City Stadium (Taif)", "استاد مدينة الملك فهد الرياضية (الطائف)"], to: ["Jeddah Club Stadium (Jeddah)", "ملعب نادي جدة (جدة)"], at: "2026-10-09",
-    why: ["Scheduled maintenance at the Taif stadium; date and time unchanged (Tue 20 Oct 19:50)", "أعمال صيانة دورية في ملعب الطائف، مع بقاء الموعد (الثلاثاء 20 أكتوبر 19:50)"], src: SRC.madina_okh },
+    src: SRC.madina_okh },
 ]);
 
 // Round 15 derbies: original dates in the first-half schedule published in July/August
 add(find("الجندل", "العروبة", 15), [
-  { field: "date", from: ["Fri 11 Dec 2026 15:25", "الجمعة 11 ديسمبر 15:25"], to: ["Wed 16 Dec 2026 15:25", "الأربعاء 16 ديسمبر 15:25"], src: SRC.derbies,
-    why: ["Round 15 moved back to make room for postponed matches on 11 Dec", "تأخير الجولة 15 لإفساح 11 ديسمبر للمباريات المؤجلة"] },
+  { field: "date", from: ["Fri 11 Dec 2026 15:25", "الجمعة 11 ديسمبر 15:25"], to: ["Wed 16 Dec 2026 15:25", "الأربعاء 16 ديسمبر 15:25"], src: SRC.derbies },
   { field: "venue", from: ["Al Orobah Club Stadium (Al Jouf)", "ملعب نادي العروبة (الجوف)"], to: ["Al Jouf University Stadium (Al Jouf)", "استاد جامعة الجوف (الجوف)"], src: SRC.derbies },
 ]);
 add(find("العدالة", "هجر", 15), [
-  { field: "date", from: ["Sat 12 Dec 2026 17:30", "السبت 12 ديسمبر 17:30"], to: ["Wed 16 Dec 2026 17:30", "الأربعاء 16 ديسمبر 17:30"], src: SRC.derbies,
-    why: ["Round 15 moved back to make room for postponed matches on 11 Dec", "تأخير الجولة 15 لإفساح 11 ديسمبر للمباريات المؤجلة"] },
+  { field: "date", from: ["Sat 12 Dec 2026 17:30", "السبت 12 ديسمبر 17:30"], to: ["Wed 16 Dec 2026 17:30", "الأربعاء 16 ديسمبر 17:30"], src: SRC.derbies },
 ]);
 
 // Round 2 and 4: Al Akhdoud were first scheduled at home in Najran

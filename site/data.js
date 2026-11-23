@@ -2742,10 +2742,6 @@ window.LEAGUE_DATA = {
         "ملعب نادي جدة (جدة)"
        ],
        "at": "2026-10-09",
-       "why": [
-        "Scheduled maintenance at the Taif stadium; date and time unchanged (Tue 20 Oct 19:50)",
-        "أعمال صيانة دورية في ملعب الطائف، مع بقاء الموعد (الثلاثاء 20 أكتوبر 19:50)"
-       ],
        "src": "al-madina.com/article/1008629"
       }
      ]
@@ -3424,10 +3420,6 @@ window.LEAGUE_DATA = {
         "مؤجلة"
        ],
        "at": "2026-11-06",
-       "why": [
-        "Announced by Al Orobah",
-        "أعلنه نادي العروبة رسميًا"
-       ],
        "src": "saff.com.sa/team.php?id=147 · al-kas.com/169080 · makkahnews.sa/5528354"
       },
       {
@@ -4038,10 +4030,6 @@ window.LEAGUE_DATA = {
         "مؤجلة · لم يُعلن موعد جديد"
        ],
        "at": "2026-10-26",
-       "why": [
-        "No reason published",
-        "لم يُنشر سبب"
-       ],
        "src": "annahar-news.com/news/single/39080 · sabq.org/article/ktvnnp1 · akhbarperss.com/507743-2"
       },
       {
@@ -4168,10 +4156,6 @@ window.LEAGUE_DATA = {
         "مؤجلة · لم يُعلن موعد جديد"
        ],
        "at": "2026-10-13",
-       "why": [
-        "Al Orobah could not travel because of flight conditions",
-        "تعذر سفر العروبة بسبب ظروف الطيران"
-       ],
        "src": "al-madina.com/article/1009184 · al-jazirah.com 14 Oct 2026"
       },
       {
@@ -4330,11 +4314,7 @@ window.LEAGUE_DATA = {
         "Wed 16 Dec 2026 15:25",
         "الأربعاء 16 ديسمبر 15:25"
        ],
-       "src": "al-kas.com/163506 · al-madina.com/ampArticle/1000918 (original schedule, Aug 2026)",
-       "why": [
-        "Round 15 moved back to make room for postponed matches on 11 Dec",
-        "تأخير الجولة 15 لإفساح 11 ديسمبر للمباريات المؤجلة"
-       ]
+       "src": "al-kas.com/163506 · al-madina.com/ampArticle/1000918 (original schedule, Aug 2026)"
       },
       {
        "field": "venue",
@@ -4400,11 +4380,7 @@ window.LEAGUE_DATA = {
         "Wed 16 Dec 2026 17:30",
         "الأربعاء 16 ديسمبر 17:30"
        ],
-       "src": "al-kas.com/163506 · al-madina.com/ampArticle/1000918 (original schedule, Aug 2026)",
-       "why": [
-        "Round 15 moved back to make room for postponed matches on 11 Dec",
-        "تأخير الجولة 15 لإفساح 11 ديسمبر للمباريات المؤجلة"
-       ]
+       "src": "al-kas.com/163506 · al-madina.com/ampArticle/1000918 (original schedule, Aug 2026)"
       }
      ]
     },
@@ -5103,10 +5079,6 @@ window.LEAGUE_DATA = {
         "مؤجلة يوم المباراة · لم يُعلن موعد جديد"
        ],
        "at": "2026-10-21",
-       "why": [
-        "League competitions department decision, no reason given",
-        "قرار إدارة المسابقات بالرابطة، دون ذكر السبب"
-       ],
        "src": "al-kas.com/167889 · sabq.org/article/hh5pvyd"
       },
       {

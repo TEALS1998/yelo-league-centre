@@ -124,20 +124,42 @@ td.pts{font-family:var(--dinc);font-size:19px;font-weight:800}
 .ld .big{margin-left:auto;font-family:var(--dinc);font-size:34px;font-weight:800;line-height:1}
 .ld .sub{font-size:11.5px;color:var(--muted)}
 /* changes */
-.chg-list{display:grid;gap:10px;padding:16px}
-.ch{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:#fff}
-.ch .cr{display:flex;align-items:center;gap:4px}
-.ch .cr img{width:26px;height:26px;object-fit:contain}
-.ch .what b{display:block;font-size:13px}
-.ch .what .ar{display:block;font-size:12px;color:var(--muted)}
-.ch .what .why{display:block;font-size:11.5px;color:#5b6570;margin-top:3px}
-.ch .what .src{display:block;font-size:10.5px;color:#98a1aa;margin-top:2px;direction:ltr;text-align:left}
-.chg-tools{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
-.chg-tools button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 11px;font:inherit;font-size:12px;cursor:pointer}
-.chg-tools button.on{background:#1b2a3a;color:#fff;border-color:#1b2a3a}
-.ch .ft{display:flex;align-items:center;gap:8px;font-size:12px}
-.ch .ft .o{background:#fbe7e5;color:#9b3a33;border-radius:7px;padding:3px 8px;text-decoration:line-through}
-.ch .ft .n{background:#e3f2e9;color:#2f6b4a;border-radius:7px;padding:3px 8px;font-weight:700}
+.chg-list{padding:18px}
+.chg-tools{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 14px;margin-bottom:6px;scrollbar-width:thin}
+.chg-tools button{flex:none;display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px 5px 6px;font:inherit;font-size:12px;color:var(--ink);cursor:pointer;transition:.2s}
+.chg-tools button img{width:20px;height:20px;object-fit:contain}
+.chg-tools button i{font-style:normal;background:var(--chip);border-radius:999px;padding:0 7px;font-size:11px;font-weight:700}
+.chg-tools button.on{background:#14202d;color:#fff;border-color:#14202d}
+.chg-tools button.on i{background:#d9a441;color:#14202d}
+.chg-grid{display:grid;align-items:start;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+.chm{position:relative;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.04);transition:transform .25s,box-shadow .25s}
+.chm:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(16,24,40,.25)}
+.chm .hd{display:flex;align-items:center;gap:12px;padding:14px 16px;background:linear-gradient(120deg,var(--c1) 0%,var(--c1) 48%,var(--c2) 52%,var(--c2) 100%);color:#fff;position:relative}
+.chm .hd::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.45))}
+.chm .hd>*{position:relative;z-index:1}
+.chm .crest{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.chm .crest img{width:28px;height:28px;object-fit:contain}
+.chm .chv{flex:1;min-width:0;text-align:center}
+.chm .chv b{display:block;font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.35);letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chm .chv span{display:block;font-size:12.5px;color:rgba(255,255,255,.9)}
+.chm .rb{position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:rgba(255,255,255,.18);backdrop-filter:blur(4px);border-radius:999px;padding:1px 9px;z-index:2}
+.chm .hd{padding-top:24px}
+.chm ol{list-style:none;margin:0;padding:12px 16px 14px;position:relative}
+.chm ol::before{content:"";position:absolute;left:29px;top:22px;bottom:24px;width:2px;background:linear-gradient(var(--line),var(--line)) }
+.chm li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:7px 0}
+.chm li .ic{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#f4f6f8;border:2px solid #fff;box-shadow:0 0 0 1px var(--line);position:relative;z-index:1}
+.chm li .ic svg{width:14px;height:14px;stroke:#3b4652;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.chm li.last .ic{background:#14202d;box-shadow:0 0 0 1px #14202d}
+.chm li.last .ic svg{stroke:#d9a441}
+.chm li .lb{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.chm li .lb span{text-transform:none;letter-spacing:0;margin-inline-start:4px}
+.chm li .fl{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:3px;font-size:12.5px}
+.chm li .o{color:#9aa3ad;text-decoration:line-through;text-decoration-color:rgba(190,60,50,.55)}
+.chm li .ar2{color:#c0c6cc;font-size:12px}
+.chm li .n{font-weight:700;color:#14202d;background:linear-gradient(transparent 60%,rgba(217,164,65,.35) 60%)}
+.chm li.pp .n{color:#a5482f;background:linear-gradient(transparent 60%,rgba(220,110,80,.22) 60%)}
+.chm .ft{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);border-top:1px dashed var(--line);padding:8px 16px;background:#fafbfc}
+.chm .ft b{color:var(--ink)}
 .empty{padding:22px;color:var(--muted);text-align:center}
 /* map */
 .mapw{display:grid;grid-template-columns:1.25fr 1fr;gap:12px}
@@ -350,7 +372,6 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 @keyframes flip{from{transform:rotateX(90deg);opacity:0}}
 .rnav button{transition:background .2s,color .2s,transform .15s}.rnav button:active{transform:scale(.92)}
 .ld .who img{transition:transform .4s cubic-bezier(.2,1.6,.4,1)}.ld:hover .who img{transform:rotate(-8deg) scale(1.1)}
-.ch{animation:slidein .5s cubic-bezier(.2,.8,.2,1) both}
 @keyframes slidein{from{opacity:0;transform:translateX(18px)}}
 .sec .num{position:relative;overflow:hidden}
 .sec .num::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(253,195,102,.45),transparent 70%);transform:translateX(-120%)}
@@ -358,7 +379,7 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 @keyframes shine{to{transform:translateX(120%)}}
 .strip a{animation:pop2 .5s cubic-bezier(.2,1.5,.4,1) both}
 @keyframes pop2{from{opacity:0;transform:translateY(10px) scale(.6)}}
-@media (prefers-reduced-motion:reduce){.mark,.top::after,.hcard::before,.nexts .track,.nx .cd::before,tr.z1 td.pos::before,.fx .m,.sc,.ch,.strip a,.sec.in .num::after{animation:none!important}
+@media (prefers-reduced-motion:reduce){.mark,.top::after,.hcard::before,.nexts .track,.nx .cd::before,tr.z1 td.pos::before,.fx .m,.sc,.chm,.strip a,.sec.in .num::after{animation:none!important}
  #table tbody tr,.form i{opacity:1;transform:none;transition:none}.pbar i,.bar3 i{transform:none;transition:none}}
 /* motion */
 .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
@@ -375,7 +396,7 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
   .fx{grid-template-columns:1fr;padding:12px}.lead{grid-template-columns:1fr}
   th.h-s,td.h-s{display:none}
   .club{min-width:150px}.club img{width:24px;height:24px}
-  .ch{grid-template-columns:1fr;gap:8px}
+  .chg-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -505,15 +526,21 @@ if(big){const w=big.score[0]>big.score[1]?big.home:big.away;html+=`<div class="c
 document.getElementById("lead").innerHTML=html;
 
 /* changes */
-const FN={date:["Date","الموعد"],time:["Kick off","التوقيت"],venue:["Stadium","الملعب"],status:["Status","الحالة"],host:["Host","المستضيف"]};
+const FN={date:["Date","الموعد"],time:["Kick off","التوقيت"],venue:["Stadium","الملعب"],status:["Status","الحالة"],host:["Host","المستضيف"],home:["Host","المستضيف"]};
 const CH=[];S.matches.forEach(m=>(m.changes||[]).forEach((c,i)=>CH.push({m,c,k:(c.at||m.date)+String(i).padStart(2,"0")})));
 CH.sort((a,b)=>b.k.localeCompare(a.k));
-const chRow=({m,c})=>{const f=FN[c.field]||[c.field,c.field],fr=Array.isArray(c.from)?c.from:[c.from,c.from],to=Array.isArray(c.to)?c.to:[c.to,c.to],w=c.why?(Array.isArray(c.why)?c.why:[c.why,c.why]):null;
-  return `<div class="ch"><div class="cr"><img src="${LOGO(m.home)}" alt=""><img src="${LOGO(m.away)}" alt=""></div><div class="what"><b>${esc(TN(m.home))} v ${esc(TN(m.away))} · ${f[0]}</b><span class="ar">${esc(m.home)} ضد ${esc(m.away)} · ${f[1]}${m.round?` · الجولة ${m.round}`:""}</span>${w?`<span class="why">${esc(w[0])} · <span dir="rtl">${esc(w[1])}</span></span>`:""}${c.src?`<span class="src">Source: ${esc(c.src)}</span>`:""}</div><div class="ft"><span class="o">${esc(fr[0])}</span>→<span class="n">${esc(to[0])}</span></div></div>`;};
-const chClubs=[...new Set(CH.flatMap(({m})=>[m.home,m.away]))].sort((x,y)=>CH.filter(e=>e.m.home===y||e.m.away===y).length-CH.filter(e=>e.m.home===x||e.m.away===x).length);
+const CC0={"العلا":"#2e4a72","الجبلين":"#7a1f1a","الوحدة":"#9e1b22","النجمة":"#146734","ضمك":"#0a1e53","الزلفي":"#e0882b","الأنوار":"#4d6f49","الصقر":"#863079","الطائي":"#7d8790","العدالة":"#0b3351","الرائد":"#b22021","جدة":"#1d2f5c","العروبة":"#c9ae00","الجندل":"#d0101f","الأخدود":"#3f93c0","هجر":"#111111","البكيرية":"#703177","الجيل":"#0e5975","الأهلي":"#0b6b3a"};
+const ICO={date:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',time:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',venue:'<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',status:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',host:'<path d="M3 11l9-7 9 7v9H3z"/>'};
+const two=v=>Array.isArray(v)?v:[v,v];
+const GM=[];{const by=new Map();CH.forEach(e=>{if(!by.has(e.m))by.set(e.m,[]);by.get(e.m).push(e);});by.forEach((l,m)=>{l.sort((x,y)=>x.k.localeCompare(y.k));GM.push({m,l,k:l[l.length-1].k});});GM.sort((a,b)=>b.k.localeCompare(a.k));}
+const chCard=({m,l})=>{const rd=m.comp==="cup"?"King's Cup · كأس الملك":`Round ${m.round} · الجولة ${m.round}`;
+  const st=m.status==="played"&&m.score?`<b>${m.score[0]}-${m.score[1]}</b> played · لُعبت`:m.status==="postponed"?"<b>Postponed</b> · مؤجلة":`<b>${esc(dd(m.date)[0])}</b>${m.time?` · ${esc(m.time)}`:""}`;
+  return `<div class="chm" style="--c1:${CC0[m.home]||"#2c3e50"};--c2:${CC0[m.away]||"#34495e"}"><div class="hd"><span class="rb">${rd}</span><span class="crest"><img src="${LOGO(m.home)}" alt=""></span><div class="chv"><b>${esc(TN(m.home))} v ${esc(TN(m.away))}</b><span>${esc(m.home)} ضد ${esc(m.away)}</span></div><span class="crest"><img src="${LOGO(m.away)}" alt=""></span></div><ol>${l.map(({c},i)=>{const f=FN[c.field]||[c.field,c.field],fr=two(c.from),to=two(c.to),pp=/postpon|مؤجل|not set|لم ي/i.test(to[0]+to[1]);
+  return `<li class="${i===l.length-1?"last ":""}${pp?"pp":""}"><span class="ic"><svg viewBox="0 0 24 24">${ICO[c.field]||ICO.status}</svg></span><div><div class="lb">${f[0]}<span>· ${f[1]}</span></div><div class="fl"><span class="o">${esc(fr[0])}</span><span class="ar2">→</span><span class="n">${esc(to[0])}</span></div></div></li>`;}).join("")}</ol><div class="ft"><span>${l.length} change${l.length>1?"s":""} · ${l.length} تعديل</span><span>Now · الآن: ${st}</span></div></div>`;};
+const chClubs=[...new Set(GM.flatMap(({m})=>[m.home,m.away]))].map(t=>[t,GM.filter(g=>g.m.home===t||g.m.away===t).length]).sort((a,b)=>b[1]-a[1]);
 let chSel="";
-const chDraw=()=>{const L2=CH.filter(({m})=>!chSel||m.home===chSel||m.away===chSel);
-  document.getElementById("changes").innerHTML=CH.length?`<div class="chg-tools"><button data-c="" class="${chSel?"":"on"}">All clubs · كل الأندية (${CH.length})</button>${chClubs.map(t=>`<button data-c="${esc(t)}" class="${chSel===t?"on":""}">${esc(t)} (${CH.filter(e=>e.m.home===t||e.m.away===t).length})</button>`).join("")}</div>`+L2.map(chRow).join(""):`<div class="empty">No schedule changes yet<span class="ar" style="display:block">لا توجد تعديلات بعد</span></div>`;
+const chDraw=()=>{const L2=GM.filter(({m})=>!chSel||m.home===chSel||m.away===chSel);
+  document.getElementById("changes").innerHTML=GM.length?`<div class="chg-tools"><button data-c="" class="${chSel?"":"on"}">&nbsp;All · الكل <i>${GM.length}</i></button>${chClubs.map(([t,n])=>`<button data-c="${esc(t)}" class="${chSel===t?"on":""}"><img src="${LOGO(t)}" alt="">${esc(t)} <i>${n}</i></button>`).join("")}</div><div class="chg-grid">${L2.map(chCard).join("")}</div>`:`<div class="empty">No schedule changes yet<span class="ar" style="display:block">لا توجد تعديلات بعد</span></div>`;
   document.querySelectorAll("#changes .chg-tools button").forEach(b=>b.onclick=()=>{chSel=b.dataset.c;chDraw();});};
 chDraw();
 
@@ -692,7 +719,7 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
  const race=document.getElementById("race");
  /* round cards and changes stagger */
  const stag=(sel)=>document.querySelectorAll(sel).forEach((e,i)=>e.style.animationDelay=Math.min(i,12)*55+"ms");
- stag(".fx .m");stag(".ch");
+ stag(".fx .m");stag(".chm");
  const nav2=document.getElementById("rnav");nav2.addEventListener("click",()=>setTimeout(()=>stag(".fx .m"),0));
  /* watch everything that animates on arrival */
  const obs="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;t.classList.add("in");
