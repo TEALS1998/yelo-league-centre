@@ -1,5 +1,5 @@
 // First Division League Match Centre · Author and rights holder: Tareem Alsaggaf · © 2026
-// مركز مباريات دوري الأولى · المؤلفة وصاحبة الحقوق: تريم السقاف · © 2026
+// مركز مباريات دوري الأولى · المؤلفة وصاحبة الحقوق: تريم إياد السقاف · © 2026
 // First Division League match centre: live updater for every club in the Saudi First Division League.
 // Runs on GitHub Actions. Every run reads the league page (table + current round).
 // Every 30 minutes, or when FULL=1, it also reads each club's SAFF team page (full fixture list).
