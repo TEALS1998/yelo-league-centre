@@ -877,7 +877,7 @@ window.LEAGUE_DATA = {
    "firstHalfRounds": 17,
    "currentRound": 12,
    "table": {
-    "asOfRound": 11,
+    "asOfRound": 12,
     "columns": [
      "team",
      "pos",
@@ -971,12 +971,12 @@ window.LEAGUE_DATA = {
       "الصقر",
       8,
       14,
-      11,
+      12,
       3,
       5,
-      3,
-      13,
-      10
+      4,
+      15,
+      13
      ],
      [
       "العدالة",
@@ -1034,8 +1034,19 @@ window.LEAGUE_DATA = {
       12
      ],
      [
-      "الجندل",
+      "الجيل",
       14,
+      8,
+      10,
+      2,
+      2,
+      6,
+      5,
+      14
+     ],
+     [
+      "الجندل",
+      15,
       7,
       10,
       1,
@@ -1046,7 +1057,7 @@ window.LEAGUE_DATA = {
      ],
      [
       "الأخدود",
-      15,
+      16,
       7,
       10,
       1,
@@ -1057,7 +1068,7 @@ window.LEAGUE_DATA = {
      ],
      [
       "هجر",
-      16,
+      17,
       7,
       10,
       1,
@@ -1068,7 +1079,7 @@ window.LEAGUE_DATA = {
      ],
      [
       "البكيرية",
-      17,
+      18,
       6,
       11,
       1,
@@ -1076,17 +1087,6 @@ window.LEAGUE_DATA = {
       7,
       8,
       22
-     ],
-     [
-      "الجيل",
-      18,
-      5,
-      9,
-      1,
-      2,
-      6,
-      2,
-      12
      ]
     ]
    },
@@ -3372,8 +3372,11 @@ window.LEAGUE_DATA = {
      "home": "الجيل",
      "away": "الصقر",
      "venue": "ملعب نادي هجر (الأحساء)",
-     "status": "upcoming",
-     "score": null,
+     "status": "played",
+     "score": [
+      3,
+      2
+     ],
      "weather": {
       "t": 26,
       "c": "partly",
