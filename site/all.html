@@ -130,6 +130,11 @@ td.pts{font-family:var(--dinc);font-size:19px;font-weight:800}
 .ch .cr img{width:26px;height:26px;object-fit:contain}
 .ch .what b{display:block;font-size:13px}
 .ch .what .ar{display:block;font-size:12px;color:var(--muted)}
+.ch .what .why{display:block;font-size:11.5px;color:#5b6570;margin-top:3px}
+.ch .what .src{display:block;font-size:10.5px;color:#98a1aa;margin-top:2px;direction:ltr;text-align:left}
+.chg-tools{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.chg-tools button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 11px;font:inherit;font-size:12px;cursor:pointer}
+.chg-tools button.on{background:#1b2a3a;color:#fff;border-color:#1b2a3a}
 .ch .ft{display:flex;align-items:center;gap:8px;font-size:12px}
 .ch .ft .o{background:#fbe7e5;color:#9b3a33;border-radius:7px;padding:3px 8px;text-decoration:line-through}
 .ch .ft .n{background:#e3f2e9;color:#2f6b4a;border-radius:7px;padding:3px 8px;font-weight:700}
@@ -503,8 +508,14 @@ document.getElementById("lead").innerHTML=html;
 const FN={date:["Date","الموعد"],time:["Kick off","التوقيت"],venue:["Stadium","الملعب"],status:["Status","الحالة"],host:["Host","المستضيف"]};
 const CH=[];S.matches.forEach(m=>(m.changes||[]).forEach((c,i)=>CH.push({m,c,k:(c.at||m.date)+String(i).padStart(2,"0")})));
 CH.sort((a,b)=>b.k.localeCompare(a.k));
-document.getElementById("changes").innerHTML=CH.length?CH.slice(0,40).map(({m,c})=>{const f=FN[c.field]||[c.field,c.field],fr=Array.isArray(c.from)?c.from:[c.from,c.from],to=Array.isArray(c.to)?c.to:[c.to,c.to];
-  return `<div class="ch"><div class="cr"><img src="${LOGO(m.home)}" alt=""><img src="${LOGO(m.away)}" alt=""></div><div class="what"><b>${esc(TN(m.home))} v ${esc(TN(m.away))} · ${f[0]}</b><span class="ar">${esc(m.home)} ضد ${esc(m.away)} · ${f[1]}${m.round?` · الجولة ${m.round}`:""}</span></div><div class="ft"><span class="o">${esc(fr[0])}</span>→<span class="n">${esc(to[0])}</span></div></div>`;}).join(""):`<div class="empty">No schedule changes yet<span class="ar" style="display:block">لا توجد تعديلات بعد</span></div>`;
+const chRow=({m,c})=>{const f=FN[c.field]||[c.field,c.field],fr=Array.isArray(c.from)?c.from:[c.from,c.from],to=Array.isArray(c.to)?c.to:[c.to,c.to],w=c.why?(Array.isArray(c.why)?c.why:[c.why,c.why]):null;
+  return `<div class="ch"><div class="cr"><img src="${LOGO(m.home)}" alt=""><img src="${LOGO(m.away)}" alt=""></div><div class="what"><b>${esc(TN(m.home))} v ${esc(TN(m.away))} · ${f[0]}</b><span class="ar">${esc(m.home)} ضد ${esc(m.away)} · ${f[1]}${m.round?` · الجولة ${m.round}`:""}</span>${w?`<span class="why">${esc(w[0])} · <span dir="rtl">${esc(w[1])}</span></span>`:""}${c.src?`<span class="src">Source: ${esc(c.src)}</span>`:""}</div><div class="ft"><span class="o">${esc(fr[0])}</span>→<span class="n">${esc(to[0])}</span></div></div>`;};
+const chClubs=[...new Set(CH.flatMap(({m})=>[m.home,m.away]))].sort((x,y)=>CH.filter(e=>e.m.home===y||e.m.away===y).length-CH.filter(e=>e.m.home===x||e.m.away===x).length);
+let chSel="";
+const chDraw=()=>{const L2=CH.filter(({m})=>!chSel||m.home===chSel||m.away===chSel);
+  document.getElementById("changes").innerHTML=CH.length?`<div class="chg-tools"><button data-c="" class="${chSel?"":"on"}">All clubs · كل الأندية (${CH.length})</button>${chClubs.map(t=>`<button data-c="${esc(t)}" class="${chSel===t?"on":""}">${esc(t)} (${CH.filter(e=>e.m.home===t||e.m.away===t).length})</button>`).join("")}</div>`+L2.map(chRow).join(""):`<div class="empty">No schedule changes yet<span class="ar" style="display:block">لا توجد تعديلات بعد</span></div>`;
+  document.querySelectorAll("#changes .chg-tools button").forEach(b=>b.onclick=()=>{chSel=b.dataset.c;chDraw();});};
+chDraw();
 
 /* club colours (from each crest) */
 const CC={"العلا":"#2e4a72","الجبلين":"#7a1f1a","الوحدة":"#9e1b22","النجمة":"#146734","ضمك":"#0a1e53","الزلفي":"#e0882b","الأنوار":"#4d6f49","الصقر":"#863079","الطائي":"#7d8790","العدالة":"#0b3351","الرائد":"#b22021","جدة":"#1d2f5c","العروبة":"#e6c800","الجندل":"#f4081f","الأخدود":"#4aa6d6","هجر":"#111111","البكيرية":"#703177","الجيل":"#0e5975"};

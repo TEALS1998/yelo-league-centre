@@ -1388,7 +1388,33 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-18"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "venue",
+       "from": [
+        "Prince Hathloul bin Abdulaziz Sports City (Najran), Al Akhdoud at home",
+        "مدينة الأمير هذلول بن عبدالعزيز الرياضية (نجران)، الأخدود مستضيفًا"
+       ],
+       "to": [
+        "Al Bukayriyah Club Stadium (Al Bukayriyah)",
+        "ملعب نادي البكيرية (البكيرية)"
+       ],
+       "src": "goal.com original fixture list · ysscores.com/ar/match/24655993"
+      },
+      {
+       "field": "time",
+       "from": [
+        "20:50",
+        "20:50"
+       ],
+       "to": [
+        "19:10",
+        "19:10"
+       ],
+       "src": "goal.com original fixture list · ysscores.com/ar/match/24655993"
+      }
+     ]
     },
     {
      "id": "m33493",
@@ -1802,7 +1828,21 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-18"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "venue",
+       "from": [
+        "Prince Hathloul bin Abdulaziz Sports City (Najran)",
+        "مدينة الأمير هذلول بن عبدالعزيز الرياضية (نجران)"
+       ],
+       "to": [
+        "Prince Sultan bin Abdulaziz Sports City (Abha)",
+        "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)"
+       ],
+       "src": "goal.com original fixture list · ysscores.com/ar/match/43958175"
+      }
+     ]
     },
     {
      "id": "l4",
@@ -2689,7 +2729,26 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-18"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "venue",
+       "from": [
+        "King Fahd Sports City Stadium (Taif)",
+        "استاد مدينة الملك فهد الرياضية (الطائف)"
+       ],
+       "to": [
+        "Jeddah Club Stadium (Jeddah)",
+        "ملعب نادي جدة (جدة)"
+       ],
+       "at": "2026-10-09",
+       "why": [
+        "Scheduled maintenance at the Taif stadium; date and time unchanged (Tue 20 Oct 19:50)",
+        "أعمال صيانة دورية في ملعب الطائف، مع بقاء الموعد (الثلاثاء 20 أكتوبر 19:50)"
+       ],
+       "src": "al-madina.com/article/1008629"
+      }
+     ]
     },
     {
      "id": "m33551",
@@ -3353,6 +3412,36 @@ window.LEAGUE_DATA = {
         "ملعب نادي هجر (الأحساء)"
        ],
        "at": "2026-11-18"
+      },
+      {
+       "field": "status",
+       "from": [
+        "Fri 6 Nov 2026 17:35, Hajer Club Stadium",
+        "الجمعة 6 نوفمبر 17:35، ملعب نادي هجر"
+       ],
+       "to": [
+        "Postponed",
+        "مؤجلة"
+       ],
+       "at": "2026-11-06",
+       "why": [
+        "Announced by Al Orobah",
+        "أعلنه نادي العروبة رسميًا"
+       ],
+       "src": "saff.com.sa/team.php?id=147 · al-kas.com/169080 · makkahnews.sa/5528354"
+      },
+      {
+       "field": "date",
+       "from": [
+        "Fri 6 Nov 2026 17:35",
+        "الجمعة 6 نوفمبر 17:35"
+       ],
+       "to": [
+        "Wed 18 Nov 2026 17:30",
+        "الأربعاء 18 نوفمبر 17:30"
+       ],
+       "at": "2026-11-08",
+       "src": "saff.com.sa/team.php?id=147 · al-kas.com/169080 · makkahnews.sa/5528354"
       }
      ],
      "weather": {
@@ -3936,7 +4025,38 @@ window.LEAGUE_DATA = {
       "src": "typical",
       "at": "2026-11-18"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "status",
+       "from": [
+        "Mon 26 Oct 2026, Al Anwar Club Stadium",
+        "الاثنين 26 أكتوبر، ملعب نادي الأنوار"
+       ],
+       "to": [
+        "Postponed · new date not announced",
+        "مؤجلة · لم يُعلن موعد جديد"
+       ],
+       "at": "2026-10-26",
+       "why": [
+        "No reason published",
+        "لم يُنشر سبب"
+       ],
+       "src": "annahar-news.com/news/single/39080 · sabq.org/article/ktvnnp1 · akhbarperss.com/507743-2"
+      },
+      {
+       "field": "date",
+       "from": [
+        "New date not announced",
+        "لم يُعلن موعد جديد"
+       ],
+       "to": [
+        "Fri 11 Dec 2026 15:10",
+        "الجمعة 11 ديسمبر 15:10"
+       ],
+       "src": "saff.com.sa/championship.php?id=416"
+      }
+     ]
     },
     {
      "id": "l7",
@@ -3958,13 +4078,15 @@ window.LEAGUE_DATA = {
       {
        "field": "date",
        "from": [
-        "Mon 12 Oct 2026",
-        "الاثنين 12 أكتوبر"
+        "Tue 13 Oct 2026",
+        "الثلاثاء 13 أكتوبر"
        ],
        "to": [
         "New date not announced",
         "لم يُعلن موعد جديد"
-       ]
+       ],
+       "at": "2026-10-13",
+       "src": "al-kas.com/167395 · ysscores.com (AlUla postponed matches)"
       },
       {
        "field": "status",
@@ -4011,7 +4133,7 @@ window.LEAGUE_DATA = {
        ]
       }
      ],
-     "orig": "2026-10-12",
+     "orig": "2026-10-13",
      "saffId": "33536",
      "roundExact": true
     },
@@ -4033,7 +4155,50 @@ window.LEAGUE_DATA = {
       "src": "typical",
       "at": "2026-11-18"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "status",
+       "from": [
+        "Wed 14 Oct 2026 17:55, Hajer Club Stadium",
+        "الأربعاء 14 أكتوبر 17:55، ملعب نادي هجر"
+       ],
+       "to": [
+        "Postponed · new date not announced",
+        "مؤجلة · لم يُعلن موعد جديد"
+       ],
+       "at": "2026-10-13",
+       "why": [
+        "Al Orobah could not travel because of flight conditions",
+        "تعذر سفر العروبة بسبب ظروف الطيران"
+       ],
+       "src": "al-madina.com/article/1009184 · al-jazirah.com 14 Oct 2026"
+      },
+      {
+       "field": "date",
+       "from": [
+        "New date not announced",
+        "لم يُعلن موعد جديد"
+       ],
+       "to": [
+        "Fri 11 Dec 2026 17:35",
+        "الجمعة 11 ديسمبر 17:35"
+       ],
+       "src": "saff.com.sa/championship.php?id=416"
+      },
+      {
+       "field": "venue",
+       "from": [
+        "Hajer Club Stadium (Al Ahsa)",
+        "ملعب نادي هجر (الأحساء)"
+       ],
+       "to": [
+        "Prince Abdullah bin Jalawi Sports City (Al Ahsa)",
+        "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)"
+       ],
+       "src": "saff.com.sa/championship.php?id=416"
+      }
+     ]
     },
     {
      "id": "m33612",
@@ -4153,7 +4318,37 @@ window.LEAGUE_DATA = {
       "src": "typical",
       "at": "2026-11-18"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Fri 11 Dec 2026 15:25",
+        "الجمعة 11 ديسمبر 15:25"
+       ],
+       "to": [
+        "Wed 16 Dec 2026 15:25",
+        "الأربعاء 16 ديسمبر 15:25"
+       ],
+       "src": "al-kas.com/163506 · al-madina.com/ampArticle/1000918 (original schedule, Aug 2026)",
+       "why": [
+        "Round 15 moved back to make room for postponed matches on 11 Dec",
+        "تأخير الجولة 15 لإفساح 11 ديسمبر للمباريات المؤجلة"
+       ]
+      },
+      {
+       "field": "venue",
+       "from": [
+        "Al Orobah Club Stadium (Al Jouf)",
+        "ملعب نادي العروبة (الجوف)"
+       ],
+       "to": [
+        "Al Jouf University Stadium (Al Jouf)",
+        "استاد جامعة الجوف (الجوف)"
+       ],
+       "src": "al-kas.com/163506 · al-madina.com/ampArticle/1000918 (original schedule, Aug 2026)"
+      }
+     ]
     },
     {
      "id": "m33608",
@@ -4193,7 +4388,25 @@ window.LEAGUE_DATA = {
       "src": "typical",
       "at": "2026-11-18"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Sat 12 Dec 2026 17:30",
+        "السبت 12 ديسمبر 17:30"
+       ],
+       "to": [
+        "Wed 16 Dec 2026 17:30",
+        "الأربعاء 16 ديسمبر 17:30"
+       ],
+       "src": "al-kas.com/163506 · al-madina.com/ampArticle/1000918 (original schedule, Aug 2026)",
+       "why": [
+        "Round 15 moved back to make room for postponed matches on 11 Dec",
+        "تأخير الجولة 15 لإفساح 11 ديسمبر للمباريات المؤجلة"
+       ]
+      }
+     ]
     },
     {
      "id": "l15",
@@ -4877,7 +5090,38 @@ window.LEAGUE_DATA = {
       "src": "typical",
       "at": "2026-11-18"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "status",
+       "from": [
+        "Wed 21 Oct 2026 17:45",
+        "الأربعاء 21 أكتوبر 17:45"
+       ],
+       "to": [
+        "Postponed on match day · new date not announced",
+        "مؤجلة يوم المباراة · لم يُعلن موعد جديد"
+       ],
+       "at": "2026-10-21",
+       "why": [
+        "League competitions department decision, no reason given",
+        "قرار إدارة المسابقات بالرابطة، دون ذكر السبب"
+       ],
+       "src": "al-kas.com/167889 · sabq.org/article/hh5pvyd"
+      },
+      {
+       "field": "date",
+       "from": [
+        "New date not announced",
+        "لم يُعلن موعد جديد"
+       ],
+       "to": [
+        "Sun 10 Jan 2027 15:10",
+        "الأحد 10 يناير 15:10"
+       ],
+       "src": "saff.com.sa/championship.php?id=416"
+      }
+     ]
     },
     {
      "id": "c37569",
