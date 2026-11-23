@@ -1,3 +1,5 @@
+// First Division League Match Centre · Author and rights holder: Tareem Alsaggaf · © 2026
+// مركز مباريات دوري الأولى · المؤلفة وصاحبة الحقوق: تريم السقاف · © 2026
 // Discipline record: reads the SAFF Discipline and Ethics Committee decisions for the current season
 // and keeps the ones for the First Division League first team in site/discipline-data.js.
 // Rules: never delete a decision already saved, and leave the file untouched when the pages look wrong.
