@@ -26,7 +26,10 @@ const PANEL = {
   awayEn:     "Opponent absences",
   awayNone:   "ما فيه لاعب موقوف عند الخصم في المباراة الجاية",
   ours:       "غياباتنا",
-  oursEn:     "Our absences"
+  oursEn:     "Our absences",
+  pending:    "حالات طرد لم يصدر فيها قرار رسمي حتى الآن",
+  pendingEn:  "Send-offs awaiting a published decision",
+  pendingNote:"هذي حالات طرد موثّقة في تقارير المباريات، لكن لجنة الانضباط والأخلاق ما نشرت فيها قرارًا في موقع الاتحاد حتى الآن. الإيقاف التلقائي بموجب البطاقة الحمراء يسري، ومدة العقوبة النهائية والغرامة غير معروفة إلى أن يصدر القرار. أول ما ينشر القرار تنتقل الحالة لبطاقة القرار تلقائيًا."
 };
 /* ============================================================ */
 
@@ -102,6 +105,12 @@ ${P.flip ? `.dc:hover .dc-in,.dc:focus .dc-in,.dc.dc-on .dc-in{transform:rotate(
 @media(max-width:600px){#discipline{padding:14px}.ds-grid{grid-template-columns:repeat(2,1fr);gap:18px 14px}.ds-stats{gap:12px}
 .dc-f,.dc-b{padding:10px}.dc-f .dc-big{font-size:32px}.dc-f .dc-nm{font-size:13.5px}.dc-f img{width:30px;height:30px}.dc-f .dc-no{top:10px;left:10px;font-size:9.5px}
 .dc-b{font-size:10.5px;overflow:auto}.dc-b .dc-mt,.dc-b .dc-out{font-size:10px}}
+.dc.dc-pend .dc-f{background:repeating-linear-gradient(135deg,var(--red) 0 14px,#c2342c 14px 28px)}
+.dc.dc-pend .dc-b{border-top-color:var(--red)}
+.dc-f .dc-st{display:inline-block;align-self:flex-start;background:#fff;color:#b3261e;font-size:10.5px;font-weight:800;border-radius:20px;padding:2px 8px;margin-top:8px}
+.dc-b .dc-st2{background:#fdecea;color:#b3261e;border-radius:8px;padding:5px 8px;font-size:11px;font-weight:700}
+.ds-note{font-size:12px;line-height:1.6;background:#fdecea;color:#7a1d17;border-radius:10px;padding:10px 12px;margin:0 0 16px;direction:rtl}
+@media(max-width:600px){.dc-f .dc-st{font-size:9px;padding:2px 6px}.dc-b .dc-st2{font-size:9.5px}}
 .mnav.ds8{grid-template-columns:repeat(8,1fr)!important}
 </style>`);
 
@@ -124,6 +133,40 @@ ${P.flip ? `.dc:hover .dc-in,.dc:focus .dc-in,.dc.dc-on .dc-in{transform:rotate(
   // الأحدث أولاً
   const all = DIS.decisions.slice().sort((a, b) => (a.date < b.date ? 1 : -1));
   const list = US ? all.filter(d => d.club === US) : all;
+
+  /* حالات طرد بلا قرار منشور: تختفي تلقائيًا أول ما يصدر قرار للاعب نفسه في نفس المباراة */
+  const S0 = L.seasons[L.current];
+  const words = s => String(s || "").replace(/[ًٌٍَُِّْ]/g, "").split(/\s+/).filter(w => w.length > 2 && w !== "عبد");
+  const decided = p => all.some(d => d.club === p.club && kind(d) === "red" &&
+    (!d.match.date || d.match.date === p.match.date) && words(d.person).some(w => words(p.person).includes(w)));
+  const pendAll = (window.DISCIPLINE_PENDING || []).filter(p => !decided(p)).map(p => {
+    const nx = S0.matches.filter(m => m.date > p.match.date && (m.home === p.club || m.away === p.club))
+      .sort((a, b) => (a.date < b.date ? -1 : 1))[0];
+    return Object.assign({}, p, { out: nx ? [nx] : [] });
+  }).sort((a, b) => (a.match.date < b.match.date ? 1 : -1));
+  const pend = US ? pendAll.filter(p => p.club === US) : pendAll;
+  const pcard = p => {
+    const t = (n++ % 2 ? 1 : -1) * P.tilt, m = p.out[0];
+    return `
+    <div class="dc dc-red dc-pend" tabindex="0" style="--t:${t}deg">
+      <div class="dc-in">
+        <div class="dc-f">
+          <span class="dc-no">الجولة ${safe(p.round)}</span>
+          ${img(p.club)}
+          <span class="dc-st">لم يصدر قرار رسمي</span>
+          <div class="dc-nm">${safe(p.person)}</div>
+          <div class="dc-cl">${safe(p.club)} · ${safe(nameEn(p.club))}</div>
+        </div>
+        <div class="dc-b">
+          <div class="dc-why">${safe(p.why)} · الدقيقة ${safe(p.min)}</div>
+          <div class="dc-mt">المباراة: ${safe(p.match.home)} × ${safe(p.match.away)} · ${day(p.match.date)}</div>
+          ${m ? `<div class="dc-out">إيقاف تلقائي عن: <b>${safe(m.home)} × ${safe(m.away)}</b> · ${day(m.date)}</div>` : ""}
+          <div class="dc-st2">ما نشرت لجنة الانضباط قرارًا في هذه الحالة حتى الآن، فمدة الإيقاف النهائية والغرامة غير معروفة</div>
+          <a href="${safe(p.src)}" target="_blank" rel="noopener">المصدر: ${safe(p.srcName || "تقرير المباراة")}</a>
+        </div>
+      </div>
+    </div>`;
+  };
 
   /* البطاقة */
   let n = 0;
@@ -175,6 +218,7 @@ ${P.flip ? `.dc:hover .dc-in,.dc:focus .dc-in,.dc.dc-on .dc-in{transform:rotate(
       <div class="ds-mini"><i style="background:var(--red)"></i><div><b>${bans}</b><span>بطاقات حمراء بقرار إيقاف</span></div></div>
       <div class="ds-mini"><i style="background:var(--yel)"></i><div><b>${ylw}</b><span>إنذارات في غرامات الأندية</span></div></div>
       <div class="ds-mini"><i class="ds-bill"></i><div><b>${money(fines)}</b><span>غرامات بالريال</span></div></div>
+      ${pend.length ? `<div class="ds-mini"><i style="background:repeating-linear-gradient(135deg,var(--red) 0 6px,#c2342c 6px 12px)"></i><div><b>${pend.length}</b><span>طرد بلا قرار منشور</span></div></div>` : ""}
     </div>`;
 
   /* بطاقة السجل النظيف */
@@ -185,9 +229,14 @@ ${P.flip ? `.dc:hover .dc-in,.dc:focus .dc-in,.dc.dc-on .dc-in{transform:rotate(
       <div class="dc-nm">${safe(P.clean)}</div><div class="dc-cl">${safe(P.cleanEn)}</div>
     </div></div></div>`;
 
-  let html = `<p class="ds-hint">${safe(P.hint)}</p>` + (list.length ? stats : "") +
-    `<div class="ds-grid">${list.length ? list.map(card).join("") : clean}</div>` +
-    (US && !list.length ? `<p class="ds-hint" style="margin-top:14px">${safe(P.cleanNote)}</p>` : "");
+  const any = list.length || pend.length;
+  let html = `<p class="ds-hint">${safe(P.hint)}</p>` + (any ? stats : "") +
+    (list.length || !pend.length ? `<div class="ds-grid">${list.length ? list.map(card).join("") : clean}</div>` : "") +
+    (US && !any ? `<p class="ds-hint" style="margin-top:14px">${safe(P.cleanNote)}</p>` : "");
+  if (pend.length) html += `
+    <div class="ds-h"><b>${safe(P.pending)}</b><span>${safe(P.pendingEn)}</span></div>
+    <p class="ds-note">${safe(P.pendingNote)}</p>
+    <div class="ds-grid">${pend.map(pcard).join("")}</div>`;
 
   /* غيابات الخصم: لاعبين الخصم الموقوفين في مباراتنا الجاية */
   if (US) {
@@ -197,13 +246,16 @@ ${P.flip ? `.dc:hover .dc-in,.dc:focus .dc-in,.dc.dc-on .dc-in{transform:rotate(
     if (next) {
       const opp = next.home === US ? next.away : next.home;
       const hits = c => all.filter(d => d.club === c && (d.out || []).some(m => m.date === next.date && m.home === next.home && m.away === next.away));
+      const ph = c => pendAll.filter(p => p.club === c && p.out.some(m => m.date === next.date && m.home === next.home && m.away === next.away));
+      const pc = a => a.map(pcard).join("");
+      const theirsP = ph(opp), oursP = ph(US);
       const theirs = hits(opp), ours = hits(US);
       n = 0;
       html += `
       <div class="ds-h"><b>${safe(P.away)}</b><span>${safe(P.awayEn)}</span></div>
       <div class="ds-opp">${img(opp)}<div><b>${safe(next.home)} × ${safe(next.away)}</b><small>${day(next.date)}${next.round ? " · الجولة " + next.round : ""}</small></div></div>
-      ${theirs.length ? `<div class="ds-grid">${theirs.map(card).join("")}</div>` : `<p class="ds-hint">${safe(P.awayNone)}</p>`}
-      ${ours.length ? `<div class="ds-h"><b>${safe(P.ours)}</b><span>${safe(P.oursEn)}</span></div><div class="ds-grid">${ours.map(card).join("")}</div>` : ""}`;
+      ${theirs.length || theirsP.length ? `<div class="ds-grid">${theirs.map(card).join("")}${pc(theirsP)}</div>` : `<p class="ds-hint">${safe(P.awayNone)}</p>`}
+      ${ours.length || oursP.length ? `<div class="ds-h"><b>${safe(P.ours)}</b><span>${safe(P.oursEn)}</span></div><div class="ds-grid">${ours.map(card).join("")}${pc(oursP)}</div>` : ""}`;
     }
   }
 
