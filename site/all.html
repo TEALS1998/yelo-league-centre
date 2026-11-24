@@ -399,6 +399,14 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
   .chg-grid{grid-template-columns:1fr}
 }
 </style>
+<style>/* social buttons in the header */
+.soc{display:inline-flex;gap:6px;align-items:center}
+.soc a{width:32px;height:32px;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;transition:transform .15s,background .15s}
+.soc a:hover{transform:translateY(-2px);background:rgba(255,255,255,.24)}
+.soc svg{width:15px;height:15px;fill:currentColor}
+@media (max-width:600px){.soc a{width:28px;height:28px}.soc svg{width:13px;height:13px}}
+</style>
+<script src="social.js"></script>
 </head>
 <body>
 <header class="top">
@@ -406,6 +414,7 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
     <img class="mark" src="fdl.png" alt="First Division League">
     <div class="brand"><b>Match Centre</b><span id="lgEn">First Division League · All clubs</span></div>
     <div class="brand arb"><b class="ar">مركز مباريات دوري الأولى</b><span class="ar" id="lgAr">كل الأندية</span></div>
+    <nav class="soc" id="soc" aria-label="League accounts · حسابات دوري الأولى" hidden></nav>
     <div class="tsp"></div>
     <label class="chip"><span class="ar">النادي</span><select id="clubSel" aria-label="Club · النادي"></select></label>
     <span class="chip" id="checked"><i class="dot"></i></span>
@@ -747,5 +756,7 @@ document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=
 </script>
 <script>document.write('<script src="discipline-data.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
   <script src="discipline.js?v=20261122c"></script>
+<script>/* the league's official accounts */
+(()=>{const S=window.SOCIAL;if(S)drawSocial(document.getElementById("soc"),S.league,"دوري الأولى");})();</script>
 </body>
 </html>
