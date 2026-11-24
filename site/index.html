@@ -4545,12 +4545,11 @@ const m=document.createElement("meta");m.name="author";m.content=A.en;document.h
 /* Win celebration: for three days after a win the page celebrates. Add #celebrate to the address to preview it. */
 (()=>{try{
 const last=played.filter(m=>m.score).slice(-1)[0];if(!last)return;
-/* only after a win, on match day only (Riyadh time; the match night check publishes the result after the final whistle), and only the first time this browser opens the page */
+/* only after a win: from the final result until the end of the second day after the match (Riyadh time) */
 const won=resultOf(last)==="W",force=/celebrate/.test(location.hash)||window.CELEB_PREVIEW===true;
-const [yy,mm,dd]=last.date.split("-").map(Number),until=Date.UTC(yy,mm-1,dd+1,-3,0),inWindow=Date.now()>=kickoff(last)&&Date.now()<until;
-const KEY="yelo-celebrated-"+US+"-"+(last.id||last.date);let seen=false;try{seen=localStorage.getItem(KEY)==="1";}catch(e){}
-if(!(won&&(inWindow||force))||seen)return;
-try{localStorage.setItem(KEY,"1");}catch(e){}
+const [yy,mm,dd]=last.date.split("-").map(Number),until=Date.UTC(yy,mm-1,dd+3,-3,0),inWindow=Date.now()>=kickoff(last)&&Date.now()<until;
+/* shown on every visit and every refresh while the win is fresh (match day and the two days after) */
+if(!(won&&(inWindow||force)))return;
 const m=last,op=m.home===US?m.away:m.home,[f,a]=gfga(m),RED=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
 const st=document.createElement("style");st.textContent=`
 .cbn{position:fixed;left:50%;top:18px;z-index:300;transform:translate(-50%,-160%);transition:transform .7s cubic-bezier(.2,1.3,.4,1);background:linear-gradient(135deg,#1b2530,#27333e);color:#fff;border-radius:18px;padding:14px 18px 14px 14px;display:flex;align-items:center;gap:14px;box-shadow:0 20px 50px rgba(0,0,0,.35),0 0 0 3px #4a9a90;min-width:min(520px,92vw);max-width:92vw}
