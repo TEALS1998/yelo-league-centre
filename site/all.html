@@ -440,7 +440,18 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 </main>
 <footer><span>Source: the league and club pages on <a href="https://www.saff.com.sa/championship.php?id=416" target="_blank" rel="noopener">saff.com.sa</a>, updated every two minutes. Weather: Open-Meteo. Times are Saudi time.</span><span class="ar">المصدر: صفحات الدوري والأندية على موقع الاتحاد السعودي لكرة القدم، وتتحدث كل دقيقتين.</span><span style="flex-basis:100%">Designed and developed by <b>Tareem Alsaggaf</b> · © 2026<span class="ar" style="display:block">تصميم وتطوير <b>تريم إياد السقاف</b> · جميع الحقوق محفوظة</span></span></footer>
 
-<script src="data.js"></script>
+<script>/* Live data: always load the newest data.js (one fresh copy a minute, never a stale cache). */
+document.write('<script src="data.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
+<script>/* Auto update: every 30 seconds read data.js again; when a result, table or fixture changes, reload in place (same club, same scroll). */
+(()=>{const fp=o=>{const s=JSON.stringify(o);let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return s.length+":"+h;};
+const snap=window.LEAGUE_DATA?fp(window.LEAGUE_DATA):null;if(!snap)return;
+try{const y=sessionStorage.getItem("yelo-live-y");if(y!==null){sessionStorage.removeItem("yelo-live-y");addEventListener("load",()=>setTimeout(()=>scrollTo(0,+y),60));}}catch(e){}
+let busy=false;const chk=async()=>{if(busy||document.hidden)return;busy=true;try{
+  const r=await fetch("data.js?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const t=await r.text();
+  const w={};new Function("window",t)(w);if(!w.LEAGUE_DATA)return;
+  if(fp(w.LEAGUE_DATA)!==snap){try{sessionStorage.setItem("yelo-live-y",String(scrollY));}catch(e){}location.reload();}
+}catch(e){}finally{busy=false;}};
+setInterval(chk,30000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)chk();});addEventListener("focus",chk);})();</script>
 <script>
 (()=>{
 const L=window.LEAGUE_DATA;if(!L)return;
@@ -734,7 +745,7 @@ const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEac
 document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=Math.min(i%6,5)*60+"ms";io.observe(e);}else e.classList.add("in");});
 })();
 </script>
-<script src="discipline-data.js"></script>
+<script>document.write('<script src="discipline-data.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
   <script src="discipline.js?v=20261122c"></script>
 </body>
 </html>

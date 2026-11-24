@@ -1960,7 +1960,18 @@ document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');i
 
 <script>/* Author and ownership. AlUla SC Match Centre, designed and built 2026. */
 window.AUTHOR={en:"Tareem Alsaggaf",ar:"تريم إياد السقاف"};</script>
-<script src="data.js"></script>
+<script>/* Live data: always load the newest data.js (one fresh copy a minute, never a stale cache). */
+document.write('<script src="data.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
+<script>/* Auto update: every 30 seconds read data.js again; when a result, table or fixture changes, reload in place (same club, same scroll). */
+(()=>{const fp=o=>{const s=JSON.stringify(o);let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return s.length+":"+h;};
+const snap=window.LEAGUE_DATA?fp(window.LEAGUE_DATA):null;if(!snap)return;
+try{const y=sessionStorage.getItem("yelo-live-y");if(y!==null){sessionStorage.removeItem("yelo-live-y");addEventListener("load",()=>setTimeout(()=>scrollTo(0,+y),60));}}catch(e){}
+let busy=false;const chk=async()=>{if(busy||document.hidden)return;busy=true;try{
+  const r=await fetch("data.js?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const t=await r.text();
+  const w={};new Function("window",t)(w);if(!w.LEAGUE_DATA)return;
+  if(fp(w.LEAGUE_DATA)!==snap){try{sessionStorage.setItem("yelo-live-y",String(scrollY));}catch(e){}location.reload();}
+}catch(e){}finally{busy=false;}};
+setInterval(chk,30000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)chk();});addEventListener("focus",chk);})();</script>
 <script>
 /* Club picker: turns the league data into the one-club view the page draws. */
 (()=>{
@@ -5420,7 +5431,7 @@ addEventListener("beforeprint",()=>document.querySelectorAll(".mo-r,.rps").forEa
   .stall .scn{white-space:normal!important}
 }
 </style>
-<script src="discipline-data.js"></script>
+<script>document.write('<script src="discipline-data.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
 <script src="discipline.js?v=20261122c"></script>
 </body>
 </html>
