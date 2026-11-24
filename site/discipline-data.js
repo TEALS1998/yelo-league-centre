@@ -2,7 +2,7 @@
    يحدّثه scripts/discipline.mjs تلقائياً من موقع الاتحاد السعودي لكرة القدم. */
 window.DISCIPLINE = {
  "source": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4",
- "parser": 4,
+ "parser": 5,
  "checked": "2026-11-24",
  "batches": {
   "2026-11-24": 4,
@@ -311,7 +311,7 @@ window.DISCIPLINE = {
    "person": "عيسى المحياني",
    "role": "مدرب",
    "club": "الأنوار",
-   "reason": "غياب مدرب نادي الأنوار/ عيسى المحياني عن المؤتمر الصحفي بعد نهاية المباراة",
+   "reason": "غياب عن المؤتمر الصحفي بعد نهاية المباراة",
    "ban": 0,
    "fine": 22500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-08-24",
