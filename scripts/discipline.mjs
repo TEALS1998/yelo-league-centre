@@ -94,7 +94,28 @@ function loadOut() {
 }
 
 
+
+// TEMPORARY probe of fdl.sa (removed after it runs)
+async function probeFdl() {
+  try {
+    const r = await fetch("https://fdl.sa/", { headers: { "user-agent": "Mozilla/5.0" } });
+    const h = await r.text();
+    log("fdl home", r.status, h.length, JSON.stringify(h.slice(0, 1500)));
+    const srcs = [...h.matchAll(/(?:src|href)="([^"]+\.js[^"]*)"/g)].map((m) => m[1]);
+    log("fdl scripts", JSON.stringify(srcs));
+    for (const s of srcs.slice(0, 6)) {
+      const u = new URL(s, "https://fdl.sa/").href;
+      const j = await (await fetch(u)).text();
+      const apis = [...new Set([...j.matchAll(/https?:\/\/[a-zA-Z0-9.-]+(?:\/[a-zA-Z0-9_\/.-]*)?/g)].map((m) => m[0]))].filter((x) => !/w3\.org|reactjs|github|mozilla|google|facebook|twitter|instagram|youtube|apple|tiktok|snapchat|schema/.test(x)).slice(0, 60);
+      const paths = [...new Set([...j.matchAll(/["'`](\/(?:api|v1|v2)[a-zA-Z0-9_\/{}$.-]*)["'`]/g)].map((m) => m[1]))].slice(0, 80);
+      const ev = [...new Set([...j.matchAll(/["'`]([a-zA-Z_]*(?:card|Card|event|Event|lineup|Lineup|match|Match)[a-zA-Z_\/-]*)["'`]/g)].map((m) => m[1]))].slice(0, 80);
+      log("fdl js", u, j.length, "urls", JSON.stringify(apis), "paths", JSON.stringify(paths), "keys", JSON.stringify(ev));
+    }
+  } catch (e) { log("fdl probe failed", e.message); }
+}
+
 async function main() {
+  await probeFdl();
   const { D } = loadData();
   const teamOf = teamMatcher(D);
   // A decision is ours when SAFF labels it First Division League, or when SAFF leaves the competition
