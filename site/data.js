@@ -631,7 +631,7 @@ window.LEAGUE_DATA = {
    "track": true,
    "trackTxt": null,
    "roof": "partial",
-   "surface": "h"
+   "surface": "n"
   },
   "الامير عبدالعزيز بن مساعد بن جلوي": {
    "cap": "12,250",
@@ -655,7 +655,7 @@ window.LEAGUE_DATA = {
    "track": false,
    "trackTxt": null,
    "roof": "partial",
-   "surface": "a"
+   "surface": "n"
   },
   "الزلفي": {
    "cap": "3,000",
@@ -671,7 +671,7 @@ window.LEAGUE_DATA = {
    "track": false,
    "trackTxt": null,
    "roof": "partial",
-   "surface": "a"
+   "surface": "n"
   },
   "اداره التعليم": {
    "cap": "10,000",

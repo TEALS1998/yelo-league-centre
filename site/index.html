@@ -2863,8 +2863,8 @@ const FACTS={
 };
 /* Hail's SAFF name carries "بن جلوي"; the ground is Prince Abdulaziz bin Musaed Sports City */
 const factsFor=k=>FACTS[k]||null;
-const SURF={"الامير محمد بن عبدالعزيز":["n","Natural grass","عشب طبيعي"],"الانوار":["a","Artificial turf","عشب صناعي"],"الامير سلطان بن عبدالعزيز":["n","Natural grass","عشب طبيعي"],
- "الملك فهد":["h","Hybrid grass","عشب هجين"],"الزلفي":["n","Natural grass","عشب طبيعي"],"احد":["a","Artificial turf","عشب صناعي"],"اداره التعليم":["n","Natural grass","عشب طبيعي"],
+const SURF={"الامير محمد بن عبدالعزيز":["n","Natural grass","عشب طبيعي"],"الانوار":["n","Natural grass","عشب طبيعي"],"الامير سلطان بن عبدالعزيز":["n","Natural grass","عشب طبيعي"],
+ "الملك فهد":["n","Natural grass","عشب طبيعي"],"الزلفي":["n","Natural grass","عشب طبيعي"],"احد":["n","Natural grass","عشب طبيعي"],"اداره التعليم":["n","Natural grass","عشب طبيعي"],
  "البكيريه":["n","Natural grass","عشب طبيعي"],"الرائد":["n","Natural grass","عشب طبيعي"],"العروبه":["n","Natural grass","عشب طبيعي"],"هجر":["n","Natural grass","عشب طبيعي"],"جده":["n","Natural grass","عشب طبيعي"],"الامير عبدالله بن جلوي":["n","Natural grass","عشب طبيعي"],"الملك عبدالعزيز":["n","Natural grass","عشب طبيعي"],"جامعه الجوف":["n","Natural grass","عشب طبيعي"],"الامير عبدالعزيز بن مساعد بن جلوي":["n","Natural grass","عشب طبيعي"]};
 /* card facts kept in data.js (DATA.stadiums) override the built in ones, so the daily update can correct them */
 const SURFTXT={n:["Natural grass","عشب طبيعي"],a:["Artificial turf","عشب صناعي"],h:["Hybrid grass","عشب هجين"]};
@@ -4032,7 +4032,7 @@ function makeViewer(box,P){
     /* palms and trees round the ring road */
     {const pr=ring(R0+18);for(let i=0;i<pr.length;i+=6){const[x,z]=pr[i];bx3(x-.3,x+.3,z-.3,z+.3,0,2.4,[110,86,60]);bx3(x-1.6,x+1.6,z-1.6,z+1.6,2.4,5,[80,128,66]);}}
   } else if(P.custom==="ohd"){
-    /* Ohod Club Stadium, Madinah, from the user's photos: a football only artificial pitch on a dark green apron behind a red fence; a covered main
+    /* Ohod Club Stadium, Madinah, from the user's photos: a football only natural grass pitch (relaid from artificial, 2026) on a dark green apron behind a red fence; a covered main
        stand of red seats under a white membrane roof with a VIP row of blue armchairs, grey buildings at both ends; three blocks opposite, the middle one
        spelling OHOD CLUB in yellow seats under a yellow wall; low red stands at both ends; yellow stairs; slim floodlights, a scoreboard, streets */
     const rect=(x0,x1,z0,z1,c)=>G.push({p:[[x0,0,z0],[x1,0,z0],[x1,0,z1],[x0,0,z1]],c});
@@ -4192,7 +4192,7 @@ function makeViewer(box,P){
     const tree=(x,z)=>{bx3(x-.3,x+.3,z-.3,z+.3,0,2.2,[110,86,60]);bx3(x-1.6,x+1.6,z-1.6,z+1.6,2.2,4.8,[80,128,66]);};
     for(let x=-X+5;x<X-4;x+=9)tree(x,ZS-9);
   } else if(P.custom==="anw"){
-    /* Al Anwar Club Stadium, Hotat Bani Tamim, from the user's photos: a football only artificial pitch behind a blue mesh fence on a grey walkway;
+    /* Al Anwar Club Stadium, Hotat Bani Tamim, from the user's photos: a football only natural grass pitch (relaid from artificial, 2026) behind a blue mesh fence on a grey walkway;
        a covered main stand of red seats in blocks with grey stairs and a central white VIP block, under a cream membrane roof on arched trusses,
        backed by a cream wall with columns, with a large hall at one end; red seat blocks with grey stairs on the opposite side under a cream wall;
        lattice floodlight towers; a scoreboard; a training pitch alongside, car park and palms */
@@ -5189,7 +5189,7 @@ function rGrounds(){
     <div class="rpnote">Gold pin is home. Pin size follows capacity. Solid gold arcs are trips already made, dashed white arcs are still to come. · الدبوس الذهبي ملعب الفريق، وحجم الدبوس حسب السعة، والأقواس الذهبية رحلات تمت والبيضاء المتقطعة رحلات قادمة.</div>
     <div class="rpk"><div><b>${L.length}</b><span>Stadiums · ملاعب</span></div><div><b>${totalKm.toLocaleString("en")}</b><span>km in round trips, straight line · كم ذهابا وعودة</span></div><div><b>${longest?longest.km.toLocaleString("en"):"?"}</b><span>Longest trip, ${longest?(longest.ci?longest.ci.en:cityOf(longest.v)):""} · أبعد رحلة</span></div><div><b>${nearest?nearest.km.toLocaleString("en"):"?"}</b><span>Nearest away stadium · أقرب ملعب خارج أرضه</span></div></div>
     ${T("02","Surfaces and stands","الأرضيات والمدرجات")}
-    <div class="srf">${[["n","Natural grass","عشب طبيعي","#2f6b45"],["a","Artificial turf","عشب صناعي","#3f8a57"],["h","Hybrid grass","عشب هجين","#4b7a5a"]].map(([k,e,a,c])=>`<div><i style="background:${c}"></i><b>${surfN(k)}</b><span>${e} · ${a}</span></div>`).join("")}<div><i style="background:#b5523b"></i><b>${L.filter(g=>g.f.track).length}</b><span>With running track · بمضمار</span></div><div><i style="background:#f2d98a"></i><b>${L.filter(g=>g.f.roof==="partial"||g.f.roof==="full").length}</b><span>With covered stands · بمظلات</span></div></div>
+    <div class="srf">${[["n","Natural grass","عشب طبيعي","#2f6b45"],["a","Artificial turf","عشب صناعي","#3f8a57"],["h","Hybrid grass","عشب هجين","#4b7a5a"]].filter(([k])=>surfN(k)>0).map(([k,e,a,c])=>`<div><i style="background:${c}"></i><b>${surfN(k)}</b><span>${e} · ${a}</span></div>`).join("")}<div><i style="background:#b5523b"></i><b>${L.filter(g=>g.f.track).length}</b><span>With running track · بمضمار</span></div><div><i style="background:#f2d98a"></i><b>${L.filter(g=>g.f.roof==="partial"||g.f.roof==="full").length}</b><span>With covered stands · بمظلات</span></div></div>
     ${T("03","Travel ladder, nearest to farthest","سلم الرحلات من الأقرب للأبعد")}
     <div class="km kmx">${away.map(g=>`<div class="r"><span>${g.ci?g.ci.en:cityOf(g.v)} · ${cityOf(g.v)}</span><div class="b" style="width:${g.km/(longest?longest.km:1)*100}%"></div><span>${g.km.toLocaleString("en")} km${g.ci?` · ${g.ci.direct==="train"?"train":g.ci.direct==="road"?"road":g.ci.direct==="yes"?"direct":g.ci.direct==="limited"?"few direct":"via hub"}`:""}</span></div>`).join("")}</div><div class="rpnote">Direct, few direct or via hub: flights from ${BASE.en}. · مباشر أو رحلات قليلة أو ترانزيت: رحلات من ${BASE.ar}.</div>
   </div>${FT()}</section>`;
