@@ -154,7 +154,7 @@ ${P.flip ? `.dc:hover .dc-in,.dc:focus .dc-in,.dc.dc-on .dc-in{transform:rotate(
         </div>
         <div class="dc-b">
           <div class="dc-why">${safe(d.reason)}</div>
-          <div class="dc-mt">المباراة: ${safe(d.match.home)} × ${safe(d.match.away)}${d.match.date ? " · " + day(d.match.date) : ""}</div>
+          <div class="dc-mt">${d.kind === "cup" ? "كأس الملك · " : ""}المباراة: ${safe(d.match.home)} × ${safe(d.match.away)}${d.match.date ? " · " + day(d.match.date) : ""}</div>
           ${out ? `<div class="dc-out">يغيب عن: ${out}</div>` : ""}
           <div class="dc-tg">
             ${d.ban ? `<span>إيقاف ${d.ban} ${plural(d.ban)}</span>` : ""}

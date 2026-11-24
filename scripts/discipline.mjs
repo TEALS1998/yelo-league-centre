@@ -14,7 +14,7 @@ const INDEX = BASE + "about.php?id=3&type=13&menu=4";
 const log = (...a) => console.log("[discipline]", ...a);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Bump when the reading rules change: every batch of the season is read again once.
-const PARSER = 4;
+const PARSER = 5;
 
 async function get(url) {
   const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (First Division League match centre updater)", "accept-language": "ar,en;q=0.8" } });
@@ -76,6 +76,8 @@ export function toDecision(td, teamOf, url) {
   reason = reason.replace(new RegExp("^حصول\\s+" + a.replace(/[.*+?^${}()|[\]\\/]/g, "\\$&") + "\\s+على\\s+"), "").replace(/\.$/, "").trim();
   reason = reason.replace(/^حصول\s+(?:لاعب|إداري|مدرب)[^]*?\s+على\s+(?=البطاقة)/, "");
   reason = reason.replace(/\((\d+)\)\s*\S+/g, "$1").replace(/[،,]?\s*وفقا?ً? لما نصت[\s\S]*$/, "").replace(/[،,]?\s*ولم يقم[\s\S]*$/, "").trim();
+  // "غياب مدرب نادي الأنوار/ عيسى المحياني عن المؤتمر" -> "غياب عن المؤتمر": the person is already on the card
+  if (slash >= 0) reason = reason.split(a).join("").replace(/\s{2,}/g, " ").trim();
   if (/^البطاقة الحمراء/.test(reason)) reason = reason.replace(/^البطاقة الحمراء المباشرة/, "بطاقة حمراء مباشرة");
   const r = digits(ruling);
   const banM = r.match(/إيقاف[^()]{0,80}\((\d+)\)\s*\S*\s*مباري?ا?ة?ت?/);
@@ -129,10 +131,7 @@ async function main() {
       const comps = {};
       for (const x of rows) comps[x.comp] = (comps[x.comp] || 0) + 1;
       log("batch", b.date, "rows", rows.length, "first division", rows.filter((x) => ours(x)).length, JSON.stringify(comps));
-      for (const x of rows) if (!x.comp || /خادم الحرمين/.test(x.comp)) log("  check", b.date, x.no, "|", x.comp || "(no competition)", "|", x.match.home, "-", x.match.away, x.match.date, "|", x.role, x.club, "|", ours(x) ? "kept" : "left out");
       for (const d of rows.filter((x) => ours(x))) {
-        log("  raw", JSON.stringify(d._raw));
-        log("  read", JSON.stringify(tidy(d)));
         if (!known.has(d.no)) added++;
         known.set(d.no, tidy(d));
       }
