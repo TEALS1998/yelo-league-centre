@@ -14,7 +14,7 @@ const INDEX = BASE + "about.php?id=3&type=13&menu=4";
 const log = (...a) => console.log("[discipline]", ...a);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Bump when the reading rules change: every batch of the season is read again once.
-const PARSER = 3;
+const PARSER = 4;
 
 async function get(url) {
   const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (First Division League match centre updater)", "accept-language": "ar,en;q=0.8" } });
@@ -82,10 +82,10 @@ export function toDecision(td, teamOf, url) {
   const ban = banM ? +banM[1] : /الإ?يقاف التلقائي|الايقاف التلقائي/.test(r) ? 1 : 0;
   const fineM = r.match(/غرامة مالية قدرها\s*\(([\d,]+)\)/);
   const fine = fineM ? +fineM[1].replace(/,/g, "") : 0;
-  return { no, date, comp, match: { home, away, date: mDate }, person, role, club, reason, ban, fine, ruling, url };
+  return { no, date, comp, match: { home, away, date: mDate }, person, role, club, reason, ban, fine, ruling, url, _raw: td };
 }
 
-const tidy = (d) => { const { comp, ruling, ...rest } = d; return { ...rest, appeal: /قابل للاستئناف/.test(ruling) && !/غير قابل للاستئناف/.test(ruling) }; };
+const tidy = (d) => { const { comp, ruling, _raw, ...rest } = d; return { ...rest, appeal: /قابل للاستئناف/.test(ruling) && !/غير قابل للاستئناف/.test(ruling) }; };
 
 function loadOut() {
   try { const w = {}; new Function("window", fs.readFileSync(OUT, "utf8"))(w); return w.DISCIPLINE; } catch { return null; }
@@ -96,13 +96,17 @@ async function main() {
   const teamOf = teamMatcher(D);
   // A decision is ours when SAFF labels it First Division League, or when SAFF leaves the competition
   // empty or names the King's Cup and the match is one of our clubs' first team matches this season.
-  const SM = D.seasons[D.current].matches;
+  const S0 = D.seasons[D.current], SM = S0.matches;
   const findMatch = (d) => d.match.date && SM.find((m) => m.date === d.match.date && m.home === d.match.home && m.away === d.match.away);
   const ours = (d) => {
     if (isFdl(d.comp)) { d.kind = "league"; return true; }
     if (/تحت|سيدات|السيدات|الصالات|الشاطئية|روشن|الممتاز|الثانية|جوّي|جوي/.test(d.comp)) return false;
     const m = findMatch(d);
-    if (!m) return false;
+    if (!m) {
+      // King's Cup ties we do not list (other rounds) still count when the club is one of ours
+      if (/خادم الحرمين|كأس الملك/.test(d.comp) && D.teams[d.club] && S0.table.rows.some((r) => r[0] === d.club)) { d.kind = "cup"; return true; }
+      return false;
+    }
     d.kind = m.comp === "cup" ? "cup" : "league";
     return true;
   };
@@ -127,6 +131,8 @@ async function main() {
       log("batch", b.date, "rows", rows.length, "first division", rows.filter((x) => ours(x)).length, JSON.stringify(comps));
       for (const x of rows) if (!x.comp || /خادم الحرمين/.test(x.comp)) log("  check", b.date, x.no, "|", x.comp || "(no competition)", "|", x.match.home, "-", x.match.away, x.match.date, "|", x.role, x.club, "|", ours(x) ? "kept" : "left out");
       for (const d of rows.filter((x) => ours(x))) {
+        log("  raw", JSON.stringify(d._raw));
+        log("  read", JSON.stringify(tidy(d)));
         if (!known.has(d.no)) added++;
         known.set(d.no, tidy(d));
       }
