@@ -23,7 +23,7 @@ window.SOCIAL = {
   "الجيل":    { x: "jeel_club",       ig: "jeel_club" }
  }
 };
-/* Draws the X and Instagram buttons into an element (LinkedIn removed at the owner's request). */
+/* Draws the X button into an element (only X is shown, at the owner's request). */
 window.drawSocial = function (el, s, label) {
   if (!el || !s) return;
   const I = {
@@ -35,6 +35,5 @@ window.drawSocial = function (el, s, label) {
   const a = (k, href, t) => `<a class="soc-${k}" href="${esc(href)}" target="_blank" rel="noopener" title="${esc(t)}" aria-label="${esc(t)}">${I[k]}</a>`;
   let h = "";
   if (s.x) h += a("x", "https://x.com/" + s.x, "X · @" + s.x);
-  if (s.ig) h += a("ig", "https://www.instagram.com/" + s.ig + "/", "Instagram · @" + s.ig);
   el.innerHTML = h; el.hidden = false;
 };

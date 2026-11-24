@@ -1870,7 +1870,7 @@ button,input,select,textarea{font-family:inherit}
 .soc svg{width:15px;height:15px;fill:currentColor}
 @media (max-width:600px){.soc a{width:28px;height:28px}.soc svg{width:13px;height:13px}}
 </style>
-<script src="social.js"></script>
+<script src="social.js?v=3"></script>
 </head>
 <body>
 <script>
@@ -2601,7 +2601,7 @@ tabs();table();
 
 /* changes */
 (()=>{const el=document.getElementById("changes");if(!el)return;
-  const code=n=>{if(n===US)return "ULA";const e=(TEN[n]||n).replace(/^Al\s+/i,"").replace(/[^A-Za-z]/g,"");return e.slice(0,3).toUpperCase();};
+  const code=n=>{if(n===US&&US==="العلا")return "ULA";const e=(TEN[n]||n).replace(/^Al\s+/i,"").replace(/[^A-Za-z]/g,"");return e.slice(0,3).toUpperCase();};
   const L=n=>n===US?CREST:(LOGOS[n]||"");
   const rk=m=>m.comp==="cup"?0:+m.round||99;const ord=chgList.slice().sort((a,b)=>rk(a)-rk(b)||(a.date<b.date?-1:1));
   const chain=new Set(ord.filter(m=>m.orig&&ord.some(o=>o!==m&&o.date===m.orig)).map(m=>m.id));
@@ -2808,7 +2808,7 @@ window.__TEN=TEN;window.__LOGOS=LOGOS;
   new MutationObserver(()=>goNext()).observe(t,{childList:true});})();
 /* ===== broadcast graphics ===== */
 (function(){
-  const code=n=>{if(n===US)return "ULA";const e=(TEN[n]||n).replace(/^Al\s+/i,"").replace(/[^A-Za-z]/g,"");return e.slice(0,3).toUpperCase();};
+  const code=n=>{if(n===US&&US==="العلا")return "ULA";const e=(TEN[n]||n).replace(/^Al\s+/i,"").replace(/[^A-Za-z]/g,"");return e.slice(0,3).toUpperCase();};
   const L=n=>n===US?CREST:(LOGOS[n]||"");
   /* ticker */
   const items=[];
