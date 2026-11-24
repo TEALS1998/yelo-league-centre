@@ -94,21 +94,7 @@ function loadOut() {
 }
 
 
-// TEMPORARY probe: does SAFF publish cards on a match page? (removed after one run)
-async function probeMatchPage() {
-  for (const u of [BASE + "match.php?id=33563", BASE + "matches.php?id=33563", BASE + "match_details.php?id=33563", BASE + "championship.php?id=416"]) {
-    try {
-      const h = await get(u);
-      const links = [...new Set([...h.matchAll(/href="([^"]*33563[^"]*)"/g)].map((m) => m[1]))].slice(0, 5);
-      const t = clean(h);
-      const hits = [...t.matchAll(/.{0,80}(?:بطاقة|حمراء|صفراء|طرد|إنذار).{0,80}/g)].slice(0, 12).map((m) => m[0].replace(/\n/g, " "));
-      log("probe", u, "len", h.length, "links", JSON.stringify(links), "hits", hits.length, JSON.stringify(hits).slice(0, 1500));
-    } catch (e) { log("probe", u, "failed", e.message); }
-  }
-}
-
 async function main() {
-  await probeMatchPage();
   const { D } = loadData();
   const teamOf = teamMatcher(D);
   // A decision is ours when SAFF labels it First Division League, or when SAFF leaves the competition
