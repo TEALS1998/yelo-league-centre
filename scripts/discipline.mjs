@@ -95,18 +95,7 @@ function loadOut() {
 
 
 
-// TEMPORARY probe of fdl.sa (removed after it runs)
-async function probeFdl() {
-  try {
-    const j = await (await fetch("https://fdl.sa/js/app.js?id=9b18171208f018a5a855dfb533a4446e")).text();
-    const around = (re, n) => [...j.matchAll(re)].slice(0, n).map((m) => j.slice(Math.max(0, m.index - 140), m.index + 220).replace(/\s+/g, " "));
-    log("fdl sportsbase", JSON.stringify(around(/feeds\.sportsbase\.world/g, 6)));
-    log("fdl apicalls", JSON.stringify(around(/\.(?:get|post)\(\s*["'`]/g, 60)).slice(0, 12000));
-    log("fdl cards", JSON.stringify(around(/(?:yellow|red)_?[cC]ard|RedCard|YellowCard|cardType|card_type/g, 10)).slice(0, 4000));
-  } catch (e) { log("fdl probe failed", e.message); }
-}
 async function main() {
-  await probeFdl();
   const { D } = loadData();
   const teamOf = teamMatcher(D);
   // A decision is ours when SAFF labels it First Division League, or when SAFF leaves the competition
