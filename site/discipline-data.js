@@ -2,7 +2,7 @@
    يحدّثه scripts/discipline.mjs تلقائياً من موقع الاتحاد السعودي لكرة القدم. */
 window.DISCIPLINE = {
  "source": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4",
- "parser": 2,
+ "parser": 3,
  "checked": "2026-11-24",
  "batches": {
   "2026-11-24": 4,
@@ -53,6 +53,7 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-11-24",
+   "kind": "league",
    "appeal": false,
    "out": [
     {
@@ -78,6 +79,7 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-11-17",
+   "kind": "league",
    "appeal": false,
    "out": [
     {
@@ -103,6 +105,7 @@ window.DISCIPLINE = {
    "ban": 0,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-11-04",
+   "kind": "league",
    "appeal": false
   },
   {
@@ -120,6 +123,7 @@ window.DISCIPLINE = {
    "ban": 0,
    "fine": 0,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-11-04",
+   "kind": "league",
    "appeal": true
   },
   {
@@ -137,6 +141,7 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-10-19",
+   "kind": "league",
    "appeal": false,
    "out": [
     {
@@ -162,6 +167,7 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-10-19",
+   "kind": "league",
    "appeal": false,
    "out": [
     {
@@ -187,6 +193,7 @@ window.DISCIPLINE = {
    "ban": 0,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-09-10",
+   "kind": "league",
    "appeal": false
   },
   {
@@ -204,6 +211,7 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-09-10",
+   "kind": "league",
    "appeal": false,
    "out": [
     {
@@ -229,6 +237,7 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-09-03",
+   "kind": "league",
    "appeal": false,
    "out": [
     {
@@ -254,6 +263,7 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-08-25",
+   "kind": "league",
    "appeal": false,
    "out": [
     {
@@ -279,6 +289,7 @@ window.DISCIPLINE = {
    "ban": 1,
    "fine": 7500,
    "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-08-25",
+   "kind": "league",
    "appeal": false,
    "out": [
     {
