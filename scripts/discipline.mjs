@@ -13,6 +13,8 @@ const BASE = "https://www.saff.com.sa/";
 const INDEX = BASE + "about.php?id=3&type=13&menu=4";
 const log = (...a) => console.log("[discipline]", ...a);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// Bump when the reading rules change: every batch of the season is read again once.
+const PARSER = 2;
 
 async function get(url) {
   const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (First Division League match centre updater)", "accept-language": "ar,en;q=0.8" } });
@@ -97,6 +99,7 @@ async function main() {
   try { html = await get(INDEX); } catch (e) { log("index failed:", e.message); return; }
   const batches = parseIndex(html);
   if (!batches.length) { log("no batches found on the index page; file left unchanged"); return; }
+  if (prev.parser !== PARSER) { log("reading rules changed: every batch is read again"); prev.batches = {}; }
   const known = new Map(prev.decisions.map((d) => [d.no, d]));
   let added = 0, read = 0;
   for (const b of batches) {
@@ -107,6 +110,9 @@ async function main() {
       const rows = parseBatch(page, teamOf, url);
       if (!rows || rows.length !== b.count) { log("batch", b.date, "rows", rows && rows.length, "expected", b.count, "- skipped"); continue; }
       read++;
+      const comps = {};
+      for (const x of rows) comps[x.comp] = (comps[x.comp] || 0) + 1;
+      log("batch", b.date, "rows", rows.length, "first division", rows.filter((x) => isFdl(x.comp)).length, JSON.stringify(comps));
       for (const d of rows.filter((x) => isFdl(x.comp))) {
         if (!known.has(d.no)) added++;
         known.set(d.no, tidy(d));
@@ -125,7 +131,7 @@ async function main() {
     if (next.length) d.out = next.map((m) => ({ date: m.date, home: m.home, away: m.away, round: m.round || null }));
   }
   const decisions = [...known.values()].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : parseInt(b.no) - parseInt(a.no)));
-  const out = { source: INDEX, checked: new Date().toISOString().slice(0, 10), batches: prev.batches, decisions };
+  const out = { source: INDEX, parser: PARSER, checked: new Date().toISOString().slice(0, 10), batches: prev.batches, decisions };
   const body = "/* سجل الانضباط: قرارات لجنة الانضباط والأخلاق في دوري الدرجة الأولى للمحترفين.\n   يحدّثه scripts/discipline.mjs تلقائياً من موقع الاتحاد السعودي لكرة القدم. */\nwindow.DISCIPLINE = " + JSON.stringify(out, null, 1) + ";\n";
   const before = fs.existsSync(OUT) ? fs.readFileSync(OUT, "utf8").replace(/"checked": "[^"]*",?\n?/, "") : "";
   if (before === body.replace(/"checked": "[^"]*",?\n?/, "")) { log("no changes"); return; }
