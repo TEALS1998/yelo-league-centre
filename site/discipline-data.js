@@ -2,7 +2,7 @@
    يحدّثه scripts/discipline.mjs تلقائياً من موقع الاتحاد السعودي لكرة القدم. */
 window.DISCIPLINE = {
  "source": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4",
- "parser": 3,
+ "parser": 4,
  "checked": "2026-11-24",
  "batches": {
   "2026-11-24": 4,
@@ -299,6 +299,42 @@ window.DISCIPLINE = {
      "round": 2
     }
    ]
+  },
+  {
+   "no": "8/ل ض/2026",
+   "date": "2026-08-24",
+   "match": {
+    "home": "الأنوار",
+    "away": "الأهلي",
+    "date": "2026-08-17"
+   },
+   "person": "عيسى المحياني",
+   "role": "مدرب",
+   "club": "الأنوار",
+   "reason": "غياب مدرب نادي الأنوار/ عيسى المحياني عن المؤتمر الصحفي بعد نهاية المباراة",
+   "ban": 0,
+   "fine": 22500,
+   "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-08-24",
+   "kind": "cup",
+   "appeal": false
+  },
+  {
+   "no": "7/ل ض/2026",
+   "date": "2026-08-24",
+   "match": {
+    "home": "جدة",
+    "away": "الخلود",
+    "date": "2026-08-19"
+   },
+   "person": "ريان فلاتة",
+   "role": "لاعب",
+   "club": "جدة",
+   "reason": "بطاقة حمراء مباشرة لقيامه باللعب العنيف تجاه لاعب الفريق المنافس",
+   "ban": 1,
+   "fine": 7500,
+   "url": "https://www.saff.com.sa/about.php?id=3&type=13&menu=4&mdate=2026-08-24",
+   "kind": "cup",
+   "appeal": false
   }
  ]
 };
