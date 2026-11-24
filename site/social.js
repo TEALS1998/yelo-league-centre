@@ -23,7 +23,7 @@ window.SOCIAL = {
   "الجيل":    { x: "jeel_club",       ig: "jeel_club" }
  }
 };
-/* Draws the X / Instagram / LinkedIn buttons into an element. */
+/* Draws the X and Instagram buttons into an element (LinkedIn removed at the owner's request). */
 window.drawSocial = function (el, s, label) {
   if (!el || !s) return;
   const I = {
@@ -36,7 +36,5 @@ window.drawSocial = function (el, s, label) {
   let h = "";
   if (s.x) h += a("x", "https://x.com/" + s.x, "X · @" + s.x);
   if (s.ig) h += a("ig", "https://www.instagram.com/" + s.ig + "/", "Instagram · @" + s.ig);
-  h += s.li ? a("li", "https://www.linkedin.com/company/" + s.li + "/", "LinkedIn · " + label)
-            : a("li", "https://www.linkedin.com/search/results/companies/?keywords=" + encodeURIComponent("نادي " + label), "LinkedIn · بحث عن " + label);
   el.innerHTML = h; el.hidden = false;
 };
