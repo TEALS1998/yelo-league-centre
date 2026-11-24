@@ -14,7 +14,7 @@ const INDEX = BASE + "about.php?id=3&type=13&menu=4";
 const log = (...a) => console.log("[discipline]", ...a);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Bump when the reading rules change: every batch of the season is read again once.
-const PARSER = 2;
+const PARSER = 3;
 
 async function get(url) {
   const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (First Division League match centre updater)", "accept-language": "ar,en;q=0.8" } });
@@ -94,6 +94,18 @@ function loadOut() {
 async function main() {
   const { D } = loadData();
   const teamOf = teamMatcher(D);
+  // A decision is ours when SAFF labels it First Division League, or when SAFF leaves the competition
+  // empty or names the King's Cup and the match is one of our clubs' first team matches this season.
+  const SM = D.seasons[D.current].matches;
+  const findMatch = (d) => d.match.date && SM.find((m) => m.date === d.match.date && m.home === d.match.home && m.away === d.match.away);
+  const ours = (d) => {
+    if (isFdl(d.comp)) { d.kind = "league"; return true; }
+    if (/تحت|سيدات|السيدات|الصالات|الشاطئية|روشن|الممتاز|الثانية|جوّي|جوي/.test(d.comp)) return false;
+    const m = findMatch(d);
+    if (!m) return false;
+    d.kind = m.comp === "cup" ? "cup" : "league";
+    return true;
+  };
   const prev = loadOut() || { source: INDEX, batches: {}, decisions: [] };
   let html;
   try { html = await get(INDEX); } catch (e) { log("index failed:", e.message); return; }
@@ -112,8 +124,9 @@ async function main() {
       read++;
       const comps = {};
       for (const x of rows) comps[x.comp] = (comps[x.comp] || 0) + 1;
-      log("batch", b.date, "rows", rows.length, "first division", rows.filter((x) => isFdl(x.comp)).length, JSON.stringify(comps));
-      for (const d of rows.filter((x) => isFdl(x.comp))) {
+      log("batch", b.date, "rows", rows.length, "first division", rows.filter((x) => ours(x)).length, JSON.stringify(comps));
+      for (const x of rows) if (!x.comp || /خادم الحرمين/.test(x.comp)) log("  check", b.date, x.no, "|", x.comp || "(no competition)", "|", x.match.home, "-", x.match.away, x.match.date, "|", x.role, x.club, "|", ours(x) ? "kept" : "left out");
+      for (const d of rows.filter((x) => ours(x))) {
         if (!known.has(d.no)) added++;
         known.set(d.no, tidy(d));
       }
@@ -127,7 +140,8 @@ async function main() {
   for (const d of known.values()) {
     delete d.out;
     if (!d.ban || /^(نادي|احتجاج)$/.test(d.role) || !d.match.date) continue;
-    const next = L.filter((m) => (m.home === d.club || m.away === d.club) && m.date > d.match.date).slice(0, d.ban);
+    const pool = d.kind === "cup" ? S.matches.filter((m) => m.comp === "cup" && m.status !== "postponed").sort((x, y) => (x.date < y.date ? -1 : 1)) : L;
+    const next = pool.filter((m) => (m.home === d.club || m.away === d.club) && m.date > d.match.date).slice(0, d.ban);
     if (next.length) d.out = next.map((m) => ({ date: m.date, home: m.home, away: m.away, round: m.round || null }));
   }
   const decisions = [...known.values()].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : parseInt(b.no) - parseInt(a.no)));
