@@ -533,7 +533,7 @@ window.LEAGUE_DATA = {
    "capNote": null,
    "track": false,
    "trackTxt": null,
-   "roof": "partial",
+   "roof": "full",
    "surface": "n"
   },
   "اس اتش جي ارينا": {
@@ -541,7 +541,7 @@ window.LEAGUE_DATA = {
    "capNote": null,
    "track": false,
    "trackTxt": null,
-   "roof": "partial",
+   "roof": "full",
    "surface": "n"
   },
   "الامير فيصل بن فهد": {
@@ -557,7 +557,7 @@ window.LEAGUE_DATA = {
    "capNote": null,
    "track": false,
    "trackTxt": null,
-   "roof": "partial",
+   "roof": "full",
    "surface": "n"
   },
   "الامير عبدالله الفيصل": {
@@ -565,7 +565,7 @@ window.LEAGUE_DATA = {
    "capNote": null,
    "track": true,
    "trackTxt": null,
-   "roof": "partial",
+   "roof": "full",
    "surface": "n"
   },
   "الامير محمد بن فهد": {
@@ -573,7 +573,7 @@ window.LEAGUE_DATA = {
    "capNote": null,
    "track": true,
    "trackTxt": null,
-   "roof": "partial",
+   "roof": "full",
    "surface": "n"
   },
   "الاتفاق": {
@@ -581,7 +581,7 @@ window.LEAGUE_DATA = {
    "capNote": null,
    "track": false,
    "trackTxt": null,
-   "roof": "partial",
+   "roof":"full",
    "surface": "n"
   },
   "ميدان تمويل الاولي": {
@@ -589,7 +589,7 @@ window.LEAGUE_DATA = {
    "capNote": null,
    "track": false,
    "trackTxt": null,
-   "roof": "partial",
+   "roof": "full",
    "surface": "n"
   },
   "الامير عبدالله بن جلوي": {
@@ -619,7 +619,7 @@ window.LEAGUE_DATA = {
   "الحزم": {
    "cap": "5,100",
    "capNote": null,
-   "track": false,
+   "track":true,
    "trackTxt": null,
    "roof": "partial",
    "surface": "n"

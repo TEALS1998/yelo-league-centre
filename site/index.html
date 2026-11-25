@@ -2634,7 +2634,7 @@ function table(){const f=FS.find(x=>x[0]===F)[3],items=MATCHES.filter(f).sort((x
     else if(pp)sc=`<div class="ms${d("status")}"><span class="pill PP">Postponed<span class="ar">مؤجلة</span></span></div>`;
     else sc=`<div class="ms"><span class="pill UP">VS</span></div>`;
     const v=VEN[m.venue],rest=restBefore[m.id];
-    const conf=window.__stConfirmed?window.__stConfirmed(m.venue):/ملعب|استاد|الرياضية/.test(m.venue||"");const where=!m.venue?["Venue TBC","الملعب لم يُعلن"]:!conf?["Venue TBC · "+(v&&v[5]||vEn(m.venue)),"الملعب لم يُعلن · "+(v&&v[6]||m.venue)]:home?[BASE.en+" · home",BASE.ar+" · على أرضه"]:(v&&v.length>=7?[v[5]+" · away",v[6]+" · خارج أرضه"]:[vEn(m.venue),m.venue]);
+    const conf=window.__stConfirmed?window.__stConfirmed(m.venue):/ملعب|استاد|الرياضية|ارينا|أرينا|بارك|ميدان/.test(m.venue||"");const where=!m.venue?["Venue TBC","الملعب لم يُعلن"]:!conf?["Venue TBC · "+(v&&v[5]||vEn(m.venue)),"الملعب لم يُعلن · "+(v&&v[6]||m.venue)]:home?[BASE.en+" · home",BASE.ar+" · على أرضه"]:(v&&v.length>=7?[v[5]+" · away",v[6]+" · خارج أرضه"]:[vEn(m.venue),m.venue]);
     const team=(t,side)=>`<div class="mt ${side}${t===US?" us":""}">${LOGO(t)}<div><b>${tEn(t)}</b><span class="ar">${t}</span></div></div>`;
     const isNew=fresh.has(m.id)&&!firstVisit;
     h+=`<div class="mr${m.id===nxId?" nx":""}${m.changes?" chg":""}" data-mid="${m.id}">
@@ -2918,10 +2918,146 @@ const host=document.getElementById("stadiums");if(!host)return;
 /* -- venue identity: one key per ground, whatever the spelling -- */
 const normAr=s=>String(s||"").replace(/\([^)]*\)/g," ").replace(/[أإآ]/g,"ا").replace(/ة/g,"ه").replace(/ى/g,"ي")
   .replace(/\b(استاد|ملعب|مدينه|الرياضيه|نادي|مدينة)\b/g," ").replace(/(^|\s)(استاد|ملعب|مدينه|الرياضيه|نادي)(?=\s|$)/g," ").replace(/\s+/g," ").trim();
-const STADIUM_WORD=/ملعب|استاد|ستاد|stadium|sports city|الرياضية/i;
+const STADIUM_WORD=/ملعب|استاد|ستاد|ارينا|أرينا|بارك|ميدان|stadium|sports city|arena|park|الرياضية/i;
 const isConfirmed=v=>!!v&&STADIUM_WORD.test(v);
 const cityOfV=v=>{const x=String(v||"").match(/\(([^)]+)\)\s*$/);return x?x[1]:"";};
 const CITY_EN={"المدينة المنورة":"Madinah","حوطة بني تميم":"Hotat Bani Tamim","أبها":"Abha","الزلفي":"Al Zulfi","عنيزة":"Unaizah","البكيرية":"Al Bukiryah","مكة المكرمة":"Makkah","الطائف":"Taif","الجوف":"Al Jouf","حائل":"Hail","الأحساء":"Al Ahsa","بريدة":"Buraydah","جدة":"Jeddah"};
+/* Roshn league grounds, each described from the user's photos (Roshn_Stadiums_2026-27): stand layout, tiers, seat colours, roof, floodlights, surroundings */
+const RSG=(()=>{const L=42.2,R0=49.3;
+  const W=[238,238,236],K=[44,44,48],GR=[150,150,156],SAND=[198,180,148],CON=[188,186,182],GRASS=[[60,140,58],[74,156,66]];
+  const PAL=(list)=>(q,r,t)=>{let h=(q.i*374761393+r*668265263+(t+7)*2147483647)>>>0;h=(h^(h>>>13))*1274126177>>>0;h=((h^(h>>>16))%1000)/1000;let a=0;for(const [c,w] of list){a+=w;if(h<a)return c;}return list[list.length-1][0];};
+  const ALT=(a,b)=>(q,r)=>r%2?a:b,SEC=(cols,len)=>q=>cols[Math.floor(q.s/len)%cols.length];
+  const towers=(h,{bx3,XS,ZS},side,k,seed)=>{for(let i=0;i<k;i++){const x=-XS+20+i*(2*XS-40)/Math.max(1,k-1),z=side*(ZS+30+((i*37+seed)%5)*14),w=10+(i*13+seed)%8,hh=h*(.45+((i*29+seed)%10)/14);
+      bx3(x-w/2,x+w/2,z-w/2,z+w/2,0,hh,[i%3?150:120,i%3?166:140,i%2?184:170],[200,206,214]);}};
+  const blocks=({bx3},list)=>list.forEach(([x0,x1,z0,z1,h,c])=>bx3(x0,x1,z0,z1,0,h,c,c.map(v=>Math.min(255,v+14))));
+  const trees=({tree},x0,x1,z,step,palm)=>{for(let x=x0;x<=x1;x+=step)tree(x,z,palm);};
+  return {
+  /* SHG Arena, Riyadh: a compact box of four stands close to the pitch, black, white and grey seats in a pixel pattern, a white tensile roof all
+     round, tall lamp bank masts at the corners, city towers and a training pitch next door */
+  shg:{m:7,rc:5,site:[176,166,150],apron:[64,140,62],grass:GRASS,checker:true,aisle:14,aisleCol:[120,120,126],
+    tiers:[{d0:.6,y0:1.4,rows:18,rd:.82,rh:.5,col:PAL([[W,.5],[K,.3],[GR,.2]]),backH:2.2}],facade:[236,234,228],cap:[214,212,206],
+    roofs:[{dIn:3,dOut:19,yIn:13.5,yOut:12.5,col:[246,244,238],under:[226,222,214],rib:2,ribCol:[214,212,206],ribH:1.8,lights:3}],
+    masts:[[-74,-53,44,9,12],[74,-53,44,9,12],[-74,53,44,9,12],[74,53,44,9,12]],screens:[[-71,0,12,5,12]],
+    extra:a=>{a.rect(-a.XS,a.XS,a.ZS-10,a.ZS,[72,75,82]);a.rect(-a.XS,a.XS,-a.ZS-60,-a.ZS-6,[86,150,70]);towers(60,a,-1,6,3);
+      blocks(a,[[-a.XS+4,-a.XS+44,a.ZS-34,a.ZS-14,8,[226,222,214]],[a.XS-50,a.XS-6,a.ZS-30,a.ZS-14,6,[214,210,200]]]);}},
+  /* Al-Awwal Park, Riyadh (Al Nassr): two tiers of yellow seats on all four sides, blue lettering across the main stand and a blue block in one corner,
+     a gold steel roof over every seat, a dark bronze facade with coloured fins, car parks and desert round it */
+  awwal:{m:6,rc:10,site:[196,176,140],apron:[62,138,60],grass:GRASS,aisle:11,aisleCol:[210,170,40],front:[30,70,150],
+    tiers:[{d0:.6,y0:1.4,rows:16,rd:.82,rh:.48,col:q=>q.side==="end"&&q.x<0?[34,80,170]:ALT([244,196,30],[236,186,24])(q,0),backH:.4},
+      {d0:14.4,y0:12.4,yf:9.1,rows:18,rd:.85,rh:.6,col:ALT([244,198,32],[236,188,26]),suite:[9.1,[36,44,62]],backH:1.6,lip:[34,80,170]}],
+    letters:[{side:"main",tier:1,text:"ALNASSR",row0:3,sx:1,sy:2,col:[30,76,170]}],
+    facade:q=>[[92,70,48],[92,70,48],[214,170,40],[92,70,48],[150,60,130],[92,70,48],[220,120,40]][Math.floor(q.s/9)%7],cap:[120,92,60],
+    roofs:[{dIn:6,dOut:32,yIn:27,yOut:25,col:[206,166,64],under:[176,140,60],edge:[226,188,80],rib:2,ribCol:[150,118,50],ribH:2.2,lights:2}],
+    screens:[[-80,0,16,7,18],[80,0,16,7,18]],
+    extra:a=>{for(let x=-a.XS+10;x<a.XS-20;x+=46)a.rect(x,x+40,a.ZS-26,a.ZS-6,[110,112,118]);a.rect(-a.XS,a.XS,-a.ZS-90,-a.ZS-6,[206,188,150]);
+      blocks(a,[[-40,40,-a.ZS-30,-a.ZS-12,9,[226,220,208]],[a.XS-40,a.XS-4,-a.ZS+4,-a.ZS+26,6,[216,210,196]]]);towers(90,{...a,ZS:a.ZS+180},-1,5,4);}},
+  /* Kingdom Arena, Riyadh (Al Hilal): an indoor arena, two tiers of navy seats flecked with grey right up to the touchline, suites between, a blue
+     LED band, a closed roof on deep steel trusses (shown open here so you can see inside), a giant screen at one end, a dark box outside */
+  kingdom:{m:6,rc:2,site:[150,146,140],apron:[56,128,58],grass:[[52,126,52],[64,140,60]],aisle:10,aisleCol:[110,114,124],front:[40,90,220],
+    tiers:[{d0:.6,y0:1.6,rows:18,rd:.82,rh:.52,col:PAL([[[30,40,72],.62],[[24,32,60],.2],[[140,146,160],.18]]),backH:.4},
+      {d0:15.6,y0:14.6,yf:11,rows:16,rd:.86,rh:.62,col:PAL([[[32,42,76],.64],[[26,34,62],.2],[[150,156,170],.16]]),suite:[11,[60,90,200]],backH:2,lip:[40,96,230]}],
+    facade:[46,50,62],cap:[40,44,54],
+    roofs:[{dIn:22,dOut:33,yIn:32,yOut:32,col:[52,56,68],under:[30,32,40],edge:[40,90,220],lights:2,truss:{h:.4,step:14,col:[90,94,108],span:1}}],
+    screens:[[-62,0,30,12,16,[40,90,220]]],
+    extra:a=>{a.rect(-a.XS,a.XS,a.ZS-24,a.ZS-4,[96,98,104]);blocks(a,[[a.XS-30,a.XS-4,-30,30,10,[60,64,76]]]);towers(60,a,-1,4,7);}},
+  /* Prince Abdullah Al Faisal Sports City, Jeddah: a bowl round a light blue track, seats in blocks of orange, blue, green and yellow with orange and green
+     on the main stand, a beige membrane roof all round held by leaning masts and cables, a dark ring outside, green lit gardens */
+  paf:{track:[86,160,214],infield:[90,170,120],apron:[96,172,220],site:[168,160,140],grass:GRASS,checker:true,aisle:16,aisleCol:[80,170,100],
+    tiers:[{d0:.6,y0:1.3,rows:14,rd:.85,rh:.48,col:(q,r)=>q.side==="main"?[234,152,48]:SEC([[36,96,196],[236,150,50],[70,164,96],[238,202,52]],26)(q),backH:.3},
+      {d0:12.9,y0:9.4,yf:8.0,rows:14,rd:.85,rh:.55,col:(q,r)=>q.side==="main"?[226,160,70]:SEC([[70,164,96],[36,96,196],[238,202,52],[236,150,50]],26)(q),suite:[8,[236,232,222]],backH:1.4}],
+    facade:[70,56,46],cap:[60,50,42],
+    roofs:[{dIn:9,dOut:27,yIn:22,yOut:20,col:[232,222,198],under:[206,196,172],rib:3,ribCol:[214,204,180],lights:3,mast:9,mastH:12,mastCol:[92,86,80]}],
+    screens:[[-L-50,0,14,6,15]],
+    extra:a=>{a.rect(-a.XS,a.XS,a.ZS-20,a.ZS-6,[70,140,80]);trees(a,-a.XS+8,a.XS-8,a.ZS-13,10,true);a.rect(-a.XS,a.XS,-a.ZS-70,-a.ZS-8,[110,112,118]);}},
+  /* Prince Faisal bin Fahd Sports City, Riyadh: a dark blue track, a bowl of blue seats with white stairways all round, a covered main stand,
+     four tall floodlight pylons, a screen at each end */
+  pfbf:{track:[40,62,124],infield:[46,70,132],apron:[52,80,140],site:[186,172,146],grass:GRASS,aisle:9,aisleCol:[232,232,234],
+    tiers:[{d0:.6,y0:1.2,rows:24,rd:.84,rh:.5,col:ALT([46,128,214],[40,118,204]),backH:1.6},
+      {d0:21,y0:13.6,yf:12.2,rows:9,rd:.85,rh:.58,col:ALT([52,132,218],[44,122,208]),keep:q=>q.side==="main",suite:[12.2,[40,46,60]],backH:1.4}],
+    facade:[226,218,200],cap:[214,206,190],
+    roofs:[{dIn:6,dOut:30,yIn:24,yOut:21,col:[64,70,86],under:[46,50,62],keep:q=>q.side==="main",rib:3,cols:5}],
+    masts:[[-L-62,-58,58,8,10],[L+62,-58,58,8,10],[-L-62,58,58,8,10],[L+62,58,58,8,10]],screens:[[-L-58,0,14,6,16],[L+58,0,14,6,16]],
+    extra:a=>{blocks(a,[[-20,40,-a.ZS-40,-a.ZS-10,14,[226,214,186]],[-a.XS+6,-a.XS+40,a.ZS-26,a.ZS-6,8,[220,210,190]]]);a.rect(30,a.XS,a.ZS-30,a.ZS-4,[90,150,80]);trees(a,-a.XS+50,a.XS-8,a.ZS-34,12,true);}},
+  /* Prince Mohammed bin Fahd Stadium, Dammam: a blue track and a bowl of blue seats with pink and violet blocks, a white space-frame roof round the whole bowl,
+     four giant lamp bank towers */
+  pmbf:{track:[74,136,204],infield:[96,176,140],apron:[82,150,210],site:[184,176,160],grass:GRASS,checker:true,aisle:13,aisleCol:[226,226,230],
+    tiers:[{d0:.6,y0:1.3,rows:22,rd:.85,rh:.52,col:(q,r)=>q.side==="main"&&Math.abs(q.x)<26?(r%2?[186,96,170]:[170,84,156]):q.side==="corner"&&q.x<0&&r>12?[214,120,150]:ALT([52,132,214],[44,120,204])(q,r),backH:1.2}],
+    facade:[230,228,224],cap:[214,214,214],
+    roofs:[{dIn:4,dOut:26,yIn:17,yOut:15,col:[244,244,244],col2:[212,216,222],under:[196,200,206],lattice:true,lights:3}],
+    masts:[[-L-50,-50,48,12,16],[L+50,-50,48,12,16],[-L-50,50,48,12,16],[L+50,50,48,12,16]],
+    extra:a=>{for(let x=-a.XS+6;x<a.XS-40;x+=40)a.rect(x,x+34,-a.ZS-60,-a.ZS-10,[120,122,128]);blocks(a,[[a.XS-30,a.XS-4,a.ZS-40,a.ZS-6,12,[226,206,170]]]);trees(a,-a.XS+8,a.XS-8,a.ZS-6,12,false);}},
+  /* Al Majma'ah Sports City: a terracotta track, a covered main stand of green seats under a steel roof, a long low open stand opposite, open ends,
+     four floodlight masts, palms */
+  maj:{track:[186,104,84],infield:[96,170,96],apron:[196,120,96],site:[196,182,150],grass:GRASS,aisle:12,aisleCol:[226,224,220],
+    tiers:[{d0:.6,y0:1.6,rows:16,rd:.82,rh:.52,col:ALT([30,112,80],[26,100,72]),keep:q=>q.side==="main"&&Math.abs(q.x)<50,backH:1.6},
+      {d0:.6,y0:1,rows:7,rd:.8,rh:.42,col:ALT([214,206,190],[200,192,176]),keep:q=>q.side==="opp"&&Math.abs(q.x)<54,backH:.6}],
+    facade:[226,214,186],cap:[200,190,170],
+    roofs:[{dIn:3,dOut:18,yIn:17,yOut:14,col:[170,172,178],under:[110,112,120],keep:q=>q.side==="main"&&Math.abs(q.x)<52,rib:2,ribCol:[120,124,132],ribH:2.4,cols:6}],
+    masts:[[-L-46,-50,40,7,9],[L+46,-50,40,7,9],[-L-46,50,40,7,9],[L+46,50,40,7,9]],
+    extra:a=>{trees(a,-a.XS+6,a.XS-6,a.ZS-8,10,true);trees(a,-a.XS+6,a.XS-6,-a.ZS+8,14,true);blocks(a,[[-a.XS+4,-a.XS+30,-30,30,6,[222,212,190]]]);}},
+  /* King Khalid Sports City, Tabuk: a brown track, a big covered main stand of dark blue and green seats under a brown cantilever roof, a long low
+     stand opposite in bands of blue, green, pink and yellow, small end stands, four masts, desert all round */
+  tbk:{track:[170,122,92],infield:[150,140,100],apron:[178,132,100],site:[184,162,128],grass:GRASS,aisle:11,aisleCol:[200,190,176],
+    tiers:[{d0:.6,y0:1.6,rows:20,rd:.84,rh:.55,col:(q,r)=>r<10?ALT([34,62,112],[30,56,104])(q,r):ALT([60,138,92],[52,126,84])(q,r),keep:q=>q.side==="main"||(q.side==="corner"&&q.z<0),backH:1.8},
+      {d0:.6,y0:1.2,rows:9,rd:.8,rh:.44,col:(q,r)=>[[44,92,220],[60,180,80],[220,110,180],[240,220,40],[44,92,220],[60,180,80],[240,220,40],[240,220,40],[44,92,220]][r],keep:q=>q.side==="opp"||q.side==="end",backH:.6}],
+    facade:[206,190,166],cap:[184,170,150],
+    roofs:[{dIn:3,dOut:22,yIn:22,yOut:17,col:[150,108,74],under:[120,86,60],keep:q=>q.side==="main"&&Math.abs(q.x)<44,rib:2,ribCol:[110,80,56],ribH:3,cols:6}],
+    masts:[[-L-54,-56,46,8,10],[L+54,-56,46,8,10],[-L-54,56,46,8,10],[L+54,56,46,8,10]],
+    extra:a=>{a.rect(-a.XS,a.XS,a.ZS-24,a.ZS-4,[150,148,144]);blocks(a,[[-a.XS+4,-a.XS+24,-a.ZS+10,-a.ZS+40,5,[214,206,190]],[a.XS-28,a.XS-4,-a.ZS+10,-a.ZS+30,5,[214,206,190]]]);}},
+  /* King Abdullah Sports City, Buraydah: a red track inside a bowl of blue seats, a main stand under a flat brown roof on tall columns with green and red
+     seats, a screen, floodlight masts at the corners */
+  bur:{track:[200,96,84],infield:[200,110,96],apron:[206,112,98],site:[160,150,132],grass:GRASS,aisle:10,aisleCol:[226,226,230],
+    tiers:[{d0:.6,y0:1.4,rows:26,rd:.84,rh:.5,col:(q,r)=>q.side==="main"&&Math.abs(q.x)<38?(r<8?[46,150,90]:r<14?[196,56,52]:[46,140,84]):ALT([46,118,206],[40,108,196])(q,r),backH:1.6}],
+    facade:[214,206,196],cap:[196,190,182],
+    roofs:[{dIn:2,dOut:26,yIn:26,yOut:25,col:[176,150,116],under:[150,126,96],edge:[196,172,140],keep:q=>q.side==="main"&&Math.abs(q.x)<40,cols:4,colCol:[206,196,180]}],
+    masts:[[-L-56,-58,50,7,9],[L+56,-58,50,7,9],[-L-56,58,50,7,9],[L+56,58,50,7,9]],screens:[[0,R0+26,14,6,15]],
+    extra:a=>{trees(a,-a.XS+8,a.XS-8,a.ZS-8,10,true);blocks(a,[[-a.XS+4,-a.XS+44,-a.ZS+6,-a.ZS+30,8,[224,214,196]]]);}},
+  /* King Abdullah Sports City (Al Inma Stadium), Jeddah: a huge bowl in two tiers of orange seats with green and white blocks, a white membrane roof cut
+     into star points all the way round, a grey ring outside */
+  inma:{m:9,rc:22,site:[180,170,152],apron:[56,128,56],grass:GRASS,aisle:12,aisleCol:[150,140,132],plaza:[[196,190,180],14],
+    tiers:[{d0:.6,y0:1.6,rows:24,rd:.85,rh:.5,col:(q,r)=>q.side==="end"&&q.x>0?PAL([[[70,150,90],.5],[[236,232,222],.2],[[230,128,60],.3]])(q,r,0):PAL([[[236,128,58],.45],[[222,96,48],.3],[[242,172,100],.25]])(q,r,0),backH:.4},
+      {d0:21.4,y0:16.2,yf:12.8,rows:24,rd:.88,rh:.66,col:(q,r)=>q.side==="opp"?PAL([[[80,160,96],.45],[[236,232,222],.25],[[230,140,80],.3]])(q,r,1):PAL([[[236,132,64],.45],[[214,100,56],.3],[[242,176,110],.25]])(q,r,1),suite:[12.8,[60,66,80]],backH:2}],
+    facade:[150,150,154],cap:[130,132,136],
+    roofs:[{dIn:12,dOut:46,yIn:38,yOut:34,col:[150,154,160],under:[120,124,130],edge:[220,220,220],lights:2,petal:4,petalCol:[248,248,246],petalIn:1,petalUp:6}],
+    screens:[[-108,0,18,8,26]],
+    extra:a=>{for(let x=-a.XS+6;x<a.XS-40;x+=44)a.rect(x,x+38,a.ZS+6,a.ZS+40,[110,112,118]);trees(a,-a.XS+8,a.XS-8,-a.ZS+6,12,true);}},
+  /* Al Ettifaq Club Stadium, Dammam: a tight box with rounded corners, one tier of seats mixed red, green and white all round, a white tensile roof
+     over every stand, floodlight masts outside the corners, sports pitches and the city next door */
+  etf:{m:5,rc:10,site:[178,168,150],apron:[60,136,60],grass:GRASS,checker:true,aisle:12,aisleCol:[220,220,222],
+    tiers:[{d0:.6,y0:1.4,rows:17,rd:.82,rh:.5,col:PAL([[[200,40,48],.4],[[30,130,72],.35],[W,.25]]),backH:2}],
+    facade:[236,232,222],cap:[220,216,206],
+    roofs:[{dIn:2,dOut:18,yIn:13,yOut:12,col:[246,244,236],under:[224,220,210],arch:3,archH:2.2,lights:3}],
+    masts:[[-82,-56,40,6,8],[82,-56,40,6,8],[-82,56,40,6,8],[82,56,40,6,8]],
+    extra:a=>{a.rect(-60,60,a.ZS+4,a.ZS+50,[66,142,64]);blocks(a,[[-a.XS+4,-10,-a.ZS-40,-a.ZS-8,8,[226,222,210]]]);towers(70,a,-1,3,5);}},
+  /* Al Taawoun Club Stadium, Buraydah: a covered main stand under a white arched roof, the stand opposite in yellow with AL TAAWOUN FC in blue, blue end stands,
+     four floodlight masts, open country round it */
+  taw:{m:7,rc:3,site:[178,164,136],apron:[58,134,58],grass:GRASS,aisle:12,aisleCol:[250,210,40],
+    tiers:[{d0:.6,y0:1.2,rows:12,rd:.8,rh:.5,col:ALT([244,206,32],[236,196,26]),keep:q=>q.side==="main",backH:1.4},
+      {d0:.6,y0:1.6,rows:13,rd:.8,rh:.52,col:ALT([36,70,168],[30,62,156]),keep:q=>q.side==="opp",backH:1.2},
+      {d0:.6,y0:1,rows:8,rd:.8,rh:.45,col:(q,r)=>r<2?[244,206,32]:ALT([36,70,168],[30,62,156])(q,r),keep:q=>q.side==="end",backH:1}],
+    letters:[{side:"main",tier:0,text:"TAAWOUN",row0:1,sx:2,sy:2,col:[30,64,160]}],
+    facade:[226,218,200],cap:[210,200,180],
+    roofs:[{dIn:2,dOut:13,yIn:12,yOut:11.5,col:[240,240,244],under:[200,206,220],keep:q=>q.side==="opp",arch:3,archH:2,lights:3}],
+    masts:[[-74,-58,40,6,8],[74,-58,40,6,8],[-74,58,40,6,8],[74,58,40,6,8]],screens:[[-66,-30,8,4,10],[66,-30,8,4,10]],
+    extra:a=>{blocks(a,[[-a.XS+4,-a.XS+34,a.ZS-26,a.ZS-6,7,[220,212,196]]]);a.rect(-a.XS,a.XS,-a.ZS-10,-a.ZS-2,[96,98,104]);}},
+  /* Al Hazem Club Stadium, Ar Rass: a red track, a big stand of blue seats with yellow and orange stair edges, the main stand covered by a steel roof,
+     four floodlight masts, the town close round it */
+  hzm:{track:[192,92,72],infield:[196,104,84],apron:[198,110,90],site:[150,140,126],grass:GRASS,aisle:7,aisleCol:[240,200,40],
+    tiers:[{d0:.6,y0:1.4,rows:14,rd:.82,rh:.5,col:ALT([44,112,206],[38,102,194]),keep:q=>q.side==="main"&&Math.abs(q.x)<52,backH:1.6},
+      {d0:.6,y0:1.4,rows:18,rd:.82,rh:.52,col:ALT([46,116,210],[40,106,198]),keep:q=>q.side==="opp"||(q.side==="corner"&&q.z>0),backH:1.4}],
+    facade:[222,214,200],cap:[204,196,184],
+    roofs:[{dIn:3,dOut:16,yIn:16,yOut:13,col:[206,208,212],under:[150,154,160],keep:q=>q.side==="main"&&Math.abs(q.x)<50,rib:2,ribCol:[170,172,178],ribH:2.2,cols:6}],
+    masts:[[-L-42,-50,40,6,8],[L+42,-50,40,6,8],[-L-42,52,40,6,8],[L+42,52,40,6,8]],screens:[[-L-44,0,10,5,10]],
+    extra:a=>{blocks(a,[[-a.XS+4,-a.XS+30,a.ZS-24,a.ZS-6,9,[214,206,192]],[a.XS-34,a.XS-6,a.ZS-30,a.ZS-8,12,[200,196,190]],[-30,30,-a.ZS-34,-a.ZS-8,10,[220,214,200]]]);a.rect(-a.XS,a.XS,-a.ZS+2,-a.ZS+12,[120,120,124]);}},
+  /* Mayadeen Tamweel Al Oula, Al Ahsa (Al Fateh): a box of four stands in a mosaic of blue, white and green seats, a white tensile roof of arches all round,
+     floodlight masts at the corners, training pitches beside it */
+  myd:{m:6,rc:7,site:[194,180,152],apron:[60,140,62],grass:GRASS,aisle:12,aisleCol:[232,232,234],
+    tiers:[{d0:.6,y0:1.4,rows:16,rd:.82,rh:.5,col:PAL([[[40,80,184],.5],[W,.25],[[60,164,112],.25]]),backH:2}],
+    facade:[240,240,238],cap:[226,226,224],
+    roofs:[{dIn:2,dOut:17,yIn:13.5,yOut:12.5,col:[248,248,250],under:[226,226,234],arch:2,archH:2.6,lights:3}],
+    masts:[[-80,-55,40,6,8],[80,-55,40,6,8],[-80,55,40,6,8],[80,55,40,6,8]],
+    extra:a=>{a.rect(-a.XS-120,-a.XS-10,-60,60,[72,150,66]);a.rect(a.XS+10,a.XS+120,-60,60,[72,150,66]);blocks(a,[[-40,40,a.ZS+6,a.ZS+30,8,[226,220,206]],[-a.XS+4,-a.XS+30,-a.ZS+6,-a.ZS+30,6,[214,208,196]]]);}}
+  };})();
 /* documented facts per ground (keyed by normalised Arabic name) */
 const SP="Saudipedia (Ministry of Sport data)";
 const FACTS={
@@ -2947,7 +3083,35 @@ const FACTS={
  "العروبه":{cap:"7,000",capA:true,track:false,trackTxt:["No track, sandy surround","لا يوجد مضمار، أرض رملية حول الملعب"],roof:"partial",model:{cap:7000,roof:"partial",custom:"orb"},refs:[]},
  "البكيريه":{cap:"5,000",capA:true,track:true,roof:"partial",model:{cap:5000,roof:"partial",custom:"buk"},refs:[]},
  "جامعه الجوف":{cap:"15,000",capA:true,track:true,roof:"partial",model:{cap:15000,roof:"partial",custom:"jfu"},
-   refs:[["Sport Eden","https://sporteden.com/football/venue/12475/al-jouf-university-stadium"]]}
+   refs:[["Sport Eden","https://sporteden.com/football/venue/12475/al-jouf-university-stadium"]]},
+ "المملكه ارينا":{cap:"26,090",track:false,roof:"full",model:{cap:26090,roof:"full",custom:"rs",rs:Object.assign({track:false},RSG.kingdom)},
+   basis:"ref",note:["Built from photos of the arena: two tiers of navy seats flecked with grey right up to the touchline, suites between them, a blue LED band, a giant screen at one end. The real roof is closed; it is drawn open over the pitch so you can see inside.","مبني من صور الملعب: طابقان من المقاعد الكحلية المنقطة بالرمادي ملاصقة للملعب، وبينهما الأجنحة، وشريط إضاءة أزرق، وشاشة عملاقة في أحد الطرفين. السقف الحقيقي مغلق، ورسمناه مفتوحًا فوق الملعب عشان يبان الداخل."],refs:[]},
+ "الاول بارك":{cap:"26,004",track:false,roof:"full",model:{cap:26004,roof:"full",custom:"rs",rs:Object.assign({track:false},RSG.awwal)},
+   basis:"ref",note:["Built from photos of the ground: two tiers of yellow seats on all four sides with ALNASSR in blue across the main stand, a gold steel roof over every seat, a bronze facade with coloured fins.","مبني من صور الملعب: طابقان من المقاعد الصفراء على الجهات الأربع وكلمة ALNASSR بالأزرق على المدرج الرئيسي، وسقف معدني ذهبي يغطي كل المقاعد، وواجهة برونزية بشرائح ملونة."],refs:[]},
+ "اس اتش جي ارينا":{cap:"13,537",track:false,roof:"full",model:{cap:13537,roof:"full",custom:"rs",rs:Object.assign({track:false},RSG.shg)},
+   basis:"ref",note:["Built from photos of the ground: four stands close to the pitch with black, white and grey seats in a pixel pattern, a white tensile roof all round, lamp bank masts at the corners and city towers beside it.","مبني من صور الملعب: أربعة مدرجات قريبة من الملعب بمقاعد سوداء وبيضاء ورمادية بنقشة بكسل، ومظلة بيضاء تغطي الجهات كلها، وأبراج إنارة في الزوايا، وأبراج المدينة جنبه."],refs:[]},
+ "الامير فيصل بن فهد":{cap:"22,188",track:true,roof:"partial",model:{cap:22188,roof:"partial",custom:"rs",rs:Object.assign({track:true},RSG.pfbf)},
+   basis:"ref",note:["Built from photos of the ground: a dark blue track, a bowl of blue seats with white stairways, a covered main stand with an upper tier, four tall floodlight pylons and a screen at each end.","مبني من صور الملعب: مضمار أزرق غامق، ومدرجات زرقاء دائرية بممرات بيضاء، ومدرج رئيسي مظلل بطابق علوي، وأربعة أبراج إنارة طويلة، وشاشة في كل طرف."],refs:[]},
+ "الانماء بمدينه الملك عبدالله":{cap:"60,342",track:false,roof:"full",model:{cap:60342,roof:"full",custom:"rs",rs:Object.assign({track:false},RSG.inma)},
+   basis:"ref",note:["Built from photos of the ground: a huge bowl in two tiers of orange seats with green and white blocks, and the white membrane roof cut into star points all round.","مبني من صور الملعب: مدرجات ضخمة بطابقين من المقاعد البرتقالية مع كتل خضراء وبيضاء، والسقف الأبيض المقسّم على شكل نجوم حول الملعب كله."],refs:[]},
+ "الامير عبدالله الفيصل":{cap:"27,000",track:true,roof:"full",model:{cap:27000,roof:"full",custom:"rs",rs:Object.assign({track:true},RSG.paf)},
+   basis:"ref",note:["Built from photos of the ground: a light blue track, two tiers of seats in orange, blue, green and yellow blocks, a beige membrane roof all round held by leaning masts, and a dark ring outside.","مبني من صور الملعب: مضمار أزرق فاتح، وطابقان من المقاعد بكتل برتقالية وزرقاء وخضراء وصفراء، ومظلة بيج تغطي الجهات كلها ومشدودة على صواري مائلة، وحلقة داكنة من الخارج."],refs:[]},
+ "الامير محمد بن فهد":{cap:"22,042",track:true,roof:"full",model:{cap:22042,roof:"full",custom:"rs",rs:Object.assign({track:true},RSG.pmbf)},
+   basis:"ref",note:["Built from photos of the ground: a blue track, a bowl of blue seats with pink and violet blocks, a white space-frame roof round the whole bowl and four giant lamp bank towers.","مبني من صور الملعب: مضمار أزرق، ومدرجات زرقاء دائرية فيها كتل وردية وبنفسجية، وسقف شبكي أبيض حول الملعب كله، وأربعة أبراج إنارة ضخمة."],refs:[]},
+ "الاتفاق":{cap:"12,984",track:false,roof:"full",model:{cap:12984,roof:"full",custom:"rs",rs:Object.assign({track:false},RSG.etf)},
+   basis:"ref",note:["Built from photos of the ground: a tight box with rounded corners, seats mixed red, green and white all round, a white tensile roof over every stand and floodlight masts outside the corners.","مبني من صور الملعب: ملعب مربع بزوايا مدورة، ومقاعد بالأحمر والأخضر والأبيض حول الملعب، ومظلة بيضاء تغطي كل المدرجات، وأبراج إنارة خارج الزوايا."],refs:[]},
+ "ميدان تمويل الاولي":{cap:"11,851",track:false,roof:"full",model:{cap:11851,roof:"full",custom:"rs",rs:Object.assign({track:false},RSG.myd)},
+   basis:"ref",note:["Built from photos of the ground: four stands with seats in a mosaic of blue, white and green, a white tensile roof of arches all round, and training pitches beside it.","مبني من صور الملعب: أربعة مدرجات بمقاعد موزايك أزرق وأبيض وأخضر، ومظلة بيضاء بأقواس تغطي الجهات كلها، وملاعب تدريب جنبه."],refs:[]},
+ "الملك عبدالله":{cap:"30,180",track:true,roof:"partial",model:{cap:30180,roof:"partial",custom:"rs",rs:Object.assign({track:true},RSG.bur)},
+   basis:"ref",note:["Built from photos of the ground: a red track inside a bowl of blue seats, a main stand of green and red seats under a flat roof on tall columns, and floodlight masts at the corners.","مبني من صور الملعب: مضمار أحمر داخل مدرجات زرقاء دائرية، ومدرج رئيسي بمقاعد خضراء وحمراء تحت سقف مسطح على أعمدة طويلة، وأبراج إنارة في الزوايا."],refs:[]},
+ "التعاون":{cap:"5,624",track:false,roof:"partial",model:{cap:5624,roof:"partial",custom:"rs",rs:Object.assign({track:false},RSG.taw)},
+   basis:"ref",note:["Built from photos of the ground: a stand of yellow seats with TAAWOUN in blue, a covered stand of blue seats opposite under a white arched roof, blue end stands and four floodlight masts.","مبني من صور الملعب: مدرج بمقاعد صفراء مكتوب عليه TAAWOUN بالأزرق، وقباله مدرج مظلل بمقاعد زرقاء تحت مظلة بيضاء بأقواس، ومدرجات زرقاء في الأطراف، وأربعة أبراج إنارة."],refs:[]},
+ "الحزم":{cap:"5,100",track:true,roof:"partial",model:{cap:5100,roof:"partial",custom:"rs",rs:Object.assign({track:true},RSG.hzm)},
+   basis:"ref",note:["Built from photos of the ground: a red track, blue seats with yellow and orange stair edges, the main stand covered by a steel roof, and four floodlight masts.","مبني من صور الملعب: مضمار أحمر، ومقاعد زرقاء بدرجات حوافها صفراء وبرتقالية، ومدرج رئيسي مظلل بسقف معدني، وأربعة أبراج إنارة."],refs:[]},
+ "المجمعه":{cap:"7,000",track:true,roof:"partial",model:{cap:7000,roof:"partial",custom:"rs",rs:Object.assign({track:true},RSG.maj)},
+   basis:"ref",note:["Built from photos of the ground: a terracotta track, a covered main stand of green seats under a steel roof, a long low open stand opposite and four floodlight masts.","مبني من صور الملعب: مضمار بلون الطين، ومدرج رئيسي مظلل بمقاعد خضراء تحت سقف معدني، وقباله مدرج طويل منخفض مكشوف، وأربعة أبراج إنارة."],refs:[]},
+ "الملك خالد":{cap:"12,000",track:true,roof:"partial",model:{cap:12000,roof:"partial",custom:"rs",rs:Object.assign({track:true},RSG.tbk)},
+   basis:"ref",note:["Built from photos of the ground: a brown track, a covered main stand of dark blue and green seats under a brown roof, a low stand opposite in bands of blue, green, pink and yellow, and four masts.","مبني من صور الملعب: مضمار بني، ومدرج رئيسي مظلل بمقاعد كحلية وخضراء تحت سقف بني، وقباله مدرج منخفض بصفوف زرقاء وخضراء ووردية وصفراء، وأربعة أبراج إنارة."],refs:[]}
 };
 /* Hail's SAFF name carries "بن جلوي"; the ground is Prince Abdulaziz bin Musaed Sports City */
 const factsFor=k=>FACTS[k]||null;
@@ -3043,7 +3207,7 @@ function openStadium(k,scroll=true){const s=SMAP.get(k);if(!s)return;
   const fact=(l,a,v)=>`<div><span>${l}<span class="ar">${a}</span></span><b>${v}</b></div>`;
   det.hidden=false;
   det.innerHTML=`<div class="sdh"><div><div class="stk">STADIUM<span class="ar">الملعب</span></div><h3>${esc(s.en)}<span class="ar">${esc(s.ar)}</span></h3>
-     <div class="stmeta">${s.cityEn?`<span>${svgI("venue")}${esc(s.cityEn)} · ${esc(s.cityAr)}</span>`:""}<span>${s.fx.length+s.ex.length} ${US_EN} fixture${s.fx.length+s.ex.length>1?"s":""} · ${s.fx.length+s.ex.length} للعلا</span></div></div>
+     <div class="stmeta">${s.cityEn?`<span>${svgI("venue")}${esc(s.cityEn)} · ${esc(s.cityAr)}</span>`:""}<span>${s.fx.length+s.ex.length} ${US_EN} fixture${s.fx.length+s.ex.length>1?"s":""} · ${AN(s.fx.length+s.ex.length,"match")} لـ${US}</span></div></div>
      <button class="stx" aria-label="Close">×</button></div>
    <div class="sdb">
     <div class="sdv">${has?`<div class="v3"><canvas></canvas>
@@ -3063,10 +3227,10 @@ function openStadium(k,scroll=true){const s=SMAP.get(k);if(!s)return;
          <div><small>CAPACITY · السعة</small><b>${f.cap||"—"}</b><span class="ar">${f.cap?(f.capE?"تقدير من عدد الكراسي في الصور":f.capA?"مقعد تقريبًا":"مقعد"):"غير موثقة"}</span>${capN?`<i class="bar"><u style="width:${pct}%"></u></i>`:""}</div></div>
        <div class="sp sp-track${f.track?"":" off"}"><svg viewBox="0 0 40 40"><rect x="4" y="9" width="32" height="22" rx="11" fill="none" stroke="${f.track?"#c96f5e":"#b9c0ca"}" stroke-width="4"/><rect x="11" y="15" width="18" height="10" rx="2" fill="${f.track?"#72b25a":"#d6dbe2"}"/></svg>
          <div><small>TRACK · المضمار</small><b>${f.trackTxt?f.trackTxt[0]:f.track==null?"Not documented":f.track?"Yes":"No"}</b><span class="ar">${f.trackTxt?f.trackTxt[1]:f.track==null?"غير موثق":f.track?"يوجد مضمار جري":"لا يوجد"}</span></div></div>
-       <div class="sp sp-roof${f.roof==="partial"?"":" off"}"><svg viewBox="0 0 40 40"><path d="M5 14 Q20 4 35 14" fill="none" stroke="${f.roof==="partial"?"#27333e":"#b9c0ca"}" stroke-width="3" stroke-linecap="round"/><path d="M8 34V22l12-4 12 4v12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
-         <div><small>ROOF · التظليل</small><b>${f.roof==="partial"?"Partly covered":f.roof==="none"?"Uncovered":"Not documented"}</b><span class="ar">${f.roof==="partial"?"مظلل جزئيًا":f.roof==="none"?"مكشوف":"غير موثق"}</span></div></div>
+       <div class="sp sp-roof${f.roof==="partial"||f.roof==="full"?"":" off"}"><svg viewBox="0 0 40 40"><path d="M5 14 Q20 4 35 14" fill="none" stroke="${f.roof==="partial"||f.roof==="full"?"#27333e":"#b9c0ca"}" stroke-width="3" stroke-linecap="round"/><path d="M8 34V22l12-4 12 4v12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+         <div><small>ROOF · التظليل</small><b>${f.roof==="partial"?"Partly covered":f.roof==="full"?"Fully covered":f.roof==="none"?"Uncovered":"Not documented"}</b><span class="ar">${f.roof==="partial"?"مظلل جزئيًا":f.roof==="full"?"مظلل بالكامل":f.roof==="none"?"مكشوف":"غير موثق"}</span></div></div>
      </div>`;})()}
-     ${f.refs?`<div class="sdr">References<span class="ar">المراجع</span>: ${f.refs.map(([t,u])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(" · ")}</div>`:`<div class="sdr">No published references found yet<span class="ar">لا توجد مراجع منشورة بعد</span></div>`}
+     ${f.refs&&f.refs.length?`<div class="sdr">References<span class="ar">المراجع</span>: ${f.refs.map(([t,u])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(" · ")}</div>`:`<div class="sdr">No published references found yet<span class="ar">لا توجد مراجع منشورة بعد</span></div>`}
     </div>
     <div class="sdl"><div class="stk">${US_EN.toUpperCase()} FIXTURES HERE<span class="ar">مباريات ${US} في هذا الملعب</span></div>
      ${[1,2].map(hn=>{const fh=s.fx.filter(m=>halfOf(m)===hn),eh=hn===2?s.ex:[];if(!fh.length&&!eh.length)return "";return `<div class="sfh">${hn===1?"First round · <span class=\"ar\">الدور الأول</span>":"Second round · <span class=\"ar\">الدور الثاني</span>"}</div>`+fh.map(m=>`<div class="sfx"><div class="sfd"><b>${dEn(m)}</b><span class="ar">${dAr(m)}</span></div>
@@ -4226,6 +4390,95 @@ function makeViewer(box,P){
       for(let k=0;k<7;k++){const a=k/7*Math.PI*2,ddx=Math.cos(a),ddz=Math.sin(a),w=.55,px=-ddz*w,pz=ddx*w;
         quad(S,[x+px,h,z+pz],[x-px,h,z-pz],[x+ddx*3.4-px*.3,h-1.5,z+ddz*3.4-pz*.3],[x+ddx*3.4+px*.3,h-1.5,z+ddz*3.4+pz*.3],k%2?[70,124,58]:[86,140,66]);}};
     for(let x=-X+6;x<X-4;x+=9)palm(x,R0+12,7.5);
+  } else if(P.custom==="rs"){
+    /* Roshn league grounds: one builder driven by a per-ground description written from the user's photos (see RSG) */
+    const C=P.rs,T=!!C.track,rect=(x0,x1,z0,z1,c,y=0)=>G.push({p:[[x0,y,z0],[x1,y,z0],[x1,y,z1],[x0,y,z1]],c});
+    const bx3=(x0,x1,z0,z1,y0,y1,c,top)=>{quad(S,[x0,y0,z0],[x1,y0,z0],[x1,y1,z0],[x0,y1,z0],c);quad(S,[x0,y0,z1],[x1,y0,z1],[x1,y1,z1],[x0,y1,z1],c);
+      quad(S,[x0,y0,z0],[x0,y0,z1],[x0,y1,z1],[x0,y1,z0],c);quad(S,[x1,y0,z0],[x1,y0,z1],[x1,y1,z1],[x1,y1,z0],c);quad(S,[x0,y1,z0],[x1,y1,z0],[x1,y1,z1],[x0,y1,z1],top||c);};
+    /* the stand line: a rounded rectangle (or the track oval), offset outwards by d */
+    const sx=T?L:52.5+C.m-C.rc,sz=T?0:34+C.m-C.rc,rc=T?R0:C.rc,NQ=T?20:Math.max(4,Math.round(C.rc/1.6)),STP=1.6;
+    const nX=Math.max(1,Math.round(2*sx/STP)),nZ=sz>0?Math.max(1,Math.round(2*sz/STP)):0,B=[];
+    const corner=(cx,cz,a0,k0,k1)=>{for(let k=k0;k<=k1;k++){const a=a0+Math.PI/2*k/NQ;B.push([cx,cz,Math.cos(a),Math.sin(a)]);}};
+    const straight=(x0,z0,x1,z1,nx,nz,n)=>{for(let k=1;k<n;k++)B.push([x0+(x1-x0)*k/n,z0+(z1-z0)*k/n,nx,nz]);};
+    corner(sx,sz,0,0,NQ);straight(sx,sz,-sx,sz,0,1,nX);
+    corner(-sx,sz,Math.PI/2,0,nZ?NQ:NQ-1);if(nZ)straight(-sx,sz,-sx,-sz,-1,0,nZ);
+    corner(-sx,-sz,Math.PI,0,NQ);straight(-sx,-sz,sx,-sz,0,-1,nX);
+    corner(sx,-sz,1.5*Math.PI,0,nZ?NQ:NQ-1);if(nZ)straight(sx,-sz,sx,sz,1,0,nZ);
+    const n=B.length,pt=(i,d,y)=>{const b=B[i%n];return [b[0]+b[2]*(rc+d),y,b[1]+b[3]*(rc+d)];};
+    /* what each segment is: main side (z<0, facing the camera), opposite side, ends, corners; arc length for aisles and lettering */
+    let acc=0;const Q=[];for(let i=0;i<n;i++){const j=(i+1)%n,a=pt(i,0,0),b=pt(j,0,0),nxm=(B[i][2]+B[j][2])/2,nzm=(B[i][3]+B[j][3])/2,len=Math.hypot(b[0]-a[0],b[2]-a[2]);
+      Q.push({i,j,x:(a[0]+b[0])/2,z:(a[2]+b[2])/2,nx:nxm,nz:nzm,s:acc,len,side:nzm<-.72?"main":nzm>.72?"opp":Math.abs(nxm)>.72?"end":"corner",ang:Math.atan2(nzm,nxm)});acc+=len;}
+    const AIS=C.aisle||12;let nextA=AIS/2;Q.forEach(q=>{q.ai=q.s<=nextA&&q.s+q.len>nextA;if(q.ai)nextA+=AIS;});
+    const hsh=(a,b,c)=>{let h=(a*374761393+b*668265263+c*2147483647)>>>0;h=(h^(h>>>13))*1274126177>>>0;return (h^(h>>>16))%1000/1000;};
+    /* lettering in the seats: a 5-row pixel font, read from the camera side */
+    const FONT={A:[".##.","#..#","####","#..#","#..#"],L:["#...","#...","#...","#...","####"],N:["#..#","##.#","#.##","#..#","#..#"],S:[".###","#...",".##.","...#","###."],
+      R:["###.","#..#","###.","#.#.","#..#"],T:["####",".##.",".##.",".##.",".##."],W:["#...#","#...#","#.#.#","##.##","#...#"],O:[".##.","#..#","#..#","#..#",".##."],
+      U:["#..#","#..#","#..#","#..#",".##."],F:["####","#...","###.","#...","#..."],C:[".###","#...","#...","#...",".###"],H:["#..#","#..#","####","#..#","#..#"],I:["###",".#.",".#.",".#.","###"],E:["####","#...","###.","#...","####"]," ":["..","..","..","..",".."]};
+    const LET=new Map();(C.letters||[]).forEach(g=>{const seg=Q.filter(q=>q.side===g.side).sort((a,b)=>a.x-b.x);const cols=[];[...g.text].forEach((ch,k)=>{const f=FONT[ch]||FONT[" "];
+        for(let c=0;c<f[0].length;c++)cols.push(f.map(r=>r[c]==="#"));if(k<g.text.length-1)cols.push([0,0,0,0,0]);});
+      const st=Math.max(0,Math.floor((seg.length-cols.length*(g.sx||1))/2));cols.forEach((col,ci)=>{for(let w=0;w<(g.sx||1);w++){const q=seg[st+ci*(g.sx||1)+w];if(!q)return;
+        col.forEach((on,k)=>{if(!on)return;for(let v=0;v<(g.sy||2);v++)LET.set(q.i+","+g.tier+","+(g.row0+(4-k)*(g.sy||2)+v),g.col);});}});});
+    const PAL=(list)=>(q,r,t)=>{const h=hsh(q.i,r,t+7);let a=0;for(const [c,w] of list){a+=w;if(h<a)return c;}return list[list.length-1][0];};
+    /* ---- ground ---- */
+    const OUT=Math.max(...C.tiers.map(t=>t.d0+t.rows*t.rd))+2,XS=sx+rc+OUT+(C.padX||22),ZS=sz+rc+OUT+(C.padZ||22);
+    G.push({p:[[-1500,0,-1500],[1500,0,-1500],[1500,0,1500],[-1500,0,1500]],c:C.site});
+    rect(-XS,XS,-ZS,ZS,C.site);
+    if(C.plaza)G.push({p:Array.from({length:n},(_,i)=>pt(i,OUT+(C.plaza[1]||10),0)),c:C.plaza[0]});
+    G.push({p:Array.from({length:n},(_,i)=>pt(i,0,0)),c:C.apron});
+    if(T){G.push({p:loopPoly(TR+TW,0),c:C.track});G.push({p:loopPoly(TR,0),c:C.infield||C.apron});}
+    rect(-55.5,55.5,-37,37,C.grass[0]);
+    for(let i=0;i<14;i++)for(let k=0;k<(C.checker?8:1);k++){const x0=-52.5+105*i/14,x1=-52.5+105*(i+1)/14,z0=C.checker?-34+68*k/8:-34,z1=C.checker?-34+68*(k+1)/8:34;
+      rect(x0,x1,z0,z1,(i+(C.checker?k:0))%2?C.grass[0]:C.grass[1]);}
+    /* ---- stands ---- */
+    const RIS=C.riser||[222,222,224],FAC=C.facade||[220,214,204],tops=new Array(n).fill(0),outs=new Array(n).fill(0);
+    C.tiers.forEach((t,ti)=>{const keep=q=>!t.keep||t.keep(q),dOut=t.d0+t.rows*t.rd,yTop=t.y0+t.rows*t.rh;
+      for(const q of Q){if(!keep(q))continue;const i=q.i,j=q.j;
+        for(let r=0;r<t.rows;r++){const da=t.d0+r*t.rd,db=da+t.rd,y=t.y0+(r+1)*t.rh;
+          const c=LET.get(i+","+ti+","+r)||(q.ai&&t.aisle!==false?(t.aisleCol||C.aisleCol||[206,206,208]):t.col(q,r,ti));
+          quad(S,pt(i,da,y),pt(j,da,y),pt(j,db,y),pt(i,db,y),c);quad(S,pt(i,da,y-t.rh),pt(j,da,y-t.rh),pt(j,da,y),pt(i,da,y),RIS);}
+        quad(S,pt(i,t.d0-.05,t.yf===undefined?0:t.yf),pt(j,t.d0-.05,t.yf===undefined?0:t.yf),pt(j,t.d0-.05,t.y0),pt(i,t.d0-.05,t.y0),t.front||C.front||[236,236,234]);
+        if(t.suite)quad(S,pt(i,t.d0-.1,t.suite[0]),pt(j,t.d0-.1,t.suite[0]),pt(j,t.d0-.1,t.y0-.1),pt(i,t.d0-.1,t.y0-.1),t.suite[1]);
+        if(t.lip)quad(S,pt(i,dOut,yTop),pt(j,dOut,yTop),pt(j,dOut,yTop+1.2),pt(i,dOut,yTop+1.2),t.lip);
+        const fc=typeof FAC==="function"?FAC(q):FAC;quad(S,pt(i,dOut+.05,0),pt(j,dOut+.05,0),pt(j,dOut+.05,yTop+(t.backH||1.2)),pt(i,dOut+.05,yTop+(t.backH||1.2)),fc);
+        quad(S,pt(i,dOut,yTop+(t.backH||1.2)),pt(j,dOut,yTop+(t.backH||1.2)),pt(j,dOut+.9,yTop+(t.backH||1.2)),pt(i,dOut+.9,yTop+(t.backH||1.2)),C.cap||[200,196,190]);
+        tops[i]=Math.max(tops[i],yTop+(t.backH||1.2));outs[i]=Math.max(outs[i],dOut+.9);}
+      /* end walls where a stand stops */
+      for(const q of Q){const a=keep(q),b=keep(Q[q.j]);if(a===b)continue;const k=a?q.j:q.j,dO=t.d0+t.rows*t.rd;
+        quad(S,pt(k,t.d0,t.yf||0),pt(k,dO,0),pt(k,dO,yTop+(t.backH||1.2)),pt(k,t.d0,t.y0),typeof FAC==="function"?FAC(q):FAC);}});
+    /* ---- roof ---- */
+    (C.roofs||[]).forEach(R=>{const keep=q=>!R.keep||R.keep(q),dI=R.dIn,dO=R.dOut;
+      for(const q of Q){if(!keep(q))continue;const i=q.i,j=q.j;
+        if(R.lattice){const NB=3;for(let b=0;b<NB;b++){const a0=dI+(dO-dI)*b/NB,a1=dI+(dO-dI)*(b+1)/NB,y0=R.yIn+(R.yOut-R.yIn)*b/NB,y1=R.yIn+(R.yOut-R.yIn)*(b+1)/NB;
+            quad(S,pt(i,a0,y0),pt(j,a0,y0),pt(j,a1,y1),pt(i,a1,y1),(i+b)%2?R.col:R.col2);}}
+        else quad(S,pt(i,dI,R.yIn),pt(j,dI,R.yIn),pt(j,dO,R.yOut),pt(i,dO,R.yOut),R.col);
+        quad(S,pt(i,dI,R.yIn-.6),pt(j,dI,R.yIn-.6),pt(j,dO,R.yOut-.6),pt(i,dO,R.yOut-.6),R.under||R.col.map(v=>v*.8));
+        quad(S,pt(i,dI,R.yIn-.6),pt(j,dI,R.yIn-.6),pt(j,dI,R.yIn),pt(i,dI,R.yIn),R.edge||R.col);
+        if(R.rib&&i%R.rib===0){const a=pt(i,dI,R.yIn+.05),b=pt(i,dO,R.yOut+.05),hh=R.ribH||1.4;quad(S,a,b,[b[0],b[1]+hh,b[2]],[a[0],a[1]+hh*.4,a[2]],R.ribCol||R.col.map(v=>v*.86));}
+        if(R.arch&&i%R.arch===0){const a=pt(i,dI,R.yIn),b=pt(i,dO,R.yOut),m=pt(i,(dI+dO)/2,(R.yIn+R.yOut)/2+R.archH);quad(S,a,m,[m[0],m[1]-.5,m[2]],[a[0],a[1]-.5,a[2]],R.col);quad(S,m,b,[b[0],b[1]-.5,b[2]],[m[0],m[1]-.5,m[2]],R.col);}
+        if(R.lights&&i%R.lights===0){const a=pt(i,dI+.4,R.yIn-.9),b=pt(j,dI+.4,R.yIn-.9);quad(S,a,b,[b[0],b[1]-.7,b[2]],[a[0],a[1]-.7,a[2]],[252,250,236]);}
+        if(R.cols&&i%R.cols===0){const c=pt(i,dO-1,0);bx3(c[0]-.4,c[0]+.4,c[2]-.4,c[2]+.4,0,R.yOut,R.colCol||[214,214,218]);}
+        if(R.mast&&i%R.mast===0){const a=pt(i,dO+6,0),top=pt(i,dO-2,R.yOut+R.mastH);quad(S,a,[a[0]+.6,0,a[2]+.6],[top[0]+.6,top[1],top[2]+.6],top,R.mastCol||[90,90,96]);
+          const tip=pt(i,(dI+dO)/2,R.yOut+1);quad(S,top,tip,[tip[0],tip[1]+.2,tip[2]],[top[0],top[1]+.2,top[2]],[170,170,176]);}}
+      if(R.petal){const P4=R.petal;for(let i=0;i<n;i+=P4){if(!keep(Q[i]))continue;const a=pt(i,dO+.3,R.yOut+.15),b=pt(i+P4,dO+.3,R.yOut+.15),m=pt(i+Math.floor(P4/2),dI+(R.petalIn||2),R.yIn+.15+(R.petalH||0)),hi=pt(i+Math.floor(P4/2),dO-((dO-dI)*.25),R.yOut+(R.petalUp||4));
+          S.push({p:[a,hi,m],c:R.petalCol});S.push({p:[hi,b,m],c:R.petalCol.map(v=>v*.93)});S.push({p:[a,b,hi],c:R.petalCol.map(v=>v*.97)});}}
+      if(R.truss){const yT=R.yIn+R.truss.h,zE=sz+rc+dI;for(let x=-sx-rc-dI+6;x<sx+rc+dI-4;x+=R.truss.step){bx3(x-.5,x+.5,-zE,zE,yT,yT+1.6,R.truss.col);}
+        for(let z=-zE+6;z<zE-4;z+=R.truss.step*1.6)bx3(-sx-rc-dI,sx+rc+dI,z-.35,z+.35,yT+1.6,yT+2.2,R.truss.col);}});
+    /* ---- floodlight masts: lamp banks facing the pitch ---- */
+    (C.masts||[]).forEach(([x,z,h,w,ht])=>{w=w||8;ht=ht||10;bx3(x-.7,x+.7,z-.7,z+.7,0,h,C.mastCol||[214,214,218]);
+      const l=Math.hypot(x,z),dx=-x/l,dz=-z/l,tx=-dz,tz=dx,cx=x+dx*.9,cz=z+dz*.9;quad(S,[x+tx*w/2,h-2,z+tz*w/2],[x-tx*w/2,h-2,z-tz*w/2],[x-tx*w/2,h-2+ht,z-tz*w/2],[x+tx*w/2,h-2+ht,z+tz*w/2],[120,124,132]);
+      const na=Math.max(3,Math.round(w/1.6)),nb=Math.max(3,Math.round(ht/1.35));for(let a=0;a<na;a++)for(let b=0;b<nb;b++){const o=-w/2+.8+a*(w-1.6)/(na-1||1),px=cx+tx*o,pz=cz+tz*o,py=h-1.5+b*(ht-1)/nb;
+        quad(S,[px-tx*.55,py,pz-tz*.55],[px+tx*.55,py,pz+tz*.55],[px+tx*.55,py+.9,pz+tz*.55],[px-tx*.55,py+.9,pz-tz*.55],[250,250,240]);}});
+    /* ---- big screens ---- */
+    (C.screens||[]).forEach(([x,z,w,h,y0,col])=>{const l=Math.hypot(x,z)||1,dx=-x/l,dz=-z/l,tx=-dz,tz=dx;
+      const A=[x+tx*w/2,y0,z+tz*w/2],Bq=[x-tx*w/2,y0,z-tz*w/2];quad(S,A,Bq,[Bq[0],y0+h,Bq[2]],[A[0],y0+h,A[2]],[30,32,40]);
+      quad(S,[A[0]+dx*.15,y0+.4,A[2]+dz*.15],[Bq[0]+dx*.15,y0+.4,Bq[2]+dz*.15],[Bq[0]+dx*.15,y0+h-.4,Bq[2]+dz*.15],[A[0]+dx*.15,y0+h-.4,A[2]+dz*.15],col||[36,70,140]);});
+    /* ---- dugouts ---- */
+    [-1,1].forEach(s=>{const z=-(T?TR+TW+1.2:34+Math.min(4,C.m*.55)),x=s*9;bx3(x-6,x+6,z-2,z,0,2.2,[236,236,236],C.dug||[30,90,170]);});
+    /* ---- surroundings ---- */
+    const tree=(x,z,palm)=>{bx3(x-.3,x+.3,z-.3,z+.3,0,palm?6:2.2,[110,86,60]);if(palm){[[1,0],[-1,0],[0,1],[0,-1]].forEach(([a,b])=>quad(S,[x,6,z],[x+a*2.6+b*.6,5.2,z+b*2.6+a*.6],[x+a*2.6-b*.6,5.2,z+b*2.6-a*.6],[x,6.1,z],[70,120,60]));}
+      else bx3(x-1.6,x+1.6,z-1.6,z+1.6,2.2,4.8,[80,128,66]);};
+    if(C.extra)C.extra({rect,bx3,tree,quad,S,G,pt,XS,ZS,OUT,n,sx,sz,rc});
+    P.rb=Math.hypot(XS,ZS)*.86;
   } else if(P.custom==="abh"){
     /* Prince Sultan bin Abdulaziz Sports City Stadium, Abha, from the user's photos: a blue track on a green apron; a covered main stand of mustard
        seats with a green central block and VIP lounge under a brown roof on deep beams; a bowl of blue seats round the far side and both ends with
@@ -4361,7 +4614,7 @@ function makeViewer(box,P){
     for(let i=0;i<=5;i++){const x=xa+(xb-xa)*i/5;quad(S,[x-.5,0,zOut],[x+.5,0,zOut],[x+.5,rt+1.2,zOut],[x-.5,rt+1.2,zOut],[120,126,138]);}}
   }
   /* camera */
-  const HOME={az:P.custom?1.57:P.open==="east"?1.57:-0.75,el:P.custom==="buk"?0.62:P.custom==="shr"||P.custom==="jfu"||P.custom==="hail"||P.custom==="raed"||P.custom==="jlw"||P.custom==="taif"||P.custom==="jed"||P.custom==="haj"||P.custom==="orb"||P.custom==="una"||P.custom==="ohd"||P.custom==="zul"||P.custom==="abh"||P.custom==="anw"?0.66:P.custom?0.95:0.62,dist:(L+R0+DEP)*(P.custom?2.05:2.45)};let cam={...HOME},tour=false,dirty=true,raf=0,last=0;
+  const HOME={az:P.custom?1.57:P.open==="east"?1.57:-0.75,el:P.custom==="rs"?0.62:P.custom==="buk"?0.62:P.custom==="shr"||P.custom==="jfu"||P.custom==="hail"||P.custom==="raed"||P.custom==="jlw"||P.custom==="taif"||P.custom==="jed"||P.custom==="haj"||P.custom==="orb"||P.custom==="una"||P.custom==="ohd"||P.custom==="zul"||P.custom==="abh"||P.custom==="anw"?0.66:P.custom?0.95:0.62,dist:(L+R0+DEP)*(P.custom?2.05:2.45)};let cam={...HOME},tour=false,dirty=true,raf=0,last=0;
   const lines=[];const pl=(pts)=>lines.push(pts);
   pl([[-52.5,-34],[52.5,-34],[52.5,34],[-52.5,34],[-52.5,-34]]);pl([[0,-34],[0,34]]);
   const circ=(cx,cz,r,a0=0,a1=Math.PI*2)=>{const p=[];for(let i=0;i<=28;i++){const a=a0+(a1-a0)*i/28;p.push([cx+r*Math.cos(a),cz+r*Math.sin(a)]);}return p;};
@@ -4389,7 +4642,7 @@ function makeViewer(box,P){
     const gA=[];G.forEach(g=>{if(g.p.length===4&&Math.abs(g.p[0][0])>=1500)return;const c=gTone(g);tri(gA,g.p,[Math.min(1,c[0]/255),Math.min(1,c[1]/255),Math.min(1,c[2]/255),1]);});
     const seg=(a,b,w,c)=>{const dx=b[0]-a[0],dz=b[1]-a[1],l=Math.hypot(dx,dz)||1,nx=-dz/l*w,nz=dx/l*w;tri(gA,[[a[0]+nx,0,a[1]+nz],[b[0]+nx,0,b[1]+nz],[b[0]-nx,0,b[1]-nz],[a[0]-nx,0,a[1]-nz]],c);};
     lines.forEach(l=>{for(let i=0;i<l.length-1;i++)seg(l[i],l[i+1],0.18,[1,1,1,.9]);});
-    (P.custom==="raed"||P.custom==="jed"||P.custom==="haj"||P.custom==="orb"||P.custom==="ohd"||P.custom==="anw"?[]:[1,2,3,4,5,6,7]).forEach(k=>{const p=ring(TR+k*TW/8);for(let i=0;i<p.length;i++)seg(p[i],p[(i+1)%p.length],0.05,[1,1,1,.4]);});
+    (P.custom==="rs"&&!P.rs.track||P.custom==="raed"||P.custom==="jed"||P.custom==="haj"||P.custom==="orb"||P.custom==="ohd"||P.custom==="anw"?[]:[1,2,3,4,5,6,7]).forEach(k=>{const p=ring(TR+k*TW/8);for(let i=0;i<p.length;i++)seg(p[i],p[(i+1)%p.length],0.05,[1,1,1,.4]);});
     const sA=[];S.forEach(q=>{const lam=Math.abs(q.n[0]*LD[0]+q.n[1]*LD[1]+q.n[2]*LD[2]);let k=(.62+.42*lam)/255,t=[1,1,1];
       if(q.lamp&&SKY==="night"){tri(sA,q.p,[.96,.98,1,1]);return;}
       if(SKY==="night"){const d=Math.hypot(q.cen[0],q.cen[2]);k=(.62+.42*lam)*(d<95?.9:.68)/255;t=[.96,.98,1.04];}else if(SKY==="dusk"){t=[1.02,.82,.7];}
@@ -4397,7 +4650,7 @@ function makeViewer(box,P){
     const mk=a=>{const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(a),gl.STATIC_DRAW);return [b,a.length/7];};
     GLD={pr,g:mk(gA),s:mk(sA),ap:gl.getAttribLocation(pr,"p"),ac:gl.getAttribLocation(pr,"c"),u:n=>gl.getUniformLocation(pr,n)};}
   let W=0,H=0,DPR=1;
-  const RB=P.custom==="anw"?Math.hypot(86,76)*0.86:P.custom==="abh"?Math.hypot(L+R0+26,R0+36)*0.86:P.custom==="zul"?Math.hypot(L+R0+22,R0+31)*0.86:P.custom==="ohd"?Math.hypot(86,64)*0.86:P.custom==="una"?Math.hypot(L+R0+26,R0+34)*0.86:P.custom==="orb"?Math.hypot(L+42+16,42+30)*0.86:P.custom==="haj"?Math.hypot(100,79)*0.86:P.custom==="jed"?Math.hypot(104,80)*0.86:P.custom==="taif"?Math.hypot(L+R0+34,R0+52)*0.86:P.custom==="jlw"?Math.hypot(L+R0+30,R0+50)*0.86:P.custom==="raed"?Math.hypot(112,92)*0.86:P.custom==="shr"||P.custom==="jfu"||P.custom==="hail"?Math.hypot(L+R0+20+40,R0+20+60)*0.86:P.custom?Math.hypot(L+R0+DEP+38,R0+DEP+40)*0.86:Math.hypot(L+R0+DEP+6,R0+DEP+14)+6;let FIT=HOME.dist;
+  const RB=P.rb?P.rb:P.custom==="anw"?Math.hypot(86,76)*0.86:P.custom==="abh"?Math.hypot(L+R0+26,R0+36)*0.86:P.custom==="zul"?Math.hypot(L+R0+22,R0+31)*0.86:P.custom==="ohd"?Math.hypot(86,64)*0.86:P.custom==="una"?Math.hypot(L+R0+26,R0+34)*0.86:P.custom==="orb"?Math.hypot(L+42+16,42+30)*0.86:P.custom==="haj"?Math.hypot(100,79)*0.86:P.custom==="jed"?Math.hypot(104,80)*0.86:P.custom==="taif"?Math.hypot(L+R0+34,R0+52)*0.86:P.custom==="jlw"?Math.hypot(L+R0+30,R0+50)*0.86:P.custom==="raed"?Math.hypot(112,92)*0.86:P.custom==="shr"||P.custom==="jfu"||P.custom==="hail"?Math.hypot(L+R0+20+40,R0+20+60)*0.86:P.custom?Math.hypot(L+R0+DEP+38,R0+DEP+40)*0.86:Math.hypot(L+R0+DEP+6,R0+DEP+14)+6;let FIT=HOME.dist;
   const size=()=>{const r=cv.getBoundingClientRect();DPR=Math.min(2,window.devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;if(ov){ov.width=W*DPR;ov.height=H*DPR;}
     if(W&&H){const foc=Math.min(W,H*1.5)*0.72,half=Math.min(W,H)/2-14;FIT=RB*foc/half*0.84;const wasHome=cam.dist===HOME.dist;HOME.dist=FIT;if(wasHome||cam.dist>FIT)cam.dist=FIT;}dirty=true;};
   function draw(){if(!GLD){ctx.setTransform(DPR,0,0,DPR,0,0);ctx.clearRect(0,0,W,H);}
@@ -4424,7 +4677,7 @@ function makeViewer(box,P){
       ctx.fillStyle=`rgb(${c[0]*sh|0},${c[1]*sh|0},${c[2]*sh|0})`;ctx.fill();ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=.6;ctx.stroke();};
     G.forEach(g=>fill(g.p,g.c));
     ctx.strokeStyle="rgba(255,255,255,.85)";ctx.lineWidth=1.2;lines.forEach(l=>{ctx.beginPath();let ok=true;l.forEach(([x,z],i)=>{const s=prj([x,.05,z]);if(!s){ok=false;return;}i?ctx.lineTo(s[0],s[1]):ctx.moveTo(s[0],s[1]);});if(ok)ctx.stroke();});
-    ctx.strokeStyle="rgba(255,255,255,.35)";ctx.lineWidth=.7;(P.custom==="raed"||P.custom==="jed"||P.custom==="haj"||P.custom==="orb"||P.custom==="ohd"||P.custom==="anw"?[]:[1,2,3,4,5,6,7]).forEach(k=>{const p=loopPoly(TR+k*TW/8,.05);ctx.beginPath();let ok=true;p.forEach((v,i)=>{const s=prj(v);if(!s){ok=false;return;}i?ctx.lineTo(s[0],s[1]):ctx.moveTo(s[0],s[1]);});if(ok){ctx.closePath();ctx.stroke();}});
+    ctx.strokeStyle="rgba(255,255,255,.35)";ctx.lineWidth=.7;(P.custom==="rs"&&!P.rs.track||P.custom==="raed"||P.custom==="jed"||P.custom==="haj"||P.custom==="orb"||P.custom==="ohd"||P.custom==="anw"?[]:[1,2,3,4,5,6,7]).forEach(k=>{const p=loopPoly(TR+k*TW/8,.05);ctx.beginPath();let ok=true;p.forEach((v,i)=>{const s=prj(v);if(!s){ok=false;return;}i?ctx.lineTo(s[0],s[1]):ctx.moveTo(s[0],s[1]);});if(ok){ctx.closePath();ctx.stroke();}});
     const vis=S.map(q=>{const d=[q.cen[0]-pos[0],q.cen[1]-pos[1],q.cen[2]-pos[2]];return [d[0]*f[0]+d[1]*f[1]+d[2]*f[2],q];}).sort((a,b)=>b[0]-a[0]);
     vis.forEach(([,q])=>{const lam=Math.abs(q.n[0]*LD[0]+q.n[1]*LD[1]+q.n[2]*LD[2]);fill(q.p,q.c,.62+.42*lam);});
     }
