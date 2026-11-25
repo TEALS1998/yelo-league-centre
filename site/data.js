@@ -898,7 +898,7 @@ window.LEAGUE_DATA = {
       10,
       1,
       0,
-      27,
+      28,
       6
      ],
      [
@@ -987,7 +987,7 @@ window.LEAGUE_DATA = {
       5,
       4,
       18,
-      19
+      20
      ],
      [
       "الرائد",
@@ -3659,7 +3659,7 @@ window.LEAGUE_DATA = {
      "saffId": "33588",
      "roundExact": true,
      "score": [
-      2,
+      3,
       0
      ]
     },
