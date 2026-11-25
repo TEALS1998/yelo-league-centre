@@ -139,7 +139,7 @@ ${P.flip ? `.dc:hover .dc-in,.dc:focus .dc-in,.dc.dc-on .dc-in{transform:rotate(
   const words = s => String(s || "").replace(/[ًٌٍَُِّْ]/g, "").split(/\s+/).filter(w => w.length > 2 && w !== "عبد");
   const decided = p => all.some(d => d.club === p.club && kind(d) === "red" &&
     (!d.match.date || d.match.date === p.match.date) && words(d.person).some(w => words(p.person).includes(w)));
-  const pendAll = (window.DISCIPLINE_PENDING || []).filter(p => !decided(p)).map(p => {
+  const pendAll = (window.DISCIPLINE_PENDING || []).filter(p => (L.clubs || {})[p.club] && (p.league || "fdl") === (window.LG || "fdl") && !decided(p)).map(p => {
     const nx = S0.matches.filter(m => m.date > p.match.date && (m.home === p.club || m.away === p.club))
       .sort((a, b) => (a.date < b.date ? -1 : 1))[0];
     return Object.assign({}, p, { out: nx ? [nx] : [] });

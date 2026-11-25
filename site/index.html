@@ -5097,7 +5097,9 @@ function seasonDial(){
   out+=`<circle cx="${cx}" cy="${cy}" r="${R1-4}" fill="none" stroke="#ffffff" stroke-opacity=".06"/>`;
   const a=2*Math.PI*Math.min(.9999,pts/tgt);out+=`<g class="dpd"><circle cx="${cx+R3*Math.sin(a)}" cy="${cy-R3*Math.cos(a)}" r="1.4" fill="#f2d98a"/><text x="${cx+(R3+4)*Math.sin(a)}" y="${cy-(R3+4)*Math.cos(a)+1}" font-size="2.8" fill="#f2d98a" text-anchor="middle">${pts}</text></g>`;
   return out;}
-const NRD0=()=>SEA.totalRounds||34,REF0=()=>(typeof PD!=="undefined"&&PD.ref)||{second:73};
+/* last season's final table, for the benchmarks: First Division 2025/26, and Saudi Pro League 2025/26 (Wikipedia: Al Nassr 86, Al Hilal 84, 6th Al Taawoun 53) */
+const REFL=window.LG==="spl"?{season:"2025/26",champ:86,second:84,sixth:53}:{season:"2025/26",champ:77,second:73,sixth:59};
+const NRD0=()=>SEA.totalRounds||34,REF0=()=>(typeof PD!=="undefined"&&PD.ref)||REFL;
 function rMatch(){
   if(!next)return sheet(head("Matchday programme · برنامج المباراة","No fixture announced","لا توجد مباراة معلنة",""),`<p>The next fixture has not been published yet. · لم تُنشر المباراة القادمة بعد.</p>`,1);
   const o=opp(next),H=next.home===US,u=row(US)||[],t=row(o)||[];
@@ -5221,7 +5223,7 @@ function rMatch(){
 /* ---------- shared pieces for the redesigned reports ---------- */
 const FT=()=>`<div class="rpF"><span>${window.LGN.en} Match Centre · مركز مباريات ${window.LGN.ar}${author()?" · "+author():""}</span><span>Source: saff.com.sa · المصدر: موقع الاتحاد السعودي لكرة القدم</span><span>Printed ${fE(today)}</span></div>`;
 const C3={};const three=(v,w=600,h=340,az=0)=>{const k=v+"|"+w+"|"+h+"|"+az;if(!(k in C3)){try{C3[k]=typeof window.__render3D==="function"?window.__render3D(v,w,h,az):null;}catch(e){C3[k]=null;}}return C3[k];};
-const REF=(typeof PD!=="undefined"&&PD.ref)||{season:"2025/26",champ:77,second:73,sixth:59};
+const REF=(typeof PD!=="undefined"&&PD.ref)||REFL;
 const NRD=SEA.totalRounds||34;
 const ord=n=>n+(["th","st","nd","rd"][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4]||"th");
 const saMap=(pins,arcs,W=180,H=72)=>{const lon0=35,lon1=55,lat0=17,lat1=31.5;const P=ll=>[(ll[1]-lon0)/(lon1-lon0)*W,(lat1-ll[0])/(lat1-lat0)*H];
@@ -5579,7 +5581,7 @@ addEventListener("beforeprint",()=>document.querySelectorAll(".mo-r,.rps").forEa
 </style>
 <script>document.write('<script src="discipline-data'+window.LGF+'.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
 <script>document.write('<script src="discipline-pending.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
-<script src="discipline.js?v=20261124b"></script>
+<script src="discipline.js?v=20261125"></script>
 <script>/* the chosen club's official accounts */
 (()=>{const T=window.US_TEAM||"العلا",S=window.SOCIAL;if(S&&S.clubs[T])drawSocial(document.getElementById("soc"),S.clubs[T],T);})();</script>
 </body>

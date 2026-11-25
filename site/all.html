@@ -244,7 +244,7 @@ footer{max-width:1460px;margin:0 auto;padding:0 24px 40px;color:var(--muted);fon
 .bp text{font-family:var(--din)}
 .bp .gx{fill:rgba(255,255,255,.45);font-size:11px;font-family:var(--dinc)}
 .bp .gy{fill:rgba(255,255,255,.4);font-size:12px;font-family:var(--dinc);font-weight:800}
-.bp .gy.z1{fill:#7fd19b}.bp .gy.z2{fill:var(--lime)}
+.bp .gy.z1{fill:#7fd19b}.bp .gy.z2{fill:var(--lime)}.bp .gy.z3{fill:var(--loss)}
 .bp .vr{stroke:rgba(255,255,255,.06)}
 .bp .zb1{fill:rgba(127,209,155,.09)}.bp .zb2{fill:rgba(253,195,102,.06)}
 .bp .zl{stroke:rgba(255,255,255,.28);stroke-dasharray:4 5}
@@ -875,7 +875,7 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
  const box=document.getElementById("race");
  box.innerHTML=`<div class="bstats">${chip(lt,"Most rounds at #1","الأكثر تصدرا",lead[lt]+"<small style=\"font-size:11px\"> R</small>")}${chip(climb&&climb.t,"Biggest climb","أكبر صعود","▲"+cv)}${chip(fall&&fall.t,"Biggest drop","أكبر هبوط","▼"+fv)}${chip(swing.t,"Wildest ride","الأكثر تقلبا",sw+"<small style=\"font-size:11px\"> moves</small>")}</div>
   <div class="bwrap"><svg class="bp" viewBox="0 0 ${W2} ${H2}" role="img" aria-label="League position of every club after each round">${g}${clubs}</svg></div>
-  <div class="bfoot"><span>Each line is a club’s league position after every round · <span class="ar">كل خط هو مركز النادي بعد كل جولة</span></span><span><i style="background:#7fd19b"></i>Promotion · صعود<i style="background:var(--lime)"></i>Play-off · ملحق</span><span>Tap a club to see its results<i style="background:${RC.W}">W</i>win<i style="background:${RC.D}">D</i>draw<i style="background:${RC.L}">L</i>loss</span></div>`;
+  <div class="bfoot"><span>Each line is a club’s league position after every round · <span class="ar">كل خط هو مركز النادي بعد كل جولة</span></span><span>${SPL?`<i style="background:#7fd19b"></i>Champion · البطل<i style="background:var(--loss)"></i>Relegation · هبوط`:`<i style="background:#7fd19b"></i>Promotion · صعود<i style="background:var(--lime)"></i>Play-off · ملحق`}</span><span>Tap a club to see its results<i style="background:${RC.W}">W</i>win<i style="background:${RC.D}">D</i>draw<i style="background:${RC.L}">L</i>loss</span></div>`;
  box.querySelectorAll(".rib").forEach(p=>{try{p.style.setProperty("--l",Math.ceil(p.getTotalLength())+1+"");}catch(e){}});
  let on=null;const focus=t=>{on=on===t?null:t;box.classList.toggle("focus",!!on);box.querySelectorAll(".cl").forEach(c=>{const y=c.dataset.t===on;c.classList.toggle("on",y);if(y)c.parentNode.appendChild(c);});};
  box.addEventListener("click",e=>{const c=e.target.closest(".cl,.bst");if(c)focus(c.dataset.t);});
@@ -920,7 +920,7 @@ document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=
 </script>
 <script>document.write('<script src="discipline-data'+window.LGF+'.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
   <script>document.write('<script src="discipline-pending.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
-<script src="discipline.js?v=20261124b"></script>
+<script src="discipline.js?v=20261125"></script>
 <script>/* the league's official accounts */
 (()=>{const S=window.SOCIAL;if(S){const spl=window.LG==="spl";const a=spl?S.spl:S.league;if(a)drawSocial(document.getElementById("soc"),a,spl?"دوري روشن":"دوري يلو");}})();</script>
 </body>
