@@ -65,7 +65,8 @@ jobs:
             if [ -f site/discipline-data.js ]; then git add site/discipline-data.js; fi
             if [ -f site/discipline-data-spl.js ]; then git add site/discipline-data-spl.js; fi
             git commit -m "Live update from SAFF $(date -u +%Y-%m-%dT%H:%MZ)"
-            git push
+            # a code push may have landed while this run was reading SAFF: put the data commit on top of it
+            for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 

@@ -1904,7 +1904,7 @@ button,input,select,textarea{font-family:inherit}
 .soc svg{width:15px;height:15px;fill:currentColor}
 @media (max-width:600px){.soc a{width:28px;height:28px}.soc svg{width:13px;height:13px}}
 </style>
-<script src="social.js?v=3"></script>
+<script src="social.js?v=4"></script>
 </head>
 <body>
 <script>
@@ -4527,7 +4527,7 @@ let t;new MutationObserver(()=>{clearTimeout(t);t=setTimeout(()=>{try{stubs();}c
 <script>
 /* Promotion race. Rules and last season's benchmark live in data.js (season.promo); defaults below keep it working when a new season has none. */
 (()=>{try{
-const T=SEA.table;if(!T||!T.rows||!T.rows.length||T.rows[0].length<9){document.getElementById("promo").style.display="none";return;}
+const T=SEA.table;if(window.LG==="spl"||!T||!T.rows||!T.rows.length||T.rows[0].length<9){document.getElementById("promo").style.display="none";const nv=document.querySelector('a[href="#promo"]');if(nv&&window.LG==="spl")nv.style.display="none";return;}
 AWD.win=["فوز واحد","فوزين","انتصارات","فوزًا"];
 const PD={direct:2,playoff:[3,6],ref:{season:"2025/26",champ:77,second:73,sixth:59}};
 /* a finished earlier season in data.js becomes the benchmark automatically */
