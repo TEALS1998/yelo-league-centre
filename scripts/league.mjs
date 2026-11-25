@@ -9,11 +9,16 @@ import fs from "node:fs";
 import path from "node:path";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
-const DATA = path.join(ROOT, "site", "data.js");
-const LEAGUE_URL = "https://www.saff.com.sa/championship.php?id=416";
+// LEAGUE=spl reads the Saudi Pro League (دوري روشن, SAFF championship 415) into site/data-spl.js;
+// anything else reads the First Division League (championship 416) into site/data.js.
+const LG = process.env.LEAGUE === "spl"
+  ? { id: 415, file: "data-spl.js", section: "دوري روشن السعودي #415", sections: ["روشن", "كأس خادم الحرمين"] }
+  : { id: 416, file: "data.js", section: "دوري الدرجة الأولى #416", sections: ["الدرجة الأولى", "كأس خادم الحرمين"] };
+const DATA = path.join(ROOT, "site", LG.file);
+const LEAGUE_URL = `https://www.saff.com.sa/championship.php?id=${LG.id}`;
 const TEAM_URL = (id) => `https://saff.com.sa/team.php?id=${id}`;
 const FULL_EVERY_MIN = 30;
-const FIRST_TEAM_SECTIONS = ["الدرجة الأولى", "كأس خادم الحرمين"];
+const FIRST_TEAM_SECTIONS = LG.sections;
 const OTHER_SECTIONS = ["تحت", "السيدات", "الناشئات", "الصالات", "الشاطئية", "الرديف"];
 const log = (...a) => console.log("[league]", ...a);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -112,7 +117,7 @@ export function parseFixtures(html, teamOf, defaultSection = "") {
   }
   return out;
 }
-export const firstTeam = (sec) => / #416$/.test(sec) || (FIRST_TEAM_SECTIONS.some((s) => sec.includes(s)) && !OTHER_SECTIONS.some((s) => sec.includes(s)));
+export const firstTeam = (sec) => sec.endsWith(" #" + LG.id) || (FIRST_TEAM_SECTIONS.some((s) => sec.includes(s)) && !OTHER_SECTIONS.some((s) => sec.includes(s)));
 const isCup = (sec) => sec.includes("كأس");
 
 // Match SAFF's venue text to a venue key in data.js (keys look like "ملعب نادي هجر (الأحساء)").
@@ -292,7 +297,7 @@ async function main() {
       for (const [t, id] of Object.entries(ids)) { (D.clubs[t] ||= {}).saffId = id; }
       const round = parseRound(html);
       if (round) S.currentRound = round;
-      for (const f of parseFixtures(html, teamOf, "دوري الدرجة الأولى #416")) applyFixture(S, D, f, venueOf, round, changes);
+      for (const f of parseFixtures(html, teamOf, LG.section)) applyFixture(S, D, f, venueOf, round, changes);
     } else log("standings not recognised, rows:", rows.length);
   } catch (e) { log("league page failed:", e.message); }
 
@@ -304,7 +309,7 @@ async function main() {
     for (let r = 1; r <= (S.totalRounds || 34); r++) {
       try {
         const html = await get(`${LEAGUE_URL}&round=0&week=${r}`);
-        const fx = parseFixtures(html, teamOf, "دوري الدرجة الأولى #416");
+        const fx = parseFixtures(html, teamOf, LG.section);
         for (const f of fx) { const x = applyFixture(S, D, f, venueOf, r, changes); if (x) seen.add(x.id); if (f.date > lastListed) lastListed = f.date; }
         if (fx.length) weeks++;
       } catch (e) { failed++; log("round page failed:", r, e.message); }
@@ -328,6 +333,17 @@ async function main() {
       if (!c.saffId) continue;
       try {
         const html = await get(TEAM_URL(c.saffId));
+        // club badge: SAFF's large team image, saved once as site/logos/<saffId>.png
+        if (!D.logos[t] || (String(D.logos[t]).startsWith("logos/") && !fs.existsSync(path.join(ROOT, "site", D.logos[t])))) {
+          const im = html.match(/src=["'](uploadcenter\/saffteamlarge[^"']+\.(?:png|jpg|jpeg|webp))["']/i);
+          if (im) try {
+            const r = await fetch("https://saff.com.sa/" + im[1], { headers: { "user-agent": "Mozilla/5.0 (match centre updater)" } });
+            if (r.ok) { const buf = Buffer.from(await r.arrayBuffer());
+              if (buf.length > 500 && buf.length < 800000) { fs.mkdirSync(path.join(ROOT, "site", "logos"), { recursive: true });
+                const f = `logos/${c.saffId}${/\.jpe?g$/i.test(im[1]) ? ".jpg" : /\.webp$/i.test(im[1]) ? ".webp" : ".png"}`;
+                fs.writeFileSync(path.join(ROOT, "site", f), buf); D.logos[t] = f; changes.push(`badge ${t}`); } }
+          } catch (e) { log("badge failed:", t, e.message); }
+        }
         const fx = parseFixtures(html, teamOf).filter((f) => firstTeam(f.section) && (f.home === t || f.away === t));
         for (const f of fx) applyFixture(S, D, f, venueOf, null, changes);
         if (fx.length) read++;
@@ -343,7 +359,7 @@ async function main() {
   if (process.env.WEATHER !== "0") { const n = await weatherFor(D, S); if (n) log("weather updated:", n); }
   D.lastChecked = riyadhToday();
   saveData(header, D);
-  fs.writeFileSync(path.join(ROOT, "last-run.json"), JSON.stringify({ at: new Date().toISOString(), changes }, null, 1) + "\n");
+  fs.writeFileSync(path.join(ROOT, LG.id === 415 ? "last-run-spl.json" : "last-run.json"), JSON.stringify({ at: new Date().toISOString(), changes }, null, 1) + "\n");
   log(changes.length ? changes.join("; ") : "no changes");
 }
 

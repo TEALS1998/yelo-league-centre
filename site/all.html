@@ -76,7 +76,12 @@ tbody tr{cursor:pointer;transition:background .15s}
 tbody tr:hover{background:#f5f7f8}
 td.pos{width:52px;font-family:var(--dinc);font-size:18px;font-weight:800;position:relative}
 td.pos::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;border-radius:2px;background:transparent}
-tr.z1 td.pos::before{background:var(--promo)}tr.z2 td.pos::before{background:var(--play)}
+tr.z1 td.pos::before{background:var(--promo)}tr.z2 td.pos::before{background:var(--play)}tr.z3 td.pos::before{background:var(--loss)}
+.lgsw{display:flex;gap:4px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:3px}
+.lgsw a{display:flex;flex-direction:column;align-items:center;line-height:1.05;padding:5px 12px;border-radius:999px;color:rgba(255,255,255,.75);text-decoration:none;font-weight:800;font-size:12.5px;white-space:nowrap}
+.lgsw a small{font-size:8.5px;font-weight:600;letter-spacing:.06em;opacity:.7}
+.lgsw a.on{background:#fdc366;color:#1b2530}
+.lgsw a:not(.on):hover{background:rgba(255,255,255,.12);color:#fff}
 td.cl{text-align:left;position:sticky;left:0;background:inherit}
 .club{display:flex;align-items:center;gap:10px;min-width:190px}
 .club img{width:28px;height:28px;object-fit:contain}
@@ -481,7 +486,8 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 <header class="top">
   <div class="top-in">
     <img class="mark" src="fdl.png" alt="First Division League">
-    <div class="brand"><b>Match Centre</b><span id="lgEn">First Division League · All clubs</span></div>
+    <div class="brand"><b>Match Centre</b><span id="lgEn">League · All clubs</span></div>
+    <nav class="lgsw" id="lgSw" aria-label="League · الدوري"></nav>
     <div class="brand arb"><b class="ar">مركز مباريات دوري الأولى</b><span class="ar" id="lgAr">كل الأندية</span></div>
     <nav class="soc" id="soc" aria-label="League accounts · حسابات دوري الأولى" hidden></nav>
     <div class="tsp"></div>
@@ -518,23 +524,34 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 </main>
 <footer><span>Source: the league and club pages on <a href="https://www.saff.com.sa/championship.php?id=416" target="_blank" rel="noopener">saff.com.sa</a>, updated every two minutes. Weather: Open-Meteo. Times are Saudi time.</span><span class="ar">المصدر: صفحات الدوري والأندية على موقع الاتحاد السعودي لكرة القدم، وتتحدث كل دقيقتين.</span><span style="flex-basis:100%">Designed and developed by <b>Tareem Alsaggaf</b> · © 2026<span class="ar" style="display:block">تصميم وتطوير <b>تريم إياد السقاف</b> · جميع الحقوق محفوظة</span></span></footer>
 
-<script>/* Live data: always load the newest data.js (one fresh copy a minute, never a stale cache). */
-document.write('<script src="data.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
+<script>/* Which league: ?league=spl is the Saudi Pro League (دوري روشن), anything else the First Division League (دوري يلو). */
+window.LG=new URLSearchParams(location.search).get("league")==="spl"?"spl":"fdl";window.LGF=window.LG==="spl"?"-spl":"";window.LGQ=window.LG==="spl"?"league=spl&":"";
+/* Live data: always load the newest data file (one fresh copy a minute, never a stale cache). */
+document.write('<script src="data'+LGF+'.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
 <script src="predict.js?v=1"></script>
 <script>/* Auto update: every 30 seconds read data.js again; when a result, table or fixture changes, reload in place (same club, same scroll). */
 (()=>{const fp=o=>{const s=JSON.stringify(o);let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return s.length+":"+h;};
 const snap=window.LEAGUE_DATA?fp(window.LEAGUE_DATA):null;if(!snap)return;
 try{const y=sessionStorage.getItem("yelo-live-y");if(y!==null){sessionStorage.removeItem("yelo-live-y");addEventListener("load",()=>setTimeout(()=>scrollTo(0,+y),60));}}catch(e){}
 let busy=false;const chk=async()=>{if(busy||document.hidden)return;busy=true;try{
-  const r=await fetch("data.js?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const t=await r.text();
+  const r=await fetch("data"+window.LGF+".js?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const t=await r.text();
   const w={};new Function("window",t)(w);if(!w.LEAGUE_DATA)return;
   if(fp(w.LEAGUE_DATA)!==snap){try{sessionStorage.setItem("yelo-live-y",String(scrollY));}catch(e){}location.reload();}
 }catch(e){}finally{busy=false;}};
 setInterval(chk,30000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)chk();});addEventListener("focus",chk);})();</script>
+<script>/* a club with no badge yet gets a plain round badge with its initial, until SAFF's badge is saved */
+(()=>{const L=window.LEAGUE_DATA;if(!L)return;L.logos=L.logos||{};
+const ph=t=>{const n=String(t).replace(/^ال/,"").trim().charAt(0)||"?";const en=(L.teams[t]||"").replace(/^Al\s+/i,"").slice(0,3).toUpperCase();
+ return "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#27333e" stroke="#c9b48a" stroke-width="4"/><text x="50" y="52" font-family="Arial" font-size="40" font-weight="700" fill="#fdc366" text-anchor="middle" dominant-baseline="middle">${n}</text><text x="50" y="80" font-family="Arial" font-size="12" font-weight="700" fill="#c9d2d8" text-anchor="middle">${en}</text></svg>`);};
+for(const t of Object.keys(L.teams||{}))if(!L.logos[t])L.logos[t]=ph(t);})();</script>
 <script>
 (()=>{
 const L=window.LEAGUE_DATA;if(!L)return;
 const S=L.seasons[L.current],TN=t=>L.teams[t]||t,LOGO=t=>L.logos[t]||"";
+/* the two leagues: names, table zones and the switch */
+const SPL=window.LG==="spl",LN=SPL?{en:"Saudi Pro League",ar:"دوري روشن",full:"دوري روشن السعودي",short:"SPL"}:{en:"First Division League",ar:"دوري يلو",full:"دوري يلو للدرجة الأولى",short:"FDL"};
+const ZN=p=>SPL?(p===1?"z1":p>=16?"z3":""):(p<=2?"z1":p<=6?"z2":"");
+document.title=`${LN.en} · All clubs | ${LN.ar} · كل الأندية`;
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const rows=S.table.rows.slice().sort((a,b)=>a[1]-b[1]);
 const LG=S.matches.filter(m=>m.comp==="league");
@@ -543,7 +560,7 @@ const DE=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],DA=["الأحد","الاث�
 const ME=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],MA=["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
 const dd=d=>{const [y,m,x]=d.split("-").map(Number),w=new Date(Date.UTC(y,m-1,x)).getUTCDay();return [`${DE[w]} ${x} ${ME[m-1]}`,`${DA[w]} ${x} ${MA[m-1]}`];};
 const WX={sun:["Sunny","مشمس"],clear:["Clear","صافٍ"],partly:["Partly cloudy","غائم جزئيًا"],cloud:["Cloudy","غائم"],rain:["Rain","ممطر"],storm:["Storm","عاصفة"],dust:["Dusty","غبار"],fog:["Fog","ضباب"]};
-const go=t=>{location.href="index.html?club="+encodeURIComponent(t);};
+const go=t=>{location.href="index.html?"+window.LGQ+"club="+encodeURIComponent(t);};
 const city=v=>{const x=String(v||"").match(/\(([^)]+)\)\s*$/);return x?x[1]:"";};
 const vEn=v=>{const g=L.venues[v];return g?g[0]:v||"Stadium TBC";};
 
@@ -551,8 +568,11 @@ const vEn=v=>{const g=L.venues[v];return g?g[0]:v||"Stadium TBC";};
 const sel=document.getElementById("clubSel");
 sel.innerHTML=`<option value="" selected>الكل · All clubs</option>`+rows.map(r=>`<option value="${esc(r[0])}">${r[1]}. ${esc(r[0])} · ${esc(TN(r[0]))}</option>`).join("");
 sel.onchange=()=>{if(sel.value)go(sel.value);};
-document.getElementById("strip").innerHTML=rows.map(r=>`<a href="index.html?club=${encodeURIComponent(r[0])}" title="${esc(TN(r[0]))} · ${esc(r[0])}"><img src="${LOGO(r[0])}" alt="${esc(TN(r[0]))}"></a>`).join("");
-document.getElementById("lgEn").textContent=`First Division League · All clubs · ${S.label[0]}`;
+document.getElementById("strip").innerHTML=rows.map(r=>`<a href="index.html?${window.LGQ}club=${encodeURIComponent(r[0])}" title="${esc(TN(r[0]))} · ${esc(r[0])}"><img src="${LOGO(r[0])}" alt="${esc(TN(r[0]))}"></a>`).join("");
+document.getElementById("lgEn").textContent=`${LN.en} · All clubs · ${S.label[0]}`;
+{const a=document.querySelector(".brand.arb b.ar");if(a)a.textContent=`مركز مباريات ${LN.ar}`;const mk=document.querySelector("img.mark");if(mk&&SPL){mk.style.display="none";}
+ const lg=document.querySelector(".legend");if(lg&&SPL)lg.innerHTML=`<span><i style="background:var(--promo)"></i>Champion · البطل</span><span><i style="background:var(--loss)"></i>Relegation · الهبوط</span><span><i style="background:var(--win)"></i>Win · فوز</span><span><i style="background:var(--draw)"></i>Draw · تعادل</span><span><i style="background:var(--loss)"></i>Loss · خسارة</span>`;
+ const sw=document.getElementById("lgSw");if(sw)sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري يلو<small>First Division</small></a>`;}
 document.getElementById("lgAr").textContent=`كل الأندية · ${S.label[1]}`;
 if(L.lastChecked){const [y,m,x]=L.lastChecked.split("-").map(Number);document.getElementById("checked").insertAdjacentHTML("beforeend",`SAFF checked ${x} ${ME[m-1]} <span class="ar">آخر تحقق ${x} ${MA[m-1]}</span>`);}
 
@@ -579,7 +599,7 @@ document.getElementById("kpis").innerHTML=K.map((k,i)=>`<div class="card kpi rv"
 const FL={W:["W","ف"],D:["D","ت"],L:["L","خ"]};
 document.getElementById("table").innerHTML=`<thead><tr><th>#</th><th class="cl">Club · النادي</th><th>P<br><span class="ar">لعب</span></th><th>W<br><span class="ar">فاز</span></th><th>D<br><span class="ar">تعادل</span></th><th>L<br><span class="ar">خسر</span></th><th class="h-s">GF<br><span class="ar">له</span></th><th class="h-s">GA<br><span class="ar">عليه</span></th><th>GD<br><span class="ar">الفارق</span></th><th>Pts<br><span class="ar">النقاط</span></th><th class="h-s">Last five<br><span class="ar">آخر خمس</span></th></tr></thead><tbody>${
  rows.map(r=>{const [t,pos,pts,p,w,d,l,gf,ga]=r,gd=gf-ga,f=rec[t].form.slice(-5);
-  return `<tr class="${pos<=2?"z1":pos<=6?"z2":""}" data-t="${esc(t)}"><td class="pos">${pos}</td><td class="cl"><div class="club"><img src="${LOGO(t)}" alt=""><span><b>${esc(TN(t))}</b><span class="ar">${esc(t)}</span></span></div></td><td>${p}</td><td>${w}</td><td>${d}</td><td>${l}</td><td class="h-s">${gf}</td><td class="h-s">${ga}</td><td class="gd ${gd>0?"p":gd<0?"n":""}">${gd>0?"+":""}${gd}</td><td class="pts">${pts}</td><td class="h-s"><span class="form">${f.map(x=>`<i class="${x.r}" title="${esc(TN(x.m.home))} ${x.m.score[0]}-${x.m.score[1]} ${esc(TN(x.m.away))}">${FL[x.r][0]}</i>`).join("")}</span></td></tr>`;}).join("")}</tbody>`;
+  return `<tr class="${ZN(pos)}" data-t="${esc(t)}"><td class="pos">${pos}</td><td class="cl"><div class="club"><img src="${LOGO(t)}" alt=""><span><b>${esc(TN(t))}</b><span class="ar">${esc(t)}</span></span></div></td><td>${p}</td><td>${w}</td><td>${d}</td><td>${l}</td><td class="h-s">${gf}</td><td class="h-s">${ga}</td><td class="gd ${gd>0?"p":gd<0?"n":""}">${gd>0?"+":""}${gd}</td><td class="pts">${pts}</td><td class="h-s"><span class="form">${f.map(x=>`<i class="${x.r}" title="${esc(TN(x.m.home))} ${x.m.score[0]}-${x.m.score[1]} ${esc(TN(x.m.away))}">${FL[x.r][0]}</i>`).join("")}</span></td></tr>`;}).join("")}</tbody>`;
 document.querySelectorAll("#table tbody tr").forEach(tr=>tr.onclick=()=>go(tr.dataset.t));
 
 /* rounds */
@@ -602,7 +622,7 @@ const PM=(()=>{try{return window.PREDICT?PREDICT.fit(PREDICT.played(S)):null;}ca
   pl.forEach(m=>{const md=cache[m.date]||(cache[m.date]=PREDICT.fit(pl,m.date));const p=md&&PREDICT.match(md,m.home,m.away);if(!p||pl.filter(x=>x.date<m.date).length<40)return;
     const o=m.hg>m.ag?0:m.hg===m.ag?1:2,v=[p.pw,p.pd,p.pl];n++;if(v.indexOf(Math.max(...v))===o)hit++;});
   const dr=pl.filter(m=>m.hg===m.ag).length;
-  box.innerHTML=n?`<b>كيف التوقع؟</b> النسب تحت كل مباراة جاية من نموذج إحصائي مبني على كل نتائج الدوري هذا الموسم (${pl.length} مباراة): قوة هجوم ودفاع كل فريق، والمباريات الأحدث لها وزن أكبر، وأفضلية الأرض محسوبة من الدوري نفسه. جرّبناه على المباريات اللي انلعبت (كل مباراة توقعناها من اللي قبلها بس): أصاب النتيجة (فوز/تعادل/خسارة) في <b>${Math.round(hit/n*100)}%</b> من ${n} مباراة، والتخمين العشوائي يصيب حوالي 33%. دوري يلو فيه تعادلات كثيرة (${Math.round(dr/pl.length*100)}% من المباريات)، فالمفاجآت واردة. واللي ما يدخل في الحساب: الإصابات والإيقافات والتشكيلة.`:"";
+  box.innerHTML=n?`<b>كيف التوقع؟</b> النسب تحت كل مباراة جاية من نموذج إحصائي مبني على كل نتائج الدوري هذا الموسم (${pl.length} مباراة): قوة هجوم ودفاع كل فريق، والمباريات الأحدث لها وزن أكبر، وأفضلية الأرض محسوبة من الدوري نفسه. جرّبناه على المباريات اللي انلعبت (كل مباراة توقعناها من اللي قبلها بس): أصاب النتيجة (فوز/تعادل/خسارة) في <b>${Math.round(hit/n*100)}%</b> من ${n} مباراة، والتخمين العشوائي يصيب حوالي 33%. ${LN.ar} فيه تعادلات بنسبة ${Math.round(dr/pl.length*100)}% من المباريات، فالمفاجآت واردة. واللي ما يدخل في الحساب: الإصابات والإيقافات والتشكيلة.`:"";
 }catch(e){box.innerHTML="";}}
 const showR=r=>{R=r;nav.querySelectorAll("button").forEach(b=>b.classList.toggle("on",+b.dataset.r===r));
   const ms=LG.filter(m=>m.round===r).sort((a,b)=>(a.date+(a.time||"")).localeCompare(b.date+(b.time||"")));
@@ -673,8 +693,8 @@ const arcs=nr.map((m,i)=>{const a=VP(L.clubs[m.away]&&L.clubs[m.away].home),b=VP
   const mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2-Math.hypot(a[0]-b[0],a[1]-b[1])*.3,d=`M${a[0].toFixed(1)},${a[1].toFixed(1)} Q${mx.toFixed(1)},${my.toFixed(1)} ${b[0].toFixed(1)},${b[1].toFixed(1)}`;
   return `<path class="arc" d="${d}"/><circle class="plane" r="4.5"><animateMotion dur="${(2.4+i*.25).toFixed(2)}s" repeatCount="indefinite" path="${d}"/></circle>`;}).join("");
 const mapEl=document.getElementById("map");
-mapEl.innerHTML=`<div class="mbar"><b>LEAGUE GROUNDS · ملاعب دوري الأولى</b><button data-m="grounds" class="on">Home grounds · الملاعب</button><button data-m="trips">Round ${openR} trips · رحلات الجولة ${openR}</button><button data-m="travel">Travel from a club · المسافات</button></div><div class="stage">
-<svg class="kmap" viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of First Division League stadiums"><defs>
+mapEl.innerHTML=`<div class="mbar"><b>LEAGUE GROUNDS · ملاعب ${LN.ar}</b><button data-m="grounds" class="on">Home grounds · الملاعب</button><button data-m="trips">Round ${openR} trips · رحلات الجولة ${openR}</button><button data-m="travel">Travel from a club · المسافات</button></div><div class="stage">
+<svg class="kmap" viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of ${LN.en} stadiums"><defs>
  <linearGradient id="landG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22313f"/><stop offset="1" stop-color="#151f29"/></linearGradient>
  <linearGradient id="arcG" x1="0" x2="1"><stop offset="0" stop-color="#2c8c84"/><stop offset="1" stop-color="#fdc366"/></linearGradient>
  <pattern id="mgrid" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="rgba(255,255,255,.10)"/></pattern>
@@ -766,7 +786,7 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
   const inner=x.r?`<span class="ct">${esc(x.m.home)}</span><span class="sc">${x.m.score[1]}-${x.m.score[0]}</span><span class="dt">${RL[x.r][0]}${cup?" · الكأس":""}</span>${x.km!=null?`<span class="km">${x.km.toLocaleString("en")} كم</span>`:""}`
    :`<span class="ct">${esc(x.m.home)}</span><span class="sc">بانتظار الختم</span><span class="dt">${dd(x.m.date)[1]}</span>${x.km!=null?`<span class="km">${x.km.toLocaleString("en")} كم${x.m.weather&&WX[x.m.weather.c]?` · ${x.m.weather.t}° ${WX[x.m.weather.c][1]}`:""}</span>`:""}`;
   return `<div class="stp ${x.r?"ink":"wait"}" style="--r:${rot.toFixed(1)}deg;color:${c};transform:rotate(${rot.toFixed(1)}deg)" title="${esc(x.m.home)} × ${esc(x.m.away)} · ${esc(x.m.venue||"")}">${stampSVG(x.id,sh,c,top,esc(bot),!x.r)}<div class="in">${inner}</div></div>`;};
- const mrz=t=>("P<SAU"+String(TN(t)).toUpperCase().replace(/[^A-Z]/g,"<")+"<<FDL<"+S.label[0].replace(/\D/g,"")).padEnd(44,"<").slice(0,44);
+ const mrz=t=>("P<SAU"+String(TN(t)).toUpperCase().replace(/[^A-Z]/g,"<")+"<<"+LN.short+"<"+S.label[0].replace(/\D/g,"")).padEnd(44,"<").slice(0,44);
  let club=(rows[0]&&rows[0][0])||Object.keys(L.clubs)[0],sp=0;
  const PER=6;
  const draw=(dir)=>{const T=trips(club),done=T.filter(x=>x.r),nx=T.find(x=>!x.r),rec={W:0,D:0,L:0};done.forEach(x=>rec[x.r]++);
@@ -808,18 +828,18 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
 
 /* hero */
 {const N0=S.totalRounds||34,cr=S.currentRound||1,pc=Math.round(played.length/((N0*rows.length)/2)*100),R0=40,C0=2*Math.PI*R0;
- document.getElementById("hero").innerHTML=`<div class="hk">Saudi First Division League</div><div class="ht">Season ${S.label[0].replace(/^Season /,"")}<span class="ar">دوري الأولى ${S.label[1].replace(/^موسم /,"")}</span></div>
+ document.getElementById("hero").innerHTML=`<div class="hk">Saudi ${LN.en.replace(/^Saudi /,"")}</div><div class="ht">Season ${S.label[0].replace(/^Season /,"")}<span class="ar">${LN.ar} ${S.label[1].replace(/^موسم /,"")}</span></div>
  <div class="prog"><svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="${R0}" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="9"/><circle cx="50" cy="50" r="${R0}" fill="none" stroke="#fdc366" stroke-width="9" stroke-linecap="round" stroke-dasharray="${(C0*pc/100).toFixed(1)} ${C0.toFixed(1)}" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" fill="#fff" font-size="20" font-weight="800">${pc}%</text></svg>
  <div class="pv"><b>Round ${cr} <small style="font-size:16px;opacity:.6">/ ${N0}</small></b><span>${played.length} of ${(N0*rows.length)/2} matches played · <span class="ar">الجولة ${cr} من ${N0}</span></span></div>
  <div class="hst"><div><b>${goals}</b><span>Goals · أهداف</span></div><div><b>${(goals/(played.length||1)).toFixed(2)}</b><span>Per match · للمباراة</span></div><div><b>${CH.length}</b><span>Changes · تعديلات</span></div></div></div>`;
  const [l1,l2,l3]=rows;
  document.getElementById("leader").innerHTML=`<div><div class="hk">Top of the table · المتصدر</div><div class="who"><img src="${LOGO(l1[0])}" alt=""><span><b>${esc(TN(l1[0]))}</b><span class="ar">${esc(l1[0])}</span></span><div class="pts"><b>${l1[2]}</b><span>points · نقطة</span></div></div></div>
- <div class="chase">${[l2,l3].map(r=>`<a href="index.html?club=${encodeURIComponent(r[0])}"><img src="${LOGO(r[0])}" alt=""><span><small>${r[1]===2?"2nd":"3rd"} · ${esc(TN(r[0]))}</small></span><b>−${l1[2]-r[2]}</b></a>`).join("")}</div>`;}
+ <div class="chase">${[l2,l3].map(r=>`<a href="index.html?${window.LGQ}club=${encodeURIComponent(r[0])}"><img src="${LOGO(r[0])}" alt=""><span><small>${r[1]===2?"2nd":"3rd"} · ${esc(TN(r[0]))}</small></span><b>−${l1[2]-r[2]}</b></a>`).join("")}</div>`;}
 /* next fixtures across the league */
 {const now=Date.now(),ko=m=>Date.parse(m.date+"T"+(m.time||"18:00")+":00+03:00");
  const up=LG.filter(m=>m.status!=="played"&&m.status!=="postponed"&&ko(m)>now-2*3600e3).sort((a,b)=>ko(a)-ko(b)).slice(0,10);
  const cd=m=>{const d=ko(m)-now;if(d<0)return "LIVE · مباشر";const h=Math.floor(d/3600e3);return h<24?`in ${h}h · بعد ${h} ساعة`:`in ${Math.floor(h/24)}d · بعد ${Math.floor(h/24)} يوم`;};
- document.getElementById("nexts").innerHTML=up.map(m=>`<a class="nx" href="index.html?club=${encodeURIComponent(m.home)}" style="text-decoration:none;color:inherit"><div class="when"><span>${dd(m.date)[0]}</span><span class="cd">${cd(m)}</span></div><img src="${LOGO(m.home)}" alt=""><span class="k">${m.time||"TBC"}</span><img src="${LOGO(m.away)}" alt=""><div class="nm"><span>${esc(TN(m.home))}</span><span>${esc(TN(m.away))}</span></div></a>`).join("");}
+ document.getElementById("nexts").innerHTML=up.map(m=>`<a class="nx" href="index.html?${window.LGQ}club=${encodeURIComponent(m.home)}" style="text-decoration:none;color:inherit"><div class="when"><span>${dd(m.date)[0]}</span><span class="cd">${cd(m)}</span></div><img src="${LOGO(m.home)}" alt=""><span class="k">${m.time||"TBC"}</span><img src="${LOGO(m.away)}" alt=""><div class="nm"><span>${esc(TN(m.home))}</span><span>${esc(TN(m.away))}</span></div></a>`).join("");}
 /* points race: the position ladder */
 {const N=Math.max(...rows.map(r=>rec[r[0]].form.length),1);
  /* standing after each round: points, goal difference, goals, then today's order */
@@ -834,7 +854,7 @@ if(mio)mio.observe(kmap);else kmap.classList.add("go");
  let g=`<rect class="zb1" x="${l-30}" y="${tp}" width="${W2-l-r+60}" height="${2*RH}" rx="8"/><rect class="zb2" x="${l-30}" y="${tp+2*RH}" width="${W2-l-r+60}" height="${4*RH}" rx="8"/>`;
  for(let k=1;k<=N;k++)g+=`<line class="vr" x1="${X(k)}" x2="${X(k)}" y1="${tp-4}" y2="${tp+T*RH}"/><text class="gx" x="${X(k)}" y="${tp-12}" text-anchor="middle">${k}</text>`;
  g+=`<text class="gx" x="${l-40}" y="${tp-12}" text-anchor="end" style="letter-spacing:.12em">R</text>`;
- for(let p=1;p<=T;p++)g+=`<text class="gy ${p<=2?"z1":p<=6?"z2":""}" x="${l-40}" y="${Y(p)+4}" text-anchor="end">${p}</text>`;
+ for(let p=1;p<=T;p++)g+=`<text class="gy ${ZN(p)}" x="${l-40}" y="${Y(p)+4}" text-anchor="end">${p}</text>`;
  g+=`<line class="zl" x1="${l-30}" x2="${W2-8}" y1="${tp+2*RH}" y2="${tp+2*RH}"/><line class="zl" x1="${l-30}" x2="${W2-8}" y1="${tp+6*RH}" y2="${tp+6*RH}"/>`;
  const path=t=>{let d="";for(let k=1;k<=N;k++){const x=X(k),y=Y(P[t][k]);if(k===1){d=`M${x},${y}`;continue;}const x0=X(k-1),y0=Y(P[t][k-1]),m=(x-x0)*.5;d+=`C${x0+m},${y0} ${x-m},${y} ${x},${y}`;}return d;};
  const RC={W:"#5fa37c",D:"#d2a941",L:"#c96f68"},RL={W:"W",D:"D",L:"L"};
@@ -898,10 +918,10 @@ const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEac
 document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=Math.min(i%6,5)*60+"ms";io.observe(e);}else e.classList.add("in");});
 })();
 </script>
-<script>document.write('<script src="discipline-data.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
+<script>document.write('<script src="discipline-data'+window.LGF+'.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
   <script>document.write('<script src="discipline-pending.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
 <script src="discipline.js?v=20261124b"></script>
 <script>/* the league's official accounts */
-(()=>{const S=window.SOCIAL;if(S)drawSocial(document.getElementById("soc"),S.league,"دوري الأولى");})();</script>
+(()=>{const S=window.SOCIAL;if(S){const spl=window.LG==="spl";const a=spl?S.spl:S.league;if(a)drawSocial(document.getElementById("soc"),a,spl?"دوري روشن":"دوري يلو");}})();</script>
 </body>
 </html>
