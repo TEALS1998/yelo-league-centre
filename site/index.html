@@ -4955,6 +4955,22 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 
 #rpOv .gkp{position:relative}
 #rpOv .gkp img.g3{width:100%;height:27mm;object-fit:cover;display:block}
+#rpOv .gkg.g12{gap:2.4mm}#rpOv .gkg.g12 .gkp img.g3{height:16mm}#rpOv .gkg.g12 .gkp svg{height:16mm!important;width:100%!important}
+#rpOv .gkg.g12 .gkn{padding-top:1mm}#rpOv .gkg.g12 .gkn b{font-size:8.6px}#rpOv .gkg.g12 .gkn .ar{font-size:7.6px}
+#rpOv .gkg.g12 .sbx{padding:.3mm 2.5mm}#rpOv .gkg.g12 .gkf{padding:.3mm 2.5mm}#rpOv .gkg.g12 .gkr{padding:.6mm 2.5mm 1.2mm}
+#rpOv .gkg.g12 .gkr em{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#rpOv .rpF .pgn{font-family:var(--dinc);font-size:11px;color:#27333e;white-space:nowrap}
+#rpOv .toc{display:flex;flex-direction:column}
+#rpOv .toc>div{display:grid;grid-template-columns:12mm 1fr auto;gap:4mm;align-items:center;padding:1.8mm 0;border-bottom:1px solid #d5d9de}
+#rpOv .toc .n{font-family:var(--dinc);font-size:26px;color:#c9b48a;line-height:1}
+#rpOv .toc b{display:block;font-family:var(--dinc);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#27333e}
+#rpOv .toc b .ar{font-family:var(--ar);text-transform:none;letter-spacing:0;font-size:14px;margin-left:2mm}
+#rpOv .toc small{display:block;font-size:9px;color:#69717b;margin-top:.6mm}
+#rpOv .toc .pg{font-family:var(--dinc);font-size:20px;color:#27333e}
+#rpOv .hl{display:flex;flex-direction:column;gap:1.6mm}
+#rpOv .hl div{display:grid;grid-template-columns:8mm 1fr;gap:2mm;font-size:10.5px;line-height:1.45;color:#262c36}
+#rpOv .hl div i{font-style:normal;font-family:var(--dinc);color:#c9b48a;font-size:14px}
+#rpOv .hl .ar{display:block;color:#4b5969;font-size:10px;text-align:left}
 #rpOv .g3b{position:absolute;top:1mm;left:1mm;background:rgba(11,18,30,.75);color:#f2d98a;font-family:var(--dinc);font-size:7px;letter-spacing:.12em;padding:.3mm 1.2mm;border-radius:2px}
 #rpOv .gd.g3d{grid-template-columns:50mm 1fr}
 #rpOv .g3w{position:relative;height:100%;min-height:54mm}#rpOv .g3w img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -5104,13 +5120,13 @@ function rMatch(){
      <div class="mptop"><span>${US_EN} · نادي ${US}</span><span>${SEA.league?SEA.league[0]:""} · ${SEA.label?SEA.label[0]:SKEY}</span></div>
      <div class="mpround">${round[0]}<span class="ar">${round[1]}</span></div>
      <div class="mpvs">
-       <div class="mpt">${crestImg(next.home,40)}<b>${tn(next.home)}</b><span class="ar">${next.home}</span><i>${H?"HOME · المستضيف":"HOST · المستضيف"}</i>${row(next.home)?`<div class="mppos">${row(next.home)[1]}<small>${["","st","nd","rd"][row(next.home)[1]]||"th"}</small><span>${row(next.home)[2]} pts · نقطة</span></div>`:""}</div>
+       <div class="mpt">${crestImg(next.home,40)}<b>${tn(next.home)}</b><span class="ar">${next.home}</span><i>${H?"HOME · صاحب الأرض":"HOME · صاحب الأرض"}</i>${row(next.home)?`<div class="mppos">${row(next.home)[1]}<small>${["","st","nd","rd"][row(next.home)[1]]||"th"}</small><span>${row(next.home)[2]} pts · نقطة</span></div>`:""}</div>
        <div class="mpsb"><div class="mpsbl">KICK OFF · ضربة البداية</div>${board(next.time||"  :  ",14)}<div class="mpsbl">${fE(next.date)} · ${fA(next.date)}</div></div>
        <div class="mpt">${crestImg(next.away,40)}<b>${tn(next.away)}</b><span class="ar">${next.away}</span><i>VISITORS · الضيف</i>${row(next.away)?`<div class="mppos">${row(next.away)[1]}<small>${["","st","nd","rd"][row(next.away)[1]]||"th"}</small><span>${row(next.away)[2]} pts · نقطة</span></div>`:""}</div>
      </div>
-     <div class="mpkey"><span><i style="background:#5fa37c"></i>Win · فوز</span><span><i style="background:#d2a941"></i>Draw · تعادل</span><span><i style="background:#c96f68"></i>Loss · خسارة</span><span><i style="background:#fff"></i>This match · هذه المباراة</span><span><i style="background:#c9b48a;height:1px"></i>Points toward ${REF0().second||73} · النقاط نحو ${REF0().second||73}</span></div>
-     ${(()=>{const P=predict(next);if(!P)return"";const pc=x=>Math.round(x*100);return `<div class="mpwp"><div class="mpwph"><span>MODEL WIN PROBABILITY · احتمالات النموذج</span><span>Most likely ${P.top[0][0]} v ${P.top[0][1]} · النتيجة الأرجح</span></div><div class="mpwpb"><span style="flex:${P.pw}">${pc(P.pw)}%</span><span style="flex:${P.pd}">${pc(P.pd)}%</span><span style="flex:${P.pl}">${pc(P.pl)}%</span></div><div class="mpwpk"><span>${tn(next.home)}</span><span>Draw · تعادل</span><span>${tn(next.away)}</span></div></div>`;})()}
-     <div class="mpcount"><b>${daysTo}</b><span>${daysTo===1?"day":"days"} to go<span class="ar">${daysTo===0?"اليوم":"يوم متبقي"}</span></span></div>
+     <div class="mpkey"><span><i style="background:#5fa37c"></i>Win · فوز</span><span><i style="background:#d2a941"></i>Draw · تعادل</span><span><i style="background:#c96f68"></i>Loss · خسارة</span><span><i style="background:#fff"></i>This match · هذه المباراة</span><span><i style="background:#c9b48a;height:1px"></i>Our points, full ring ${REF0().second||73} · نقاطنا، والدائرة كاملة عند ${REF0().second||73}</span></div>
+     ${(()=>{const P=predict(next);if(!P)return"";const pc=x=>Math.round(x*100);return `<div class="mpwp"><div class="mpwph"><span>CHANCES FROM THE MODEL · الفرص حسب النموذج</span><span>Most likely ${P.top[0][0]}-${P.top[0][1]} · النتيجة الأرجح <bdi dir="ltr">${P.top[0][0]}-${P.top[0][1]}</bdi></span></div><div class="mpwpb"><span style="flex:${P.pw}">${pc(P.pw)}%</span><span style="flex:${P.pd}">${pc(P.pd)}%</span><span style="flex:${P.pl}">${pc(P.pl)}%</span></div><div class="mpwpk"><span>${tn(next.home)}</span><span>Draw · تعادل</span><span>${tn(next.away)}</span></div></div>`;})()}
+     <div class="mpcount"><b>${daysTo}</b><span>${daysTo===0?"Match day":daysTo===1?"day to go":"days to go"}<span class="ar">${daysTo===0?"المباراة اليوم":daysTo===1?"باقي يوم":daysTo===2?"باقي يومين":"باقي "+daysTo+" أيام"}</span></span></div>
    </div>
    <div class="mptk">
      <div class="tkm"><div class="tkh">MATCH TICKET <span class="ar">تذكرة المباراة</span></div>
@@ -5127,16 +5143,16 @@ function rMatch(){
 
   /* ---------- page 2: the contest ---------- */
   const ppg=r=>r&&r[3]?(r[2]/r[3]).toFixed(2):"0";
-  const tape=[["Position","المركز",u[1],t[1],1],["Points","النقاط",u[2],t[2]],["Won","فوز",u[4],t[4]],["Lost","خسارة",u[6],t[6],1],["Scored","له",u[7],t[7]],["Conceded","عليه",u[8],t[8],1],["Per game","المعدل",ppg(u),ppg(t)]];
-  const arrows=tape.map(([e,a,x,y,low],i)=>{x=+x||0;y=+y||0;const usBetter=low?x<y:x>y,eq=x===y;const yy=11+i*7.6;
+  const tape=[["Position","المركز",u[1],t[1],1],["Points","النقاط",u[2],t[2]],["Wins","الفوز",u[4],t[4]],["Losses","الخسارة",u[6],t[6],1],["Scored","له",u[7],t[7]],["Conceded","عليه",u[8],t[8],1],["Per game","المعدل",ppg(u),ppg(t)]];
+  const arrows=tape.map(([e,a,x,y,low],i)=>{x=+x||0;y=+y||0;const usBetter=low?x<y:x>y,eq=x===y;const yy=10.5+i*6.6;
     const L=(v,o)=>{if(v===o)return 38;const good=low?v<o:v>o;return good?46:Math.max(8,46*(low?(o||.1)/(v||.1):(v/(o||.1))));};
     const lx=L(x,y),ly=L(y,x);
     return `<text x="100" y="${yy+1}" font-size="2.6" fill="#e9e3d6" text-anchor="middle">${e} · ${a}</text>
       <path d="M84 ${yy} L${84-lx*.8} ${yy}" stroke="#c9b48a" stroke-width="${usBetter?3:1.8}" stroke-linecap="round" opacity="${usBetter||eq?1:.55}"/><path d="M${84-lx*.8} ${yy-2} ${80.5-lx*.8} ${yy} ${84-lx*.8} ${yy+2}" fill="#c9b48a" opacity="${usBetter||eq?1:.55}"/>
       <path d="M116 ${yy} L${116+ly*.8} ${yy}" stroke="#ffffff" stroke-width="${!usBetter&&!eq?3:1.8}" stroke-linecap="round" opacity="${!usBetter||eq?1:.5}"/><path d="M${116+ly*.8} ${yy-2} ${119.5+ly*.8} ${yy} ${116+ly*.8} ${yy+2}" fill="#ffffff" opacity="${!usBetter||eq?1:.5}"/>
       <text x="${77-lx*.8}" y="${yy+1.6}" font-size="4.6" fill="#f2d98a" text-anchor="end" font-weight="700">${x}</text><text x="${123+ly*.8}" y="${yy+1.6}" font-size="4.6" fill="#fff" font-weight="700">${y}</text>`;}).join("");
-  const chalk=`<svg viewBox="0 0 200 63" style="width:100%;display:block;background:#244d36;border-radius:10px">
-    <g fill="none" stroke="#fff" stroke-width=".35" opacity=".22"><rect x="4" y="4" width="192" height="55"/><line x1="100" y1="4" x2="100" y2="59"/><circle cx="100" cy="31" r="9"/><rect x="4" y="17" width="16" height="28"/><rect x="180" y="17" width="16" height="28"/></g>
+  const chalk=`<svg viewBox="0 0 200 56" style="width:100%;display:block;background:#244d36;border-radius:10px">
+    <g fill="none" stroke="#fff" stroke-width=".35" opacity=".22"><rect x="4" y="4" width="192" height="48"/><line x1="100" y1="4" x2="100" y2="52"/><circle cx="100" cy="28" r="8"/><rect x="4" y="15" width="16" height="26"/><rect x="180" y="15" width="16" height="26"/></g>
     <text x="8" y="9" font-size="3.6" fill="#f2d98a" font-weight="700">${tn(US).toUpperCase()}</text><text x="192" y="9" font-size="3.6" fill="#fff" text-anchor="end" font-weight="700">${tn(o).toUpperCase()}</text>${arrows}</svg>`;
   const form=playedL.filter(m=>m.comp==="league").slice(-5);
   const formStrip=form.map(m=>{const r=res(m),g=gfga(m);return `<div class="fs ${r}"><b>${r==="W"?"W":r==="D"?"D":"L"}</b><span>${g[0]} ${g[1]}</span><i>${tn(opp(m))}</i><em>${m.home===US?"H":"A"}</em></div>`;}).join("");
@@ -5145,11 +5161,11 @@ function rMatch(){
   const mini=`<table class="rptab"><tr><th>#</th><th style="text-align:left">Club · النادي</th><th>P</th><th>GD</th><th>Pts</th></tr>${band.map(r=>`<tr class="${r[0]===US?"us":r[0]===o?"op":""}"><td>${r[1]}</td><td class="l">${img(r[0])}${tn(r[0])} <span class="ar" style="color:#69717b">${r[0]}</span></td><td>${r[3]}</td><td>${r[7]-r[8]>0?"+":""}${r[7]-r[8]}</td><td><b>${r[2]}</b></td></tr>`).join("")}</table>`;
   const chg=(next.changes||[]);
   const p2=`<section class="rps fix">${head(`${round[0]} · ${round[1]}`,"The contest","المواجهة",`<span>${tn(next.home)} v ${tn(next.away)} · ${next.home} ضد ${next.away}</span>`)}<div class="rpB">
-    ${T("01","Tactics board: tale of the tape","السبورة التكتيكية: مقارنة الفريقين")}${chalk}<div class="rpnote" style="text-align:center;margin-top:-4mm">Gold arrows ${US_EN}, white arrows ${tn(o)}. The bolder arrow is the better figure. · الأسهم الذهبية للعلا والبيضاء لـ${o}، والسهم الأعرض هو الأفضل.</div>
+    ${T("01","The two sides in numbers","الفريقان بالأرقام")}${chalk}<div class="rpnote" style="text-align:center;margin-top:-4mm">Gold arrows ${US_EN}, white arrows ${tn(o)}. The bolder arrow marks the better figure. · الأسهم الذهبية لـ${US} والبيضاء لـ${o}، والسهم الأعرض هو الرقم الأفضل.</div>
     ${T("02","Prediction","توقع النتيجة")}${predictBlock(next)}
-    <div class="rp2"><div>${T("03","Form: last five league games","المستوى: آخر خمس مباريات")}<div class="fstrip">${formStrip||"<p>No games yet · لا توجد مباريات</p>"}</div>
-      ${T("04","Head to head this season","المواجهة هذا الموسم")}<div style="font-size:9.5px;line-height:1.6">${met.length?met.map(m=>`<div>${fE(m.date)}: ${tn(m.home)} ${m.score[0]} v ${m.score[1]} ${tn(m.away)} · ${m.home} ${m.score[0]} مقابل ${m.score[1]} ${m.away}</div>`).join(""):`First meeting this season · أول مواجهة هذا الموسم`}</div></div>
-      <div>${T("05","Where they stand","موقع الفريقين في الترتيب")}${mini}
+    <div class="rp2"><div>${T("03","Last five league games","آخر خمس مباريات في الدوري")}<div class="fstrip">${formStrip||"<p>No games yet · لا توجد مباريات</p>"}</div>
+      ${met.length?`${T("04","Meetings this season","مواجهات الفريقين هذا الموسم")}<div style="font-size:9.5px;line-height:1.6">${met.map(m=>`<div>${fE(m.date)}: ${tn(m.home)} ${m.score[0]} v ${m.score[1]} ${tn(m.away)} · ${m.home} ${m.score[0]} مقابل ${m.score[1]} ${m.away}</div>`).join("")}</div>`:`<div class="rpnote" style="margin-top:2mm">First meeting between the two sides this season · أول مواجهة بين الفريقين هذا الموسم</div>`}</div>
+      <div>${T("05","Where they stand","مكان الفريقين في الترتيب")}${mini}
 </div></div>
   </div>${ft}</section>`;
 
@@ -5168,18 +5184,18 @@ function rMatch(){
     <div class="bpr"><div><b>${passFrom.code}</b><span>${passFrom.city}</span><em class="ar">${passFrom.ar}</em></div>
       <svg viewBox="0 0 60 12" style="width:34mm"><line x1="2" y1="6" x2="58" y2="6" stroke="#27333e" stroke-width=".8" stroke-dasharray="${mode==="train"?"0":"2 1.5"}"/>${mode==="train"?`<rect x="24" y="2" width="12" height="7" rx="2" fill="#27333e"/><circle cx="27" cy="10" r="1" fill="#27333e"/><circle cx="33" cy="10" r="1" fill="#27333e"/>`:`<path d="M26 6h10M32 6l-3-4M32 6l-3 4M35 6l-1-1.5M35 6l-1 1.5" stroke="#27333e" stroke-width="1.2" fill="none"/>`}</svg>
       <div style="text-align:right"><b>${passTo.code}</b><span>${passTo.city}</span><em class="ar">${passTo.ar}</em></div></div>
-    <div class="bpg"><div><span>Mode · الوسيلة</span><b>${mode==="train"?"Train · قطار":"Flight · طيران"}</b></div><div><span>Service · الخدمة</span><b>${dt[0]}</b><em class="ar">${dt[1]}</em></div><div><span>${mode==="train"?"Train time":"Air time"} · مدة الرحلة</span><b>${C?mins(C.air):"?"}</b></div><div><span>${away?"Then by coach · بعدها بالباص":"Airport to stadium · من المطار للملعب"}</span><b>${away?(C?mins(C.ground):"?"):(airToGround!=null?"about "+airToGround+" km":"?")}</b></div>
+    <div class="bpg"><div><span>Mode · الوسيلة</span><b>${mode==="train"?"Train · قطار":"Flight · طيران"}</b></div><div><span>Service · الخدمة</span><b>${dt[0]}</b><em class="ar">${dt[1]}</em></div><div><span>${mode==="train"?"Train time":"Air time"} · مدة الرحلة</span><b>${C?mins(C.air):"?"}</b></div><div><span>${away?"Then by coach · بعدها بالباص":"Airport to stadium · من المطار للملعب"}</span><b>${away?(C?mins(C.ground):"?"):(airToGround!=null?airToGround+" km":"?")}</b></div>
       ${away&&TRAVEL.party?`<div><span>Party · البعثة</span><b>${TRAVEL.party?TRAVEL.party.players+" players, "+TRAVEL.party.staff+" staff":"?"}</b></div>`:`<div><span>Distance to ${BASE.en} · المسافة</span><b>${oci&&oci.ll?Math.round(hav2(oci.ll,MED.ll)).toLocaleString("en")+" km":"?"}</b></div>`}
-      <div><span>Straight line · خط مستقيم</span><b>${away&&kmFromBase?kmFromBase.toLocaleString("en")+" km":"Home · أرضه"}</b></div></div></div>
+      ${away?`<div><span>Distance · المسافة</span><b>${kmFromBase?kmFromBase.toLocaleString("en")+" km":"?"}</b></div>`:`<div><span>Kick off · ضربة البداية</span><b>${next.time||"TBC"}</b></div>`}</div></div>
     <div class="bps"><span>GATE · البوابة</span><b>${passTo.code}</b><span>DAY · اليوم</span><b>${fE(next.date).split(" ").slice(0,3).join(" ")}</b></div></div>`;
   const map=flightMap(away?MED.ll:(oci&&oci.ll)||MED.ll,away?destLL:MED.ll,away?BASE.en:(oci&&oci.en)||oppCity||"",away?(ci&&ci.en)||city:BASE.en,mode);
   const cityCard=`<div class="cc"><div class="cch"><b>${away?(ci&&ci.en)||city:BASE.en}</b><span class="ar">${away?city:BASE.ar}</span><i>${away?(ci&&ci.region?ci.region[0]+" · "+ci.region[1]:""):"Home city · مدينتنا"}</i></div>
     <div class="ccg"><div><span>Airport · المطار</span><b>${away?(ci&&ci.airport?ci.airport[0]:"?"):MED.en+" (MED)"}</b><em class="ar">${away?(ci&&ci.airport?ci.airport[1]:""):MED.ar}</em></div>
-    <div><span>Airport in the city · مطار داخل المدينة</span><b>${away?(ci?(ci.inCity?"Yes · نعم":"No, transfer by coach · لا، النقل بالباص"):"?"):"Yes · نعم"}</b></div>
-    <div><span>Airport to stadium · من المطار للملعب</span><b>${airToGround!=null?"about "+airToGround+" km in a straight line · قرابة "+airToGround+" كم بخط مستقيم":"?"}</b><em>${away&&ci?"Coach transfer about "+mins(ci.ground)+" · النقل بالباص قرابة "+ci.ground+" دقيقة":""}</em></div>
+    <div><span>Airport in the city · مطار داخل المدينة</span><b>${away?(ci?(ci.inCity?"Yes · نعم":"No, coach from the airport · لا، باص من المطار"):"?"):"Yes · نعم"}</b></div>
+    <div><span>Airport to stadium · من المطار للملعب</span><b>${airToGround!=null?airToGround+" km · "+airToGround+" كم":"?"}</b><em>${away&&ci?"About "+mins(ci.ground)+" by coach · قرابة "+ci.ground+" دقيقة بالباص":""}</em></div>
     ${away&&ci&&ci.note?`<div><span>Travel note · ملاحظة السفر</span><b>${ci.note[0]}</b><em class="ar">${ci.note[1]}</em></div>`:""}
     ${away&&route?`<div><span>Hotel area · منطقة السكن</span><b>${route.hotelArea[0]}</b><em class="ar">${route.hotelArea[1]}</em></div><div><span>Training the day before · تدريب اليوم السابق</span><b>${route.pitch[0]}</b><em class="ar">${route.pitch[1]}</em></div>`:""}
-    ${!away?`<div><span>Visitors · الفريق الضيف</span><b>${tn(o)} travel from ${(oci&&oci.en)||oppCity||"?"}${oci?", "+directTxt(oci)[0].toLowerCase():""}</b><em class="ar">${o} يسافر من ${oppCity||"؟"}</em></div>`:""}</div></div>`;
+    ${!away?`<div><span>Visitors · الفريق الضيف</span><b>${tn(o)} come from ${(oci&&oci.en)||oppCity||"?"}${oci?" by "+directTxt(oci)[0].toLowerCase():""}</b><em class="ar">${o} يجي من ${oppCity||"؟"}${oci?"، "+directTxt(oci)[1]:""}</em></div>`:""}</div></div>`;
   const tl=away?[["Day before","اليوم السابق",`${mode==="train"?"Train":"Flight"} from ${BASE.en} ${C?mins(C.air):"?"}, coach ${C?mins(C.ground):"?"} to the hotel, then training · ${mode==="train"?"قطار":"طيران"} من ${BASE.ar} ثم باص للفندق ثم تدريب`],["Match day","يوم المباراة",`Coach to the stadium about two hours before kick off at ${next.time||"TBC"} · الباص للملعب قبل ضربة البداية بساعتين تقريبا`]]
     :[["Match day","يوم المباراة","Squad meets at the stadium about two hours before kick off · تجمع الفريق في الملعب قبل المباراة بساعتين تقريبا"],["Kick off","ضربة البداية",`${next.time||"TBC"} Saudi time · بتوقيت السعودية`]];
   const timeline=`<div class="tl">${tl.map(([e,a,d])=>`<div><i></i><b>${e}</b><span class="ar">${a}</span><p>${d}</p></div>`).join("")}</div>`;
@@ -5187,11 +5203,11 @@ function rMatch(){
   const ground=`<div class="gd${t3?" g3d":""}">${t3?`<div class="g3w"><img src="${t3.src}" alt=""><span class="g3b">3D</span></div>`:pitchTop(f)}<div class="gdi"><b>${venEn(next.venue)}</b><span class="ar">${next.venue}</span>
      <div class="ff">${f.cap?`<span>Capacity ${f.cap} · السعة</span>`:""}${f.surface&&SURF[f.surface]?`<span>${SURF[f.surface][0]} · ${SURF[f.surface][1]}</span>`:""}${f.roof&&ROOF[f.roof]?`<span>${ROOF[f.roof][0]} · ${ROOF[f.roof][1]}</span>`:""}${f.track!=null?`<span>${f.track?"Running track · مضمار":"No running track · بدون مضمار"}</span>`:""}</div>
 </div></div>`;
-  const wxBox=`<div class="wx"><div class="wxt"><b>${w.t!=null?w.t+"°C":"?"}</b><span>At kick off · وقت المباراة</span><em>${w.src==="forecast"?"Forecast · توقعات":w.src==="observed"?"Observed · مرصود":"Typical for the month and hour · المعتاد لهذا الشهر والساعة"}</em></div>${w.t!=null?`<div class="wxk">${kitSvg(w.t<=20)}<span>${w.t<=20?"Long sleeves · كم طويل":"Short sleeves · كم قصير"}</span></div>`:""}</div>`;
-  const p3=`<section class="rps rpj fix">${head(`${round[0]} · ${round[1]}`,away?"The journey":"Matchday at home","الرحلة والملعب",`<span>${away?"Away trip to "+((ci&&ci.en)||city):"Home fixture in "+BASE.en} · ${away?"رحلة إلى "+city:"مباراة على أرضه في "+BASE.ar}</span>`)}<div class="rpB">
-     ${T("01",away?"Boarding pass":"The visitors' trip to us","بطاقة السفر")}${pass}
-     <div class="rp2"><div>${T("02","Route","المسار")}${map}<div class="rpnote">Schematic map, straight line distances. · خريطة توضيحية والمسافات بخط مستقيم.</div></div><div>${T("03","The city","المدينة")}${cityCard}</div></div>
-     <div class="rp2"><div>${T("04","The stadium","الملعب")}${ground}</div><div>${T("05","Kick off weather and plan","الطقس وخطة يوم المباراة")}${wxBox}<div style="height:3mm"></div>${timeline}<div class="rpnote">Suggested outline from the logistics plan. · مخطط مقترح من خطة اللوجستيات.</div></div></div>
+  const wxBox=`<div class="wx"><div class="wxt"><b>${w.t!=null?w.t+"°C":"?"}</b><span>At kick off · وقت المباراة</span><em>${w.src==="forecast"?"Forecast · توقع الطقس":w.src==="observed"?"Measured · مقاس فعلياً":"Usual for the month and hour · المعتاد في هذا الشهر والساعة"}</em></div>${w.t!=null?`<div class="wxk">${kitSvg(w.t<=20)}<span>${w.t<=20?"Long sleeves · كم طويل":"Short sleeves · كم قصير"}</span></div>`:""}</div>`;
+  const p3=`<section class="rps rpj fix">${head(`${round[0]} · ${round[1]}`,away?"The journey":"Matchday at home",away?"رحلتنا إلى "+city:"يوم المباراة في أرضنا",`<span>${away?"Away trip to "+((ci&&ci.en)||city):"Home fixture in "+BASE.en} · ${away?"مباراة خارج أرضنا في "+city:"مباراة على أرضنا في "+BASE.ar}</span>`)}<div class="rpB">
+     ${T("01",away?"Our boarding pass":"How "+tn(o)+" get here",away?"بطاقة سفرنا":"كيف يوصل "+o+" إلينا")}${pass}
+     <div class="rp2"><div>${T("02","Route","مسار الرحلة")}${map}<div class="rpnote">Not to scale; distances in a straight line. · رسمة توضيحية، والمسافات بخط مستقيم.</div></div><div>${T("03","The city","المدينة")}${cityCard}</div></div>
+     <div class="rp2"><div>${T("04","The stadium","الملعب")}${ground}</div><div>${T("05","Weather and the day's plan","الطقس وجدول يوم المباراة")}${wxBox}<div style="height:3mm"></div>${timeline}<div class="rpnote">A suggested outline from the logistics plan. · جدول مقترح من خطة اللوجستيات.</div></div></div>
   </div>${ft}</section>`;
   return p1+p2+p3;
 }
@@ -5228,12 +5244,12 @@ function predictBlock(m){
   return `<div class="pd">
    <div class="pdl"><div class="pdh">MODEL PREDICTION · توقع النموذج</div>
      <div class="pdsb"><div class="pdt">${img(m.home)}<span>${tn(m.home)}</span></div>${board(`${hs}:${as}`,14)}<div class="pdt">${img(m.away)}<span>${tn(m.away)}</span></div></div>
-     <div class="pdsub">Most likely score · النتيجة الأرجح (${pct(P.top[0][2])}%) · Expected goals · الأهداف المتوقعة ${P.lh.toFixed(1)} v ${P.la.toFixed(1)}</div>
+     <div class="pdsub">Most likely score ${hs}-${as} (${pct(P.top[0][2])}%), expected goals ${P.lh.toFixed(1)} to ${P.la.toFixed(1)}<span class="ar" style="display:block">النتيجة الأرجح <bdi dir="ltr">${hs}-${as}</bdi> بنسبة ${pct(P.top[0][2])}%، والأهداف المتوقعة <bdi dir="ltr">${P.lh.toFixed(1)}</bdi> لـ${m.home} و<bdi dir="ltr">${P.la.toFixed(1)}</bdi> لـ${m.away}</span></div>
      <div class="pdbar"><span style="width:${pct(P.pw)}%;background:#5fa37c">${pct(P.pw)}%</span><span style="width:${pct(P.pd)}%;background:#d2a941">${pct(P.pd)}%</span><span style="width:${pct(P.pl)}%;background:#c96f68">${pct(P.pl)}%</span></div>
      <div class="pdk"><span>${tn(m.home)} win · فوز ${m.home}</span><span>Draw · تعادل</span><span>${tn(m.away)} win · فوز ${m.away}</span></div>
-     <div class="pdtl">Other likely scores · نتائج محتملة أخرى</div><div class="pdtop">${P.top.slice(1,4).map(([i,j,p])=>`<div><b>${i} v ${j}</b><span>${pct(p)}%</span></div>`).join("")}</div></div>
-   <div class="pdr"><div class="pdh2">Score grid · شبكة النتائج</div>${grid}<div class="rpnote">Rows ${tn(m.home)} goals, columns ${tn(m.away)} goals. · الصفوف أهداف ${m.home} والأعمدة أهداف ${m.away}.</div></div>
-   <div class="rpnote pdn">A statistical model built from every league result this season: attack and defence of each club, recent matches weigh more, home advantage measured from this league. Not a certainty: injuries and suspensions are not in it. · نموذج إحصائي مبني على كل نتائج الدوري هذا الموسم: قوة هجوم ودفاع كل فريق، والمباريات الأحدث لها وزن أكبر، وأفضلية الأرض محسوبة من الدوري نفسه. ليس نتيجة مؤكدة ولا يشمل الإصابات والإيقافات.</div></div>`;
+     <div class="pdtl">Next most likely scores · نتائج محتملة بعدها</div><div class="pdtop">${P.top.slice(1,4).map(([i,j,p])=>`<div><b>${i}-${j}</b><span>${pct(p)}%</span></div>`).join("")}</div></div>
+   <div class="pdr"><div class="pdh2">Chance of every score · احتمال كل نتيجة</div>${grid}<div class="rpnote">Rows: ${tn(m.home)} goals. Columns: ${tn(m.away)} goals. · الصفوف أهداف ${m.home}، والأعمدة أهداف ${m.away}.</div></div>
+   <div class="rpnote pdn">Built from this season's league results. A guide, not a certainty: injuries and suspensions are not in it. · مبني على نتائج الدوري هذا الموسم. مؤشر وليس نتيجة مؤكدة، ولا يشمل الإصابات والإيقافات.</div></div>`;
 }
 
 /* ---------- 2. Stadiums: atlas and collectable ground cards ---------- */
@@ -5256,29 +5272,29 @@ function rGrounds(){
   const res3=g=>g.fx.filter(m=>m.status==="played"&&m.score);
   const p1=`<section class="rps fix">${head("Stadium guide · دليل الملاعب","Away days atlas","أطلس الملاعب والرحلات",`<span>${L.length} stadiums this season · ${L.length} ملعب هذا الموسم</span><span>Season ${SKEY} · الموسم</span>`)}<div class="rpB">
     ${T("01","The map of the season","خريطة الموسم")}${M.svg(arcs+pins)}
-    <div class="rpnote">Gold pin is home. Pin size follows capacity. Solid gold arcs are trips already made, dashed white arcs are still to come. · الدبوس الذهبي ملعب الفريق، وحجم الدبوس حسب السعة، والأقواس الذهبية رحلات تمت والبيضاء المتقطعة رحلات قادمة.</div>
-    <div class="rpk"><div><b>${L.length}</b><span>Stadiums · ملاعب</span></div><div><b>${totalKm.toLocaleString("en")}</b><span>km in round trips, straight line · كم ذهابا وعودة</span></div><div><b>${longest?longest.km.toLocaleString("en"):"?"}</b><span>Longest trip, ${longest?(longest.ci?longest.ci.en:cityOf(longest.v)):""} · أبعد رحلة</span></div><div><b>${nearest?nearest.km.toLocaleString("en"):"?"}</b><span>Nearest away stadium · أقرب ملعب خارج أرضه</span></div></div>
+    <div class="rpnote">Gold pin: our ground. Bigger pin: bigger stadium. Solid gold line: trip already made. Dashed white line: trip still to come. · الدبوس الذهبي ملعبنا، وكل ما كبر الدبوس كبرت سعة الملعب. الخط الذهبي رحلة تمت، والأبيض المتقطع رحلة جاية.</div>
+    <div class="rpk"><div><b>${L.length}</b><span>Stadiums · ملاعب</span></div><div><b>${totalKm.toLocaleString("en")}</b><span>km of away travel, there and back · كم سفر ذهاباً وعودة</span></div><div><b>${longest?longest.km.toLocaleString("en"):"?"}</b><span>Longest trip, ${longest?(longest.ci?longest.ci.en:cityOf(longest.v)):""} · أبعد رحلة، ${longest?cityOf(longest.v):""}</span></div><div><b>${nearest?nearest.km.toLocaleString("en"):"?"}</b><span>Nearest away stadium · أقرب ملعب خارج أرضنا</span></div></div>
     ${T("02","Surfaces and stands","الأرضيات والمدرجات")}
     <div class="srf">${[["n","Natural grass","عشب طبيعي","#2f6b45"],["a","Artificial turf","عشب صناعي","#3f8a57"],["h","Hybrid grass","عشب هجين","#4b7a5a"]].filter(([k])=>surfN(k)>0).map(([k,e,a,c])=>`<div><i style="background:${c}"></i><b>${surfN(k)}</b><span>${e} · ${a}</span></div>`).join("")}<div><i style="background:#b5523b"></i><b>${L.filter(g=>g.f.track).length}</b><span>With running track · بمضمار</span></div><div><i style="background:#f2d98a"></i><b>${L.filter(g=>g.f.roof==="partial"||g.f.roof==="full").length}</b><span>With covered stands · بمظلات</span></div></div>
-    ${T("03","Travel ladder, nearest to farthest","سلم الرحلات من الأقرب للأبعد")}
-    <div class="km kmx">${away.map(g=>`<div class="r"><span>${g.ci?g.ci.en:cityOf(g.v)} · ${cityOf(g.v)}</span><div class="b" style="width:${g.km/(longest?longest.km:1)*100}%"></div><span>${g.km.toLocaleString("en")} km${g.ci?` · ${g.ci.direct==="train"?"train":g.ci.direct==="road"?"road":g.ci.direct==="yes"?"direct":g.ci.direct==="limited"?"few direct":"via hub"}`:""}</span></div>`).join("")}</div><div class="rpnote">Direct, few direct or via hub: flights from ${BASE.en}. · مباشر أو رحلات قليلة أو ترانزيت: رحلات من ${BASE.ar}.</div>
+    ${T("03","Every away trip, nearest first","رحلاتنا من الأقرب للأبعد")}
+    <div class="km kmx">${away.map(g=>`<div class="r"><span>${g.ci?g.ci.en:cityOf(g.v)} · ${cityOf(g.v)}</span><div class="b" style="width:${g.km/(longest?longest.km:1)*100}%"></div><span>${g.km.toLocaleString("en")} km${g.ci?` · ${g.ci.direct==="train"?"train":g.ci.direct==="road"?"road":g.ci.direct==="yes"?"direct":g.ci.direct==="limited"?"few direct":"via hub"}`:""}</span></div>`).join("")}</div><div class="rpnote">Direct, few direct or via hub: flights from ${BASE.en}. · مباشر أو مباشر قليل أو ترانزيت: نوع الرحلات من ${BASE.ar}.</div>
   </div>${FT()}</section>`;
   const card=g=>{const f=g.f,c=capN(g),R=res3(g);const stat=(e,a,v,max,lbl)=>`<div class="sbx"><span>${e} · ${a}</span><div><i style="width:${Math.max(4,Math.min(100,v/max*100))}%"></i></div><b>${lbl}</b></div>`;
-    return `<div class="gk"><div class="gkh"><span>${g===home?"HOME · أرضه":"AWAY · خارج أرضه"}</span><span>#${L.indexOf(g)+1}</span></div>
+    return `<div class="gk"><div class="gkh"><span>${g===home?"HOME · ملعبنا":"AWAY · خارج أرضنا"}</span><span>#${L.indexOf(g)+1}</span></div>
     <div class="gkp">${(()=>{const t=three(g.v,520,300,.5);return t?`<img class="g3" src="${t.src}" alt=""><span class="g3b">3D</span>`:pitchTop(f);})()}</div>
     <div class="gkn"><b>${venEn(g.v)}</b><span class="ar">${g.v}</span></div>
     ${stat("Capacity","السعة",c,35000,f.cap||"?")}${stat("Distance","المسافة",g.km||0,1400,g.km==null?"?":g.km<5?"Home":g.km.toLocaleString("en")+" km")}
     <div class="gkf">${f.surface&&SURF[f.surface]?`<span>${SURF[f.surface][0]}</span>`:""}${f.roof&&ROOF[f.roof]?`<span>${ROOF[f.roof][0]}</span>`:""}${f.track!=null?`<span>${f.track?"Track":"No track"}</span>`:""}</div>
     <div class="gkr">${g.fx.map(m=>m.status==="played"&&m.score?`<span class="rpw ${res(m)}">${res(m)}</span>`:`<span class="rpw U">·</span>`).join("")}<em>${g.fx.map(m=>tn(opp(m))).filter((x,i,a)=>a.indexOf(x)===i).join(", ")}</em></div></div>`;};
-  const pages=[];for(let i=0;i<L.length;i+=9)pages.push(L.slice(i,i+9));
-  const p2=pages.map((pg,n)=>`<section class="rps fix">${head("Stadium guide · دليل الملاعب","Stadium cards","بطاقات الملاعب",`<span>Collect the set · مجموعة الملاعب ${n+1} / ${pages.length}</span>`)}<div class="rpB"><div class="gkg">${pg.map(card).join("")}</div>
-    <div class="rpnote">Cards marked 3D show the stadium 3D model from the dashboard, built from photos of the stadium; the others use a schematic drawing (red edge running track, gold covered stands). Dots are ${US_EN} results at the stadium, grey for games still to play. · البطاقات المعلّمة 3D تعرض المجسم ثلاثي الأبعاد من اللوحة المبني من صور الملعب، والباقي رسمة توضيحية. الدوائر نتائج ${US} في الملعب.</div></div>${FT()}</section>`).join("");
+  const PER=L.length<=12?12:9;const pages=[];for(let i=0;i<L.length;i+=PER)pages.push(L.slice(i,i+PER));
+  const p2=pages.map((pg,n)=>`<section class="rps fix">${head("Stadium guide · دليل الملاعب","Stadium cards","بطاقات الملاعب",`<span>Every stadium we play at this season · كل ملعب نلعب فيه هذا الموسم</span>`)}<div class="rpB"><div class="gkg${pg.length>9?" g12":""}">${pg.map(card).join("")}</div>
+    <div class="rpnote">3D cards show the stadium model built from photos; the rest are drawings. The circles are our results at each stadium: W win, D draw, L loss, grey still to play. · بطاقات 3D فيها مجسم الملعب المبني من صوره، والباقي رسمة توضيحية. الدوائر نتائجنا في كل ملعب: W فوز، D تعادل، L خسارة، والرمادي لسا ما انلعبت.</div></div>${FT()}</section>`).join("");
   return p1+p2;
 }
 
 /* ---------- 3. Changes: the fourth official's season ---------- */
 function rChanges(){
-  const F={date:["Date","التاريخ"],time:["Kick off","الموعد"],venue:["Stadium","الملعب"],status:["Status","الحالة"],home:["Host","المستضيف"]};
+  const F={date:["Date","التاريخ"],time:["Kick off time","وقت المباراة"],venue:["Stadium","الملعب"],status:["Status","حالة المباراة"],home:["Home side","صاحب الأرض"]};
   const L=MATCHES.filter(m=>(m.changes||[]).length).sort((a,b)=>a.date<b.date?-1:1);
   const all=L.flatMap(m=>m.changes.map(c=>({m,c})));
   const by=k=>all.filter(x=>x.c.field===k).length;
@@ -5290,25 +5306,24 @@ function rChanges(){
   const seasonStart=MATCHES.map(m=>m.orig||m.date).sort()[0],seasonEnd=MATCHES.map(m=>m.date).sort().slice(-1)[0];
   const span=(dd(seasonEnd)-dd(seasonStart))/864e5||1;const X=iso=>8+(dd(iso)-dd(seasonStart))/864e5/span*184;
   const months=[];{let t=dd(seasonStart);t.setUTCDate(1);while(t<=dd(seasonEnd)){months.push(new Date(t));t.setUTCMonth(t.getUTCMonth()+1);}}
-  const ribbon=`<svg viewBox="0 0 200 58" style="width:100%;display:block;background:#fff;border:1px solid #d5d9de;border-radius:10px">
+  const ribbon=`<svg viewBox="0 8 200 43" style="width:100%;display:block;background:#fff;border:1px solid #d5d9de;border-radius:10px">
     <line x1="8" y1="38" x2="192" y2="38" stroke="#c6cbd1" stroke-width="1.2"/>
     ${months.map(t=>{const iso=t.toISOString().slice(0,10);if(iso<seasonStart)return"";const x=X(iso);return `<line x1="${x}" y1="35" x2="${x}" y2="41" stroke="#949ba3" stroke-width=".4"/><text x="${x+1}" y="46" font-size="2.8" fill="#69717b">${ME[t.getUTCMonth()]}</text>`;}).join("")}
     ${MATCHES.map(m=>`<circle cx="${X(m.date)}" cy="38" r="1.3" fill="${(m.changes||[]).length?"#c96f68":"#27333e"}"/>`).join("")}
-    ${movedL.map(({m})=>{const a=X(m.orig),b=X(m.date),top=38-Math.min(26,6+Math.abs(b-a)*.5);return `<path d="M${a} 38 Q${(a+b)/2} ${top} ${b} 38" fill="none" stroke="#c9b48a" stroke-width=".8"/><circle cx="${a}" cy="38" r="1.1" fill="#fff" stroke="#c96f68" stroke-width=".5"/>${Math.abs(b-a)>9?`<text x="${(a+b)/2}" y="${top+(38-top)/2-1}" font-size="2.6" text-anchor="middle" fill="#3d7f78">${tn(opp(m))}</text>`:""}`;}).join("")}
-    <text x="8" y="54" font-size="2.8" fill="#4b5969">Red dots: fixtures that changed. Gold arcs: from the first published date to the new date. · النقاط الحمراء مباريات تعدلت، والأقواس من الموعد الأول للموعد الجديد.</text></svg>`;
+    ${movedL.map(({m})=>{const a=X(m.orig),b=X(m.date),top=38-Math.min(26,6+Math.abs(b-a)*.5);return `<path d="M${a} 38 Q${(a+b)/2} ${top} ${b} 38" fill="none" stroke="#c9b48a" stroke-width=".8"/><circle cx="${a}" cy="38" r="1.1" fill="#fff" stroke="#c96f68" stroke-width=".5"/>${Math.abs(b-a)>9?`<text x="${(a+b)/2}" y="${top+(38-top)/2-1}" font-size="2.6" text-anchor="middle" fill="#3d7f78">${tn(opp(m))}</text>`:""}`;}).join("")}</svg>`;
   const types=[["date","#c96f68"],["time","#d2a941"],["venue","#145982"],["status","#5a6b78"],["home","#4b5969"]].filter(([k])=>by(k));
   const stack=`<div class="chs">${types.map(([k,c])=>`<span style="flex:${by(k)};background:${c}">${by(k)}</span>`).join("")}</div><div class="chsk">${types.map(([k,c])=>`<span><i style="background:${c}"></i>${F[k][0]} · ${F[k][1]}</span>`).join("")}</div>`;
   const boards=all.map(({m,c})=>{const fl=F[c.field]||[c.field,c.field];const fr=c.from||["",""],to=c.to||["",""];
     return `<div class="sb2"><div class="sb2h"><b>${tn(m.home)} v ${tn(m.away)}</b><span>${fl[0]} · ${fl[1]}</span></div><div class="sb2b"><div class="off"><i></i><span class="x">${fr[0]||""}</span><span class="ar">${fr[1]||""}</span></div><div class="on"><i></i><span class="x">${to[0]||""}</span><span class="ar">${to[1]||""}</span></div></div></div>`;}).join("");
-  const p1=`<section class="rps fix">${head("Fourth official · الحكم الرابع","The season's substitutions","تبديلات الموسم",`<span>Every change to ${US_EN}'s fixtures · كل تعديل على مباريات ${US}</span>`)}<div class="rpB">
-    <div class="lbdw"><div class="lbd"><div class="lbdh"><span>CHANGES · تعديلات</span><span>${SKEY}</span></div><svg viewBox="-3 -3 ${led.w+6} 34" style="height:30mm;display:block;margin:0 auto">${led.svg}</svg><div class="lbdf"><span class="r">▼ OFF</span><span class="g">▲ ON</span></div></div>
-     <div class="lbdk"><div><b>${L.length}</b><span>Fixtures changed · مباريات تعدلت</span></div><div><b>${moved}</b><span>Days moved in total · مجموع أيام التأجيل</span></div><div><b>${most?most.changes.length:0}</b><span>Most changes on one fixture: ${most?tn(most.home)+" v "+tn(most.away):""} · أكثر مباراة تعدلت</span></div><div><b>${by("venue")}</b><span>Stadium changes · تغيير الملعب</span></div></div></div>
-    ${T("01","Season ribbon","شريط الموسم")}${ribbon}
-    ${T("02","Changes by type","التعديلات حسب النوع")}${stack}
-    ${T("03","Biggest moves","أكبر التأجيلات")}<table class="rptab"><tr><th style="text-align:left">Fixture · المباراة</th><th>First date · الموعد الأول</th><th>Now · الآن</th><th>Days · أيام</th></tr>${movedL.sort((a,b)=>Math.abs(b.d)-Math.abs(a.d)).slice(0,6).map(({m,d})=>`<tr><td class="l">${img(m.home)}${tn(m.home)} v ${tn(m.away)}</td><td>${fE(m.orig)}</td><td>${fE(m.date)}</td><td><b>${d>0?"+":""}${d}</b></td></tr>`).join("")}</table>
+  const p1=`<section class="rps fix">${head("Fixture changes · تعديلات الجدول","Fixture changes","تعديلات جدول مبارياتنا",`<span>Every change since the fixtures were first published · كل تغيير من أول ما نُشر الجدول</span>`)}<div class="rpB">
+    <div class="lbdw"><div class="lbd"><div class="lbdh"><span>CHANGES · تعديل</span><span>${SKEY}</span></div><svg viewBox="-3 -3 ${led.w+6} 34" style="height:30mm;display:block;margin:0 auto">${led.svg}</svg><div class="lbdf"><span class="r">▼ BEFORE · قبل</span><span class="g">▲ AFTER · بعد</span></div></div>
+     <div class="lbdk"><div><b>${L.length}</b><span>Fixtures changed · مباريات تعدلت</span></div><div><b>${moved}</b><span>Days moved in total · مجموع أيام التأجيل</span></div><div><b>${most?most.changes.length:0}</b><span>Changes to ${most?tn(most.home)+" v "+tn(most.away):""}, the most of any fixture · تعديلات على ${most?most.home+" × "+most.away:""}، أكثر مباراة تعدلت</span></div><div><b>${by("venue")}</b><span>Stadium changes · مرات تغيّر فيها الملعب</span></div></div></div>
+    ${T("01","The season on one line","الموسم على خط واحد")}<div class="rpnote" style="margin:-2mm 0 1mm">Red dot: a fixture that changed. Gold arc: from its first date to its new date. · النقطة الحمراء مباراة تعدلت، والقوس الذهبي من موعدها الأول لموعدها الجديد.</div>${ribbon}
+    ${T("02","What changed","وش اللي تغيّر")}${stack}
+    ${T("03","Biggest moves","أكبر التأجيلات")}<table class="rptab"><tr><th style="text-align:left">Fixture · المباراة</th><th>First date · الموعد الأول</th><th>Now · الموعد الحالي</th><th>Days · أيام</th></tr>${movedL.sort((a,b)=>Math.abs(b.d)-Math.abs(a.d)).slice(0,6).map(({m,d})=>`<tr><td class="l">${img(m.home)}${tn(m.home)} v ${tn(m.away)}</td><td>${fE(m.orig)}</td><td>${fE(m.date)}</td><td><b>${d>0?"+":""}${d}</b></td></tr>`).join("")}</table>
   </div>${FT()}</section>`;
   const per=Math.ceil(all.length/2)||1;const chunks=[];const B=boards.split('<div class="sb2">').slice(1).map(x=>'<div class="sb2">'+x);for(let i=0;i<B.length;i+=24)chunks.push(B.slice(i,i+24));
-  const p2=chunks.map((c,n)=>`<section class="rps fix">${head("Fourth official · الحكم الرابع","The boards","لوحات التبديل",`<span>Red board off, green board on · الحمراء خرج والخضراء دخل · ${n+1} / ${chunks.length}</span>`)}<div class="rpB"><div class="sb2g">${c.join("")}</div></div>${FT()}</section>`).join("");
+  const p2=chunks.map((c,n)=>`<section class="rps fix">${head("Fixture changes · تعديلات الجدول","Before and after","قبل وبعد كل تعديل",`<span>Red: what it was. Green: what it is now · الأحمر القديم، والأخضر الجديد</span>`)}<div class="rpB"><div class="sb2g">${c.join("")}</div></div>${FT()}</section>`).join("");
   return p1+(all.length?p2:"");
 }
 
@@ -5322,15 +5337,15 @@ function rTable(){
   const tb=rows.map(r=>{const [t,p,pts,pl,w,d,l,gf,ga]=r;return `<tr class="${t===US?"us":""}"><td style="border-left:4px solid ${zone(p)}">${p}</td><td class="l">${img(t)}${tn(t)} <span class="ar" style="color:#69717b">${t}</span></td><td>${pl}</td><td>${w}</td><td>${d}</td><td>${l}</td><td>${gf}</td><td>${ga}</td><td>${gf-ga>0?"+":""}${gf-ga}</td><td><b>${pts}</b></td></tr>`;}).join("");
   const u=row(US)||[],sec=rows[1]||[],th=rows[2]||[];const left=NRD-(u[3]||0);
   const p1=`<section class="rps fix">${head("League table · جدول الترتيب",SEA.league?SEA.league[0]:"League table",SEA.league?SEA.league[1]:"جدول الترتيب",`<span>After round ${SEA.table&&SEA.table.asOfRound||"?"} · بعد الجولة ${SEA.table&&SEA.table.asOfRound||"?"}</span><span>Season ${SKEY} · الموسم</span>`)}<div class="rpB">
-    <div class="rpk"><div><b>${ord(u[1]||0)}</b><span>${US_EN} position · مركز ${US}</span></div><div><b>${u[1]===1?"+"+(u[2]-sec[2]):(u[2]-rows[0][2])}</b><span>${u[1]===1?"Points clear at the top · فارق الصدارة":"Points behind the leader · خلف المتصدر"}</span></div><div><b>+${(u[2]||0)-(th[2]||0)}</b><span>Clear of third place · فارق عن الثالث</span></div><div><b>${left*3}</b><span>Points still to play for · نقاط متبقية</span></div></div>
-    ${T("01","The terrace: every club by points","المدرج: كل الأندية حسب النقاط")}${terrace}
-    <div class="rpnote">Green direct promotion, gold play off, red relegation zone. · الأخضر صعود مباشر، والذهبي الملحق، والأحمر منطقة الهبوط.</div>
-    ${T("02","The table","الترتيب")}<table class="rptab"><tr><th>#</th><th style="text-align:left">Club · النادي</th><th>P</th><th>W</th><th>D</th><th>L</th><th>F</th><th>A</th><th>GD</th><th>Pts</th></tr>${tb}</table>
+    <div class="rpk"><div><b>${ord(u[1]||0)}</b><span>${US_EN} position · مركز ${US}</span></div><div><b>${u[1]===1?"+"+(u[2]-sec[2]):(u[2]-rows[0][2])}</b><span>${u[1]===1?"Points clear at the top · فارق الصدارة":"Points behind the leader · خلف المتصدر"}</span></div><div><b>+${(u[2]||0)-(th[2]||0)}</b><span>Clear of third place · فارق عن الثالث</span></div><div><b>${left*3}</b><span>Points still to play for · نقاط باقية نلعب عليها</span></div></div>
+    ${T("01","Every club by points","كل الأندية حسب النقاط")}${terrace}
+    <div class="rpnote">Green: straight up. Gold: play off. Red: going down. · الأخضر يصعد مباشرة، والذهبي يلعب الملحق، والأحمر منطقة الهبوط.</div>
+    ${T("02","The table","جدول الترتيب")}<table class="rptab"><tr><th>#</th><th style="text-align:left">Club · النادي</th><th>P</th><th>W</th><th>D</th><th>L</th><th>F</th><th>A</th><th>GD</th><th>Pts</th></tr>${tb}</table>
   </div>${FT()}</section>`;
   /* race: projection at current pace with last season's lines */
   const top=rows.slice(0,8).map(r=>({t:r[0],p:r[2],pl:r[3],proj:r[3]?Math.round(r[2]/r[3]*NRD):r[2]}));const pmax=Math.max(REF.champ||80,...top.map(x=>x.proj))+4;
   const race=`<svg viewBox="0 0 200 ${12+top.length*7.2}" style="width:100%;display:block;background:#1d2b44;border-radius:10px">
-    ${[["second",REF.second,"#5fa37c","2nd last season"],["sixth",REF.sixth,"#d2a941","6th last season"]].map(([k,v,c,l])=>{const x=50+v/pmax*140;return `<line x1="${x}" y1="6" x2="${x}" y2="${9+top.length*7.2}" stroke="${c}" stroke-width=".6" stroke-dasharray="2 1.5"/><text x="${x}" y="5" font-size="2.8" fill="${c}" text-anchor="middle">${l} ${v}</text>`;}).join("")}
+    ${[["second",REF.second,"#5fa37c","2nd last season:","end"],["sixth",REF.sixth,"#d2a941","6th last season:","start"]].map(([k,v,c,l,an])=>{const x=50+v/pmax*140;return `<line x1="${x}" y1="6" x2="${x}" y2="${9+top.length*7.2}" stroke="${c}" stroke-width=".6" stroke-dasharray="2 1.5"/><text x="${an==="end"?x+1.5:x-1.5}" y="5" font-size="2.8" fill="${c}" text-anchor="${an==="end"?"start":"end"}">${l} ${v}</text>`;}).join("")}
     ${top.map((x,i)=>{const y=11+i*7.2,a=50+x.p/pmax*140,b=50+x.proj/pmax*140;return `<text x="4" y="${y+2}" font-size="3.4" fill="${x.t===US?"#f2d98a":"#fff"}" font-weight="${x.t===US?700:400}">${i+1}. ${tn(x.t)}</text><rect x="50" y="${y-1.6}" width="${a-50}" height="4.4" rx="2" fill="${x.t===US?"#c9b48a":"#5c6a80"}"/><rect x="${a}" y="${y-1.6}" width="${Math.max(0,b-a)}" height="4.4" rx="2" fill="${x.t===US?"#c9b48a":"#5c6a80"}" opacity=".35"/><text x="${b+2}" y="${y+2}" font-size="3" fill="#cfd6e2">${x.proj}</text>`;}).join("")}</svg>`;
   /* attack against defence pitch */
   const pts=rows.filter(r=>r[3]).map(r=>({t:r[0],x:r[7]/r[3],y:r[8]/r[3]}));
@@ -5338,35 +5353,81 @@ function rTable(){
   const W=190,H=84,X=v=>10+v/mx*(W-48),Y=v=>10+v/my*(H-20);
   const avgx=pts.reduce((s,p)=>s+p.x,0)/pts.length,avgy=pts.reduce((s,p)=>s+p.y,0)/pts.length;
   const scat=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;display:block;background:#2f6b45;border-radius:10px"><g stroke="#fff" fill="none" stroke-width=".4" opacity=".6"><rect x="4" y="3" width="${W-8}" height="${H-6}"/><line x1="${X(avgx)}" y1="3" x2="${X(avgx)}" y2="${H-3}" stroke-dasharray="2 2"/><line x1="4" y1="${Y(avgy)}" x2="${W-4}" y2="${Y(avgy)}" stroke-dasharray="2 2"/></g>
-    <text x="${W-6}" y="8" font-size="3.2" fill="#fff" text-anchor="end" opacity=".85">Scores more, concedes less · هجوم قوي ودفاع صلب</text>
+    <text x="${W-6}" y="8" font-size="3.2" fill="#fff" text-anchor="end" opacity=".85">Scores more, concedes less</text>
     ${pts.map(p=>`<g>${logo(p.t)?`<image href="${logo(p.t)}" x="${X(p.x)-3}" y="${Y(p.y)-3}" width="6" height="6"/>`:`<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="2.2" fill="#fff"/>`}${p.t===US?`<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="4.4" fill="none" stroke="#f2d98a" stroke-width=".8"/>`:""}<text x="${X(p.x)+4}" y="${Y(p.y)+1}" font-size="2.6" fill="#fff">${tn(p.t)}</text></g>`).join("")}</svg>`;
   const gd=rows.slice().sort((a,b)=>(b[7]-b[8])-(a[7]-a[8]));const gmax=Math.max(1,...gd.map(r=>Math.abs(r[7]-r[8])));
   const gdbars=`<div class="gdb">${gd.map(r=>{const v=r[7]-r[8];return `<div><span>${tn(r[0])}</span><div class="gdt"><i style="${v>=0?`left:50%;width:${v/gmax*50}%;background:#5fa37c`:`right:50%;width:${-v/gmax*50}%;background:#c96f68`}"></i></div><b>${v>0?"+":""}${v}</b></div>`;}).join("")}</div>`;
   const best=k=>rows.slice().sort((a,b)=>k(b)-k(a))[0]||[];
-  const leaders=`<div class="rpk"><div><b>${tn(best(r=>r[7])[0])}</b><span>Best attack · أقوى هجوم (${best(r=>r[7])[7]})</span></div><div><b>${tn(best(r=>-r[8])[0])}</b><span>Best defence · أصلب دفاع (${best(r=>-r[8])[8]})</span></div><div><b>${tn(best(r=>r[4])[0])}</b><span>Most wins · أكثر فوز (${best(r=>r[4])[4]})</span></div><div><b>${(rows.reduce((s,r)=>s+r[7],0)/Math.max(1,rows.reduce((s,r)=>s+r[3],0)/2)).toFixed(2)}</b><span>Goals per game · معدل الأهداف للمباراة</span></div></div>`;
-  const p2=`<section class="rps fix">${head("League table · جدول الترتيب","The race","سباق الصعود",`<span>${NRD} rounds · ${NRD} جولة</span><span>Pace projections · توقعات بنفس الوتيرة</span>`)}<div class="rpB">
-    ${T("01","Where the pace leads","إلى أين تقود الوتيرة")}${race}<div class="rpnote">Solid bar points now, faded bar where each club ends at its current points per game over ${NRD} rounds. Dashed lines: second and sixth place totals in ${REF.season}. · الشريط الكامل النقاط الحالية، والشريط الباهت نهاية الموسم بنفس المعدل، والخطوط المتقطعة نقاط الثاني والسادس في موسم ${REF.season}.</div>
-    <div class="rp2"><div>${T("02","Attack against defence","الهجوم مقابل الدفاع")}${scat}<div class="rpnote">Across goals scored per game, down goals conceded per game (top is better). · الأفقي معدل التسجيل والعمودي معدل الاستقبال، والأعلى أفضل.</div></div><div>${T("03","Goal difference","فارق الأهداف")}${gdbars}</div></div>
-    ${T("04","League leaders","المتصدرون في الأرقام")}${leaders}
+  const leaders=`<div class="rpk"><div><b>${tn(best(r=>r[7])[0])}</b><span>Best attack, ${best(r=>r[7])[7]} goals · أقوى هجوم، ${best(r=>r[7])[7]} هدف</span></div><div><b>${tn(best(r=>-r[8])[0])}</b><span>Best defence, ${best(r=>-r[8])[8]} conceded · أصلب دفاع، ${best(r=>-r[8])[8]} أهداف عليه</span></div><div><b>${tn(best(r=>r[4])[0])}</b><span>Most wins, ${best(r=>r[4])[4]} · أكثر فوز، ${best(r=>r[4])[4]} مباريات</span></div><div><b>${(rows.reduce((s,r)=>s+r[7],0)/Math.max(1,rows.reduce((s,r)=>s+r[3],0)/2)).toFixed(2)}</b><span>Goals per game in the league · معدل الأهداف في مباريات الدوري</span></div></div>`;
+  const p2=`<section class="rps fix">${head("League table · جدول الترتيب","The race","سباق الصعود",`<span>${NRD} rounds · ${NRD} جولة</span><span>If every club keeps its current pace · لو استمر كل فريق بنفس معدله</span>`)}<div class="rpB">
+    ${T("01","Where the current pace ends","وين بيوصل كل فريق بنفس معدله")}${race}<div class="rpnote">Solid bar: points now. Faded bar: points after ${NRD} rounds if the club keeps its points per game. Dashed lines: what 2nd and 6th place finished on in ${REF.season}. · الشريط الغامق نقاط الفريق الحين، والباهت نقاطه بعد ${NRD} جولة لو استمر بنفس معدله. والخطين المتقطعين نقاط الثاني والسادس في نهاية موسم ${REF.season}.</div>
+    <div class="rp2"><div>${T("02","Attack against defence","الهجوم مقابل الدفاع")}${scat}<div class="rpnote">Further right: scores more. Higher up: concedes less. · كل ما اتجه الفريق لليمين سجّل أكثر، وكل ما ارتفع استقبل أقل.</div></div><div>${T("03","Goal difference","فارق الأهداف")}${gdbars}</div></div>
+    ${T("04","Best in the league","الأفضل في الدوري")}${leaders}
   </div>${FT()}</section>`;
   return p1+p2;
 }
 
+/* ---------- full report: contents page ---------- */
+function rContents(pg){
+  const u=row(US)||[],L=rows;const ppg=u[3]?(u[2]/u[3]):0;
+  const lead=L[0]||[],sec=L[1]||[];
+  const hl=[];
+  if(u[1]===1)hl.push([`${US_EN} top the league on ${u[2]} points, ${u[2]-sec[2]} clear of ${tn(sec[0])}.`,`${US} في الصدارة بـ${u[2]} نقطة، بفارق ${u[2]-sec[2]} عن ${sec[0]}.`]);
+  else if(u[1])hl.push([`${US_EN} are ${ord(u[1])} on ${u[2]} points, ${lead[2]-u[2]} behind ${tn(lead[0])}.`,`${US} في المركز ${u[1]} بـ${u[2]} نقطة، على بعد ${lead[2]-u[2]} من ${lead[0]}.`]);
+  const bd=L.slice().sort((a,b)=>a[8]-b[8])[0],ba=L.slice().sort((a,b)=>b[7]-a[7])[0];
+  if(bd&&bd[0]===US)hl.push([`Best defence in the league: ${u[8]} conceded in ${u[3]} games.`,`أصلب دفاع في الدوري: ${u[8]} أهداف فقط في ${u[3]} مباريات.`]);
+  if(ba&&ba[0]===US)hl.push([`Best attack in the league: ${u[7]} goals, ${(u[7]/u[3]).toFixed(1)} a game.`,`أقوى هجوم في الدوري: ${u[7]} هدف، بمعدل ${(u[7]/u[3]).toFixed(1)} في المباراة.`]);
+  let run=0;for(let i=playedL.length-1;i>=0&&res(playedL[i])!=="L";i--)run++;
+  if(run>=3)hl.push([`${run} games unbeaten in all competitions.`,`${run} مباريات متتالية بدون خسارة في كل البطولات.`]);
+  if(u[3])hl.push([`At ${ppg.toFixed(2)} points a game, ${US_EN} would finish on about ${Math.round(ppg*NRD)} points; last season 2nd place had ${REF.second}.`,`بمعدل ${ppg.toFixed(2)} نقطة في المباراة، ${US} بتنهي الموسم عند ${Math.round(ppg*NRD)} نقطة تقريباً، ووصيف الموسم الماضي كان عنده ${REF.second}.`]);
+  const nx=MATCHES.filter(m=>m.status!=="played"&&m.date&&m.date>=today).sort((a,b)=>a.date<b.date?-1:1).slice(0,5);
+  const P=m=>{const p=predict(m);return p?Math.round(p.usWin*100)+"%":"·";};
+  const items=[["01","Next match","المباراة القادمة","Cover, the two sides in numbers, prediction, travel and stadium · الغلاف والمقارنة والتوقع والسفر والملعب",pg.match],
+    ["02","League table","جدول الترتيب","Every club by points, the full table and the promotion race · كل الأندية والترتيب وسباق الصعود",pg.table],
+    ["03","Stadiums","الملاعب","Map of our away trips and a card for every stadium · خريطة رحلاتنا وبطاقة لكل ملعب",pg.grounds],
+    ["04","Fixture changes","تعديلات الجدول","Every change to our dates, times and stadiums · كل تعديل على مواعيدنا وملاعبنا",pg.changes]];
+  return `<section class="rps fix">${head("Full report · التقرير الكامل","Contents","المحتويات",`<span>${SEA.label?SEA.label[0]:SKEY} · after round ${SEA.table&&SEA.table.asOfRound||"?"} · بعد الجولة ${SEA.table&&SEA.table.asOfRound||"?"}</span>`)}<div class="rpB">
+    ${T("01","In this report","في هذا التقرير")}<div class="toc">${items.map(([n,e,a,d,p])=>`<div><span class="n">${n}</span><span><b>${e} <span class="ar">${a}</span></b><small>${d}</small></span><span class="pg">${String(p).padStart(2,"0")}</span></div>`).join("")}</div>
+    ${T("02","The season so far","الموسم حتى الآن")}<div class="rpk"><div><b>${ord(u[1]||0)}</b><span>Position · المركز</span></div><div><b>${u[2]||0}</b><span>Points · النقاط</span></div><div><b>${u[4]||0}-${u[5]||0}-${u[6]||0}</b><span>Won, drawn, lost · فوز، تعادل، خسارة</span></div><div><b>${u[7]||0}-${u[8]||0}</b><span>Goals for and against · الأهداف له وعليه</span></div></div>
+    ${T("03","Headlines","أبرز ما في الموسم")}<div class="hl">${hl.slice(0,4).map((h,i)=>`<div><i>0${i+1}</i><span>${h[0]}<span class="ar">${h[1]}</span></span></div>`).join("")}</div>
+    ${nx.length?`${T("04","Coming up, with the model's win chance","المباريات الجاية وفرصة الفوز حسب النموذج")}<table class="rptab"><tr><th style="text-align:left">Opponent · الخصم</th><th>Date · التاريخ</th><th>Where · وين</th><th>Win chance · فرصة الفوز</th></tr>${nx.map(m=>`<tr><td class="l">${img(opp(m))}${tn(opp(m))} <span class="ar" style="color:#69717b">${opp(m)}</span></td><td>${fE(m.date)}</td><td>${m.home===US?"Home · أرضنا":"Away · خارج أرضنا"}</td><td><b>${P(m)}</b></td></tr>`).join("")}</table>`:""}
+  </div>${FT()}</section>`;
+}
+const SPLIT=h=>h.split(/(?=<section class="rps)/).filter(x=>x.startsWith("<section"));
+function buildReport(k){
+  if(k!=="all"){const r=R.find(x=>x.k===k);return r?r.f():"";}
+  const M=SPLIT(rMatch()),T2=SPLIT(rTable()),G=SPLIT(rGrounds()),C=SPLIT(rChanges());
+  const pg={match:1,table:2+M.length,grounds:2+M.length+T2.length,changes:2+M.length+T2.length+G.length};
+  return [M[0],rContents(pg),...M.slice(1),...T2,...G,...C].join("");
+}
+/* tidy the finished pages: Arabic after a dot stays in its own direction, and every page gets a number */
+function tidyReport(root){
+  const AR=/[\u0600-\u06FF]/,LAT=/[A-Za-z]/;
+  const walk=n=>{for(const c of [...n.childNodes]){
+    if(c.nodeType===1){if(c.namespaceURI==="http://www.w3.org/2000/svg"||c.classList.contains("ar")||c.tagName==="BDI")continue;walk(c);continue;}
+    if(c.nodeType!==3||!AR.test(c.nodeValue))continue;
+    const t=c.nodeValue,i=t.lastIndexOf(" · ");
+    if(i>0&&!AR.test(t.slice(0,i))&&AR.test(t.slice(i+3))){const sp=document.createElement("bdi");sp.textContent=t.slice(i+3);c.nodeValue=t.slice(0,i+3);c.after(sp);}
+    else if(!LAT.test(t)&&getComputedStyle(n).direction==="ltr"){const sp=document.createElement("bdi");sp.textContent=t;c.replaceWith(sp);}
+  }};
+  walk(root);
+  const S=[...root.querySelectorAll(".rps")];
+  if(S.length>1)S.forEach((s,i)=>{const f=s.querySelector(".rpF");if(f&&!f.querySelector(".pgn")){const e=document.createElement("span");e.className="pgn";e.textContent=`${String(i+1).padStart(2,"0")} / ${String(S.length).padStart(2,"0")}`;f.appendChild(e);}});
+}
 const R=[
- {k:"match",f:rMatch,en:"Next match",a:"تقرير المباراة القادمة",d:"Matchday programme: cover and ticket, tactics board, model prediction, boarding pass, city and stadium · برنامج المباراة",ic:`<svg viewBox="0 0 120 60"><rect x="8" y="6" width="104" height="48" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="60" y1="6" x2="60" y2="54" stroke="#fff" stroke-width="2"/><circle cx="60" cy="30" r="9" fill="none" stroke="#fff" stroke-width="2"/><circle cx="34" cy="30" r="8" fill="#c9b48a"/><circle cx="86" cy="30" r="8" fill="#fff" opacity=".7"/></svg>`},
- {k:"grounds",f:rGrounds,en:"Stadiums",a:"تقرير الملاعب",d:"Away days atlas with the season map, and a collectable card for every stadium · أطلس الملاعب وبطاقة لكل ملعب",ic:`<svg viewBox="0 0 120 60"><rect x="30" y="6" width="60" height="48" rx="10" fill="#b5523b"/><rect x="38" y="12" width="44" height="36" fill="#2f6b45"/><rect x="24" y="14" width="5" height="32" fill="#f2d98a"/><rect x="91" y="14" width="5" height="32" fill="#f2d98a"/><line x1="38" y1="30" x2="82" y2="30" stroke="#fff"/></svg>`},
- {k:"changes",f:rChanges,en:"Changes",a:"تقرير التغييرات",d:"The fourth official's season: LED board, season ribbon, biggest moves and every substitution board · موسم الحكم الرابع",ic:`<svg viewBox="0 0 120 60"><rect x="18" y="10" width="40" height="40" rx="4" fill="#1d2533" stroke="#ff8a80" stroke-width="2"/><rect x="62" y="10" width="40" height="40" rx="4" fill="#1d2533" stroke="#8ee6a8" stroke-width="2"/><path d="M38 22 32 32h12z" fill="#ff8a80" transform="rotate(180 38 27)"/><path d="M82 22 76 32h12z" fill="#8ee6a8"/></svg>`},
- {k:"table",f:rTable,en:"League table",a:"إحصائيات جدول الترتيب",d:"The terrace of points, the full table, the promotion race at current pace and attack against defence · المدرج وسباق الصعود",ic:`<svg viewBox="0 0 120 60">${[0,1,2,3,4].map(i=>`<rect x="20" y="${8+i*9}" width="${80-i*12}" height="6" rx="2" fill="${i<2?"#5fa37c":i<4?"#d2a941":"#fff"}" opacity="${i<2?1:.85}"/>`).join("")}</svg>`}
+ {k:"match",f:rMatch,en:"Next match",a:"تقرير المباراة القادمة",d:"Cover and ticket, the two sides in numbers, prediction, travel and stadium · الغلاف والتذكرة والمقارنة والتوقع والسفر والملعب",ic:`<svg viewBox="0 0 120 60"><rect x="8" y="6" width="104" height="48" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="60" y1="6" x2="60" y2="54" stroke="#fff" stroke-width="2"/><circle cx="60" cy="30" r="9" fill="none" stroke="#fff" stroke-width="2"/><circle cx="34" cy="30" r="8" fill="#c9b48a"/><circle cx="86" cy="30" r="8" fill="#fff" opacity=".7"/></svg>`},
+ {k:"grounds",f:rGrounds,en:"Stadiums",a:"تقرير الملاعب",d:"Map of every trip, and a card for every stadium · خريطة رحلاتنا وبطاقة لكل ملعب",ic:`<svg viewBox="0 0 120 60"><rect x="30" y="6" width="60" height="48" rx="10" fill="#b5523b"/><rect x="38" y="12" width="44" height="36" fill="#2f6b45"/><rect x="24" y="14" width="5" height="32" fill="#f2d98a"/><rect x="91" y="14" width="5" height="32" fill="#f2d98a"/><line x1="38" y1="30" x2="82" y2="30" stroke="#fff"/></svg>`},
+ {k:"changes",f:rChanges,en:"Fixture changes",a:"تعديلات الجدول",d:"Every change to our dates, times and stadiums, before and after · كل تعديل على مواعيدنا وملاعبنا، قبل وبعد",ic:`<svg viewBox="0 0 120 60"><rect x="18" y="10" width="40" height="40" rx="4" fill="#1d2533" stroke="#ff8a80" stroke-width="2"/><rect x="62" y="10" width="40" height="40" rx="4" fill="#1d2533" stroke="#8ee6a8" stroke-width="2"/><path d="M38 22 32 32h12z" fill="#ff8a80" transform="rotate(180 38 27)"/><path d="M82 22 76 32h12z" fill="#8ee6a8"/></svg>`},
+ {k:"table",f:rTable,en:"League table",a:"إحصائيات جدول الترتيب",d:"The table, the promotion race and the best in the league · الترتيب وسباق الصعود والأفضل في الدوري",ic:`<svg viewBox="0 0 120 60">${[0,1,2,3,4].map(i=>`<rect x="20" y="${8+i*9}" width="${80-i*12}" height="6" rx="2" fill="${i<2?"#5fa37c":i<4?"#d2a941":"#fff"}" opacity="${i<2?1:.85}"/>`).join("")}</svg>`}
 ];
-const RD=window.__DOSSIER?__DOSSIER.R:null;
 menu.innerHTML=`<div class="rpmh"><div><h2>Reports</h2><span class="ar">التقارير</span><small>Pick a report, then print it or save it as PDF · اختاري التقرير ثم اطبعيه أو احفظيه بصيغة PDF</small></div><button class="rpx" id="rpClose" aria-label="Close">×</button></div>
 <div class="rpgrid">${R.map(r=>`<button class="rpc" data-rp="${r.k}"><div class="ic">${r.ic}</div><b>${r.en}</b><span class="ar">${r.a}</span><small>${r.d}</small></button>`).join("")}
-<button class="rpc" data-rp="all" style="grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between"><span><b>All four reports</b> <span class="ar">التقارير الأربعة في ملف واحد</span></span><small>One PDF, four pages · ملف واحد بأربع صفحات</small></button></div>`;
+<button class="rpc" data-rp="all" style="grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between"><span><b>The full report</b> <span class="ar">التقرير الكامل</span></span><small>Everything in one PDF, with a contents page · كل التقارير في ملف واحد مع صفحة المحتويات</small></button></div>`;
 const open=()=>{ov.classList.add("on");menu.hidden=false;bar.hidden=true;paper.innerHTML="";document.body.style.overflow="hidden";};
 const close=()=>{ov.classList.remove("on");paper.innerHTML="";document.body.style.overflow="";};
 menu.addEventListener("click",e=>{if(e.target.closest("#rpClose"))return close();const b=e.target.closest("[data-rp]");if(!b)return;
-  const k=b.dataset.rp;let h="";try{h=(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
-  paper.innerHTML=h;menu.hidden=true;bar.hidden=false;ov.scrollTop=0;try{window.__MO&&window.__MO.report(paper,ov);}catch(e){}});
+  const k=b.dataset.rp;let h="";try{h=buildReport(k);}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
+  paper.innerHTML=h;try{tidyReport(paper);}catch(e){}menu.hidden=true;bar.hidden=false;ov.scrollTop=0;try{window.__MO&&window.__MO.report(paper,ov);}catch(e){}});
 $("#rpBack").onclick=()=>close();
 $("#rpPrint").onclick=()=>{try{window.print();}catch(e){alert("Press Ctrl+P · اضغطي Ctrl+P");}};
 ov.addEventListener("click",e=>{if(e.target===ov)close();});
@@ -5376,14 +5437,14 @@ btn.innerHTML=`<svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 
 btn.setAttribute("aria-label","Reports");const tsp=document.querySelector(".top-in .tsp");
 const wrapB=document.createElement("div");wrapB.className="rpwrap";(tsp?tsp.after(wrapB):document.body.appendChild(wrapB));wrapB.appendChild(btn);
 const rpDD=document.createElement("div");rpDD.className="rpdd";rpDD.setAttribute("role","menu");rpDD.hidden=true;
-rpDD.innerHTML=RD?`<div class="rpddh"><b>The season file</b><span class="ar">ملف الموسم للطباعة</span></div><button class="rpddi all" role="menuitem" data-k="all"><span class="n">PDF</span><span class="t"><b>ملف الموسم كامل</b><span class="ar">الغلاف والفصول الستة · The full file</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`+__DOSSIER.CH.map(c=>`<button class="rpddi" role="menuitem" data-k="${c.k}"><span class="n">${c.n}</span><span class="t"><b>${c.ar}</b><span class="ar">${c.en} · فصل لوحده</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`).join(""):`<div class="rpddh"><b>Printable reports</b><span class="ar">تقارير للطباعة</span></div>`+R.map((r,i)=>`<button class="rpddi" role="menuitem" data-k="${r.k}"><span class="n">0${i+1}</span><span class="t"><b>${r.en}</b><span class="ar">${r.a}</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`).join("")+`<button class="rpddi all" role="menuitem" data-k="all"><span class="n">PDF</span><span class="t"><b>All four reports</b><span class="ar">التقارير الأربعة في ملف واحد</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`;
+rpDD.innerHTML=`<div class="rpddh"><b>Printable reports</b><span class="ar">تقارير للطباعة</span></div>`+R.map((r,i)=>`<button class="rpddi" role="menuitem" data-k="${r.k}"><span class="n">0${i+1}</span><span class="t"><b>${r.en}</b><span class="ar">${r.a}</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`).join("")+`<button class="rpddi all" role="menuitem" data-k="all"><span class="n">PDF</span><span class="t"><b>The full report</b><span class="ar">التقرير الكامل مع صفحة المحتويات</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`;
 wrapB.appendChild(rpDD);
 const ddSet=o=>{rpDD.hidden=!o;const tp=document.querySelector(".top");if(tp)tp.classList.toggle("rpopen",o);btn.setAttribute("aria-expanded",o?"true":"false");btn.classList.toggle("open",o);};
 btn.onclick=e=>{e.stopPropagation();ddSet(rpDD.hidden);};
 document.addEventListener("click",e=>{if(!wrapB.contains(e.target))ddSet(false);});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")ddSet(false);});
-const show=k=>{ddSet(false);ov.classList.add("on");document.body.style.overflow="hidden";let h="";try{h=(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
-  paper.innerHTML=h;menu.hidden=true;bar.hidden=false;ov.scrollTop=0;try{window.__MO&&window.__MO.report(paper,ov);}catch(e){}};
+const show=k=>{ddSet(false);ov.classList.add("on");document.body.style.overflow="hidden";let h="";try{h=buildReport(k);}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
+  paper.innerHTML=h;try{tidyReport(paper);}catch(e){}menu.hidden=true;bar.hidden=false;ov.scrollTop=0;try{window.__MO&&window.__MO.report(paper,ov);}catch(e){}};
 rpDD.addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b)show(b.dataset.k);});
 
 window.__RP={open,R,show};
