@@ -1904,7 +1904,7 @@ button,input,select,textarea{font-family:inherit}
 .soc svg{width:15px;height:15px;fill:currentColor}
 @media (max-width:600px){.soc a{width:28px;height:28px}.soc svg{width:13px;height:13px}}
 </style>
-<script src="social.js?v=4"></script>
+<script src="social.js?v=5"></script>
 </head>
 <body>
 <script>
@@ -2096,7 +2096,13 @@ const C={/* [main colour, second colour] from each club's crest */
  "الزلفي":["#2f6f52","#f09430"],"الأنوار":["#3f5f3c","#9c9d5c"],"الصقر":["#6e2463","#d8ac4e"],"الطائي":["#3a4048","#9aa4ad"],
  "العدالة":["#0b3351","#962948"],"الرائد":["#9a1b1c","#d23a2b"],"جدة":["#1d2f5c","#8d253c"],"العروبة":["#1f1f1f","#ffe101"],
  "الجندل":["#b5061a","#f4081f"],"الأخدود":["#1f6f99","#6ab8e0"],"هجر":["#0d0d0d","#b9bcc2"],"البكيرية":["#5a2560","#7b4e80"],
- "الجيل":["#0e5975","#f4d509"]};
+ "الجيل":["#0e5975","#f4d509"],
+ /* Roshn league clubs */
+ "الهلال":["#0d3fa6","#4a8fe0"],"النصر":["#0f2a5c","#f2c900"],"الاتحاد":["#1a1a1a","#f5d300"],"الأهلي":["#006b3f","#2fa36b"],
+ "القادسية":["#a8141c","#d9a441"],"نيوم":["#111418","#4890a8"],"الاتفاق":["#00533a","#c1272d"],"الدرعية":["#5a3a24","#c09060"],
+ "الخليج":["#006b35","#f0c000"],"الشباب":["#161616","#9a9a9a"],"الخلود":["#0d3b1e","#900018"],"الرياض":["#b80d0d","#2a2a2a"],
+ "الفيحاء":["#183078","#f06a00"],"الحزم":["#3a2a08","#f0a800"],"الفيصلي":["#78000a","#c0646e"],"الفتح":["#0030b4","#00b84a"],
+ "التعاون":["#0a1d4f","#e8c51a"],"أبها":["#003078","#d81e1e"]};
 /* the neutral colours the page is drawn with */
 const N={dark:"#27333e",darker:"#1b2530",acc1:"#4a9a90",acc2:"#4a8f87",acc3:"#3d7f78",mid:"#5a6b78",mid2:"#36414b",light:"#c9d2d8"};
 let M;
@@ -4527,7 +4533,7 @@ let t;new MutationObserver(()=>{clearTimeout(t);t=setTimeout(()=>{try{stubs();}c
 <script>
 /* Promotion race. Rules and last season's benchmark live in data.js (season.promo); defaults below keep it working when a new season has none. */
 (()=>{try{
-const T=SEA.table;if(window.LG==="spl"||!T||!T.rows||!T.rows.length||T.rows[0].length<9){document.getElementById("promo").style.display="none";const nv=document.querySelector('a[href="#promo"]');if(nv&&window.LG==="spl")nv.style.display="none";return;}
+const T=SEA.table;if(window.LG==="spl")return;if(!T||!T.rows||!T.rows.length||T.rows[0].length<9){document.getElementById("promo").style.display="none";const nv=document.querySelector('a[href="#promo"]');if(nv&&window.LG==="spl")nv.style.display="none";return;}
 AWD.win=["فوز واحد","فوزين","انتصارات","فوزًا"];
 const PD={direct:2,playoff:[3,6],ref:{season:"2025/26",champ:77,second:73,sixth:59}};
 /* a finished earlier season in data.js becomes the benchmark automatically */
@@ -4617,6 +4623,96 @@ const el=document.getElementById("promo"),go=()=>{el.classList.add("go");if(wind
 if("IntersectionObserver" in window){const io=new IntersectionObserver(e=>{if(e.some(x=>x.isIntersecting)){go();io.disconnect();}},{threshold:.25});io.observe(el);}else go();
 }catch(e){console.error("promo",e);}})();
 </script>
+<script>
+/* Roshn league: title race and relegation fight, in the same card and style as the promotion race. */
+(()=>{if(window.LG!=="spl")return;try{
+const card=document.getElementById("promo"),T=SEA.table;
+const hide=()=>{card.style.display="none";};
+if(!T||!T.rows||!T.rows.length||T.rows[0].length<9)return hide();
+const Z=Object.assign({champion:1,relegation:3},SEA.zones||{});
+/* final 2025/26 table: champion 86, runner-up 84, 15th (last safe place) 30, 16th 29 */
+const R=Object.assign({season:"2025/26",champ:86,second:84,safe:30,drop:29},(SEA.race||{}).ref||{});
+const rows=T.rows.map(([t,pos,pts,p,w,d,l,gf,ga])=>({t,pos,pts,p,w,d,l,gf,ga,max:pts+3*(NR-p)})).sort((a,b)=>a.pos-b.pos);
+const N=rows.length,dropFrom=N-Z.relegation+1,me=rows.find(o=>o.t===US);if(!me)return hide();
+const oth=rows.filter(o=>o.t!==US),ppg=me.p?me.pts/me.p:0,proj=Math.round(ppg*NR),roundNow=Math.max(...rows.map(o=>o.p));
+const lead=rows[0],second=rows[1],firstSafe=rows[dropFrom-2],firstDrop=rows[dropFrom-1];
+/* safe figures: rivals win every match they have left */
+const descMax=oth.map(o=>o.max).sort((a,b)=>b-a),ascMax=oth.map(o=>o.max).sort((a,b)=>a-b);
+const titleFrom=descMax[0]+1;                 /* nobody else can reach it */
+const safeFrom=ascMax[Z.relegation-1]+1;      /* at least three clubs can no longer pass us */
+const titleAlive=me.max>=lead.pts,titleWon=titleFrom<=me.pts,safeDone=safeFrom<=me.pts,down=oth.filter(o=>o.pts>me.max).length>=dropFrom-1;
+const focus=me.pos<=Math.ceil(N/2)?"title":"drop";
+/* headings */
+document.querySelector("#promo .ch h3").textContent="Title and relegation race";
+document.querySelector("#promo .ch .r>.ar").textContent="سباق اللقب والهبوط";
+document.getElementById("prSub").textContent=`1st is champion, ${dropFrom}th to ${N}th go down. Benchmarks are the final ${R.season} table`;
+document.getElementById("prSubAr").textContent=`الأول بطل، ومن ${dropFrom} إلى ${N} يهبطون. المقارنة بجدول موسم ${R.season} النهائي`;
+const sec=document.querySelector("#season small");if(sec)sec.innerHTML=`Title and relegation race, opponents and results round by round<span class="ar">سباق اللقب والهبوط والخصوم والنتائج جولة بجولة</span>`;
+const tg=document.getElementById("prTg");if(tg)tg.style.display="none";
+/* key figures */
+const kp=(cls,lab,lar,val,sub,sar,bar)=>`<div class="pk ${cls}"><div class="pkl">${lab}<span class="ar">${lar}</span></div><div class="pkv">${val}</div>${bar||""}<div class="pks">${sub}<span class="ar">${sar}</span></div></div>`;
+const num=(v,sign)=>`<b class="cu" data-to="${Math.abs(v)}" data-sign="${sign?(v>0?"+":v<0?"-":""):""}">${sign&&v>0?"+":""}${v}</b>`;
+const tgt=focus==="title"?R.champ:R.safe+1,needT=Math.max(0,tgt-me.pts);
+let b=kp("main","Points","النقاط",`<b class="cu" data-to="${me.pts}">${me.pts}</b><span>/ ${tgt}</span>`,
+  focus==="title"?(needT?`${needT} to last season's title total`:`Past last season's title total`):(needT?`${needT} to last season's safe total`:`Past last season's safe total`),
+  focus==="title"?(needT?`باقي ${AN(needT,"point")} على رصيد بطل ${R.season}`:`تجاوزنا رصيد بطل ${R.season}`):(needT?`باقي ${AN(needT,"point")} على رصيد النجاة في ${R.season}`:`تجاوزنا رصيد النجاة في ${R.season}`),
+  `<div class="pkb"><i style="--w:${Math.min(100,me.pts/tgt*100).toFixed(1)}%"></i></div>`);
+/* gap to the top */
+const gTop=me.pos===1?me.pts-second.pts:me.pts-lead.pts,rT=me.pos===1?second:lead,hT=rT.p-me.p;
+b+=kp("",me.pos===1?"Lead at the top":"Gap to the top",me.pos===1?"الفارق في الصدارة":"الفارق عن الصدارة",num(gTop,true),
+  `${me.pos===1?"over":"to"} ${tEn(rT.t)}${hT>0?`, ${EN(hT,"match","matches")} in hand`:hT<0?`, they have ${EN(-hT,"match","matches")} in hand`:""}`,
+  `${me.pos===1?"عن":"عن"} ${rT.t}${hT>0?`، ولنا ${AN(hT,"match")} مؤجلة`:hT<0?`، وله ${AN(-hT,"match")} مؤجلة`:""}`);
+/* gap to the drop zone */
+const inDrop=me.pos>=dropFrom,gDrop=inDrop?me.pts-firstSafe.pts:me.pts-firstDrop.pts,rD=inDrop?firstSafe:firstDrop;
+b+=kp("",inDrop?"Gap to safety":"Above the drop zone",inDrop?"الفارق عن منطقة الأمان":"الفارق عن مراكز الهبوط",num(gDrop,true),
+  inDrop?`to ${tEn(rD.t)}, ${dropFrom-1}th`:`over ${tEn(rD.t)}, ${dropFrom}th`,inDrop?`عن ${rD.t} صاحب المركز ${dropFrom-1}`:`عن ${rD.t} صاحب المركز ${dropFrom}`);
+b+=kp("","On course","المتوقع",`<b class="cu" data-to="${proj}">${proj}</b>`,`${ppg.toFixed(2)} per game`,`${ppg.toFixed(2)} للمباراة`);
+/* the safe figure that matters for this club */
+let cE,cA,cV;
+if(focus==="title"){
+  if(titleWon){cV="<b>✓</b>";cE="Champions, nobody can catch us";cA="بطل الدوري، ما أحد يقدر يلحقنا";}
+  else if(!titleAlive){cV="<b>✕</b>";cE="The title is out of reach";cA="اللقب صار خارج المتناول حسابيًا";}
+  else if(titleFrom>me.max){cV="<b>…</b>";cE="Title depends on others too";cA="اللقب يعتمد على تعثر المنافسين";}
+  else{cV=num(titleFrom);cE=`Title certain, ${EN(titleFrom-me.pts,"point")} more`;cA=`اللقب مضمون، باقي ${AN(titleFrom-me.pts,"point")}`;}
+  b+=kp("","Title certain from","اللقب مضمون من",cV,cE,cA);
+}else{
+  if(safeDone){cV="<b>✓</b>";cE="Safe, relegation is ruled out";cA="بأمان، الهبوط مستبعد حسابيًا";}
+  else if(down){cV="<b>✕</b>";cE="Relegated";cA="هبط حسابيًا";}
+  else if(safeFrom>me.max){cV="<b>…</b>";cE="Survival depends on others too";cA="البقاء يعتمد على نتائج غيرنا";}
+  else{cV=num(safeFrom);cE=`Safe whatever happens, ${EN(safeFrom-me.pts,"point")} more`;cA=`البقاء مضمون مهما صار، باقي ${AN(safeFrom-me.pts,"point")}`;}
+  b+=kp("","Safe from","البقاء مضمون من",cV,cE,cA);
+}
+document.getElementById("prBoard").innerHTML=b;
+/* lanes: the top five and the bottom five, our club always included */
+const SC=Math.max(60,Math.ceil((Math.max(R.champ,...rows.map(o=>Math.round(o.pts/Math.max(1,o.p)*NR)))+4)/10)*10),pc=v=>Math.max(0,Math.min(SC,v))/SC*100,px=v=>pc(v).toFixed(2)+"%";
+let show=rows.slice(0,5).concat(rows.slice(-5));if(!show.includes(me))show.push(me);show=[...new Set(show)].sort((a,b)=>a.pos-b.pos);
+let sc="";for(let v=10;v<=SC-8;v+=10)sc+=`<span style="left:${px(v)}">${v}</span>`;
+let rr="",prev=0;show.forEach((o,i)=>{if(prev&&o.pos>prev+1)rr+=`<div class="rr gap" style="--i:${i}"><div class="rrl"><span class="rp">⋮</span></div><div class="rrt"></div></div>`;prev=o.pos;
+  const us=o.t===US,pj=Math.round(o.pts/Math.max(1,o.p)*NR),src=us?CREST:(LOGOS[o.t]||""),zc=o.pos<=Z.champion?" zt":o.pos>=dropFrom?" zd":"";
+  const tip=`<b>${esc(tEn(o.t))} · ${o.pts} pts from ${o.p}</b><br>On course for ${pj} · most possible ${o.max}<span class='ar'>${o.t} · ${o.pts} نقطة · المتوقع ${pj} · الحد الأقصى ${o.max}</span>`;
+  let seg="";if(us){MATCHES.filter(m=>m.comp==="league"&&m.status==="upcoming").sort((a,c)=>a.date<c.date?-1:1).slice(0,5).forEach((m,k)=>{const op=m.home===US?m.away:m.home,v0=o.pts+3*k;if(v0+3>SC)return;
+    seg+=`<i class="rseg" style="left:${px(v0)};width:${(pc(v0+3)-pc(v0)).toFixed(2)}%;--d:${(1.5+k*.12).toFixed(2)}s" data-tip="<b>Next: v ${esc(tEn(op))} · ${dEn(m)}</b><br>A win takes us to ${v0+3}<span class='ar'>القادم: أمام ${op} · ${dAr(m)} · الفوز يوصلنا ${v0+3}</span>">${LOGOS[op]?`<img src="${LOGOS[op]}" alt="">`:""}</i>`;});}
+  rr+=`<div class="rr${us?" us":""}${zc}" style="--i:${i}"><div class="rrl"><span class="rp">${o.pos}</span>${src?`<img class="rc" src="${src}" alt="">`:""}<span class="rnm">${esc(tEn(o.t))}<span class="ar">${o.t}</span></span></div>
+    <div class="rrt" data-tip="${tip.replace(/"/g,"&quot;")}"><i class="rbar" style="--x:${px(o.pts)}"></i><i class="rproj" style="left:${px(o.pts)};width:${(pc(pj)-pc(o.pts)).toFixed(2)}%"></i><i class="rpj" style="left:${px(pj)}">${pj}</i>${seg}
+    <span class="rchip" style="--x:${px(o.pts)}">${src?`<img src="${src}" alt="">`:""}</span><b class="rpt" style="--x:${px(o.pts)}">${o.pts}</b></div></div>`;});
+document.getElementById("prTrack").innerHTML=`<div class="rx"><div class="rxs"><span class="rxl">POINTS · النقاط</span>${sc}</div>
+  <div class="rxo"><i class="rz dn" style="left:0;width:${pc(R.safe).toFixed(2)}%"><b>DROP ZONE · الهبوط</b></i><i class="rfl sf" style="left:${px(R.safe)}"><b>${R.safe}</b></i><i class="rz up" style="left:${px(R.champ)}"><b>TITLE · اللقب</b></i><i class="rfl" style="left:${px(R.champ)}"><b>${R.champ}</b></i></div>${rr}</div>
+  <div class="rlg"><span><i class="a"></i>Points now · النقاط الآن</span><span><i class="b"></i>Where the season ends at this pace · نهاية الموسم بنفس الوتيرة</span><span><i class="c"></i>Our next five matches, three points each · مبارياتنا الخمس الجاية، ثلاث نقاط لكل وحدة</span><span><i class="d"></i>${R.champ} won the title and ${R.safe} was the last safe total in ${R.season} · <bdi class="ar">${R.champ} نقطة كانت رصيد البطل، و${R.safe} آخر رصيد نجا من الهبوط في موسم ${R.season}</bdi></span></div>`;
+bindTip(document.getElementById("prTrack"));
+document.getElementById("prNote").innerHTML=`Round ${roundNow} of ${NR}. "Certain from" counts every rival winning all its remaining matches, so it is a safe figure, not a forecast.<span class="ar" style="display:block">الجولة ${roundNow} من ${NR}. رقم "مضمون من" يفترض إن كل منافس يفوز بكل مبارياته المتبقية، فهو رقم مضمون وليس توقعًا.</span>`;
+const go=()=>{card.classList.add("go");card.querySelectorAll(".cu[data-to]").forEach(n=>{const t=(n.dataset.sign||"")+n.dataset.to,m=/^([+-]?)(\d+)$/.exec(t);if(!m)return;const to=+m[2],t0=performance.now();const f=now=>{const k=Math.min(1,(now-t0)/1400),e=1-Math.pow(1-k,3);n.textContent=m[1]+Math.round(to*e);if(k<1)requestAnimationFrame(f);};requestAnimationFrame(f);});};
+if("IntersectionObserver" in window){const io=new IntersectionObserver(e=>{if(e.some(x=>x.isIntersecting)){go();io.disconnect();}},{threshold:.25});io.observe(card);}else go();
+}catch(e){console.error("spl race",e);}})();
+</script>
+<style>
+#promo .rz.dn{background:linear-gradient(180deg,rgba(201,111,104,.16),rgba(201,111,104,.04))}
+#promo .rz.dn b{color:#e3a19b;bottom:auto;top:4px;left:auto;right:10px}
+#promo .rfl.sf{border-left-color:rgba(227,161,155,.85);box-shadow:0 0 12px 1px rgba(201,111,104,.35)}
+#promo .rfl.sf b{color:#f0c3be}
+#promo .rr.zd .rp{color:#e3a19b}#promo .rr.zt .rp{color:#d9c29c}
+#promo .rr.gap .rrl,#promo .rr.gap .rrt{min-height:0;height:12px;padding:0;background:none;border:0}
+#promo .rr.gap .rp{line-height:12px;font-size:12px;opacity:.6}
+</style>
 
 
 

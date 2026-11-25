@@ -7,6 +7,9 @@ window.SOCIAL = {
   /* Roshn league clubs: only accounts checked against the club's own profile */
   "الهلال": { x: "Alhilal_FC" },
   "النصر": { x: "AlNassrFC" },
+  "الاتحاد": { x: "ittihad" },
+  "الأهلي": { x: "ALAHLI_FC" },
+  "الشباب": { x: "AlShababSaudiFC" },
   "العلا":    { x: "AlUlaclub",       ig: "alulaclub",      li: "%D9%86%D8%A7%D8%AF%D9%8A-%D8%A7%D9%84%D8%B9%D9%84%D8%A7-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A" },
   "الجبلين":  { x: "aljabalainFC",    ig: "aljabalainfc" },
   "الوحدة":   { x: "alwehdaclub1",    ig: "alwehdaclub1",   li: "alwehda-sfc" },
