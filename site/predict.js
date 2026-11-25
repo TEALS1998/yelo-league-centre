@@ -6,7 +6,7 @@
    - الإعدادات (DECAY، SHRINK، RHO) اختيرت باختبار رجعي: نتوقع كل مباراة ملعوبة من المباريات اللي قبلها بس، ونقارن بالنتيجة.
    المؤلفة: تريم إياد السقاف · كُتب بمساعدة أداة Claude بتوجيهها */
 (function (root) {
-  const CFG = { HALF_LIFE: 60, SHRINK: 1, RHO: -0.15, MAXG: 10 };
+  const CFG = { HALF_LIFE: 60, SHRINK: 2, RHO: -0.15, MAXG: 10 };
 
   const DAY = 864e5;
   const fac = [1]; for (let i = 1; i <= 20; i++) fac[i] = fac[i - 1] * i;

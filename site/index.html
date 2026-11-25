@@ -4986,6 +4986,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 @media screen and (prefers-reduced-motion:no-preference){#rpPaper.rpa .rps .eRule{transform-origin:left;transform:scaleX(0)}#rpPaper.rpa .rps.mo-in .eRule{transform:none;transition:transform 1.2s cubic-bezier(.4,0,.2,1) .25s}#rpPaper.rpa .rps .eTxt{opacity:0;transform:translateY(6px)}#rpPaper.rpa .rps.mo-in .eTxt{opacity:1;transform:none;transition:opacity .8s ease .1s,transform .8s ease .1s}}
 @media print{#rpOv .rpE .eRule{transform:none!important}#rpOv .rpE .eTxt{opacity:1!important;transform:none!important}}
 </style>
+<script src="dossier.js?v=2"></script>
 <div class="rpov" id="rpOv" role="dialog" aria-label="Reports · التقارير">
   <div class="rpmenu" id="rpMenu"></div>
   <div class="rpbar" id="rpBar" hidden><button class="bk" id="rpBack">Back · رجوع</button><span class="hint">Choose Save as PDF in the print window · اختاري حفظ بصيغة PDF من نافذة الطباعة</span><button class="pr" id="rpPrint">Print or save PDF · طباعة أو حفظ PDF</button></div>
@@ -5358,13 +5359,14 @@ const R=[
  {k:"changes",f:rChanges,en:"Changes",a:"تقرير التغييرات",d:"The fourth official's season: LED board, season ribbon, biggest moves and every substitution board · موسم الحكم الرابع",ic:`<svg viewBox="0 0 120 60"><rect x="18" y="10" width="40" height="40" rx="4" fill="#1d2533" stroke="#ff8a80" stroke-width="2"/><rect x="62" y="10" width="40" height="40" rx="4" fill="#1d2533" stroke="#8ee6a8" stroke-width="2"/><path d="M38 22 32 32h12z" fill="#ff8a80" transform="rotate(180 38 27)"/><path d="M82 22 76 32h12z" fill="#8ee6a8"/></svg>`},
  {k:"table",f:rTable,en:"League table",a:"إحصائيات جدول الترتيب",d:"The terrace of points, the full table, the promotion race at current pace and attack against defence · المدرج وسباق الصعود",ic:`<svg viewBox="0 0 120 60">${[0,1,2,3,4].map(i=>`<rect x="20" y="${8+i*9}" width="${80-i*12}" height="6" rx="2" fill="${i<2?"#5fa37c":i<4?"#d2a941":"#fff"}" opacity="${i<2?1:.85}"/>`).join("")}</svg>`}
 ];
+const RD=window.__DOSSIER?__DOSSIER.R:null;
 menu.innerHTML=`<div class="rpmh"><div><h2>Reports</h2><span class="ar">التقارير</span><small>Pick a report, then print it or save it as PDF · اختاري التقرير ثم اطبعيه أو احفظيه بصيغة PDF</small></div><button class="rpx" id="rpClose" aria-label="Close">×</button></div>
 <div class="rpgrid">${R.map(r=>`<button class="rpc" data-rp="${r.k}"><div class="ic">${r.ic}</div><b>${r.en}</b><span class="ar">${r.a}</span><small>${r.d}</small></button>`).join("")}
 <button class="rpc" data-rp="all" style="grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between"><span><b>All four reports</b> <span class="ar">التقارير الأربعة في ملف واحد</span></span><small>One PDF, four pages · ملف واحد بأربع صفحات</small></button></div>`;
 const open=()=>{ov.classList.add("on");menu.hidden=false;bar.hidden=true;paper.innerHTML="";document.body.style.overflow="hidden";};
 const close=()=>{ov.classList.remove("on");paper.innerHTML="";document.body.style.overflow="";};
 menu.addEventListener("click",e=>{if(e.target.closest("#rpClose"))return close();const b=e.target.closest("[data-rp]");if(!b)return;
-  const k=b.dataset.rp;let h="";try{h=(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
+  const k=b.dataset.rp;let h="";try{h=window.__DOSSIER?__DOSSIER.build(k):(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
   paper.innerHTML=h;menu.hidden=true;bar.hidden=false;ov.scrollTop=0;try{window.__MO&&window.__MO.report(paper,ov);}catch(e){}});
 $("#rpBack").onclick=()=>close();
 $("#rpPrint").onclick=()=>{try{window.print();}catch(e){alert("Press Ctrl+P · اضغطي Ctrl+P");}};
@@ -5375,13 +5377,13 @@ btn.innerHTML=`<svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 
 btn.setAttribute("aria-label","Reports");const tsp=document.querySelector(".top-in .tsp");
 const wrapB=document.createElement("div");wrapB.className="rpwrap";(tsp?tsp.after(wrapB):document.body.appendChild(wrapB));wrapB.appendChild(btn);
 const rpDD=document.createElement("div");rpDD.className="rpdd";rpDD.setAttribute("role","menu");rpDD.hidden=true;
-rpDD.innerHTML=`<div class="rpddh"><b>Printable reports</b><span class="ar">تقارير للطباعة</span></div>`+R.map((r,i)=>`<button class="rpddi" role="menuitem" data-k="${r.k}"><span class="n">0${i+1}</span><span class="t"><b>${r.en}</b><span class="ar">${r.a}</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`).join("")+`<button class="rpddi all" role="menuitem" data-k="all"><span class="n">PDF</span><span class="t"><b>All four reports</b><span class="ar">التقارير الأربعة في ملف واحد</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`;
+rpDD.innerHTML=RD?`<div class="rpddh"><b>The season file</b><span class="ar">ملف الموسم للطباعة</span></div><button class="rpddi all" role="menuitem" data-k="all"><span class="n">PDF</span><span class="t"><b>ملف الموسم كامل</b><span class="ar">الغلاف والفصول الستة · The full file</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`+__DOSSIER.CH.map(c=>`<button class="rpddi" role="menuitem" data-k="${c.k}"><span class="n">${c.n}</span><span class="t"><b>${c.ar}</b><span class="ar">${c.en} · فصل لوحده</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`).join(""):`<div class="rpddh"><b>Printable reports</b><span class="ar">تقارير للطباعة</span></div>`+R.map((r,i)=>`<button class="rpddi" role="menuitem" data-k="${r.k}"><span class="n">0${i+1}</span><span class="t"><b>${r.en}</b><span class="ar">${r.a}</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`).join("")+`<button class="rpddi all" role="menuitem" data-k="all"><span class="n">PDF</span><span class="t"><b>All four reports</b><span class="ar">التقارير الأربعة في ملف واحد</span></span><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>`;
 wrapB.appendChild(rpDD);
 const ddSet=o=>{rpDD.hidden=!o;const tp=document.querySelector(".top");if(tp)tp.classList.toggle("rpopen",o);btn.setAttribute("aria-expanded",o?"true":"false");btn.classList.toggle("open",o);};
 btn.onclick=e=>{e.stopPropagation();ddSet(rpDD.hidden);};
 document.addEventListener("click",e=>{if(!wrapB.contains(e.target))ddSet(false);});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")ddSet(false);});
-const show=k=>{ddSet(false);ov.classList.add("on");document.body.style.overflow="hidden";let h="";try{h=(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
+const show=k=>{ddSet(false);ov.classList.add("on");document.body.style.overflow="hidden";let h="";try{h=window.__DOSSIER?__DOSSIER.build(k):(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
   paper.innerHTML=h;menu.hidden=true;bar.hidden=false;ov.scrollTop=0;try{window.__MO&&window.__MO.report(paper,ov);}catch(e){}};
 rpDD.addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b)show(b.dataset.k);});
 
