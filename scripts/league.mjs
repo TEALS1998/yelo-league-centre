@@ -148,6 +148,11 @@ const LABEL = (() => {
 export function applyFixture(S, D, f, venueOf, round, changes) {
   const comp = isCup(f.section) ? "cup" : "league";
   const today = riyadhToday();
+  /* a score counts as final only once the match is surely over: kick off + 2h20 (Riyadh time).
+     Before that SAFF may be showing a score from during the match. */
+  const over = (f) => { if (f.date < today) return true; if (f.date > today || !/^\d\d:\d\d$/.test(f.time || "")) return false;
+    const n = new Date(Date.now() + 3 * 36e5), now = n.getUTCHours() * 60 + n.getUTCMinutes(), [h, m] = f.time.split(":").map(Number);
+    return now >= h * 60 + m + 140; };
   let x = S.matches.find((m) => m.saffId && m.saffId === f.saffId);
   if (!x) {
     // same host and visitor in the same competition (a league pairing happens once per host)
@@ -159,7 +164,7 @@ export function applyFixture(S, D, f, venueOf, round, changes) {
   if (!x) {
     const id = (comp === "cup" ? "c" : "m") + f.saffId;
     x = { id, saffId: f.saffId, comp, round: comp === "league" ? round || null : null, date: f.date, time: f.time, home: f.home, away: f.away,
-      venue, status: f.score && f.date <= today ? "played" : "upcoming", score: f.score && f.date <= today ? f.score : null };
+      venue, status: f.score && over(f) ? "played" : "upcoming", score: f.score && over(f) ? f.score : null };
     S.matches.push(x);
     changes.push(`new ${f.home} v ${f.away} ${f.date}`);
     return x;
@@ -169,7 +174,7 @@ export function applyFixture(S, D, f, venueOf, round, changes) {
     if (f.score && JSON.stringify(f.score) !== JSON.stringify(x.score)) { x.score = f.score; changes.push(`score corrected ${x.home} ${f.score.join("-")} ${x.away}`); }
     return x;
   }
-  if (f.score && f.date <= today) { x.status = "played"; x.score = f.score; changes.push(`result ${x.home} ${f.score.join("-")} ${x.away}`); return x; }
+  if (f.score && over(f)) { x.status = "played"; x.score = f.score; changes.push(`result ${x.home} ${f.score.join("-")} ${x.away}`); return x; }
   if (x.status === "postponed" && f.date >= today) {
     // SAFF has given a postponed match a new date: it is back on the schedule
     x.status = "upcoming";
