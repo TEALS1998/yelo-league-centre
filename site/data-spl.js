@@ -581,7 +581,7 @@ window.LEAGUE_DATA = {
    "capNote": null,
    "track": false,
    "trackTxt": null,
-   "roof":"full",
+   "roof": "full",
    "surface": "n"
   },
   "ميدان تمويل الاولي": {
@@ -619,7 +619,7 @@ window.LEAGUE_DATA = {
   "الحزم": {
    "cap": "5,100",
    "capNote": null,
-   "track":true,
+   "track": true,
    "trackTxt": null,
    "roof": "partial",
    "surface": "n"
