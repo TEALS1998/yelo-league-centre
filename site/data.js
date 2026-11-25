@@ -893,12 +893,12 @@ window.LEAGUE_DATA = {
      [
       "العلا",
       1,
-      28,
+      31,
+      11,
       10,
-      9,
       1,
       0,
-      25,
+      27,
       6
      ],
      [
@@ -982,12 +982,12 @@ window.LEAGUE_DATA = {
       "العدالة",
       9,
       14,
-      11,
+      12,
       3,
       5,
-      3,
+      4,
       18,
-      17
+      19
      ],
      [
       "الرائد",
@@ -3642,7 +3642,7 @@ window.LEAGUE_DATA = {
      "home": "العلا",
      "away": "العدالة",
      "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
-     "status": "upcoming",
+     "status": "played",
      "changes": [
       {
        "field": "venue",
@@ -3657,7 +3657,11 @@ window.LEAGUE_DATA = {
       }
      ],
      "saffId": "33588",
-     "roundExact": true
+     "roundExact": true,
+     "score": [
+      2,
+      0
+     ]
     },
     {
      "id": "m33589",
