@@ -4986,7 +4986,6 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 @media screen and (prefers-reduced-motion:no-preference){#rpPaper.rpa .rps .eRule{transform-origin:left;transform:scaleX(0)}#rpPaper.rpa .rps.mo-in .eRule{transform:none;transition:transform 1.2s cubic-bezier(.4,0,.2,1) .25s}#rpPaper.rpa .rps .eTxt{opacity:0;transform:translateY(6px)}#rpPaper.rpa .rps.mo-in .eTxt{opacity:1;transform:none;transition:opacity .8s ease .1s,transform .8s ease .1s}}
 @media print{#rpOv .rpE .eRule{transform:none!important}#rpOv .rpE .eTxt{opacity:1!important;transform:none!important}}
 </style>
-<script src="dossier.js?v=2"></script>
 <div class="rpov" id="rpOv" role="dialog" aria-label="Reports · التقارير">
   <div class="rpmenu" id="rpMenu"></div>
   <div class="rpbar" id="rpBar" hidden><button class="bk" id="rpBack">Back · رجوع</button><span class="hint">Choose Save as PDF in the print window · اختاري حفظ بصيغة PDF من نافذة الطباعة</span><button class="pr" id="rpPrint">Print or save PDF · طباعة أو حفظ PDF</button></div>
@@ -5366,7 +5365,7 @@ menu.innerHTML=`<div class="rpmh"><div><h2>Reports</h2><span class="ar">التق
 const open=()=>{ov.classList.add("on");menu.hidden=false;bar.hidden=true;paper.innerHTML="";document.body.style.overflow="hidden";};
 const close=()=>{ov.classList.remove("on");paper.innerHTML="";document.body.style.overflow="";};
 menu.addEventListener("click",e=>{if(e.target.closest("#rpClose"))return close();const b=e.target.closest("[data-rp]");if(!b)return;
-  const k=b.dataset.rp;let h="";try{h=window.__DOSSIER?__DOSSIER.build(k):(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
+  const k=b.dataset.rp;let h="";try{h=(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
   paper.innerHTML=h;menu.hidden=true;bar.hidden=false;ov.scrollTop=0;try{window.__MO&&window.__MO.report(paper,ov);}catch(e){}});
 $("#rpBack").onclick=()=>close();
 $("#rpPrint").onclick=()=>{try{window.print();}catch(e){alert("Press Ctrl+P · اضغطي Ctrl+P");}};
@@ -5383,7 +5382,7 @@ const ddSet=o=>{rpDD.hidden=!o;const tp=document.querySelector(".top");if(tp)tp.
 btn.onclick=e=>{e.stopPropagation();ddSet(rpDD.hidden);};
 document.addEventListener("click",e=>{if(!wrapB.contains(e.target))ddSet(false);});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")ddSet(false);});
-const show=k=>{ddSet(false);ov.classList.add("on");document.body.style.overflow="hidden";let h="";try{h=window.__DOSSIER?__DOSSIER.build(k):(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
+const show=k=>{ddSet(false);ov.classList.add("on");document.body.style.overflow="hidden";let h="";try{h=(k==="all"?R:R.filter(r=>r.k===k)).map(r=>r.f()).join("");}catch(err){h=`<p style="color:#fff">Report could not be built: ${err.message}</p>`;}
   paper.innerHTML=h;menu.hidden=true;bar.hidden=false;ov.scrollTop=0;try{window.__MO&&window.__MO.report(paper,ov);}catch(e){}};
 rpDD.addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b)show(b.dataset.k);});
 
