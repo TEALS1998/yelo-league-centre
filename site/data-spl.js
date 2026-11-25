@@ -1,7 +1,7 @@
 /* Saudi Pro League (دوري روشن) match centre data: every club's fixtures, the table, venues and weather.
    Updated by scripts/league.mjs (LEAGUE=spl) from the SAFF website, championship 415. Same rules as data.js. */
 window.LEAGUE_DATA = {
- "lastChecked": "2026-11-25",
+ "lastChecked": "2026-11-26",
  "source": "https://www.saff.com.sa/championship.php?id=415",
  "current": "2026/27",
  "teams": {
@@ -3311,9 +3311,9 @@ window.LEAGUE_DATA = {
      "roundExact": true,
      "weather": {
       "t": 26,
-      "c": "partly",
+      "c": "sun",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3330,10 +3330,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 16,
-      "c": "clear",
+      "t": 17,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3353,7 +3353,7 @@ window.LEAGUE_DATA = {
       "t": 19,
       "c": "clear",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3371,9 +3371,9 @@ window.LEAGUE_DATA = {
      "roundExact": true,
      "weather": {
       "t": 25,
-      "c": "cloud",
+      "c": "sun",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3390,10 +3390,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 24,
+      "t": 25,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3413,7 +3413,7 @@ window.LEAGUE_DATA = {
       "t": 28,
       "c": "clear",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3433,7 +3433,7 @@ window.LEAGUE_DATA = {
       "t": 25,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3450,10 +3450,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 25,
+      "t": 24,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3473,7 +3473,7 @@ window.LEAGUE_DATA = {
       "t": 28,
       "c": "clear",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3490,10 +3490,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 25,
+      "t": 27,
       "c": "partly",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3510,10 +3510,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 19,
-      "c": "clear",
+      "t": 17,
+      "c": "cloud",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3530,10 +3530,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 21,
-      "c": "cloud",
+      "t": 22,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3550,10 +3550,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 17,
-      "c": "sun",
+      "t": 20,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3570,10 +3570,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 24,
-      "c": "partly",
+      "t": 23,
+      "c": "rain",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3590,10 +3590,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 26,
-      "c": "partly",
+      "t": 27,
+      "c": "clear",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3610,10 +3610,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 20,
-      "c": "partly",
+      "t": 16,
+      "c": "rain",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3630,10 +3630,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 16,
-      "c": "rain",
+      "t": 17,
+      "c": "sun",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3650,10 +3650,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 20,
-      "c": "partly",
+      "t": 18,
+      "c": "cloud",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3670,10 +3670,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 18,
-      "c": "partly",
+      "t": 21,
+      "c": "sun",
       "src": "forecast",
-      "at": "2026-11-25"
+      "at": "2026-11-26"
      }
     },
     {
@@ -3690,10 +3690,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 18,
-      "c": "partly",
-      "src": "typical",
-      "at": "2026-11-25"
+      "t": 19,
+      "c": "rain",
+      "src": "forecast",
+      "at": "2026-11-26"
      }
     },
     {
@@ -3710,10 +3710,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 21,
-      "c": "partly",
-      "src": "typical",
-      "at": "2026-11-25"
+      "t": 26,
+      "c": "cloud",
+      "src": "forecast",
+      "at": "2026-11-26"
      }
     },
     {
@@ -3730,10 +3730,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 22,
-      "c": "partly",
-      "src": "typical",
-      "at": "2026-11-25"
+      "t": 24,
+      "c": "cloud",
+      "src": "forecast",
+      "at": "2026-11-26"
      }
     },
     {
