@@ -47,10 +47,14 @@ jobs:
           FULL: ${{ (github.event_name == 'push' || github.event.inputs.full == 'yes') && '1' || '' }}
       - name: Read SAFF discipline decisions
         run: node scripts/discipline.mjs || echo "discipline step failed; data left as it was"
+      - name: Read SAFF discipline decisions for the Roshn league
+        run: node scripts/discipline.mjs || echo "Roshn discipline step failed; data left as it was"
+        env:
+          LEAGUE: spl
       - name: Commit when the data changed
         id: commit
         run: |
-          if git diff --quiet -- site/data.js site/data-spl.js site/discipline-data.js && [ -z "$(git status --porcelain -- site/discipline-data.js site/logos)" ]; then
+          if git diff --quiet -- site/data.js site/data-spl.js site/discipline-data.js site/discipline-data-spl.js && [ -z "$(git status --porcelain -- site/discipline-data.js site/discipline-data-spl.js site/logos)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "yelo-live-update"
@@ -59,6 +63,7 @@ jobs:
             if [ -f last-run-spl.json ]; then git add last-run-spl.json; fi
             if [ -d site/logos ]; then git add site/logos; fi
             if [ -f site/discipline-data.js ]; then git add site/discipline-data.js; fi
+            if [ -f site/discipline-data-spl.js ]; then git add site/discipline-data-spl.js; fi
             git commit -m "Live update from SAFF $(date -u +%Y-%m-%dT%H:%MZ)"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"

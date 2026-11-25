@@ -8,7 +8,9 @@ import path from "node:path";
 import { loadData, teamMatcher } from "./league.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
-const OUT = path.join(ROOT, "site", "discipline-data.js");
+// LEAGUE=spl keeps the Saudi Pro League (دوري روشن) decisions in site/discipline-data-spl.js
+const SPL = process.env.LEAGUE === "spl";
+const OUT = path.join(ROOT, "site", SPL ? "discipline-data-spl.js" : "discipline-data.js");
 const BASE = "https://www.saff.com.sa/";
 const INDEX = BASE + "about.php?id=3&type=13&menu=4";
 const log = (...a) => console.log("[discipline]", ...a);
@@ -29,7 +31,7 @@ const clean = (h) => String(h || "").replace(/<br\s*\/?>/gi, "\n").replace(/<[^>
 const digits = (s) => s.replace(/[٠-٩]/g, (c) => "٠١٢٣٤٥٦٧٨٩".indexOf(c));
 
 // Men's first team First Division League only (no age groups, women, futsal, other divisions).
-export const isFdl = (comp) => /الدرجة الأولى للمحترفين|يلو للدرجة الأولى|دوري يلو/.test(comp) && !/تحت|سيدات|السيدات|الصالات|الشاطئية/.test(comp);
+export const isFdl = (comp) => (SPL ? /روشن|دوري المحترفين|الممتاز للمحترفين/ : /الدرجة الأولى للمحترفين|يلو للدرجة الأولى|دوري يلو/).test(comp) && !/تحت|سيدات|السيدات|الصالات|الشاطئية/.test(comp);
 
 // The season's batches listed on the index page: [{ date, count }]
 export function parseIndex(html) {
@@ -104,7 +106,7 @@ async function main() {
   const findMatch = (d) => d.match.date && SM.find((m) => m.date === d.match.date && m.home === d.match.home && m.away === d.match.away);
   const ours = (d) => {
     if (isFdl(d.comp)) { d.kind = "league"; return true; }
-    if (/تحت|سيدات|السيدات|الصالات|الشاطئية|روشن|الممتاز|الثانية|جوّي|جوي/.test(d.comp)) return false;
+    if ((SPL ? /تحت|سيدات|السيدات|الصالات|الشاطئية|يلو|الدرجة الأولى|الثانية|جوّي|جوي/ : /تحت|سيدات|السيدات|الصالات|الشاطئية|روشن|الممتاز|الثانية|جوّي|جوي/).test(d.comp)) return false;
     const m = findMatch(d);
     if (!m) {
       // King's Cup ties we do not list (other rounds) still count when the club is one of ours
