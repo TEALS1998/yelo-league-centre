@@ -1971,6 +1971,7 @@ document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');i
 window.AUTHOR={en:"Tareem Alsaggaf",ar:"تريم إياد السقاف"};</script>
 <script>/* Live data: always load the newest data.js (one fresh copy a minute, never a stale cache). */
 document.write('<script src="data.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
+<script src="predict.js?v=1"></script>
 <script>/* Auto update: every 30 seconds read data.js again; when a result, table or fixture changes, reload in place (same club, same scroll). */
 (()=>{const fp=o=>{const s=JSON.stringify(o);let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return s.length+":"+h;};
 const snap=window.LEAGUE_DATA?fp(window.LEAGUE_DATA):null;if(!snap)return;
@@ -4828,6 +4829,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 #rpOv .pdbar{display:flex;height:6mm;border-radius:4px;overflow:hidden}
 #rpOv .pdbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--dinc);font-size:10px;min-width:8mm}
 #rpOv .pdk{display:flex;justify-content:space-between;font-size:7.5px;color:#69717b;margin-top:.8mm}
+#rpOv .pdtl{font-size:2.3mm;color:#6a727c;margin-top:2.5mm;letter-spacing:.04em}
 #rpOv .pdtop{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5mm;margin-top:2mm}
 #rpOv .pdtop div{background:#eceef0;border-radius:5px;text-align:center;padding:1mm}
 #rpOv .pdtop b{display:block;font-family:var(--dinc);font-size:11px;color:#27333e}#rpOv .pdtop span{font-size:7.5px;color:#4b5969}
@@ -5132,26 +5134,19 @@ const saMap=(pins,arcs,W=180,H=72)=>{const lon0=35,lon1=55,lat0=17,lat1=31.5;con
   <text x="${P([27.3,50.4])[0]}" y="${P([27.3,50.4])[1]}" font-size="3.6" fill="#fff" opacity=".22">ARABIAN GULF</text>${inner}
   <g transform="translate(${W-12} 12)" opacity=".7"><circle r="6" fill="none" stroke="#fff" stroke-width=".4"/><path d="M0-5 1.4 0 0 5-1.4 0z" fill="#fff"/><text y="-7" font-size="3.4" fill="#fff" text-anchor="middle">N</text></g></svg>`};};
 
-/* ---------- prediction: Poisson model from the league table ----------
-   Attack and defence strength = goals per game against the league average, shrunk toward
-   average for small samples. Home advantage factor 1.12 on each side (an assumption,
-   typical of league football). Not a certainty: injuries, suspensions and form are not in it. */
+/* ---------- prediction: Dixon-Coles model from every league result this season (predict.js) ----------
+   Attack and defence for each club from all played league matches, recent matches weigh more,
+   home advantage measured from this league, extra weight on low scores and draws.
+   Not a certainty: injuries, suspensions and line ups are not in it. */
+const PMODEL=(()=>{try{return window.PREDICT?PREDICT.fit(PREDICT.played((window.LEAGUE_DATA&&LEAGUE_DATA.seasons&&LEAGUE_DATA.seasons[SKEY])||SEA)):null;}catch(e){return null;}})();
 function predict(m){
-  if(!m||m.comp==="cup")return null;
-  const h=row(m.home),a=row(m.away);if(!h||!a)return null;
-  const games=rows.reduce((s,r)=>s+r[3],0)/2,goals=rows.reduce((s,r)=>s+r[7],0);if(!games)return null;
-  const mu=goals/(2*games),K=6;
-  const att=r=>((r[7]+K*mu)/(r[3]+K))/mu,def=r=>((r[8]+K*mu)/(r[3]+K))/mu;
-  const HA=1.12,lh=mu*att(h)*def(a)*HA,la=mu*att(a)*def(h)/HA;
-  const fac=[1,1,2,6,24,120,720,5040,40320];const po=(l,k)=>Math.exp(-l)*l**k/fac[k];
-  const M=[];let pw=0,pd=0,pl=0;for(let i=0;i<=7;i++){M[i]=[];for(let j=0;j<=7;j++){const p=po(lh,i)*po(la,j);M[i][j]=p;if(i>j)pw+=p;else if(i===j)pd+=p;else pl+=p;}}
-  const tot=pw+pd+pl;pw/=tot;pd/=tot;pl/=tot;
-  const list=[];for(let i=0;i<=5;i++)for(let j=0;j<=5;j++)list.push([i,j,M[i][j]/tot]);list.sort((x,y)=>y[2]-x[2]);
-  const usHome=m.home===US;return {lh,la,pw,pd,pl,top:list.slice(0,5),M,tot,usWin:usHome?pw:pl,usLoss:usHome?pl:pw,usHome};
+  if(!m||!PMODEL)return null;
+  const P=PREDICT.match(PMODEL,m.home,m.away);if(!P)return null;
+  const usHome=m.home===US;return Object.assign(P,{usWin:usHome?P.pw:P.pl,usLoss:usHome?P.pl:P.pw,usHome});
 }
 function predictBlock(m){
   const P=predict(m);
-  if(!P)return `<div class="pdx"><b>Prediction not available · التوقع غير متاح</b><p>${m&&m.comp==="cup"?"Cup ties against clubs from other leagues have no shared table to compare. · مباريات الكأس ضد أندية من دوريات أخرى ما لها جدول مشترك للمقارنة.":"Not enough league data yet. · البيانات غير كافية بعد."}</p></div>`;
+  if(!P)return `<div class="pdx"><b>Prediction not available · التوقع غير متاح</b><p>${m&&m.comp==="cup"?"One of the two clubs plays in another league, so there are no shared results to compare. · أحد الفريقين من دوري ثاني، فما فيه نتائج مشتركة للمقارنة.":"Not enough league data yet. · البيانات غير كافية بعد."}</p></div>`;
   const [hs,as]=P.top[0];const pct=x=>Math.round(x*100);
   const grid=`<svg viewBox="0 0 66 66" style="width:100%;display:block">${[...Array(6)].map((_,i)=>[...Array(6)].map((_,j)=>{const p=P.M[i][j]/P.tot,o=Math.min(1,p/P.top[0][2]);return `<rect x="${6+j*10}" y="${6+i*10}" width="9.4" height="9.4" rx="1.2" fill="${i>j?"#5fa37c":i===j?"#d2a941":"#c96f68"}" opacity="${.12+o*.88}"/><text x="${10.7+j*10}" y="${12.2+i*10}" font-size="2.9" text-anchor="middle" fill="#fff" font-weight="700">${pct(p)?pct(p)+"%":""}</text>`;}).join("")).join("")}
     ${[...Array(6)].map((_,i)=>`<text x="3" y="${12+i*10}" font-size="3" fill="#4b5969" text-anchor="middle">${i}</text><text x="${10.7+i*10}" y="4" font-size="3" fill="#4b5969" text-anchor="middle">${i}</text>`).join("")}</svg>`;
@@ -5161,9 +5156,9 @@ function predictBlock(m){
      <div class="pdsub">Most likely score · النتيجة الأرجح (${pct(P.top[0][2])}%) · Expected goals · الأهداف المتوقعة ${P.lh.toFixed(1)} v ${P.la.toFixed(1)}</div>
      <div class="pdbar"><span style="width:${pct(P.pw)}%;background:#5fa37c">${pct(P.pw)}%</span><span style="width:${pct(P.pd)}%;background:#d2a941">${pct(P.pd)}%</span><span style="width:${pct(P.pl)}%;background:#c96f68">${pct(P.pl)}%</span></div>
      <div class="pdk"><span>${tn(m.home)} win · فوز ${m.home}</span><span>Draw · تعادل</span><span>${tn(m.away)} win · فوز ${m.away}</span></div>
-     <div class="pdtop">${P.top.slice(1,4).map(([i,j,p])=>`<div><b>${i} v ${j}</b><span>${pct(p)}%</span></div>`).join("")}</div></div>
+     <div class="pdtl">Other likely scores · نتائج محتملة أخرى</div><div class="pdtop">${P.top.slice(1,4).map(([i,j,p])=>`<div><b>${i} v ${j}</b><span>${pct(p)}%</span></div>`).join("")}</div></div>
    <div class="pdr"><div class="pdh2">Score grid · شبكة النتائج</div>${grid}<div class="rpnote">Rows ${tn(m.home)} goals, columns ${tn(m.away)} goals. · الصفوف أهداف ${m.home} والأعمدة أهداف ${m.away}.</div></div>
-   <div class="rpnote pdn">A statistical model from goals scored and conceded per game against the league average, with a home advantage allowance. Not a certainty: injuries and suspensions are not in it. · نموذج إحصائي من معدل الأهداف له وعليه مقارنة بمعدل الدوري مع أفضلية لصاحب الأرض، وليس نتيجة مؤكدة ولا يشمل الإصابات والإيقافات.</div></div>`;
+   <div class="rpnote pdn">A statistical model built from every league result this season: attack and defence of each club, recent matches weigh more, home advantage measured from this league. Not a certainty: injuries and suspensions are not in it. · نموذج إحصائي مبني على كل نتائج الدوري هذا الموسم: قوة هجوم ودفاع كل فريق، والمباريات الأحدث لها وزن أكبر، وأفضلية الأرض محسوبة من الدوري نفسه. ليس نتيجة مؤكدة ولا يشمل الإصابات والإيقافات.</div></div>`;
 }
 
 /* ---------- 2. Stadiums: atlas and collectable ground cards ---------- */

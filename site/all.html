@@ -106,6 +106,14 @@ td.pts{font-family:var(--dinc);font-size:19px;font-weight:800}
 .m .t .ar{font-size:11.5px;color:var(--muted)}
 .m .t.h{grid-area:h}.m .t.a{grid-area:a}
 .m .s{grid-area:s;display:grid;place-items:center}
+.m.hp{grid-template-areas:"d d d" "h s a" "p p p" "v v v"}
+.m .pr{grid-area:p;font-size:10.5px;color:var(--muted)}
+.m .pr .pb{display:flex;height:16px;border-radius:6px;overflow:hidden;font-weight:800;color:#fff;font-size:10px}
+.m .pr .pb span{display:grid;place-items:center;min-width:0;overflow:hidden}
+.m .pr .pl{display:flex;justify-content:space-between;margin-top:4px;gap:6px}
+.m .pr .pl b{color:var(--ink)}
+.pacc{margin:0 16px 16px;padding:10px 12px;border-radius:10px;background:#f4f1ed;font-size:12px;line-height:1.6;direction:rtl}
+.pacc b{font-size:14px}
 .sc{font-family:var(--dinc);font-size:22px;font-weight:800;background:var(--night);color:#fff;border-radius:10px;padding:4px 10px;letter-spacing:.06em}
 .vs{font-family:var(--dinc);font-size:15px;font-weight:800;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:6px 12px}
 .m .v{grid-area:v;border-top:1px dashed var(--line);padding-top:8px;display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--muted)}
@@ -436,7 +444,7 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
   <article class="card rv rc" id="race"></article>
 
   <div class="sec rv"><span class="num">03</span><div><b>Round by round</b><span class="ar">الجولات</span></div><small>Every published fixture, with result, kick off, stadium and weather<span class="ar" style="display:block">كل مباريات الجولة: النتيجة والموعد والملعب والطقس</span></small></div>
-  <article class="card rv"><div class="rhead"><div class="rnav" id="rnav"></div></div><div class="fx" id="fx"></div></article>
+  <article class="card rv"><div class="rhead"><div class="rnav" id="rnav"></div></div><div class="fx" id="fx"></div><div class="pacc" id="pacc"></div></article>
 
   <div class="sec rv"><span class="num">04</span><div><b>League leaders</b><span class="ar">أرقام الدوري</span></div><small>Worked out from every result this season<span class="ar" style="display:block">محسوبة من كل نتائج الموسم</span></small></div>
   <section class="lead" id="lead"></section>
@@ -451,6 +459,7 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 
 <script>/* Live data: always load the newest data.js (one fresh copy a minute, never a stale cache). */
 document.write('<script src="data.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
+<script src="predict.js?v=1"></script>
 <script>/* Auto update: every 30 seconds read data.js again; when a result, table or fixture changes, reload in place (same club, same scroll). */
 (()=>{const fp=o=>{const s=JSON.stringify(o);let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return s.length+":"+h;};
 const snap=window.LEAGUE_DATA?fp(window.LEAGUE_DATA):null;if(!snap)return;
@@ -518,11 +527,22 @@ const nav=document.getElementById("rnav");
 nav.innerHTML=Array.from({length:N},(_,i)=>`<button data-r="${i+1}" class="${i+1===cur?"cur":""}">${i+1}</button>`).join("");
 const card=m=>{const pp=m.status==="postponed",[dE,dA]=pp?["Postponed · date not set","مؤجلة · لم يُحدد الموعد"]:dd(m.date),w=pp?null:m.weather,wx=w&&WX[w.c];
   const s=m.status==="played"&&m.score?`<span class="sc">${m.score[0]} - ${m.score[1]}</span>`:m.status==="postponed"?`<span class="vs">PPD</span>`:`<span class="vs">${m.time||"VS"}</span>`;
-  return `<div class="m${m.changes&&m.changes.length&&m.status!=="played"?" chg":""}"><div class="d"><span>${dE}${m.time&&!pp?" · "+m.time:""}${m.changes&&m.changes.length?`<span class="tag">CHANGED</span>`:""}</span><span class="ar">${dA}</span></div>
+  const pr=m.status!=="played"&&PM?PREDICT.match(PM,m.home,m.away):null,pc=x=>Math.round(x*100);
+  const prH=pr?`<div class="pr"><div class="pb"><span style="flex:${pr.pw};background:#5fa37c">${pc(pr.pw)}%</span><span style="flex:${pr.pd};background:#d2a941">${pc(pr.pd)}%</span><span style="flex:${pr.pl};background:#c96f68">${pc(pr.pl)}%</span></div><div class="pl"><span>فوز ${esc(m.home)}</span><span>تعادل · الأرجح <b dir="ltr" style="unicode-bidi:isolate">${pr.top[0][0]} - ${pr.top[0][1]}</b></span><span>فوز ${esc(m.away)}</span></div></div>`:"";
+  return `<div class="m${pr?" hp":""}${m.changes&&m.changes.length&&m.status!=="played"?" chg":""}"><div class="d"><span>${dE}${m.time&&!pp?" · "+m.time:""}${m.changes&&m.changes.length?`<span class="tag">CHANGED</span>`:""}</span><span class="ar">${dA}</span></div>
    <div class="t h"><img src="${LOGO(m.home)}" alt=""><b>${esc(TN(m.home))}</b><span class="ar">${esc(m.home)}</span></div>
    <div class="s">${s}</div>
    <div class="t a"><img src="${LOGO(m.away)}" alt=""><b>${esc(TN(m.away))}</b><span class="ar">${esc(m.away)}</span></div>
-   <div class="v"><span title="${esc(vEn(m.venue))}">${esc(vEn(m.venue))}</span><span>${w?`${w.t}° ${wx?wx[0]:""} · <span class="ar">${wx?wx[1]:""}</span>`:""}</span></div></div>`;};
+   ${prH}<div class="v"><span title="${esc(vEn(m.venue))}">${esc(vEn(m.venue))}</span><span>${w?`${w.t}° ${wx?wx[0]:""} · <span class="ar">${wx?wx[1]:""}</span>`:""}</span></div></div>`;};
+/* match predictions (predict.js) and how well the model did on matches already played */
+const PM=(()=>{try{return window.PREDICT?PREDICT.fit(PREDICT.played(S)):null;}catch(e){return null;}})();
+{const box=document.getElementById("pacc");try{
+  const pl=PREDICT.played(S).sort((a,b)=>a.date<b.date?-1:1),cache={};let n=0,hit=0,bs=0;
+  pl.forEach(m=>{const md=cache[m.date]||(cache[m.date]=PREDICT.fit(pl,m.date));const p=md&&PREDICT.match(md,m.home,m.away);if(!p||pl.filter(x=>x.date<m.date).length<40)return;
+    const o=m.hg>m.ag?0:m.hg===m.ag?1:2,v=[p.pw,p.pd,p.pl];n++;if(v.indexOf(Math.max(...v))===o)hit++;});
+  const dr=pl.filter(m=>m.hg===m.ag).length;
+  box.innerHTML=n?`<b>كيف التوقع؟</b> النسب تحت كل مباراة جاية من نموذج إحصائي مبني على كل نتائج الدوري هذا الموسم (${pl.length} مباراة): قوة هجوم ودفاع كل فريق، والمباريات الأحدث لها وزن أكبر، وأفضلية الأرض محسوبة من الدوري نفسه. جرّبناه على المباريات اللي انلعبت (كل مباراة توقعناها من اللي قبلها بس): أصاب النتيجة (فوز/تعادل/خسارة) في <b>${Math.round(hit/n*100)}%</b> من ${n} مباراة، والتخمين العشوائي يصيب حوالي 33%. دوري يلو فيه تعادلات كثيرة (${Math.round(dr/pl.length*100)}% من المباريات)، فالمفاجآت واردة. واللي ما يدخل في الحساب: الإصابات والإيقافات والتشكيلة.`:"";
+}catch(e){box.innerHTML="";}}
 const showR=r=>{R=r;nav.querySelectorAll("button").forEach(b=>b.classList.toggle("on",+b.dataset.r===r));
   const ms=LG.filter(m=>m.round===r).sort((a,b)=>(a.date+(a.time||"")).localeCompare(b.date+(b.time||"")));
   document.getElementById("fx").innerHTML=ms.length?ms.map(card).join(""):`<div class="empty" style="grid-column:1/-1">SAFF has not published round ${r} yet<span class="ar" style="display:block">لم ينشر الاتحاد مباريات الجولة ${r} بعد</span></div>`;};
