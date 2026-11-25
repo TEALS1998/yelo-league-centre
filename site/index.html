@@ -591,6 +591,7 @@ footer{flex-direction:column}}
 .fids .st.n{color:#fff}.fids .st.n .ff i{background:linear-gradient(#3a3214 0 49%,#0b0e11 49% 51%,#2c2610 51%);animation:nxb 1.6s ease-in-out infinite}
 @keyframes nxb{50%{color:#f3d34a}}
 .fids .st.t,.fids .st.s{color:#c9ced4}.fids .st.d{color:#ff9f43}
+.fids .fpend{margin:4px 0 2px;padding:10px 12px;border:1px dashed rgba(243,211,74,.35);border-radius:8px;font-size:12px;color:#c9ced4}.fids .fpend b{color:#f3d34a;font-size:15px}.fids .fpend .ar{display:block;margin-top:2px}
 .fids .ffoot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:10.5px;color:#8c939c;padding:8px 6px 2px;letter-spacing:.04em}
 .fids .ffoot i{display:inline-block;width:12px;height:8px;border-radius:2px;margin-right:2px;vertical-align:0}
 @media (max-width:760px){.fids .fhm{display:none}.fids table{min-width:520px}.fids .fht b{font-size:19px}.fids .fhc b{font-size:20px}.ff i{width:14px;height:21px;font-size:13px}}
@@ -2831,7 +2832,7 @@ window.__TEN=TEN;window.__LOGOS=LOGOS;
   /* departures board: every away trip as a row on an airport flip board */
   const fids=(()=>{
     const byC={};L.forEach(g=>g.ms.forEach(m=>byC[m.id||m.home+m.date]=g));
-    const rowsF=AW.slice().sort((a,b)=>(a.date||"9999")<(b.date||"9999")?-1:(a.date||"9999")>(b.date||"9999")?1:0);
+    const rowsF=AW.filter(m=>m.status!=="expected").sort((a,b)=>(a.date||"9999")<(b.date||"9999")?-1:(a.date||"9999")>(b.date||"9999")?1:0);
     const today=new Date(Date.now()+3*36e5).toISOString().slice(0,10);
     const nextM=rowsF.find(m=>m.status!=="played"&&m.status!=="expected"&&m.date&&m.date>=today);
     const MON=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
@@ -2858,7 +2859,7 @@ window.__TEN=TEN;window.__LOGOS=LOGOS;
     return `<div class="fids" id="fids"><div class="fh"><div class="fht"><svg viewBox="0 0 24 24"><path d="M2 16l20-6-2-3-8 2-5-6-2 1 3 6-5 1-2-2-1 1z"/></svg><b>DEPARTURES</b><span class="ar">المغادرة من ${E(BASE.ar)}</span></div>
       <div class="fhc"><span>${E((BASE.code||BASE.en).toUpperCase())} · ${done}/${AW.length} TRIPS</span><b id="fclk">--:--</b></div></div>
       <div class="fsc"><table><thead><tr><th></th><th>DATE<span class="ar">التاريخ</span></th><th>DESTINATION<span class="ar">الوجهة</span></th><th class="fhm">VIA<span class="ar">طريقة الوصول</span></th><th>GATE<span class="ar">المطار</span></th><th class="fhm">TIME<span class="ar">المدة</span></th><th>STATUS<span class="ar">الحالة</span></th></tr></thead><tbody>${body}</tbody></table></div>
-      <div class="ffoot"><span>${LVC.slice(1).map((c,k)=>`<i style="background:${c}"></i>`).join("")} Easy → hardest · <span class="ar">من الأسهل للأصعب</span></span><span>Times are approximate · <span class="ar">الأوقات تقريبية</span></span></div></div>`;})();
+      ${AW.length>rowsF.length?`<div class="fpend"><b>+${AW.length-rowsF.length}</b> ${AW.length-rowsF.length===1?"trip":"trips"} in the second half, waiting for SAFF to publish the dates · <span class="ar">+${AW.length-rowsF.length} ${AW.length-rowsF.length===1?"سفرية":"سفريات"} في الدور الثاني بانتظار إعلان المواعيد، وتنضاف هنا تلقائياً أول ما ينشرها الاتحاد</span></div>`:""}<div class="ffoot"><span>${LVC.slice(1).map((c,k)=>`<i style="background:${c}"></i>`).join("")} Easy → hardest · <span class="ar">من الأسهل للأصعب</span></span><span>Times are approximate · <span class="ar">الأوقات تقريبية</span></span></div></div>`;})();
   el.innerHTML=`${fids}<div class="bph2"><b>Boarding passes · hardest trip first</b><span class="ar">بطاقات صعود الطائرة · الأصعب أولاً</span></div><div class="bpg">${L.map(pass).join("")}</div>`;
   const dl=el.parentElement.querySelector(".dlg");if(dl)dl.remove();
   /* flip the letters into place when the board scrolls into view, and run the clock */
