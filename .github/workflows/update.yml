@@ -40,6 +40,8 @@ jobs:
         run: node scripts/league.mjs
         env:
           FULL: ${{ (github.event_name == 'push' || github.event.inputs.full == 'yes') && '1' || '' }}
+      - name: Probe (one-off)
+        run: node scripts/probe.mjs || true
       - name: Read SAFF discipline decisions
         run: node scripts/discipline.mjs || echo "discipline step failed; data left as it was"
       - name: Commit when the data changed
