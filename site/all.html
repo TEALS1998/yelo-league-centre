@@ -923,5 +923,45 @@ document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=
 <script src="discipline.js?v=20261125"></script>
 <script>/* the league's official accounts */
 (()=>{const S=window.SOCIAL;if(S){const spl=window.LG==="spl";const a=spl?S.spl:S.league;if(a)drawSocial(document.getElementById("soc"),a,spl?"دوري روشن":"دوري يلو");}})();</script>
+<style>
+/* one header for the league page and every club page: identity on the left, league and club pickers on the right,
+   data status on a slim line underneath */
+.top-in{flex-wrap:nowrap!important;column-gap:14px!important;row-gap:8px}
+.top-in .tsp{flex:1;min-width:8px}
+.top .lgsw{display:flex;gap:4px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:3px;flex:none}
+.top .lgsw a{display:flex;flex-direction:column;align-items:center;line-height:1.05;padding:5px 12px;border-radius:999px;color:rgba(255,255,255,.75);text-decoration:none;font-weight:800;font-size:12.5px;white-space:nowrap}
+.top .lgsw a small{font-size:8.5px;font-weight:600;letter-spacing:.06em;opacity:.7}
+.top .lgsw a.on{background:rgba(255,255,255,.92);color:#1b2530}
+.top .lgsw a:not(.on):hover{background:rgba(255,255,255,.12);color:#fff}
+.top-in>.chip,.top-in>.chipw,.top-in>label,.top-in>button{flex:none}
+.tmeta{position:relative;border-top:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.14)}
+.tmeta-in{max-width:1460px;margin:0 auto;padding:6px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;min-height:30px}
+.tmeta .chip,.tmeta .chipw{background:none!important;border:0!important;padding:0!important;border-radius:0;font-size:11.5px!important;color:rgba(255,255,255,.82)!important;gap:7px;box-shadow:none}
+.tmeta .chip i,.tmeta .chipw i{width:7px;height:7px;border-radius:50%;background:#7fd1a8;box-shadow:0 0 0 3px rgba(127,209,168,.18)}
+.tmeta #since{margin-left:auto}
+.tmeta #since:not(:empty){border-bottom:1px dashed rgba(255,255,255,.35)!important}
+@media (max-width:1180px){.top-in{flex-wrap:wrap!important}.top-in .brand.arb{display:none}}
+@media (max-width:700px){.tmeta-in{padding:6px 14px;gap:10px}.top .lgsw a{padding:4px 9px;font-size:11.5px}}
+.strip-in{justify-content:space-between}
+.strip a{background:rgba(255,255,255,.92)!important;width:44px;height:44px;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.strip a:hover{background:#fff!important}
+</style>
+<script>
+(()=>{const ti=document.querySelector(".top-in");if(!ti||ti.dataset.tidy)return;ti.dataset.tidy=1;
+  const tsp=ti.querySelector(".tsp"),SPL=window.LG==="spl";
+  let sw=document.getElementById("lgSw");
+  if(!sw){sw=document.createElement("nav");sw.className="lgsw";sw.id="lgSw";sw.setAttribute("aria-label","League · الدوري");
+    sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري يلو<small>First Division</small></a>`;}
+  /* right-hand group, always in this order: league, club, season, reports */
+  const club=document.getElementById("clubSel"),clubW=club&&club.closest("label"),sea=document.getElementById("seasonSel"),seaW=sea&&sea.closest("label");
+  const rep=ti.querySelector('[aria-label="Reports"]');
+  let at=tsp;for(const el of [sw,clubW,seaW,rep]){if(el){at.after(el);at=el;}}
+  /* data status underneath */
+  const meta=document.createElement("div");meta.className="tmeta";meta.innerHTML='<div class="tmeta-in"></div>';
+  ti.after(meta);const mi=meta.firstChild;
+  for(const id of ["checked","since"]){const el=document.getElementById(id);if(el){el.classList.remove("hide-s");mi.appendChild(el);}}
+})();
+</script>
+
 </body>
 </html>
