@@ -568,7 +568,7 @@ const vEn=v=>{const g=L.venues[v];return g?g[0]:v||"Stadium TBC";};
 const sel=document.getElementById("clubSel");
 sel.innerHTML=`<option value="" selected>الكل · All clubs</option>`+rows.map(r=>`<option value="${esc(r[0])}">${r[1]}. ${esc(r[0])} · ${esc(TN(r[0]))}</option>`).join("");
 sel.onchange=()=>{if(sel.value)go(sel.value);};
-document.getElementById("strip").innerHTML=rows.map(r=>`<a href="index.html?${window.LGQ}club=${encodeURIComponent(r[0])}" title="${esc(TN(r[0]))} · ${esc(r[0])}"><img src="${LOGO(r[0])}" alt="${esc(TN(r[0]))}"></a>`).join("");
+document.getElementById("strip").innerHTML=rows.map((r,k)=>`<a class="cl" href="index.html?${window.LGQ}club=${encodeURIComponent(r[0])}" title="${esc(TN(r[0]))} · ${esc(r[0])}"><span class="ring"><img src="${LOGO(r[0])}" alt="${esc(TN(r[0]))}"><b class="ps">${r[1]||k+1}</b></span><span class="nm">${esc(r[0])}</span></a>`).join("");
 document.getElementById("lgEn").textContent=`${LN.en} · All clubs · ${S.label[0]}`;
 {const a=document.querySelector(".brand.arb b.ar");if(a)a.textContent=`مركز مباريات ${LN.ar}`;const mk=document.querySelector("img.mark");if(mk&&SPL){mk.style.display="none";}
  const lg=document.querySelector(".legend");if(lg&&SPL)lg.innerHTML=`<span><i style="background:var(--promo)"></i>Champion · البطل</span><span><i style="background:var(--loss)"></i>Relegation · الهبوط</span><span><i style="background:var(--win)"></i>Win · فوز</span><span><i style="background:var(--draw)"></i>Draw · تعادل</span><span><i style="background:var(--loss)"></i>Loss · خسارة</span>`;
@@ -942,9 +942,15 @@ document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=
 .tmeta #since:not(:empty){border-bottom:1px dashed rgba(255,255,255,.35)!important}
 @media (max-width:1180px){.top-in{flex-wrap:wrap!important}.top-in .brand.arb{display:none}}
 @media (max-width:700px){.tmeta-in{padding:6px 14px;gap:10px}.top .lgsw a{padding:4px 9px;font-size:11.5px}}
-.strip-in{justify-content:space-between}
-.strip a{background:rgba(255,255,255,.92)!important;width:44px;height:44px;box-shadow:0 2px 6px rgba(0,0,0,.18)}
-.strip a:hover{background:#fff!important}
+/* club strip: table order, crest in a soft ring, position and short name */
+.strip-in{justify-content:space-between;padding-top:12px!important;padding-bottom:10px!important;gap:6px!important}
+.strip a.cl{width:auto!important;height:auto!important;background:none!important;border-radius:0!important;display:flex!important;flex-direction:column;align-items:center;gap:5px;min-width:58px;text-decoration:none;box-shadow:none}
+.strip a.cl .ring{position:relative;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.16),rgba(255,255,255,.04) 70%);border:1px solid rgba(255,255,255,.14);transition:transform .25s,border-color .25s,background .25s}
+.strip a.cl img{width:30px;height:30px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55)) drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+.strip a.cl .ps{position:absolute;top:-4px;left:-4px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:#1b2530;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.85);font:700 10px/15px var(--din,inherit);text-align:center}
+.strip a.cl .nm{font-size:10.5px;font-weight:600;color:rgba(255,255,255,.72);white-space:nowrap;max-width:72px;overflow:hidden;text-overflow:ellipsis}
+.strip a.cl:hover .ring{transform:translateY(-3px);border-color:rgba(253,195,102,.7);background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.24),rgba(255,255,255,.06) 70%)}
+.strip a.cl:hover .nm{color:#fff}
 </style>
 <script>
 (()=>{const ti=document.querySelector(".top-in");if(!ti||ti.dataset.tidy)return;ti.dataset.tidy=1;
