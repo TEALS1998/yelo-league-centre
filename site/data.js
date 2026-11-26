@@ -3716,10 +3716,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 25,
+      "t": 26,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "roundExact": true
     },
@@ -3818,7 +3818,7 @@ window.LEAGUE_DATA = {
       "t": 24,
       "c": "partly",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "roundExact": true
     },
@@ -3875,10 +3875,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 20,
+      "t": 16,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "roundExact": true
     },
@@ -3934,10 +3934,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 19,
+      "t": 15,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "roundExact": true
     },
@@ -4034,10 +4034,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 27,
-      "c": "cloud",
-      "src": "typical",
-      "at": "2026-11-18"
+      "t": 28,
+      "c": "sun",
+      "src": "forecast",
+      "at": "2026-11-27"
      },
      "roundExact": true,
      "changes": [

@@ -3896,9 +3896,9 @@ window.LEAGUE_DATA = {
      "roundExact": true,
      "weather": {
       "t": 25,
-      "c": "sun",
+      "c": "cloud",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "changes": [
       {
@@ -3952,7 +3952,7 @@ window.LEAGUE_DATA = {
       "t": 25,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "changes": [
       {
@@ -3989,10 +3989,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 28,
+      "t": 29,
       "c": "clear",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "changes": [
       {
@@ -4029,10 +4029,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 25,
+      "t": 26,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "changes": [
       {
@@ -4083,10 +4083,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 24,
-      "c": "sun",
+      "t": 25,
+      "c": "cloud",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "changes": [
       {
@@ -4126,7 +4126,7 @@ window.LEAGUE_DATA = {
       "t": 28,
       "c": "clear",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "changes": [
       {
@@ -4166,7 +4166,7 @@ window.LEAGUE_DATA = {
       "t": 27,
       "c": "partly",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4183,10 +4183,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 17,
-      "c": "cloud",
+      "t": 20,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4203,10 +4203,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 22,
+      "t": 21,
       "c": "partly",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4243,10 +4243,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 23,
-      "c": "rain",
+      "t": 24,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4263,10 +4263,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 27,
-      "c": "clear",
+      "t": 25,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4303,10 +4303,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 17,
-      "c": "sun",
+      "t": 21,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "changes": [
       {
@@ -4339,10 +4339,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 18,
-      "c": "cloud",
+      "t": 25,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4429,10 +4429,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 26,
-      "c": "cloud",
+      "t": 20,
+      "c": "clear",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4469,10 +4469,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 29,
-      "c": "partly",
-      "src": "typical",
-      "at": "2026-11-25"
+      "t": 23,
+      "c": "sun",
+      "src": "forecast",
+      "at": "2026-11-27"
      }
     },
     {
@@ -4489,10 +4489,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 18,
-      "c": "clear",
-      "src": "typical",
-      "at": "2026-11-25"
+      "t": 23,
+      "c": "cloud",
+      "src": "forecast",
+      "at": "2026-11-27"
      }
     },
     {
@@ -4509,10 +4509,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 22,
+      "t": 26,
       "c": "clear",
-      "src": "typical",
-      "at": "2026-11-25"
+      "src": "forecast",
+      "at": "2026-11-27"
      }
     },
     {
