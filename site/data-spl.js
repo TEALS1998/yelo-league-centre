@@ -3791,8 +3791,11 @@ window.LEAGUE_DATA = {
      "home": "أبها",
      "away": "الشباب",
      "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
-     "status": "upcoming",
-     "score": null,
+     "status": "played",
+     "score": [
+      0,
+      1
+     ],
      "roundExact": true,
      "weather": {
       "t": 17,
