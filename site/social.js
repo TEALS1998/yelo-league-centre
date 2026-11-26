@@ -2,7 +2,7 @@
    li: the club's LinkedIn company page where one exists; clubs without a verified page get a LinkedIn search instead. */
 window.SOCIAL = {
  league: { name: "دوري الأولى", x: "FDL_KSA", ig: "saudifdl", li: "first-division-league", web: "https://fdl.sa" },
- spl: { name: "دوري روشن", x: "SPLEN", web: "https://www.spl.com.sa" },
+ spl: { name: "دوري روشن", x: "SPL", ig: "spl", li: "saudi-pro-league", web: "https://www.spl.com.sa" },
  clubs: {
   /* Roshn league clubs: only accounts checked against the club's own profile */
   "الهلال": { x: "Alhilal_FC" },
