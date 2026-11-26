@@ -480,7 +480,7 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 .soc svg{width:15px;height:15px;fill:currentColor}
 @media (max-width:600px){.soc a{width:28px;height:28px}.soc svg{width:13px;height:13px}}
 </style>
-<script src="social.js?v=5"></script>
+<script src="social.js?v=6"></script>
 </head>
 <body>
 <header class="top">
@@ -655,7 +655,7 @@ const ICO={date:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10
 const two=v=>Array.isArray(v)?v:[v,v];
 const GM=[];{const by=new Map();CH.forEach(e=>{if(!by.has(e.m))by.set(e.m,[]);by.get(e.m).push(e);});by.forEach((l,m)=>{l.sort((x,y)=>x.k.localeCompare(y.k));GM.push({m,l,k:l[l.length-1].k});});GM.sort((a,b)=>b.k.localeCompare(a.k));}
 const chCard=({m,l})=>{const rd=m.comp==="cup"?"King's Cup · كأس الملك":`Round ${m.round} · الجولة ${m.round}`;
-  const st=m.status==="played"&&m.score?`<b>${m.score[0]}-${m.score[1]}</b> played · لُعبت`:m.status==="postponed"?"<b>Postponed</b> · مؤجلة":`<b>${esc(dd(m.date)[0])}</b>${m.time?` · ${esc(m.time)}`:""}`;
+  const st=m.status==="played"&&m.score?`<b><bdi dir="ltr">${m.score[0]}-${m.score[1]}</bdi></b> played · لُعبت`:m.status==="postponed"?"<b>Postponed</b> · مؤجلة":`<b>${esc(dd(m.date)[0])}</b>${m.time?` · ${esc(m.time)}`:""}`;
   return `<div class="chm" style="--c1:${CC0[m.home]||"#2c3e50"};--c2:${CC0[m.away]||"#34495e"}"><div class="hd"><span class="rb">${rd}</span><span class="crest"><img src="${LOGO(m.home)}" alt=""></span><div class="chv"><b>${esc(TN(m.home))} v ${esc(TN(m.away))}</b><span>${esc(m.home)} ضد ${esc(m.away)}</span></div><span class="crest"><img src="${LOGO(m.away)}" alt=""></span></div><ol>${l.map(({c},i)=>{const f=FN[c.field]||[c.field,c.field],fr=two(c.from),to=two(c.to),pp=/postpon|مؤجل|not set|لم ي/i.test(to[0]+to[1]);
   return `<li class="${i===l.length-1?"last ":""}${pp?"pp":""}"><span class="ic"><svg viewBox="0 0 24 24">${ICO[c.field]||ICO.status}</svg></span><div><div class="lb">${f[0]}<span>· ${f[1]}</span></div><div class="fl"><span class="o">${esc(fr[0])}</span><span class="ar2">→</span><span class="n">${esc(to[0])}</span></div></div></li>`;}).join("")}</ol><div class="ft"><span>${l.length} change${l.length>1?"s":""} · ${l.length} تعديل</span><span>Now · الآن: ${st}</span></div></div>`;};
 const chClubs=[...new Set(GM.flatMap(({m})=>[m.home,m.away]))].map(t=>[t,GM.filter(g=>g.m.home===t||g.m.away===t).length]).sort((a,b)=>b[1]-a[1]);

@@ -2351,7 +2351,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 8 weekend, Thu 17 to Sat 19 Sep 2026",
+        "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر"
+       ],
+       "to": [
+        "Round 8 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33069",
@@ -2374,7 +2390,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 8 weekend, Thu 17 to Sat 19 Sep 2026",
+        "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر"
+       ],
+       "to": [
+        "Round 8 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33074",
@@ -2397,7 +2429,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 8 weekend, Thu 17 to Sat 19 Sep 2026",
+        "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر"
+       ],
+       "to": [
+        "Round 8 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33071",
@@ -2420,7 +2468,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 8 weekend, Thu 17 to Sat 19 Sep 2026",
+        "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر"
+       ],
+       "to": [
+        "Round 8 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33068",
@@ -2443,7 +2507,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 8 weekend, Thu 17 to Sat 19 Sep 2026",
+        "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر"
+       ],
+       "to": [
+        "Round 8 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33072",
@@ -2466,7 +2546,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 8 weekend, Thu 17 to Sat 19 Sep 2026",
+        "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر"
+       ],
+       "to": [
+        "Round 8 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33070",
@@ -2489,7 +2585,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 8 weekend, Thu 17 to Sat 19 Sep 2026",
+        "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر"
+       ],
+       "to": [
+        "Round 8 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33075",
@@ -2512,7 +2624,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 8 weekend, Thu 17 to Sat 19 Sep 2026",
+        "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر"
+       ],
+       "to": [
+        "Round 8 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33080",
@@ -2535,7 +2663,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33079",
@@ -2558,7 +2702,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33077",
@@ -2581,7 +2741,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33081",
@@ -2604,7 +2780,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33084",
@@ -2627,7 +2819,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33083",
@@ -2650,7 +2858,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33087",
@@ -2673,7 +2897,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 10 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Round 10 weekend, Sun 18 to Tue 20 Oct 2026",
+        "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33088",
@@ -2696,7 +2936,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 10 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Round 10 weekend, Sun 18 to Tue 20 Oct 2026",
+        "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33089",
@@ -2719,7 +2975,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 10 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Round 10 weekend, Sun 18 to Tue 20 Oct 2026",
+        "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33091",
@@ -2742,7 +3014,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 10 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Round 10 weekend, Sun 18 to Tue 20 Oct 2026",
+        "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33093",
@@ -2765,7 +3053,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 10 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Round 10 weekend, Sun 18 to Tue 20 Oct 2026",
+        "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33092",
@@ -2788,7 +3092,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 10 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Round 10 weekend, Sun 18 to Tue 20 Oct 2026",
+        "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33086",
@@ -2811,7 +3131,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 10 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Round 10 weekend, Sun 18 to Tue 20 Oct 2026",
+        "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33090",
@@ -2834,7 +3170,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 10 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Round 10 weekend, Sun 18 to Tue 20 Oct 2026",
+        "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33096",
@@ -2949,7 +3301,23 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Thu 22 Oct 2026",
+        "الخميس 22 أكتوبر"
+       ],
+       "to": [
+        "Fri 23 Oct 2026 21:00",
+        "الجمعة 23 أكتوبر 21:00"
+       ],
+       "at": "2026-10-22",
+       "src": "kooora.com (22 Oct 2026) · news.jkn.co.kr/editions/arabic/post/1042922",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33100",
@@ -3064,7 +3432,37 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 8 weekend, Thu 17 to Sat 19 Sep 2026",
+        "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر"
+       ],
+       "to": [
+        "Round 8 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      },
+      {
+       "field": "date",
+       "from": [
+        "Sun 11 Oct 2026",
+        "الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Tue 27 Oct 2026 15:40",
+        "الثلاثاء 27 أكتوبر 15:40"
+       ],
+       "at": "2026-10-11",
+       "src": "okaz.com.sa/sport/saudi/2270328",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33106",
@@ -3294,7 +3692,51 @@ window.LEAGUE_DATA = {
       "src": "observed",
       "at": "2026-11-25"
      },
-     "roundExact": true
+     "roundExact": true,
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      },
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Sat 6 Mar 2027",
+        "السبت 6 مارس"
+       ],
+       "at": "2026-10-13",
+       "src": "SPL statement 13 Oct 2026 · sabq.org/article/eg440jm · arabnews.com/saudi-pro-league/saudi-pro-league-reschedules-three-fixtures-3006220",
+       "tag": "spl-history"
+      },
+      {
+       "field": "date",
+       "from": [
+        "Sat 6 Mar 2027",
+        "السبت 6 مارس"
+       ],
+       "to": [
+        "Fri 20 Nov 2026 20:30",
+        "الجمعة 20 نوفمبر 20:30"
+       ],
+       "at": "2026-11-09",
+       "src": "spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33115",
@@ -3314,7 +3756,27 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 13 weekend, Thu 5 to Sat 7 Nov 2026",
+        "الجولة 13، من الخميس 5 إلى السبت 7 نوفمبر"
+       ],
+       "to": [
+        "Thu 26 Nov 2026 17:25",
+        "الخميس 26 نوفمبر 17:25"
+       ],
+       "at": "2026-11-09",
+       "note": [
+        "Round 13 was postponed on 3 Nov after the Asian Cup was moved",
+        "تأجلت الجولة 13 كاملة في 3 نوفمبر بعد تأجيل كأس آسيا"
+       ],
+       "src": "SPL statement 3 Nov 2026 · gate.ahram.org.eg/News/5977259.aspx · spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33113",
@@ -3334,7 +3796,27 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Thu 5 Nov 2026",
+        "الخميس 5 نوفمبر"
+       ],
+       "to": [
+        "Thu 26 Nov 2026 18:05",
+        "الخميس 26 نوفمبر 18:05"
+       ],
+       "at": "2026-11-09",
+       "note": [
+        "Round 13 was postponed on 3 Nov after the Asian Cup was moved",
+        "تأجلت الجولة 13 كاملة في 3 نوفمبر بعد تأجيل كأس آسيا"
+       ],
+       "src": "SPL statement 3 Nov 2026 · gate.ahram.org.eg/News/5977259.aspx · spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026) · alweeam.com.sa/1300074",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33119",
@@ -3354,7 +3836,41 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 13 weekend, Thu 5 to Sat 7 Nov 2026",
+        "الجولة 13، من الخميس 5 إلى السبت 7 نوفمبر"
+       ],
+       "to": [
+        "Thu 26 Nov 2026 20:30",
+        "الخميس 26 نوفمبر 20:30"
+       ],
+       "at": "2026-11-09",
+       "note": [
+        "Round 13 was postponed on 3 Nov after the Asian Cup was moved",
+        "تأجلت الجولة 13 كاملة في 3 نوفمبر بعد تأجيل كأس آسيا"
+       ],
+       "src": "SPL statement 3 Nov 2026 · gate.ahram.org.eg/News/5977259.aspx · spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      },
+      {
+       "field": "venue",
+       "from": [
+        "Al Majmaah Sports City Stadium",
+        "مدينة المجمعة الرياضية (المجمعة)"
+       ],
+       "to": [
+        "King Abdullah Sports City Stadium, Buraydah",
+        "استاد مدينة الملك عبدالله الرياضية (بريدة)"
+       ],
+       "at": "2026-11-09",
+       "src": "spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33118",
@@ -3374,7 +3890,41 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Thu 5 Nov 2026",
+        "الخميس 5 نوفمبر"
+       ],
+       "to": [
+        "Fri 27 Nov 2026 15:15",
+        "الجمعة 27 نوفمبر 15:15"
+       ],
+       "at": "2026-11-09",
+       "note": [
+        "Round 13 was postponed on 3 Nov after the Asian Cup was moved",
+        "تأجلت الجولة 13 كاملة في 3 نوفمبر بعد تأجيل كأس آسيا"
+       ],
+       "src": "SPL statement 3 Nov 2026 · gate.ahram.org.eg/News/5977259.aspx · spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026) · alweeam.com.sa/1300074",
+       "tag": "spl-history"
+      },
+      {
+       "field": "venue",
+       "from": [
+        "Al Hazem Club Stadium, Ar Rass",
+        "ملعب نادي الحزم (الرس)"
+       ],
+       "to": [
+        "King Abdullah Sports City Stadium, Buraydah",
+        "استاد مدينة الملك عبدالله الرياضية (بريدة)"
+       ],
+       "at": "2026-11-09",
+       "src": "spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33120",
@@ -3394,7 +3944,27 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Thu 5 Nov 2026",
+        "الخميس 5 نوفمبر"
+       ],
+       "to": [
+        "Fri 27 Nov 2026 17:20",
+        "الجمعة 27 نوفمبر 17:20"
+       ],
+       "at": "2026-11-09",
+       "note": [
+        "Round 13 was postponed on 3 Nov after the Asian Cup was moved",
+        "تأجلت الجولة 13 كاملة في 3 نوفمبر بعد تأجيل كأس آسيا"
+       ],
+       "src": "SPL statement 3 Nov 2026 · gate.ahram.org.eg/News/5977259.aspx · spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026) · alweeam.com.sa/1300074",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33117",
@@ -3414,7 +3984,27 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 13 weekend, Thu 5 to Sat 7 Nov 2026",
+        "الجولة 13، من الخميس 5 إلى السبت 7 نوفمبر"
+       ],
+       "to": [
+        "Fri 27 Nov 2026 20:30",
+        "الجمعة 27 نوفمبر 20:30"
+       ],
+       "at": "2026-11-09",
+       "note": [
+        "Round 13 was postponed on 3 Nov after the Asian Cup was moved",
+        "تأجلت الجولة 13 كاملة في 3 نوفمبر بعد تأجيل كأس آسيا"
+       ],
+       "src": "SPL statement 3 Nov 2026 · gate.ahram.org.eg/News/5977259.aspx · spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33116",
@@ -3434,7 +4024,41 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 13 weekend, Thu 5 to Sat 7 Nov 2026",
+        "الجولة 13، من الخميس 5 إلى السبت 7 نوفمبر"
+       ],
+       "to": [
+        "Sat 28 Nov 2026 15:15",
+        "السبت 28 نوفمبر 15:15"
+       ],
+       "at": "2026-11-09",
+       "note": [
+        "Round 13 was postponed on 3 Nov after the Asian Cup was moved",
+        "تأجلت الجولة 13 كاملة في 3 نوفمبر بعد تأجيل كأس آسيا"
+       ],
+       "src": "SPL statement 3 Nov 2026 · gate.ahram.org.eg/News/5977259.aspx · spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      },
+      {
+       "field": "venue",
+       "from": [
+        "Al Hazem Club Stadium, Ar Rass",
+        "ملعب نادي الحزم (الرس)"
+       ],
+       "to": [
+        "King Abdullah Sports City Stadium, Buraydah",
+        "استاد مدينة الملك عبدالله الرياضية (بريدة)"
+       ],
+       "at": "2026-11-09",
+       "src": "spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33114",
@@ -3454,7 +4078,27 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 13 weekend, Thu 5 to Sat 7 Nov 2026",
+        "الجولة 13، من الخميس 5 إلى السبت 7 نوفمبر"
+       ],
+       "to": [
+        "Sat 28 Nov 2026 17:20",
+        "السبت 28 نوفمبر 17:20"
+       ],
+       "at": "2026-11-09",
+       "note": [
+        "Round 13 was postponed on 3 Nov after the Asian Cup was moved",
+        "تأجلت الجولة 13 كاملة في 3 نوفمبر بعد تأجيل كأس آسيا"
+       ],
+       "src": "SPL statement 3 Nov 2026 · gate.ahram.org.eg/News/5977259.aspx · spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33112",
@@ -3474,7 +4118,27 @@ window.LEAGUE_DATA = {
       "c": "clear",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 13 weekend, Thu 5 to Sat 7 Nov 2026",
+        "الجولة 13، من الخميس 5 إلى السبت 7 نوفمبر"
+       ],
+       "to": [
+        "Sat 28 Nov 2026 20:30",
+        "السبت 28 نوفمبر 20:30"
+       ],
+       "at": "2026-11-09",
+       "note": [
+        "Round 13 was postponed on 3 Nov after the Asian Cup was moved",
+        "تأجلت الجولة 13 كاملة في 3 نوفمبر بعد تأجيل كأس آسيا"
+       ],
+       "src": "SPL statement 3 Nov 2026 · gate.ahram.org.eg/News/5977259.aspx · spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33127",
@@ -3634,7 +4298,23 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "venue",
+       "from": [
+        "Al Majmaah Sports City Stadium",
+        "مدينة المجمعة الرياضية (المجمعة)"
+       ],
+       "to": [
+        "King Abdullah Sports City Stadium, Buraydah",
+        "استاد مدينة الملك عبدالله الرياضية (بريدة)"
+       ],
+       "at": "2026-11-09",
+       "src": "spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33126",
@@ -3674,7 +4354,37 @@ window.LEAGUE_DATA = {
       "c": "sun",
       "src": "forecast",
       "at": "2026-11-26"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 10 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Round 10 weekend, Sun 18 to Tue 20 Oct 2026",
+        "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      },
+      {
+       "field": "date",
+       "from": [
+        "Mon 19 Oct 2026",
+        "الاثنين 19 أكتوبر"
+       ],
+       "to": [
+        "Mon 7 Dec 2026 16:40",
+        "الاثنين 7 ديسمبر 16:40"
+       ],
+       "at": "2026-10-18",
+       "src": "sabq.org/article/9wbqp6j · okaz.com.sa/sport/na/2271313",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33130",
@@ -4054,7 +4764,51 @@ window.LEAGUE_DATA = {
       "c": "cloud",
       "src": "typical",
       "at": "2026-11-25"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      },
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Sat 19 Dec 2026",
+        "السبت 19 ديسمبر"
+       ],
+       "at": "2026-10-13",
+       "src": "SPL statement 13 Oct 2026 · sabq.org/article/eg440jm · arabnews.com/saudi-pro-league/saudi-pro-league-reschedules-three-fixtures-3006220",
+       "tag": "spl-history"
+      },
+      {
+       "field": "date",
+       "from": [
+        "Sat 19 Dec 2026",
+        "السبت 19 ديسمبر"
+       ],
+       "to": [
+        "Mon 21 Dec 2026 17:45",
+        "الاثنين 21 ديسمبر 17:45"
+       ],
+       "at": "2026-11-09",
+       "src": "spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33078",
@@ -4074,7 +4828,51 @@ window.LEAGUE_DATA = {
       "c": "partly",
       "src": "typical",
       "at": "2026-11-25"
-     }
+     },
+     "changes": [
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Fri 9 to Sun 11 Oct 2026",
+        "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر"
+       ],
+       "to": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "at": "2026-08-23",
+       "src": "spl.com.sa/news/spl-reschedules-three-rounds-to-support-national-team-s-gulf-cup-preps (23 Aug 2026)",
+       "tag": "spl-history"
+      },
+      {
+       "field": "date",
+       "from": [
+        "Round 9 weekend, Thu 15 to Sat 17 Oct 2026",
+        "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر"
+       ],
+       "to": [
+        "Sat 19 Dec 2026",
+        "السبت 19 ديسمبر"
+       ],
+       "at": "2026-10-13",
+       "src": "SPL statement 13 Oct 2026 · sabq.org/article/eg440jm · arabnews.com/saudi-pro-league/saudi-pro-league-reschedules-three-fixtures-3006220",
+       "tag": "spl-history"
+      },
+      {
+       "field": "date",
+       "from": [
+        "Sat 19 Dec 2026",
+        "السبت 19 ديسمبر"
+       ],
+       "to": [
+        "Mon 21 Dec 2026 20:30",
+        "الاثنين 21 ديسمبر 20:30"
+       ],
+       "at": "2026-11-09",
+       "src": "spl.com.sa/en/news/rsl-schedule-2026-27 (9 Nov 2026)",
+       "tag": "spl-history"
+      }
+     ]
     },
     {
      "id": "m33149",
