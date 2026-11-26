@@ -667,7 +667,7 @@ window.LEAGUE_DATA = {
     "relegation": 3
    },
    "table": {
-    "asOfRound": 12,
+    "asOfRound": 13,
     "columns": [
      "team",
      "pos",
@@ -805,12 +805,12 @@ window.LEAGUE_DATA = {
       "الرياض",
       12,
       12,
-      11,
+      12,
       3,
       3,
-      5,
+      6,
       11,
-      25
+      26
      ],
      [
       "الفيحاء",
@@ -848,12 +848,12 @@ window.LEAGUE_DATA = {
      [
       "الفتح",
       16,
-      6,
-      12,
-      1,
+      9,
+      13,
+      2,
       3,
       8,
-      10,
+      11,
       25
      ],
      [
