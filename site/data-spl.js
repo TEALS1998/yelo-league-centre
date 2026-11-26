@@ -3748,8 +3748,11 @@ window.LEAGUE_DATA = {
      "home": "الفتح",
      "away": "الرياض",
      "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
-     "status": "upcoming",
-     "score": null,
+     "status": "played",
+     "score": [
+      1,
+      0
+     ],
      "roundExact": true,
      "weather": {
       "t": 26,
