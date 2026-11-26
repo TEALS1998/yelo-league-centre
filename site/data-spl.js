@@ -1,7 +1,7 @@
 /* Saudi Pro League (دوري روشن) match centre data: every club's fixtures, the table, venues and weather.
    Updated by scripts/league.mjs (LEAGUE=spl) from the SAFF website, championship 415. Same rules as data.js. */
 window.LEAGUE_DATA = {
- "lastChecked": "2026-11-26",
+ "lastChecked": "2026-11-27",
  "source": "https://www.saff.com.sa/championship.php?id=415",
  "current": "2026/27",
  "teams": {
@@ -4223,10 +4223,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 20,
-      "c": "partly",
+      "t": 17,
+      "c": "cloud",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4283,10 +4283,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 16,
-      "c": "rain",
+      "t": 21,
+      "c": "cloud",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4359,10 +4359,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 21,
-      "c": "sun",
+      "t": 19,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      },
      "changes": [
       {
@@ -4409,10 +4409,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 19,
+      "t": 18,
       "c": "rain",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
@@ -4449,10 +4449,10 @@ window.LEAGUE_DATA = {
      "score": null,
      "roundExact": true,
      "weather": {
-      "t": 24,
-      "c": "cloud",
+      "t": 15,
+      "c": "clear",
       "src": "forecast",
-      "at": "2026-11-26"
+      "at": "2026-11-27"
      }
     },
     {
