@@ -3834,8 +3834,11 @@ window.LEAGUE_DATA = {
      "home": "الفيصلي",
      "away": "الدرعية",
      "venue": "استاد مدينة الملك عبدالله الرياضية (بريدة)",
-     "status": "upcoming",
-     "score": null,
+     "status": "played",
+     "score": [
+      2,
+      2
+     ],
      "roundExact": true,
      "weather": {
       "t": 19,
