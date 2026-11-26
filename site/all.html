@@ -954,7 +954,7 @@ document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=
     sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري يلو<small>First Division</small></a>`;}
   /* right-hand group, always in this order: league, club, season, reports */
   const club=document.getElementById("clubSel"),clubW=club&&club.closest("label"),sea=document.getElementById("seasonSel"),seaW=sea&&sea.closest("label");
-  const rep=ti.querySelector('[aria-label="Reports"]');
+  const rb=ti.querySelector('[aria-label="Reports"]'),rep=rb&&(rb.closest(".rpwrap")||rb);
   let at=tsp;for(const el of [sw,clubW,seaW,rep]){if(el){at.after(el);at=el;}}
   /* data status underneath */
   const meta=document.createElement("div");meta.className="tmeta";meta.innerHTML='<div class="tmeta-in"></div>';

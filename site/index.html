@@ -5052,9 +5052,9 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 .rptop{cursor:pointer;border:0;gap:6px!important;padding:7px 10px!important}
 .rptop .cv{width:13px!important;height:13px!important;stroke-width:2.2!important;transition:transform .2s ease}
 .rptop.open .cv{transform:rotate(180deg)}
-.rpdd{position:absolute;top:calc(100% + 8px);left:0;z-index:80;width:320px;background:#fff;color:var(--ink,#262c36);border-radius:12px;box-shadow:0 18px 40px -12px rgba(15,26,44,.45),0 0 0 1px rgba(30,53,86,.08);padding:8px;font-family:var(--din)}
+.rpdd{position:absolute;top:calc(100% + 8px);left:auto;right:0;z-index:80;width:320px;background:#fff;color:var(--ink,#262c36);border-radius:12px;box-shadow:0 18px 40px -12px rgba(15,26,44,.45),0 0 0 1px rgba(30,53,86,.08);padding:8px;font-family:var(--din)}
 .rpdd[hidden]{display:none!important}
-.rpdd::before{content:"";position:absolute;top:-6px;left:22px;width:12px;height:12px;background:#fff;transform:rotate(45deg);box-shadow:-1px -1px 0 rgba(30,53,86,.08)}
+.rpdd::before{content:"";position:absolute;top:-6px;left:auto;right:22px;width:12px;height:12px;background:#fff;transform:rotate(45deg);box-shadow:-1px -1px 0 rgba(30,53,86,.08)}
 .rpddh{display:flex;justify-content:space-between;align-items:baseline;padding:6px 10px 8px;border-bottom:1px solid #eee7da;margin-bottom:4px}
 .rpddh b{font-family:var(--dinc);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy,#27333e)}
 .rpddh .ar{font-size:12px;color:#5a6b78;font-weight:600}
@@ -5964,7 +5964,7 @@ addEventListener("beforeprint",()=>document.querySelectorAll(".mo-r,.rps").forEa
     sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري يلو<small>First Division</small></a>`;}
   /* right-hand group, always in this order: league, club, season, reports */
   const club=document.getElementById("clubSel"),clubW=club&&club.closest("label"),sea=document.getElementById("seasonSel"),seaW=sea&&sea.closest("label");
-  const rep=ti.querySelector('[aria-label="Reports"]');
+  const rb=ti.querySelector('[aria-label="Reports"]'),rep=rb&&(rb.closest(".rpwrap")||rb);
   let at=tsp;for(const el of [sw,clubW,seaW,rep]){if(el){at.after(el);at=el;}}
   /* data status underneath */
   const meta=document.createElement("div");meta.className="tmeta";meta.innerHTML='<div class="tmeta-in"></div>';
