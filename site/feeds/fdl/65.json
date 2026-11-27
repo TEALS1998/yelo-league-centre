@@ -1,0 +1,322 @@
+{
+ "club": "البكيرية",
+ "en": "Al Bukiryah",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "ملعب نادي البكيرية (البكيرية)",
+ "homeEn": "Al Bukiryah Club Stadium",
+ "city": "البكيرية",
+ "table": {
+  "team": "البكيرية",
+  "pos": 18,
+  "pts": 6,
+  "p": 12,
+  "w": 1,
+  "d": 3,
+  "l": 8,
+  "gf": 10,
+  "ga": 26
+ },
+ "matches": [
+  {
+   "id": "m33482",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-21",
+   "time": "19:15",
+   "home": "البكيرية",
+   "away": "الأنوار",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33492",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-26",
+   "time": "19:10",
+   "home": "البكيرية",
+   "away": "الأخدود",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": [
+    {
+     "field": "venue",
+     "from": "مدينة الأمير هذلول بن عبدالعزيز الرياضية (نجران)، الأخدود مستضيفًا",
+     "to": "ملعب نادي البكيرية (البكيرية)"
+    },
+    {
+     "field": "time",
+     "from": "20:50",
+     "to": "19:10"
+    }
+   ]
+  },
+  {
+   "id": "m33499",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-08-31",
+   "time": "19:05",
+   "home": "البكيرية",
+   "away": "العدالة",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33515",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-09",
+   "time": "19:10",
+   "home": "الجندل",
+   "away": "البكيرية",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    4,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33520",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-14",
+   "time": "18:50",
+   "home": "البكيرية",
+   "away": "ضمك",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    1,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33526",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-18",
+   "time": "18:50",
+   "home": "الطائي",
+   "away": "البكيرية",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "played",
+   "score": [
+    3,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33540",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-10-13",
+   "time": "18:15",
+   "home": "البكيرية",
+   "away": "الزلفي",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33548",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-20",
+   "time": "18:20",
+   "home": "العروبة",
+   "away": "البكيرية",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33554",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-26",
+   "time": "18:00",
+   "home": "البكيرية",
+   "away": "هجر",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33566",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-02",
+   "time": "15:30",
+   "home": "الجبلين",
+   "away": "البكيرية",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_2",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-07",
+   "time": "19:35",
+   "home": "الصقر",
+   "away": "البكيرية",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    4,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33586",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-25",
+   "time": "15:10",
+   "home": "البكيرية",
+   "away": "الوحدة",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    2,
+    4
+   ],
+   "changes": []
+  },
+  {
+   "id": "l13",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-12-01",
+   "time": "15:20",
+   "home": "البكيرية",
+   "away": "العلا",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33604",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-08",
+   "time": "15:15",
+   "home": "الرائد",
+   "away": "البكيرية",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33611",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-15",
+   "time": "15:20",
+   "home": "البكيرية",
+   "away": "جدة",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33619",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-21",
+   "time": "17:35",
+   "home": "الجيل",
+   "away": "البكيرية",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33628",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-29",
+   "time": "15:25",
+   "home": "البكيرية",
+   "away": "النجمة",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33637",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-05",
+   "time": "15:20",
+   "home": "الأنوار",
+   "away": "البكيرية",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

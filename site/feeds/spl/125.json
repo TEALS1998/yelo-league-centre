@@ -1,0 +1,575 @@
+{
+ "club": "أبها",
+ "en": "Abha",
+ "league": "spl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+ "homeEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+ "city": "أبها",
+ "table": {
+  "team": "أبها",
+  "pos": 18,
+  "pts": 3,
+  "p": 12,
+  "w": 0,
+  "d": 3,
+  "l": 9,
+  "gf": 7,
+  "ga": 20
+ },
+ "matches": [
+  {
+   "id": "m32987",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-13",
+   "time": "19:15",
+   "home": "أبها",
+   "away": "الحزم",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    1,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33021",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-22",
+   "time": "21:00",
+   "home": "الأهلي",
+   "away": "أبها",
+   "venue": "ملعب الإنماء بمدينة الملك عبدالله الرياضية (جدة)",
+   "venueEn": "Alinma Stadium, King Abdullah Sports City, Jeddah",
+   "status": "played",
+   "score": [
+    4,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33024",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-08-25",
+   "time": "19:05",
+   "home": "أبها",
+   "away": "الخليج",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33032",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-08-28",
+   "time": "19:00",
+   "home": "الفيحاء",
+   "away": "أبها",
+   "venue": "مدينة المجمعة الرياضية (المجمعة)",
+   "venueEn": "Al Majmaah Sports City Stadium",
+   "status": "played",
+   "score": [
+    3,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33043",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-04",
+   "time": "19:00",
+   "home": "أبها",
+   "away": "الاتفاق",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33057",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-09",
+   "time": "21:00",
+   "home": "النصر",
+   "away": "أبها",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33065",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-09-13",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "أبها",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33081",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-16",
+   "time": "16:15",
+   "home": "القادسية",
+   "away": "أبها",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "to": "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33102",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-10-24",
+   "time": "17:00",
+   "home": "نيوم",
+   "away": "أبها",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "played",
+   "score": [
+    2,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33067",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-27",
+   "time": "15:40",
+   "home": "أبها",
+   "away": "الفيصلي",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر",
+     "to": "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "at": "2026-08-23"
+    },
+    {
+     "field": "date",
+     "from": "الأحد 11 أكتوبر",
+     "to": "الثلاثاء 27 أكتوبر 15:40",
+     "at": "2026-10-11"
+    }
+   ]
+  },
+  {
+   "id": "m33103",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-10-30",
+   "time": "15:30",
+   "home": "أبها",
+   "away": "الاتحاد",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33113",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-26",
+   "time": "18:05",
+   "home": "أبها",
+   "away": "الشباب",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الخميس 5 نوفمبر",
+     "to": "الخميس 26 نوفمبر 18:05",
+     "at": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "m33128",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-03",
+   "time": "17:45",
+   "home": "التعاون",
+   "away": "أبها",
+   "venue": "استاد مدينة الملك عبدالله الرياضية (بريدة)",
+   "venueEn": "King Abdullah Sports City Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33085",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-12-07",
+   "time": "16:40",
+   "home": "أبها",
+   "away": "الخلود",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر",
+     "to": "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر",
+     "at": "2026-08-23"
+    },
+    {
+     "field": "date",
+     "from": "الاثنين 19 أكتوبر",
+     "to": "الاثنين 7 ديسمبر 16:40",
+     "at": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "id": "m33130",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-10",
+   "time": "15:30",
+   "home": "أبها",
+   "away": "الرياض",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33143",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-17",
+   "time": "20:30",
+   "home": "الهلال",
+   "away": "أبها",
+   "venue": "المملكة أرينا (الرياض)",
+   "venueEn": "Kingdom Arena, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33148",
+   "comp": "league",
+   "round": 17,
+   "date": "2027-01-01",
+   "time": "15:50",
+   "home": "أبها",
+   "away": "الفتح",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33160",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-09",
+   "time": "15:30",
+   "home": "الحزم",
+   "away": "أبها",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33166",
+   "comp": "league",
+   "round": 19,
+   "date": "2027-01-14",
+   "time": "16:00",
+   "home": "أبها",
+   "away": "الأهلي",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33179",
+   "comp": "league",
+   "round": 20,
+   "date": "2027-01-21",
+   "time": "17:55",
+   "home": "الخليج",
+   "away": "أبها",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33185",
+   "comp": "league",
+   "round": 21,
+   "date": "2027-01-30",
+   "time": "17:15",
+   "home": "أبها",
+   "away": "الفيحاء",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33193",
+   "comp": "league",
+   "round": 22,
+   "date": "2027-03-11",
+   "time": "21:00",
+   "home": "الاتفاق",
+   "away": "أبها",
+   "venue": "ملعب نادي الاتفاق (الدمام)",
+   "venueEn": "Al Ettifaq Club Stadium (EGO Stadium), Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33203",
+   "comp": "league",
+   "round": 23,
+   "date": "2027-03-18",
+   "time": "21:00",
+   "home": "أبها",
+   "away": "النصر",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33211",
+   "comp": "league",
+   "round": 24,
+   "date": "2027-04-02",
+   "time": "21:00",
+   "home": "أبها",
+   "away": "الدرعية",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33223",
+   "comp": "league",
+   "round": 25,
+   "date": "2027-04-08",
+   "time": "21:00",
+   "home": "الفيصلي",
+   "away": "أبها",
+   "venue": "مدينة المجمعة الرياضية (المجمعة)",
+   "venueEn": "Al Majmaah Sports City Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33229",
+   "comp": "league",
+   "round": 26,
+   "date": "2027-04-15",
+   "time": "21:00",
+   "home": "أبها",
+   "away": "القادسية",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33242",
+   "comp": "league",
+   "round": 27,
+   "date": "2027-04-18",
+   "time": "21:00",
+   "home": "الخلود",
+   "away": "أبها",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33247",
+   "comp": "league",
+   "round": 28,
+   "date": "2027-04-22",
+   "time": "21:00",
+   "home": "أبها",
+   "away": "نيوم",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33260",
+   "comp": "league",
+   "round": 29,
+   "date": "2027-04-29",
+   "time": "21:00",
+   "home": "الاتحاد",
+   "away": "أبها",
+   "venue": "مدينة الأمير عبدالله الفيصل الرياضية (جدة)",
+   "venueEn": "Prince Abdullah Al-Faisal Sports City, Jeddah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33270",
+   "comp": "league",
+   "round": 30,
+   "date": "2027-05-06",
+   "time": "21:00",
+   "home": "الشباب",
+   "away": "أبها",
+   "venue": "اس اتش جي ارينا (الرياض)",
+   "venueEn": "SHG Arena, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33274",
+   "comp": "league",
+   "round": 31,
+   "date": "2027-05-12",
+   "time": "21:00",
+   "home": "أبها",
+   "away": "التعاون",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33289",
+   "comp": "league",
+   "round": 32,
+   "date": "2027-05-20",
+   "time": "21:00",
+   "home": "الرياض",
+   "away": "أبها",
+   "venue": "مدينة الأمير فيصل بن فهد الرياضية (الرياض)",
+   "venueEn": "Prince Faisal bin Fahd Sports City, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33292",
+   "comp": "league",
+   "round": 33,
+   "date": "2027-05-24",
+   "time": "21:00",
+   "home": "أبها",
+   "away": "الهلال",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33302",
+   "comp": "league",
+   "round": 34,
+   "date": "2027-05-29",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "أبها",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

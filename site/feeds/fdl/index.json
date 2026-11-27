@@ -1,0 +1,155 @@
+{
+ "league": "fdl",
+ "name": {
+  "ar": "دوري الأولى",
+  "en": "First Division League"
+ },
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "clubs": [
+  {
+   "club": "العلا",
+   "en": "AlUla",
+   "id": "121",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/121.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/121.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-121"
+  },
+  {
+   "club": "الجبلين",
+   "en": "Al Jabalain",
+   "id": "46",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/46.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/46.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-46"
+  },
+  {
+   "club": "الوحدة",
+   "en": "Al Wehda",
+   "id": "107",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/107.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/107.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-107"
+  },
+  {
+   "club": "النجمة",
+   "en": "Al Najma",
+   "id": "58",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/58.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/58.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-58"
+  },
+  {
+   "club": "ضمك",
+   "en": "Damac",
+   "id": "126",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/126.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/126.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-126"
+  },
+  {
+   "club": "الزلفي",
+   "en": "Al Zulfi",
+   "id": "43",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/43.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/43.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-43"
+  },
+  {
+   "club": "الأنوار",
+   "en": "Al Anwar",
+   "id": "15",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/15.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/15.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-15"
+  },
+  {
+   "club": "الصقر",
+   "en": "Al Saqer",
+   "id": "63",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/63.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/63.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-63"
+  },
+  {
+   "club": "الطائي",
+   "en": "Al Taee",
+   "id": "47",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/47.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/47.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-47"
+  },
+  {
+   "club": "العدالة",
+   "en": "Al Adalah",
+   "id": "147",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/147.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/147.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-147"
+  },
+  {
+   "club": "الرائد",
+   "en": "Al Raed",
+   "id": "59",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/59.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/59.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-59"
+  },
+  {
+   "club": "جدة",
+   "en": "Jeddah",
+   "id": "105",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/105.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/105.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-105"
+  },
+  {
+   "club": "العروبة",
+   "en": "Al Orobah",
+   "id": "94",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/94.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/94.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-94"
+  },
+  {
+   "club": "الجندل",
+   "en": "Al Jandal",
+   "id": "97",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/97.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/97.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-97"
+  },
+  {
+   "club": "الأخدود",
+   "en": "Al Okhdood",
+   "id": "163",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/163.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/163.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-163"
+  },
+  {
+   "club": "هجر",
+   "en": "Hajer",
+   "id": "140",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/140.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/140.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-140"
+  },
+  {
+   "club": "البكيرية",
+   "en": "Al Bukiryah",
+   "id": "65",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/65.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/65.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-65"
+  },
+  {
+   "club": "الجيل",
+   "en": "Al Jeel",
+   "id": "139",
+   "calendar": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/139.ics",
+   "data": "https://teals1998.github.io/yelo-league-centre/feeds/fdl/139.json",
+   "alerts": "https://ntfy.sh/matchcentre-sa-fdl-139"
+  }
+ ]
+}

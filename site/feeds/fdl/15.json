@@ -1,0 +1,347 @@
+{
+ "club": "الأنوار",
+ "en": "Al Anwar",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "ملعب نادي الأنوار (حوطة بني تميم)",
+ "homeEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+ "city": "حوطة بني تميم",
+ "table": {
+  "team": "الأنوار",
+  "pos": 7,
+  "pts": 18,
+  "p": 11,
+  "w": 4,
+  "d": 6,
+  "l": 1,
+  "gf": 11,
+  "ga": 7
+ },
+ "matches": [
+  {
+   "id": "m33482",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-21",
+   "time": "19:15",
+   "home": "البكيرية",
+   "away": "الأنوار",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "l2",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-28",
+   "time": null,
+   "home": "الأنوار",
+   "away": "العلا",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33505",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-09-02",
+   "time": "18:40",
+   "home": "هجر",
+   "away": "الأنوار",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33513",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-08",
+   "time": "20:30",
+   "home": "الأنوار",
+   "away": "الطائي",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "played",
+   "score": [
+    2,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33518",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-13",
+   "time": "18:50",
+   "home": "الصقر",
+   "away": "الأنوار",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33528",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-19",
+   "time": "18:35",
+   "home": "الأنوار",
+   "away": "النجمة",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33542",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-10-12",
+   "time": "17:55",
+   "home": "العدالة",
+   "away": "الأنوار",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33551",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-21",
+   "time": "18:00",
+   "home": "الأنوار",
+   "away": "الوحدة",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33562",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-02",
+   "time": "15:30",
+   "home": "العروبة",
+   "away": "الأنوار",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_3",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-08",
+   "time": "15:30",
+   "home": "ضمك",
+   "away": "الأنوار",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33587",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-25",
+   "time": "15:10",
+   "home": "الأنوار",
+   "away": "الجندل",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33591",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-30",
+   "time": "15:05",
+   "home": "الأنوار",
+   "away": "الزلفي",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33601",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-06",
+   "time": "15:00",
+   "home": "الجيل",
+   "away": "الأنوار",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33553",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-12-11",
+   "time": "15:10",
+   "home": "الأنوار",
+   "away": "الأخدود",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "status",
+     "from": "الاثنين 26 أكتوبر، ملعب نادي الأنوار",
+     "to": "مؤجلة · لم يُعلن موعد جديد",
+     "at": "2026-10-26"
+    },
+    {
+     "field": "date",
+     "from": "لم يُعلن موعد جديد",
+     "to": "الجمعة 11 ديسمبر 15:10"
+    }
+   ]
+  },
+  {
+   "id": "m33607",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-16",
+   "time": "15:10",
+   "home": "الأنوار",
+   "away": "الجبلين",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33622",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-22",
+   "time": "18:25",
+   "home": "جدة",
+   "away": "الأنوار",
+   "venue": "ملعب نادي جدة (جدة)",
+   "venueEn": "Jeddah Club Stadium, Jeddah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33627",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-28",
+   "time": "17:50",
+   "home": "الأنوار",
+   "away": "الرائد",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "l19",
+   "comp": "league",
+   "round": 19,
+   "date": "2027-01-04",
+   "time": "15:50",
+   "home": "العلا",
+   "away": "الأنوار",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "postponed",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الاثنين 4 يناير",
+     "to": "لم يُحدد",
+     "at": "2026-11-22"
+    },
+    {
+     "field": "status",
+     "from": "الاثنين 4 يناير 15:50",
+     "to": "مؤجلة · لم يُحدد الموعد الجديد",
+     "at": "2026-11-22"
+    }
+   ]
+  },
+  {
+   "id": "m33637",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-05",
+   "time": "15:20",
+   "home": "الأنوار",
+   "away": "البكيرية",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

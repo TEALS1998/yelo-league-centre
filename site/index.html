@@ -1948,6 +1948,10 @@ document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');i
       <div class="ch"><div><h3>Schedule changes</h3><small>Each change is a substitution: the 4th official's board shows what went off and what came on</small></div><div class="r"><span class="ar">تعديلات الجدول</span><small class="ar">كل تغيير تبديل: لوحة الحكم الرابع توضح مين طلع ومين دخل</small></div></div>
       <div id="changes"></div>
     </article>
+    <article class="card s12" id="subsCard" hidden>
+      <div class="ch"><div><h3>Club subscriptions</h3><small>Calendar, phone alerts and a data feed for this club, updated on their own</small></div><div class="r"><span class="ar">اشتراكات النادي</span><small class="ar">تقويم وتنبيهات وبيانات للنادي، تتحدّث وحدها</small></div></div>
+      <div class="subs" id="subs"></div>
+    </article>
     <div class="sec" id="calendar"><span class="num">02</span><div><b>Fixture calendar</b><span class="ar">روزنامة المباريات</span></div><small>Every fixture of the season, played and upcoming<span class="ar">كل مباريات الموسم، الملعوبة والقادمة</span></small></div>
     <article class="card s12 runway">
       <div class="ch"><div><h3>Fixture calendar</h3><small>Arcs show postponed fixtures moving to their new date · numbers are rest days between matches</small></div><div class="r"><span class="ar">روزنامة المباريات</span><small class="ar">الأقواس توضح المباريات المؤجلة وموعدها الجديد · الأرقام أيام الراحة بين المباريات</small></div></div>
@@ -5973,5 +5977,32 @@ addEventListener("beforeprint",()=>document.querySelectorAll(".mo-r,.rps").forEa
 })();
 </script>
 
+<style>
+.subs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:12px}
+.sub{border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px;background:#fff}
+.sub b{font-size:14px}.sub .ar{direction:rtl;text-align:right;font-size:13px;line-height:1.7}
+.sub code{font-size:11px;word-break:break-all;background:#f3f4f7;border-radius:6px;padding:4px 6px;direction:ltr;display:block}
+.sub .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.sub a.tab{text-decoration:none}
+@media(max-width:820px){.subs{grid-template-columns:minmax(0,1fr)}}
+</style>
+<script>/* club subscriptions: calendar (.ics), phone alerts (ntfy) and the club's data file, written by scripts/feeds.mjs */
+(()=>{const T=window.US_TEAM,L=window.LEAGUE_DATA;if(!T||!L||!L.clubs[T]||!L.clubs[T].saffId)return;
+const lg=window.LG==="spl"?"spl":"fdl",id=L.clubs[T].saffId,u=new URL("feeds/"+lg+"/"+id,location.href).href;
+const ics=u+".ics",web="webcal://"+ics.replace(/^https?:\/\//,""),topic="matchcentre-sa-"+lg+"-"+id;
+const E=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fan=new URL("fan.html?"+(lg==="spl"?"league=spl&":"")+"club="+encodeURIComponent(T),location.href).href;
+const copy=(b,t)=>{b.addEventListener("click",()=>{(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{const o=b.innerHTML;b.textContent="Copied · تم النسخ";setTimeout(()=>b.innerHTML=o,1600);}).catch(()=>prompt("Copy · انسخ",t));});};
+const box=document.getElementById("subs");
+box.innerHTML=`<div class="sub"><b>Match calendar</b><p class="ar">كل مباريات ${E(T)} في تقويم الجوال أو Outlook أو Google، وأي تعديل في الموعد أو الملعب يتحدّث وحده.</p><code>${E(ics)}</code>
+<div class="acts"><a class="tab" href="${E(web)}">Subscribe · اشترك</a><button class="tab" type="button" id="cpIcs">Copy link · نسخ الرابط</button></div></div>
+<div class="sub"><b>Phone alerts</b><p class="ar">تنبيه على الجوال خلال دقائق من أي تعديل أو تأجيل أو نتيجة. حمّل تطبيق ntfy المجاني، اضغط +، واكتب اسم القناة:</p><code>${E(topic)}</code>
+<div class="acts"><a class="tab" href="https://ntfy.sh/${E(topic)}" target="_blank" rel="noopener">Open channel · فتح القناة</a><button class="tab" type="button" id="cpTopic">Copy name · نسخ الاسم</button><a class="tab" href="https://ntfy.sh/app" target="_blank" rel="noopener">Get the app · التطبيق</a></div></div>
+<div class="sub"><b>Club data feed</b><p class="ar">ملف بيانات (JSON) لمباريات النادي وترتيبه وتعديلاته، تقرؤه أنظمة النادي أو تطبيقه مباشرة.</p><code>${E(u)}.json</code>
+<div class="acts"><a class="tab" href="${E(u)}.json" target="_blank" rel="noopener">Open · فتح</a><button class="tab" type="button" id="cpJson">Copy link · نسخ الرابط</button></div></div>
+<div class="sub"><b>Fan website</b><p class="ar">صفحة للجمهور بألوان النادي، بالعربي والإنجليزي: المباراة القادمة، والتعديلات، والنتائج، والترتيب. تُشارك برابط واحد.</p><code>${E(decodeURI(fan))}</code>
+<div class="acts"><a class="tab" href="${E(fan)}" target="_blank" rel="noopener">Open · فتح</a><button class="tab" type="button" id="cpFan">Copy link · نسخ الرابط</button></div></div>`;
+copy(document.getElementById("cpIcs"),ics);copy(document.getElementById("cpTopic"),topic);copy(document.getElementById("cpJson"),u+".json");copy(document.getElementById("cpFan"),fan);
+document.getElementById("subsCard").hidden=false;})();</script>
 </body>
 </html>

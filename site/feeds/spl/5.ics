@@ -1,0 +1,435 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:الدرعية · دوري روشن
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m32989-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260813T180000Z
+DTEND:20260813T200000Z
+SUMMARY:الدرعية 0–1 الأهلي
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 1\nضد الأهلي · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33015-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260821T161500Z
+DTEND:20260821T181500Z
+SUMMARY:الحزم 0–1 الدرعية
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 2\nضد الحزم · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33029-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260826T180000Z
+DTEND:20260826T200000Z
+SUMMARY:الدرعية 1–1 الخلود
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 3\nضد الخلود · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33036-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260829T180000Z
+DTEND:20260829T200000Z
+SUMMARY:الاتفاق 0–3 الدرعية
+LOCATION:ملعب نادي الاتفاق (الدمام)
+DESCRIPTION:دوري روشن · الجولة 4\nضد الاتفاق · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33042-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260903T180000Z
+DTEND:20260903T200000Z
+SUMMARY:الدرعية 0–2 القادسية
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 5\nضد القادسية ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33056-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260909T180000Z
+DTEND:20260909T200000Z
+SUMMARY:الفتح 1–2 الدرعية
+LOCATION:ميدان تمويل الأولى (الأحساء)
+DESCRIPTION:دوري روشن · الجولة 6\nضد الفتح · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33065-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260913T180000Z
+DTEND:20260913T200000Z
+SUMMARY:الدرعية 0–0 أبها
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 7\nضد أبها · على 
+ أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33074-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261009T180000Z
+DTEND:20261009T200000Z
+SUMMARY:النصر 3–0 الدرعية
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 8\nضد النصر · خا
+ رج أرضنا\nتعديل 2026-08-23: الجولة 8، من الخمي
+ س 17 إلى السبت 19 سبتمبر ← الجولة 8، من الج
+ معة 9 إلى الأحد 11 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33083-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261017T180000Z
+DTEND:20261017T200000Z
+SUMMARY:الدرعية 1–1 التعاون
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 9\nضد التعاون · 
+ على أرضنا\nتعديل 2026-08-23: الجولة 9، من الجم
+ عة 9 إلى الأحد 11 أكتوبر ← الجولة 9، من ال
+ خميس 15 إلى السبت 17 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33093-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261020T150000Z
+DTEND:20261020T170000Z
+SUMMARY:الدرعية 1–0 الرياض
+LOCATION:مدينة الأمير فيصل بن فهد الرياضية (
+ الرياض)
+DESCRIPTION:دوري روشن · الجولة 10\nضد الرياض · ع
+ لى أرضنا\nتعديل 2026-08-23: الجولة 10، من الخم
+ يس 15 إلى السبت 17 أكتوبر ← الجولة 10، من ا
+ لأحد 18 إلى الثلاثاء 20 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33097-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261023T153000Z
+DTEND:20261023T173000Z
+SUMMARY:الاتحاد 2–0 الدرعية
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 11\nضد الاتحاد · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33111-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261030T145000Z
+DTEND:20261030T165000Z
+SUMMARY:الدرعية 1–2 نيوم
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 12\nضد نيوم · على
+  أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33119-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20261126T173000Z
+DTEND:20261126T193000Z
+SUMMARY:الفيصلي 2–2 الدرعية
+LOCATION:استاد مدينة الملك عبدالله الرياضية
+  (بريدة)
+DESCRIPTION:دوري روشن · الجولة 13\nضد الفيصلي · 
+ خارج أرضنا\nتعديل 2026-11-09: الجولة 13، من ال
+ خميس 5 إلى السبت 7 نوفمبر ← الخميس 26 نوفم
+ بر 20:30\nتعديل 2026-11-09: مدينة المجمعة الريا
+ ضية (المجمعة) ← استاد مدينة الملك عبدال
+ له الرياضية (بريدة)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33123-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261203T173000Z
+DTEND:20261203T193000Z
+SUMMARY:الهلال × الدرعية
+LOCATION:المملكة أرينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 14\nضد الهلال · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33137-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261210T173000Z
+DTEND:20261210T193000Z
+SUMMARY:الدرعية × الفيحاء
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 15\nضد الفيحاء · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33144-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261218T130000Z
+DTEND:20261218T150000Z
+SUMMARY:الخليج × الدرعية
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 16\nضد الخليج · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33155-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270102T145500Z
+DTEND:20270102T165500Z
+SUMMARY:الدرعية × الشباب
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 17\nضد الشباب · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33157-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270108T173000Z
+DTEND:20270108T193000Z
+SUMMARY:الأهلي × الدرعية
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 18\nضد الأهلي · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33173-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270116T150500Z
+DTEND:20270116T170500Z
+SUMMARY:الدرعية × الحزم
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 19\nضد الحزم · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33180-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270123T124000Z
+DTEND:20270123T144000Z
+SUMMARY:الخلود × الدرعية
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 20\nضد الخلود · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33191-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270130T173000Z
+DTEND:20270130T193000Z
+SUMMARY:الدرعية × الاتفاق
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 21\nضد الاتفاق · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33200-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270311T180000Z
+DTEND:20270311T200000Z
+SUMMARY:القادسية × الدرعية
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 22\nضد القادسية 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33209-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270318T180000Z
+DTEND:20270318T200000Z
+SUMMARY:الدرعية × الفتح
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 23\nضد الفتح · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33211-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270402T180000Z
+DTEND:20270402T200000Z
+SUMMARY:أبها × الدرعية
+LOCATION:استاد مدينة الأمير سلطان بن عبدالع
+ زيز الرياضية (أبها)
+DESCRIPTION:دوري روشن · الجولة 24\nضد أبها · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33227-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270408T180000Z
+DTEND:20270408T200000Z
+SUMMARY:الدرعية × النصر
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 25\nضد النصر · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33237-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270415T180000Z
+DTEND:20270415T200000Z
+SUMMARY:التعاون × الدرعية
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 26\nضد التعاون · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33245-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270418T180000Z
+DTEND:20270418T200000Z
+SUMMARY:الرياض × الدرعية
+LOCATION:مدينة الأمير فيصل بن فهد الرياضية (
+ الرياض)
+DESCRIPTION:دوري روشن · الجولة 27\nضد الرياض · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33255-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270422T180000Z
+DTEND:20270422T200000Z
+SUMMARY:الدرعية × الاتحاد
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 28\nضد الاتحاد · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33264-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270429T180000Z
+DTEND:20270429T200000Z
+SUMMARY:نيوم × الدرعية
+LOCATION:استاد مدينة الملك خالد الرياضية (تب
+ وك)
+DESCRIPTION:دوري روشن · الجولة 29\nضد نيوم · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33272-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270506T180000Z
+DTEND:20270506T200000Z
+SUMMARY:الدرعية × الفيصلي
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 30\nضد الفيصلي · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33282-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270512T180000Z
+DTEND:20270512T200000Z
+SUMMARY:الدرعية × الهلال
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 31\nضد الهلال · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33285-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270520T180000Z
+DTEND:20270520T200000Z
+SUMMARY:الفيحاء × الدرعية
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 32\nضد الفيحاء · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33299-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270524T180000Z
+DTEND:20270524T200000Z
+SUMMARY:الدرعية × الخليج
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 33\nضد الخليج · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33308-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270529T180000Z
+DTEND:20270529T200000Z
+SUMMARY:الشباب × الدرعية
+LOCATION:اس اتش جي ارينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 34\nضد الشباب · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

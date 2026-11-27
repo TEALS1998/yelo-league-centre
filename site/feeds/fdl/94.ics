@@ -1,0 +1,257 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:العروبة · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m33486-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260822T175000Z
+DTEND:20260822T195000Z
+SUMMARY:العروبة 0–1 الرائد
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد الرائد ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33498-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260828T175000Z
+DTEND:20260828T195000Z
+SUMMARY:ضمك 0–0 العروبة
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد ضمك · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33503-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260901T162000Z
+DTEND:20260901T182000Z
+SUMMARY:العروبة 1–1 الزلفي
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد الزلفي ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33516-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260909T173000Z
+DTEND:20260909T193000Z
+SUMMARY:جدة 2–2 العروبة
+LOCATION:ملعب نادي جدة (جدة)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد جدة · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33525-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260915T160500Z
+DTEND:20260915T180500Z
+SUMMARY:العروبة 1–0 الجيل
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد الجيل · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33532-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260920T155500Z
+DTEND:20260920T175500Z
+SUMMARY:الجبلين 0–0 العروبة
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد الجبلين 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33548-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261020T152000Z
+DTEND:20261020T172000Z
+SUMMARY:العروبة 1–1 البكيرية
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد البكيري
+ ة · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l9-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261026T164500Z
+DTEND:20261026T184500Z
+SUMMARY:العلا 3–1 العروبة
+LOCATION:ملعب نادي أحد (المدينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد العلا · 
+ خارج أرضنا\nتعديل undefined: استاد الأمير مح
+ مد بن عبدالعزيز، المدينة المنورة ← ملع
+ ب نادي أحد، المدينة المنورة
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33562-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261102T123000Z
+DTEND:20261102T143000Z
+SUMMARY:العروبة 0–1 الأنوار
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد الأنوار
+  · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:s11_7-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:3
+DTSTART:20261118T143000Z
+DTEND:20261118T163000Z
+SUMMARY:العدالة 3–3 العروبة
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد العدالة
+  · خارج أرضنا\nتعديل 2026-11-18: ملعب مدينة ال
+ أمير عبدالله بن جلوي الرياضية (الأحساء) 
+ ← ملعب نادي هجر (الأحساء)\nتعديل 2026-11-06: ا
+ لجمعة 6 نوفمبر 17:35، ملعب نادي هجر ← مؤجل
+ ة\nتعديل 2026-11-08: الجمعة 6 نوفمبر 17:35 ← الأ
+ ربعاء 18 نوفمبر 17:30
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33584-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261124T122000Z
+DTEND:20261124T142000Z
+SUMMARY:العروبة 0–0 النجمة
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد النجمة 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33590-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261129T145000Z
+DTEND:20261129T165000Z
+SUMMARY:الصقر × العروبة
+LOCATION:ملعب نادي البكيرية (البكيرية)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد الصقر · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33599-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261206T122000Z
+DTEND:20261206T142000Z
+SUMMARY:العروبة × الطائي
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد الطائي 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33537-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:3
+DTSTART:20261211T143500Z
+DTEND:20261211T163500Z
+SUMMARY:هجر × العروبة
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد هجر · خا
+ رج أرضنا\nتعديل 2026-10-13: الأربعاء 14 أكتوبر
+  17:55، ملعب نادي هجر ← مؤجلة · لم يُعلن مو
+ عد جديد\nتعديل undefined: لم يُعلن موعد جديد 
+ ← الجمعة 11 ديسمبر 17:35\nتعديل undefined: ملعب 
+ نادي هجر (الأحساء) ← ملعب مدينة الأمير ع
+ بدالله بن جلوي الرياضية (الأحساء)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33609-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20261216T122500Z
+DTEND:20261216T142500Z
+SUMMARY:الجندل × العروبة
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد الجندل 
+ · خارج أرضنا\nتعديل undefined: الجمعة 11 ديسمب
+ ر 15:25 ← الأربعاء 16 ديسمبر 15:25\nتعديل undefine
+ d: ملعب نادي العروبة (الجوف) ← استاد جامع
+ ة الجوف (الجوف)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33617-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261221T122500Z
+DTEND:20261221T142500Z
+SUMMARY:العروبة × الوحدة
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد الوحدة 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33629-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261229T124500Z
+DTEND:20261229T144500Z
+SUMMARY:الأخدود × العروبة
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد الأخدود
+  · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33634-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270104T122500Z
+DTEND:20270104T142500Z
+SUMMARY:الرائد × العروبة
+LOCATION:ملعب نادي الرائد (بريدة)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد الرائد 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c37569-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270111T135000Z
+DTEND:20270111T155000Z
+SUMMARY:العروبة × الأخدود
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:كأس خادم الحرمين الشريفين\nضد الأ
+ خدود · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

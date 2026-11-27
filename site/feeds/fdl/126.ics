@@ -1,0 +1,238 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ضمك · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m33488-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260823T161500Z
+DTEND:20260823T181500Z
+SUMMARY:الصقر 0–0 ضمك
+LOCATION:ملعب نادي الرائد (بريدة)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد الصقر · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33498-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260828T175000Z
+DTEND:20260828T195000Z
+SUMMARY:ضمك 0–0 العروبة
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد العروبة 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33506-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260902T161500Z
+DTEND:20260902T181500Z
+SUMMARY:الوحدة 2–2 ضمك
+LOCATION:استاد مدينة الملك عبدالعزيز الرياض
+ ية (مكة المكرمة)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد الوحدة ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l4-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260909
+SUMMARY:ضمك 0–1 العلا
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد العلا · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33520-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260914T155000Z
+DTEND:20260914T175000Z
+SUMMARY:البكيرية 1–2 ضمك
+LOCATION:ملعب نادي البكيرية (البكيرية)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد البكيري
+ ة · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33531-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260920T154500Z
+DTEND:20260920T174500Z
+SUMMARY:ضمك 3–2 العدالة
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد العدالة 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33538-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261012T151500Z
+DTEND:20261012T171500Z
+SUMMARY:النجمة 3–0 ضمك
+LOCATION:ملعب إدارة التعليم (عنيزة)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد النجمة ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33545-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261019T152000Z
+DTEND:20261019T172000Z
+SUMMARY:ضمك 4–1 الطائي
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد الطائي ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33559-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261028T123500Z
+DTEND:20261028T143500Z
+SUMMARY:الجندل 0–2 ضمك
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد الجندل ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33569-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261103T123500Z
+DTEND:20261103T143500Z
+SUMMARY:ضمك 4–3 الأخدود
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد الأخدود
+  · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:s11_3-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261108T123000Z
+DTEND:20261108T143000Z
+SUMMARY:ضمك 1–1 الأنوار
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد الأنوار
+  · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33582-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261123T151500Z
+DTEND:20261123T171500Z
+SUMMARY:جدة 0–2 ضمك
+LOCATION:ملعب نادي جدة (جدة)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد جدة · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33589-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261129T123000Z
+DTEND:20261129T143000Z
+SUMMARY:ضمك × الجيل
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد الجيل · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33603-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261207T121500Z
+DTEND:20261207T141500Z
+SUMMARY:الزلفي × ضمك
+LOCATION:ملعب نادي الزلفي (الزلفي)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد الزلفي 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33613-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261215T123000Z
+DTEND:20261215T143000Z
+SUMMARY:ضمك × الرائد
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد الرائد 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33624-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261223T143500Z
+DTEND:20261223T163500Z
+SUMMARY:هجر × ضمك
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد هجر · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33632-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261230T124000Z
+DTEND:20261230T144000Z
+SUMMARY:ضمك × الجبلين
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد الجبلين
+  · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33641-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270106T124500Z
+DTEND:20270106T144500Z
+SUMMARY:ضمك × الصقر
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد الصقر · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

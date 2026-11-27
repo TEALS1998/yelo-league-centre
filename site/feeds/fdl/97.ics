@@ -1,0 +1,237 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:الجندل · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m33484-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260822T161500Z
+DTEND:20260822T181500Z
+SUMMARY:النجمة 2–1 الجندل
+LOCATION:ملعب إدارة التعليم (عنيزة)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد النجمة ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33495-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260827T175000Z
+DTEND:20260827T195000Z
+SUMMARY:الجندل 1–1 الصقر
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد الصقر · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33501-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260831T174000Z
+DTEND:20260831T194000Z
+SUMMARY:الطائي 2–1 الجندل
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد الطائي ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33515-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260909T161000Z
+DTEND:20260909T181000Z
+SUMMARY:الجندل 4–1 البكيرية
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد البكيري
+ ة · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33524-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260915T153000Z
+DTEND:20260915T173000Z
+SUMMARY:العدالة 1–0 الجندل
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد العدالة 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33533-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260920T155500Z
+DTEND:20260920T175500Z
+SUMMARY:الجندل 2–2 الوحدة
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد الوحدة ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33541-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261014T153000Z
+DTEND:20261014T173000Z
+SUMMARY:الجندل 1–1 الأخدود
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد الأخدود 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33559-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261028T123500Z
+DTEND:20261028T143500Z
+SUMMARY:الجندل 0–2 ضمك
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد ضمك · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33568-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261102T145500Z
+DTEND:20261102T165500Z
+SUMMARY:الزلفي 3–0 الجندل
+LOCATION:ملعب نادي الزلفي (الزلفي)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد الزلفي 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:s11_1-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261107T123000Z
+DTEND:20261107T143000Z
+SUMMARY:الجندل 0–0 هجر
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد هجر · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33587-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261125T121000Z
+DTEND:20261125T141000Z
+SUMMARY:الأنوار 2–1 الجندل
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد الأنوار
+  · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33593-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261201T122500Z
+DTEND:20261201T142500Z
+SUMMARY:الجندل × جدة
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد جدة · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33598-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261208T122000Z
+DTEND:20261208T142000Z
+SUMMARY:الجبلين × الجندل
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد الجبلين
+  · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33609-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20261216T122500Z
+DTEND:20261216T142500Z
+SUMMARY:الجندل × العروبة
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد العروبة
+  · على أرضنا\nتعديل undefined: الجمعة 11 ديسمب
+ ر 15:25 ← الأربعاء 16 ديسمبر 15:25\nتعديل undefine
+ d: ملعب نادي العروبة (الجوف) ← استاد جامع
+ ة الجوف (الجوف)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33616-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261222T121500Z
+DTEND:20261222T141500Z
+SUMMARY:الرائد × الجندل
+LOCATION:ملعب نادي الرائد (بريدة)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد الرائد 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l17-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261228T123000Z
+DTEND:20261228T143000Z
+SUMMARY:الجندل × العلا
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد العلا · 
+ على أرضنا\nتعديل undefined: الاثنين 21 ديسمبر 
+ ← الاثنين 28 ديسمبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33635-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270104T123500Z
+DTEND:20270104T143500Z
+SUMMARY:الجندل × النجمة
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد النجمة 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33550-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20270110T121000Z
+DTEND:20270110T141000Z
+SUMMARY:الجيل × الجندل
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد الجيل · 
+ خارج أرضنا\nتعديل 2026-10-21: الأربعاء 21 أكتو
+ بر 17:45 ← مؤجلة يوم المباراة · لم يُعلن م
+ وعد جديد\nتعديل undefined: لم يُعلن موعد جديد
+  ← الأحد 10 يناير 15:10
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

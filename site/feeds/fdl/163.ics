@@ -1,0 +1,265 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:الأخدود · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m33485-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260822T162000Z
+DTEND:20260822T182000Z
+SUMMARY:الطائي 0–2 الأخدود
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد الطائي ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33492-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20260826T161000Z
+DTEND:20260826T181000Z
+SUMMARY:البكيرية 1–1 الأخدود
+LOCATION:ملعب نادي البكيرية (البكيرية)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد البكيري
+ ة · خارج أرضنا\nتعديل undefined: مدينة الأمير
+  هذلول بن عبدالعزيز الرياضية (نجران)، ال
+ أخدود مستضيفًا ← ملعب نادي البكيرية (ال
+ بكيرية)\nتعديل undefined: 20:50 ← 19:10
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33500-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260831T160500Z
+DTEND:20260831T180500Z
+SUMMARY:الصقر 0–0 الأخدود
+LOCATION:ملعب نادي الرائد (بريدة)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد الصقر · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33510-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20260907T172000Z
+DTEND:20260907T192000Z
+SUMMARY:الأخدود 2–2 النجمة
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد النجمة ·
+  على أرضنا\nتعديل undefined: مدينة الأمير هذل
+ ول بن عبدالعزيز الرياضية (نجران) ← مدين
+ ة الأمير سلطان بن عبدالعزيز الرياضية (أ
+ بها)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33522-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260914T160500Z
+DTEND:20260914T180500Z
+SUMMARY:الوحدة 4–2 الأخدود
+LOCATION:استاد مدينة الملك عبدالعزيز الرياض
+ ية (مكة المكرمة)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد الوحدة ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l6-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:3
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:الأخدود 1–5 العلا
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد العلا · 
+ على أرضنا\nتعديل undefined: جولة اليوم الوطن
+ ي، من الجمعة 18 إلى الأحد 20 سبتمبر ← الخم
+ يس 8 أكتوبر\nتعديل undefined: مدينة الأمير سل
+ طان بن عبدالعزيز الرياضية، أبها ← استا
+ د مدينة الملك فهد الرياضية، الطائف\nتعد
+ يل undefined: مؤجلة ← لُعبت، فاز العلا 5 مقاب
+ ل 1
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33541-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261014T153000Z
+DTEND:20261014T173000Z
+SUMMARY:الجندل 1–1 الأخدود
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد الجندل ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33549-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261020T165000Z
+DTEND:20261020T185000Z
+SUMMARY:الأخدود 1–3 العدالة
+LOCATION:ملعب نادي جدة (جدة)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد العدالة 
+ · على أرضنا\nتعديل 2026-10-09: استاد مدينة ال
+ ملك فهد الرياضية (الطائف) ← ملعب نادي جد
+ ة (جدة)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33569-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261103T123500Z
+DTEND:20261103T143500Z
+SUMMARY:ضمك 4–3 الأخدود
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد ضمك · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:s11_5-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261108T152000Z
+DTEND:20261108T172000Z
+SUMMARY:الأخدود 0–1 الجبلين
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد الجبلين
+  · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33580-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261124T121500Z
+DTEND:20261124T141500Z
+SUMMARY:الرائد 1–1 الأخدود
+LOCATION:ملعب نادي البكيرية (البكيرية)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد الرائد 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33592-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261130T123500Z
+DTEND:20261130T143500Z
+SUMMARY:الأخدود × هجر
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد هجر · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33602-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261206T152000Z
+DTEND:20261206T172000Z
+SUMMARY:جدة × الأخدود
+LOCATION:ملعب نادي جدة (جدة)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد جدة · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33553-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20261211T121000Z
+DTEND:20261211T141000Z
+SUMMARY:الأنوار × الأخدود
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد الأنوار 
+ · خارج أرضنا\nتعديل 2026-10-26: الاثنين 26 أكت
+ وبر، ملعب نادي الأنوار ← مؤجلة · لم يُع
+ لن موعد جديد\nتعديل undefined: لم يُعلن موعد 
+ جديد ← الجمعة 11 ديسمبر 15:10
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33608-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261216T124000Z
+DTEND:20261216T144000Z
+SUMMARY:الأخدود × الجيل
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد الجيل · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33620-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261222T121500Z
+DTEND:20261222T141500Z
+SUMMARY:الزلفي × الأخدود
+LOCATION:ملعب نادي الزلفي (الزلفي)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد الزلفي 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33629-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261229T124500Z
+DTEND:20261229T144500Z
+SUMMARY:الأخدود × العروبة
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد العروبة
+  · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33636-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270104T125000Z
+DTEND:20270104T145000Z
+SUMMARY:الأخدود × الطائي
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد الطائي 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c37569-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270111T135000Z
+DTEND:20270111T155000Z
+SUMMARY:العروبة × الأخدود
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:كأس خادم الحرمين الشريفين\nضد الع
+ روبة · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

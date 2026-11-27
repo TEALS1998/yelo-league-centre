@@ -175,6 +175,12 @@ export function applyFixture(S, D, f, venueOf, round, changes) {
     return x;
   }
   if (f.score && over(f)) { x.status = "played"; x.score = f.score; changes.push(`result ${x.home} ${f.score.join("-")} ${x.away}`); return x; }
+  // a match corrected by hand (overrides.json) keeps the manual values until SAFF publishes the same date and time
+  if (x.manual) {
+    const same = (!x.manual.date || f.date === x.manual.date) && (!x.manual.time || !f.time || f.time === x.manual.time);
+    if (!same) return x;
+    delete x.manual;
+  }
   if (x.status === "postponed" && f.date >= today) {
     // SAFF has given a postponed match a new date: it is back on the schedule
     x.status = "upcoming";
@@ -281,6 +287,47 @@ async function weatherFor(D, S) {
   return n;
 }
 
+// ---------- manual corrections: overrides.json at the repo root ----------
+// { "matches": [ { "league": "fdl" | "spl", "match": "<match id>", "date": "YYYY-MM-DD", "time": "HH:MM",
+//                  "venue": "<Arabic venue name as in data.js>", "status": "upcoming" | "postponed", "note": "..." } ] }
+// Only the fields given are changed. Remove the entry to hand the match back to SAFF.
+const LKEY = LG.id === 415 ? "spl" : "fdl";
+export function applyOverrides(S, D, changes, file = path.join(ROOT, "overrides.json")) {
+  let list = [];
+  try { list = (JSON.parse(fs.readFileSync(file, "utf8")).matches || []).filter((o) => (o.league || "fdl") === LKEY && o.match); }
+  catch (e) { if (fs.existsSync(file)) log("overrides.json not readable:", e.message); }
+  const ids = new Set(list.map((o) => o.match));
+  for (const x of S.matches) if (x.manual && !ids.has(x.id)) delete x.manual; // entry removed: SAFF decides again
+  const today = riyadhToday();
+  let n = 0;
+  for (const o of list) {
+    const x = S.matches.find((m) => m.id === o.match);
+    if (!x) { log("override: no match with id", o.match); continue; }
+    if (x.status === "played") continue;
+    const want = {};
+    if (o.date && o.date !== x.date) want.date = o.date;
+    if (o.time && o.time !== x.time) want.time = o.time;
+    if (o.venue && o.venue !== x.venue) { want.venue = o.venue; if (!D.venues?.[o.venue]) log("override: venue not in the venues list:", o.venue); }
+    if (o.status && ["upcoming", "postponed"].includes(o.status) && o.status !== x.status) want.status = o.status;
+    if (!Object.keys(want).length) continue;
+    if (want.date || want.time) {
+      const from = x.status === "postponed" ? ["Not set", "لم يُحدد"] : LABEL(x.date, x.time), to = LABEL(want.date || x.date, want.time || x.time);
+      (x.changes ||= []).push({ field: want.date ? "date" : "time", from, to, at: today, manual: true });
+      if (want.date && !x.orig) x.orig = x.date;
+      x.date = want.date || x.date; x.time = want.time || x.time; delete x.weather;
+    }
+    if (want.venue) { (x.changes ||= []).push({ field: "venue", from: [x.venue, x.venue], to: [want.venue, want.venue], at: today, manual: true }); x.venue = want.venue; delete x.weather; }
+    if (want.status) {
+      (x.changes ||= []).push({ field: "status", from: x.status === "postponed" ? ["Postponed", "مؤجلة"] : LABEL(x.date, x.time),
+        to: want.status === "postponed" ? ["Postponed · new date not set", "مؤجلة · لم يُحدد الموعد الجديد"] : ["Back on: " + LABEL(x.date, x.time)[0], "عادت للجدول: " + LABEL(x.date, x.time)[1]], at: today, manual: true });
+      x.status = want.status;
+    }
+    x.manual = { date: o.date || null, time: o.time || null, note: o.note || null, at: today };
+    changes.push(`manual ${x.home} v ${x.away}: ${Object.keys(want).join(", ")}`); n++;
+  }
+  return n;
+}
+
 async function main() {
   const { header, D } = loadData();
   const S = D.seasons[D.current];
@@ -358,12 +405,16 @@ async function main() {
     if (read) { ok++; log("team pages read:", read); }
   }
 
-  if (!ok) { log("no SAFF page could be read; data left unchanged"); return; }
-  fillRounds(S);
-  S.matches.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : (a.time || "").localeCompare(b.time || "")));
-  if (process.env.WEATHER !== "0") { const n = await weatherFor(D, S); if (n) log("weather updated:", n); }
-  D.lastChecked = riyadhToday();
+  const manual = applyOverrides(S, D, changes);
+  if (!ok && !manual) { log("no SAFF page could be read; data left unchanged"); return; }
+  if (ok) {
+    fillRounds(S);
+    S.matches.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : (a.time || "").localeCompare(b.time || "")));
+    if (process.env.WEATHER !== "0") { const n = await weatherFor(D, S); if (n) log("weather updated:", n); }
+    D.lastChecked = riyadhToday();
+  }
   saveData(header, D);
+  if (!ok) { log("SAFF unreadable; manual corrections saved:", changes.join("; ")); return; }
   fs.writeFileSync(path.join(ROOT, LG.id === 415 ? "last-run-spl.json" : "last-run.json"), JSON.stringify({ at: new Date().toISOString(), changes }, null, 1) + "\n");
   log(changes.length ? changes.join("; ") : "no changes");
 }

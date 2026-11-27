@@ -1,0 +1,572 @@
+{
+ "club": "الدرعية",
+ "en": "Al Diriyah",
+ "league": "spl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "الأول بارك (الرياض)",
+ "homeEn": "Al-Awwal Park, Riyadh",
+ "city": "الدرعية",
+ "table": {
+  "team": "الدرعية",
+  "pos": 9,
+  "pts": 16,
+  "p": 13,
+  "w": 4,
+  "d": 4,
+  "l": 5,
+  "gf": 12,
+  "ga": 15
+ },
+ "matches": [
+  {
+   "id": "m32989",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-13",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "الأهلي",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33015",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-21",
+   "time": "19:15",
+   "home": "الحزم",
+   "away": "الدرعية",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33029",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-08-26",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "الخلود",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33036",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-08-29",
+   "time": "21:00",
+   "home": "الاتفاق",
+   "away": "الدرعية",
+   "venue": "ملعب نادي الاتفاق (الدمام)",
+   "venueEn": "Al Ettifaq Club Stadium (EGO Stadium), Dammam",
+   "status": "played",
+   "score": [
+    0,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33042",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-03",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "القادسية",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33056",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-09",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "الدرعية",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33065",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-09-13",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "أبها",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33074",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-09",
+   "time": "21:00",
+   "home": "النصر",
+   "away": "الدرعية",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر",
+     "to": "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33083",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-17",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "التعاون",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "to": "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33093",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-10-20",
+   "time": "18:00",
+   "home": "الدرعية",
+   "away": "الرياض",
+   "venue": "مدينة الأمير فيصل بن فهد الرياضية (الرياض)",
+   "venueEn": "Prince Faisal bin Fahd Sports City, Riyadh",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر",
+     "to": "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33097",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-10-23",
+   "time": "18:30",
+   "home": "الاتحاد",
+   "away": "الدرعية",
+   "venue": "ملعب الإنماء بمدينة الملك عبدالله الرياضية (جدة)",
+   "venueEn": "Alinma Stadium, King Abdullah Sports City, Jeddah",
+   "status": "played",
+   "score": [
+    2,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33111",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-10-30",
+   "time": "17:50",
+   "home": "الدرعية",
+   "away": "نيوم",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    1,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33119",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-26",
+   "time": "20:30",
+   "home": "الفيصلي",
+   "away": "الدرعية",
+   "venue": "استاد مدينة الملك عبدالله الرياضية (بريدة)",
+   "venueEn": "King Abdullah Sports City Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    2,
+    2
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 13، من الخميس 5 إلى السبت 7 نوفمبر",
+     "to": "الخميس 26 نوفمبر 20:30",
+     "at": "2026-11-09"
+    },
+    {
+     "field": "venue",
+     "from": "مدينة المجمعة الرياضية (المجمعة)",
+     "to": "استاد مدينة الملك عبدالله الرياضية (بريدة)",
+     "at": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "m33123",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-03",
+   "time": "20:30",
+   "home": "الهلال",
+   "away": "الدرعية",
+   "venue": "المملكة أرينا (الرياض)",
+   "venueEn": "Kingdom Arena, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33137",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-10",
+   "time": "20:30",
+   "home": "الدرعية",
+   "away": "الفيحاء",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33144",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-18",
+   "time": "16:00",
+   "home": "الخليج",
+   "away": "الدرعية",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33155",
+   "comp": "league",
+   "round": 17,
+   "date": "2027-01-02",
+   "time": "17:55",
+   "home": "الدرعية",
+   "away": "الشباب",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33157",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-08",
+   "time": "20:30",
+   "home": "الأهلي",
+   "away": "الدرعية",
+   "venue": "مدينة الأمير عبدالله الفيصل الرياضية (جدة)",
+   "venueEn": "Prince Abdullah Al-Faisal Sports City, Jeddah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33173",
+   "comp": "league",
+   "round": 19,
+   "date": "2027-01-16",
+   "time": "18:05",
+   "home": "الدرعية",
+   "away": "الحزم",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33180",
+   "comp": "league",
+   "round": 20,
+   "date": "2027-01-23",
+   "time": "15:40",
+   "home": "الخلود",
+   "away": "الدرعية",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33191",
+   "comp": "league",
+   "round": 21,
+   "date": "2027-01-30",
+   "time": "20:30",
+   "home": "الدرعية",
+   "away": "الاتفاق",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33200",
+   "comp": "league",
+   "round": 22,
+   "date": "2027-03-11",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "الدرعية",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33209",
+   "comp": "league",
+   "round": 23,
+   "date": "2027-03-18",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "الفتح",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33211",
+   "comp": "league",
+   "round": 24,
+   "date": "2027-04-02",
+   "time": "21:00",
+   "home": "أبها",
+   "away": "الدرعية",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33227",
+   "comp": "league",
+   "round": 25,
+   "date": "2027-04-08",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "النصر",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33237",
+   "comp": "league",
+   "round": 26,
+   "date": "2027-04-15",
+   "time": "21:00",
+   "home": "التعاون",
+   "away": "الدرعية",
+   "venue": "ملعب نادي التعاون (بريدة)",
+   "venueEn": "Al Taawoun Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33245",
+   "comp": "league",
+   "round": 27,
+   "date": "2027-04-18",
+   "time": "21:00",
+   "home": "الرياض",
+   "away": "الدرعية",
+   "venue": "مدينة الأمير فيصل بن فهد الرياضية (الرياض)",
+   "venueEn": "Prince Faisal bin Fahd Sports City, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33255",
+   "comp": "league",
+   "round": 28,
+   "date": "2027-04-22",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "الاتحاد",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33264",
+   "comp": "league",
+   "round": 29,
+   "date": "2027-04-29",
+   "time": "21:00",
+   "home": "نيوم",
+   "away": "الدرعية",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33272",
+   "comp": "league",
+   "round": 30,
+   "date": "2027-05-06",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "الفيصلي",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33282",
+   "comp": "league",
+   "round": 31,
+   "date": "2027-05-12",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "الهلال",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33285",
+   "comp": "league",
+   "round": 32,
+   "date": "2027-05-20",
+   "time": "21:00",
+   "home": "الفيحاء",
+   "away": "الدرعية",
+   "venue": "مدينة المجمعة الرياضية (المجمعة)",
+   "venueEn": "Al Majmaah Sports City Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33299",
+   "comp": "league",
+   "round": 33,
+   "date": "2027-05-24",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "الخليج",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33308",
+   "comp": "league",
+   "round": 34,
+   "date": "2027-05-29",
+   "time": "21:00",
+   "home": "الشباب",
+   "away": "الدرعية",
+   "venue": "اس اتش جي ارينا (الرياض)",
+   "venueEn": "SHG Arena, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

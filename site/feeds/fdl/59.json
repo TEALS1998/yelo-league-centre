@@ -1,0 +1,311 @@
+{
+ "club": "الرائد",
+ "en": "Al Raed",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "ملعب نادي الرائد (بريدة)",
+ "homeEn": "Al Raed Club Stadium, Buraydah",
+ "city": "بريدة",
+ "table": {
+  "team": "الرائد",
+  "pos": 10,
+  "pts": 14,
+  "p": 12,
+  "w": 4,
+  "d": 2,
+  "l": 6,
+  "gf": 12,
+  "ga": 15
+ },
+ "matches": [
+  {
+   "id": "m33486",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-22",
+   "time": "20:50",
+   "home": "العروبة",
+   "away": "الرائد",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33497",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-28",
+   "time": "19:05",
+   "home": "الرائد",
+   "away": "هجر",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    2,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "l3",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-09-02",
+   "time": null,
+   "home": "العلا",
+   "away": "الرائد",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "played",
+   "score": [
+    2,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33514",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-09",
+   "time": "18:50",
+   "home": "الرائد",
+   "away": "الجيل",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33523",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-14",
+   "time": "20:20",
+   "home": "النجمة",
+   "away": "الرائد",
+   "venue": "ملعب إدارة التعليم (عنيزة)",
+   "venueEn": "Education Department Stadium, Unaizah",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33530",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-19",
+   "time": "20:00",
+   "home": "الزلفي",
+   "away": "الرائد",
+   "venue": "ملعب نادي الزلفي (الزلفي)",
+   "venueEn": "Al Zulfi Club Stadium",
+   "status": "played",
+   "score": [
+    4,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33535",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-10-14",
+   "time": "20:00",
+   "home": "الرائد",
+   "away": "جدة",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33546",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-19",
+   "time": "19:50",
+   "home": "الرائد",
+   "away": "الصقر",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33561",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-28",
+   "time": "18:05",
+   "home": "الجبلين",
+   "away": "الرائد",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33570",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-03",
+   "time": "18:00",
+   "home": "الرائد",
+   "away": "الوحدة",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_4",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-08",
+   "time": "18:05",
+   "home": "الطائي",
+   "away": "الرائد",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "played",
+   "score": [
+    0,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33580",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-24",
+   "time": "15:15",
+   "home": "الرائد",
+   "away": "الأخدود",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33597",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-12-01",
+   "time": "17:30",
+   "home": "العدالة",
+   "away": "الرائد",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33604",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-08",
+   "time": "15:15",
+   "home": "الرائد",
+   "away": "البكيرية",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33613",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-15",
+   "time": "15:30",
+   "home": "ضمك",
+   "away": "الرائد",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33616",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-22",
+   "time": "15:15",
+   "home": "الرائد",
+   "away": "الجندل",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33627",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-28",
+   "time": "17:50",
+   "home": "الأنوار",
+   "away": "الرائد",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33634",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-04",
+   "time": "15:25",
+   "home": "الرائد",
+   "away": "العروبة",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

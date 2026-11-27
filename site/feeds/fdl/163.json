@@ -1,0 +1,374 @@
+{
+ "club": "الأخدود",
+ "en": "Al Okhdood",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "استاد مدينة الملك فهد الرياضية (الطائف)",
+ "homeEn": "King Fahd Sports City Stadium, Taif",
+ "city": "الطائف",
+ "table": {
+  "team": "الأخدود",
+  "pos": 15,
+  "pts": 8,
+  "p": 11,
+  "w": 1,
+  "d": 5,
+  "l": 5,
+  "gf": 14,
+  "ga": 22
+ },
+ "matches": [
+  {
+   "id": "m33485",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-22",
+   "time": "19:20",
+   "home": "الطائي",
+   "away": "الأخدود",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33492",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-26",
+   "time": "19:10",
+   "home": "البكيرية",
+   "away": "الأخدود",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": [
+    {
+     "field": "venue",
+     "from": "مدينة الأمير هذلول بن عبدالعزيز الرياضية (نجران)، الأخدود مستضيفًا",
+     "to": "ملعب نادي البكيرية (البكيرية)"
+    },
+    {
+     "field": "time",
+     "from": "20:50",
+     "to": "19:10"
+    }
+   ]
+  },
+  {
+   "id": "m33500",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-08-31",
+   "time": "19:05",
+   "home": "الصقر",
+   "away": "الأخدود",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33510",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-07",
+   "time": "20:20",
+   "home": "الأخدود",
+   "away": "النجمة",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    2,
+    2
+   ],
+   "changes": [
+    {
+     "field": "venue",
+     "from": "مدينة الأمير هذلول بن عبدالعزيز الرياضية (نجران)",
+     "to": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)"
+    }
+   ]
+  },
+  {
+   "id": "m33522",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-14",
+   "time": "19:05",
+   "home": "الوحدة",
+   "away": "الأخدود",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    4,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "l6",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-10-08",
+   "time": null,
+   "home": "الأخدود",
+   "away": "العلا",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "played",
+   "score": [
+    1,
+    5
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "جولة اليوم الوطني، من الجمعة 18 إلى الأحد 20 سبتمبر",
+     "to": "الخميس 8 أكتوبر"
+    },
+    {
+     "field": "venue",
+     "from": "مدينة الأمير سلطان بن عبدالعزيز الرياضية، أبها",
+     "to": "استاد مدينة الملك فهد الرياضية، الطائف"
+    },
+    {
+     "field": "status",
+     "from": "مؤجلة",
+     "to": "لُعبت، فاز العلا 5 مقابل 1"
+    }
+   ]
+  },
+  {
+   "id": "m33541",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-10-14",
+   "time": "18:30",
+   "home": "الجندل",
+   "away": "الأخدود",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33549",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-20",
+   "time": "19:50",
+   "home": "الأخدود",
+   "away": "العدالة",
+   "venue": "ملعب نادي جدة (جدة)",
+   "venueEn": "Jeddah Club Stadium, Jeddah",
+   "status": "played",
+   "score": [
+    1,
+    3
+   ],
+   "changes": [
+    {
+     "field": "venue",
+     "from": "استاد مدينة الملك فهد الرياضية (الطائف)",
+     "to": "ملعب نادي جدة (جدة)",
+     "at": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "m33569",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-03",
+   "time": "15:35",
+   "home": "ضمك",
+   "away": "الأخدود",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    4,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_5",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-08",
+   "time": "18:20",
+   "home": "الأخدود",
+   "away": "الجبلين",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33580",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-24",
+   "time": "15:15",
+   "home": "الرائد",
+   "away": "الأخدود",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33592",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-30",
+   "time": "15:35",
+   "home": "الأخدود",
+   "away": "هجر",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33602",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-06",
+   "time": "18:20",
+   "home": "جدة",
+   "away": "الأخدود",
+   "venue": "ملعب نادي جدة (جدة)",
+   "venueEn": "Jeddah Club Stadium, Jeddah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33553",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-12-11",
+   "time": "15:10",
+   "home": "الأنوار",
+   "away": "الأخدود",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "status",
+     "from": "الاثنين 26 أكتوبر، ملعب نادي الأنوار",
+     "to": "مؤجلة · لم يُعلن موعد جديد",
+     "at": "2026-10-26"
+    },
+    {
+     "field": "date",
+     "from": "لم يُعلن موعد جديد",
+     "to": "الجمعة 11 ديسمبر 15:10"
+    }
+   ]
+  },
+  {
+   "id": "m33608",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-16",
+   "time": "15:40",
+   "home": "الأخدود",
+   "away": "الجيل",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33620",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-22",
+   "time": "15:15",
+   "home": "الزلفي",
+   "away": "الأخدود",
+   "venue": "ملعب نادي الزلفي (الزلفي)",
+   "venueEn": "Al Zulfi Club Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33629",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-29",
+   "time": "15:45",
+   "home": "الأخدود",
+   "away": "العروبة",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33636",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-04",
+   "time": "15:50",
+   "home": "الأخدود",
+   "away": "الطائي",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "c37569",
+   "comp": "cup",
+   "round": null,
+   "date": "2027-01-11",
+   "time": "16:50",
+   "home": "العروبة",
+   "away": "الأخدود",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

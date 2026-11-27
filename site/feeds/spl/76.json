@@ -1,0 +1,580 @@
+{
+ "club": "القادسية",
+ "en": "Al Qadsiah",
+ "league": "spl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "استاد الأمير محمد بن فهد (الدمام)",
+ "homeEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+ "city": "الخبر",
+ "table": {
+  "team": "القادسية",
+  "pos": 1,
+  "pts": 31,
+  "p": 13,
+  "w": 10,
+  "d": 1,
+  "l": 2,
+  "gf": 34,
+  "ga": 12
+ },
+ "matches": [
+  {
+   "id": "m32988",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-13",
+   "time": "21:00",
+   "home": "الشباب",
+   "away": "القادسية",
+   "venue": "اس اتش جي ارينا (الرياض)",
+   "venueEn": "SHG Arena, Riyadh",
+   "status": "played",
+   "score": [
+    1,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33017",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-21",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "الاتحاد",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33022",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-08-24",
+   "time": "19:40",
+   "home": "نيوم",
+   "away": "القادسية",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33039",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-08-30",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "الفيصلي",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "played",
+   "score": [
+    3,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33042",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-03",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "القادسية",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33053",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-08",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "الأهلي",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "played",
+   "score": [
+    3,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33061",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-09-11",
+   "time": "18:25",
+   "home": "القادسية",
+   "away": "الاتفاق",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "played",
+   "score": [
+    3,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33073",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-09",
+   "time": "16:50",
+   "home": "الخلود",
+   "away": "القادسية",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "played",
+   "score": [
+    0,
+    5
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر",
+     "to": "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33081",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-16",
+   "time": "16:15",
+   "home": "القادسية",
+   "away": "أبها",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "to": "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33092",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-10-20",
+   "time": "18:10",
+   "home": "التعاون",
+   "away": "القادسية",
+   "venue": "ملعب نادي التعاون (بريدة)",
+   "venueEn": "Al Taawoun Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر",
+     "to": "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33100",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-10-23",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "الهلال",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "played",
+   "score": [
+    2,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33108",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-10-29",
+   "time": "21:00",
+   "home": "الرياض",
+   "away": "القادسية",
+   "venue": "اس اتش جي ارينا (الرياض)",
+   "venueEn": "SHG Arena, Riyadh",
+   "status": "played",
+   "score": [
+    0,
+    6
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33120",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-27",
+   "time": "17:20",
+   "home": "القادسية",
+   "away": "الفيحاء",
+   "venue": "ملعب نادي الاتفاق (الدمام)",
+   "venueEn": "Al Ettifaq Club Stadium (EGO Stadium), Dammam",
+   "status": "played",
+   "score": [
+    2,
+    0
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الخميس 5 نوفمبر",
+     "to": "الجمعة 27 نوفمبر 17:20",
+     "at": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "m33125",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-04",
+   "time": "20:30",
+   "home": "النصر",
+   "away": "القادسية",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33136",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-11",
+   "time": "14:40",
+   "home": "القادسية",
+   "away": "الفتح",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33142",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-15",
+   "time": "17:50",
+   "home": "الحزم",
+   "away": "القادسية",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33154",
+   "comp": "league",
+   "round": 17,
+   "date": "2027-01-02",
+   "time": "20:30",
+   "home": "القادسية",
+   "away": "الخليج",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33164",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-09",
+   "time": "20:30",
+   "home": "القادسية",
+   "away": "الشباب",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "c37576",
+   "comp": "cup",
+   "round": null,
+   "date": "2027-01-12",
+   "time": "20:00",
+   "home": "القادسية",
+   "away": "نيوم",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33169",
+   "comp": "league",
+   "round": 19,
+   "date": "2027-01-15",
+   "time": "20:30",
+   "home": "الاتحاد",
+   "away": "القادسية",
+   "venue": "ملعب الإنماء بمدينة الملك عبدالله الرياضية (جدة)",
+   "venueEn": "Alinma Stadium, King Abdullah Sports City, Jeddah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33182",
+   "comp": "league",
+   "round": 20,
+   "date": "2027-01-23",
+   "time": "20:30",
+   "home": "القادسية",
+   "away": "نيوم",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33188",
+   "comp": "league",
+   "round": 21,
+   "date": "2027-01-28",
+   "time": "15:40",
+   "home": "الفيصلي",
+   "away": "القادسية",
+   "venue": "مدينة المجمعة الرياضية (المجمعة)",
+   "venueEn": "Al Majmaah Sports City Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33200",
+   "comp": "league",
+   "round": 22,
+   "date": "2027-03-11",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "الدرعية",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33202",
+   "comp": "league",
+   "round": 23,
+   "date": "2027-03-18",
+   "time": "21:00",
+   "home": "الأهلي",
+   "away": "القادسية",
+   "venue": "ملعب الإنماء بمدينة الملك عبدالله الرياضية (جدة)",
+   "venueEn": "Alinma Stadium, King Abdullah Sports City, Jeddah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33212",
+   "comp": "league",
+   "round": 24,
+   "date": "2027-04-02",
+   "time": "21:00",
+   "home": "الاتفاق",
+   "away": "القادسية",
+   "venue": "ملعب نادي الاتفاق (الدمام)",
+   "venueEn": "Al Ettifaq Club Stadium (EGO Stadium), Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33224",
+   "comp": "league",
+   "round": 25,
+   "date": "2027-04-08",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "الخلود",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33229",
+   "comp": "league",
+   "round": 26,
+   "date": "2027-04-15",
+   "time": "21:00",
+   "home": "أبها",
+   "away": "القادسية",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33244",
+   "comp": "league",
+   "round": 27,
+   "date": "2027-04-18",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "التعاون",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33250",
+   "comp": "league",
+   "round": 28,
+   "date": "2027-04-22",
+   "time": "21:00",
+   "home": "الهلال",
+   "away": "القادسية",
+   "venue": "المملكة أرينا (الرياض)",
+   "venueEn": "Kingdom Arena, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33263",
+   "comp": "league",
+   "round": 29,
+   "date": "2027-04-29",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "الرياض",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33265",
+   "comp": "league",
+   "round": 30,
+   "date": "2027-05-06",
+   "time": "21:00",
+   "home": "الفيحاء",
+   "away": "القادسية",
+   "venue": "مدينة المجمعة الرياضية (المجمعة)",
+   "venueEn": "Al Majmaah Sports City Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33281",
+   "comp": "league",
+   "round": 31,
+   "date": "2027-05-12",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "النصر",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33284",
+   "comp": "league",
+   "round": 32,
+   "date": "2027-05-20",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "القادسية",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33298",
+   "comp": "league",
+   "round": 33,
+   "date": "2027-05-24",
+   "time": "21:00",
+   "home": "القادسية",
+   "away": "الحزم",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33306",
+   "comp": "league",
+   "round": 34,
+   "date": "2027-05-29",
+   "time": "21:00",
+   "home": "الخليج",
+   "away": "القادسية",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

@@ -1,0 +1,375 @@
+{
+ "club": "العروبة",
+ "en": "Al Orobah",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "ملعب نادي العروبة (الجوف)",
+ "homeEn": "Al Orubah Club Stadium, Sakaka",
+ "city": "الجوف",
+ "table": {
+  "team": "العروبة",
+  "pos": 12,
+  "pts": 10,
+  "p": 11,
+  "w": 1,
+  "d": 7,
+  "l": 3,
+  "gf": 9,
+  "ga": 12
+ },
+ "matches": [
+  {
+   "id": "m33486",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-22",
+   "time": "20:50",
+   "home": "العروبة",
+   "away": "الرائد",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33498",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-28",
+   "time": "20:50",
+   "home": "ضمك",
+   "away": "العروبة",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33503",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-09-01",
+   "time": "19:20",
+   "home": "العروبة",
+   "away": "الزلفي",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33516",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-09",
+   "time": "20:30",
+   "home": "جدة",
+   "away": "العروبة",
+   "venue": "ملعب نادي جدة (جدة)",
+   "venueEn": "Jeddah Club Stadium, Jeddah",
+   "status": "played",
+   "score": [
+    2,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33525",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-15",
+   "time": "19:05",
+   "home": "العروبة",
+   "away": "الجيل",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33532",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-20",
+   "time": "18:55",
+   "home": "الجبلين",
+   "away": "العروبة",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33548",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-20",
+   "time": "18:20",
+   "home": "العروبة",
+   "away": "البكيرية",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "l9",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-26",
+   "time": "19:45",
+   "home": "العلا",
+   "away": "العروبة",
+   "venue": "ملعب نادي أحد (المدينة المنورة)",
+   "venueEn": "Ohod Club Stadium, Madinah",
+   "status": "played",
+   "score": [
+    3,
+    1
+   ],
+   "changes": [
+    {
+     "field": "venue",
+     "from": "استاد الأمير محمد بن عبدالعزيز، المدينة المنورة",
+     "to": "ملعب نادي أحد، المدينة المنورة"
+    }
+   ]
+  },
+  {
+   "id": "m33562",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-02",
+   "time": "15:30",
+   "home": "العروبة",
+   "away": "الأنوار",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_7",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-18",
+   "time": "17:30",
+   "home": "العدالة",
+   "away": "العروبة",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    3,
+    3
+   ],
+   "changes": [
+    {
+     "field": "venue",
+     "from": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+     "to": "ملعب نادي هجر (الأحساء)",
+     "at": "2026-11-18"
+    },
+    {
+     "field": "status",
+     "from": "الجمعة 6 نوفمبر 17:35، ملعب نادي هجر",
+     "to": "مؤجلة",
+     "at": "2026-11-06"
+    },
+    {
+     "field": "date",
+     "from": "الجمعة 6 نوفمبر 17:35",
+     "to": "الأربعاء 18 نوفمبر 17:30",
+     "at": "2026-11-08"
+    }
+   ]
+  },
+  {
+   "id": "m33584",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-24",
+   "time": "15:20",
+   "home": "العروبة",
+   "away": "النجمة",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33590",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-29",
+   "time": "17:50",
+   "home": "الصقر",
+   "away": "العروبة",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33599",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-06",
+   "time": "15:20",
+   "home": "العروبة",
+   "away": "الطائي",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33537",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-12-11",
+   "time": "17:35",
+   "home": "هجر",
+   "away": "العروبة",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "status",
+     "from": "الأربعاء 14 أكتوبر 17:55، ملعب نادي هجر",
+     "to": "مؤجلة · لم يُعلن موعد جديد",
+     "at": "2026-10-13"
+    },
+    {
+     "field": "date",
+     "from": "لم يُعلن موعد جديد",
+     "to": "الجمعة 11 ديسمبر 17:35"
+    },
+    {
+     "field": "venue",
+     "from": "ملعب نادي هجر (الأحساء)",
+     "to": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)"
+    }
+   ]
+  },
+  {
+   "id": "m33609",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-16",
+   "time": "15:25",
+   "home": "الجندل",
+   "away": "العروبة",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجمعة 11 ديسمبر 15:25",
+     "to": "الأربعاء 16 ديسمبر 15:25"
+    },
+    {
+     "field": "venue",
+     "from": "ملعب نادي العروبة (الجوف)",
+     "to": "استاد جامعة الجوف (الجوف)"
+    }
+   ]
+  },
+  {
+   "id": "m33617",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-21",
+   "time": "15:25",
+   "home": "العروبة",
+   "away": "الوحدة",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33629",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-29",
+   "time": "15:45",
+   "home": "الأخدود",
+   "away": "العروبة",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33634",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-04",
+   "time": "15:25",
+   "home": "الرائد",
+   "away": "العروبة",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "c37569",
+   "comp": "cup",
+   "round": null,
+   "date": "2027-01-11",
+   "time": "16:50",
+   "home": "العروبة",
+   "away": "الأخدود",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

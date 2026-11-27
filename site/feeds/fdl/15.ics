@@ -1,0 +1,248 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:الأنوار · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m33482-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260821T161500Z
+DTEND:20260821T181500Z
+SUMMARY:البكيرية 0–0 الأنوار
+LOCATION:ملعب نادي البكيرية (البكيرية)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد البكيري
+ ة · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l2-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20260829
+SUMMARY:الأنوار 0–1 العلا
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد العلا · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33505-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260902T154000Z
+DTEND:20260902T174000Z
+SUMMARY:هجر 1–1 الأنوار
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد هجر · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33513-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260908T173000Z
+DTEND:20260908T193000Z
+SUMMARY:الأنوار 2–0 الطائي
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد الطائي ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33518-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260913T155000Z
+DTEND:20260913T175000Z
+SUMMARY:الصقر 0–1 الأنوار
+LOCATION:ملعب نادي الرائد (بريدة)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد الصقر · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33528-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260919T153500Z
+DTEND:20260919T173500Z
+SUMMARY:الأنوار 1–1 النجمة
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد النجمة ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33542-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261012T145500Z
+DTEND:20261012T165500Z
+SUMMARY:العدالة 1–1 الأنوار
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد العدالة 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33551-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261021T150000Z
+DTEND:20261021T170000Z
+SUMMARY:الأنوار 1–1 الوحدة
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد الوحدة ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33562-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261102T123000Z
+DTEND:20261102T143000Z
+SUMMARY:العروبة 0–1 الأنوار
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد العروبة
+  · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:s11_3-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261108T123000Z
+DTEND:20261108T143000Z
+SUMMARY:ضمك 1–1 الأنوار
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد ضمك · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33587-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261125T121000Z
+DTEND:20261125T141000Z
+SUMMARY:الأنوار 2–1 الجندل
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد الجندل 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33591-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261130T120500Z
+DTEND:20261130T140500Z
+SUMMARY:الأنوار × الزلفي
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد الزلفي 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33601-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261206T120000Z
+DTEND:20261206T140000Z
+SUMMARY:الجيل × الأنوار
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد الجيل · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33553-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20261211T121000Z
+DTEND:20261211T141000Z
+SUMMARY:الأنوار × الأخدود
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد الأخدود 
+ · على أرضنا\nتعديل 2026-10-26: الاثنين 26 أكتو
+ بر، ملعب نادي الأنوار ← مؤجلة · لم يُعل
+ ن موعد جديد\nتعديل undefined: لم يُعلن موعد ج
+ ديد ← الجمعة 11 ديسمبر 15:10
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33607-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261216T121000Z
+DTEND:20261216T141000Z
+SUMMARY:الأنوار × الجبلين
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد الجبلين
+  · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33622-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261222T152500Z
+DTEND:20261222T172500Z
+SUMMARY:جدة × الأنوار
+LOCATION:ملعب نادي جدة (جدة)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد جدة · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33627-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261228T145000Z
+DTEND:20261228T165000Z
+SUMMARY:الأنوار × الرائد
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد الرائد 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l19-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20270104T125000Z
+DTEND:20270104T145000Z
+SUMMARY:مؤجلة: العلا × الأنوار
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 19\nضد العلا · 
+ خارج أرضنا\nالموعد الجديد لم يُحدد بعد\n
+ تعديل 2026-11-22: الاثنين 4 يناير ← لم يُحدد\n
+ تعديل 2026-11-22: الاثنين 4 يناير 15:50 ← مؤجلة 
+ · لم يُحدد الموعد الجديد
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:m33637-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270105T122000Z
+DTEND:20270105T142000Z
+SUMMARY:الأنوار × البكيرية
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد البكيري
+ ة · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,249 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:العدالة · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m33483-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260821T175000Z
+DTEND:20260821T195000Z
+SUMMARY:الوحدة 1–1 العدالة
+LOCATION:استاد مدينة الملك عبدالعزيز الرياض
+ ية (مكة المكرمة)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد الوحدة ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33490-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260826T154500Z
+DTEND:20260826T174500Z
+SUMMARY:العدالة 3–4 الطائي
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد الطائي ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33499-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260831T160500Z
+DTEND:20260831T180500Z
+SUMMARY:البكيرية 0–1 العدالة
+LOCATION:ملعب نادي البكيرية (البكيرية)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد البكيري
+ ة · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33508-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260907T153000Z
+DTEND:20260907T173000Z
+SUMMARY:العدالة 1–1 الصقر
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد الصقر · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33524-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260915T153000Z
+DTEND:20260915T173000Z
+SUMMARY:العدالة 1–0 الجندل
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد الجندل ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33531-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260920T154500Z
+DTEND:20260920T174500Z
+SUMMARY:ضمك 3–2 العدالة
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد ضمك · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33542-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261012T145500Z
+DTEND:20261012T165500Z
+SUMMARY:العدالة 1–1 الأنوار
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد الأنوار 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33549-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261020T165000Z
+DTEND:20261020T185000Z
+SUMMARY:الأخدود 1–3 العدالة
+LOCATION:ملعب نادي جدة (جدة)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد الأخدود 
+ · خارج أرضنا\nتعديل 2026-10-09: استاد مدينة ا
+ لملك فهد الرياضية (الطائف) ← ملعب نادي ج
+ دة (جدة)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33558-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261027T163000Z
+DTEND:20261027T183000Z
+SUMMARY:العدالة 0–1 الجيل
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد الجيل · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33565-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261101T164500Z
+DTEND:20261101T184500Z
+SUMMARY:جدة 2–2 العدالة
+LOCATION:ملعب نادي جدة (جدة)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد جدة · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:s11_7-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:3
+DTSTART:20261118T143000Z
+DTEND:20261118T163000Z
+SUMMARY:العدالة 3–3 العروبة
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد العروبة
+  · على أرضنا\nتعديل 2026-11-18: ملعب مدينة الأ
+ مير عبدالله بن جلوي الرياضية (الأحساء) 
+ ← ملعب نادي هجر (الأحساء)\nتعديل 2026-11-06: ا
+ لجمعة 6 نوفمبر 17:35، ملعب نادي هجر ← مؤجل
+ ة\nتعديل 2026-11-08: الجمعة 6 نوفمبر 17:35 ← الأ
+ ربعاء 18 نوفمبر 17:30
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l12-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261125T151000Z
+DTEND:20261125T171000Z
+SUMMARY:العلا 3–0 العدالة
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد العلا · 
+ خارج أرضنا\nتعديل undefined: ملعب نادي أحد، ا
+ لمدينة المنورة ← استاد الأمير محمد بن ع
+ بدالعزيز، المدينة المنورة
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33597-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261201T143000Z
+DTEND:20261201T163000Z
+SUMMARY:العدالة × الرائد
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد الرائد 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33606-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261208T145000Z
+DTEND:20261208T165000Z
+SUMMARY:النجمة × العدالة
+LOCATION:ملعب إدارة التعليم (عنيزة)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد النجمة 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33614-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261216T143000Z
+DTEND:20261216T163000Z
+SUMMARY:العدالة × هجر
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد هجر · عل
+ ى أرضنا\nتعديل undefined: السبت 12 ديسمبر 17:30 
+ ← الأربعاء 16 ديسمبر 17:30
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33623-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261223T122500Z
+DTEND:20261223T142500Z
+SUMMARY:الجبلين × العدالة
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد الجبلين
+  · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33633-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261230T144000Z
+DTEND:20261230T164000Z
+SUMMARY:العدالة × الزلفي
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد الزلفي 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33639-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270105T144500Z
+DTEND:20270105T164500Z
+SUMMARY:العدالة × الوحدة
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد الوحدة 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
