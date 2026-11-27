@@ -1949,7 +1949,7 @@ document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');i
       <div id="changes"></div>
     </article>
     <article class="card s12 kit" id="subsCard" hidden>
-      <div class="ch"><div><h3>Matchday kit</h3><small>Everything the club needs on its phones, its systems and its fans' screens. It all updates on its own</small></div><div class="r"><span class="ar">عدّة يوم المباراة</span><small class="ar">كل ما يحتاجه النادي على جوالاته وأنظمته وشاشات جمهوره، ويتحدّث وحده</small></div></div>
+      <div class="ch"><div><h3>Matchday kit</h3><small>Everything the club needs on its phones and its fans' screens. It all updates on its own</small></div><div class="r"><span class="ar">عدّة يوم المباراة</span><small class="ar">كل ما يحتاجه النادي على جوالات موظفيه وشاشات جمهوره، ويتحدّث وحده</small></div></div>
       <div class="kitg" id="subs"></div>
     </article>
     <div class="sec" id="calendar"><span class="num">02</span><div><b>Fixture calendar</b><span class="ar">روزنامة المباريات</span></div><small>Every fixture of the season, played and upcoming<span class="ar">كل مباريات الموسم، الملعوبة والقادمة</span></small></div>
@@ -6086,7 +6086,6 @@ const n1=ch?{h:"تعديل في الجدول",b:`<strong>${E(ch.m.home)} × ${E(
 const n2=nx?{h:"المباراة القادمة",b:`<strong>${E(nx.home)} × ${E(nx.away)}</strong>${E(dd(nx).wd)} ${dd(nx).d} ${E(dd(nx).mo)}${nx.time?" · "+E(nx.time):""}`}:null;
 const now=new Date(Date.now()+3*36e5),clk=String(now.getUTCHours()).padStart(2,"0")+":"+String(now.getUTCMinutes()).padStart(2,"0");
 const nm=nx?dd(nx):null;
-const json=nx?`{\n  <span class="k-k">"club"</span>: <span class="k-s">"<bdi>${E(T)}</bdi>"</span>,\n  <span class="k-k">"next"</span>: {\n    <span class="k-k">"home"</span>: <span class="k-s">"<bdi>${E(nx.home)}</bdi>"</span>, <span class="k-k">"away"</span>: <span class="k-s">"<bdi>${E(nx.away)}</bdi>"</span>,\n    <span class="k-k">"date"</span>: <span class="k-s">"<bdi>${E(nx.date)}</bdi>"</span>, <span class="k-k">"time"</span>: <span class="k-s">"<bdi>${E(nx.time||"")}</bdi>"</span>,\n    <span class="k-k">"venue"</span>: <span class="k-s">"<bdi>${E(nx.venue||"")}</bdi>"</span>,\n    <span class="k-k">"round"</span>: <span class="k-n">${nx.round??"null"}</span>, <span class="k-k">"status"</span>: <span class="k-s">"<bdi>${E(nx.status)}</bdi>"</span>\n  }\n}`:`{ <span class="k-k">"club"</span>: <span class="k-s">"<bdi>${E(T)}</bdi>"</span>, <span class="k-k">"matches"</span>: [ … ] }`;
 const box=document.getElementById("subs");
 box.innerHTML=`<div style="display:contents;--k1:#27333e;--k2:#4a9a90">
 <section class="k-kc"><div class="k-khd"><div><span class="k-ktag">For staff</span><h4 style="margin-top:8px">Match calendar</h4></div><span class="k-ka">تقويم المباريات</span></div>
@@ -6124,10 +6123,7 @@ box.innerHTML=`<div style="display:contents;--k1:#27333e;--k2:#4a9a90">
   <div class="k-kbtns"><a class="k-kb" href="${E(fan)}" target="_blank" rel="noopener">Open <span class="ar">فتح الموقع</span></a><button class="k-kb k-o" type="button" data-cp="${E(fan)}">Copy link <span class="ar">نسخ الرابط</span></button>${navigator.share?`<button class="k-kb k-o" type="button" id="kShare">Share <span class="ar">مشاركة</span></button>`:""}</div></div>
  <div class="k-qr k-big"><div class="k-qi">${q(fan)}</div><b>Scan · امسح</b><small>للبوسترات والتذاكر</small></div></div>
 </section>
-<section class="k-kc k-w k-dev"><div style="display:grid;gap:12px"><div class="k-khd" style="border-color:#2b3644"><div><span class="k-ktag">For developers</span><h4 style="margin-top:8px">Club data feed</h4></div><span class="k-ka">بيانات النادي</span></div>
- <p class="ar">لمبرمج النادي فقط: ملف JSON بمباريات ${E(T)} وترتيبه وتعديلاته، يقرأه تطبيق النادي أو موقعه أو أي نظام عنده، ويتحدّث وحده.</p>
- <div class="k-kbtns"><a class="k-kb" href="${E(u)}.json" target="_blank" rel="noopener">Open JSON <span class="ar">فتح</span></a><button class="k-kb k-o" type="button" data-cp="${E(u)}.json">Copy link <span class="ar">نسخ الرابط</span></button></div></div>
- <pre>${json}</pre></section></div>`;
+</div>`;
 box.querySelectorAll("[data-cp]").forEach(b=>b.addEventListener("click",()=>{const t=b.dataset.cp;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{const o=b.innerHTML;b.textContent="Copied · تم النسخ";setTimeout(()=>b.innerHTML=o,1600);}).catch(()=>prompt("Copy · انسخ",t));}));
 const sh=document.getElementById("kShare");if(sh)sh.addEventListener("click",()=>navigator.share({title:T,url:fan}).catch(()=>{}));
 const card=document.getElementById("subsCard");card.hidden=false;
