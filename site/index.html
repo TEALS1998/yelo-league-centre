@@ -6071,6 +6071,7 @@ const lg=window.LG==="spl"?"spl":"fdl",id=L.clubs[T].saffId,u=new URL("feeds/"+l
 const ics=u+".ics",web="webcal://"+ics.replace(/^https?:\/\//,""),topic="matchcentre-sa-"+lg+"-"+id;
 const fan=new URL("fan.html?"+(lg==="spl"?"league=spl&":"")+"club="+encodeURIComponent(T),location.href).href;
 const PLAY="https://play.google.com/store/apps/details?id=io.heckel.ntfy",IOS="https://apps.apple.com/app/ntfy/id1625396347";
+const gcal="https://calendar.google.com/calendar/render?cid="+encodeURIComponent(web);
 const sub="ntfy://ntfy.sh/"+topic+"?display="+encodeURIComponent(T);
 const E=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const q=(t,o)=>QR.svg(t,{fg:"#1b2530",margin:1,...o});
@@ -6092,10 +6093,11 @@ box.innerHTML=`<div style="display:contents;--k1:#27333e;--k2:#4a9a90">
  <div class="k-kbody">${nx?`<div class="k-tear"><div class="k-sh b"></div><div class="k-sh"></div><div class="k-pg"><div class="k-mo">${E(nm.mo)}</div><div class="k-dy">${nm.d}</div><div class="k-wd">${E(nm.wd)}</div>
   <div class="k-vs"><img src="${E(logo(nx.home))}" alt="${E(nx.home)}"><b>×</b><img src="${E(logo(nx.away))}" alt="${E(nx.away)}"></div><span class="k-tm">${E(nx.time||"TBC")}</span></div></div>`:""}
  <div style="display:grid;gap:14px"><p class="ar">كل مباريات ${E(T)} في تقويم جوالك. تشترك مرة وحدة، وأي تعديل في الموعد أو الملعب يتغيّر في تقويمك وحده.</p>
-  <div class="k-qrs"><div class="k-qr"><div class="k-qi">${q(web)}</div><b>iPhone</b><small>امسح بالكاميرا واضغط اشتراك</small></div>
+  <div class="k-qrs"><div class="k-qr"><div class="k-qi">${q(web)}</div><b>iPhone</b><small>امسح بالكاميرا واضغط اشتراك</small></div><a class="k-qr" href="${E(gcal)}" target="_blank" rel="noopener" style="text-decoration:none"><div class="k-qi">${q(gcal)}</div><b>Android</b><small>يفتح تقويم Google، اضغط إضافة</small></a>
   <div style="display:grid;gap:8px;align-content:start"><a class="k-kb" href="${E(web)}">Subscribe here <span class="ar">اشترك من هذا الجهاز</span></a>
+  <a class="k-kb k-o" href="${E(gcal)}" target="_blank" rel="noopener">Google Calendar <span class="ar">تقويم Google</span></a>
   <button class="k-kb k-o" type="button" data-cp="${E(ics)}">Copy link <span class="ar">نسخ الرابط</span></button>
-  <small class="ar" style="font-size:11.5px;color:var(--muted);line-height:1.7;max-width:240px">في Google أو Outlook: أضف تقويمًا من رابط، والصق الرابط المنسوخ.</small></div></div></div></div>
+  <small class="ar" style="font-size:11.5px;color:var(--muted);line-height:1.7;max-width:260px">Outlook: أضف تقويمًا من الويب والصق الرابط. تقويم آيفون يتحدّث كل ساعة تقريبًا، أما Google وOutlook فقد يتأخران حتى يوم، فالتنبيهات هي الأسرع.</small></div></div></div></div>
 </section>
 <section class="k-kc"><div class="k-khd"><div><span class="k-ktag">For staff</span><h4 style="margin-top:8px">Phone alerts</h4></div><span class="k-ka">تنبيهات الجوال</span></div>
  <div class="k-kbody"><div class="k-ph"><div class="k-clk">${clk}</div><div class="k-dt">${E(DA[now.getUTCDay()])} ${now.getUTCDate()} ${E(MA[now.getUTCMonth()])}</div>
