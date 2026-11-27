@@ -5267,6 +5267,11 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 #rpOv .pdbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--dinc);font-size:10px;min-width:8mm}
 #rpOv .pdk{display:flex;justify-content:space-between;font-size:7.5px;color:#69717b;margin-top:.8mm}
 #rpOv .pdtl{font-size:2.3mm;color:#6a727c;margin-top:2.5mm;letter-spacing:.04em}
+#rpOv .pdk+.pdsb{margin-top:2.5mm}#rpOv .pdv{text-align:center;margin:1mm 0 2mm}#rpOv .pdv b{display:block;font-family:var(--dinc);font-size:15px;letter-spacing:.04em;color:#27333e}#rpOv .pdv .ar{font-size:12px;font-weight:700;color:#27333e}
+#rpOv .pdt small{font-family:var(--din);font-size:7.5px;letter-spacing:0;color:rgba(255,255,255,.72);margin-top:.6mm;text-align:center}#rpOv .pdt small b{font-size:10px;color:#fff}
+#rpOv .pds{display:flex;justify-content:center;align-items:baseline;gap:1mm;flex-wrap:wrap}#rpOv .pds i{font-style:normal;font-size:7px;color:#4b5969}#rpOv .pds b{display:inline;font-size:12px}#rpOv .pds em{font-style:normal;color:#69717b}
+#rpOv .pdwhy{font-size:7.5px;line-height:1.5;color:#4b5969;background:#f4f5f7;border-radius:5px;padding:1.4mm 2mm;margin-top:1.6mm}#rpOv .pdwhy .ar{display:block}
+#rpOv .pdleg{display:flex;flex-wrap:wrap;gap:1mm 3mm;font-size:7px;color:#4b5969;margin:1.2mm 0}#rpOv .pdleg i{display:inline-block;width:2.4mm;height:2.4mm;border-radius:1px;margin-right:1mm;vertical-align:-.3mm}
 #rpOv .pdtop{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5mm;margin-top:2mm}
 #rpOv .pdtop div{background:#eceef0;border-radius:5px;text-align:center;padding:1mm}
 #rpOv .pdtop b{display:block;font-family:var(--dinc);font-size:11px;color:#27333e}#rpOv .pdtop span{font-size:7.5px;color:#4b5969}
@@ -5527,7 +5532,7 @@ function rMatch(){
   const p2=`<section class="rps fix">${head(`${round[0]} · ${round[1]}`,"The contest","المواجهة",`<span>${tn(next.home)} v ${tn(next.away)} · ${next.home} ضد ${next.away}</span>`)}<div class="rpB">
     ${T("01","The two sides in numbers","الفريقان بالأرقام")}${chalk}<div class="rpnote" style="text-align:center;margin-top:-4mm">Gold arrows ${US_EN}, white arrows ${tn(o)}. The bolder arrow marks the better figure. · الأسهم الذهبية لـ${US} والبيضاء لـ${o}، والسهم الأعرض هو الرقم الأفضل.</div>
     ${T("02","Prediction","توقع النتيجة")}${predictBlock(next)}
-    <div class="rp2"><div>${T("03","Last five league games","آخر خمس مباريات في الدوري")}<div class="fstrip">${formStrip||"<p>No games yet · لا توجد مباريات</p>"}</div>
+    <div class="rp2"><div>${T("03",`${US_EN}: last five league games`,`آخر خمس مباريات لـ${US} في الدوري`)}<div class="fstrip">${formStrip||"<p>No games yet · لا توجد مباريات</p>"}</div>
       ${met.length?`${T("04","Meetings this season","مواجهات الفريقين هذا الموسم")}<div style="font-size:9.5px;line-height:1.6">${met.map(m=>`<div>${fE(m.date)}: ${tn(m.home)} ${m.score[0]} v ${m.score[1]} ${tn(m.away)} · ${m.home} ${m.score[0]} مقابل ${m.score[1]} ${m.away}</div>`).join("")}</div>`:`<div class="rpnote" style="margin-top:2mm">First meeting between the two sides this season · أول مواجهة بين الفريقين هذا الموسم</div>`}</div>
       <div>${T("05","Where they stand","مكان الفريقين في الترتيب")}${mini}
 </div></div>
@@ -5602,17 +5607,40 @@ function predict(m){
 function predictBlock(m){
   const P=predict(m);
   if(!P)return `<div class="pdx"><b>Prediction not available · التوقع غير متاح</b><p>${m&&m.comp==="cup"?"One of the two clubs plays in another league, so there are no shared results to compare. · أحد الفريقين من دوري ثاني، فما فيه نتائج مشتركة للمقارنة.":"Not enough league data yet. · البيانات غير كافية بعد."}</p></div>`;
-  const [hs,as]=P.top[0];const pct=x=>Math.round(x*100);
-  const grid=`<svg viewBox="0 0 66 66" style="width:100%;display:block">${[...Array(6)].map((_,i)=>[...Array(6)].map((_,j)=>{const p=P.M[i][j]/P.tot,o=Math.min(1,p/P.top[0][2]);return `<rect x="${6+j*10}" y="${6+i*10}" width="9.4" height="9.4" rx="1.2" fill="${i>j?"#5fa37c":i===j?"#d2a941":"#c96f68"}" opacity="${.12+o*.88}"/><text x="${10.7+j*10}" y="${12.2+i*10}" font-size="2.9" text-anchor="middle" fill="#fff" font-weight="700">${pct(p)?pct(p)+"%":""}</text>`;}).join("")).join("")}
-    ${[...Array(6)].map((_,i)=>`<text x="3" y="${12+i*10}" font-size="3" fill="#4b5969" text-anchor="middle">${i}</text><text x="${10.7+i*10}" y="4" font-size="3" fill="#4b5969" text-anchor="middle">${i}</text>`).join("")}</svg>`;
+  const E=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const pct=x=>Math.round(x*100),H=m.home,A=m.away;
+  /* the verdict first: who is more likely to win, in one line */
+  const opts=[[P.pw,`${tn(H)} more likely to win`,`${H} الأقرب للفوز`],[P.pd,"A draw is the most likely outcome","التعادل هو الاحتمال الأقرب"],[P.pl,`${tn(A)} more likely to win`,`${A} الأقرب للفوز`]].sort((x,y)=>y[0]-x[0]);
+  const close=opts[0][0]-opts[1][0]<.08;
+  const vEn=close?"Too close to call":opts[0][1],vAr=close?"مباراة متكافئة":opts[0][2];
+  /* scores always read with the team names, home first */
+  const sc=(i,j)=>`<span class="pds"><i>${E(tn(H))}</i><b dir="ltr">${i}</b><em>–</em><b dir="ltr">${j}</b><i>${E(tn(A))}</i></span>`;
+  const scAr=(i,j)=>`${H} <bdi dir="ltr">${i}</bdi> – <bdi dir="ltr">${j}</bdi> ${A}`;
+  const t0=P.top[0],t1=P.top[1],tie=t1&&Math.abs(t0[2]-t1[2])<.005;
+  const top=`${tie?"Two scores are equally likely":"Most likely single score"}: ${tn(H)} ${t0[0]}-${t0[1]} ${tn(A)}${tie?` or ${t1[0]}-${t1[1]}`:""} (${pct(t0[2])}%${tie?" each":""})`;
+  const topAr=`${tie?"نتيجتان بنفس الاحتمال تقريبًا":"أكثر نتيجة واحدة متوقعة"}: ${scAr(t0[0],t0[1])}${tie?` أو <bdi dir="ltr">${t1[0]}</bdi> – <bdi dir="ltr">${t1[1]}</bdi>`:""} (${pct(t0[2])}%${tie?" لكل وحدة":""})`;
+  /* explain only when the single most likely score points the other way from the favourite */
+  const side=(i,j)=>i>j?0:i===j?1:2,fav=[P.pw,P.pd,P.pl].indexOf(Math.max(P.pw,P.pd,P.pl));
+  const ex=P.M.flatMap((r,i)=>r.slice(0,6).map((p,j)=>[i,j,p])).filter(([i,j])=>i<6&&side(i,j)===fav).sort((x,y)=>y[2]-x[2]).slice(0,3);
+  const favN=fav===0?H:fav===2?A:null,favE=fav===0?tn(H):fav===2?tn(A):null;
+  const why=!close&&favN&&side(t0[0],t0[1])!==fav?`<div class="pdwhy">Why isn't the single most likely score a win for ${E(favE)}? Each exact score is a small chance on its own, but all the ${E(favE)} winning scores together (${ex.map(([i,j])=>`${i}-${j}`).join(", ")}, …) add up to ${pct(fav===0?P.pw:P.pl)}%.<span class="ar">ليش أكثر نتيجة متوقعة مو فوز ${E(favN)}؟ لأن كل نتيجة لوحدها احتمالها صغير، لكن كل نتائج فوز ${E(favN)} مع بعض (${ex.map(([i,j])=>`<bdi dir="ltr">${i}-${j}</bdi>`).join("، ")}، …) مجموعها ${pct(fav===0?P.pw:P.pl)}%.</span></div>`:"";
+  const grid=`<svg viewBox="0 0 76 78" style="width:100%;display:block">
+    <text x="44" y="4" font-size="3.2" fill="#262c36" text-anchor="middle" font-weight="700">${E(tn(A))} goals →</text>
+    <text x="3.4" y="44" font-size="3.2" fill="#262c36" text-anchor="middle" font-weight="700" transform="rotate(-90 3.4 44)">← ${E(tn(H))} goals</text>
+    ${[...Array(6)].map((_,i)=>[...Array(6)].map((_,j)=>{const p=P.M[i][j],o=Math.min(1,p/t0[2]),best=i===t0[0]&&j===t0[1];return `<rect x="${15+j*10}" y="${14+i*10}" width="9.4" height="9.4" rx="1.2" fill="${i>j?"#5fa37c":i===j?"#d2a941":"#c96f68"}" opacity="${.12+o*.88}"${best?' stroke="#262c36" stroke-width=".7"':""}/><text x="${19.7+j*10}" y="${20.2+i*10}" font-size="2.9" text-anchor="middle" fill="#fff" font-weight="700">${pct(p)?pct(p)+"%":""}</text>`;}).join("")).join("")}
+    ${[...Array(6)].map((_,i)=>`<text x="11" y="${20+i*10}" font-size="3" fill="#4b5969" text-anchor="middle">${i}</text><text x="${19.7+i*10}" y="11.4" font-size="3" fill="#4b5969" text-anchor="middle">${i}</text>`).join("")}</svg>`;
   return `<div class="pd">
    <div class="pdl"><div class="pdh">MODEL PREDICTION · توقع النموذج</div>
-     <div class="pdsb"><div class="pdt">${img(m.home)}<span>${tn(m.home)}</span></div>${board(`${hs}:${as}`,14)}<div class="pdt">${img(m.away)}<span>${tn(m.away)}</span></div></div>
-     <div class="pdsub">Most likely score ${hs}-${as} (${pct(P.top[0][2])}%), expected goals ${P.lh.toFixed(1)} to ${P.la.toFixed(1)}<span class="ar" style="display:block">النتيجة الأرجح <bdi dir="ltr">${hs}-${as}</bdi> بنسبة ${pct(P.top[0][2])}%، والأهداف المتوقعة <bdi dir="ltr">${P.lh.toFixed(1)}</bdi> لـ${m.home} و<bdi dir="ltr">${P.la.toFixed(1)}</bdi> لـ${m.away}</span></div>
+     <div class="pdv"><b>${E(vEn)}</b><span class="ar">${E(vAr)}</span></div>
      <div class="pdbar"><span style="width:${pct(P.pw)}%;background:#5fa37c">${pct(P.pw)}%</span><span style="width:${pct(P.pd)}%;background:#d2a941">${pct(P.pd)}%</span><span style="width:${pct(P.pl)}%;background:#c96f68">${pct(P.pl)}%</span></div>
-     <div class="pdk"><span>${tn(m.home)} win · فوز ${m.home}</span><span>Draw · تعادل</span><span>${tn(m.away)} win · فوز ${m.away}</span></div>
-     <div class="pdtl">Next most likely scores · نتائج محتملة بعدها</div><div class="pdtop">${P.top.slice(1,4).map(([i,j,p])=>`<div><b>${i}-${j}</b><span>${pct(p)}%</span></div>`).join("")}</div></div>
-   <div class="pdr"><div class="pdh2">Chance of every score · احتمال كل نتيجة</div>${grid}<div class="rpnote">Rows: ${tn(m.home)} goals. Columns: ${tn(m.away)} goals. · الصفوف أهداف ${m.home}، والأعمدة أهداف ${m.away}.</div></div>
+     <div class="pdk"><span>${tn(H)} win · فوز ${H}</span><span>Draw · تعادل</span><span>${tn(A)} win · فوز ${A}</span></div>
+     <div class="pdsb"><div class="pdt">${img(H)}<span>${tn(H)}</span><small>Expected goals <b>${P.lh.toFixed(1)}</b><span class="ar" style="display:block">الأهداف المتوقعة</span></small></div>${board(`${t0[0]}:${t0[1]}`,14)}<div class="pdt">${img(A)}<span>${tn(A)}</span><small>Expected goals <b>${P.la.toFixed(1)}</b><span class="ar" style="display:block">الأهداف المتوقعة</span></small></div></div>
+     <div class="pdsub">${top}<span class="ar" style="display:block">${topAr}</span></div>
+     ${why}
+     <div class="pdtl">Other likely scores · نتائج محتملة أخرى</div><div class="pdtop">${P.top.slice(tie?2:1,tie?5:4).map(([i,j,p])=>`<div>${sc(i,j)}<span>${pct(p)}%</span></div>`).join("")}</div></div>
+   <div class="pdr"><div class="pdh2">Chance of every score · احتمال كل نتيجة</div>${grid}
+     <div class="pdleg"><span><i style="background:#5fa37c"></i>${E(tn(H))} win · فوز ${E(H)}</span><span><i style="background:#d2a941"></i>Draw · تعادل</span><span><i style="background:#c96f68"></i>${E(tn(A))} win · فوز ${E(A)}</span><span><i style="background:none;border:1.5px solid #262c36"></i>Most likely · الأرجح</span></div>
+     <div class="rpnote">Each square is one exact score: ${E(tn(H))} goals down the side, ${E(tn(A))} goals across the top. · كل مربع نتيجة: أهداف ${E(H)} على الجنب، وأهداف ${E(A)} فوق.</div></div>
    <div class="rpnote pdn">Built from this season's league results. A guide, not a certainty: injuries and suspensions are not in it. · مبني على نتائج الدوري هذا الموسم. مؤشر وليس نتيجة مؤكدة، ولا يشمل الإصابات والإيقافات.</div></div>`;
 }
 
