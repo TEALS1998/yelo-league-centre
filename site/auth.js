@@ -43,6 +43,10 @@
     if (/Password should be at least/i.test(m)) return "كلمة المرور قصيرة. استخدم 8 أحرف أو أكثر.";
     if (/invite code not found/i.test(m)) return "رمز الدعوة غير موجود أو مستخدم من قبل.";
     if (/made for another email/i.test(m)) return "هذا الرمز مصنوع لإيميل ثاني. سجّل بنفس الإيميل اللي انعزمت عليه.";
+    if (/Error sending (recovery|confirmation|magic link)? ?email|sending.*email/i.test(m)) return "ما قدرنا نرسل الإيميل الآن. خدمة الإيميل مقيّدة حاليًا، فاطلب من مدير ناديك أو مديرة المنصة يساعدونك.";
+    if (/should be different from the old/i.test(m)) return "كلمة المرور الجديدة لازم تختلف عن القديمة.";
+    if (/Unable to validate email|invalid format|is invalid/i.test(m)) return "صيغة الإيميل غير صحيحة.";
+    if (/security purposes|only request this after/i.test(m)) return "لحماية حسابك، انتظر دقيقة قبل ما تطلب مرة ثانية.";
     if (/rate limit/i.test(m)) return "محاولات كثيرة. انتظر دقائق وحاول مرة ثانية.";
     if (/could not load/i.test(m)) return "تعذّر الاتصال بخدمة الحسابات. تأكد من الإنترنت وحدّث الصفحة.";
     return m || "صار خطأ غير متوقع.";
