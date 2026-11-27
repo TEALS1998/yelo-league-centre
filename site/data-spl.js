@@ -3991,8 +3991,11 @@ window.LEAGUE_DATA = {
      "home": "الاتحاد",
      "away": "نيوم",
      "venue": "مدينة الأمير عبدالله الفيصل الرياضية (جدة)",
-     "status": "upcoming",
-     "score": null,
+     "status": "played",
+     "score": [
+      1,
+      0
+     ],
      "roundExact": true,
      "weather": {
       "t": 29,
