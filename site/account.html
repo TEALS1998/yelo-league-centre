@@ -72,7 +72,7 @@ button{font:inherit}
 .pass .bar i{background:var(--ink);flex:none}
 .pass .qr{width:62px;height:62px;flex:none}
 .pass .qr svg{width:100%;height:100%;display:block}
-.pass .ft .tag{flex:none;font-size:10.5px;color:var(--muted);text-align:left;line-height:1.35}
+.pass .ft .tag{flex:none;font-size:10.5px;color:var(--muted);text-align:end;line-height:1.35}
 .stamp{position:absolute;top:66%;left:50%;translate:-50% -50%;rotate:-14deg;border:3px solid var(--win);color:var(--win);border-radius:10px;padding:4px 14px;font-weight:800;font-size:22px;background:rgba(247,248,249,.85);opacity:0;scale:1.8;pointer-events:none;white-space:nowrap}
 .stamp.go{animation:stamp .55s cubic-bezier(.2,1.4,.4,1) forwards}
 @keyframes stamp{to{opacity:1;scale:1}}
@@ -88,7 +88,7 @@ button{font:inherit}
 .fx a{display:grid;grid-template-columns:24px 1fr auto 1fr 24px;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:7px 9px;text-decoration:none;font-size:12.5px;transition:background .2s}
 .fx a:hover{background:rgba(255,255,255,.14)}
 .fx img{width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
-.fx .h{text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fx .a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx .h{text-align:end;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fx .a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fx .tm{text-align:center;line-height:1.15}
 .fx .tm b{display:block;font-family:var(--dinc);font-size:15px;direction:ltr}
 .fx .tm small{font-size:10px;opacity:.7}
@@ -104,8 +104,8 @@ h1{margin:6px 0 4px;font-size:28px;line-height:1.3;color:var(--navy)}
 .seg{display:grid;grid-template-columns:1fr 1fr;background:var(--chip);border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:18px;position:relative}
 .seg button{position:relative;z-index:1;border:0;background:none;border-radius:9px;padding:9px;font-weight:700;color:var(--muted);cursor:pointer;transition:color .25s}
 .seg button.on{color:var(--navy)}
-.seg .knob{position:absolute;top:4px;bottom:4px;width:calc(50% - 4px);right:4px;background:#fff;border-radius:9px;box-shadow:0 2px 8px rgba(20,30,40,.1);transition:transform .35s cubic-bezier(.3,1.3,.5,1)}
-.seg.up .knob{transform:translateX(-100%)}
+.seg .knob{position:absolute;top:4px;bottom:4px;width:calc(50% - 4px);inset-inline-start:4px;background:#fff;border-radius:9px;box-shadow:0 2px 8px rgba(20,30,40,.1);transition:transform .35s cubic-bezier(.3,1.3,.5,1)}
+.seg.up .knob{transform:translateX(-100%)}[dir=ltr] .seg.up .knob{transform:translateX(100%)}
 .fld{margin-bottom:14px;position:relative}
 .fld label{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
 .fld label a,.fld label button.lnk{font-size:12.5px;font-weight:500;color:var(--teal);text-decoration:none;background:none;border:0;padding:0;cursor:pointer}
@@ -113,6 +113,9 @@ h1{margin:6px 0 4px;font-size:28px;line-height:1.3;color:var(--navy)}
 .inp input,.inp select,select.inp{width:100%;height:48px;font:inherit;font-size:15.5px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s;outline:0}
 .inp input:focus,.inp select:focus{border-color:var(--teal);box-shadow:0 0 0 4px rgba(61,127,120,.15)}
 .inp input[dir=ltr]{text-align:left}
+.lang{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;border-radius:8px;padding:7px 12px;font-size:12.5px;cursor:pointer;white-space:nowrap}.lang:hover{background:rgba(255,255,255,.16)}
+[dir=ltr] body,[dir=ltr] .side{font-family:var(--din)}
+[dir=ltr] .pass .who .nm,[dir=ltr] .welcome b,[dir=ltr] .person .em{text-align:left}
 .inp.bad input{border-color:var(--loss);box-shadow:0 0 0 4px rgba(201,111,104,.13)}
 .inp .eye{position:absolute;right:8px;top:50%;translate:0 -50%;border:0;background:none;cursor:pointer;color:var(--muted);padding:6px;border-radius:8px;display:grid}
 .inp .eye:hover{background:var(--chip)}
@@ -204,7 +207,7 @@ dialog p{margin:4px 0;color:var(--muted);font-size:13px}
 </head>
 <body>
 <div class="shell">
-  <aside class="stage" aria-label="بطاقة الاعتماد">
+  <aside class="stage" aria-label="Accreditation · بطاقة الاعتماد">
     <svg class="pitch" viewBox="0 0 680 1050" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <rect x="40" y="40" width="600" height="970" rx="2"/><path d="M40 525H640"/><circle cx="340" cy="525" r="92"/>
       <rect x="178" y="40" width="324" height="160"/><rect x="258" y="40" width="164" height="56"/><path d="M276 200a80 80 0 0 0 128 0"/>
@@ -213,8 +216,9 @@ dialog p{margin:4px 0;color:var(--muted);font-size:13px}
     <div class="brand">
       <div><b>Match Centre</b><span class="en" style="font-size:10.5px;opacity:.6;letter-spacing:.2em">Roshn · First Division</span></div>
       <div class="sep"></div>
-      <div class="ar2"><b style="font-family:var(--ar);font-size:16px;letter-spacing:0;text-transform:none;direction:rtl">لوحة مركز المباريات</b><span>دخول موظفي الأندية</span></div>
-      <a class="back" id="back" href="all.html">← اللوحة</a>
+      <div class="ar2"><b style="font-family:var(--ar);font-size:16px;letter-spacing:0;text-transform:none;direction:rtl">لوحة مركز المباريات</b><span id="sBrand"></span></div>
+      <a class="back" id="back" href="all.html"></a>
+      <button class="lang" id="lang" type="button"></button>
     </div>
     <div class="passwrap">
       <div>
@@ -222,25 +226,25 @@ dialog p{margin:4px 0;color:var(--muted);font-size:13px}
         <div class="pass" id="pass">
           <div class="hd"><div class="hole"></div>
             <div class="row1"><span class="en">Accreditation</span><span class="en" id="pSeason">2026/27</span></div>
-            <h4 id="pClub">بطاقة اعتماد</h4>
+            <h4 id="pClub"></h4>
           </div>
           <div class="bd">
             <div class="ph" id="pPh">؟</div>
-            <div class="who"><div class="k en">Staff · الموظف</div><div class="nm" id="pName"></div><div class="rl" id="pRole">سجّل دخولك لتظهر بطاقتك</div></div>
+            <div class="who"><div class="k en">Staff · الموظف</div><div class="nm" id="pName"></div><div class="rl" id="pRole"></div></div>
           </div>
-          <div class="code" id="pCode"><span>رمز الدعوة</span><b id="pCodeV"></b></div>
+          <div class="code" id="pCode"><span id="pCodeL"></span><b id="pCodeV"></b></div>
           <div class="zones" id="pZones"></div>
-          <div class="ft"><div class="bar" id="pBar"></div><div class="tag" id="pTag"><span class="en" style="letter-spacing:.1em">Match Centre</span><br>روشن والأولى</div></div>
-          <div class="stamp" id="stamp">معتمد ✓</div>
+          <div class="ft"><div class="bar" id="pBar"></div><div class="tag"><span class="en" style="letter-spacing:.1em">Match Centre</span><br>روشن والأولى</div></div>
+          <div class="stamp" id="stamp"></div>
         </div>
       </div>
     </div>
     <div class="pulse" id="pulse" hidden>
-      <div class="t"><span><i></i>المباريات القادمة في الدوريين</span><span class="en" style="font-size:11px">Next up</span></div>
+      <div class="t"><span><i></i><span id="sPulse"></span></span><span class="en" style="font-size:11px" id="sPulse2"></span></div>
       <div class="fx" id="fx"></div>
     </div>
   </aside>
-  <main class="side"><div class="panel" id="main"><p class="mut">جارٍ التحميل…</p></div></main>
+  <main class="side"><div class="panel" id="main"><p class="mut">…</p></div></main>
 </div>
 <dialog id="dlg"></dialog>
 <script src="auth.js"></script>
@@ -262,38 +266,47 @@ const CLUB_COLOURS={/* [main colour, second colour] from each club's crest */
 const A=window.MC_AUTH,main=document.getElementById("main");
 const $=id=>document.getElementById(id);
 const E=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const LG={fdl:"دوري الأولى",spl:"دوري روشن"};
-const say=(el,t,ok)=>{el.className="msg "+(ok?"ok":"err");el.textContent=t;};
 const store={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}};
 const P=new URLSearchParams(location.search);
+
+/* ---------- two languages: Arabic by default, English on the toggle (remembered) or with ?lang=en ---------- */
+let EN=P.get("lang")?P.get("lang")==="en":store.get("mc_lang")==="en";
+const L=(ar,en)=>EN?en:ar;
+const ERR=e=>EN?A.enError(e):A.arError(e);
+const LGN=lg=>lg==="spl"?L("دوري روشن","Saudi Pro League"):L("دوري الأولى","First Division");
+const ROLE=k=>EN?A.ROLES[k].en:A.ROLES[k].ar;
+const say=(el,t,ok)=>{el.className="msg "+(ok?"ok":"err");el.textContent=t;};
+
 const NEXT=(P.get("next")||"").replace(/^[a-z]+:|^\/\//i,""); /* only a page of this site */
 let pendingCode=(P.get("invite")||"").toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,8);
 const inviteEmail=(P.get("email")||"").trim().toLowerCase();
-if(NEXT)$("back").href=NEXT;
+
+/* ---------- the league data (club names in English, crests, next fixtures) ---------- */
+const DATA={},LOADED={};
+function loadLeague(lg){return DATA[lg]||(DATA[lg]=fetch(lg==="spl"?"data-spl.js":"data.js").then(r=>r.text()).then(t=>{const w={};new Function("window",t)(w);LOADED[lg]=w.LEAGUE_DATA;return w.LEAGUE_DATA;}));}
+const clubName=(lg,c)=>EN&&LOADED[lg]?(LOADED[lg].teams[c]||c).replace(/ FC$| SC$/,""):c;
+async function clubs(lg){const D=await loadLeague(lg);return Object.keys(D.clubs).sort((a,b)=>EN?clubName(lg,a).localeCompare(clubName(lg,b)):a.localeCompare(b,"ar"));}
 
 /* ---------- the pass ---------- */
-const ZONES=[["1","المباريات",()=>true],["2","الغيابات",r=>r.absences],["3","السفر",r=>r.travel],["4","التقارير",r=>r.export],["5","الموظفين",r=>r.users]];
-$("pZones").innerHTML=ZONES.map(z=>`<div><b>${z[0]}</b><small>${z[1]}</small></div>`).join("");
+const ZONES=[["1","المباريات","Matches",()=>true],["2","الغيابات","Absences",r=>r.absences],["3","السفر","Travel",r=>r.travel],["4","التقارير","Reports",r=>r.export],["5","الموظفين","Staff",r=>r.users]];
 function hash(s){let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;}
-function bars(seed){const el=document.getElementById("pBar");if(!el.classList.contains("bar"))return;let s=seed||7,o="";for(let i=0;i<34;i++){s=(Math.imul(s,1664525)+1013904223)>>>0;const w=1+(s>>>29);o+=`<i style="width:${w}px"></i>`;}$("pBar").innerHTML=o;}
-bars(hash("match centre"));
+function bars(seed){const el=$("pBar");if(!el.classList.contains("bar"))return;let s=seed||7,o="";for(let i=0;i<34;i++){s=(Math.imul(s,1664525)+1013904223)>>>0;const w=1+(s>>>29);o+=`<i style="width:${w}px"></i>`;}el.innerHTML=o;}
+let zoneRole=null;
 const pass={
-  name(t){$("pName").textContent=(t||"").split("@")[0];$("pPh").textContent=(t||"؟").trim()[0]?.toUpperCase()||"؟";bars(hash(t||"match centre"));},
+  name(t){$("pName").textContent=(t||"").split("@")[0];$("pPh").textContent=(t||"?").trim()[0]?.toUpperCase()||"?";bars(hash(t||"match centre"));},
   role(t){$("pRole").textContent=t;},
   club(t){$("pClub").textContent=t;},
   code(c){$("pCode").classList.toggle("on",!!c);$("pCodeV").textContent=(c||"").padEnd(8,"·");},
-  zones(r){[...$("pZones").children].forEach((d,i)=>d.classList.toggle("on",!!(r&&ZONES[i][2](r))));},
+  zones(r){zoneRole=r;$("pZones").innerHTML=ZONES.map(z=>`<div class="${r&&z[3](r)?"on":""}"><b>${z[0]}</b><small>${L(z[1],z[2])}</small></div>`).join("");},
   colours(m,s){document.documentElement.style.setProperty("--m",m||"#27333e");document.documentElement.style.setProperty("--s",s||"#3d7f78");},
   crest(src){if(src)$("pPh").innerHTML=`<img alt="" src="${E(src)}">`;},
-  qr(url){$("pBar").outerHTML=`<div class="qr" id="pBar" title="افتح لوحتك">${window.QR?QR.svg(url,{fg:"#262c36",bg:"#f7f8f9",margin:0}):""}</div>`;},
+  qr(url){$("pBar").outerHTML=`<div class="qr" id="pBar">${window.QR?QR.svg(url,{fg:"#262c36",bg:"#f7f8f9",margin:0}):""}</div>`;},
+  plain(){if(!$("pBar").classList.contains("bar"))$("pBar").outerHTML='<div class="bar" id="pBar"></div>';},
   stamp(){const s=$("stamp");s.classList.remove("go");void s.offsetWidth;s.classList.add("go");},
   shake(){const p=$("pass");p.classList.remove("shake");void p.offsetWidth;p.classList.add("shake");}
 };
 
-/* ---------- the league data (crests, next fixtures) ---------- */
-const DATA={};
-function loadLeague(lg){return DATA[lg]||(DATA[lg]=fetch(lg==="spl"?"data-spl.js":"data.js").then(r=>r.text()).then(t=>{const w={};new Function("window",t)(w);return w.LEAGUE_DATA;}));}
-async function clubs(lg){const D=await loadLeague(lg);return Object.keys(D.clubs).sort((a,b)=>a.localeCompare(b,"ar"));}
+/* ---------- what the league is doing right now ---------- */
 async function pulse(){
   try{
     const [f,s]=await Promise.all([loadLeague("fdl"),loadLeague("spl")]);
@@ -301,11 +314,12 @@ async function pulse(){
     for(const [lg,D] of [["fdl",f],["spl",s]]){const S=D.seasons[D.current];
       for(const m of S.matches){if(m.status!=="upcoming"||!m.date)continue;const t=Date.parse(`${m.date}T${m.time||"23:59"}:00+03:00`);if(t>now-2*36e5)rows.push({lg,D,m,t});}}
     rows.sort((a,b)=>a.t-b.t);const pick=rows.slice(0,4);if(!pick.length)return;
-    const ymd=x=>new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Riyadh"}).format(x),wk=new Intl.DateTimeFormat("ar-SA-u-ca-gregory-nu-latn",{weekday:"long",timeZone:"Asia/Riyadh"});
+    const ymd=x=>new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Riyadh"}).format(x);
+    const wk=new Intl.DateTimeFormat(EN?"en-GB":"ar-SA-u-ca-gregory-nu-latn",{weekday:EN?"short":"long",timeZone:"Asia/Riyadh"});
     const today=ymd(now),tmr=ymd(now+864e5);
-    $("fx").innerHTML=pick.map(({lg,D,m,t})=>{const day=m.date===today?"اليوم":m.date===tmr?"بكرة":wk.format(t);
-      const href=`index.html?${lg==="spl"?"league=spl&":""}club=${encodeURIComponent(m.home)}`;
-      return `<a href="${href}" title="${E(LG[lg])}"><img alt="" src="${E(D.logos[m.home]||"")}"><span class="h">${E(m.home)}</span><span class="tm"><b>${E(m.time||"—")}</b><small>${day}</small></span><span class="a">${E(m.away)}</span><img alt="" src="${E(D.logos[m.away]||"")}"></a>`;}).join("");
+    $("fx").innerHTML=pick.map(({lg,D,m,t})=>{const day=m.date===today?L("اليوم","Today"):m.date===tmr?L("بكرة","Tomorrow"):wk.format(t);
+      const href=`index.html?${lg==="spl"?"league=spl&":""}club=${encodeURIComponent(m.home)}${EN?"&lang=en":""}`;
+      return `<a href="${href}" title="${E(LGN(lg))}"><img alt="" src="${E(D.logos[m.home]||"")}"><span class="h">${E(clubName(lg,m.home))}</span><span class="tm"><b>${E(m.time||"—")}</b><small>${day}</small></span><span class="a">${E(clubName(lg,m.away))}</span><img alt="" src="${E(D.logos[m.away]||"")}"></a>`;}).join("");
     $("pulse").hidden=false;
   }catch(e){}
 }
@@ -315,81 +329,112 @@ const DOMAINS=["gmail.com","hotmail.com","outlook.com","icloud.com","yahoo.com",
 function lev(a,b){const d=Array.from({length:a.length+1},(_,i)=>[i]);for(let j=1;j<=b.length;j++)d[0][j]=j;for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[a.length][b.length];}
 function typo(em){const m=/^([^@\s]+)@([^@\s]+)$/.exec(em);if(!m)return null;const d=m[2].toLowerCase();if(DOMAINS.includes(d))return null;
   let best=null,bd=3;for(const x of DOMAINS){const v=lev(d,x);if(v<bd){bd=v;best=x;}}return best&&bd<=2?`${m[1]}@${best}`:null;}
+const didYouMean=s=>EN?`Did you mean <button type="button" class="fixit">${E(s)}</button>?`:`قصدك <button type="button" class="fixit">${E(s)}</button>؟`;
 function strength(pw){let s=0;if(pw.length>=8)s++;if(pw.length>=12)s++;if(/[a-z]/.test(pw)&&/[A-Z]/.test(pw))s++;if(/\d/.test(pw)&&/[^A-Za-z0-9]/.test(pw))s++;if(pw.length<8)s=Math.min(s,1);return s;}
-const SCOL=["var(--line)","var(--loss)","var(--draw)","#8fbf6a","var(--win)"],SLBL=["","ضعيفة","مقبولة","جيدة","قوية"];
+const SCOL=["var(--line)","var(--loss)","var(--draw)","#8fbf6a","var(--win)"];
+const SLBL=()=>EN?["","Weak","Fair","Good","Strong"]:["","ضعيفة","مقبولة","جيدة","قوية"];
 const EYE='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
 const EYE2='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3l18 18M10.6 5.1A10.6 10.6 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.6 6.6A17.4 17.4 0 0 0 2 12s3.6 7 10 7a9.9 9.9 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>';
 function busy(b,on){b.disabled=on;b.classList.toggle("busy",on);}
+const okEmail=v=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
+function codeBox(cd,onChange){const sl=[...cd.nextElementSibling.children];
+  const paint=()=>{const v=cd.value;sl.forEach((s,i)=>{s.textContent=v[i]||"";s.classList.toggle("f",!!v[i]);s.classList.toggle("cur",document.activeElement===cd&&i===Math.min(v.length,7));});};
+  cd.addEventListener("input",()=>{cd.value=cd.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,8);paint();onChange&&onChange(cd.value);});
+  cd.addEventListener("focus",paint);cd.addEventListener("blur",paint);paint();}
+
+/* ---------- the parts of the page that sit outside the form ---------- */
+let view=()=>{};
+function chrome(){
+  const h=document.documentElement;h.lang=EN?"en":"ar";h.dir=EN?"ltr":"rtl";
+  document.title=L("الحساب · لوحة مركز المباريات","Account · Match Centre");
+  $("sBrand").textContent=L("دخول موظفي الأندية","Club staff sign-in");
+  $("back").textContent=L("← اللوحة","← Board");$("back").href=NEXT||("all.html"+(EN?"?lang=en":""));
+  $("lang").textContent=EN?"العربية":"English";
+  $("pCodeL").textContent=L("رمز الدعوة","Invite code");
+  $("stamp").textContent=L("معتمد ✓","Approved ✓");
+  $("sPulse").textContent=L("المباريات القادمة في الدوريين","Next up in both leagues");$("sPulse2").textContent=EN?"":"Next up";
+  pass.zones(zoneRole);
+}
+$("lang").onclick=()=>{EN=!EN;store.set("mc_lang",EN?"en":"ar");const u=new URL(location.href);u.searchParams.set("lang",EN?"en":"ar");history.replaceState(null,"",u);chrome();pulse();view();};
+chrome();
 
 let sb;
-try{sb=await A.ready;}catch(e){main.innerHTML=`<h1>تعذّر الاتصال</h1><p class="lead">${E(A.arError(e))}</p><button class="btn" onclick="location.reload()">حاول مرة ثانية</button>`;return;}
+try{sb=await A.ready;}catch(e){main.innerHTML=`<h1>${L("تعذّر الاتصال","Could not connect")}</h1><p class="lead">${E(ERR(e))}</p><button class="btn" onclick="location.reload()">${L("حاول مرة ثانية","Try again")}</button>`;return;}
 pulse();
 let recovery=/type=recovery/.test(location.hash);
 
 /* ---------- signed out ---------- */
 function signedOut(tab){
+  view=()=>signedOut(tab);
   document.body.classList.remove("in");
-  pass.colours();pass.zones(null);pass.club("بطاقة اعتماد");
+  pass.plain();pass.colours();pass.zones(null);pass.club(L("بطاقة اعتماد","Accreditation pass"));
   const last=store.get("mc_last_email");
   if(!tab)tab=pendingCode&&!(last&&last===inviteEmail)?"up":"in";
+  const up=tab==="up";
+  main.className="panel";
   main.innerHTML=`
-    <div class="eyebrow"><span class="en">Staff access</span><span>دخول الموظفين</span></div>
+    <div class="eyebrow"><span class="en">Staff access</span><span>${L("دخول الموظفين","Club staff")}</span></div>
     <h1 id="hT"></h1><p class="lead" id="hL"></p>
-    <div class="seg${tab==="up"?" up":""}" role="tablist"><span class="knob"></span><button type="button" data-t="in" role="tab">تسجيل الدخول</button><button type="button" data-t="up" role="tab">حساب جديد</button></div>
+    <div class="seg${up?" up":""}" role="tablist"><span class="knob"></span><button type="button" data-t="in" role="tab">${L("تسجيل الدخول","Sign in")}</button><button type="button" data-t="up" role="tab">${L("حساب جديد","New account")}</button></div>
     <form id="f" novalidate></form><div class="msg" id="msg" role="alert"></div>
-    <div class="how"><div><b>1</b><strong>الدعوة</strong>مدير ناديك يرسل لك رابط أو رمز من 8 خانات</div><div><b>2</b><strong>الحساب</strong>سجّل بنفس الإيميل اللي انعزمت عليه</div><div><b>3</b><strong>بطاقتك</strong>تنفتح لوحة ناديك بأقسام دورك</div></div>
-    <p class="fine">اللوحة نفسها مفتوحة للكل. الحساب يرتّب لكل موظف الأقسام اللي يحتاجها.</p>`;
-  const seg=main.querySelector(".seg");
-  seg.querySelectorAll("button").forEach(b=>{b.classList.toggle("on",b.dataset.t===tab);b.onclick=()=>signedOut(b.dataset.t);});
-  const f=$("f"),msg=$("msg"),up=tab==="up";
-  $("hT").textContent=up?(pendingCode?"دعوتك جاهزة":"أنشئ حسابك"):(last?"أهلًا من جديد":"سجّل دخولك");
-  $("hL").textContent=up?(pendingCode?"كمّل التسجيل بإيميلك، والرمز مكتوب لك.":"تحتاج رمز الدعوة من مدير ناديك. إذا ما عندك رمز تقدر تسجل الآن وتضيفه بعدين."):"ادخل بإيميلك وكلمة المرور، وتطلع لك لوحة ناديك.";
+    <div class="how">
+      <div><b>1</b><strong>${L("الدعوة","The invite")}</strong>${L("مدير ناديك يرسل لك رابط أو رمز من 8 خانات","Your club admin sends you a link or an 8-character code")}</div>
+      <div><b>2</b><strong>${L("الحساب","Your account")}</strong>${L("سجّل بنفس الإيميل اللي انعزمت عليه","Sign up with the email you were invited on")}</div>
+      <div><b>3</b><strong>${L("بطاقتك","Your pass")}</strong>${L("تنفتح لوحة ناديك بأقسام دورك","Your club's board opens with your role's sections")}</div></div>
+    <p class="fine">${L("اللوحة نفسها مفتوحة للكل. الحساب يرتّب لكل موظف الأقسام اللي يحتاجها.","The board itself is open to everyone. An account arranges it around each person's role.")}</p>`;
+  main.querySelectorAll(".seg button").forEach(b=>{b.classList.toggle("on",b.dataset.t===tab);b.onclick=()=>signedOut(b.dataset.t);});
+  const f=$("f"),msg=$("msg");
+  $("hT").textContent=up?(pendingCode?L("دعوتك جاهزة","Your invite is ready"):L("أنشئ حسابك","Create your account")):(last?L("أهلًا من جديد","Welcome back"):L("سجّل دخولك","Sign in"));
+  $("hL").textContent=up?(pendingCode?L("كمّل التسجيل بإيميلك، والرمز مكتوب لك.","Finish signing up with your email. Your code is already filled in.")
+      :L("تحتاج رمز الدعوة من مدير ناديك. إذا ما عندك رمز تقدر تسجل الآن وتضيفه بعدين.","You need an invite code from your club admin. No code yet? Sign up now and add it later."))
+    :L("ادخل بإيميلك وكلمة المرور، وتطلع لك لوحة ناديك.","Use your email and password to open your club's board.");
   const useLast=!up&&last&&!inviteEmail;
   f.innerHTML=`
-    ${useLast?`<div class="welcome" id="wel"><div class="av">${E(last[0].toUpperCase())}</div><div style="min-width:0;flex:1"><b>${E(last)}</b><small>آخر حساب دخلت فيه من هذا الجهاز</small></div><button type="button" id="notme">حساب ثاني</button></div>`:""}
-    <div class="fld" ${useLast?'hidden':''}><label for="em">الإيميل</label><div class="inp"><input id="em" type="email" dir="ltr" inputmode="email" autocomplete="${up?"email":"username"}" placeholder="name@club.sa" value="${E(useLast?last:inviteEmail)}" required></div><div class="hint" id="emH"></div></div>
-    <div class="fld"><label for="pw">كلمة المرور ${up?"":`<button type="button" class="lnk" id="forgot">نسيت كلمة المرور؟</button>`}</label>
-      <div class="inp"><input id="pw" class="pw" type="password" dir="ltr" autocomplete="${up?"new-password":"current-password"}" ${up?'minlength="8"':''} required><button type="button" class="eye" id="eye" aria-label="إظهار كلمة المرور">${EYE}</button></div>
+    ${useLast?`<div class="welcome" id="wel"><div class="av">${E(last[0].toUpperCase())}</div><div style="min-width:0;flex:1"><b>${E(last)}</b><small>${L("آخر حساب دخلت فيه من هذا الجهاز","Last signed in on this device")}</small></div><button type="button" id="notme">${L("حساب ثاني","Not you?")}</button></div>`:""}
+    <div class="fld" ${useLast?"hidden":""}><label for="em">${L("الإيميل","Email")}</label><div class="inp"><input id="em" type="email" dir="ltr" inputmode="email" autocomplete="${up?"email":"username"}" placeholder="name@club.sa" value="${E(useLast?last:inviteEmail)}" required></div><div class="hint" id="emH"></div></div>
+    <div class="fld"><label for="pw">${L("كلمة المرور","Password")} ${up?"":`<button type="button" class="lnk" id="forgot">${L("نسيت كلمة المرور؟","Forgot password?")}</button>`}</label>
+      <div class="inp"><input id="pw" class="pw" type="password" dir="ltr" autocomplete="${up?"new-password":"current-password"}" ${up?'minlength="8"':""} required><button type="button" class="eye" id="eye" aria-label="${L("إظهار كلمة المرور","Show password")}">${EYE}</button></div>
       ${up?`<div class="meter" id="meter"><i></i><i></i><i></i><i></i></div>`:""}<div class="hint" id="pwH"></div></div>
-    ${up?`<div class="fld"><label for="cd">رمز الدعوة <span class="opt">ثمان خانات · اختياري الآن</span></label>
-      <div class="codebox"><input id="cd" dir="ltr" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" maxlength="8" value="${E(pendingCode)}" aria-label="رمز الدعوة"><div class="slots" id="slots">${"<span></span>".repeat(8)}</div></div><div class="hint" id="cdH"></div></div>`:""}
-    <button class="btn full" id="go" type="submit"><span class="sp"></span><span>${up?"إنشاء الحساب":"دخول"}</span></button>`;
+    ${up?`<div class="fld"><label for="cd">${L("رمز الدعوة","Invite code")} <span class="opt">${L("ثمان خانات · اختياري الآن","8 characters · optional for now")}</span></label>
+      <div class="codebox"><input id="cd" dir="ltr" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" maxlength="8" value="${E(pendingCode)}" aria-label="${L("رمز الدعوة","Invite code")}"><div class="slots">${"<span></span>".repeat(8)}</div></div><div class="hint" id="cdH"></div></div>`:""}
+    <button class="btn full" id="go" type="submit"><span class="sp"></span><span>${up?L("إنشاء الحساب","Create account"):L("دخول","Sign in")}</span></button>`;
   const em=$("em"),pw=$("pw"),cd=$("cd");
   /* the pass follows what you type */
-  const emName=v=>{pass.name(v||"");pass.role(up?"حساب جديد · بانتظار الإنشاء":"دخول الموظفين");};
+  const emName=v=>{pass.name(v||"");pass.role(up?L("حساب جديد · بانتظار الإنشاء","New account · not created yet"):L("دخول الموظفين","Staff sign-in"));};
   emName(em.value);pass.code(up?pendingCode:"");
   em.addEventListener("input",()=>{emName(em.value.trim());$("emH").innerHTML="";em.parentNode.classList.remove("bad");});
-  em.addEventListener("blur",()=>{const s=typo(em.value.trim());$("emH").innerHTML=s?`قصدك <button type="button" id="fix">${E(s)}</button>؟`:"";if(s)$("fix").onclick=()=>{em.value=s;$("emH").innerHTML="";emName(s);};});
+  em.addEventListener("blur",()=>{const s=typo(em.value.trim());$("emH").innerHTML=s?didYouMean(s):"";if(s)$("emH").querySelector(".fixit").onclick=()=>{em.value=s;$("emH").innerHTML="";emName(s);};});
   if($("notme"))$("notme").onclick=()=>{store.set("mc_last_email",null);signedOut("in");};
-  $("eye").onclick=()=>{const v=pw.type==="password";pw.type=v?"text":"password";$("eye").innerHTML=v?EYE2:EYE;$("eye").setAttribute("aria-label",v?"إخفاء كلمة المرور":"إظهار كلمة المرور");pw.focus();};
-  const caps=e=>{const on=e.getModifierState&&e.getModifierState("CapsLock");const h=$("pwH");if(on){h.className="hint warn";h.textContent="زر الأحرف الكبيرة (Caps Lock) شغّال.";}else if(h.classList.contains("warn")){h.className="hint";h.textContent="";meter();}};
+  $("eye").onclick=()=>{const v=pw.type==="password";pw.type=v?"text":"password";$("eye").innerHTML=v?EYE2:EYE;$("eye").setAttribute("aria-label",v?L("إخفاء كلمة المرور","Hide password"):L("إظهار كلمة المرور","Show password"));pw.focus();};
+  const caps=e=>{const on=e.getModifierState&&e.getModifierState("CapsLock");const h=$("pwH");if(on){h.className="hint warn";h.textContent=L("زر الأحرف الكبيرة (Caps Lock) شغّال.","Caps Lock is on.");}else if(h.classList.contains("warn")){h.className="hint";h.textContent="";meter();}};
   pw.addEventListener("keyup",caps);pw.addEventListener("keydown",caps);
   function meter(){if(!up)return;const s=strength(pw.value);[...$("meter").children].forEach((i,k)=>i.style.background=k<s?SCOL[s]:"var(--line)");
-    const h=$("pwH");if(h.classList.contains("warn"))return;h.className="hint";h.textContent=pw.value?(pw.value.length<8?`باقي ${8-pw.value.length} أحرف على الأقل`:`كلمة مرور ${SLBL[s]}`):"8 أحرف أو أكثر. الأفضل تخلط أحرف وأرقام ورموز.";}
+    const h=$("pwH");if(h.classList.contains("warn"))return;h.className="hint";
+    h.textContent=pw.value?(pw.value.length<8?L(`باقي ${8-pw.value.length} أحرف على الأقل`,`${8-pw.value.length} more characters at least`):L(`كلمة مرور ${SLBL()[s]}`,`${SLBL()[s]} password`))
+      :L("8 أحرف أو أكثر. الأفضل تخلط أحرف وأرقام ورموز.","8 characters or more. A mix of letters, numbers and symbols is best.");}
   pw.addEventListener("input",meter);meter();
-  if(cd){const sl=[...$("slots").children];
-    const paint=()=>{const v=cd.value;sl.forEach((s,i)=>{s.textContent=v[i]||"";s.classList.toggle("f",!!v[i]);s.classList.toggle("cur",document.activeElement===cd&&i===Math.min(v.length,7)&&!(v.length===8&&i!==7));});};
-    cd.addEventListener("input",()=>{const p=cd.selectionStart;cd.value=cd.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,8);pendingCode=cd.value;pass.code(cd.value);paint();$("cdH").textContent=cd.value.length===8?"✓ الرمز كامل":"";});
-    cd.addEventListener("focus",paint);cd.addEventListener("blur",paint);paint();if(cd.value.length===8)$("cdH").textContent="✓ الرمز كامل";}
+  if(cd){const done=v=>{$("cdH").textContent=v.length===8?L("✓ الرمز كامل","✓ Code complete"):"";};
+    codeBox(cd,v=>{pendingCode=v;pass.code(v);done(v);});done(cd.value);}
   if($("forgot"))$("forgot").onclick=async()=>{const v=em.value.trim().toLowerCase();
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){if($("wel")){$("wel").remove();em.closest(".fld").hidden=false;}em.focus();return say(msg,"اكتب إيميلك أول، وبعدها اضغط «نسيت كلمة المرور؟».");}
+    if(!okEmail(v)){if($("wel")){$("wel").remove();em.closest(".fld").hidden=false;}em.focus();return say(msg,L("اكتب إيميلك أول، وبعدها اضغط «نسيت كلمة المرور؟».","Type your email first, then press “Forgot password?”."));}
     const {error}=await sb.auth.resetPasswordForEmail(v,{redirectTo:new URL("account.html",location.href).href});
-    if(error)return say(msg,A.arError(error));
-    say(msg,`أرسلنا رابط تغيير كلمة المرور إلى ${v}. افتحه من نفس الجهاز. إذا ما وصل خلال دقائق شوف الرسائل غير المرغوبة، أو اطلب من مدير ناديك.`,true);};
-  setTimeout(()=>(useLast?pw:(em.value?pw:em)).focus({preventScroll:true}),60);
+    if(error)return say(msg,ERR(error));
+    say(msg,L(`أرسلنا رابط تغيير كلمة المرور إلى ${v}. افتحه من نفس الجهاز. إذا ما وصل خلال دقائق شوف الرسائل غير المرغوبة، أو اطلب من مدير ناديك.`,
+      `We sent a password reset link to ${v}. Open it on this device. If it hasn't arrived in a few minutes, check spam or ask your club admin.`),true);};
+  setTimeout(()=>(useLast||em.value?pw:em).focus({preventScroll:true}),60);
   f.onsubmit=async ev=>{ev.preventDefault();msg.className="msg";const b=$("go");
     const e=em.value.trim().toLowerCase(),p=pw.value;
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){em.parentNode.classList.add("bad");if(em.closest(".fld").hidden)em.closest(".fld").hidden=false;pass.shake();return say(msg,"اكتب إيميل صحيح.");}
-    if(!p){pass.shake();pw.focus();return say(msg,"اكتب كلمة المرور.");}
-    if(up&&p.length<8){pass.shake();pw.focus();return say(msg,"كلمة المرور لازم تكون 8 أحرف أو أكثر.");}
-    if(up&&cd.value&&cd.value.length!==8){pass.shake();cd.focus();return say(msg,"رمز الدعوة ثمان خانات. كمّله أو امسحه وأضفه بعدين.");}
+    if(!okEmail(e)){em.parentNode.classList.add("bad");em.closest(".fld").hidden=false;pass.shake();return say(msg,L("اكتب إيميل صحيح.","Enter a valid email."));}
+    if(!p){pass.shake();pw.focus();return say(msg,L("اكتب كلمة المرور.","Enter your password."));}
+    if(up&&p.length<8){pass.shake();pw.focus();return say(msg,L("كلمة المرور لازم تكون 8 أحرف أو أكثر.","The password needs 8 characters or more."));}
+    if(up&&cd.value&&cd.value.length!==8){pass.shake();cd.focus();return say(msg,L("رمز الدعوة ثمان خانات. كمّله أو امسحه وأضفه بعدين.","The invite code has 8 characters. Complete it, or clear it and add it later."));}
     busy(b,true);
     try{
       if(up){const {data,error}=await sb.auth.signUp({email:e,password:p});if(error)throw error;if(!data.session)throw new Error("Email not confirmed");}
       else{const {error}=await sb.auth.signInWithPassword({email:e,password:p});if(error)throw error;}
       store.set("mc_last_email",e);
       await afterAuth(true);
-    }catch(x){pass.shake();say(msg,A.arError(x));}finally{busy(b,false);}};
+    }catch(x){pass.shake();say(msg,ERR(x));}finally{busy(b,false);}};
 }
 
 /* claim any code that came with the link, then show the account */
@@ -397,7 +442,7 @@ async function afterAuth(fresh){
   let note=null;
   if(pendingCode&&pendingCode.length===8){
     const r=await sb.rpc("claim_invite",{p_code:pendingCode});
-    note=r.error?A.arError(r.error):null;pendingCode="";
+    note=r.error?ERR(r.error):null;pendingCode="";
     if(!r.error){const u=new URL(location.href);u.searchParams.delete("invite");u.searchParams.delete("email");history.replaceState(null,"",u);}
   }
   await draw(fresh,note);
@@ -405,114 +450,123 @@ async function afterAuth(fresh){
 
 /* ---------- new password, from the emailed link ---------- */
 function newPassword(){
-  main.innerHTML=`<div class="eyebrow"><span class="en">Reset</span><span>تغيير كلمة المرور</span></div><h1>اختر كلمة مرور جديدة</h1><p class="lead">بعدها تدخل فيها على طول.</p>
-    <form id="f"><div class="fld"><label for="pw">كلمة المرور الجديدة</label><div class="inp"><input id="pw" class="pw" type="password" dir="ltr" autocomplete="new-password" minlength="8" required><button type="button" class="eye" id="eye">${EYE}</button></div><div class="meter" id="meter"><i></i><i></i><i></i><i></i></div></div>
-    <button class="btn full" id="go"><span class="sp"></span><span>حفظ كلمة المرور</span></button></form><div class="msg" id="msg"></div>`;
+  view=newPassword;
+  main.className="panel";
+  main.innerHTML=`<div class="eyebrow"><span class="en">Reset</span><span>${L("تغيير كلمة المرور","New password")}</span></div><h1>${L("اختر كلمة مرور جديدة","Choose a new password")}</h1><p class="lead">${L("بعدها تدخل فيها على طول.","You'll be signed in with it straight away.")}</p>
+    <form id="f"><div class="fld"><label for="pw">${L("كلمة المرور الجديدة","New password")}</label><div class="inp"><input id="pw" class="pw" type="password" dir="ltr" autocomplete="new-password" minlength="8" required><button type="button" class="eye" id="eye">${EYE}</button></div><div class="meter" id="meter"><i></i><i></i><i></i><i></i></div></div>
+    <button class="btn full" id="go"><span class="sp"></span><span>${L("حفظ كلمة المرور","Save password")}</span></button></form><div class="msg" id="msg"></div>`;
   const pw=$("pw");$("eye").onclick=()=>{pw.type=pw.type==="password"?"text":"password";};
   pw.oninput=()=>{const s=strength(pw.value);[...$("meter").children].forEach((i,k)=>i.style.background=k<s?SCOL[s]:"var(--line)");};
-  $("f").onsubmit=async ev=>{ev.preventDefault();const b=$("go"),msg=$("msg");if(pw.value.length<8)return say(msg,"كلمة المرور لازم تكون 8 أحرف أو أكثر.");
+  $("f").onsubmit=async ev=>{ev.preventDefault();const b=$("go"),msg=$("msg");if(pw.value.length<8)return say(msg,L("كلمة المرور لازم تكون 8 أحرف أو أكثر.","The password needs 8 characters or more."));
     busy(b,true);const {error}=await sb.auth.updateUser({password:pw.value});busy(b,false);
-    if(error)return say(msg,A.arError(error));recovery=false;history.replaceState(null,"",location.pathname+location.search);draw(true,null,"تم تغيير كلمة المرور.");};
+    if(error)return say(msg,ERR(error));recovery=false;history.replaceState(null,"",location.pathname+location.search);draw(true,null,L("تم تغيير كلمة المرور.","Password changed."));};
   setTimeout(()=>pw.focus(),60);
 }
 
 /* ---------- signed in ---------- */
+function boardHref(m){return `index.html?${m.league==="spl"?"league=spl&":""}club=${encodeURIComponent(m.club)}${EN?"&lang=en":""}`;}
 async function draw(fresh,note,okNote){
   const s=await A.session();
   if(!s)return signedOut();
   if(recovery)return newPassword();
+  view=()=>draw(false,note,okNote);
   document.body.classList.add("in");
   let m=null,admin=false;try{[m,admin]=await Promise.all([A.membership(),A.isPlatformAdmin()]);}catch(e){}
+  if(m)await loadLeague(m.league).catch(()=>{});
   const email=s.user.email;store.set("mc_last_email",email);
-  const R=m?A.ROLES[m.role]:null;
+  const R=m?A.ROLES[m.role]:null,CN=m?clubName(m.league,m.club):"";
   /* the pass, now filled in */
-  pass.name(email);pass.code("");
-  if(m){const c=CLUB_COLOURS[m.club]||[];pass.colours(c[0],c[1]);pass.club(`${m.club} · ${LG[m.league]}`);pass.role(R.ar);pass.zones(R);
-    loadLeague(m.league).then(D=>pass.crest(D.logos[m.club])).catch(()=>{});
-    pass.qr(new URL(boardHref(m),location.href).href);}
-  else if(admin){pass.colours();pass.club("كل الأندية · روشن والأولى");pass.role("مديرة المنصة");pass.zones({absences:1,travel:1,export:1,users:1});}
-  else{pass.colours();pass.club("بطاقة اعتماد");pass.role("بانتظار ربط الحساب بنادٍ");pass.zones(null);}
+  pass.plain();pass.name(email);pass.code("");
+  if(m){const c=CLUB_COLOURS[m.club]||[];pass.colours(c[0],c[1]);pass.club(`${CN} · ${LGN(m.league)}`);pass.role(ROLE(m.role));pass.zones(R);
+    pass.crest(LOADED[m.league]&&LOADED[m.league].logos[m.club]);pass.qr(new URL(boardHref(m),location.href).href);}
+  else if(admin){pass.colours();pass.club(L("كل الأندية · روشن والأولى","All clubs · Roshn and First Division"));pass.role(L("مديرة المنصة","Platform admin"));pass.zones({absences:1,travel:1,export:1,users:1});}
+  else{pass.colours();pass.club(L("بطاقة اعتماد","Accreditation pass"));pass.role(L("بانتظار ربط الحساب بنادٍ","Waiting to join a club"));pass.zones(null);}
   if(fresh&&(m||admin))pass.stamp();
   if(fresh&&m&&NEXT&&!note){location.href=NEXT;return;}
 
   const wide=admin||(R&&R.users);
   main.className="panel"+(wide?" wide":"");
-  let h=`<div class="eyebrow"><span class="en">${m?"Accredited":"Signed in"}</span><span>${m?"حسابك معتمد":"مسجّل الدخول"}</span></div>
-    <h1>${m?`أهلًا في ${E(m.club)}`:admin?"أهلًا، مديرة المنصة":"خطوة وحدة باقية"}</h1>
-    <p class="lead">${m?`دورك <b>${E(R.ar)}</b>، ولوحتك تفتح على الأقسام اللي تحتاجها.`:admin?"من هنا تدعين موظفي أي نادٍ في الدوريين.":"حسابك جاهز، بس لازم يرتبط بنادٍ عن طريق رمز الدعوة."}</p>
+  let h=`<div class="eyebrow"><span class="en">${m?"Accredited":"Signed in"}</span><span>${m?L("حسابك معتمد","You're accredited"):L("مسجّل الدخول","Signed in")}</span></div>
+    <h1>${m?L(`أهلًا في ${E(CN)}`,`Welcome to ${E(CN)}`):admin?L("أهلًا، مديرة المنصة","Welcome, platform admin"):L("خطوة وحدة باقية","One step left")}</h1>
+    <p class="lead">${m?L(`دورك <b>${E(ROLE(m.role))}</b>، ولوحتك تفتح على الأقسام اللي تحتاجها.`,`Your role is <b>${E(ROLE(m.role))}</b>. Your board opens on the sections you use.`)
+      :admin?L("من هنا تدعين موظفي أي نادٍ في الدوريين.","Invite staff for any club in either league from here.")
+      :L("حسابك جاهز، بس لازم يرتبط بنادٍ عن طريق رمز الدعوة.","Your account is ready. It needs an invite code to join a club.")}</p>
     ${note?`<div class="msg err">${E(note)}</div>`:""}${okNote?`<div class="msg ok">${E(okNote)}</div>`:""}
-    <div class="card"><div class="acts">${m?`<a class="btn" href="${E(boardHref(m))}">افتح لوحة ${E(m.club)} ←</a>`:""}${admin&&!m?`<a class="btn" href="all.html">كل الأندية ←</a>`:""}<button class="btn o" id="out">تسجيل الخروج</button></div>
-    <p class="mut" style="font-size:12.5px;margin:10px 0 0" dir="auto">مسجّل باسم <b dir="ltr">${E(email)}</b>${admin?` <span class="chip">مديرة المنصة</span>`:""}</p></div>`;
-  if(!m&&!admin)h+=`<div class="card"><div class="ch"><div><h3>عندك رمز دعوة؟</h3><small>الرمز يشتغل لإيميلك فقط، ومرة وحدة.</small></div><span class="en">Invite</span></div>
-    <form id="cf"><div class="codebox"><input id="cd" dir="ltr" autocomplete="one-time-code" autocapitalize="characters" maxlength="8" aria-label="رمز الدعوة"><div class="slots" id="slots">${"<span></span>".repeat(8)}</div></div>
-    <button class="btn full" id="claim" style="margin-top:12px"><span class="sp"></span><span>ربط حسابي بالنادي</span></button></form><div class="msg" id="cmsg"></div></div>`;
-  if(wide)h+=`<div class="card" id="mg"><div class="ch"><div><h3>موظفو النادي</h3><small>ادعُ موظفًا بإيميله ودوره. يوصله رابط واحد يفتح له التسجيل جاهز.</small></div><span class="en">Staff</span></div><div id="mgIn"></div></div>`;
+    <div class="card"><div class="acts">${m?`<a class="btn" href="${E(boardHref(m))}">${L(`افتح لوحة ${E(CN)} ←`,`Open ${E(CN)} board →`)}</a>`:""}${admin&&!m?`<a class="btn" href="all.html${EN?"?lang=en":""}">${L("كل الأندية ←","All clubs →")}</a>`:""}<button class="btn o" id="out">${L("تسجيل الخروج","Sign out")}</button></div>
+    <p class="mut" style="font-size:12.5px;margin:10px 0 0">${L("مسجّل باسم","Signed in as")} <b dir="ltr">${E(email)}</b>${admin?` <span class="chip">${L("مديرة المنصة","Platform admin")}</span>`:""}</p></div>`;
+  if(!m&&!admin)h+=`<div class="card"><div class="ch"><div><h3>${L("عندك رمز دعوة؟","Got an invite code?")}</h3><small>${L("الرمز يشتغل لإيميلك فقط، ومرة وحدة.","It works once, and only for your email.")}</small></div><span class="en">Invite</span></div>
+    <form id="cf"><div class="codebox"><input id="cd" dir="ltr" autocomplete="one-time-code" autocapitalize="characters" maxlength="8" aria-label="${L("رمز الدعوة","Invite code")}"><div class="slots">${"<span></span>".repeat(8)}</div></div>
+    <button class="btn full" id="claim" style="margin-top:12px"><span class="sp"></span><span>${L("ربط حسابي بالنادي","Join my club")}</span></button></form><div class="msg" id="cmsg"></div></div>`;
+  if(wide)h+=`<div class="card" id="mg"><div class="ch"><div><h3>${L("موظفو النادي","Club staff")}</h3><small>${L("ادعُ موظفًا بإيميله ودوره. يوصله رابط واحد يفتح له التسجيل جاهز.","Invite someone by email and role. They get one link that opens sign-up ready for them.")}</small></div><span class="en">Staff</span></div><div id="mgIn"></div></div>`;
   main.innerHTML=h;
   $("out").onclick=async()=>{await sb.auth.signOut();};
-  if($("cf")){const cd=$("cd"),sl=[...$("slots").children];
-    const paint=()=>{const v=cd.value;sl.forEach((s,i)=>{s.textContent=v[i]||"";s.classList.toggle("f",!!v[i]);s.classList.toggle("cur",document.activeElement===cd&&i===Math.min(v.length,7));});pass.code(v);};
-    cd.oninput=()=>{cd.value=cd.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,8);paint();};cd.onfocus=paint;cd.onblur=paint;paint();
-    $("cf").onsubmit=async ev=>{ev.preventDefault();const b=$("claim"),msg=$("cmsg");if(cd.value.length!==8){pass.shake();return say(msg,"الرمز ثمان خانات.");}
+  if($("cf")){const cd=$("cd");codeBox(cd,v=>pass.code(v));
+    $("cf").onsubmit=async ev=>{ev.preventDefault();const b=$("claim"),msg=$("cmsg");if(cd.value.length!==8){pass.shake();return say(msg,L("الرمز ثمان خانات.","The code has 8 characters."));}
       busy(b,true);const {error}=await sb.rpc("claim_invite",{p_code:cd.value});busy(b,false);
-      if(error){pass.shake();return say(msg,A.arError(error));}draw(true);};}
+      if(error){pass.shake();return say(msg,ERR(error));}draw(true);};}
   if($("mg"))manage(m,admin);
 }
-function boardHref(m){return `index.html?${m.league==="spl"?"league=spl&":""}club=${encodeURIComponent(m.club)}`;}
 
 /* ---------- staff management ---------- */
+let mgPick=null; /* keeps the admin's chosen league and club when the language changes */
 async function manage(m,admin){
   const box=$("mgIn");
-  let lg=m?m.league:"fdl",club=m?m.club:null;
-  const roleOpts=Object.entries(A.ROLES).map(([k,r])=>`<option value="${k}">${E(r.ar)}</option>`).join("");
-  box.innerHTML=`${admin?`<div class="grid2" style="margin-bottom:12px"><div class="inp"><select id="selLg" aria-label="الدوري"><option value="fdl">دوري الأولى</option><option value="spl">دوري روشن</option></select></div><div class="inp"><select id="selClub" aria-label="النادي"></select></div></div>`:""}
-    <form id="invF" class="invite"><div class="fld" style="margin:0"><label for="iEm">إيميل الموظف</label><div class="inp"><input id="iEm" type="email" dir="ltr" placeholder="name@club.sa" autocomplete="off"></div></div>
-      <div class="fld" style="margin:0"><label for="iRole">الدور</label><div class="inp"><select id="iRole">${roleOpts}</select></div></div>
-      <button class="btn" id="iGo"><span class="sp"></span><span>دعوة</span></button></form>
+  let lg=(mgPick&&mgPick.lg)||(m?m.league:"fdl"),club=(mgPick&&mgPick.club)||(m?m.club:null);
+  const roleOpts=Object.keys(A.ROLES).map(k=>`<option value="${k}">${E(ROLE(k))}</option>`).join("");
+  box.innerHTML=`${admin?`<div class="grid2" style="margin-bottom:12px"><div class="inp"><select id="selLg" aria-label="${L("الدوري","League")}"><option value="fdl">${LGN("fdl")}</option><option value="spl">${LGN("spl")}</option></select></div><div class="inp"><select id="selClub" aria-label="${L("النادي","Club")}"></select></div></div>`:""}
+    <form id="invF" class="invite"><div class="fld" style="margin:0"><label for="iEm">${L("إيميل الموظف","Staff email")}</label><div class="inp"><input id="iEm" type="email" dir="ltr" placeholder="name@club.sa" autocomplete="off"></div></div>
+      <div class="fld" style="margin:0"><label for="iRole">${L("الدور","Role")}</label><div class="inp"><select id="iRole">${roleOpts}</select></div></div>
+      <button class="btn" id="iGo"><span class="sp"></span><span>${L("دعوة","Invite")}</span></button></form>
     <div class="rolehelp" id="rh"></div><div class="hint" id="iH"></div><div class="msg" id="imsg"></div>
     <div id="lists" style="margin-top:16px"></div>`;
   const iRole=$("iRole");
-  const help=()=>{const r=A.ROLES[iRole.value];$("rh").innerHTML=ZONES.map(z=>`<span class="${z[2](r)?"on":""}">${z[2](r)?"✓":"—"} ${z[1]}</span>`).join("");};
+  const help=()=>{const r=A.ROLES[iRole.value];$("rh").innerHTML=ZONES.map(z=>`<span class="${z[3](r)?"on":""}">${z[3](r)?"✓":"—"} ${L(z[1],z[2])}</span>`).join("");};
   iRole.onchange=help;help();
-  $("iEm").addEventListener("blur",()=>{const s=typo($("iEm").value.trim());$("iH").innerHTML=s?`قصدك <button type="button" id="ifix">${E(s)}</button>؟`:"";if(s)$("ifix").onclick=()=>{$("iEm").value=s;$("iH").innerHTML="";};});
+  $("iEm").addEventListener("blur",()=>{const s=typo($("iEm").value.trim());$("iH").innerHTML=s?didYouMean(s):"";if(s)$("iH").querySelector(".fixit").onclick=()=>{$("iEm").value=s;$("iH").innerHTML="";};});
   if(admin){const pL=$("selLg"),pC=$("selClub");
-    const fill=async()=>{lg=pL.value;const cs=await clubs(lg);pC.innerHTML=cs.map(c=>`<option>${E(c)}</option>`).join("");if(m&&m.league===lg&&cs.includes(m.club))pC.value=m.club;club=pC.value;lists();};
-    if(m)pL.value=m.league;pL.onchange=fill;pC.onchange=()=>{club=pC.value;lists();};await fill();}
+    const fill=async keep=>{lg=pL.value;const cs=await clubs(lg);pC.innerHTML=cs.map(c=>`<option value="${E(c)}">${E(clubName(lg,c))}</option>`).join("");
+      if(keep&&cs.includes(club))pC.value=club;else if(m&&m.league===lg&&cs.includes(m.club))pC.value=m.club;club=pC.value;mgPick={lg,club};lists();};
+    pL.value=lg;pL.onchange=()=>fill(false);pC.onchange=()=>{club=pC.value;mgPick={lg,club};lists();};await fill(true);}
   else lists();
   const link=(em,code)=>{const u=new URL("account.html",location.href);u.search="";u.hash="";u.searchParams.set("invite",code);u.searchParams.set("email",em);return u.href;};
-  const invText=(em,role,code)=>`انضم للوحة مركز المباريات لنادي ${club} بدور ${A.ROLES[role].ar}.\nافتح الرابط وسجّل بإيميلك ${em}، والرمز مكتوب لك:\n${link(em,code)}\n\nرمز الدعوة: ${code}`;
+  /* the invite message goes out in both languages, whatever the page is showing */
+  const invText=(em,role,code)=>{const en=LOADED[lg]?(LOADED[lg].teams[club]||club).replace(/ FC$| SC$/,""):club;
+    return `انضم للوحة مركز المباريات لنادي ${club} بدور ${A.ROLES[role].ar}.\nافتح الرابط وسجّل بإيميلك ${em}، والرمز مكتوب لك.\n\nJoin the Match Centre board for ${en} as ${A.ROLES[role].en}.\nOpen the link and sign up with ${em}. Your code is already filled in.\n\n${link(em,code)}\n\nرمز الدعوة · Invite code: ${code}`;};
   async function lists(){
-    const L=$("lists");L.innerHTML=`<p class="empty">جارٍ التحميل…</p>`;
+    const Ls=$("lists");Ls.innerHTML=`<p class="empty">${L("جارٍ التحميل…","Loading…")}</p>`;
     const [mem,inv]=await Promise.all([sb.from("memberships").select("*").eq("league",lg).eq("club",club).order("created_at"),
       sb.from("invites").select("*").eq("league",lg).eq("club",club).order("created_at",{ascending:false})]);
-    if(mem.error||inv.error){L.innerHTML=`<div class="msg err">${E(A.arError(mem.error||inv.error))}</div>`;return;}
-    const me=(await A.session()).user.id;
-    const opts=r=>Object.entries(A.ROLES).map(([k,x])=>`<option value="${k}"${k===r?" selected":""}>${E(x.ar)}</option>`).join("");
-    L.innerHTML=`<div class="ch" style="margin:0 0 8px"><div><h3 style="font-size:14px">في ${E(club)} الآن <span class="chip">${mem.data.length}</span></h3></div></div>
-      <div class="people">${mem.data.length?mem.data.map(x=>`<div class="person"><div class="av">${E(x.email[0].toUpperCase())}</div><div style="min-width:0"><div class="em">${E(x.email)}</div><div class="sub">${E(A.ROLES[x.role].ar)}</div></div>
-        <div class="tools">${x.user_id===me?`<span class="chip">أنت</span>`:`<select data-u="${x.user_id}" aria-label="الدور">${opts(x.role)}</select><button class="btn r sm" data-del="${x.user_id}">إزالة</button>`}</div></div>`).join(""):`<p class="empty">ما فيه موظفين بعد. أول دعوة من الفورم اللي فوق.</p>`}</div>
-      ${inv.data.length?`<div class="ch" style="margin:16px 0 8px"><div><h3 style="font-size:14px">دعوات بانتظار التسجيل <span class="chip" style="background:#f3ead3;color:#7d5f1c">${inv.data.length}</span></h3></div></div>
-      <div class="people">${inv.data.map(x=>`<div class="person pend"><div class="av">✉</div><div style="min-width:0"><div class="em">${E(x.email)}</div><div class="sub">${E(A.ROLES[x.role].ar)} · <code>${E(x.code)}</code></div></div>
-        <div class="tools"><button class="btn o sm" data-cp="${E(x.code)}" data-em="${E(x.email)}" data-role="${x.role}">نسخ الرسالة</button><button class="btn o sm" data-qr="${E(x.code)}" data-em="${E(x.email)}">باركود</button><button class="btn r sm" data-cancel="${E(x.code)}">إلغاء</button></div></div>`).join("")}</div>`:""}`;
-    L.querySelectorAll("select[data-u]").forEach(s=>s.onchange=async()=>{const {error}=await sb.from("memberships").update({role:s.value}).eq("user_id",s.dataset.u);if(error)alert(A.arError(error));lists();});
-    L.querySelectorAll("[data-del]").forEach(b=>b.onclick=async()=>{if(!confirm("إزالة هذا الموظف من النادي؟"))return;const {error}=await sb.from("memberships").delete().eq("user_id",b.dataset.del);if(error)alert(A.arError(error));lists();});
-    L.querySelectorAll("[data-cancel]").forEach(b=>b.onclick=async()=>{if(!confirm("إلغاء هذي الدعوة؟ الرمز يوقف عن العمل."))return;const {error}=await sb.from("invites").delete().eq("code",b.dataset.cancel);if(error)alert(A.arError(error));lists();});
-    L.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>{const t=invText(b.dataset.em,b.dataset.role,b.dataset.cp);(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent="تم النسخ ✓";setTimeout(()=>b.textContent="نسخ الرسالة",1600);}).catch(()=>prompt("انسخ الرسالة",t));});
-    L.querySelectorAll("[data-qr]").forEach(b=>b.onclick=()=>{const d=$("dlg"),u=link(b.dataset.em,b.dataset.qr);
-      d.innerHTML=`<b style="font-size:17px">امسح وسجّل</b><p dir="ltr">${E(b.dataset.em)}</p><div class="q">${QR.svg(u,{fg:"#262c36",bg:"#ffffff",margin:2})}</div><p>الكاميرا تفتح صفحة التسجيل والرمز مكتوب. الرمز: <b dir="ltr" style="font-family:var(--mono)">${E(b.dataset.qr)}</b></p><button class="btn o" style="margin-top:12px" onclick="this.closest('dialog').close()">تم</button>`;
+    if(mem.error||inv.error){Ls.innerHTML=`<div class="msg err">${E(ERR(mem.error||inv.error))}</div>`;return;}
+    const me=(await A.session()).user.id,CN=clubName(lg,club);
+    const opts=r=>Object.keys(A.ROLES).map(k=>`<option value="${k}"${k===r?" selected":""}>${E(ROLE(k))}</option>`).join("");
+    Ls.innerHTML=`<div class="ch" style="margin:0 0 8px"><div><h3 style="font-size:14px">${L(`في ${E(CN)} الآن`,`At ${E(CN)} now`)} <span class="chip">${mem.data.length}</span></h3></div></div>
+      <div class="people">${mem.data.length?mem.data.map(x=>`<div class="person"><div class="av">${E(x.email[0].toUpperCase())}</div><div style="min-width:0"><div class="em">${E(x.email)}</div><div class="sub">${E(ROLE(x.role))}</div></div>
+        <div class="tools">${x.user_id===me?`<span class="chip">${L("أنت","You")}</span>`:`<select data-u="${x.user_id}" aria-label="${L("الدور","Role")}">${opts(x.role)}</select><button class="btn r sm" data-del="${x.user_id}">${L("إزالة","Remove")}</button>`}</div></div>`).join("")
+        :`<p class="empty">${L("ما فيه موظفين بعد. أول دعوة من الفورم اللي فوق.","No staff yet. Send the first invite with the form above.")}</p>`}</div>
+      ${inv.data.length?`<div class="ch" style="margin:16px 0 8px"><div><h3 style="font-size:14px">${L("دعوات بانتظار التسجيل","Invites waiting for sign-up")} <span class="chip" style="background:#f3ead3;color:#7d5f1c">${inv.data.length}</span></h3></div></div>
+      <div class="people">${inv.data.map(x=>`<div class="person pend"><div class="av">✉</div><div style="min-width:0"><div class="em">${E(x.email)}</div><div class="sub">${E(ROLE(x.role))} · <code>${E(x.code)}</code></div></div>
+        <div class="tools"><button class="btn o sm" data-cp="${E(x.code)}" data-em="${E(x.email)}" data-role="${x.role}">${L("نسخ الرسالة","Copy message")}</button><button class="btn o sm" data-qr="${E(x.code)}" data-em="${E(x.email)}">${L("باركود","QR code")}</button><button class="btn r sm" data-cancel="${E(x.code)}">${L("إلغاء","Cancel")}</button></div></div>`).join("")}</div>`:""}`;
+    Ls.querySelectorAll("select[data-u]").forEach(s=>s.onchange=async()=>{const {error}=await sb.from("memberships").update({role:s.value}).eq("user_id",s.dataset.u);if(error)alert(ERR(error));lists();});
+    Ls.querySelectorAll("[data-del]").forEach(b=>b.onclick=async()=>{if(!confirm(L("إزالة هذا الموظف من النادي؟","Remove this person from the club?")))return;const {error}=await sb.from("memberships").delete().eq("user_id",b.dataset.del);if(error)alert(ERR(error));lists();});
+    Ls.querySelectorAll("[data-cancel]").forEach(b=>b.onclick=async()=>{if(!confirm(L("إلغاء هذي الدعوة؟ الرمز يوقف عن العمل.","Cancel this invite? The code will stop working.")))return;const {error}=await sb.from("invites").delete().eq("code",b.dataset.cancel);if(error)alert(ERR(error));lists();});
+    Ls.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>{const t=invText(b.dataset.em,b.dataset.role,b.dataset.cp),lbl=b.textContent;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent=L("تم النسخ ✓","Copied ✓");setTimeout(()=>b.textContent=lbl,1600);}).catch(()=>prompt(L("انسخ الرسالة","Copy the message"),t));});
+    Ls.querySelectorAll("[data-qr]").forEach(b=>b.onclick=()=>{const d=$("dlg"),u=link(b.dataset.em,b.dataset.qr);
+      d.innerHTML=`<b style="font-size:17px">${L("امسح وسجّل","Scan to sign up")}</b><p dir="ltr">${E(b.dataset.em)}</p><div class="q">${QR.svg(u,{fg:"#262c36",bg:"#ffffff",margin:2})}</div><p>${L("الكاميرا تفتح صفحة التسجيل والرمز مكتوب. الرمز:","The camera opens sign-up with the code filled in. Code:")} <b dir="ltr" style="font-family:var(--mono)">${E(b.dataset.qr)}</b></p><button class="btn o" style="margin-top:12px" onclick="this.closest('dialog').close()">${L("تم","Done")}</button>`;
       d.showModal();});
   }
   $("invF").onsubmit=async ev=>{ev.preventDefault();const b=$("iGo"),msg=$("imsg"),em=$("iEm").value.trim().toLowerCase(),role=iRole.value;
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return say(msg,"اكتب إيميل صحيح.");
+    if(!okEmail(em))return say(msg,L("اكتب إيميل صحيح.","Enter a valid email."));
     busy(b,true);const {data,error}=await sb.from("invites").insert({email:em,league:lg,club,role}).select().single();busy(b,false);
-    if(error)return say(msg,A.arError(error));
+    if(error)return say(msg,ERR(error));
     const t=invText(em,role,data.code);let copied=false;try{await navigator.clipboard.writeText(t);copied=true;}catch(e){}
-    say(msg,copied?`تمت الدعوة، ونسخنا الرسالة. ألصقها لـ ${em} في واتساب أو الإيميل.`:`تمت الدعوة. الرمز ${data.code}. اضغط «نسخ الرسالة» وأرسلها لـ ${em}.`,true);
+    say(msg,copied?L(`تمت الدعوة، ونسخنا الرسالة بالعربي والإنجليزي. ألصقها لـ ${em} في واتساب أو الإيميل.`,`Invite created and the message (Arabic and English) is copied. Paste it to ${em} on WhatsApp or email.`)
+      :L(`تمت الدعوة. الرمز ${data.code}. اضغط «نسخ الرسالة» وأرسلها لـ ${em}.`,`Invite created. Code ${data.code}. Press “Copy message” and send it to ${em}.`),true);
     $("iEm").value="";lists();};
 }
 
 sb.auth.onAuthStateChange(ev=>{
   if(ev==="PASSWORD_RECOVERY"){recovery=true;newPassword();}
-  else if(ev==="SIGNED_OUT"){pass.colours();const p=$("pPh");p.textContent="؟";if(!$("pBar").classList.contains("bar"))$("pBar").outerHTML='<div class="bar" id="pBar"></div>';bars(hash("match centre"));signedOut("in");}
+  else if(ev==="SIGNED_OUT"){mgPick=null;pass.plain();bars(hash("match centre"));$("pPh").textContent="?";signedOut("in");}
 });
 const s0=await A.session();
 if(s0&&pendingCode)await afterAuth(false);else draw(false);

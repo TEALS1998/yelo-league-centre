@@ -51,5 +51,22 @@
     if (/could not load/i.test(m)) return "تعذّر الاتصال بخدمة الحسابات. تأكد من الإنترنت وحدّث الصفحة.";
     return m || "صار خطأ غير متوقع.";
   }
-  window.MC_AUTH = { ready, session, membership, isPlatformAdmin, ROLES, arError, SB_URL };
+  /* the same errors in English, for the English view */
+  function enError(e) {
+    const m = String((e && (e.message || e.error_description)) || e || "");
+    if (/Invalid login credentials/i.test(m)) return "The email or password is wrong.";
+    if (/already registered|already been registered/i.test(m)) return "This email already has an account. Sign in instead.";
+    if (/Email not confirmed/i.test(m)) return "This account needs its email confirmed. Ask the platform admin.";
+    if (/Password should be at least/i.test(m)) return "The password is too short. Use 8 characters or more.";
+    if (/invite code not found/i.test(m)) return "That invite code doesn't exist or has been used.";
+    if (/made for another email/i.test(m)) return "This code was made for another email. Sign up with the email you were invited on.";
+    if (/Error sending (recovery|confirmation|magic link)? ?email|sending.*email/i.test(m)) return "We couldn't send the email right now. Email sending is limited for the moment, so ask your club admin or the platform admin for help.";
+    if (/should be different from the old/i.test(m)) return "The new password must be different from the old one.";
+    if (/Unable to validate email|invalid format|is invalid/i.test(m)) return "That email address isn't valid.";
+    if (/security purposes|only request this after/i.test(m)) return "To protect your account, wait a minute before asking again.";
+    if (/rate limit/i.test(m)) return "Too many attempts. Wait a few minutes and try again.";
+    if (/could not load/i.test(m)) return "Couldn't reach the account service. Check your connection and refresh.";
+    return m || "Something unexpected went wrong.";
+  }
+  window.MC_AUTH = { ready, session, membership, isPlatformAdmin, ROLES, arError, enError, SB_URL };
 })();
