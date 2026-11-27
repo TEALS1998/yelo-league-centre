@@ -524,7 +524,7 @@ tr.z1 td.pos::before{animation:glowbar 2.4s ease-in-out infinite}
 </main>
 <footer><span>Source: the league and club pages on <a href="https://www.saff.com.sa/championship.php?id=416" target="_blank" rel="noopener">saff.com.sa</a>, updated every two minutes. Weather: Open-Meteo. Times are Saudi time.</span><span class="ar">المصدر: صفحات الدوري والأندية على موقع الاتحاد السعودي لكرة القدم، وتتحدث كل دقيقتين.</span><span style="flex-basis:100%">Designed and developed by <b>Tareem Alsaggaf</b> · © 2026<span class="ar" style="display:block">تصميم وتطوير <b>تريم إياد السقاف</b> · جميع الحقوق محفوظة</span></span></footer>
 
-<script>/* Which league: ?league=spl is the Saudi Pro League (دوري روشن), anything else the First Division League (دوري يلو). */
+<script>/* Which league: ?league=spl is the Saudi Pro League (دوري روشن), anything else the First Division League (دوري الأولى). */
 window.LG=new URLSearchParams(location.search).get("league")==="spl"?"spl":"fdl";window.LGF=window.LG==="spl"?"-spl":"";window.LGQ=window.LG==="spl"?"league=spl&":"";
 /* Live data: always load the newest data file (one fresh copy a minute, never a stale cache). */
 document.write('<script src="data'+LGF+'.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
@@ -549,7 +549,7 @@ for(const t of Object.keys(L.teams||{}))if(!L.logos[t])L.logos[t]=ph(t);})();</s
 const L=window.LEAGUE_DATA;if(!L)return;
 const S=L.seasons[L.current],TN=t=>L.teams[t]||t,LOGO=t=>L.logos[t]||"";
 /* the two leagues: names, table zones and the switch */
-const SPL=window.LG==="spl",LN=SPL?{en:"Saudi Pro League",ar:"دوري روشن",full:"دوري روشن السعودي",short:"SPL"}:{en:"First Division League",ar:"دوري يلو",full:"دوري يلو للدرجة الأولى",short:"FDL"};
+const SPL=window.LG==="spl",LN=SPL?{en:"Saudi Pro League",ar:"دوري روشن",full:"دوري روشن السعودي",short:"SPL"}:{en:"First Division League",ar:"دوري الأولى",full:"دوري الدرجة الأولى للمحترفين",short:"FDL"};
 const ZN=p=>SPL?(p===1?"z1":p>=16?"z3":""):(p<=2?"z1":p<=6?"z2":"");
 document.title=`${LN.en} · All clubs | ${LN.ar} · كل الأندية`;
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -572,7 +572,7 @@ document.getElementById("strip").innerHTML=rows.map((r,k)=>`<a class="cl" href="
 document.getElementById("lgEn").textContent=`${LN.en} · All clubs · ${S.label[0]}`;
 {const a=document.querySelector(".brand.arb b.ar");if(a)a.textContent=`مركز مباريات ${LN.ar}`;const mk=document.querySelector("img.mark");if(mk&&SPL){mk.style.display="none";}
  const lg=document.querySelector(".legend");if(lg&&SPL)lg.innerHTML=`<span><i style="background:var(--promo)"></i>Champion · البطل</span><span><i style="background:var(--loss)"></i>Relegation · الهبوط</span><span><i style="background:var(--win)"></i>Win · فوز</span><span><i style="background:var(--draw)"></i>Draw · تعادل</span><span><i style="background:var(--loss)"></i>Loss · خسارة</span>`;
- const sw=document.getElementById("lgSw");if(sw)sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري يلو<small>First Division</small></a>`;}
+ const sw=document.getElementById("lgSw");if(sw)sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري الأولى<small>First Division</small></a>`;}
 document.getElementById("lgAr").textContent=`كل الأندية · ${S.label[1]}`;
 if(L.lastChecked){const [y,m,x]=L.lastChecked.split("-").map(Number);document.getElementById("checked").insertAdjacentHTML("beforeend",`SAFF checked ${x} ${ME[m-1]} <span class="ar">آخر تحقق ${x} ${MA[m-1]}</span>`);}
 
@@ -922,7 +922,7 @@ document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=
   <script>document.write('<script src="discipline-pending.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
 <script src="discipline.js?v=20261125"></script>
 <script>/* the league's official accounts */
-(()=>{const S=window.SOCIAL;if(S){const spl=window.LG==="spl";const a=spl?S.spl:S.league;if(a)drawSocial(document.getElementById("soc"),a,spl?"دوري روشن":"دوري يلو");}})();</script>
+(()=>{const S=window.SOCIAL;if(S){const spl=window.LG==="spl";const a=spl?S.spl:S.league;if(a)drawSocial(document.getElementById("soc"),a,spl?"دوري روشن":"دوري الأولى");}})();</script>
 <style>
 /* one header for the league page and every club page: identity on the left, league and club pickers on the right,
    data status on a slim line underneath */
@@ -957,7 +957,7 @@ document.querySelectorAll(".rv").forEach((e,i)=>{if(io){e.style.transitionDelay=
   const tsp=ti.querySelector(".tsp"),SPL=window.LG==="spl";
   let sw=document.getElementById("lgSw");
   if(!sw){sw=document.createElement("nav");sw.className="lgsw";sw.id="lgSw";sw.setAttribute("aria-label","League · الدوري");
-    sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري يلو<small>First Division</small></a>`;}
+    sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري الأولى<small>First Division</small></a>`;}
   /* right-hand group, always in this order: league, club, season, reports */
   const club=document.getElementById("clubSel"),clubW=club&&club.closest("label"),sea=document.getElementById("seasonSel"),seaW=sea&&sea.closest("label");
   const rb=ti.querySelector('[aria-label="Reports"]'),rep=rb&&(rb.closest(".rpwrap")||rb);

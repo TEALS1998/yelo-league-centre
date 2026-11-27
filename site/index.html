@@ -2003,8 +2003,8 @@ document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');i
 
 <script>/* Author and ownership. AlUla SC Match Centre, designed and built 2026. */
 window.AUTHOR={en:"Tareem Alsaggaf",ar:"تريم إياد السقاف"};</script>
-<script>/* Which league: ?league=spl is the Saudi Pro League (دوري روشن), anything else the First Division League (دوري يلو). */
-window.LG=new URLSearchParams(location.search).get("league")==="spl"?"spl":"fdl";window.LGN=window.LG==="spl"?{en:"Saudi Pro League",ar:"دوري روشن"}:{en:"First Division League",ar:"دوري يلو"};window.LGF=window.LG==="spl"?"-spl":"";window.LGQ=window.LG==="spl"?"league=spl&":"";
+<script>/* Which league: ?league=spl is the Saudi Pro League (دوري روشن), anything else the First Division League (دوري الأولى). */
+window.LG=new URLSearchParams(location.search).get("league")==="spl"?"spl":"fdl";window.LGN=window.LG==="spl"?{en:"Saudi Pro League",ar:"دوري روشن"}:{en:"First Division League",ar:"دوري الأولى"};window.LGF=window.LG==="spl"?"-spl":"";window.LGQ=window.LG==="spl"?"league=spl&":"";
 /* Live data: always load the newest data file (one fresh copy a minute, never a stale cache). */
 document.write('<script src="data'+LGF+'.js?v='+Math.floor(Date.now()/60000)+'"><\/script>');</script>
 <script src="predict.js?v=1"></script>
@@ -5961,7 +5961,7 @@ addEventListener("beforeprint",()=>document.querySelectorAll(".mo-r,.rps").forEa
   const tsp=ti.querySelector(".tsp"),SPL=window.LG==="spl";
   let sw=document.getElementById("lgSw");
   if(!sw){sw=document.createElement("nav");sw.className="lgsw";sw.id="lgSw";sw.setAttribute("aria-label","League · الدوري");
-    sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري يلو<small>First Division</small></a>`;}
+    sw.innerHTML=`<a href="all.html?league=spl" class="${SPL?"on":""}">دوري روشن<small>Pro League</small></a><a href="all.html" class="${SPL?"":"on"}">دوري الأولى<small>First Division</small></a>`;}
   /* right-hand group, always in this order: league, club, season, reports */
   const club=document.getElementById("clubSel"),clubW=club&&club.closest("label"),sea=document.getElementById("seasonSel"),seaW=sea&&sea.closest("label");
   const rb=ti.querySelector('[aria-label="Reports"]'),rep=rb&&(rb.closest(".rpwrap")||rb);
