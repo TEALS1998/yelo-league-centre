@@ -4,7 +4,7 @@
 /* weather per match: t = °C at kick off, c = sun|clear|partly|cloud|rain|storm|dust|fog,
    src = typical (same date last year) | forecast (within 14 days) | observed (after the match). Source: Open-Meteo. */
 window.LEAGUE_DATA = {
- "lastChecked": "2026-11-27",
+ "lastChecked": "2026-11-28",
  "source": "https://www.saff.com.sa/championship.php?id=416",
  "current": "2026/27",
  "teams": {
@@ -3679,7 +3679,7 @@ window.LEAGUE_DATA = {
       "t": 19,
       "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3699,7 +3699,7 @@ window.LEAGUE_DATA = {
       "t": 27,
       "c": "cloud",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3719,7 +3719,7 @@ window.LEAGUE_DATA = {
       "t": 26,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3739,7 +3739,7 @@ window.LEAGUE_DATA = {
       "t": 23,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3759,17 +3759,17 @@ window.LEAGUE_DATA = {
       "t": 30,
       "c": "clear",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
     {
      "id": "l13",
      "weather": {
-      "t": 29,
+      "t": 27,
       "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "comp": "league",
      "round": 13,
@@ -3795,10 +3795,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 23,
-      "c": "cloud",
+      "t": 24,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3815,10 +3815,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 24,
-      "c": "partly",
+      "t": 25,
+      "c": "cloud",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3836,9 +3836,9 @@ window.LEAGUE_DATA = {
      "score": null,
      "weather": {
       "t": 25,
-      "c": "clear",
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3855,10 +3855,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 20,
-      "c": "cloud",
+      "t": 23,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3878,17 +3878,17 @@ window.LEAGUE_DATA = {
       "t": 16,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
     {
      "id": "l14",
      "weather": {
-      "t": 24,
+      "t": 26,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "comp": "league",
      "round": 14,
@@ -3914,10 +3914,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 26,
-      "c": "clear",
+      "t": 27,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3934,10 +3934,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 15,
-      "c": "sun",
+      "t": 14,
+      "c": "cloud",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3954,10 +3954,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 16,
-      "c": "clear",
+      "t": 20,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3974,10 +3974,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 13,
-      "c": "sun",
+      "t": 23,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -3994,10 +3994,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 11,
-      "c": "sun",
+      "t": 20,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -4014,10 +4014,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 10,
-      "c": "clear",
+      "t": 23,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true
     },
@@ -4034,10 +4034,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 28,
-      "c": "sun",
+      "t": 17,
+      "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true,
      "changes": [
@@ -4071,10 +4071,10 @@ window.LEAGUE_DATA = {
     {
      "id": "l7",
      "weather": {
-      "t": 28,
+      "t": 22,
       "c": "sun",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "comp": "league",
      "round": 7,
@@ -4161,10 +4161,10 @@ window.LEAGUE_DATA = {
      "status": "upcoming",
      "score": null,
      "weather": {
-      "t": 25,
+      "t": 19,
       "c": "partly",
       "src": "forecast",
-      "at": "2026-11-27"
+      "at": "2026-11-28"
      },
      "roundExact": true,
      "changes": [
