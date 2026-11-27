@@ -1,0 +1,449 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:النصر · دوري روشن
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m32995-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260815T180000Z
+DTEND:20260815T200000Z
+SUMMARY:النصر 3–0 الفتح
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 1\nضد الفتح · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33014-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260821T160000Z
+DTEND:20260821T180000Z
+SUMMARY:الرياض 0–4 النصر
+LOCATION:مدينة الأمير فيصل بن فهد الرياضية (
+ الرياض)
+DESCRIPTION:دوري روشن · الجولة 2\nضد الرياض · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33026-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260825T180000Z
+DTEND:20260825T200000Z
+SUMMARY:الاتفاق 2–3 النصر
+LOCATION:ملعب نادي الاتفاق (الدمام)
+DESCRIPTION:دوري روشن · الجولة 3\nضد الاتفاق · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33034-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260828T180000Z
+DTEND:20260828T200000Z
+SUMMARY:النصر 2–1 التعاون
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 4\nضد التعاون · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33048-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260905T180000Z
+DTEND:20260905T200000Z
+SUMMARY:الاتحاد 2–1 النصر
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 5\nضد الاتحاد · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33057-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260909T180000Z
+DTEND:20260909T200000Z
+SUMMARY:النصر 2–1 أبها
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 6\nضد أبها · على 
+ أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33059-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260912T180000Z
+DTEND:20260912T200000Z
+SUMMARY:الخليج 1–1 النصر
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 7\nضد الخليج · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33074-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261009T180000Z
+DTEND:20261009T200000Z
+SUMMARY:النصر 3–0 الدرعية
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 8\nضد الدرعية · 
+ على أرضنا\nتعديل 2026-08-23: الجولة 8، من الخم
+ يس 17 إلى السبت 19 سبتمبر ← الجولة 8، من ال
+ جمعة 9 إلى الأحد 11 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33090-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261020T180000Z
+DTEND:20261020T200000Z
+SUMMARY:النصر 1–0 نيوم
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 10\nضد نيوم · على
+  أرضنا\nتعديل 2026-08-23: الجولة 10، من الخميس 
+ 15 إلى السبت 17 أكتوبر ← الجولة 10، من الأح
+ د 18 إلى الثلاثاء 20 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33099-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261023T133000Z
+DTEND:20261023T153000Z
+SUMMARY:الفيصلي 1–3 النصر
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 11\nضد الفيصلي · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33107-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261029T180000Z
+DTEND:20261029T200000Z
+SUMMARY:النصر 5–3 الخلود
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 12\nضد الخلود · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33076-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:3
+DTSTART:20261120T173000Z
+DTEND:20261120T193000Z
+SUMMARY:الأهلي 3–1 النصر
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 9\nضد الأهلي · خ
+ ارج أرضنا\nتعديل 2026-08-23: الجولة 9، من الجم
+ عة 9 إلى الأحد 11 أكتوبر ← الجولة 9، من ال
+ خميس 15 إلى السبت 17 أكتوبر\nتعديل 2026-10-13: ا
+ لجولة 9، من الخميس 15 إلى السبت 17 أكتوبر 
+ ← السبت 6 مارس\nتعديل 2026-11-09: السبت 6 مارس 
+ ← الجمعة 20 نوفمبر 20:30
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33116-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20261128T121500Z
+DTEND:20261128T141500Z
+SUMMARY:الحزم × النصر
+LOCATION:استاد مدينة الملك عبدالله الرياضية
+  (بريدة)
+DESCRIPTION:دوري روشن · الجولة 13\nضد الحزم · خا
+ رج أرضنا\nتعديل 2026-11-09: الجولة 13، من الخم
+ يس 5 إلى السبت 7 نوفمبر ← السبت 28 نوفمبر 1
+ 5:15\nتعديل 2026-11-09: ملعب نادي الحزم (الرس) ←
+  استاد مدينة الملك عبدالله الرياضية (بر
+ يدة)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33125-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261204T173000Z
+DTEND:20261204T193000Z
+SUMMARY:النصر × القادسية
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 14\nضد القادسية 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33135-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261212T173000Z
+DTEND:20261212T193000Z
+SUMMARY:النصر × الشباب
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 15\nضد الشباب · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33141-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261216T173000Z
+DTEND:20261216T193000Z
+SUMMARY:الفيحاء × النصر
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 16\nضد الفيحاء · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33153-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270101T173000Z
+DTEND:20270101T193000Z
+SUMMARY:النصر × الهلال
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 17\nضد الهلال · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33158-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270107T173000Z
+DTEND:20270107T193000Z
+SUMMARY:الفتح × النصر
+LOCATION:ميدان تمويل الأولى (الأحساء)
+DESCRIPTION:دوري روشن · الجولة 18\nضد الفتح · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c37575-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270111T170000Z
+DTEND:20270111T190000Z
+SUMMARY:النصر × الخلود
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:كأس خادم الحرمين الشريفين\nضد الخ
+ لود · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33170-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270115T150500Z
+DTEND:20270115T170500Z
+SUMMARY:النصر × الرياض
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 19\nضد الرياض · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33181-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270121T173000Z
+DTEND:20270121T193000Z
+SUMMARY:النصر × الاتفاق
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 20\nضد الاتفاق · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33190-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270129T124000Z
+DTEND:20270129T144000Z
+SUMMARY:التعاون × النصر
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 21\nضد التعاون · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33199-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270311T180000Z
+DTEND:20270311T200000Z
+SUMMARY:النصر × الاتحاد
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 22\nضد الاتحاد · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33203-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270318T180000Z
+DTEND:20270318T200000Z
+SUMMARY:أبها × النصر
+LOCATION:استاد مدينة الأمير سلطان بن عبدالع
+ زيز الرياضية (أبها)
+DESCRIPTION:دوري روشن · الجولة 23\nضد أبها · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33219-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270402T180000Z
+DTEND:20270402T200000Z
+SUMMARY:النصر × الخليج
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 24\nضد الخليج · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33227-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270408T180000Z
+DTEND:20270408T200000Z
+SUMMARY:الدرعية × النصر
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 25\nضد الدرعية · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33235-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270415T180000Z
+DTEND:20270415T200000Z
+SUMMARY:النصر × الأهلي
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 26\nضد الأهلي · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33246-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270418T180000Z
+DTEND:20270418T200000Z
+SUMMARY:نيوم × النصر
+LOCATION:استاد مدينة الملك خالد الرياضية (تب
+ وك)
+DESCRIPTION:دوري روشن · الجولة 27\nضد نيوم · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33252-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270422T180000Z
+DTEND:20270422T200000Z
+SUMMARY:النصر × الفيصلي
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 28\nضد الفيصلي · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33261-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270429T180000Z
+DTEND:20270429T200000Z
+SUMMARY:الخلود × النصر
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 29\nضد الخلود · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33268-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270506T180000Z
+DTEND:20270506T200000Z
+SUMMARY:النصر × الحزم
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 30\nضد الحزم · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33281-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270512T180000Z
+DTEND:20270512T200000Z
+SUMMARY:القادسية × النصر
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 31\nضد القادسية 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33290-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270520T180000Z
+DTEND:20270520T200000Z
+SUMMARY:الشباب × النصر
+LOCATION:اس اتش جي ارينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 32\nضد الشباب · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33297-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270524T180000Z
+DTEND:20270524T200000Z
+SUMMARY:النصر × الفيحاء
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 33\nضد الفيحاء · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33305-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270529T180000Z
+DTEND:20270529T200000Z
+SUMMARY:الهلال × النصر
+LOCATION:المملكة أرينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 34\nضد الهلال · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,241 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:الجبلين · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:l1-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:العلا 3–1 الجبلين
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد العلا · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33493-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260827T162000Z
+DTEND:20260827T182000Z
+SUMMARY:الجبلين 1–0 الجيل
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد الجيل · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33504-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260901T174000Z
+DTEND:20260901T194000Z
+SUMMARY:النجمة 1–1 الجبلين
+LOCATION:ملعب إدارة التعليم (عنيزة)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد النجمة ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33509-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260907T160500Z
+DTEND:20260907T180500Z
+SUMMARY:الجبلين 0–0 الوحدة
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد الوحدة ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33517-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260913T153000Z
+DTEND:20260913T173000Z
+SUMMARY:هجر 0–1 الجبلين
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد هجر · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33532-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260920T155500Z
+DTEND:20260920T175500Z
+SUMMARY:الجبلين 0–0 العروبة
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد العروبة 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33543-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261013T151500Z
+DTEND:20261013T171500Z
+SUMMARY:الصقر 1–3 الجبلين
+LOCATION:ملعب نادي الرائد (بريدة)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد الصقر · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33552-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261021T165000Z
+DTEND:20261021T185000Z
+SUMMARY:جدة 0–1 الجبلين
+LOCATION:ملعب نادي جدة (جدة)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد جدة · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33561-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261028T150500Z
+DTEND:20261028T170500Z
+SUMMARY:الجبلين 1–0 الرائد
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد الرائد ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33566-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261102T123000Z
+DTEND:20261102T143000Z
+SUMMARY:الجبلين 3–0 البكيرية
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد البكيري
+ ة · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:s11_5-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261108T152000Z
+DTEND:20261108T172000Z
+SUMMARY:الأخدود 0–1 الجبلين
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد الأخدود
+  · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33583-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261124T122000Z
+DTEND:20261124T142000Z
+SUMMARY:الجبلين 2–1 الزلفي
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد الزلفي 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33596-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261201T122000Z
+DTEND:20261201T142000Z
+SUMMARY:الطائي × الجبلين
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد الطائي 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33598-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261208T122000Z
+DTEND:20261208T142000Z
+SUMMARY:الجبلين × الجندل
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد الجندل 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33607-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261216T121000Z
+DTEND:20261216T141000Z
+SUMMARY:الأنوار × الجبلين
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد الأنوار
+  · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33623-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261223T122500Z
+DTEND:20261223T142500Z
+SUMMARY:الجبلين × العدالة
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد العدالة
+  · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33632-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261230T124000Z
+DTEND:20261230T144000Z
+SUMMARY:ضمك × الجبلين
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد ضمك · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l18-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20270106T123500Z
+DTEND:20270106T143500Z
+SUMMARY:الجبلين × العلا
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد العلا · 
+ على أرضنا\nتعديل undefined: الأربعاء 30 ديسمب
+ ر ← الأربعاء 6 يناير\nتعديل undefined: 15:30 ← 15
+ :35
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

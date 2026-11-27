@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Match Centre fan site · Author and rights holder: Tareem Alsaggaf · © 2026 -->
+<!-- لوحة مركز المباريات · موقع الجمهور · المؤلفة وصاحبة الحقوق: تريم إياد السقاف · © 2026 -->
+<title>مركز المباريات</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="icon" href="favicon.png">
+<style>
+:root{--m:#27333e;--s:#4a9a90;--ink:#16202a;--soft:#5d6873;--line:#e3e6ea;--bg:#f5f6f8;--card:#fff}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}
+[dir=ltr] body,html[dir=ltr] body{font-family:"Segoe UI",system-ui,sans-serif}
+a{color:inherit}
+.hero{background:linear-gradient(135deg,var(--m),color-mix(in srgb,var(--m) 70%,#000));color:#fff;padding:22px 18px 70px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -60% -10%;height:120%;background:radial-gradient(closest-side,color-mix(in srgb,var(--s) 55%,transparent),transparent);opacity:.55}
+.bar{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px;position:relative;z-index:1}
+.lang{border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:6px 14px;font:inherit;font-size:13px;cursor:pointer}
+.id{max-width:1040px;margin:26px auto 0;display:flex;align-items:center;gap:18px;position:relative;z-index:1}
+.id img{width:84px;height:84px;object-fit:contain;background:#fff;border-radius:22px;padding:8px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.id h1{margin:0;font-size:clamp(28px,5vw,44px);line-height:1.2}
+.id p{margin:2px 0 0;opacity:.85}
+main{max-width:1040px;margin:-48px auto 40px;padding:0 14px;display:grid;gap:16px;position:relative;z-index:2}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 8px 24px rgba(20,30,40,.06)}
+.card h2{margin:0 0 12px;font-size:18px}
+.next{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;text-align:center}
+.team img{width:64px;height:64px;object-fit:contain}
+.team b{display:block;margin-top:6px}
+.vs{font-size:13px;color:var(--soft)}
+.when{font-size:22px;font-weight:700;color:var(--m)}
+.cd{display:flex;justify-content:center;gap:10px;margin-top:10px;direction:ltr}
+.cd span{background:var(--bg);border-radius:10px;padding:6px 10px;min-width:58px}
+.cd b{display:block;font-size:20px;color:var(--m)}.cd small{font-size:11px;color:var(--soft)}
+.meta{margin-top:12px;color:var(--soft);font-size:14px;text-align:center}
+.btns{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.btn{border:0;border-radius:999px;padding:9px 16px;background:var(--m);color:#fff;text-decoration:none;font-size:14px;font-weight:600}
+.btn.o{background:transparent;color:var(--m);border:1px solid var(--m)}
+.alert{border-inline-start:5px solid #d9822b;background:#fff7ee}
+.alert b{color:#a85a12}
+.row{display:grid;grid-template-columns:96px 1fr auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row .d{font-size:13px;color:var(--soft)}
+.row .t{font-weight:600}
+.row .v{font-size:12px;color:var(--soft)}
+.pill{font-size:12px;border-radius:999px;padding:3px 10px;background:var(--bg);white-space:nowrap}
+.W{background:#e3f4ea;color:#1d6b3f}.D{background:#eef0f3;color:#4a5563}.L{background:#fbe6e6;color:#9b2c2c}.P{background:#fff1e0;color:#a85a12}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{color:var(--soft);font-weight:500;font-size:12px;text-align:center;padding:6px 4px;border-bottom:1px solid var(--line)}
+td{text-align:center;padding:7px 4px;border-bottom:1px solid var(--line)}
+td.n{text-align:start;font-weight:600}
+tr.us td{background:color-mix(in srgb,var(--s) 18%,#fff)}
+footer{max-width:1040px;margin:0 auto 30px;padding:0 18px;color:var(--soft);font-size:12px;text-align:center}
+.empty{color:var(--soft);font-size:14px}
+@media(max-width:760px){.two{grid-template-columns:1fr}.row{grid-template-columns:74px 1fr}.row .pill{grid-column:2;justify-self:start}.id img{width:64px;height:64px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="bar"><b id="brand"></b><button class="lang" id="lang" type="button">English</button></div>
+<div class="id"><img id="crest" alt=""><div><h1 id="name"></h1><p id="sub"></p></div></div></header>
+<main id="main"></main>
+<footer id="foot"></footer>
+<script>const CLUB_COLOURS={/* [main colour, second colour] from each club's crest */
+ "الجبلين":["#7a1f1a","#c0392b"],"الوحدة":["#9e1b22","#cfb069"],"النجمة":["#146734","#4dbc71"],"ضمك":["#0a1e53","#a30a02"],
+ "الزلفي":["#2f6f52","#f09430"],"الأنوار":["#3f5f3c","#9c9d5c"],"الصقر":["#6e2463","#d8ac4e"],"الطائي":["#3a4048","#9aa4ad"],
+ "العدالة":["#0b3351","#962948"],"الرائد":["#9a1b1c","#d23a2b"],"جدة":["#1d2f5c","#8d253c"],"العروبة":["#1f1f1f","#ffe101"],
+ "الجندل":["#b5061a","#f4081f"],"الأخدود":["#1f6f99","#6ab8e0"],"هجر":["#0d0d0d","#b9bcc2"],"البكيرية":["#5a2560","#7b4e80"],
+ "الجيل":["#0e5975","#f4d509"],
+ /* Roshn league clubs */
+ "الهلال":["#0d3fa6","#4a8fe0"],"النصر":["#0f2a5c","#f2c900"],"الاتحاد":["#1a1a1a","#f5d300"],"الأهلي":["#006b3f","#2fa36b"],
+ "القادسية":["#a8141c","#d9a441"],"نيوم":["#111418","#4890a8"],"الاتفاق":["#00533a","#c1272d"],"الدرعية":["#5a3a24","#c09060"],
+ "الخليج":["#006b35","#f0c000"],"الشباب":["#161616","#9a9a9a"],"الخلود":["#0d3b1e","#900018"],"الرياض":["#b80d0d","#2a2a2a"],
+ "الفيحاء":["#183078","#f06a00"],"الحزم":["#3a2a08","#f0a800"],"الفيصلي":["#78000a","#c0646e"],"الفتح":["#0030b4","#00b84a"],
+ "التعاون":["#0a1d4f","#e8c51a"],"أبها":["#003078","#d81e1e"]};</script>
+<script>
+(()=>{
+const q=new URLSearchParams(location.search),LG=q.get("league")==="spl"?"spl":"fdl";
+const sc=document.createElement("script");sc.src=(LG==="spl"?"data-spl.js":"data.js")+"?v="+Math.floor(Date.now()/3e5);
+sc.onload=()=>draw(q.get("club"));document.head.appendChild(sc);
+let EN=q.get("lang")==="en";
+const DA=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"],MA=["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+const DE=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],ME=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const E=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const at=m=>Date.parse(m.date+"T"+(m.time||"12:00")+":00+03:00");
+function draw(T){
+  const D=window.LEAGUE_DATA;if(!D)return;const S=D.seasons[D.current];
+  if(!T||!D.clubs[T]){document.getElementById("main").innerHTML=`<section class="card"><h2>${EN?"Choose a club":"اختر النادي"}</h2>${Object.keys(D.clubs).map(t=>`<a class="btn o" style="display:inline-block;margin:4px" href="?league=${LG}&club=${encodeURIComponent(t)}">${E(EN?D.teams[t]||t:t)}</a>`).join("")}</section>`;return;}
+  const tn=t=>EN?(D.teams[t]||t).replace(/ FC$| SC$/,""):t,vn=v=>EN?((D.venues[v]||[])[0]||v):v;
+  const LN=EN?(LG==="spl"?"Saudi Pro League":"First Division League"):(LG==="spl"?"دوري روشن":"دوري الأولى");
+  const fd=(d,t)=>{if(!d)return EN?"Date not set":"لم يُحدد";const [y,m,dd]=d.split("-").map(Number),w=new Date(Date.UTC(y,m-1,dd)).getUTCDay();return EN?`${DE[w]} ${dd} ${ME[m-1]}${t?" · "+t:""}`:`${DA[w]} ${dd} ${MA[m-1]}${t?" · "+t:""}`;};
+  const col=CLUB_COLOURS[T]||["#27333e","#4a9a90"];document.documentElement.style.setProperty("--m",col[0]);document.documentElement.style.setProperty("--s",col[1]);
+  document.documentElement.lang=EN?"en":"ar";document.documentElement.dir=EN?"ltr":"rtl";
+  const logo=t=>D.logos&&D.logos[t]?D.logos[t]:"favicon.png";
+  document.title=`${tn(T)} · ${EN?"Match Centre":"مركز المباريات"}`;
+  document.getElementById("brand").textContent=EN?"Official fixtures":"المباريات الرسمية";
+  document.getElementById("lang").textContent=EN?"العربية":"English";
+  document.getElementById("lang").onclick=()=>{EN=!EN;q.set("lang",EN?"en":"ar");history.replaceState(null,"","?"+q);draw(T);};
+  const cr=document.getElementById("crest");cr.src=logo(T);cr.alt=tn(T);
+  document.getElementById("name").textContent=tn(T);
+  const row=S.table.rows.find(r=>r[0]===T);
+  document.getElementById("sub").textContent=`${LN} · ${D.current}${row?(EN?` · ${row[1]}${["th","st","nd","rd"][(row[1]%100>10&&row[1]%100<14)?0:Math.min(row[1]%10,4)%4]||"th"} · ${row[2]} pts`:` · المركز ${row[1]} · ${row[2]} نقطة`):""}`;
+  const ms=S.matches.filter(m=>m.home===T||m.away===T).sort((a,b)=>at(a)-at(b)),now=Date.now();
+  const up=ms.filter(m=>m.status==="upcoming"&&at(m)>now-2*36e5),pp=ms.filter(m=>m.status==="postponed"),pl=ms.filter(m=>m.status==="played").reverse();
+  const ics=new URL(`feeds/${LG}/${D.clubs[T].saffId}.ics`,location.href).href,web="webcal://"+ics.replace(/^https?:\/\//,"");
+  const comp=m=>m.comp==="cup"?(EN?"King's Cup":"كأس خادم الحرمين الشريفين"):`${LN}${m.round?(EN?" · Round "+m.round:" · الجولة "+m.round):""}`;
+  let h="";
+  /* the latest schedule change, if it is recent */
+  const recent=ms.flatMap(m=>(m.changes||[]).map(c=>({m,c}))).filter(x=>x.c.at&&now-Date.parse(x.c.at)<14*864e5&&x.m.status!=="played").sort((a,b)=>Date.parse(b.c.at)-Date.parse(a.c.at))[0];
+  if(recent){const {m,c}=recent;h+=`<section class="card alert"><b>${EN?"Schedule change":"تعديل في الجدول"}</b><p style="margin:6px 0 0">${E(tn(m.home))} × ${E(tn(m.away))}: ${E(EN?c.from[0]:c.from[1])} ← ${E(EN?c.to[0]:c.to[1])}</p></section>`;}
+  const nx=up[0];
+  if(nx){h+=`<section class="card"><h2>${EN?"Next match":"المباراة القادمة"}</h2><div class="next">
+    <div class="team"><img src="${E(logo(nx.home))}" alt=""><b>${E(tn(nx.home))}</b></div>
+    <div><div class="vs">${E(comp(nx))}</div><div class="when">${E(fd(nx.date,nx.time))}</div></div>
+    <div class="team"><img src="${E(logo(nx.away))}" alt=""><b>${E(tn(nx.away))}</b></div></div>
+    <div class="cd" id="cd"></div><div class="meta">${E(vn(nx.venue))}</div>
+    <div class="btns"><a class="btn" href="${E(web)}">${EN?"Add all matches to my calendar":"أضف كل المباريات لتقويمي"}</a><a class="btn o" href="${E(ics)}">${EN?"Download calendar file":"تنزيل ملف التقويم"}</a></div></section>`;}
+  const li=(m,res)=>{const r=m.score?(m.home===T?Math.sign(m.score[0]-m.score[1]):Math.sign(m.score[1]-m.score[0])):null;
+    const pill=res?`<span class="pill ${r>0?"W":r<0?"L":"D"}">${m.score[0]}–${m.score[1]}</span>`:m.status==="postponed"?`<span class="pill P">${EN?"Postponed":"مؤجلة"}</span>`:`<span class="pill">${m.home===T?(EN?"Home":"على أرضنا"):(EN?"Away":"خارج أرضنا")}</span>`;
+    return `<div class="row"><div class="d">${E(m.status==="postponed"?(EN?"Date not set":"لم يُحدد"):fd(m.date,res?null:m.time))}</div><div><div class="t">${E(tn(m.home))} × ${E(tn(m.away))}</div><div class="v">${E(comp(m))}${res?"":" · "+E(vn(m.venue))}</div></div>${pill}</div>`;};
+  h+=`<div class="two"><section class="card"><h2>${EN?"Fixtures":"المباريات القادمة"}</h2>${[...pp,...up.slice(nx?1:0,9)].map(m=>li(m,false)).join("")||`<p class="empty">${EN?"The federation has not published more fixtures yet.":"لم ينشر الاتحاد مواعيد أخرى بعد."}</p>`}</section>
+  <section class="card"><h2>${EN?"Results":"النتائج"}</h2>${pl.slice(0,8).map(m=>li(m,true)).join("")||`<p class="empty">${EN?"No results yet.":"لا نتائج بعد."}</p>`}</section></div>`;
+  const rows=S.table.rows.slice().sort((a,b)=>a[1]-b[1]);
+  h+=`<section class="card"><h2>${EN?"League table":"الترتيب"}</h2><div style="overflow-x:auto"><table><thead><tr><th>#</th><th style="text-align:start">${EN?"Club":"النادي"}</th><th>${EN?"P":"لعب"}</th><th>${EN?"W":"فوز"}</th><th>${EN?"D":"تعادل"}</th><th>${EN?"L":"خسارة"}</th><th>${EN?"GD":"الفارق"}</th><th>${EN?"Pts":"النقاط"}</th></tr></thead><tbody>
+  ${rows.map(r=>`<tr class="${r[0]===T?"us":""}"><td>${r[1]}</td><td class="n">${E(tn(r[0]))}</td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td><td>${r[6]}</td><td dir="ltr">${r[7]-r[8]>0?"+":""}${r[7]-r[8]}</td><td><b>${r[2]}</b></td></tr>`).join("")}</tbody></table></div></section>`;
+  document.getElementById("main").innerHTML=h;
+  document.getElementById("foot").textContent=EN?`Fixtures from the Saudi Arabian Football Federation, updated automatically · checked ${D.lastChecked}`:`المواعيد من الاتحاد السعودي لكرة القدم وتتحدّث تلقائيًا · آخر تحقق ${D.lastChecked}`;
+  if(nx){const el=document.getElementById("cd"),t0=at(nx);const tick=()=>{let s=Math.max(0,Math.round((t0-Date.now())/1e3));const d=Math.floor(s/86400),hh=Math.floor(s%86400/3600),mm=Math.floor(s%3600/60);
+    el.innerHTML=[[d,EN?"days":"يوم"],[hh,EN?"hours":"ساعة"],[mm,EN?"min":"دقيقة"]].map(([v,l])=>`<span><b>${v}</b><small>${l}</small></span>`).join("");};tick();clearInterval(window.__cd);window.__cd=setInterval(tick,3e4);}
+}
+setTimeout(()=>location.reload(),15*60e3); /* stays current on a screen left open */
+})();
+</script>
+</body>
+</html>

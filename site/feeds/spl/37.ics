@@ -1,0 +1,446 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:الفيحاء · دوري روشن
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m32990-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260814T165000Z
+DTEND:20260814T185000Z
+SUMMARY:نيوم 2–1 الفيحاء
+LOCATION:استاد مدينة الملك خالد الرياضية (تب
+ وك)
+DESCRIPTION:دوري روشن · الجولة 1\nضد نيوم · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33013-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260820T180000Z
+DTEND:20260820T200000Z
+SUMMARY:الفيحاء 0–3 الهلال
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 2\nضد الهلال · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33025-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260825T161000Z
+DTEND:20260825T181000Z
+SUMMARY:التعاون 0–0 الفيحاء
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 3\nضد التعاون · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33032-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260828T160000Z
+DTEND:20260828T180000Z
+SUMMARY:الفيحاء 3–2 أبها
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 4\nضد أبها · على 
+ أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33040-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260903T155500Z
+DTEND:20260903T175500Z
+SUMMARY:الفيحاء 2–2 الخلود
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 5\nضد الخلود · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33054-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260908T180000Z
+DTEND:20260908T200000Z
+SUMMARY:الاتحاد 2–1 الفيحاء
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 6\nضد الاتحاد · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33063-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260912T180000Z
+DTEND:20260912T200000Z
+SUMMARY:الشباب 0–0 الفيحاء
+LOCATION:اس اتش جي ارينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 7\nضد الشباب · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33070-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261011T134000Z
+DTEND:20261011T154000Z
+SUMMARY:الفيحاء 1–1 الرياض
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 8\nضد الرياض · ع
+ لى أرضنا\nتعديل 2026-08-23: الجولة 8، من الخمي
+ س 17 إلى السبت 19 سبتمبر ← الجولة 8، من الج
+ معة 9 إلى الأحد 11 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33079-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261015T145000Z
+DTEND:20261015T165000Z
+SUMMARY:الخليج 2–0 الفيحاء
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 9\nضد الخليج · خ
+ ارج أرضنا\nتعديل 2026-08-23: الجولة 9، من الجم
+ عة 9 إلى الأحد 11 أكتوبر ← الجولة 9، من ال
+ خميس 15 إلى السبت 17 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33088-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261019T150500Z
+DTEND:20261019T170500Z
+SUMMARY:الفيحاء 2–3 الأهلي
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 10\nضد الأهلي · ع
+ لى أرضنا\nتعديل 2026-08-23: الجولة 10، من الخم
+ يس 15 إلى السبت 17 أكتوبر ← الجولة 10، من ا
+ لأحد 18 إلى الثلاثاء 20 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33096-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261022T134000Z
+DTEND:20261022T154000Z
+SUMMARY:الحزم 2–2 الفيحاء
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 11\nضد الحزم · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33104-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261031T145500Z
+DTEND:20261031T165500Z
+SUMMARY:الفيحاء 4–1 الفيصلي
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 12\nضد الفيصلي · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33120-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261127T142000Z
+DTEND:20261127T162000Z
+SUMMARY:القادسية 2–0 الفيحاء
+LOCATION:ملعب نادي الاتفاق (الدمام)
+DESCRIPTION:دوري روشن · الجولة 13\nضد القادسية 
+ · خارج أرضنا\nتعديل 2026-11-09: الخميس 5 نوفمب
+ ر ← الجمعة 27 نوفمبر 17:20
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33122-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261205T121500Z
+DTEND:20261205T141500Z
+SUMMARY:الفيحاء × الفتح
+LOCATION:استاد مدينة الملك عبدالله الرياضية
+  (بريدة)
+DESCRIPTION:دوري روشن · الجولة 14\nضد الفتح · عل
+ ى أرضنا\nتعديل 2026-11-09: مدينة المجمعة الري
+ اضية (المجمعة) ← استاد مدينة الملك عبدا
+ لله الرياضية (بريدة)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33137-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261210T173000Z
+DTEND:20261210T193000Z
+SUMMARY:الدرعية × الفيحاء
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 15\nضد الدرعية · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33141-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261216T173000Z
+DTEND:20261216T193000Z
+SUMMARY:الفيحاء × النصر
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 16\nضد النصر · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33149-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261231T131000Z
+DTEND:20261231T151000Z
+SUMMARY:الاتفاق × الفيحاء
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 17\nضد الاتفاق · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33159-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270107T133500Z
+DTEND:20270107T153500Z
+SUMMARY:الفيحاء × نيوم
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 18\nضد نيوم · على
+  أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c37571-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270112T133000Z
+DTEND:20270112T153000Z
+SUMMARY:الرياض × الفيحاء
+LOCATION:مدينة الأمير فيصل بن فهد الرياضية (
+ الرياض)
+DESCRIPTION:كأس خادم الحرمين الشريفين\nضد الر
+ ياض · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33168-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270116T173000Z
+DTEND:20270116T193000Z
+SUMMARY:الهلال × الفيحاء
+LOCATION:المملكة أرينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 19\nضد الهلال · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33177-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270122T124000Z
+DTEND:20270122T144000Z
+SUMMARY:الفيحاء × التعاون
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 20\nضد التعاون · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33185-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270130T141500Z
+DTEND:20270130T161500Z
+SUMMARY:أبها × الفيحاء
+LOCATION:استاد مدينة الأمير سلطان بن عبدالع
+ زيز الرياضية (أبها)
+DESCRIPTION:دوري روشن · الجولة 21\nضد أبها · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33198-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270311T180000Z
+DTEND:20270311T200000Z
+SUMMARY:الخلود × الفيحاء
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 22\nضد الخلود · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33204-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270318T180000Z
+DTEND:20270318T200000Z
+SUMMARY:الفيحاء × الاتحاد
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 23\nضد الاتحاد · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33214-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270402T180000Z
+DTEND:20270402T200000Z
+SUMMARY:الفيحاء × الشباب
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 24\nضد الشباب · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33225-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270408T180000Z
+DTEND:20270408T200000Z
+SUMMARY:الرياض × الفيحاء
+LOCATION:مدينة الأمير فيصل بن فهد الرياضية (
+ الرياض)
+DESCRIPTION:دوري روشن · الجولة 25\nضد الرياض · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33232-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270415T180000Z
+DTEND:20270415T200000Z
+SUMMARY:الفيحاء × الخليج
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 26\nضد الخليج · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33238-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270418T180000Z
+DTEND:20270418T200000Z
+SUMMARY:الأهلي × الفيحاء
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 27\nضد الأهلي · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33249-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270422T180000Z
+DTEND:20270422T200000Z
+SUMMARY:الفيحاء × الحزم
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 28\nضد الحزم · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33262-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270429T180000Z
+DTEND:20270429T200000Z
+SUMMARY:الفيصلي × الفيحاء
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 29\nضد الفيصلي · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33265-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270506T180000Z
+DTEND:20270506T200000Z
+SUMMARY:الفيحاء × القادسية
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 30\nضد القادسية 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33276-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270512T180000Z
+DTEND:20270512T200000Z
+SUMMARY:الفتح × الفيحاء
+LOCATION:ميدان تمويل الأولى (الأحساء)
+DESCRIPTION:دوري روشن · الجولة 31\nضد الفتح · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33285-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270520T180000Z
+DTEND:20270520T200000Z
+SUMMARY:الفيحاء × الدرعية
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 32\nضد الدرعية · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33297-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270524T180000Z
+DTEND:20270524T200000Z
+SUMMARY:النصر × الفيحاء
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 33\nضد النصر · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33303-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270529T180000Z
+DTEND:20270529T200000Z
+SUMMARY:الفيحاء × الاتفاق
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 34\nضد الاتفاق · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

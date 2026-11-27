@@ -1,0 +1,431 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:التعاون · دوري روشن
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m32993-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260815T161500Z
+DTEND:20260815T181500Z
+SUMMARY:التعاون 0–0 الخليج
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 1\nضد الخليج · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33019-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260822T161000Z
+DTEND:20260822T181000Z
+SUMMARY:الخلود 3–2 التعاون
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 2\nضد الخلود · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33025-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260825T161000Z
+DTEND:20260825T181000Z
+SUMMARY:التعاون 0–0 الفيحاء
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 3\nضد الفيحاء · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33034-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260828T180000Z
+DTEND:20260828T200000Z
+SUMMARY:النصر 2–1 التعاون
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 4\nضد النصر · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33047-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260905T155500Z
+DTEND:20260905T175500Z
+SUMMARY:التعاون 0–0 الفتح
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 5\nضد الفتح · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33052-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260908T155500Z
+DTEND:20260908T175500Z
+SUMMARY:الحزم 1–0 التعاون
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 6\nضد الحزم · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33064-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260912T155000Z
+DTEND:20260912T175000Z
+SUMMARY:التعاون 0–6 الهلال
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 7\nضد الهلال · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33075-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261011T180000Z
+DTEND:20261011T200000Z
+SUMMARY:الشباب 3–0 التعاون
+LOCATION:اس اتش جي ارينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 8\nضد الشباب · خ
+ ارج أرضنا\nتعديل 2026-08-23: الجولة 8، من الخم
+ يس 17 إلى السبت 19 سبتمبر ← الجولة 8، من ال
+ جمعة 9 إلى الأحد 11 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33083-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261017T180000Z
+DTEND:20261017T200000Z
+SUMMARY:الدرعية 1–1 التعاون
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 9\nضد الدرعية · 
+ خارج أرضنا\nتعديل 2026-08-23: الجولة 9، من الج
+ معة 9 إلى الأحد 11 أكتوبر ← الجولة 9، من ا
+ لخميس 15 إلى السبت 17 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33092-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261020T151000Z
+DTEND:20261020T171000Z
+SUMMARY:التعاون 0–1 القادسية
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 10\nضد القادسية 
+ · على أرضنا\nتعديل 2026-08-23: الجولة 10، من ال
+ خميس 15 إلى السبت 17 أكتوبر ← الجولة 10، من
+  الأحد 18 إلى الثلاثاء 20 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33101-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261024T180000Z
+DTEND:20261024T200000Z
+SUMMARY:الرياض 2–1 التعاون
+LOCATION:اس اتش جي ارينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 11\nضد الرياض · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33110-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261031T133000Z
+DTEND:20261031T153000Z
+SUMMARY:التعاون 1–1 الاتفاق
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 12\nضد الاتفاق · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33112-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261128T173000Z
+DTEND:20261128T193000Z
+SUMMARY:الأهلي × التعاون
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 13\nضد الأهلي · خ
+ ارج أرضنا\nتعديل 2026-11-09: الجولة 13، من الخ
+ ميس 5 إلى السبت 7 نوفمبر ← السبت 28 نوفمبر
+  20:30
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33128-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261203T144500Z
+DTEND:20261203T164500Z
+SUMMARY:التعاون × أبها
+LOCATION:استاد مدينة الملك عبدالله الرياضية
+  (بريدة)
+DESCRIPTION:دوري روشن · الجولة 14\nضد أبها · على
+  أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33138-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261212T124000Z
+DTEND:20261212T144000Z
+SUMMARY:نيوم × التعاون
+LOCATION:استاد مدينة الملك خالد الرياضية (تب
+ وك)
+DESCRIPTION:دوري روشن · الجولة 15\nضد نيوم · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33147-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261218T173000Z
+DTEND:20261218T193000Z
+SUMMARY:التعاون × الفيصلي
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 16\nضد الفيصلي · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33150-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261231T173000Z
+DTEND:20261231T193000Z
+SUMMARY:الاتحاد × التعاون
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 17\nضد الاتحاد · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33161-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270108T144500Z
+DTEND:20270108T164500Z
+SUMMARY:الخليج × التعاون
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 18\nضد الخليج · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33172-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270115T124000Z
+DTEND:20270115T144000Z
+SUMMARY:التعاون × الخلود
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 19\nضد الخلود · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33177-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270122T124000Z
+DTEND:20270122T144000Z
+SUMMARY:الفيحاء × التعاون
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 20\nضد الفيحاء · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33190-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270129T124000Z
+DTEND:20270129T144000Z
+SUMMARY:التعاون × النصر
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 21\nضد النصر · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33194-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270311T180000Z
+DTEND:20270311T200000Z
+SUMMARY:الفتح × التعاون
+LOCATION:ميدان تمويل الأولى (الأحساء)
+DESCRIPTION:دوري روشن · الجولة 22\nضد الفتح · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33208-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270318T180000Z
+DTEND:20270318T200000Z
+SUMMARY:التعاون × الحزم
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 23\nضد الحزم · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33216-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270402T180000Z
+DTEND:20270402T200000Z
+SUMMARY:الهلال × التعاون
+LOCATION:المملكة أرينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 24\nضد الهلال · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33226-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270408T180000Z
+DTEND:20270408T200000Z
+SUMMARY:التعاون × الشباب
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 25\nضد الشباب · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33237-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270415T180000Z
+DTEND:20270415T200000Z
+SUMMARY:التعاون × الدرعية
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 26\nضد الدرعية · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33244-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270418T180000Z
+DTEND:20270418T200000Z
+SUMMARY:القادسية × التعاون
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 27\nضد القادسية 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33254-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270422T180000Z
+DTEND:20270422T200000Z
+SUMMARY:التعاون × الرياض
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 28\nضد الرياض · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33257-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270429T180000Z
+DTEND:20270429T200000Z
+SUMMARY:الاتفاق × التعاون
+LOCATION:ملعب نادي الاتفاق (الدمام)
+DESCRIPTION:دوري روشن · الجولة 29\nضد الاتفاق · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33271-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270506T180000Z
+DTEND:20270506T200000Z
+SUMMARY:التعاون × الأهلي
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 30\nضد الأهلي · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33274-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270512T180000Z
+DTEND:20270512T200000Z
+SUMMARY:أبها × التعاون
+LOCATION:استاد مدينة الأمير سلطان بن عبدالع
+ زيز الرياضية (أبها)
+DESCRIPTION:دوري روشن · الجولة 31\nضد أبها · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33291-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270520T180000Z
+DTEND:20270520T200000Z
+SUMMARY:التعاون × نيوم
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 32\nضد نيوم · على
+  أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33296-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270524T180000Z
+DTEND:20270524T200000Z
+SUMMARY:الفيصلي × التعاون
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 33\nضد الفيصلي · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33309-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270529T180000Z
+DTEND:20270529T200000Z
+SUMMARY:التعاون × الاتحاد
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 34\nضد الاتحاد · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

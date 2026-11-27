@@ -1,0 +1,300 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:العلا · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:cup-r32-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260820
+SUMMARY:العلا 3–0 الفتح
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:كأس خادم الحرمين الشريفين\nضد الف
+ تح · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l1-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260823
+DTEND;VALUE=DATE:20260824
+SUMMARY:العلا 3–1 الجبلين
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد الجبلين 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l2-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20260829
+SUMMARY:الأنوار 0–1 العلا
+LOCATION:ملعب نادي الأنوار (حوطة بني تميم)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد الأنوار 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l3-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260902
+DTEND;VALUE=DATE:20260903
+SUMMARY:العلا 2–0 الرائد
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد الرائد ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l4-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260909
+SUMMARY:ضمك 0–1 العلا
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد ضمك · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l5-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
+SUMMARY:العلا 3–0 جدة
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد جدة · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l6-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:3
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:الأخدود 1–5 العلا
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد الأخدود 
+ · خارج أرضنا\nتعديل undefined: جولة اليوم الو
+ طني، من الجمعة 18 إلى الأحد 20 سبتمبر ← ال
+ خميس 8 أكتوبر\nتعديل undefined: مدينة الأمير 
+ سلطان بن عبدالعزيز الرياضية، أبها ← اس
+ تاد مدينة الملك فهد الرياضية، الطائف\nت
+ عديل undefined: مؤجلة ← لُعبت، فاز العلا 5 مق
+ ابل 1
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l8-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:الزلفي 1–1 العلا
+LOCATION:ملعب نادي الزلفي (الزلفي)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد الزلفي ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l9-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261026T164500Z
+DTEND:20261026T184500Z
+SUMMARY:العلا 3–1 العروبة
+LOCATION:ملعب نادي أحد (المدينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد العروبة 
+ · على أرضنا\nتعديل undefined: استاد الأمير مح
+ مد بن عبدالعزيز، المدينة المنورة ← ملع
+ ب نادي أحد، المدينة المنورة
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l10-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261101T144000Z
+DTEND:20261101T164000Z
+SUMMARY:هجر 1–3 العلا
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد هجر · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l11-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261107T150000Z
+DTEND:20261107T170000Z
+SUMMARY:النجمة 1–3 العلا
+LOCATION:ملعب إدارة التعليم (عنيزة)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد النجمة 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l12-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261125T151000Z
+DTEND:20261125T171000Z
+SUMMARY:العلا 3–0 العدالة
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد العدالة
+  · على أرضنا\nتعديل undefined: ملعب نادي أحد، 
+ المدينة المنورة ← استاد الأمير محمد بن 
+ عبدالعزيز، المدينة المنورة
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l13-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261201T122000Z
+DTEND:20261201T142000Z
+SUMMARY:البكيرية × العلا
+LOCATION:ملعب نادي البكيرية (البكيرية)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد البكيري
+ ة · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l14-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261206T123500Z
+DTEND:20261206T143500Z
+SUMMARY:العلا × الصقر
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد الصقر · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l7-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:5
+DTSTART:20261211T123500Z
+DTEND:20261211T143500Z
+SUMMARY:العلا × الجيل
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد الجيل · 
+ على أرضنا\nتعديل undefined: لم يُعلن موعد جدي
+ د ← الجمعة 11 ديسمبر\nتعديل undefined: لم يُحد
+ د ← 15:35\nتعديل undefined: مؤجلة ← أُعيدت جدول
+ تها
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l15-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261216T151500Z
+DTEND:20261216T171500Z
+SUMMARY:الوحدة × العلا
+LOCATION:استاد مدينة الملك عبدالعزيز الرياض
+ ية (مكة المكرمة)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد الوحدة 
+ · خارج أرضنا\nتعديل undefined: الجمعة 11 ديسمب
+ ر ← الأربعاء 16 ديسمبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l16-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261221T123500Z
+DTEND:20261221T143500Z
+SUMMARY:العلا × الطائي
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد الطائي 
+ · على أرضنا\nتعديل undefined: الأربعاء 16 ديسم
+ بر ← الاثنين 21 ديسمبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l17-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261228T123000Z
+DTEND:20261228T143000Z
+SUMMARY:الجندل × العلا
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد الجندل 
+ · خارج أرضنا\nتعديل undefined: الاثنين 21 ديسم
+ بر ← الاثنين 28 ديسمبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l19-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20270104T125000Z
+DTEND:20270104T145000Z
+SUMMARY:مؤجلة: العلا × الأنوار
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 19\nضد الأنوار
+  · على أرضنا\nالموعد الجديد لم يُحدد بعد\
+ nتعديل 2026-11-22: الاثنين 4 يناير ← لم يُحدد\
+ nتعديل 2026-11-22: الاثنين 4 يناير 15:50 ← مؤجلة
+  · لم يُحدد الموعد الجديد
+STATUS:TENTATIVE
+END:VEVENT
+BEGIN:VEVENT
+UID:l18-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20270106T123500Z
+DTEND:20270106T143500Z
+SUMMARY:الجبلين × العلا
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد الجبلين
+  · خارج أرضنا\nتعديل undefined: الأربعاء 30 دي
+ سمبر ← الأربعاء 6 يناير\nتعديل undefined: 15:30 
+ ← 15:35
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cup-r16-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:4
+DTSTART:20270111T140500Z
+DTEND:20270111T160500Z
+SUMMARY:العلا × الأهلي
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:كأس خادم الحرمين الشريفين\nضد الأ
+ هلي · على أرضنا\nتعديل undefined: لم يُحدد ← 1
+ 7:05\nتعديل undefined: الأهلي على أرضه ← العلا 
+ على أرضه\nتعديل undefined: لم يُحدد ← المدين
+ ة المنورة
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

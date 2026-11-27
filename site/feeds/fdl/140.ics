@@ -1,0 +1,239 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:هجر · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m33487-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260823T155000Z
+DTEND:20260823T175000Z
+SUMMARY:هجر 0–3 جدة
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد جدة · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33497-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260828T160500Z
+DTEND:20260828T180500Z
+SUMMARY:الرائد 2–3 هجر
+LOCATION:ملعب نادي الرائد (بريدة)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد الرائد ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33505-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260902T154000Z
+DTEND:20260902T174000Z
+SUMMARY:هجر 1–1 الأنوار
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد الأنوار 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33511-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260908T155000Z
+DTEND:20260908T175000Z
+SUMMARY:الزلفي 0–0 هجر
+LOCATION:ملعب نادي الزلفي (الزلفي)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد الزلفي ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33517-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260913T153000Z
+DTEND:20260913T173000Z
+SUMMARY:هجر 0–1 الجبلين
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد الجبلين 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33534-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260920T170000Z
+DTEND:20260920T190000Z
+SUMMARY:الجيل 0–0 هجر
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد الجيل · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33547-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261020T144500Z
+DTEND:20261020T164500Z
+SUMMARY:هجر 2–4 النجمة
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد النجمة ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33554-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261026T150000Z
+DTEND:20261026T170000Z
+SUMMARY:البكيرية 2–1 هجر
+LOCATION:ملعب نادي البكيرية (البكيرية)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد البكيري
+ ة · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l10-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261101T144000Z
+DTEND:20261101T164000Z
+SUMMARY:هجر 1–3 العلا
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد العلا · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:s11_1-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261107T123000Z
+DTEND:20261107T143000Z
+SUMMARY:الجندل 0–0 هجر
+LOCATION:استاد جامعة الجوف (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد الجندل 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33585-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261124T143000Z
+DTEND:20261124T163000Z
+SUMMARY:هجر 2–1 الطائي
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد الطائي 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33592-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261130T123500Z
+DTEND:20261130T143500Z
+SUMMARY:الأخدود × هجر
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد الأخدود
+  · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33605-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261207T143000Z
+DTEND:20261207T163000Z
+SUMMARY:هجر × الوحدة
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد الوحدة 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33537-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:3
+DTSTART:20261211T143500Z
+DTEND:20261211T163500Z
+SUMMARY:هجر × العروبة
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد العروبة 
+ · على أرضنا\nتعديل 2026-10-13: الأربعاء 14 أكت
+ وبر 17:55، ملعب نادي هجر ← مؤجلة · لم يُعل
+ ن موعد جديد\nتعديل undefined: لم يُعلن موعد ج
+ ديد ← الجمعة 11 ديسمبر 17:35\nتعديل undefined: م
+ لعب نادي هجر (الأحساء) ← ملعب مدينة الأم
+ ير عبدالله بن جلوي الرياضية (الأحساء)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33614-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261216T143000Z
+DTEND:20261216T163000Z
+SUMMARY:العدالة × هجر
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد العدالة
+  · خارج أرضنا\nتعديل undefined: السبت 12 ديسمب
+ ر 17:30 ← الأربعاء 16 ديسمبر 17:30
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33624-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261223T143500Z
+DTEND:20261223T163500Z
+SUMMARY:هجر × ضمك
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد ضمك · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33631-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261230T122000Z
+DTEND:20261230T142000Z
+SUMMARY:الصقر × هجر
+LOCATION:ملعب نادي الرائد (بريدة)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد الصقر · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33642-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270106T153000Z
+DTEND:20270106T173000Z
+SUMMARY:جدة × هجر
+LOCATION:استاد مدينة الملك عبدالعزيز الرياض
+ ية (مكة المكرمة)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد جدة · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

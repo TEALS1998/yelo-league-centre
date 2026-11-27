@@ -1,0 +1,311 @@
+{
+ "club": "ضمك",
+ "en": "Damac",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+ "homeEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+ "city": "أبها",
+ "table": {
+  "team": "ضمك",
+  "pos": 4,
+  "pts": 22,
+  "p": 12,
+  "w": 6,
+  "d": 4,
+  "l": 2,
+  "gf": 20,
+  "ga": 14
+ },
+ "matches": [
+  {
+   "id": "m33488",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-23",
+   "time": "19:15",
+   "home": "الصقر",
+   "away": "ضمك",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33498",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-28",
+   "time": "20:50",
+   "home": "ضمك",
+   "away": "العروبة",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33506",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-09-02",
+   "time": "19:15",
+   "home": "الوحدة",
+   "away": "ضمك",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    2,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "l4",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-08",
+   "time": null,
+   "home": "ضمك",
+   "away": "العلا",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33520",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-14",
+   "time": "18:50",
+   "home": "البكيرية",
+   "away": "ضمك",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    1,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33531",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-20",
+   "time": "18:45",
+   "home": "ضمك",
+   "away": "العدالة",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    3,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33538",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-10-12",
+   "time": "18:15",
+   "home": "النجمة",
+   "away": "ضمك",
+   "venue": "ملعب إدارة التعليم (عنيزة)",
+   "venueEn": "Education Department Stadium, Unaizah",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33545",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-19",
+   "time": "18:20",
+   "home": "ضمك",
+   "away": "الطائي",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    4,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33559",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-28",
+   "time": "15:35",
+   "home": "الجندل",
+   "away": "ضمك",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33569",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-03",
+   "time": "15:35",
+   "home": "ضمك",
+   "away": "الأخدود",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    4,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_3",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-08",
+   "time": "15:30",
+   "home": "ضمك",
+   "away": "الأنوار",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33582",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-23",
+   "time": "18:15",
+   "home": "جدة",
+   "away": "ضمك",
+   "venue": "ملعب نادي جدة (جدة)",
+   "venueEn": "Jeddah Club Stadium, Jeddah",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33589",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-29",
+   "time": "15:30",
+   "home": "ضمك",
+   "away": "الجيل",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33603",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-07",
+   "time": "15:15",
+   "home": "الزلفي",
+   "away": "ضمك",
+   "venue": "ملعب نادي الزلفي (الزلفي)",
+   "venueEn": "Al Zulfi Club Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33613",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-15",
+   "time": "15:30",
+   "home": "ضمك",
+   "away": "الرائد",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33624",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-23",
+   "time": "17:35",
+   "home": "هجر",
+   "away": "ضمك",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33632",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-30",
+   "time": "15:40",
+   "home": "ضمك",
+   "away": "الجبلين",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33641",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-06",
+   "time": "15:45",
+   "home": "ضمك",
+   "away": "الصقر",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

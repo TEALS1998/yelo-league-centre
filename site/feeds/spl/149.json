@@ -1,0 +1,580 @@
+{
+ "club": "نيوم",
+ "en": "NEOM",
+ "league": "spl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "استاد مدينة الملك خالد الرياضية (تبوك)",
+ "homeEn": "King Khalid Sports City Stadium, Tabuk",
+ "city": "تبوك",
+ "table": {
+  "team": "نيوم",
+  "pos": 6,
+  "pts": 22,
+  "p": 13,
+  "w": 7,
+  "d": 1,
+  "l": 5,
+  "gf": 18,
+  "ga": 11
+ },
+ "matches": [
+  {
+   "id": "m32990",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-14",
+   "time": "19:50",
+   "home": "نيوم",
+   "away": "الفيحاء",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33016",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-21",
+   "time": "21:00",
+   "home": "الفيصلي",
+   "away": "نيوم",
+   "venue": "مدينة المجمعة الرياضية (المجمعة)",
+   "venueEn": "Al Majmaah Sports City Stadium",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33022",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-08-24",
+   "time": "19:40",
+   "home": "نيوم",
+   "away": "القادسية",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33031",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-08-28",
+   "time": "18:50",
+   "home": "الرياض",
+   "away": "نيوم",
+   "venue": "مدينة الأمير فيصل بن فهد الرياضية (الرياض)",
+   "venueEn": "Prince Faisal bin Fahd Sports City, Riyadh",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33041",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-03",
+   "time": "19:30",
+   "home": "نيوم",
+   "away": "الخليج",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33050",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-07",
+   "time": "21:00",
+   "home": "الهلال",
+   "away": "نيوم",
+   "venue": "المملكة أرينا (الرياض)",
+   "venueEn": "Kingdom Arena, Riyadh",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33066",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-09-13",
+   "time": "19:20",
+   "home": "نيوم",
+   "away": "الفتح",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "played",
+   "score": [
+    4,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33071",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-10",
+   "time": "16:50",
+   "home": "الحزم",
+   "away": "نيوم",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر",
+     "to": "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33084",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-17",
+   "time": "18:40",
+   "home": "نيوم",
+   "away": "الاتفاق",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "to": "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33090",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-10-20",
+   "time": "21:00",
+   "home": "النصر",
+   "away": "نيوم",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر",
+     "to": "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33102",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-10-24",
+   "time": "17:00",
+   "home": "نيوم",
+   "away": "أبها",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "played",
+   "score": [
+    2,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33111",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-10-30",
+   "time": "17:50",
+   "home": "الدرعية",
+   "away": "نيوم",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    1,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33117",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-27",
+   "time": "20:30",
+   "home": "الاتحاد",
+   "away": "نيوم",
+   "venue": "مدينة الأمير عبدالله الفيصل الرياضية (جدة)",
+   "venueEn": "Prince Abdullah Al-Faisal Sports City, Jeddah",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 13، من الخميس 5 إلى السبت 7 نوفمبر",
+     "to": "الجمعة 27 نوفمبر 20:30",
+     "at": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "m33129",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-04",
+   "time": "15:40",
+   "home": "نيوم",
+   "away": "الخلود",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33138",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-12",
+   "time": "15:40",
+   "home": "نيوم",
+   "away": "التعاون",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33146",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-16",
+   "time": "17:45",
+   "home": "الشباب",
+   "away": "نيوم",
+   "venue": "اس اتش جي ارينا (الرياض)",
+   "venueEn": "SHG Arena, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33156",
+   "comp": "league",
+   "round": 17,
+   "date": "2027-01-01",
+   "time": "17:00",
+   "home": "نيوم",
+   "away": "الأهلي",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33159",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-07",
+   "time": "16:35",
+   "home": "الفيحاء",
+   "away": "نيوم",
+   "venue": "مدينة المجمعة الرياضية (المجمعة)",
+   "venueEn": "Al Majmaah Sports City Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "c37576",
+   "comp": "cup",
+   "round": null,
+   "date": "2027-01-12",
+   "time": "20:00",
+   "home": "القادسية",
+   "away": "نيوم",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33174",
+   "comp": "league",
+   "round": 19,
+   "date": "2027-01-16",
+   "time": "16:00",
+   "home": "نيوم",
+   "away": "الفيصلي",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33182",
+   "comp": "league",
+   "round": 20,
+   "date": "2027-01-23",
+   "time": "20:30",
+   "home": "القادسية",
+   "away": "نيوم",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33192",
+   "comp": "league",
+   "round": 21,
+   "date": "2027-01-30",
+   "time": "16:15",
+   "home": "نيوم",
+   "away": "الرياض",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33197",
+   "comp": "league",
+   "round": 22,
+   "date": "2027-03-11",
+   "time": "21:00",
+   "home": "الخليج",
+   "away": "نيوم",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33210",
+   "comp": "league",
+   "round": 23,
+   "date": "2027-03-18",
+   "time": "21:00",
+   "home": "نيوم",
+   "away": "الهلال",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33213",
+   "comp": "league",
+   "round": 24,
+   "date": "2027-04-02",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "نيوم",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33228",
+   "comp": "league",
+   "round": 25,
+   "date": "2027-04-08",
+   "time": "21:00",
+   "home": "نيوم",
+   "away": "الحزم",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33230",
+   "comp": "league",
+   "round": 26,
+   "date": "2027-04-15",
+   "time": "21:00",
+   "home": "الاتفاق",
+   "away": "نيوم",
+   "venue": "ملعب نادي الاتفاق (الدمام)",
+   "venueEn": "Al Ettifaq Club Stadium (EGO Stadium), Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33246",
+   "comp": "league",
+   "round": 27,
+   "date": "2027-04-18",
+   "time": "21:00",
+   "home": "نيوم",
+   "away": "النصر",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33247",
+   "comp": "league",
+   "round": 28,
+   "date": "2027-04-22",
+   "time": "21:00",
+   "home": "أبها",
+   "away": "نيوم",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33264",
+   "comp": "league",
+   "round": 29,
+   "date": "2027-04-29",
+   "time": "21:00",
+   "home": "نيوم",
+   "away": "الدرعية",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33273",
+   "comp": "league",
+   "round": 30,
+   "date": "2027-05-06",
+   "time": "21:00",
+   "home": "نيوم",
+   "away": "الاتحاد",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33279",
+   "comp": "league",
+   "round": 31,
+   "date": "2027-05-12",
+   "time": "21:00",
+   "home": "الخلود",
+   "away": "نيوم",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33291",
+   "comp": "league",
+   "round": 32,
+   "date": "2027-05-20",
+   "time": "21:00",
+   "home": "التعاون",
+   "away": "نيوم",
+   "venue": "ملعب نادي التعاون (بريدة)",
+   "venueEn": "Al Taawoun Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33300",
+   "comp": "league",
+   "round": 33,
+   "date": "2027-05-24",
+   "time": "21:00",
+   "home": "نيوم",
+   "away": "الشباب",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33301",
+   "comp": "league",
+   "round": 34,
+   "date": "2027-05-29",
+   "time": "21:00",
+   "home": "الأهلي",
+   "away": "نيوم",
+   "venue": "ملعب الإنماء بمدينة الملك عبدالله الرياضية (جدة)",
+   "venueEn": "Alinma Stadium, King Abdullah Sports City, Jeddah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

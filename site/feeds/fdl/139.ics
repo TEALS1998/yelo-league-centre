@@ -1,0 +1,245 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:الجيل · دوري الأولى
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m33481-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260821T155000Z
+DTEND:20260821T175000Z
+SUMMARY:الجيل 0–2 الزلفي
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 1\nضد الزلفي ·
+  على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33493-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260827T162000Z
+DTEND:20260827T182000Z
+SUMMARY:الجبلين 1–0 الجيل
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 2\nضد الجبلين 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33502-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260901T154000Z
+DTEND:20260901T174000Z
+SUMMARY:الجيل 0–0 جدة
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 3\nضد جدة · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33514-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260909T155000Z
+DTEND:20260909T175000Z
+SUMMARY:الرائد 3–0 الجيل
+LOCATION:ملعب نادي الرائد (بريدة)
+DESCRIPTION:دوري الأولى · الجولة 4\nضد الرائد ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33525-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260915T160500Z
+DTEND:20260915T180500Z
+SUMMARY:العروبة 1–0 الجيل
+LOCATION:ملعب نادي العروبة (الجوف)
+DESCRIPTION:دوري الأولى · الجولة 5\nضد العروبة 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33534-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260920T170000Z
+DTEND:20260920T190000Z
+SUMMARY:الجيل 0–0 هجر
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 6\nضد هجر · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33558-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261027T163000Z
+DTEND:20261027T183000Z
+SUMMARY:العدالة 0–1 الجيل
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 9\nضد العدالة 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33567-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261102T144000Z
+DTEND:20261102T164000Z
+SUMMARY:الجيل 0–1 النجمة
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 10\nضد النجمة 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:s11_6-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261108T163500Z
+DTEND:20261108T183500Z
+SUMMARY:الوحدة 4–1 الجيل
+LOCATION:استاد مدينة الملك عبدالعزيز الرياض
+ ية (مكة المكرمة)
+DESCRIPTION:دوري الأولى · الجولة 11\nضد الوحدة 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33581-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261123T143000Z
+DTEND:20261123T163000Z
+SUMMARY:الجيل 3–2 الصقر
+LOCATION:ملعب نادي هجر (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 12\nضد الصقر · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33589-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261129T123000Z
+DTEND:20261129T143000Z
+SUMMARY:ضمك × الجيل
+LOCATION:مدينة الأمير سلطان بن عبدالعزيز ال
+ رياضية (أبها)
+DESCRIPTION:دوري الأولى · الجولة 13\nضد ضمك · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33601-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261206T120000Z
+DTEND:20261206T140000Z
+SUMMARY:الجيل × الأنوار
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 14\nضد الأنوار
+  · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:l7-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:5
+DTSTART:20261211T123500Z
+DTEND:20261211T143500Z
+SUMMARY:العلا × الجيل
+LOCATION:استاد الأمير محمد بن عبدالعزيز (الم
+ دينة المنورة)
+DESCRIPTION:دوري الأولى · الجولة 7\nضد العلا · 
+ خارج أرضنا\nتعديل undefined: لم يُعلن موعد جد
+ يد ← الجمعة 11 ديسمبر\nتعديل undefined: لم يُح
+ دد ← 15:35\nتعديل undefined: مؤجلة ← أُعيدت جدو
+ لتها
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33608-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261216T124000Z
+DTEND:20261216T144000Z
+SUMMARY:الأخدود × الجيل
+LOCATION:استاد مدينة الملك فهد الرياضية (الط
+ ائف)
+DESCRIPTION:دوري الأولى · الجولة 15\nضد الأخدود
+  · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33619-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261221T143500Z
+DTEND:20261221T163500Z
+SUMMARY:الجيل × البكيرية
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 16\nضد البكيري
+ ة · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33626-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261228T123000Z
+DTEND:20261228T143000Z
+SUMMARY:الطائي × الجيل
+LOCATION:استاد الأمير عبدالعزيز بن مساعد بن 
+ جلوي (حائل)
+DESCRIPTION:دوري الأولى · الجولة 17\nضد الطائي 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33638-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270105T122000Z
+DTEND:20270105T142000Z
+SUMMARY:الزلفي × الجيل
+LOCATION:ملعب نادي الزلفي (الزلفي)
+DESCRIPTION:دوري الأولى · الجولة 18\nضد الزلفي 
+ · خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33550-fdl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:2
+DTSTART:20270110T121000Z
+DTEND:20270110T141000Z
+SUMMARY:الجيل × الجندل
+LOCATION:ملعب مدينة الأمير عبدالله بن جلوي ا
+ لرياضية (الأحساء)
+DESCRIPTION:دوري الأولى · الجولة 8\nضد الجندل ·
+  على أرضنا\nتعديل 2026-10-21: الأربعاء 21 أكتو
+ بر 17:45 ← مؤجلة يوم المباراة · لم يُعلن م
+ وعد جديد\nتعديل undefined: لم يُعلن موعد جديد
+  ← الأحد 10 يناير 15:10
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

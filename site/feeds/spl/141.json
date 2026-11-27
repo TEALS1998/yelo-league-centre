@@ -1,0 +1,573 @@
+{
+ "club": "الفتح",
+ "en": "Al Fateh",
+ "league": "spl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "ميدان تمويل الأولى (الأحساء)",
+ "homeEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+ "city": "الأحساء",
+ "table": {
+  "team": "الفتح",
+  "pos": 16,
+  "pts": 9,
+  "p": 13,
+  "w": 2,
+  "d": 3,
+  "l": 8,
+  "gf": 11,
+  "ga": 25
+ },
+ "matches": [
+  {
+   "id": "m32995",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-15",
+   "time": "21:00",
+   "home": "النصر",
+   "away": "الفتح",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33018",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-22",
+   "time": "18:45",
+   "home": "الفتح",
+   "away": "الاتفاق",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33028",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-08-26",
+   "time": "19:00",
+   "home": "الفيصلي",
+   "away": "الفتح",
+   "venue": "مدينة المجمعة الرياضية (المجمعة)",
+   "venueEn": "Al Majmaah Sports City Stadium",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33037",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-08-29",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "الاتحاد",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33047",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-05",
+   "time": "18:55",
+   "home": "التعاون",
+   "away": "الفتح",
+   "venue": "ملعب نادي التعاون (بريدة)",
+   "venueEn": "Al Taawoun Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33056",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-09",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "الدرعية",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33066",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-09-13",
+   "time": "19:20",
+   "home": "نيوم",
+   "away": "الفتح",
+   "venue": "استاد مدينة الملك خالد الرياضية (تبوك)",
+   "venueEn": "King Khalid Sports City Stadium, Tabuk",
+   "status": "played",
+   "score": [
+    4,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33069",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-09",
+   "time": "17:55",
+   "home": "الفتح",
+   "away": "الأهلي",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    4
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 8، من الخميس 17 إلى السبت 19 سبتمبر",
+     "to": "الجولة 8، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33077",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-15",
+   "time": "18:15",
+   "home": "الحزم",
+   "away": "الفتح",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "played",
+   "score": [
+    2,
+    3
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 9، من الجمعة 9 إلى الأحد 11 أكتوبر",
+     "to": "الجولة 9، من الخميس 15 إلى السبت 17 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33087",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-10-18",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "الخليج",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "played",
+   "score": [
+    2,
+    3
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 10، من الخميس 15 إلى السبت 17 أكتوبر",
+     "to": "الجولة 10، من الأحد 18 إلى الثلاثاء 20 أكتوبر",
+     "at": "2026-08-23"
+    }
+   ]
+  },
+  {
+   "id": "m33095",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-10-22",
+   "time": "17:45",
+   "home": "الفتح",
+   "away": "الشباب",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33105",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-10-31",
+   "time": "21:00",
+   "home": "الهلال",
+   "away": "الفتح",
+   "venue": "المملكة أرينا (الرياض)",
+   "venueEn": "Kingdom Arena, Riyadh",
+   "status": "played",
+   "score": [
+    2,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33115",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-26",
+   "time": "17:25",
+   "home": "الفتح",
+   "away": "الرياض",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجولة 13، من الخميس 5 إلى السبت 7 نوفمبر",
+     "to": "الخميس 26 نوفمبر 17:25",
+     "at": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "m33122",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-05",
+   "time": "15:15",
+   "home": "الفيحاء",
+   "away": "الفتح",
+   "venue": "استاد مدينة الملك عبدالله الرياضية (بريدة)",
+   "venueEn": "King Abdullah Sports City Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "venue",
+     "from": "مدينة المجمعة الرياضية (المجمعة)",
+     "to": "استاد مدينة الملك عبدالله الرياضية (بريدة)",
+     "at": "2026-11-09"
+    }
+   ]
+  },
+  {
+   "id": "m33136",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-11",
+   "time": "14:40",
+   "home": "القادسية",
+   "away": "الفتح",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33140",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-16",
+   "time": "17:30",
+   "home": "الفتح",
+   "away": "الخلود",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33148",
+   "comp": "league",
+   "round": 17,
+   "date": "2027-01-01",
+   "time": "15:50",
+   "home": "أبها",
+   "away": "الفتح",
+   "venue": "استاد مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33158",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-07",
+   "time": "20:30",
+   "home": "الفتح",
+   "away": "النصر",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33167",
+   "comp": "league",
+   "round": 19,
+   "date": "2027-01-14",
+   "time": "20:30",
+   "home": "الاتفاق",
+   "away": "الفتح",
+   "venue": "ملعب نادي الاتفاق (الدمام)",
+   "venueEn": "Al Ettifaq Club Stadium (EGO Stadium), Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33176",
+   "comp": "league",
+   "round": 20,
+   "date": "2027-01-21",
+   "time": "18:00",
+   "home": "الفتح",
+   "away": "الفيصلي",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33187",
+   "comp": "league",
+   "round": 21,
+   "date": "2027-01-29",
+   "time": "20:30",
+   "home": "الاتحاد",
+   "away": "الفتح",
+   "venue": "مدينة الأمير عبدالله الفيصل الرياضية (جدة)",
+   "venueEn": "Prince Abdullah Al-Faisal Sports City, Jeddah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33194",
+   "comp": "league",
+   "round": 22,
+   "date": "2027-03-11",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "التعاون",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33209",
+   "comp": "league",
+   "round": 23,
+   "date": "2027-03-18",
+   "time": "21:00",
+   "home": "الدرعية",
+   "away": "الفتح",
+   "venue": "الأول بارك (الرياض)",
+   "venueEn": "Al-Awwal Park, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33213",
+   "comp": "league",
+   "round": 24,
+   "date": "2027-04-02",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "نيوم",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33220",
+   "comp": "league",
+   "round": 25,
+   "date": "2027-04-08",
+   "time": "21:00",
+   "home": "الأهلي",
+   "away": "الفتح",
+   "venue": "ملعب الإنماء بمدينة الملك عبدالله الرياضية (جدة)",
+   "venueEn": "Alinma Stadium, King Abdullah Sports City, Jeddah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33231",
+   "comp": "league",
+   "round": 26,
+   "date": "2027-04-15",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "الحزم",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33241",
+   "comp": "league",
+   "round": 27,
+   "date": "2027-04-18",
+   "time": "21:00",
+   "home": "الخليج",
+   "away": "الفتح",
+   "venue": "استاد الأمير محمد بن فهد (الدمام)",
+   "venueEn": "Prince Mohamed bin Fahd Stadium, Dammam",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33253",
+   "comp": "league",
+   "round": 28,
+   "date": "2027-04-22",
+   "time": "21:00",
+   "home": "الشباب",
+   "away": "الفتح",
+   "venue": "اس اتش جي ارينا (الرياض)",
+   "venueEn": "SHG Arena, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33258",
+   "comp": "league",
+   "round": 29,
+   "date": "2027-04-29",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "الهلال",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33269",
+   "comp": "league",
+   "round": 30,
+   "date": "2027-05-06",
+   "time": "21:00",
+   "home": "الرياض",
+   "away": "الفتح",
+   "venue": "مدينة الأمير فيصل بن فهد الرياضية (الرياض)",
+   "venueEn": "Prince Faisal bin Fahd Sports City, Riyadh",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33276",
+   "comp": "league",
+   "round": 31,
+   "date": "2027-05-12",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "الفيحاء",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33284",
+   "comp": "league",
+   "round": 32,
+   "date": "2027-05-20",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "القادسية",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33295",
+   "comp": "league",
+   "round": 33,
+   "date": "2027-05-24",
+   "time": "21:00",
+   "home": "الخلود",
+   "away": "الفتح",
+   "venue": "ملعب نادي الحزم (الرس)",
+   "venueEn": "Al Hazem Club Stadium, Ar Rass",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33302",
+   "comp": "league",
+   "round": 34,
+   "date": "2027-05-29",
+   "time": "21:00",
+   "home": "الفتح",
+   "away": "أبها",
+   "venue": "ميدان تمويل الأولى (الأحساء)",
+   "venueEn": "Maydan Tamweel Al-Oula (Al Fateh Stadium), Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

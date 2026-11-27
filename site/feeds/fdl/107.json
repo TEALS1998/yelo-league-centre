@@ -1,0 +1,317 @@
+{
+ "club": "الوحدة",
+ "en": "Al Wehda",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+ "homeEn": "King Abdulaziz Sports City, Makkah",
+ "city": "مكة المكرمة",
+ "table": {
+  "team": "الوحدة",
+  "pos": 3,
+  "pts": 24,
+  "p": 12,
+  "w": 6,
+  "d": 6,
+  "l": 0,
+  "gf": 27,
+  "ga": 13
+ },
+ "matches": [
+  {
+   "id": "m33483",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-21",
+   "time": "20:50",
+   "home": "الوحدة",
+   "away": "العدالة",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33491",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-26",
+   "time": "19:05",
+   "home": "الزلفي",
+   "away": "الوحدة",
+   "venue": "ملعب نادي الزلفي (الزلفي)",
+   "venueEn": "Al Zulfi Club Stadium",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33506",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-09-02",
+   "time": "19:15",
+   "home": "الوحدة",
+   "away": "ضمك",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    2,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33509",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-07",
+   "time": "19:05",
+   "home": "الجبلين",
+   "away": "الوحدة",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33522",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-14",
+   "time": "19:05",
+   "home": "الوحدة",
+   "away": "الأخدود",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    4,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33533",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-20",
+   "time": "18:55",
+   "home": "الجندل",
+   "away": "الوحدة",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    2,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33539",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-10-12",
+   "time": "20:00",
+   "home": "الوحدة",
+   "away": "الطائي",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    6,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33551",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-21",
+   "time": "18:00",
+   "home": "الأنوار",
+   "away": "الوحدة",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33557",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-27",
+   "time": "18:25",
+   "home": "الوحدة",
+   "away": "الصقر",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33570",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-03",
+   "time": "18:00",
+   "home": "الرائد",
+   "away": "الوحدة",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_6",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-08",
+   "time": "19:35",
+   "home": "الوحدة",
+   "away": "الجيل",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    4,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33586",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-25",
+   "time": "15:10",
+   "home": "البكيرية",
+   "away": "الوحدة",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    2,
+    4
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33594",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-30",
+   "time": "18:15",
+   "home": "الوحدة",
+   "away": "النجمة",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33605",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-07",
+   "time": "17:30",
+   "home": "هجر",
+   "away": "الوحدة",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "l15",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-16",
+   "time": "18:15",
+   "home": "الوحدة",
+   "away": "العلا",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجمعة 11 ديسمبر",
+     "to": "الأربعاء 16 ديسمبر"
+    }
+   ]
+  },
+  {
+   "id": "m33617",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-21",
+   "time": "15:25",
+   "home": "العروبة",
+   "away": "الوحدة",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33630",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-29",
+   "time": "18:25",
+   "home": "الوحدة",
+   "away": "جدة",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33639",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-05",
+   "time": "17:45",
+   "home": "العدالة",
+   "away": "الوحدة",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

@@ -1,0 +1,331 @@
+{
+ "club": "هجر",
+ "en": "Hajer",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "ملعب نادي هجر (الأحساء)",
+ "homeEn": "Hajer Club Stadium, Al Ahsa",
+ "city": "الأحساء",
+ "table": {
+  "team": "هجر",
+  "pos": 13,
+  "pts": 10,
+  "p": 11,
+  "w": 2,
+  "d": 4,
+  "l": 5,
+  "gf": 10,
+  "ga": 17
+ },
+ "matches": [
+  {
+   "id": "m33487",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-23",
+   "time": "18:50",
+   "home": "هجر",
+   "away": "جدة",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33497",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-28",
+   "time": "19:05",
+   "home": "الرائد",
+   "away": "هجر",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    2,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33505",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-09-02",
+   "time": "18:40",
+   "home": "هجر",
+   "away": "الأنوار",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33511",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-08",
+   "time": "18:50",
+   "home": "الزلفي",
+   "away": "هجر",
+   "venue": "ملعب نادي الزلفي (الزلفي)",
+   "venueEn": "Al Zulfi Club Stadium",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33517",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-13",
+   "time": "18:30",
+   "home": "هجر",
+   "away": "الجبلين",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33534",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-20",
+   "time": "20:00",
+   "home": "الجيل",
+   "away": "هجر",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33547",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-20",
+   "time": "17:45",
+   "home": "هجر",
+   "away": "النجمة",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    2,
+    4
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33554",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-26",
+   "time": "18:00",
+   "home": "البكيرية",
+   "away": "هجر",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "l10",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-01",
+   "time": "17:40",
+   "home": "هجر",
+   "away": "العلا",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_1",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-07",
+   "time": "15:30",
+   "home": "الجندل",
+   "away": "هجر",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33585",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-24",
+   "time": "17:30",
+   "home": "هجر",
+   "away": "الطائي",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33592",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-30",
+   "time": "15:35",
+   "home": "الأخدود",
+   "away": "هجر",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33605",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-07",
+   "time": "17:30",
+   "home": "هجر",
+   "away": "الوحدة",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33537",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-12-11",
+   "time": "17:35",
+   "home": "هجر",
+   "away": "العروبة",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "status",
+     "from": "الأربعاء 14 أكتوبر 17:55، ملعب نادي هجر",
+     "to": "مؤجلة · لم يُعلن موعد جديد",
+     "at": "2026-10-13"
+    },
+    {
+     "field": "date",
+     "from": "لم يُعلن موعد جديد",
+     "to": "الجمعة 11 ديسمبر 17:35"
+    },
+    {
+     "field": "venue",
+     "from": "ملعب نادي هجر (الأحساء)",
+     "to": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)"
+    }
+   ]
+  },
+  {
+   "id": "m33614",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-16",
+   "time": "17:30",
+   "home": "العدالة",
+   "away": "هجر",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "السبت 12 ديسمبر 17:30",
+     "to": "الأربعاء 16 ديسمبر 17:30"
+    }
+   ]
+  },
+  {
+   "id": "m33624",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-23",
+   "time": "17:35",
+   "home": "هجر",
+   "away": "ضمك",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33631",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-30",
+   "time": "15:20",
+   "home": "الصقر",
+   "away": "هجر",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33642",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-06",
+   "time": "18:30",
+   "home": "جدة",
+   "away": "هجر",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

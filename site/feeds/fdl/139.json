@@ -1,0 +1,344 @@
+{
+ "club": "الجيل",
+ "en": "Al Jeel",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+ "homeEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+ "city": "الأحساء",
+ "table": {
+  "team": "الجيل",
+  "pos": 16,
+  "pts": 8,
+  "p": 10,
+  "w": 2,
+  "d": 2,
+  "l": 6,
+  "gf": 5,
+  "ga": 14
+ },
+ "matches": [
+  {
+   "id": "m33481",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-21",
+   "time": "18:50",
+   "home": "الجيل",
+   "away": "الزلفي",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33493",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-27",
+   "time": "19:20",
+   "home": "الجبلين",
+   "away": "الجيل",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33502",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-09-01",
+   "time": "18:40",
+   "home": "الجيل",
+   "away": "جدة",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33514",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-09",
+   "time": "18:50",
+   "home": "الرائد",
+   "away": "الجيل",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33525",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-15",
+   "time": "19:05",
+   "home": "العروبة",
+   "away": "الجيل",
+   "venue": "ملعب نادي العروبة (الجوف)",
+   "venueEn": "Al Orubah Club Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    1,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33534",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-20",
+   "time": "20:00",
+   "home": "الجيل",
+   "away": "هجر",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33558",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-27",
+   "time": "19:30",
+   "home": "العدالة",
+   "away": "الجيل",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33567",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-02",
+   "time": "17:40",
+   "home": "الجيل",
+   "away": "النجمة",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_6",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-08",
+   "time": "19:35",
+   "home": "الوحدة",
+   "away": "الجيل",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    4,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33581",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-23",
+   "time": "17:30",
+   "home": "الجيل",
+   "away": "الصقر",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    3,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33589",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-29",
+   "time": "15:30",
+   "home": "ضمك",
+   "away": "الجيل",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33601",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-06",
+   "time": "15:00",
+   "home": "الجيل",
+   "away": "الأنوار",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "l7",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-12-11",
+   "time": "15:35",
+   "home": "العلا",
+   "away": "الجيل",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الثلاثاء 13 أكتوبر",
+     "to": "لم يُعلن موعد جديد",
+     "at": "2026-10-13"
+    },
+    {
+     "field": "status",
+     "from": "مجدولة",
+     "to": "مؤجلة"
+    },
+    {
+     "field": "date",
+     "from": "لم يُعلن موعد جديد",
+     "to": "الجمعة 11 ديسمبر"
+    },
+    {
+     "field": "time",
+     "from": "لم يُحدد",
+     "to": "15:35"
+    },
+    {
+     "field": "status",
+     "from": "مؤجلة",
+     "to": "أُعيدت جدولتها"
+    }
+   ]
+  },
+  {
+   "id": "m33608",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-16",
+   "time": "15:40",
+   "home": "الأخدود",
+   "away": "الجيل",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33619",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-21",
+   "time": "17:35",
+   "home": "الجيل",
+   "away": "البكيرية",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33626",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-28",
+   "time": "15:30",
+   "home": "الطائي",
+   "away": "الجيل",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33638",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-05",
+   "time": "15:20",
+   "home": "الزلفي",
+   "away": "الجيل",
+   "venue": "ملعب نادي الزلفي (الزلفي)",
+   "venueEn": "Al Zulfi Club Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33550",
+   "comp": "league",
+   "round": 8,
+   "date": "2027-01-10",
+   "time": "15:10",
+   "home": "الجيل",
+   "away": "الجندل",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "status",
+     "from": "الأربعاء 21 أكتوبر 17:45",
+     "to": "مؤجلة يوم المباراة · لم يُعلن موعد جديد",
+     "at": "2026-10-21"
+    },
+    {
+     "field": "date",
+     "from": "لم يُعلن موعد جديد",
+     "to": "الأحد 10 يناير 15:10"
+    }
+   ]
+  }
+ ]
+}

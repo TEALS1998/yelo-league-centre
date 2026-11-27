@@ -1,0 +1,471 @@
+{
+ "club": "العلا",
+ "en": "AlUla",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+ "homeEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+ "city": "المدينة المنورة",
+ "table": {
+  "team": "العلا",
+  "pos": 1,
+  "pts": 31,
+  "p": 11,
+  "w": 10,
+  "d": 1,
+  "l": 0,
+  "gf": 28,
+  "ga": 6
+ },
+ "matches": [
+  {
+   "id": "cup-r32",
+   "comp": "cup",
+   "round": "r32",
+   "date": "2026-08-19",
+   "time": null,
+   "home": "العلا",
+   "away": "الفتح",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "l1",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-23",
+   "time": null,
+   "home": "العلا",
+   "away": "الجبلين",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "played",
+   "score": [
+    3,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "l2",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-28",
+   "time": null,
+   "home": "الأنوار",
+   "away": "العلا",
+   "venue": "ملعب نادي الأنوار (حوطة بني تميم)",
+   "venueEn": "Al Anwar Club Stadium, Hotat Bani Tamim",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "l3",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-09-02",
+   "time": null,
+   "home": "العلا",
+   "away": "الرائد",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "played",
+   "score": [
+    2,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "l4",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-08",
+   "time": null,
+   "home": "ضمك",
+   "away": "العلا",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "l5",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-14",
+   "time": null,
+   "home": "العلا",
+   "away": "جدة",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "l6",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-10-08",
+   "time": null,
+   "home": "الأخدود",
+   "away": "العلا",
+   "venue": "استاد مدينة الملك فهد الرياضية (الطائف)",
+   "venueEn": "King Fahd Sports City Stadium, Taif",
+   "status": "played",
+   "score": [
+    1,
+    5
+   ],
+   "changes": [
+    {
+     "field": "date",
+     "from": "جولة اليوم الوطني، من الجمعة 18 إلى الأحد 20 سبتمبر",
+     "to": "الخميس 8 أكتوبر"
+    },
+    {
+     "field": "venue",
+     "from": "مدينة الأمير سلطان بن عبدالعزيز الرياضية، أبها",
+     "to": "استاد مدينة الملك فهد الرياضية، الطائف"
+    },
+    {
+     "field": "status",
+     "from": "مؤجلة",
+     "to": "لُعبت، فاز العلا 5 مقابل 1"
+    }
+   ]
+  },
+  {
+   "id": "l8",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-19",
+   "time": null,
+   "home": "الزلفي",
+   "away": "العلا",
+   "venue": "ملعب نادي الزلفي (الزلفي)",
+   "venueEn": "Al Zulfi Club Stadium",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "l9",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-26",
+   "time": "19:45",
+   "home": "العلا",
+   "away": "العروبة",
+   "venue": "ملعب نادي أحد (المدينة المنورة)",
+   "venueEn": "Ohod Club Stadium, Madinah",
+   "status": "played",
+   "score": [
+    3,
+    1
+   ],
+   "changes": [
+    {
+     "field": "venue",
+     "from": "استاد الأمير محمد بن عبدالعزيز، المدينة المنورة",
+     "to": "ملعب نادي أحد، المدينة المنورة"
+    }
+   ]
+  },
+  {
+   "id": "l10",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-01",
+   "time": "17:40",
+   "home": "هجر",
+   "away": "العلا",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "l11",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-07",
+   "time": "18:00",
+   "home": "النجمة",
+   "away": "العلا",
+   "venue": "ملعب إدارة التعليم (عنيزة)",
+   "venueEn": "Education Department Stadium, Unaizah",
+   "status": "played",
+   "score": [
+    1,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "l12",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-25",
+   "time": "18:10",
+   "home": "العلا",
+   "away": "العدالة",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "played",
+   "score": [
+    3,
+    0
+   ],
+   "changes": [
+    {
+     "field": "venue",
+     "from": "ملعب نادي أحد، المدينة المنورة",
+     "to": "استاد الأمير محمد بن عبدالعزيز، المدينة المنورة"
+    }
+   ]
+  },
+  {
+   "id": "l13",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-12-01",
+   "time": "15:20",
+   "home": "البكيرية",
+   "away": "العلا",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "l14",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-06",
+   "time": "15:35",
+   "home": "العلا",
+   "away": "الصقر",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "l7",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-12-11",
+   "time": "15:35",
+   "home": "العلا",
+   "away": "الجيل",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الثلاثاء 13 أكتوبر",
+     "to": "لم يُعلن موعد جديد",
+     "at": "2026-10-13"
+    },
+    {
+     "field": "status",
+     "from": "مجدولة",
+     "to": "مؤجلة"
+    },
+    {
+     "field": "date",
+     "from": "لم يُعلن موعد جديد",
+     "to": "الجمعة 11 ديسمبر"
+    },
+    {
+     "field": "time",
+     "from": "لم يُحدد",
+     "to": "15:35"
+    },
+    {
+     "field": "status",
+     "from": "مؤجلة",
+     "to": "أُعيدت جدولتها"
+    }
+   ]
+  },
+  {
+   "id": "l15",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-16",
+   "time": "18:15",
+   "home": "الوحدة",
+   "away": "العلا",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الجمعة 11 ديسمبر",
+     "to": "الأربعاء 16 ديسمبر"
+    }
+   ]
+  },
+  {
+   "id": "l16",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-21",
+   "time": "15:35",
+   "home": "العلا",
+   "away": "الطائي",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الأربعاء 16 ديسمبر",
+     "to": "الاثنين 21 ديسمبر"
+    }
+   ]
+  },
+  {
+   "id": "l17",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-28",
+   "time": "15:30",
+   "home": "الجندل",
+   "away": "العلا",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الاثنين 21 ديسمبر",
+     "to": "الاثنين 28 ديسمبر"
+    }
+   ]
+  },
+  {
+   "id": "l19",
+   "comp": "league",
+   "round": 19,
+   "date": "2027-01-04",
+   "time": "15:50",
+   "home": "العلا",
+   "away": "الأنوار",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "postponed",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الاثنين 4 يناير",
+     "to": "لم يُحدد",
+     "at": "2026-11-22"
+    },
+    {
+     "field": "status",
+     "from": "الاثنين 4 يناير 15:50",
+     "to": "مؤجلة · لم يُحدد الموعد الجديد",
+     "at": "2026-11-22"
+    }
+   ]
+  },
+  {
+   "id": "l18",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-06",
+   "time": "15:35",
+   "home": "الجبلين",
+   "away": "العلا",
+   "venue": "استاد الأمير عبدالعزيز بن مساعد بن جلوي (حائل)",
+   "venueEn": "Prince Abdulaziz bin Musaed Stadium, Hail",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "الأربعاء 30 ديسمبر",
+     "to": "الأربعاء 6 يناير"
+    },
+    {
+     "field": "time",
+     "from": "15:30",
+     "to": "15:35"
+    }
+   ]
+  },
+  {
+   "id": "cup-r16",
+   "comp": "cup",
+   "round": "r16",
+   "date": "2027-01-11",
+   "time": "17:05",
+   "home": "العلا",
+   "away": "الأهلي",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "upcoming",
+   "score": null,
+   "changes": [
+    {
+     "field": "date",
+     "from": "19 أو 20 أكتوبر",
+     "to": "الاثنين 11 يناير"
+    },
+    {
+     "field": "time",
+     "from": "لم يُحدد",
+     "to": "17:05"
+    },
+    {
+     "field": "home",
+     "from": "الأهلي على أرضه",
+     "to": "العلا على أرضه"
+    },
+    {
+     "field": "venue",
+     "from": "لم يُحدد",
+     "to": "المدينة المنورة"
+    }
+   ]
+  }
+ ]
+}

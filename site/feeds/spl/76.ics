@@ -1,0 +1,441 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:القادسية · دوري روشن
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m32988-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260813T180000Z
+DTEND:20260813T200000Z
+SUMMARY:الشباب 1–3 القادسية
+LOCATION:اس اتش جي ارينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 1\nضد الشباب · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33017-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260821T180000Z
+DTEND:20260821T200000Z
+SUMMARY:القادسية 0–1 الاتحاد
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 2\nضد الاتحاد · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33022-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260824T164000Z
+DTEND:20260824T184000Z
+SUMMARY:نيوم 0–2 القادسية
+LOCATION:استاد مدينة الملك خالد الرياضية (تب
+ وك)
+DESCRIPTION:دوري روشن · الجولة 3\nضد نيوم · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33039-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260830T180000Z
+DTEND:20260830T200000Z
+SUMMARY:القادسية 3–1 الفيصلي
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 4\nضد الفيصلي · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33042-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260903T180000Z
+DTEND:20260903T200000Z
+SUMMARY:الدرعية 0–2 القادسية
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 5\nضد الدرعية · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33053-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260908T180000Z
+DTEND:20260908T200000Z
+SUMMARY:القادسية 3–2 الأهلي
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 6\nضد الأهلي · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33061-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260911T152500Z
+DTEND:20260911T172500Z
+SUMMARY:القادسية 3–3 الاتفاق
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 7\nضد الاتفاق · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33073-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261009T135000Z
+DTEND:20261009T155000Z
+SUMMARY:الخلود 0–5 القادسية
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 8\nضد الخلود · خ
+ ارج أرضنا\nتعديل 2026-08-23: الجولة 8، من الخم
+ يس 17 إلى السبت 19 سبتمبر ← الجولة 8، من ال
+ جمعة 9 إلى الأحد 11 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33081-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261016T131500Z
+DTEND:20261016T151500Z
+SUMMARY:القادسية 2–1 أبها
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 9\nضد أبها · على 
+ أرضنا\nتعديل 2026-08-23: الجولة 9، من الجمعة 9 
+ إلى الأحد 11 أكتوبر ← الجولة 9، من الخميس
+  15 إلى السبت 17 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33092-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261020T151000Z
+DTEND:20261020T171000Z
+SUMMARY:التعاون 0–1 القادسية
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 10\nضد التعاون · 
+ خارج أرضنا\nتعديل 2026-08-23: الجولة 10، من ال
+ خميس 15 إلى السبت 17 أكتوبر ← الجولة 10، من
+  الأحد 18 إلى الثلاثاء 20 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33100-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261023T180000Z
+DTEND:20261023T200000Z
+SUMMARY:القادسية 2–3 الهلال
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 11\nضد الهلال · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33108-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261029T180000Z
+DTEND:20261029T200000Z
+SUMMARY:الرياض 0–6 القادسية
+LOCATION:اس اتش جي ارينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 12\nضد الرياض · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33120-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261127T142000Z
+DTEND:20261127T162000Z
+SUMMARY:القادسية 2–0 الفيحاء
+LOCATION:ملعب نادي الاتفاق (الدمام)
+DESCRIPTION:دوري روشن · الجولة 13\nضد الفيحاء · 
+ على أرضنا\nتعديل 2026-11-09: الخميس 5 نوفمبر 
+ ← الجمعة 27 نوفمبر 17:20
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33125-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261204T173000Z
+DTEND:20261204T193000Z
+SUMMARY:النصر × القادسية
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 14\nضد النصر · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33136-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261211T114000Z
+DTEND:20261211T134000Z
+SUMMARY:القادسية × الفتح
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 15\nضد الفتح · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33142-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261215T145000Z
+DTEND:20261215T165000Z
+SUMMARY:الحزم × القادسية
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 16\nضد الحزم · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33154-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270102T173000Z
+DTEND:20270102T193000Z
+SUMMARY:القادسية × الخليج
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 17\nضد الخليج · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33164-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270109T173000Z
+DTEND:20270109T193000Z
+SUMMARY:القادسية × الشباب
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 18\nضد الشباب · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c37576-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270112T170000Z
+DTEND:20270112T190000Z
+SUMMARY:القادسية × نيوم
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:كأس خادم الحرمين الشريفين\nضد نيو
+ م · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33169-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270115T173000Z
+DTEND:20270115T193000Z
+SUMMARY:الاتحاد × القادسية
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 19\nضد الاتحاد · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33182-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270123T173000Z
+DTEND:20270123T193000Z
+SUMMARY:القادسية × نيوم
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 20\nضد نيوم · على
+  أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33188-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270128T124000Z
+DTEND:20270128T144000Z
+SUMMARY:الفيصلي × القادسية
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 21\nضد الفيصلي · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33200-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270311T180000Z
+DTEND:20270311T200000Z
+SUMMARY:القادسية × الدرعية
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 22\nضد الدرعية · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33202-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270318T180000Z
+DTEND:20270318T200000Z
+SUMMARY:الأهلي × القادسية
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 23\nضد الأهلي · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33212-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270402T180000Z
+DTEND:20270402T200000Z
+SUMMARY:الاتفاق × القادسية
+LOCATION:ملعب نادي الاتفاق (الدمام)
+DESCRIPTION:دوري روشن · الجولة 24\nضد الاتفاق · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33224-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270408T180000Z
+DTEND:20270408T200000Z
+SUMMARY:القادسية × الخلود
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 25\nضد الخلود · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33229-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270415T180000Z
+DTEND:20270415T200000Z
+SUMMARY:أبها × القادسية
+LOCATION:استاد مدينة الأمير سلطان بن عبدالع
+ زيز الرياضية (أبها)
+DESCRIPTION:دوري روشن · الجولة 26\nضد أبها · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33244-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270418T180000Z
+DTEND:20270418T200000Z
+SUMMARY:القادسية × التعاون
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 27\nضد التعاون · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33250-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270422T180000Z
+DTEND:20270422T200000Z
+SUMMARY:الهلال × القادسية
+LOCATION:المملكة أرينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 28\nضد الهلال · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33263-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270429T180000Z
+DTEND:20270429T200000Z
+SUMMARY:القادسية × الرياض
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 29\nضد الرياض · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33265-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270506T180000Z
+DTEND:20270506T200000Z
+SUMMARY:الفيحاء × القادسية
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 30\nضد الفيحاء · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33281-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270512T180000Z
+DTEND:20270512T200000Z
+SUMMARY:القادسية × النصر
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 31\nضد النصر · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33284-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270520T180000Z
+DTEND:20270520T200000Z
+SUMMARY:الفتح × القادسية
+LOCATION:ميدان تمويل الأولى (الأحساء)
+DESCRIPTION:دوري روشن · الجولة 32\nضد الفتح · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33298-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270524T180000Z
+DTEND:20270524T200000Z
+SUMMARY:القادسية × الحزم
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 33\nضد الحزم · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33306-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270529T180000Z
+DTEND:20270529T200000Z
+SUMMARY:الخليج × القادسية
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 34\nضد الخليج · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

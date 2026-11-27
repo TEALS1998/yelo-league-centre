@@ -1,0 +1,311 @@
+{
+ "club": "الصقر",
+ "en": "Al Saqer",
+ "league": "fdl",
+ "season": "2026/27",
+ "updated": "2026-11-28",
+ "home": "ملعب نادي الرائد (بريدة)",
+ "homeEn": "Al Raed Club Stadium, Buraydah",
+ "city": "القصيم",
+ "table": {
+  "team": "الصقر",
+  "pos": 8,
+  "pts": 14,
+  "p": 12,
+  "w": 3,
+  "d": 5,
+  "l": 4,
+  "gf": 15,
+  "ga": 13
+ },
+ "matches": [
+  {
+   "id": "m33488",
+   "comp": "league",
+   "round": 1,
+   "date": "2026-08-23",
+   "time": "19:15",
+   "home": "الصقر",
+   "away": "ضمك",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33495",
+   "comp": "league",
+   "round": 2,
+   "date": "2026-08-27",
+   "time": "20:50",
+   "home": "الجندل",
+   "away": "الصقر",
+   "venue": "استاد جامعة الجوف (الجوف)",
+   "venueEn": "Al Jouf University Stadium, Sakaka",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33500",
+   "comp": "league",
+   "round": 3,
+   "date": "2026-08-31",
+   "time": "19:05",
+   "home": "الصقر",
+   "away": "الأخدود",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    0
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33508",
+   "comp": "league",
+   "round": 4,
+   "date": "2026-09-07",
+   "time": "18:30",
+   "home": "العدالة",
+   "away": "الصقر",
+   "venue": "ملعب مدينة الأمير عبدالله بن جلوي الرياضية (الأحساء)",
+   "venueEn": "Prince Abdullah bin Jalawi Sports City Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33518",
+   "comp": "league",
+   "round": 5,
+   "date": "2026-09-13",
+   "time": "18:50",
+   "home": "الصقر",
+   "away": "الأنوار",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33527",
+   "comp": "league",
+   "round": 6,
+   "date": "2026-09-18",
+   "time": "19:05",
+   "home": "جدة",
+   "away": "الصقر",
+   "venue": "ملعب نادي جدة (جدة)",
+   "venueEn": "Jeddah Club Stadium, Jeddah",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33543",
+   "comp": "league",
+   "round": 7,
+   "date": "2026-10-13",
+   "time": "18:15",
+   "home": "الصقر",
+   "away": "الجبلين",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    1,
+    3
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33546",
+   "comp": "league",
+   "round": 8,
+   "date": "2026-10-19",
+   "time": "19:50",
+   "home": "الرائد",
+   "away": "الصقر",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    0,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33557",
+   "comp": "league",
+   "round": 9,
+   "date": "2026-10-27",
+   "time": "18:25",
+   "home": "الوحدة",
+   "away": "الصقر",
+   "venue": "استاد مدينة الملك عبدالعزيز الرياضية (مكة المكرمة)",
+   "venueEn": "King Abdulaziz Sports City, Makkah",
+   "status": "played",
+   "score": [
+    2,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33564",
+   "comp": "league",
+   "round": 10,
+   "date": "2026-11-01",
+   "time": "18:00",
+   "home": "الصقر",
+   "away": "الطائي",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    1,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "s11_2",
+   "comp": "league",
+   "round": 11,
+   "date": "2026-11-07",
+   "time": "19:35",
+   "home": "الصقر",
+   "away": "البكيرية",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "played",
+   "score": [
+    4,
+    1
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33581",
+   "comp": "league",
+   "round": 12,
+   "date": "2026-11-23",
+   "time": "17:30",
+   "home": "الجيل",
+   "away": "الصقر",
+   "venue": "ملعب نادي هجر (الأحساء)",
+   "venueEn": "Hajer Club Stadium, Al Ahsa",
+   "status": "played",
+   "score": [
+    3,
+    2
+   ],
+   "changes": []
+  },
+  {
+   "id": "m33590",
+   "comp": "league",
+   "round": 13,
+   "date": "2026-11-29",
+   "time": "17:50",
+   "home": "الصقر",
+   "away": "العروبة",
+   "venue": "ملعب نادي البكيرية (البكيرية)",
+   "venueEn": "Al Bukiryah Club Stadium",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "l14",
+   "comp": "league",
+   "round": 14,
+   "date": "2026-12-06",
+   "time": "15:35",
+   "home": "العلا",
+   "away": "الصقر",
+   "venue": "استاد الأمير محمد بن عبدالعزيز (المدينة المنورة)",
+   "venueEn": "Prince Mohammed bin Abdulaziz Stadium, Madinah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33615",
+   "comp": "league",
+   "round": 15,
+   "date": "2026-12-14",
+   "time": "17:50",
+   "home": "الصقر",
+   "away": "الزلفي",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33621",
+   "comp": "league",
+   "round": 16,
+   "date": "2026-12-23",
+   "time": "15:20",
+   "home": "النجمة",
+   "away": "الصقر",
+   "venue": "ملعب إدارة التعليم (عنيزة)",
+   "venueEn": "Education Department Stadium, Unaizah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33631",
+   "comp": "league",
+   "round": 17,
+   "date": "2026-12-30",
+   "time": "15:20",
+   "home": "الصقر",
+   "away": "هجر",
+   "venue": "ملعب نادي الرائد (بريدة)",
+   "venueEn": "Al Raed Club Stadium, Buraydah",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  },
+  {
+   "id": "m33641",
+   "comp": "league",
+   "round": 18,
+   "date": "2027-01-06",
+   "time": "15:45",
+   "home": "ضمك",
+   "away": "الصقر",
+   "venue": "مدينة الأمير سلطان بن عبدالعزيز الرياضية (أبها)",
+   "venueEn": "Prince Sultan bin Abdulaziz Sports City, Abha",
+   "status": "upcoming",
+   "score": null,
+   "changes": []
+  }
+ ]
+}

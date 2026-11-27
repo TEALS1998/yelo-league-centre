@@ -13,7 +13,7 @@ on:
         default: "no"
   push:
     branches: [main]
-    paths: ["site/**", "scripts/**", ".github/workflows/**"]
+    paths: ["site/**", "scripts/**", ".github/workflows/**"]   # overrides.json is applied by the next timed run, within 10 minutes
 
 permissions:
   contents: write
@@ -51,10 +51,12 @@ jobs:
         run: node scripts/discipline.mjs || echo "Roshn discipline step failed; data left as it was"
         env:
           LEAGUE: spl
+      - name: Club calendars, data files, phone alerts and updater check
+        run: node scripts/feeds.mjs || echo "feeds step failed; the board itself is unaffected"
       - name: Commit when the data changed
         id: commit
         run: |
-          if git diff --quiet -- site/data.js site/data-spl.js site/discipline-data.js site/discipline-data-spl.js && [ -z "$(git status --porcelain -- site/discipline-data.js site/discipline-data-spl.js site/logos)" ]; then
+          if git diff --quiet -- site/data.js site/data-spl.js site/discipline-data.js site/discipline-data-spl.js && [ -z "$(git status --porcelain -- site/discipline-data.js site/discipline-data-spl.js site/logos site/feeds .state)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "yelo-live-update"
@@ -62,6 +64,8 @@ jobs:
             git add site/data.js last-run.json site/data-spl.js
             if [ -f last-run-spl.json ]; then git add last-run-spl.json; fi
             if [ -d site/logos ]; then git add site/logos; fi
+            if [ -d site/feeds ]; then git add site/feeds; fi
+            if [ -d .state ]; then git add .state; fi
             if [ -f site/discipline-data.js ]; then git add site/discipline-data.js; fi
             if [ -f site/discipline-data-spl.js ]; then git add site/discipline-data-spl.js; fi
             git commit -m "Live update from SAFF $(date -u +%Y-%m-%dT%H:%MZ)"

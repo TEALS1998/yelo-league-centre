@@ -1,0 +1,450 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Match Centre//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:الاتحاد · دوري روشن
+X-WR-TIMEZONE:Asia/Riyadh
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:m32994-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260815T180000Z
+DTEND:20260815T200000Z
+SUMMARY:الاتحاد 1–1 الخلود
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 1\nضد الخلود · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33017-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260821T180000Z
+DTEND:20260821T200000Z
+SUMMARY:القادسية 0–1 الاتحاد
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 2\nضد القادسية ·
+  خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33023-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260824T180000Z
+DTEND:20260824T200000Z
+SUMMARY:الاتحاد 3–2 الحزم
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 3\nضد الحزم · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33037-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260829T180000Z
+DTEND:20260829T200000Z
+SUMMARY:الفتح 0–0 الاتحاد
+LOCATION:ميدان تمويل الأولى (الأحساء)
+DESCRIPTION:دوري روشن · الجولة 4\nضد الفتح · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33048-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260905T180000Z
+DTEND:20260905T200000Z
+SUMMARY:الاتحاد 2–1 النصر
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 5\nضد النصر · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33054-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260908T180000Z
+DTEND:20260908T200000Z
+SUMMARY:الاتحاد 2–1 الفيحاء
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 6\nضد الفيحاء · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33060-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20260911T154500Z
+DTEND:20260911T174500Z
+SUMMARY:الفيصلي 1–3 الاتحاد
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 7\nضد الفيصلي · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33072-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261010T180000Z
+DTEND:20261010T200000Z
+SUMMARY:الهلال 3–2 الاتحاد
+LOCATION:المملكة أرينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 8\nضد الهلال · خ
+ ارج أرضنا\nتعديل 2026-08-23: الجولة 8، من الخم
+ يس 17 إلى السبت 19 سبتمبر ← الجولة 8، من ال
+ جمعة 9 إلى الأحد 11 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33086-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261020T180000Z
+DTEND:20261020T200000Z
+SUMMARY:الاتفاق 1–4 الاتحاد
+LOCATION:ملعب نادي الاتفاق (الدمام)
+DESCRIPTION:دوري روشن · الجولة 10\nضد الاتفاق · 
+ خارج أرضنا\nتعديل 2026-08-23: الجولة 10، من ال
+ خميس 15 إلى السبت 17 أكتوبر ← الجولة 10، من
+  الأحد 18 إلى الثلاثاء 20 أكتوبر
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33097-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261023T153000Z
+DTEND:20261023T173000Z
+SUMMARY:الاتحاد 2–0 الدرعية
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 11\nضد الدرعية · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33103-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261030T123000Z
+DTEND:20261030T143000Z
+SUMMARY:أبها 1–1 الاتحاد
+LOCATION:استاد مدينة الأمير سلطان بن عبدالع
+ زيز الرياضية (أبها)
+DESCRIPTION:دوري روشن · الجولة 12\nضد أبها · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33117-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:1
+DTSTART:20261127T173000Z
+DTEND:20261127T193000Z
+SUMMARY:الاتحاد 1–0 نيوم
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 13\nضد نيوم · على
+  أرضنا\nتعديل 2026-11-09: الجولة 13، من الخميس 
+ 5 إلى السبت 7 نوفمبر ← الجمعة 27 نوفمبر 20:3
+ 0
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33124-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261204T125500Z
+DTEND:20261204T145500Z
+SUMMARY:الخليج × الاتحاد
+LOCATION:استاد الأمير محمد بن فهد (الدمام)
+DESCRIPTION:دوري روشن · الجولة 14\nضد الخليج · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33132-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261211T173000Z
+DTEND:20261211T193000Z
+SUMMARY:الاتحاد × الأهلي
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 15\nضد الأهلي · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33145-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261217T144500Z
+DTEND:20261217T164500Z
+SUMMARY:الرياض × الاتحاد
+LOCATION:مدينة الأمير فيصل بن فهد الرياضية (
+ الرياض)
+DESCRIPTION:دوري روشن · الجولة 16\nضد الرياض · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33078-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:3
+DTSTART:20261221T173000Z
+DTEND:20261221T193000Z
+SUMMARY:الاتحاد × الشباب
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 9\nضد الشباب · ع
+ لى أرضنا\nتعديل 2026-08-23: الجولة 9، من الجمع
+ ة 9 إلى الأحد 11 أكتوبر ← الجولة 9، من الخ
+ ميس 15 إلى السبت 17 أكتوبر\nتعديل 2026-10-13: ال
+ جولة 9، من الخميس 15 إلى السبت 17 أكتوبر ← 
+ السبت 19 ديسمبر\nتعديل 2026-11-09: السبت 19 ديس
+ مبر ← الاثنين 21 ديسمبر 20:30
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33150-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20261231T173000Z
+DTEND:20261231T193000Z
+SUMMARY:الاتحاد × التعاون
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 17\nضد التعاون · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33162-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270107T151000Z
+DTEND:20270107T171000Z
+SUMMARY:الخلود × الاتحاد
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 18\nضد الخلود · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33169-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270115T173000Z
+DTEND:20270115T193000Z
+SUMMARY:الاتحاد × القادسية
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 19\nضد القادسية 
+ · على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33178-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270122T152000Z
+DTEND:20270122T172000Z
+SUMMARY:الحزم × الاتحاد
+LOCATION:ملعب نادي الحزم (الرس)
+DESCRIPTION:دوري روشن · الجولة 20\nضد الحزم · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33187-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270129T173000Z
+DTEND:20270129T193000Z
+SUMMARY:الاتحاد × الفتح
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 21\nضد الفتح · عل
+ ى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33199-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270311T180000Z
+DTEND:20270311T200000Z
+SUMMARY:النصر × الاتحاد
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 22\nضد النصر · خا
+ رج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33204-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270318T180000Z
+DTEND:20270318T200000Z
+SUMMARY:الفيحاء × الاتحاد
+LOCATION:مدينة المجمعة الرياضية (المجمعة)
+DESCRIPTION:دوري روشن · الجولة 23\nضد الفيحاء · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33217-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270402T180000Z
+DTEND:20270402T200000Z
+SUMMARY:الاتحاد × الفيصلي
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 24\nضد الفيصلي · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33221-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270408T180000Z
+DTEND:20270408T200000Z
+SUMMARY:الاتحاد × الهلال
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 25\nضد الهلال · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33236-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270415T180000Z
+DTEND:20270415T200000Z
+SUMMARY:الشباب × الاتحاد
+LOCATION:اس اتش جي ارينا (الرياض)
+DESCRIPTION:دوري روشن · الجولة 26\nضد الشباب · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33240-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270418T180000Z
+DTEND:20270418T200000Z
+SUMMARY:الاتحاد × الاتفاق
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 27\nضد الاتفاق · 
+ على أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33255-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270422T180000Z
+DTEND:20270422T200000Z
+SUMMARY:الدرعية × الاتحاد
+LOCATION:الأول بارك (الرياض)
+DESCRIPTION:دوري روشن · الجولة 28\nضد الدرعية · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33260-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270429T180000Z
+DTEND:20270429T200000Z
+SUMMARY:الاتحاد × أبها
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 29\nضد أبها · على
+  أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33273-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270506T180000Z
+DTEND:20270506T200000Z
+SUMMARY:نيوم × الاتحاد
+LOCATION:استاد مدينة الملك خالد الرياضية (تب
+ وك)
+DESCRIPTION:دوري روشن · الجولة 30\nضد نيوم · خار
+ ج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33278-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270512T180000Z
+DTEND:20270512T200000Z
+SUMMARY:الاتحاد × الخليج
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 31\nضد الخليج · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33283-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270520T180000Z
+DTEND:20270520T200000Z
+SUMMARY:الأهلي × الاتحاد
+LOCATION:ملعب الإنماء بمدينة الملك عبدالله 
+ الرياضية (جدة)
+DESCRIPTION:دوري روشن · الجولة 32\nضد الأهلي · خ
+ ارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33294-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270524T180000Z
+DTEND:20270524T200000Z
+SUMMARY:الاتحاد × الرياض
+LOCATION:مدينة الأمير عبدالله الفيصل الرياض
+ ية (جدة)
+DESCRIPTION:دوري روشن · الجولة 33\nضد الرياض · ع
+ لى أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:m33309-spl@match-centre
+DTSTAMP:20261128T000000Z
+SEQUENCE:0
+DTSTART:20270529T180000Z
+DTEND:20270529T200000Z
+SUMMARY:التعاون × الاتحاد
+LOCATION:ملعب نادي التعاون (بريدة)
+DESCRIPTION:دوري روشن · الجولة 34\nضد التعاون · 
+ خارج أرضنا
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
