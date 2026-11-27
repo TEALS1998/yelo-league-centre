@@ -2,143 +2,520 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!-- Match Centre accounts · Author and rights holder: Tareem Alsaggaf · © 2026 -->
 <title>الحساب · لوحة مركز المباريات</title>
 <link rel="stylesheet" href="fonts.css">
 <link rel="icon" href="favicon.png">
 <style>
-:root{--navy:#27333e;--teal:#4a9a90;--ink:#1d2630;--soft:#5d6873;--line:#e1e4e8;--bg:#eef0f3;--red:#b4433b}
+:root{
+  --din:"DIN Next LT Pro","DIN Pro","DIN 2014","D-DIN","AlUla DIN","DIN Next LT Arabic","DIN Next Arabic","Noto Kufi Arabic",sans-serif;
+  --dinc:"DIN Next LT Pro Condensed","DIN Pro Condensed","D-DIN Condensed","AlUla DIN Condensed","DIN Next LT Arabic","DIN Next Arabic","Noto Kufi Arabic",sans-serif;
+  --ar:"DIN Next LT Arabic","DIN Next Arabic","Noto Kufi Arabic",sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+  --bg:#e5e7ea;--card:#f7f8f9;--line:#d5d9de;--navy:#27333e;--ink:#262c36;--muted:#69717b;--chip:#eceef0;
+  --teal:#3d7f78;--win:#5fa37c;--draw:#d2a941;--loss:#c96f68;
+  --m:#27333e;--s:#3d7f78; /* the pass takes the club's colours once we know the club */
+}
 *{box-sizing:border-box;min-width:0}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 "IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}
-header{background:linear-gradient(135deg,var(--navy),#141c24);color:#fff;padding:20px 18px 64px}
-header .in{max-width:880px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
-header b{font-size:20px}header a{color:#fff;opacity:.85;font-size:13px}
-main{max-width:880px;margin:-44px auto 40px;padding:0 14px;display:grid;gap:16px}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 24px rgba(20,30,40,.06)}
-.card h2{margin:0 0 4px;font-size:19px}.card p.s{margin:0 0 14px;color:var(--soft);font-size:13.5px}
-label{display:block;font-size:13px;color:var(--soft);margin:10px 0 4px}
-input,select{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fafbfc}
-input[dir=ltr]{text-align:left}
-.btn{border:0;border-radius:999px;padding:10px 18px;font:inherit;font-weight:700;background:var(--navy);color:#fff;cursor:pointer}
-.btn.o{background:#fff;color:var(--navy);border:1px solid var(--navy)}.btn.r{background:#fff;color:var(--red);border:1px solid #e3c2bf}
-.btn:disabled{opacity:.5;cursor:default}
-.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
-.tabs{display:flex;gap:6px;background:var(--bg);border-radius:999px;padding:4px;margin-bottom:6px}
-.tabs button{flex:1;border:0;background:none;border-radius:999px;padding:8px;font:inherit;font-weight:600;color:var(--soft);cursor:pointer}
-.tabs button.on{background:#fff;color:var(--navy);box-shadow:0 2px 6px rgba(0,0,0,.08)}
-.msg{margin-top:12px;font-size:13.5px;border-radius:10px;padding:10px 12px;display:none}
-.msg.err{display:block;background:#fbecea;color:var(--red)}.msg.ok{display:block;background:#e7f4ef;color:#1f6b52}
-.me{display:flex;gap:16px;align-items:center}
-.me .av{width:56px;height:56px;border-radius:16px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:700;flex:none}
-.chip{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:#e6f2f0;color:#2f6f66;margin-inline-start:6px}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{text-align:right;color:var(--soft);font-weight:500;font-size:12.5px;padding:8px 6px;border-bottom:1px solid var(--line)}
-td{padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
-td select{padding:6px 8px}
-td code{direction:ltr;display:inline-block;font-weight:700;letter-spacing:.08em;background:#f2f4f6;border-radius:6px;padding:2px 8px}
-.empty{color:var(--soft);font-size:13.5px;padding:8px 0}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--ar);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.en{font-family:var(--dinc);letter-spacing:.14em;text-transform:uppercase;direction:ltr;unicode-bidi:isolate}
+.mut{color:var(--muted)}
+button{font:inherit}
+
+/* the page: a stage that shows the pass and the league, beside the form */
+.shell{min-height:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,46%)}
+.stage{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden;background:var(--navy);color:#fff;display:flex;flex-direction:column;padding:28px clamp(20px,3vw,44px) 22px;isolation:isolate}
+.stage .pitch{position:absolute;inset:-4% -10%;width:120%;height:108%;z-index:-1;opacity:.9}
+.pitch path,.pitch circle,.pitch rect{fill:none;stroke:rgba(255,255,255,.075);stroke-width:2;stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 2.4s cubic-bezier(.4,0,.2,1) .15s forwards}
+.stage::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 55% at 50% 42%,color-mix(in srgb,var(--s) 38%,transparent),transparent 70%);transition:background .8s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.brand{display:flex;align-items:center;gap:14px}
+.brand b{display:block;font-family:var(--dinc);font-size:24px;letter-spacing:.06em;text-transform:uppercase;line-height:1;direction:ltr}
+.brand span{display:block;font-size:12.5px;opacity:.75;margin-top:4px}
+.brand .sep{width:1px;align-self:stretch;background:rgba(255,255,255,.25)}
+.brand .back{margin-inline-start:auto;font-size:12.5px;text-decoration:none;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);padding:7px 12px;border-radius:8px;white-space:nowrap}
+.brand .back:hover{background:rgba(255,255,255,.16)}
+
+/* the accreditation pass */
+.passwrap{flex:1;display:grid;place-items:center;padding:26px 0 18px;perspective:1400px}
+.lanyard{width:46px;height:44px;margin:0 auto -6px;background:linear-gradient(90deg,transparent 0 30%,var(--s) 30% 70%,transparent 70%);position:relative;transition:background .8s}
+.lanyard::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:26px;height:12px;border-radius:4px;background:#c6cbd1;box-shadow:inset 0 -2px 0 #949ba3}
+.pass{width:min(330px,82vw);background:#f7f8f9;color:var(--ink);border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.35),0 2px 0 rgba(255,255,255,.6) inset;overflow:hidden;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1);animation:swing 5.5s ease-in-out infinite;transform-origin:50% -60px;position:relative}
+@keyframes swing{0%,100%{rotate:-1.2deg}50%{rotate:1.2deg}}
+.pass .hd{background:var(--m);color:#fff;padding:14px 18px 12px;position:relative;overflow:hidden;transition:background .8s}
+.pass .hd::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-55deg,rgba(255,255,255,.07) 0 10px,transparent 10px 22px)}
+.pass .hd .row1{position:relative;display:flex;justify-content:space-between;align-items:center;font-size:11px}
+.pass .hd .row1 .en{font-size:12px;opacity:.9}
+.pass .hd h4{position:relative;margin:6px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:17px;font-weight:700;line-height:1.3}
+.pass .hole{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:38px;height:7px;border-radius:5px;background:rgba(0,0,0,.28)}
+.pass .bd{padding:16px 18px 14px;display:grid;grid-template-columns:74px 1fr;gap:14px;align-items:center}
+.pass .ph{width:74px;height:88px;border-radius:12px;background:linear-gradient(160deg,var(--chip),#dfe2e6);display:grid;place-items:center;font-family:var(--dinc);font-size:38px;color:var(--m);border:1px solid var(--line);overflow:hidden;transition:color .8s}
+.pass .ph img{width:62px;height:62px;object-fit:contain}
+.pass .who{min-width:0}
+.pass .who .k{font-size:10.5px;color:var(--muted);letter-spacing:.12em}
+.pass .who .nm{font-family:var(--din);font-size:18px;font-weight:700;direction:ltr;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:27px}
+.pass .who .rl{font-size:13.5px;font-weight:600;color:var(--m);margin-top:2px;min-height:21px;transition:color .8s}
+.pass .code{margin:0 18px 12px;border:1px dashed var(--line);border-radius:10px;padding:8px 10px;display:none;align-items:center;justify-content:space-between;gap:10px}
+.pass .code.on{display:flex}
+.pass .code span{font-size:11.5px;color:var(--muted)}
+.pass .code b{font-family:var(--mono);font-size:17px;letter-spacing:.18em;direction:ltr}
+.zones{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:0 18px 14px}
+.zones div{border-radius:8px;background:var(--chip);color:#a3a9b0;text-align:center;padding:6px 2px 5px;transition:background .5s,color .5s;position:relative}
+.zones div b{display:block;font-family:var(--dinc);font-size:18px;line-height:1}
+.zones div small{display:block;font-size:9.5px;white-space:nowrap;margin-top:2px}
+.zones div.on{background:var(--m);color:#fff}
+.pass .ft{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px 14px;border-top:1px solid var(--line)}
+.pass .bar{height:30px;flex:1;overflow:hidden;display:flex;gap:1.6px;align-items:stretch;opacity:.85}
+.pass .bar i{background:var(--ink);flex:none}
+.pass .qr{width:62px;height:62px;flex:none}
+.pass .qr svg{width:100%;height:100%;display:block}
+.pass .ft .tag{flex:none;font-size:10.5px;color:var(--muted);text-align:left;line-height:1.35}
+.stamp{position:absolute;top:66%;left:50%;translate:-50% -50%;rotate:-14deg;border:3px solid var(--win);color:var(--win);border-radius:10px;padding:4px 14px;font-weight:800;font-size:22px;background:rgba(247,248,249,.85);opacity:0;scale:1.8;pointer-events:none;white-space:nowrap}
+.stamp.go{animation:stamp .55s cubic-bezier(.2,1.4,.4,1) forwards}
+@keyframes stamp{to{opacity:1;scale:1}}
+.pass.shake{animation:shake .4s}
+@keyframes shake{20%,60%{translate:-7px 0}40%,80%{translate:7px 0}}
+
+/* what the league is doing right now */
+.pulse{border-top:1px solid rgba(255,255,255,.16);padding-top:14px}
+.pulse .t{display:flex;justify-content:space-between;align-items:center;font-size:12px;opacity:.85;margin-bottom:8px}
+.pulse .t i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#7fd1c4;margin-inline-end:6px;box-shadow:0 0 0 0 rgba(127,209,196,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px rgba(127,209,196,0)}100%{box-shadow:0 0 0 0 rgba(127,209,196,0)}}
+.fx{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.fx a{display:grid;grid-template-columns:24px 1fr auto 1fr 24px;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:7px 9px;text-decoration:none;font-size:12.5px;transition:background .2s}
+.fx a:hover{background:rgba(255,255,255,.14)}
+.fx img{width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
+.fx .h{text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fx .a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx .tm{text-align:center;line-height:1.15}
+.fx .tm b{display:block;font-family:var(--dinc);font-size:15px;direction:ltr}
+.fx .tm small{font-size:10px;opacity:.7}
+
+/* the form side */
+.side{display:flex;flex-direction:column;justify-content:center;padding:40px clamp(18px,4vw,64px)}
+.panel{width:100%;max-width:440px;margin:0 auto}
+.panel.wide{max-width:760px}
+.eyebrow{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.eyebrow .en{font-size:12px;color:var(--teal)}
+h1{margin:6px 0 4px;font-size:28px;line-height:1.3;color:var(--navy)}
+.lead{margin:0 0 20px;color:var(--muted);font-size:14.5px}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--chip);border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:18px;position:relative}
+.seg button{position:relative;z-index:1;border:0;background:none;border-radius:9px;padding:9px;font-weight:700;color:var(--muted);cursor:pointer;transition:color .25s}
+.seg button.on{color:var(--navy)}
+.seg .knob{position:absolute;top:4px;bottom:4px;width:calc(50% - 4px);right:4px;background:#fff;border-radius:9px;box-shadow:0 2px 8px rgba(20,30,40,.1);transition:transform .35s cubic-bezier(.3,1.3,.5,1)}
+.seg.up .knob{transform:translateX(-100%)}
+.fld{margin-bottom:14px;position:relative}
+.fld label{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.fld label a,.fld label button.lnk{font-size:12.5px;font-weight:500;color:var(--teal);text-decoration:none;background:none;border:0;padding:0;cursor:pointer}
+.inp{position:relative}
+.inp input,.inp select,select.inp{width:100%;height:48px;font:inherit;font-size:15.5px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s;outline:0}
+.inp input:focus,.inp select:focus{border-color:var(--teal);box-shadow:0 0 0 4px rgba(61,127,120,.15)}
+.inp input[dir=ltr]{text-align:left}
+.inp.bad input{border-color:var(--loss);box-shadow:0 0 0 4px rgba(201,111,104,.13)}
+.inp .eye{position:absolute;right:8px;top:50%;translate:0 -50%;border:0;background:none;cursor:pointer;color:var(--muted);padding:6px;border-radius:8px;display:grid}
+.inp .eye:hover{background:var(--chip)}
+.inp input.pw{padding-right:44px}
+.hint{font-size:12.5px;margin-top:6px;color:var(--muted);min-height:0}
+.hint button{background:none;border:0;padding:0;color:var(--teal);font-weight:700;cursor:pointer;text-decoration:underline;direction:ltr}
+.hint.warn{color:#9a6b12}
+.meter{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:8px}
+.meter i{height:4px;border-radius:2px;background:var(--line);transition:background .3s}
+.codebox{position:relative;height:54px}
+.codebox input{position:absolute;inset:0;width:100%;height:100%;opacity:0;font-family:var(--mono);caret-color:transparent;cursor:text}
+.slots{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;height:100%;direction:ltr;pointer-events:none}
+.slots span{display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;background:#fff;font-family:var(--mono);font-size:20px;font-weight:700;transition:border-color .2s,transform .2s}
+.slots span.f{border-color:#b9c3cc;transform:translateY(-1px)}
+.slots span.cur{border-color:var(--teal);box-shadow:0 0 0 3px rgba(61,127,120,.15)}
+.slots span.cur::after{content:"";width:2px;height:22px;background:var(--teal);animation:blink 1s steps(1) infinite}
+.slots span:nth-child(4){margin-right:6px}
+@keyframes blink{50%{opacity:0}}
+.opt{font-size:12px;color:var(--muted);font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 20px;font-weight:700;font-size:15.5px;background:var(--navy);color:#fff;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .2s,background .2s;position:relative}
+.btn:hover{box-shadow:0 8px 18px rgba(39,51,62,.25);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn.full{width:100%}
+.btn.o{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.btn.o:hover{box-shadow:0 6px 14px rgba(39,51,62,.1)}
+.btn.r{background:#fff;color:#a2463f;border:1px solid #e8c9c5}
+.btn.sm{padding:7px 12px;font-size:13px;border-radius:9px}
+.btn:disabled{opacity:.6;cursor:default;transform:none;box-shadow:none}
+.btn .sp{width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .7s linear infinite;display:none}
+.btn.busy .sp{display:block}
+@keyframes spin{to{rotate:360deg}}
+.msg{margin-top:14px;font-size:13.5px;border-radius:12px;padding:11px 14px;display:none;line-height:1.6}
+.msg.err{display:block;background:#f8e9e7;color:#8f3b35;border:1px solid #edd0cc}
+.msg.ok{display:block;background:#e5f2ea;color:#245b3d;border:1px solid #c9e3d3}
+.welcome{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:14px}
+.welcome .av{width:36px;height:36px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:var(--dinc);font-size:18px;flex:none}
+.welcome b{display:block;direction:ltr;text-align:right;font-family:var(--din);font-size:14.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.welcome small{color:var(--muted);font-size:12px}
+.welcome button{margin-inline-start:auto;background:none;border:0;color:var(--teal);font-size:12.5px;cursor:pointer;white-space:nowrap}
+.how{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.how div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:12.5px;color:var(--muted);line-height:1.5}
+.how b{display:block;font-family:var(--dinc);font-size:20px;color:var(--teal);line-height:1}
+.how strong{display:block;color:var(--ink);font-size:13px;margin:2px 0}
+.fine{margin-top:18px;font-size:12px;color:var(--muted);text-align:center}
+form{margin:0}
+
+/* signed in */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.ch{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.ch h3{margin:0;font-size:16px;color:var(--navy)}
+.ch small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.ch .en{font-size:12px;color:var(--teal)}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:#e2efec;color:#2c6a62}
+.people{display:grid;gap:8px}
+.person{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 10px}
+.person .av{width:36px;height:36px;border-radius:10px;background:var(--chip);color:var(--navy);display:grid;place-items:center;font-family:var(--dinc);font-size:17px}
+.person .em{direction:ltr;text-align:right;font-family:var(--din);font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.person .sub{font-size:12px;color:var(--muted)}
+.person select{font:inherit;font-size:13px;padding:6px 8px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.person .tools{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.person code{font-family:var(--mono);font-weight:700;letter-spacing:.12em;background:var(--chip);border-radius:7px;padding:3px 8px;direction:ltr;font-size:13px}
+.person.pend{border-style:dashed;background:#fbfbfc}
+.empty{color:var(--muted);font-size:13.5px;padding:6px 2px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.grid3{display:grid;grid-template-columns:2fr 1.2fr auto;gap:10px;align-items:end}
-@media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr}table{font-size:13px}.hide-s{display:none}}
+.invite{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) auto;gap:10px;align-items:end}
+.rolehelp{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.rolehelp span{font-size:11.5px;border-radius:6px;padding:2px 8px;background:var(--chip);color:var(--muted)}
+.rolehelp span.on{background:#e2efec;color:#2c6a62}
+dialog{border:0;border-radius:18px;padding:22px;max-width:360px;width:calc(100% - 32px);box-shadow:0 30px 80px rgba(0,0,0,.35);text-align:center}
+dialog::backdrop{background:rgba(20,28,36,.55);backdrop-filter:blur(3px)}
+dialog .q{width:220px;height:220px;margin:12px auto}
+dialog .q svg{width:100%;height:100%}
+dialog p{margin:4px 0;color:var(--muted);font-size:13px}
+
+@media (max-width:960px){
+  .shell{grid-template-columns:1fr}
+  .stage{position:relative;height:auto;padding:18px 18px 16px}
+  .passwrap{padding:14px 0 10px}
+  .pass{width:min(300px,86vw)}
+  .side{padding:26px 16px 40px;justify-content:flex-start}
+  .stage .pulse{display:none}
+  .lanyard{display:none}.pass{animation:none}.pass .ft{display:none}.zones{padding-bottom:16px}
+}
+@media (min-width:961px) and (max-height:760px){.passwrap{padding:10px 0 8px}.pass{scale:.86}.lanyard{height:24px}.fx a{padding:5px 8px}.stage{padding-top:20px}}
+@media (max-width:560px){.brand .sep,.brand .ar2{display:none}.how{grid-template-columns:1fr}.grid2,.invite{grid-template-columns:1fr}h1{font-size:24px}.person{grid-template-columns:36px minmax(0,1fr)}.person .tools{grid-column:1/-1;justify-content:flex-start}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.pitch path,.pitch circle,.pitch rect{stroke-dashoffset:0}.stamp.go{opacity:1;scale:1}}
 </style>
 </head>
 <body>
-<header><div class="in"><b>لوحة مركز المباريات · الحساب</b><a href="all.html">← اللوحة</a></div></header>
-<main id="main"><section class="card"><p class="s">جارٍ التحميل…</p></section></main>
+<div class="shell">
+  <aside class="stage" aria-label="بطاقة الاعتماد">
+    <svg class="pitch" viewBox="0 0 680 1050" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect x="40" y="40" width="600" height="970" rx="2"/><path d="M40 525H640"/><circle cx="340" cy="525" r="92"/>
+      <rect x="178" y="40" width="324" height="160"/><rect x="258" y="40" width="164" height="56"/><path d="M276 200a80 80 0 0 0 128 0"/>
+      <rect x="178" y="850" width="324" height="160"/><rect x="258" y="954" width="164" height="56"/><path d="M276 850a80 80 0 0 1 128 0"/>
+    </svg>
+    <div class="brand">
+      <div><b>Match Centre</b><span class="en" style="font-size:10.5px;opacity:.6;letter-spacing:.2em">Roshn · First Division</span></div>
+      <div class="sep"></div>
+      <div class="ar2"><b style="font-family:var(--ar);font-size:16px;letter-spacing:0;text-transform:none;direction:rtl">لوحة مركز المباريات</b><span>دخول موظفي الأندية</span></div>
+      <a class="back" id="back" href="all.html">← اللوحة</a>
+    </div>
+    <div class="passwrap">
+      <div>
+        <div class="lanyard"></div>
+        <div class="pass" id="pass">
+          <div class="hd"><div class="hole"></div>
+            <div class="row1"><span class="en">Accreditation</span><span class="en" id="pSeason">2026/27</span></div>
+            <h4 id="pClub">بطاقة اعتماد</h4>
+          </div>
+          <div class="bd">
+            <div class="ph" id="pPh">؟</div>
+            <div class="who"><div class="k en">Staff · الموظف</div><div class="nm" id="pName"></div><div class="rl" id="pRole">سجّل دخولك لتظهر بطاقتك</div></div>
+          </div>
+          <div class="code" id="pCode"><span>رمز الدعوة</span><b id="pCodeV"></b></div>
+          <div class="zones" id="pZones"></div>
+          <div class="ft"><div class="bar" id="pBar"></div><div class="tag" id="pTag"><span class="en" style="letter-spacing:.1em">Match Centre</span><br>روشن والأولى</div></div>
+          <div class="stamp" id="stamp">معتمد ✓</div>
+        </div>
+      </div>
+    </div>
+    <div class="pulse" id="pulse" hidden>
+      <div class="t"><span><i></i>المباريات القادمة في الدوريين</span><span class="en" style="font-size:11px">Next up</span></div>
+      <div class="fx" id="fx"></div>
+    </div>
+  </aside>
+  <main class="side"><div class="panel" id="main"><p class="mut">جارٍ التحميل…</p></div></main>
+</div>
+<dialog id="dlg"></dialog>
 <script src="auth.js"></script>
+<script src="qr.js"></script>
 <script>
+const CLUB_COLOURS={/* [main colour, second colour] from each club's crest */
+ "الجبلين":["#7a1f1a","#c0392b"],"الوحدة":["#9e1b22","#cfb069"],"النجمة":["#146734","#4dbc71"],"ضمك":["#0a1e53","#a30a02"],
+ "الزلفي":["#2f6f52","#f09430"],"الأنوار":["#3f5f3c","#9c9d5c"],"الصقر":["#6e2463","#d8ac4e"],"الطائي":["#3a4048","#9aa4ad"],
+ "العدالة":["#0b3351","#962948"],"الرائد":["#9a1b1c","#d23a2b"],"جدة":["#1d2f5c","#8d253c"],"العروبة":["#1f1f1f","#ffe101"],
+ "الجندل":["#b5061a","#f4081f"],"الأخدود":["#1f6f99","#6ab8e0"],"هجر":["#0d0d0d","#b9bcc2"],"البكيرية":["#5a2560","#7b4e80"],
+ "الجيل":["#0e5975","#f4d509"],
+ /* Roshn league clubs */
+ "الهلال":["#0d3fa6","#4a8fe0"],"النصر":["#0f2a5c","#f2c900"],"الاتحاد":["#1a1a1a","#f5d300"],"الأهلي":["#006b3f","#2fa36b"],
+ "القادسية":["#a8141c","#d9a441"],"نيوم":["#111418","#4890a8"],"الاتفاق":["#00533a","#c1272d"],"الدرعية":["#5a3a24","#c09060"],
+ "الخليج":["#006b35","#f0c000"],"الشباب":["#161616","#9a9a9a"],"الخلود":["#0d3b1e","#900018"],"الرياض":["#b80d0d","#2a2a2a"],
+ "الفيحاء":["#183078","#f06a00"],"الحزم":["#3a2a08","#f0a800"],"الفيصلي":["#78000a","#c0646e"],"الفتح":["#0030b4","#00b84a"],
+ "التعاون":["#0a1d4f","#e8c51a"],"أبها":["#003078","#d81e1e"]};
 (async()=>{
 const A=window.MC_AUTH,main=document.getElementById("main");
+const $=id=>document.getElementById(id);
 const E=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const LG={fdl:"دوري الأولى",spl:"دوري روشن"};
 const say=(el,t,ok)=>{el.className="msg "+(ok?"ok":"err");el.textContent=t;};
-let sb;try{sb=await A.ready;}catch(e){main.innerHTML=`<section class="card"><h2>تعذّر الاتصال</h2><p class="s">${E(A.arError(e))}</p></section>`;return;}
+const store={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}};
+const P=new URLSearchParams(location.search);
+const NEXT=(P.get("next")||"").replace(/^[a-z]+:|^\/\//i,""); /* only a page of this site */
+let pendingCode=(P.get("invite")||"").toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,8);
+const inviteEmail=(P.get("email")||"").trim().toLowerCase();
+if(NEXT)$("back").href=NEXT;
 
-/* the clubs of both leagues, read from the board's own data files */
-async function clubs(lg){const t=await (await fetch(lg==="spl"?"data-spl.js":"data.js")).text();const w={};new Function("window",t)(w);return Object.keys(w.LEAGUE_DATA.clubs).sort((a,b)=>a.localeCompare(b,"ar"));}
+/* ---------- the pass ---------- */
+const ZONES=[["1","المباريات",()=>true],["2","الغيابات",r=>r.absences],["3","السفر",r=>r.travel],["4","التقارير",r=>r.export],["5","الموظفين",r=>r.users]];
+$("pZones").innerHTML=ZONES.map(z=>`<div><b>${z[0]}</b><small>${z[1]}</small></div>`).join("");
+function hash(s){let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;}
+function bars(seed){const el=document.getElementById("pBar");if(!el.classList.contains("bar"))return;let s=seed||7,o="";for(let i=0;i<34;i++){s=(Math.imul(s,1664525)+1013904223)>>>0;const w=1+(s>>>29);o+=`<i style="width:${w}px"></i>`;}$("pBar").innerHTML=o;}
+bars(hash("match centre"));
+const pass={
+  name(t){$("pName").textContent=(t||"").split("@")[0];$("pPh").textContent=(t||"؟").trim()[0]?.toUpperCase()||"؟";bars(hash(t||"match centre"));},
+  role(t){$("pRole").textContent=t;},
+  club(t){$("pClub").textContent=t;},
+  code(c){$("pCode").classList.toggle("on",!!c);$("pCodeV").textContent=(c||"").padEnd(8,"·");},
+  zones(r){[...$("pZones").children].forEach((d,i)=>d.classList.toggle("on",!!(r&&ZONES[i][2](r))));},
+  colours(m,s){document.documentElement.style.setProperty("--m",m||"#27333e");document.documentElement.style.setProperty("--s",s||"#3d7f78");},
+  crest(src){if(src)$("pPh").innerHTML=`<img alt="" src="${E(src)}">`;},
+  qr(url){$("pBar").outerHTML=`<div class="qr" id="pBar" title="افتح لوحتك">${window.QR?QR.svg(url,{fg:"#262c36",bg:"#f7f8f9",margin:0}):""}</div>`;},
+  stamp(){const s=$("stamp");s.classList.remove("go");void s.offsetWidth;s.classList.add("go");},
+  shake(){const p=$("pass");p.classList.remove("shake");void p.offsetWidth;p.classList.add("shake");}
+};
 
-async function draw(){
-  const s=await A.session();
-  if(!s)return signedOut();
-  let m=null,admin=false;try{[m,admin]=await Promise.all([A.membership(),A.isPlatformAdmin()]);}catch(e){}
-  const email=s.user.email;
-  let h=`<section class="card"><div class="me"><div class="av">${E((email||"?")[0].toUpperCase())}</div><div>
-    <b dir="ltr">${E(email)}</b>${admin?`<span class="chip">مديرة المنصة</span>`:""}
-    <div style="color:var(--soft);font-size:14px">${m?`${E(m.club)} · ${E(LG[m.league])} · ${E(A.ROLES[m.role].ar)}`:"حسابك ما هو مربوط بنادٍ بعد"}</div></div></div>
-    <div class="row">${m?`<a class="btn" href="index.html?${m.league==="spl"?"league=spl&":""}club=${encodeURIComponent(m.club)}" style="text-decoration:none">افتح لوحة ${E(m.club)}</a>`:""}<button class="btn o" id="out">تسجيل الخروج</button></div></section>`;
-  if(!m)h+=`<section class="card"><h2>عندك رمز دعوة؟</h2><p class="s">اكتب الرمز اللي أعطاك إياه مدير النادي، ويرتبط حسابك بالنادي ودورك فيه.</p>
-    <label>رمز الدعوة</label><input id="code" dir="ltr" placeholder="مثل 64CAA5CF" autocomplete="off"><div class="row"><button class="btn" id="claim">ربط حسابي بالنادي</button></div><div class="msg" id="cmsg"></div></section>`;
-  if(admin||(m&&A.ROLES[m.role].users))h+=`<section class="card" id="mg"><h2>إدارة موظفي النادي</h2><p class="s">ادعُ موظفًا بإيميله ودوره، وأعطه الرمز اللي يطلع لك. الرمز يشتغل لنفس الإيميل بس، ومرة وحدة.</p><div id="mgIn"></div></section>`;
-  main.innerHTML=h;
-  document.getElementById("out").onclick=async()=>{await sb.auth.signOut();draw();};
-  const cb=document.getElementById("claim");
-  if(cb)cb.onclick=async()=>{const msg=document.getElementById("cmsg");cb.disabled=true;
-    const {error}=await sb.rpc("claim_invite",{p_code:document.getElementById("code").value});cb.disabled=false;
-    if(error)return say(msg,A.arError(error));draw();};
-  if(document.getElementById("mg"))manage(m,admin);
+/* ---------- the league data (crests, next fixtures) ---------- */
+const DATA={};
+function loadLeague(lg){return DATA[lg]||(DATA[lg]=fetch(lg==="spl"?"data-spl.js":"data.js").then(r=>r.text()).then(t=>{const w={};new Function("window",t)(w);return w.LEAGUE_DATA;}));}
+async function clubs(lg){const D=await loadLeague(lg);return Object.keys(D.clubs).sort((a,b)=>a.localeCompare(b,"ar"));}
+async function pulse(){
+  try{
+    const [f,s]=await Promise.all([loadLeague("fdl"),loadLeague("spl")]);
+    const now=Date.now(),rows=[];
+    for(const [lg,D] of [["fdl",f],["spl",s]]){const S=D.seasons[D.current];
+      for(const m of S.matches){if(m.status!=="upcoming"||!m.date)continue;const t=Date.parse(`${m.date}T${m.time||"23:59"}:00+03:00`);if(t>now-2*36e5)rows.push({lg,D,m,t});}}
+    rows.sort((a,b)=>a.t-b.t);const pick=rows.slice(0,4);if(!pick.length)return;
+    const ymd=x=>new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Riyadh"}).format(x),wk=new Intl.DateTimeFormat("ar-SA-u-ca-gregory-nu-latn",{weekday:"long",timeZone:"Asia/Riyadh"});
+    const today=ymd(now),tmr=ymd(now+864e5);
+    $("fx").innerHTML=pick.map(({lg,D,m,t})=>{const day=m.date===today?"اليوم":m.date===tmr?"بكرة":wk.format(t);
+      const href=`index.html?${lg==="spl"?"league=spl&":""}club=${encodeURIComponent(m.home)}`;
+      return `<a href="${href}" title="${E(LG[lg])}"><img alt="" src="${E(D.logos[m.home]||"")}"><span class="h">${E(m.home)}</span><span class="tm"><b>${E(m.time||"—")}</b><small>${day}</small></span><span class="a">${E(m.away)}</span><img alt="" src="${E(D.logos[m.away]||"")}"></a>`;}).join("");
+    $("pulse").hidden=false;
+  }catch(e){}
 }
 
+/* ---------- small smart helpers ---------- */
+const DOMAINS=["gmail.com","hotmail.com","outlook.com","icloud.com","yahoo.com","live.com","outlook.sa","me.com"];
+function lev(a,b){const d=Array.from({length:a.length+1},(_,i)=>[i]);for(let j=1;j<=b.length;j++)d[0][j]=j;for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[a.length][b.length];}
+function typo(em){const m=/^([^@\s]+)@([^@\s]+)$/.exec(em);if(!m)return null;const d=m[2].toLowerCase();if(DOMAINS.includes(d))return null;
+  let best=null,bd=3;for(const x of DOMAINS){const v=lev(d,x);if(v<bd){bd=v;best=x;}}return best&&bd<=2?`${m[1]}@${best}`:null;}
+function strength(pw){let s=0;if(pw.length>=8)s++;if(pw.length>=12)s++;if(/[a-z]/.test(pw)&&/[A-Z]/.test(pw))s++;if(/\d/.test(pw)&&/[^A-Za-z0-9]/.test(pw))s++;if(pw.length<8)s=Math.min(s,1);return s;}
+const SCOL=["var(--line)","var(--loss)","var(--draw)","#8fbf6a","var(--win)"],SLBL=["","ضعيفة","مقبولة","جيدة","قوية"];
+const EYE='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+const EYE2='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3l18 18M10.6 5.1A10.6 10.6 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.6 6.6A17.4 17.4 0 0 0 2 12s3.6 7 10 7a9.9 9.9 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>';
+function busy(b,on){b.disabled=on;b.classList.toggle("busy",on);}
+
+let sb;
+try{sb=await A.ready;}catch(e){main.innerHTML=`<h1>تعذّر الاتصال</h1><p class="lead">${E(A.arError(e))}</p><button class="btn" onclick="location.reload()">حاول مرة ثانية</button>`;return;}
+pulse();
+let recovery=/type=recovery/.test(location.hash);
+
+/* ---------- signed out ---------- */
+function signedOut(tab){
+  document.body.classList.remove("in");
+  pass.colours();pass.zones(null);pass.club("بطاقة اعتماد");
+  const last=store.get("mc_last_email");
+  if(!tab)tab=pendingCode&&!(last&&last===inviteEmail)?"up":"in";
+  main.innerHTML=`
+    <div class="eyebrow"><span class="en">Staff access</span><span>دخول الموظفين</span></div>
+    <h1 id="hT"></h1><p class="lead" id="hL"></p>
+    <div class="seg${tab==="up"?" up":""}" role="tablist"><span class="knob"></span><button type="button" data-t="in" role="tab">تسجيل الدخول</button><button type="button" data-t="up" role="tab">حساب جديد</button></div>
+    <form id="f" novalidate></form><div class="msg" id="msg" role="alert"></div>
+    <div class="how"><div><b>1</b><strong>الدعوة</strong>مدير ناديك يرسل لك رابط أو رمز من 8 خانات</div><div><b>2</b><strong>الحساب</strong>سجّل بنفس الإيميل اللي انعزمت عليه</div><div><b>3</b><strong>بطاقتك</strong>تنفتح لوحة ناديك بأقسام دورك</div></div>
+    <p class="fine">اللوحة نفسها مفتوحة للكل. الحساب يرتّب لكل موظف الأقسام اللي يحتاجها.</p>`;
+  const seg=main.querySelector(".seg");
+  seg.querySelectorAll("button").forEach(b=>{b.classList.toggle("on",b.dataset.t===tab);b.onclick=()=>signedOut(b.dataset.t);});
+  const f=$("f"),msg=$("msg"),up=tab==="up";
+  $("hT").textContent=up?(pendingCode?"دعوتك جاهزة":"أنشئ حسابك"):(last?"أهلًا من جديد":"سجّل دخولك");
+  $("hL").textContent=up?(pendingCode?"كمّل التسجيل بإيميلك، والرمز مكتوب لك.":"تحتاج رمز الدعوة من مدير ناديك. إذا ما عندك رمز تقدر تسجل الآن وتضيفه بعدين."):"ادخل بإيميلك وكلمة المرور، وتطلع لك لوحة ناديك.";
+  const useLast=!up&&last&&!inviteEmail;
+  f.innerHTML=`
+    ${useLast?`<div class="welcome" id="wel"><div class="av">${E(last[0].toUpperCase())}</div><div style="min-width:0;flex:1"><b>${E(last)}</b><small>آخر حساب دخلت فيه من هذا الجهاز</small></div><button type="button" id="notme">حساب ثاني</button></div>`:""}
+    <div class="fld" ${useLast?'hidden':''}><label for="em">الإيميل</label><div class="inp"><input id="em" type="email" dir="ltr" inputmode="email" autocomplete="${up?"email":"username"}" placeholder="name@club.sa" value="${E(useLast?last:inviteEmail)}" required></div><div class="hint" id="emH"></div></div>
+    <div class="fld"><label for="pw">كلمة المرور ${up?"":`<button type="button" class="lnk" id="forgot">نسيت كلمة المرور؟</button>`}</label>
+      <div class="inp"><input id="pw" class="pw" type="password" dir="ltr" autocomplete="${up?"new-password":"current-password"}" ${up?'minlength="8"':''} required><button type="button" class="eye" id="eye" aria-label="إظهار كلمة المرور">${EYE}</button></div>
+      ${up?`<div class="meter" id="meter"><i></i><i></i><i></i><i></i></div>`:""}<div class="hint" id="pwH"></div></div>
+    ${up?`<div class="fld"><label for="cd">رمز الدعوة <span class="opt">ثمان خانات · اختياري الآن</span></label>
+      <div class="codebox"><input id="cd" dir="ltr" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" maxlength="8" value="${E(pendingCode)}" aria-label="رمز الدعوة"><div class="slots" id="slots">${"<span></span>".repeat(8)}</div></div><div class="hint" id="cdH"></div></div>`:""}
+    <button class="btn full" id="go" type="submit"><span class="sp"></span><span>${up?"إنشاء الحساب":"دخول"}</span></button>`;
+  const em=$("em"),pw=$("pw"),cd=$("cd");
+  /* the pass follows what you type */
+  const emName=v=>{pass.name(v||"");pass.role(up?"حساب جديد · بانتظار الإنشاء":"دخول الموظفين");};
+  emName(em.value);pass.code(up?pendingCode:"");
+  em.addEventListener("input",()=>{emName(em.value.trim());$("emH").innerHTML="";em.parentNode.classList.remove("bad");});
+  em.addEventListener("blur",()=>{const s=typo(em.value.trim());$("emH").innerHTML=s?`قصدك <button type="button" id="fix">${E(s)}</button>؟`:"";if(s)$("fix").onclick=()=>{em.value=s;$("emH").innerHTML="";emName(s);};});
+  if($("notme"))$("notme").onclick=()=>{store.set("mc_last_email",null);signedOut("in");};
+  $("eye").onclick=()=>{const v=pw.type==="password";pw.type=v?"text":"password";$("eye").innerHTML=v?EYE2:EYE;$("eye").setAttribute("aria-label",v?"إخفاء كلمة المرور":"إظهار كلمة المرور");pw.focus();};
+  const caps=e=>{const on=e.getModifierState&&e.getModifierState("CapsLock");const h=$("pwH");if(on){h.className="hint warn";h.textContent="زر الأحرف الكبيرة (Caps Lock) شغّال.";}else if(h.classList.contains("warn")){h.className="hint";h.textContent="";meter();}};
+  pw.addEventListener("keyup",caps);pw.addEventListener("keydown",caps);
+  function meter(){if(!up)return;const s=strength(pw.value);[...$("meter").children].forEach((i,k)=>i.style.background=k<s?SCOL[s]:"var(--line)");
+    const h=$("pwH");if(h.classList.contains("warn"))return;h.className="hint";h.textContent=pw.value?(pw.value.length<8?`باقي ${8-pw.value.length} أحرف على الأقل`:`كلمة مرور ${SLBL[s]}`):"8 أحرف أو أكثر. الأفضل تخلط أحرف وأرقام ورموز.";}
+  pw.addEventListener("input",meter);meter();
+  if(cd){const sl=[...$("slots").children];
+    const paint=()=>{const v=cd.value;sl.forEach((s,i)=>{s.textContent=v[i]||"";s.classList.toggle("f",!!v[i]);s.classList.toggle("cur",document.activeElement===cd&&i===Math.min(v.length,7)&&!(v.length===8&&i!==7));});};
+    cd.addEventListener("input",()=>{const p=cd.selectionStart;cd.value=cd.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,8);pendingCode=cd.value;pass.code(cd.value);paint();$("cdH").textContent=cd.value.length===8?"✓ الرمز كامل":"";});
+    cd.addEventListener("focus",paint);cd.addEventListener("blur",paint);paint();if(cd.value.length===8)$("cdH").textContent="✓ الرمز كامل";}
+  if($("forgot"))$("forgot").onclick=async()=>{const v=em.value.trim().toLowerCase();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){if($("wel")){$("wel").remove();em.closest(".fld").hidden=false;}em.focus();return say(msg,"اكتب إيميلك أول، وبعدها اضغط «نسيت كلمة المرور؟».");}
+    const {error}=await sb.auth.resetPasswordForEmail(v,{redirectTo:new URL("account.html",location.href).href});
+    if(error)return say(msg,A.arError(error));
+    say(msg,`أرسلنا رابط تغيير كلمة المرور إلى ${v}. افتحه من نفس الجهاز. إذا ما وصل خلال دقائق شوف الرسائل غير المرغوبة، أو اطلب من مدير ناديك.`,true);};
+  setTimeout(()=>(useLast?pw:(em.value?pw:em)).focus({preventScroll:true}),60);
+  f.onsubmit=async ev=>{ev.preventDefault();msg.className="msg";const b=$("go");
+    const e=em.value.trim().toLowerCase(),p=pw.value;
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){em.parentNode.classList.add("bad");if(em.closest(".fld").hidden)em.closest(".fld").hidden=false;pass.shake();return say(msg,"اكتب إيميل صحيح.");}
+    if(!p){pass.shake();pw.focus();return say(msg,"اكتب كلمة المرور.");}
+    if(up&&p.length<8){pass.shake();pw.focus();return say(msg,"كلمة المرور لازم تكون 8 أحرف أو أكثر.");}
+    if(up&&cd.value&&cd.value.length!==8){pass.shake();cd.focus();return say(msg,"رمز الدعوة ثمان خانات. كمّله أو امسحه وأضفه بعدين.");}
+    busy(b,true);
+    try{
+      if(up){const {data,error}=await sb.auth.signUp({email:e,password:p});if(error)throw error;if(!data.session)throw new Error("Email not confirmed");}
+      else{const {error}=await sb.auth.signInWithPassword({email:e,password:p});if(error)throw error;}
+      store.set("mc_last_email",e);
+      await afterAuth(true);
+    }catch(x){pass.shake();say(msg,A.arError(x));}finally{busy(b,false);}};
+}
+
+/* claim any code that came with the link, then show the account */
+async function afterAuth(fresh){
+  let note=null;
+  if(pendingCode&&pendingCode.length===8){
+    const r=await sb.rpc("claim_invite",{p_code:pendingCode});
+    note=r.error?A.arError(r.error):null;pendingCode="";
+    if(!r.error){const u=new URL(location.href);u.searchParams.delete("invite");u.searchParams.delete("email");history.replaceState(null,"",u);}
+  }
+  await draw(fresh,note);
+}
+
+/* ---------- new password, from the emailed link ---------- */
+function newPassword(){
+  main.innerHTML=`<div class="eyebrow"><span class="en">Reset</span><span>تغيير كلمة المرور</span></div><h1>اختر كلمة مرور جديدة</h1><p class="lead">بعدها تدخل فيها على طول.</p>
+    <form id="f"><div class="fld"><label for="pw">كلمة المرور الجديدة</label><div class="inp"><input id="pw" class="pw" type="password" dir="ltr" autocomplete="new-password" minlength="8" required><button type="button" class="eye" id="eye">${EYE}</button></div><div class="meter" id="meter"><i></i><i></i><i></i><i></i></div></div>
+    <button class="btn full" id="go"><span class="sp"></span><span>حفظ كلمة المرور</span></button></form><div class="msg" id="msg"></div>`;
+  const pw=$("pw");$("eye").onclick=()=>{pw.type=pw.type==="password"?"text":"password";};
+  pw.oninput=()=>{const s=strength(pw.value);[...$("meter").children].forEach((i,k)=>i.style.background=k<s?SCOL[s]:"var(--line)");};
+  $("f").onsubmit=async ev=>{ev.preventDefault();const b=$("go"),msg=$("msg");if(pw.value.length<8)return say(msg,"كلمة المرور لازم تكون 8 أحرف أو أكثر.");
+    busy(b,true);const {error}=await sb.auth.updateUser({password:pw.value});busy(b,false);
+    if(error)return say(msg,A.arError(error));recovery=false;history.replaceState(null,"",location.pathname+location.search);draw(true,null,"تم تغيير كلمة المرور.");};
+  setTimeout(()=>pw.focus(),60);
+}
+
+/* ---------- signed in ---------- */
+async function draw(fresh,note,okNote){
+  const s=await A.session();
+  if(!s)return signedOut();
+  if(recovery)return newPassword();
+  document.body.classList.add("in");
+  let m=null,admin=false;try{[m,admin]=await Promise.all([A.membership(),A.isPlatformAdmin()]);}catch(e){}
+  const email=s.user.email;store.set("mc_last_email",email);
+  const R=m?A.ROLES[m.role]:null;
+  /* the pass, now filled in */
+  pass.name(email);pass.code("");
+  if(m){const c=CLUB_COLOURS[m.club]||[];pass.colours(c[0],c[1]);pass.club(`${m.club} · ${LG[m.league]}`);pass.role(R.ar);pass.zones(R);
+    loadLeague(m.league).then(D=>pass.crest(D.logos[m.club])).catch(()=>{});
+    pass.qr(new URL(boardHref(m),location.href).href);}
+  else if(admin){pass.colours();pass.club("كل الأندية · روشن والأولى");pass.role("مديرة المنصة");pass.zones({absences:1,travel:1,export:1,users:1});}
+  else{pass.colours();pass.club("بطاقة اعتماد");pass.role("بانتظار ربط الحساب بنادٍ");pass.zones(null);}
+  if(fresh&&(m||admin))pass.stamp();
+  if(fresh&&m&&NEXT&&!note){location.href=NEXT;return;}
+
+  const wide=admin||(R&&R.users);
+  main.className="panel"+(wide?" wide":"");
+  let h=`<div class="eyebrow"><span class="en">${m?"Accredited":"Signed in"}</span><span>${m?"حسابك معتمد":"مسجّل الدخول"}</span></div>
+    <h1>${m?`أهلًا في ${E(m.club)}`:admin?"أهلًا، مديرة المنصة":"خطوة وحدة باقية"}</h1>
+    <p class="lead">${m?`دورك <b>${E(R.ar)}</b>، ولوحتك تفتح على الأقسام اللي تحتاجها.`:admin?"من هنا تدعين موظفي أي نادٍ في الدوريين.":"حسابك جاهز، بس لازم يرتبط بنادٍ عن طريق رمز الدعوة."}</p>
+    ${note?`<div class="msg err">${E(note)}</div>`:""}${okNote?`<div class="msg ok">${E(okNote)}</div>`:""}
+    <div class="card"><div class="acts">${m?`<a class="btn" href="${E(boardHref(m))}">افتح لوحة ${E(m.club)} ←</a>`:""}${admin&&!m?`<a class="btn" href="all.html">كل الأندية ←</a>`:""}<button class="btn o" id="out">تسجيل الخروج</button></div>
+    <p class="mut" style="font-size:12.5px;margin:10px 0 0" dir="auto">مسجّل باسم <b dir="ltr">${E(email)}</b>${admin?` <span class="chip">مديرة المنصة</span>`:""}</p></div>`;
+  if(!m&&!admin)h+=`<div class="card"><div class="ch"><div><h3>عندك رمز دعوة؟</h3><small>الرمز يشتغل لإيميلك فقط، ومرة وحدة.</small></div><span class="en">Invite</span></div>
+    <form id="cf"><div class="codebox"><input id="cd" dir="ltr" autocomplete="one-time-code" autocapitalize="characters" maxlength="8" aria-label="رمز الدعوة"><div class="slots" id="slots">${"<span></span>".repeat(8)}</div></div>
+    <button class="btn full" id="claim" style="margin-top:12px"><span class="sp"></span><span>ربط حسابي بالنادي</span></button></form><div class="msg" id="cmsg"></div></div>`;
+  if(wide)h+=`<div class="card" id="mg"><div class="ch"><div><h3>موظفو النادي</h3><small>ادعُ موظفًا بإيميله ودوره. يوصله رابط واحد يفتح له التسجيل جاهز.</small></div><span class="en">Staff</span></div><div id="mgIn"></div></div>`;
+  main.innerHTML=h;
+  $("out").onclick=async()=>{await sb.auth.signOut();};
+  if($("cf")){const cd=$("cd"),sl=[...$("slots").children];
+    const paint=()=>{const v=cd.value;sl.forEach((s,i)=>{s.textContent=v[i]||"";s.classList.toggle("f",!!v[i]);s.classList.toggle("cur",document.activeElement===cd&&i===Math.min(v.length,7));});pass.code(v);};
+    cd.oninput=()=>{cd.value=cd.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,8);paint();};cd.onfocus=paint;cd.onblur=paint;paint();
+    $("cf").onsubmit=async ev=>{ev.preventDefault();const b=$("claim"),msg=$("cmsg");if(cd.value.length!==8){pass.shake();return say(msg,"الرمز ثمان خانات.");}
+      busy(b,true);const {error}=await sb.rpc("claim_invite",{p_code:cd.value});busy(b,false);
+      if(error){pass.shake();return say(msg,A.arError(error));}draw(true);};}
+  if($("mg"))manage(m,admin);
+}
+function boardHref(m){return `index.html?${m.league==="spl"?"league=spl&":""}club=${encodeURIComponent(m.club)}`;}
+
+/* ---------- staff management ---------- */
 async function manage(m,admin){
-  const box=document.getElementById("mgIn");
+  const box=$("mgIn");
   let lg=m?m.league:"fdl",club=m?m.club:null;
-  const pick=admin?`<div class="grid2"><div><label>الدوري</label><select id="pLg"><option value="fdl">دوري الأولى</option><option value="spl">دوري روشن</option></select></div><div><label>النادي</label><select id="pClub"></select></div></div>`:"";
   const roleOpts=Object.entries(A.ROLES).map(([k,r])=>`<option value="${k}">${E(r.ar)}</option>`).join("");
-  box.innerHTML=`${pick}<div id="lists"></div>
-    <h2 style="font-size:16px;margin-top:18px">دعوة موظف جديد</h2>
-    <div class="grid3"><div><label>الإيميل</label><input id="iEm" type="email" dir="ltr" placeholder="name@club.sa"></div><div><label>الدور</label><select id="iRole">${roleOpts}</select></div><button class="btn" id="iGo">إنشاء الدعوة</button></div>
-    <div class="msg" id="imsg"></div>`;
-  if(admin){const pL=document.getElementById("pLg"),pC=document.getElementById("pClub");
+  box.innerHTML=`${admin?`<div class="grid2" style="margin-bottom:12px"><div class="inp"><select id="selLg" aria-label="الدوري"><option value="fdl">دوري الأولى</option><option value="spl">دوري روشن</option></select></div><div class="inp"><select id="selClub" aria-label="النادي"></select></div></div>`:""}
+    <form id="invF" class="invite"><div class="fld" style="margin:0"><label for="iEm">إيميل الموظف</label><div class="inp"><input id="iEm" type="email" dir="ltr" placeholder="name@club.sa" autocomplete="off"></div></div>
+      <div class="fld" style="margin:0"><label for="iRole">الدور</label><div class="inp"><select id="iRole">${roleOpts}</select></div></div>
+      <button class="btn" id="iGo"><span class="sp"></span><span>دعوة</span></button></form>
+    <div class="rolehelp" id="rh"></div><div class="hint" id="iH"></div><div class="msg" id="imsg"></div>
+    <div id="lists" style="margin-top:16px"></div>`;
+  const iRole=$("iRole");
+  const help=()=>{const r=A.ROLES[iRole.value];$("rh").innerHTML=ZONES.map(z=>`<span class="${z[2](r)?"on":""}">${z[2](r)?"✓":"—"} ${z[1]}</span>`).join("");};
+  iRole.onchange=help;help();
+  $("iEm").addEventListener("blur",()=>{const s=typo($("iEm").value.trim());$("iH").innerHTML=s?`قصدك <button type="button" id="ifix">${E(s)}</button>؟`:"";if(s)$("ifix").onclick=()=>{$("iEm").value=s;$("iH").innerHTML="";};});
+  if(admin){const pL=$("selLg"),pC=$("selClub");
     const fill=async()=>{lg=pL.value;const cs=await clubs(lg);pC.innerHTML=cs.map(c=>`<option>${E(c)}</option>`).join("");if(m&&m.league===lg&&cs.includes(m.club))pC.value=m.club;club=pC.value;lists();};
     if(m)pL.value=m.league;pL.onchange=fill;pC.onchange=()=>{club=pC.value;lists();};await fill();}
   else lists();
+  const link=(em,code)=>{const u=new URL("account.html",location.href);u.search="";u.hash="";u.searchParams.set("invite",code);u.searchParams.set("email",em);return u.href;};
+  const invText=(em,role,code)=>`انضم للوحة مركز المباريات لنادي ${club} بدور ${A.ROLES[role].ar}.\nافتح الرابط وسجّل بإيميلك ${em}، والرمز مكتوب لك:\n${link(em,code)}\n\nرمز الدعوة: ${code}`;
   async function lists(){
-    const L=document.getElementById("lists");L.innerHTML=`<p class="empty">جارٍ التحميل…</p>`;
+    const L=$("lists");L.innerHTML=`<p class="empty">جارٍ التحميل…</p>`;
     const [mem,inv]=await Promise.all([sb.from("memberships").select("*").eq("league",lg).eq("club",club).order("created_at"),
       sb.from("invites").select("*").eq("league",lg).eq("club",club).order("created_at",{ascending:false})]);
     if(mem.error||inv.error){L.innerHTML=`<div class="msg err">${E(A.arError(mem.error||inv.error))}</div>`;return;}
     const me=(await A.session()).user.id;
-    L.innerHTML=`<h2 style="font-size:16px;margin-top:14px">موظفو ${E(club)} (${mem.data.length})</h2>${mem.data.length?`<table><tr><th>الإيميل</th><th>الدور</th><th></th></tr>${mem.data.map(x=>`<tr><td dir="ltr" style="text-align:right">${E(x.email)}</td>
-      <td>${x.user_id===me?E(A.ROLES[x.role].ar):`<select data-u="${x.user_id}">${Object.entries(A.ROLES).map(([k,r])=>`<option value="${k}"${k===x.role?" selected":""}>${E(r.ar)}</option>`).join("")}</select>`}</td>
-      <td>${x.user_id===me?`<span class="chip">أنت</span>`:`<button class="btn r" data-del="${x.user_id}" style="padding:5px 12px">إزالة</button>`}</td></tr>`).join("")}</table>`:`<p class="empty">ما فيه موظفين بعد.</p>`}
-      <h2 style="font-size:16px;margin-top:18px">دعوات بانتظار التسجيل (${inv.data.length})</h2>${inv.data.length?`<table><tr><th>الإيميل</th><th class="hide-s">الدور</th><th>الرمز</th><th></th></tr>${inv.data.map(x=>`<tr><td dir="ltr" style="text-align:right">${E(x.email)}</td><td class="hide-s">${E(A.ROLES[x.role].ar)}</td><td><code>${E(x.code)}</code></td>
-      <td style="white-space:nowrap"><button class="btn o" data-cp="${E(x.code)}" data-em="${E(x.email)}" data-role="${x.role}" style="padding:5px 12px">نسخ الرسالة</button> <button class="btn r" data-cancel="${E(x.code)}" style="padding:5px 12px">إلغاء</button></td></tr>`).join("")}</table>`:`<p class="empty">ما فيه دعوات معلّقة.</p>`}`;
+    const opts=r=>Object.entries(A.ROLES).map(([k,x])=>`<option value="${k}"${k===r?" selected":""}>${E(x.ar)}</option>`).join("");
+    L.innerHTML=`<div class="ch" style="margin:0 0 8px"><div><h3 style="font-size:14px">في ${E(club)} الآن <span class="chip">${mem.data.length}</span></h3></div></div>
+      <div class="people">${mem.data.length?mem.data.map(x=>`<div class="person"><div class="av">${E(x.email[0].toUpperCase())}</div><div style="min-width:0"><div class="em">${E(x.email)}</div><div class="sub">${E(A.ROLES[x.role].ar)}</div></div>
+        <div class="tools">${x.user_id===me?`<span class="chip">أنت</span>`:`<select data-u="${x.user_id}" aria-label="الدور">${opts(x.role)}</select><button class="btn r sm" data-del="${x.user_id}">إزالة</button>`}</div></div>`).join(""):`<p class="empty">ما فيه موظفين بعد. أول دعوة من الفورم اللي فوق.</p>`}</div>
+      ${inv.data.length?`<div class="ch" style="margin:16px 0 8px"><div><h3 style="font-size:14px">دعوات بانتظار التسجيل <span class="chip" style="background:#f3ead3;color:#7d5f1c">${inv.data.length}</span></h3></div></div>
+      <div class="people">${inv.data.map(x=>`<div class="person pend"><div class="av">✉</div><div style="min-width:0"><div class="em">${E(x.email)}</div><div class="sub">${E(A.ROLES[x.role].ar)} · <code>${E(x.code)}</code></div></div>
+        <div class="tools"><button class="btn o sm" data-cp="${E(x.code)}" data-em="${E(x.email)}" data-role="${x.role}">نسخ الرسالة</button><button class="btn o sm" data-qr="${E(x.code)}" data-em="${E(x.email)}">باركود</button><button class="btn r sm" data-cancel="${E(x.code)}">إلغاء</button></div></div>`).join("")}</div>`:""}`;
     L.querySelectorAll("select[data-u]").forEach(s=>s.onchange=async()=>{const {error}=await sb.from("memberships").update({role:s.value}).eq("user_id",s.dataset.u);if(error)alert(A.arError(error));lists();});
     L.querySelectorAll("[data-del]").forEach(b=>b.onclick=async()=>{if(!confirm("إزالة هذا الموظف من النادي؟"))return;const {error}=await sb.from("memberships").delete().eq("user_id",b.dataset.del);if(error)alert(A.arError(error));lists();});
-    L.querySelectorAll("[data-cancel]").forEach(b=>b.onclick=async()=>{const {error}=await sb.from("invites").delete().eq("code",b.dataset.cancel);if(error)alert(A.arError(error));lists();});
-    L.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>{const t=invText(b.dataset.em,b.dataset.role,b.dataset.cp);(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent="تم النسخ";setTimeout(()=>b.textContent="نسخ الرسالة",1500);}).catch(()=>prompt("انسخ الرسالة",t));});
+    L.querySelectorAll("[data-cancel]").forEach(b=>b.onclick=async()=>{if(!confirm("إلغاء هذي الدعوة؟ الرمز يوقف عن العمل."))return;const {error}=await sb.from("invites").delete().eq("code",b.dataset.cancel);if(error)alert(A.arError(error));lists();});
+    L.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>{const t=invText(b.dataset.em,b.dataset.role,b.dataset.cp);(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent="تم النسخ ✓";setTimeout(()=>b.textContent="نسخ الرسالة",1600);}).catch(()=>prompt("انسخ الرسالة",t));});
+    L.querySelectorAll("[data-qr]").forEach(b=>b.onclick=()=>{const d=$("dlg"),u=link(b.dataset.em,b.dataset.qr);
+      d.innerHTML=`<b style="font-size:17px">امسح وسجّل</b><p dir="ltr">${E(b.dataset.em)}</p><div class="q">${QR.svg(u,{fg:"#262c36",bg:"#ffffff",margin:2})}</div><p>الكاميرا تفتح صفحة التسجيل والرمز مكتوب. الرمز: <b dir="ltr" style="font-family:var(--mono)">${E(b.dataset.qr)}</b></p><button class="btn o" style="margin-top:12px" onclick="this.closest('dialog').close()">تم</button>`;
+      d.showModal();});
   }
-  const invText=(em,role,code)=>`انضم للوحة مركز المباريات لنادي ${club} بدور ${A.ROLES[role].ar}.\n1. افتح: ${new URL("account.html",location.href).href}\n2. اختر «حساب جديد» وسجّل بالإيميل ${em}\n3. رمز الدعوة: ${code}`;
-  document.getElementById("iGo").onclick=async()=>{const msg=document.getElementById("imsg"),em=document.getElementById("iEm").value.trim().toLowerCase(),role=document.getElementById("iRole").value;
+  $("invF").onsubmit=async ev=>{ev.preventDefault();const b=$("iGo"),msg=$("imsg"),em=$("iEm").value.trim().toLowerCase(),role=iRole.value;
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return say(msg,"اكتب إيميل صحيح.");
-    const {data,error}=await sb.from("invites").insert({email:em,league:lg,club,role}).select().single();
+    busy(b,true);const {data,error}=await sb.from("invites").insert({email:em,league:lg,club,role}).select().single();busy(b,false);
     if(error)return say(msg,A.arError(error));
-    say(msg,`تم. الرمز ${data.code}. اضغط «نسخ الرسالة» وأرسلها لـ ${em}.`,true);document.getElementById("iEm").value="";lists();};
+    const t=invText(em,role,data.code);let copied=false;try{await navigator.clipboard.writeText(t);copied=true;}catch(e){}
+    say(msg,copied?`تمت الدعوة، ونسخنا الرسالة. ألصقها لـ ${em} في واتساب أو الإيميل.`:`تمت الدعوة. الرمز ${data.code}. اضغط «نسخ الرسالة» وأرسلها لـ ${em}.`,true);
+    $("iEm").value="";lists();};
 }
 
-function signedOut(){
-  main.innerHTML=`<section class="card"><div class="tabs"><button class="on" data-t="in">تسجيل الدخول</button><button data-t="up">حساب جديد</button></div>
-    <div id="f"></div><div class="msg" id="msg"></div></section>
-    <section class="card"><h2>كيف أدخل؟</h2><p class="s" style="margin:0">مدير ناديك يعطيك رمز دعوة. اختر «حساب جديد»، وسجّل بنفس الإيميل اللي انعزمت عليه، واكتب الرمز. بعدها تدخل بالإيميل وكلمة المرور.</p></section>`;
-  const f=document.getElementById("f"),msg=document.getElementById("msg");
-  const tab=t=>{document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===t));msg.className="msg";
-    f.innerHTML=`<label>الإيميل</label><input id="em" type="email" dir="ltr" autocomplete="email"><label>كلمة المرور</label><input id="pw" type="password" dir="ltr" autocomplete="${t==="in"?"current-password":"new-password"}">
-      ${t==="up"?`<label>رمز الدعوة (من مدير ناديك)</label><input id="cd" dir="ltr" autocomplete="off" placeholder="مثل 64CAA5CF">`:""}
-      <div class="row"><button class="btn" id="go">${t==="in"?"دخول":"إنشاء الحساب"}</button></div>`;
-    document.getElementById("go").onclick=async()=>{const b=document.getElementById("go"),em=document.getElementById("em").value.trim().toLowerCase(),pw=document.getElementById("pw").value;
-      if(!em||!pw)return say(msg,"اكتب الإيميل وكلمة المرور.");b.disabled=true;
-      try{
-        if(t==="in"){const {error}=await sb.auth.signInWithPassword({email:em,password:pw});if(error)throw error;}
-        else{const cd=document.getElementById("cd").value.trim();if(pw.length<8)throw new Error("Password should be at least 8");
-          const {data,error}=await sb.auth.signUp({email:em,password:pw});if(error)throw error;
-          if(!data.session)throw new Error("Email not confirmed");
-          if(cd){const r=await sb.rpc("claim_invite",{p_code:cd});if(r.error)say(msg,A.arError(r.error)+" حسابك انفتح، وتقدر تكتب الرمز الصحيح بعد الدخول.");}}
-        await draw();
-      }catch(e){say(msg,e.message&&/^[؀-ۿ]/.test(e.message)?e.message:A.arError(e));}finally{b.disabled=false;}};};
-  document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>tab(b.dataset.t));tab("in");
-}
-sb.auth.onAuthStateChange((ev)=>{if(ev==="SIGNED_OUT")draw();});
-draw();
+sb.auth.onAuthStateChange(ev=>{
+  if(ev==="PASSWORD_RECOVERY"){recovery=true;newPassword();}
+  else if(ev==="SIGNED_OUT"){pass.colours();const p=$("pPh");p.textContent="؟";if(!$("pBar").classList.contains("bar"))$("pBar").outerHTML='<div class="bar" id="pBar"></div>';bars(hash("match centre"));signedOut("in");}
+});
+const s0=await A.session();
+if(s0&&pendingCode)await afterAuth(false);else draw(false);
 })();
 </script>
 </body>

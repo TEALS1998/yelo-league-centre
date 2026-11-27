@@ -6163,7 +6163,7 @@ new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){card.classL
 (async()=>{try{
 const A=window.MC_AUTH;if(!A)return;
 const top=document.querySelector(".top-in");if(!top)return;
-const chip=document.createElement("a");chip.className="chipw";chip.href="account.html";chip.style.textDecoration="none";chip.style.color="inherit";
+const chip=document.createElement("a");chip.className="chipw";chip.href="account.html?next="+encodeURIComponent(location.pathname.split("/").pop()+location.search);chip.style.textDecoration="none";chip.style.color="inherit";
 chip.innerHTML='<span class="ar">دخول</span>';top.appendChild(chip);
 const s=await A.session();if(!s)return;
 const m=await A.membership().catch(()=>null);
