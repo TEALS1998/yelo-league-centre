@@ -3891,8 +3891,11 @@ window.LEAGUE_DATA = {
      "home": "الخلود",
      "away": "الخليج",
      "venue": "استاد مدينة الملك عبدالله الرياضية (بريدة)",
-     "status": "upcoming",
-     "score": null,
+     "status": "played",
+     "score": [
+      2,
+      1
+     ],
      "roundExact": true,
      "weather": {
       "t": 25,
