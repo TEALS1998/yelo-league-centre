@@ -6157,5 +6157,25 @@ const sh=document.getElementById("kShare");if(sh)sh.addEventListener("click",()=
 const card=document.getElementById("subsCard");card.hidden=false;
 new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){card.classList.add("k-on");o.disconnect();}}),{threshold:.2}).observe(card);
 })();</script>
+<script src="auth.js"></script>
+<script>/* accounts: a sign-in chip in the header, and on your own club's page the sections your role does not use are folded away.
+   The board itself stays public; this only tidies each role's view. Access to people and invites is enforced in Supabase. */
+(async()=>{try{
+const A=window.MC_AUTH;if(!A)return;
+const top=document.querySelector(".top-in");if(!top)return;
+const chip=document.createElement("a");chip.className="chipw";chip.href="account.html";chip.style.textDecoration="none";chip.style.color="inherit";
+chip.innerHTML='<span class="ar">دخول</span>';top.appendChild(chip);
+const s=await A.session();if(!s)return;
+const m=await A.membership().catch(()=>null);
+const E=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+chip.innerHTML=m?`<i style="background:#7fd1c4"></i><span class="ar">${E(A.ROLES[m.role].ar)} · ${E(m.club)}</span>`:'<span class="ar">حسابي</span>';
+if(!m||m.club!==window.US_TEAM||(m.league==="spl")!==(window.LG==="spl"))return;
+const R=A.ROLES[m.role],css=[];
+if(!R.absences)css.push("#discipline");
+if(!R.export)css.push("#rpPrint");
+if(css.length){const st=document.createElement("style");st.textContent=css.join(",")+"{display:none!important}";document.head.appendChild(st);}
+if(!R.travel){const t=document.getElementById("travel");let n=t;while(n&&n.id!=="second"){const nx=n.nextElementSibling;n.style.display="none";n=nx;}
+  document.querySelectorAll('a[href="#travel"],a[href="#stadiums-h"]').forEach(a=>a.style.display="none");}
+}catch(e){}})();</script>
 </body>
 </html>

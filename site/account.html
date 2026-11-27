@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Match Centre accounts · Author and rights holder: Tareem Alsaggaf · © 2026 -->
+<title>الحساب · لوحة مركز المباريات</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="icon" href="favicon.png">
+<style>
+:root{--navy:#27333e;--teal:#4a9a90;--ink:#1d2630;--soft:#5d6873;--line:#e1e4e8;--bg:#eef0f3;--red:#b4433b}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 "IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}
+header{background:linear-gradient(135deg,var(--navy),#141c24);color:#fff;padding:20px 18px 64px}
+header .in{max-width:880px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
+header b{font-size:20px}header a{color:#fff;opacity:.85;font-size:13px}
+main{max-width:880px;margin:-44px auto 40px;padding:0 14px;display:grid;gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 24px rgba(20,30,40,.06)}
+.card h2{margin:0 0 4px;font-size:19px}.card p.s{margin:0 0 14px;color:var(--soft);font-size:13.5px}
+label{display:block;font-size:13px;color:var(--soft);margin:10px 0 4px}
+input,select{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fafbfc}
+input[dir=ltr]{text-align:left}
+.btn{border:0;border-radius:999px;padding:10px 18px;font:inherit;font-weight:700;background:var(--navy);color:#fff;cursor:pointer}
+.btn.o{background:#fff;color:var(--navy);border:1px solid var(--navy)}.btn.r{background:#fff;color:var(--red);border:1px solid #e3c2bf}
+.btn:disabled{opacity:.5;cursor:default}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.tabs{display:flex;gap:6px;background:var(--bg);border-radius:999px;padding:4px;margin-bottom:6px}
+.tabs button{flex:1;border:0;background:none;border-radius:999px;padding:8px;font:inherit;font-weight:600;color:var(--soft);cursor:pointer}
+.tabs button.on{background:#fff;color:var(--navy);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.msg{margin-top:12px;font-size:13.5px;border-radius:10px;padding:10px 12px;display:none}
+.msg.err{display:block;background:#fbecea;color:var(--red)}.msg.ok{display:block;background:#e7f4ef;color:#1f6b52}
+.me{display:flex;gap:16px;align-items:center}
+.me .av{width:56px;height:56px;border-radius:16px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:700;flex:none}
+.chip{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:#e6f2f0;color:#2f6f66;margin-inline-start:6px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:right;color:var(--soft);font-weight:500;font-size:12.5px;padding:8px 6px;border-bottom:1px solid var(--line)}
+td{padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+td select{padding:6px 8px}
+td code{direction:ltr;display:inline-block;font-weight:700;letter-spacing:.08em;background:#f2f4f6;border-radius:6px;padding:2px 8px}
+.empty{color:var(--soft);font-size:13.5px;padding:8px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid3{display:grid;grid-template-columns:2fr 1.2fr auto;gap:10px;align-items:end}
+@media(max-width:640px){.grid2,.grid3{grid-template-columns:1fr}table{font-size:13px}.hide-s{display:none}}
+</style>
+</head>
+<body>
+<header><div class="in"><b>لوحة مركز المباريات · الحساب</b><a href="all.html">← اللوحة</a></div></header>
+<main id="main"><section class="card"><p class="s">جارٍ التحميل…</p></section></main>
+<script src="auth.js"></script>
+<script>
+(async()=>{
+const A=window.MC_AUTH,main=document.getElementById("main");
+const E=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const LG={fdl:"دوري الأولى",spl:"دوري روشن"};
+const say=(el,t,ok)=>{el.className="msg "+(ok?"ok":"err");el.textContent=t;};
+let sb;try{sb=await A.ready;}catch(e){main.innerHTML=`<section class="card"><h2>تعذّر الاتصال</h2><p class="s">${E(A.arError(e))}</p></section>`;return;}
+
+/* the clubs of both leagues, read from the board's own data files */
+async function clubs(lg){const t=await (await fetch(lg==="spl"?"data-spl.js":"data.js")).text();const w={};new Function("window",t)(w);return Object.keys(w.LEAGUE_DATA.clubs).sort((a,b)=>a.localeCompare(b,"ar"));}
+
+async function draw(){
+  const s=await A.session();
+  if(!s)return signedOut();
+  let m=null,admin=false;try{[m,admin]=await Promise.all([A.membership(),A.isPlatformAdmin()]);}catch(e){}
+  const email=s.user.email;
+  let h=`<section class="card"><div class="me"><div class="av">${E((email||"?")[0].toUpperCase())}</div><div>
+    <b dir="ltr">${E(email)}</b>${admin?`<span class="chip">مديرة المنصة</span>`:""}
+    <div style="color:var(--soft);font-size:14px">${m?`${E(m.club)} · ${E(LG[m.league])} · ${E(A.ROLES[m.role].ar)}`:"حسابك ما هو مربوط بنادٍ بعد"}</div></div></div>
+    <div class="row">${m?`<a class="btn" href="index.html?${m.league==="spl"?"league=spl&":""}club=${encodeURIComponent(m.club)}" style="text-decoration:none">افتح لوحة ${E(m.club)}</a>`:""}<button class="btn o" id="out">تسجيل الخروج</button></div></section>`;
+  if(!m)h+=`<section class="card"><h2>عندك رمز دعوة؟</h2><p class="s">اكتب الرمز اللي أعطاك إياه مدير النادي، ويرتبط حسابك بالنادي ودورك فيه.</p>
+    <label>رمز الدعوة</label><input id="code" dir="ltr" placeholder="مثل 64CAA5CF" autocomplete="off"><div class="row"><button class="btn" id="claim">ربط حسابي بالنادي</button></div><div class="msg" id="cmsg"></div></section>`;
+  if(admin||(m&&A.ROLES[m.role].users))h+=`<section class="card" id="mg"><h2>إدارة موظفي النادي</h2><p class="s">ادعُ موظفًا بإيميله ودوره، وأعطه الرمز اللي يطلع لك. الرمز يشتغل لنفس الإيميل بس، ومرة وحدة.</p><div id="mgIn"></div></section>`;
+  main.innerHTML=h;
+  document.getElementById("out").onclick=async()=>{await sb.auth.signOut();draw();};
+  const cb=document.getElementById("claim");
+  if(cb)cb.onclick=async()=>{const msg=document.getElementById("cmsg");cb.disabled=true;
+    const {error}=await sb.rpc("claim_invite",{p_code:document.getElementById("code").value});cb.disabled=false;
+    if(error)return say(msg,A.arError(error));draw();};
+  if(document.getElementById("mg"))manage(m,admin);
+}
+
+async function manage(m,admin){
+  const box=document.getElementById("mgIn");
+  let lg=m?m.league:"fdl",club=m?m.club:null;
+  const pick=admin?`<div class="grid2"><div><label>الدوري</label><select id="pLg"><option value="fdl">دوري الأولى</option><option value="spl">دوري روشن</option></select></div><div><label>النادي</label><select id="pClub"></select></div></div>`:"";
+  const roleOpts=Object.entries(A.ROLES).map(([k,r])=>`<option value="${k}">${E(r.ar)}</option>`).join("");
+  box.innerHTML=`${pick}<div id="lists"></div>
+    <h2 style="font-size:16px;margin-top:18px">دعوة موظف جديد</h2>
+    <div class="grid3"><div><label>الإيميل</label><input id="iEm" type="email" dir="ltr" placeholder="name@club.sa"></div><div><label>الدور</label><select id="iRole">${roleOpts}</select></div><button class="btn" id="iGo">إنشاء الدعوة</button></div>
+    <div class="msg" id="imsg"></div>`;
+  if(admin){const pL=document.getElementById("pLg"),pC=document.getElementById("pClub");
+    const fill=async()=>{lg=pL.value;const cs=await clubs(lg);pC.innerHTML=cs.map(c=>`<option>${E(c)}</option>`).join("");if(m&&m.league===lg&&cs.includes(m.club))pC.value=m.club;club=pC.value;lists();};
+    if(m)pL.value=m.league;pL.onchange=fill;pC.onchange=()=>{club=pC.value;lists();};await fill();}
+  else lists();
+  async function lists(){
+    const L=document.getElementById("lists");L.innerHTML=`<p class="empty">جارٍ التحميل…</p>`;
+    const [mem,inv]=await Promise.all([sb.from("memberships").select("*").eq("league",lg).eq("club",club).order("created_at"),
+      sb.from("invites").select("*").eq("league",lg).eq("club",club).order("created_at",{ascending:false})]);
+    if(mem.error||inv.error){L.innerHTML=`<div class="msg err">${E(A.arError(mem.error||inv.error))}</div>`;return;}
+    const me=(await A.session()).user.id;
+    L.innerHTML=`<h2 style="font-size:16px;margin-top:14px">موظفو ${E(club)} (${mem.data.length})</h2>${mem.data.length?`<table><tr><th>الإيميل</th><th>الدور</th><th></th></tr>${mem.data.map(x=>`<tr><td dir="ltr" style="text-align:right">${E(x.email)}</td>
+      <td>${x.user_id===me?E(A.ROLES[x.role].ar):`<select data-u="${x.user_id}">${Object.entries(A.ROLES).map(([k,r])=>`<option value="${k}"${k===x.role?" selected":""}>${E(r.ar)}</option>`).join("")}</select>`}</td>
+      <td>${x.user_id===me?`<span class="chip">أنت</span>`:`<button class="btn r" data-del="${x.user_id}" style="padding:5px 12px">إزالة</button>`}</td></tr>`).join("")}</table>`:`<p class="empty">ما فيه موظفين بعد.</p>`}
+      <h2 style="font-size:16px;margin-top:18px">دعوات بانتظار التسجيل (${inv.data.length})</h2>${inv.data.length?`<table><tr><th>الإيميل</th><th class="hide-s">الدور</th><th>الرمز</th><th></th></tr>${inv.data.map(x=>`<tr><td dir="ltr" style="text-align:right">${E(x.email)}</td><td class="hide-s">${E(A.ROLES[x.role].ar)}</td><td><code>${E(x.code)}</code></td>
+      <td style="white-space:nowrap"><button class="btn o" data-cp="${E(x.code)}" data-em="${E(x.email)}" data-role="${x.role}" style="padding:5px 12px">نسخ الرسالة</button> <button class="btn r" data-cancel="${E(x.code)}" style="padding:5px 12px">إلغاء</button></td></tr>`).join("")}</table>`:`<p class="empty">ما فيه دعوات معلّقة.</p>`}`;
+    L.querySelectorAll("select[data-u]").forEach(s=>s.onchange=async()=>{const {error}=await sb.from("memberships").update({role:s.value}).eq("user_id",s.dataset.u);if(error)alert(A.arError(error));lists();});
+    L.querySelectorAll("[data-del]").forEach(b=>b.onclick=async()=>{if(!confirm("إزالة هذا الموظف من النادي؟"))return;const {error}=await sb.from("memberships").delete().eq("user_id",b.dataset.del);if(error)alert(A.arError(error));lists();});
+    L.querySelectorAll("[data-cancel]").forEach(b=>b.onclick=async()=>{const {error}=await sb.from("invites").delete().eq("code",b.dataset.cancel);if(error)alert(A.arError(error));lists();});
+    L.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>{const t=invText(b.dataset.em,b.dataset.role,b.dataset.cp);(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent="تم النسخ";setTimeout(()=>b.textContent="نسخ الرسالة",1500);}).catch(()=>prompt("انسخ الرسالة",t));});
+  }
+  const invText=(em,role,code)=>`انضم للوحة مركز المباريات لنادي ${club} بدور ${A.ROLES[role].ar}.\n1. افتح: ${new URL("account.html",location.href).href}\n2. اختر «حساب جديد» وسجّل بالإيميل ${em}\n3. رمز الدعوة: ${code}`;
+  document.getElementById("iGo").onclick=async()=>{const msg=document.getElementById("imsg"),em=document.getElementById("iEm").value.trim().toLowerCase(),role=document.getElementById("iRole").value;
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return say(msg,"اكتب إيميل صحيح.");
+    const {data,error}=await sb.from("invites").insert({email:em,league:lg,club,role}).select().single();
+    if(error)return say(msg,A.arError(error));
+    say(msg,`تم. الرمز ${data.code}. اضغط «نسخ الرسالة» وأرسلها لـ ${em}.`,true);document.getElementById("iEm").value="";lists();};
+}
+
+function signedOut(){
+  main.innerHTML=`<section class="card"><div class="tabs"><button class="on" data-t="in">تسجيل الدخول</button><button data-t="up">حساب جديد</button></div>
+    <div id="f"></div><div class="msg" id="msg"></div></section>
+    <section class="card"><h2>كيف أدخل؟</h2><p class="s" style="margin:0">مدير ناديك يعطيك رمز دعوة. اختر «حساب جديد»، وسجّل بنفس الإيميل اللي انعزمت عليه، واكتب الرمز. بعدها تدخل بالإيميل وكلمة المرور.</p></section>`;
+  const f=document.getElementById("f"),msg=document.getElementById("msg");
+  const tab=t=>{document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===t));msg.className="msg";
+    f.innerHTML=`<label>الإيميل</label><input id="em" type="email" dir="ltr" autocomplete="email"><label>كلمة المرور</label><input id="pw" type="password" dir="ltr" autocomplete="${t==="in"?"current-password":"new-password"}">
+      ${t==="up"?`<label>رمز الدعوة (من مدير ناديك)</label><input id="cd" dir="ltr" autocomplete="off" placeholder="مثل 64CAA5CF">`:""}
+      <div class="row"><button class="btn" id="go">${t==="in"?"دخول":"إنشاء الحساب"}</button></div>`;
+    document.getElementById("go").onclick=async()=>{const b=document.getElementById("go"),em=document.getElementById("em").value.trim().toLowerCase(),pw=document.getElementById("pw").value;
+      if(!em||!pw)return say(msg,"اكتب الإيميل وكلمة المرور.");b.disabled=true;
+      try{
+        if(t==="in"){const {error}=await sb.auth.signInWithPassword({email:em,password:pw});if(error)throw error;}
+        else{const cd=document.getElementById("cd").value.trim();if(pw.length<8)throw new Error("Password should be at least 8");
+          const {data,error}=await sb.auth.signUp({email:em,password:pw});if(error)throw error;
+          if(!data.session)throw new Error("Email not confirmed");
+          if(cd){const r=await sb.rpc("claim_invite",{p_code:cd});if(r.error)say(msg,A.arError(r.error)+" حسابك انفتح، وتقدر تكتب الرمز الصحيح بعد الدخول.");}}
+        await draw();
+      }catch(e){say(msg,e.message&&/^[؀-ۿ]/.test(e.message)?e.message:A.arError(e));}finally{b.disabled=false;}};};
+  document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>tab(b.dataset.t));tab("in");
+}
+sb.auth.onAuthStateChange((ev)=>{if(ev==="SIGNED_OUT")draw();});
+draw();
+})();
+</script>
+</body>
+</html>
