@@ -3948,8 +3948,11 @@ window.LEAGUE_DATA = {
      "home": "القادسية",
      "away": "الفيحاء",
      "venue": "ملعب نادي الاتفاق (الدمام)",
-     "status": "upcoming",
-     "score": null,
+     "status": "played",
+     "score": [
+      2,
+      0
+     ],
      "roundExact": true,
      "weather": {
       "t": 25,
